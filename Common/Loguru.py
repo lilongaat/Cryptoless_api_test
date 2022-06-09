@@ -8,5 +8,6 @@ class PropogateHandler(logging.Handler):
     def emit(self, record):
         logging.getLogger(record.name).handle(record)
 
+# 获取当前时间
 nowtime =  Conf.Config.now_time()
 logger.add(PropogateHandler(), format=nowtime + " | {message}")
