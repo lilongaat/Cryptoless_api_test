@@ -11,7 +11,7 @@ def job_test():
 
 if __name__ == '__main__':
     sched = BlockingScheduler()
-    sched.add_job(job_test_holders, 'interval', seconds=5)
+    sched.add_job(job_test_holders, 'interval', seconds=30)
     # sched.add_job(job_test, 'interval', seconds=3)
     sched.start()
 

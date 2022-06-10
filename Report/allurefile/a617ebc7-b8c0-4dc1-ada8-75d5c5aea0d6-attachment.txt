@@ -1,0 +1,11 @@
+[33mWARNING [0m apscheduler.scheduler:base.py:980 Execution of job "job_test_holders (trigger: interval[0:00:30], next run at: 2022-06-10 18:24:18 CST)" skipped: maximum number of running instances reached (1)
+[33mWARNING [0m apscheduler.scheduler:base.py:980 Execution of job "job_test_holders (trigger: interval[0:00:30], next run at: 2022-06-10 18:24:48 CST)" skipped: maximum number of running instances reached (1)
+[32mINFO    [0m test_holders_check:test_holders_check.py:41 2022-06-10 18:05:19.225617 | Holders Rpc查询余额!
+networkCode:ETH  symbol:ETH  address:0x3d59B8CC4627e5C9e598fe3231f63EC1Fc80444a
+Holders查询余额:0.02
+Rpc查询余额:0.02
+[32mINFO    [0m test_holders_check:test_holders_check.py:41 2022-06-10 18:05:19.225617 | Holders Rpc查询余额!
+networkCode:ETH  symbol:ETH  address:0xD08B261e83486E88319250890AaC484BA8984632
+Holders查询余额:0.061956050000021
+Rpc查询余额:0.061956050000021
+[32mINFO    [0m test_holders_check:test_holders_check.py:48 2022-06-10 18:05:19.225617 | networkCode:ETH | symbol:DFO | symbol:0xD08B261e83486E88319250890AaC484BA8984632 | Rpc查询余额暂不支持!
