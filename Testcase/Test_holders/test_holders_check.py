@@ -12,14 +12,14 @@ from Common.Loguru import logger
 @allure.feature("Holders_Checks!")
 class Test_holders_check:
 
-    test_users = [
+    test_data = [
         {
             'Authorization': 'eyJzaWduYXR1cmUiOiIweGRmMDcwN2YzZDlmOWU3MmVjMmVmMmM1NTVmMzU2MzlmMjBkOTJmZjU0OWIzODA5NjI4N2U0MWJiYmM2ZDMzOTM1ZDgzN2FlMGRiYjhjNDM3MzMwNDg4ZjYzNmZmYTAwYmRkNGYxM2Q5ZTkxNWQwZDUzODJkOGFmZDJiOGUyMDdhMWIiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogODcwNzA5Mzhcbklzc3VlZCBBdDogVGh1LCA5IEp1biAyMDIyIDE1OjAxOjI0IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBNb24sIDkgSnVuIDIwNDIgMTU6MDE6MjQgR01UIn0=',
         }
     ]
 
     @allure.story("Holders Rpc查询用户资产信息检查!")
-    @pytest.mark.parametrize('param', test_users)
+    @pytest.mark.parametrize('param', test_data)
     def test_balances_check(self, param):
         Authorization = list(param.values())[0]
 
@@ -28,14 +28,14 @@ class Test_holders_check:
         holders_diff = []
 
         # holders接口查询用户所有资产信息
-        res = Http.HttpUtils.http_get_holders(Authorization=Authorization)
+        res = Http.HttpUtils.get_holders(Authorization=Authorization)
 
         for i in range(len(res)):
             # Check：ETH网络ETH资产
             if res[i]["networkCode"] == res[i]["symbol"] == 'ETH':
 
                 # RPC接口查询地址资产信息
-                res_rpc = Httprpc.HttpRpcUtils.httprpc_getbalance(
+                res_rpc = Httprpc.HttpRpcUtils.Eth_getbalance(
                     res[i]["networkCode"], res[i]["address"], "latest")
 
                 logger.info(('Holders Rpc查询余额!\n' + "networkCode:"+res[i]["networkCode"]+"  symbol:"+res[i]["symbol"]+"  address:"+res[i]
@@ -55,7 +55,7 @@ class Test_holders_check:
             for h in range(len(holders_diff)):
 
                 # Holdes查询地址资产信息
-                res_ag = Http.HttpUtils.http_get_holders(
+                res_ag = Http.HttpUtils.get_holders(
                     Authorization=Authorization, address=holders_diff[h])
                 res_ag_time = Conf.Config.now_time()
 
@@ -63,7 +63,7 @@ class Test_holders_check:
                     # Check：ETH网络ETH资产
                     if res_ag[r]["networkCode"] == res_ag[r]["symbol"] == "ETH":
                         # RPC接口查询地址资产信息
-                        res_rpc_ag = Httprpc.HttpRpcUtils.httprpc_getbalance(
+                        res_rpc_ag = Httprpc.HttpRpcUtils.Eth_getbalance(
                             res_ag[r]["networkCode"], res_ag[r]["address"], "latest")
                         res_rpc_ag_time = Conf.Config.now_time()
 

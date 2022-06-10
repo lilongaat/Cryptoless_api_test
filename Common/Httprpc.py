@@ -1,3 +1,5 @@
+from socket import timeout
+from time import sleep
 from loguru import logger
 import requests
 import json
@@ -6,6 +8,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from Config.readconfig import ReadConfig
 
+timeout = int(ReadConfig().get_debug_rpc('timeout'))
 headers = {
         "Content-Type":"application/json",
         }
@@ -13,7 +16,7 @@ headers = {
 class HttpRpcUtils:
     @staticmethod
     # RPC获取地址余额
-    def httprpc_getbalance(node,address,blockhight):
+    def Eth_getbalance(node:str,address:str,blockhight:str):
         url = ReadConfig().get_debug_rpc(node)
         body = {
             "jsonrpc":"2.0",
@@ -25,7 +28,7 @@ class HttpRpcUtils:
             "id":1
             }
 
-        res = requests.post(url=url,json=body,headers=headers)
+        res = requests.post(url=url,json=body,headers=headers,timeout=timeout)
         if res.status_code != 200:
             raise Exception("请求异常")
         result = json.loads(res.text)
@@ -44,5 +47,6 @@ if __name__ == '__main__':
     node = 'eth'
     address = '0xD08B261e83486E88319250890AaC484BA8984632'
     blockhight = 'latest'
-    res = HttpRpcUtils.httprpc_getbalance(node,address,blockhight)
+    res = HttpRpcUtils.Eth_getbalance(node,address,blockhight)
     logger.info(res)
+
