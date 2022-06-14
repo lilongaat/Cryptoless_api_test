@@ -5,8 +5,10 @@ import requests
 import json
 import os
 import sys
+
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from Config.readconfig import ReadConfig
+from Httpfs import HttpFs
 
 timeout = int(ReadConfig().get_debug_rpc('timeout'))
 headers = {
@@ -28,24 +30,28 @@ class HttpRpcUtils:
             "id":1
             }
 
-        res = requests.post(url=url,json=body,headers=headers,timeout=timeout)
+        try:
+            res = requests.post(url=url,json=body,headers=headers,timeout=timeout)
+        except TimeoutError as e:
+            logger.error(e)
+            HttpFs.HttpFs.send_msg
+
         if res.status_code != 200:
             raise Exception("请求异常")
-        result = json.loads(res.text)
-
-        # 十六进制字符串转换为十进制
-        wei_in_dec = int(result['result'],16)
-
-        # wei除以精度
-        ethBalance = str(wei_in_dec / (10**18))
-        return ethBalance
+        else:
+            result = json.loads(res.text)
+            # 十六进制字符串转换为十进制
+            wei_in_dec = int(result['result'],16)
+            # wei除以精度
+            ethBalance = str(wei_in_dec / (10**18))
+            return ethBalance
 
 
  
 
 if __name__ == '__main__':
     node = 'eth'
-    address = '0xD08B261e83486E88319250890AaC484BA8984632'
+    address = '0x44d9Ea428C4C1D097947A683439a60105281AAD7'
     blockhight = 'latest'
     res = HttpRpcUtils.Eth_getbalance(node,address,blockhight)
     logger.info(res)

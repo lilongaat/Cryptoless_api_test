@@ -1,5 +1,0 @@
-[31m[1mERROR   [0m Common.Http:Http.py:126 2022-06-11 02:44:20.873548 | 
-url:https://api.cryptoless.io/cryptocurrencies/ETH/transfers
-[31m[1mERROR   [0m Common.Http:Http.py:127 2022-06-11 02:44:20.873548 | {'code': 2300000, 'message': 'invalid address'}
-[32mINFO    [0m test_transfers:test_transfers.py:33 2022-06-11 02:44:20.873548 | 0x1dfb5db671e7d68dda061d8a7e79a57ed9e27449d6e934c3286978ee2873a435
-[35mDEBUG   [0m test_transfers:test_transfers.py:34 2022-06-11 02:44:20.873548 | 0.01

@@ -12,6 +12,6 @@ def test_tick():
 
 if __name__ == '__main__':
     scheduler = BlockingScheduler()
-    scheduler.add_job(test, 'interval', seconds=2, id=0)
-    scheduler.add_job(test_tick, 'interval', seconds=10, id=0)
+    # scheduler.add_job(test, 'interval', seconds=2, id=0)
+    scheduler.add_job(test_tick, 'interval', seconds=3)
     scheduler.start()

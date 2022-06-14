@@ -1,5 +1,5 @@
 import datetime
-from secp256k1 import PrivateKey, ECDSA
+import secp256k1
 import time
 import random
 
@@ -51,11 +51,13 @@ class Config():
     @staticmethod
     # sign
     def sign(privkey_str: str, hash_str: str):
-        privkey = PrivateKey(bytes(bytearray.fromhex(privkey_str)))
-        sig = privkey.ecdsa_sign_recoverable(bytes(bytearray.fromhex(hash_str)))
-        sig_tuple = ECDSA.ecdsa_recoverable_serialize(ECDSA, sig)
-        signature = bytes.hex(sig_tuple[0]) + str(sig_tuple[1])
+        privkey = secp256k1.PrivateKey(bytes(bytearray.fromhex(privkey_str)))
+        msg = bytes(bytearray.fromhex(hash_str))
+        sig = privkey.ecdsa_sign_recoverable(msg)
+        sig_tuple = secp256k1.ECDSA().ecdsa_recoverable_serialize(sig)
+        signature = bytes.hex(sig_tuple[0]) + "0" + str(sig_tuple[1])
         return signature
+
 
 
 if __name__ == '__main__':
@@ -66,5 +68,6 @@ if __name__ == '__main__':
     # print(type(Config.random_amount(18)),Config.random_amount(18))
     
     privkey = '1dfb5db671e7d68dda061d8a7e79a57ed9e27449d6e934c3286978ee2873a435'
-    hash = 'cbc7ac1abef6a9c8362fcb664d0cdc7c6b947e3f6c57811b8f770514f07a3ff5'
+    hash = '6b797f3b17ef9d4dd434c51aabf687eb9f3a18b811c4735e6389cd2ec5a4c386'
+    print(len(Config.sign(privkey, hash)))
     print(Config.sign(privkey, hash))

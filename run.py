@@ -4,19 +4,23 @@ import os,sys
 import pytest
 from apscheduler.schedulers.blocking import BlockingScheduler
 
-#Holders-RPC Blances_Check
-def job_test_holders_check():
-    pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_holders/test_holders_check.py", '--alluredir=Report/allurefile'])
- 
-#Test_ETH_transfers
-def job_test_transfer():
-    pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Transfers_ETH",'--clean-alluredir', '--alluredir=Report/Allure_Testfile'])
-    os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure_Testfile')
+class Run():
+    #Holders-RPC Blances_Check
+    def job_test_holders_check():
+        pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_holders/test_holders_check.py", '--alluredir=Report/allurefile'])
+    
+    #Test_transfers_ETH
+    def job_transfer_eth():
+        pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Transfers_ETH",'--clean-alluredir', '--alluredir=Report/Allure_Testfile'])
+
+    #Test_transfers_IRIS
+    def job_transfer_iris():
+        pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_transfers_IRIS",'--clean-alluredir', '--alluredir=Report/Allure_Testfile'])
+        
 
 if __name__ == '__main__':
     sched_cycle = BlockingScheduler()
-    # sched_cycle.add_job(job_test_holders_check, 'interval', seconds=10)
-    sched_cycle.add_job(job_test_transfer, 'interval', seconds=5, max_instances=10)
+    sched_cycle.add_job(Run.job_transfer_iris, 'interval', seconds=5)
     sched_cycle.start()
 
 
@@ -29,7 +33,10 @@ if __name__ == '__main__':
         # sleep(5)
 
 
-    # 打开报告命令：allure serve + 报告存放路径
+    # 终端打开报告：allure serve + 报告存放路径
     # allure serve /Users/lilong/Documents/Test_Api/Report/allurefile
+
+    # 直接打开报告
+    # os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure_Testfile')
 
 
