@@ -5,9 +5,9 @@ sys.path.append(os.path.dirname(os.path.dirname(
 from Common import Http, Conf
 
 # 测试
-prkey = "44298f449dab3993e9965a32c1c4e1d99c1fcece7e228b348516924cecc88f18"
-publickey = ["032de47c91516ffd2985965935841fa8243894b003886a1f478682da74a848db58"]
-add = "iaa13cq3lkmheswkz4d00vu4663267aw6tqjep3jy4"
+prkey = "f5b815e8fba18b5cf699e29032cb110e1ac43b5a5ade15b0c6cd51c813b70fef"
+publickey = ["02de74187a6253914c9eee8001e6a2c6b2d1af2545e1d3771af4a431ef031a3209"]
+add = "iaa1wvmuzvyqlt76pddyk0w30glswev4kadksfa7ny"
 amount = '0.001'
 
 # 生产

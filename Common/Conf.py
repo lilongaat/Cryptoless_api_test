@@ -53,11 +53,14 @@ class Config():
     def sign(privkey_str: str, hash_str: str):
         privkey = secp256k1.PrivateKey(bytes(bytearray.fromhex(privkey_str)))
         msg = bytes(bytearray.fromhex(hash_str))
+
+        # 签名
         sig = privkey.ecdsa_sign_recoverable(msg)
+        # 序列化
         sig_tuple = secp256k1.ECDSA().ecdsa_recoverable_serialize(sig)
+
         signature = bytes.hex(sig_tuple[0]) + "0" + str(sig_tuple[1])
         return signature
-
 
 
 if __name__ == '__main__':

@@ -7,13 +7,24 @@ hash_str = '6b797f3b17ef9d4dd434c51aabf687eb9f3a18b811c4735e6389cd2ec5a4c386'
 privkey = secp256k1.PrivateKey(bytes(bytearray.fromhex(privkey_str)))
 msg = bytes(bytearray.fromhex(hash_str))
 
-sig = privkey.ecdsa_sign_recoverable(msg)
-sig_tuple = privkey.ecdsa_recoverable_serialize(sig)
-print(sig_tuple)
+unrelated = secp256k1.ECDSA()
 
+# Create a signature that allows recovering the public key.
 recsig = privkey.ecdsa_sign_recoverable(msg)
-recsig_ser = secp256k1.ECDSA().ecdsa_recoverable_serialize(recsig)
-print(recsig_ser)
-assert sig_tuple == recsig_ser
-sigture = bytes.hex(recsig_ser[0]) + "0" + str(recsig_ser[1])
-print(len(sigture))
+# Recover the public key.
+pubkey = unrelated.ecdsa_recover(msg, recsig)
+# Check that the recovered public key matches the one used
+# in privkey.pubkey.
+pubser = secp256k1.PublicKey(pubkey).serialize()
+assert privkey.pubkey.serialize() == pubser
+
+# Check that after serializing and deserializing recsig
+# we still recover the same public key.
+recsig_ser = unrelated.ecdsa_recoverable_serialize(recsig)
+recsig2 = unrelated.ecdsa_recoverable_deserialize(*recsig_ser)
+pubkey2 = unrelated.ecdsa_recover(msg, recsig2)
+pubser2 = secp256k1.PublicKey(pubkey2).serialize()
+assert pubser == pubser2
+
+raw_sig = unrelated.ecdsa_recoverable_convert(recsig2)
+unrelated.ecdsa_deserialize(unrelated.ecdsa_serialize(raw_sig))

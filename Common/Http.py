@@ -161,9 +161,10 @@ class HttpUtils:
             r_requiredSignings = result['_embedded']['transactions'][0]['requiredSignings']
             r_serialized = result['_embedded']['transactions'][0]['serialized']
             r_status = result['_embedded']['transactions'][0]['status']
+            ID = result['id']
             r_updatedTime = result['_embedded']['transactions'][0]['updatedTime']
 
-            return result,r_estimatedFee,r_hash,r_id,r_networkCode,r_requiredSignings,r_serialized,r_status,r_updatedTime
+            return result,r_estimatedFee,r_hash,r_id,r_networkCode,r_requiredSignings,r_serialized,r_status,ID,r_updatedTime
 
     # sign
     def post_sign_transfers(transactions_estimatedFee: str, transactions_hash: str, transactions_id: str, transactions_networkCode: str, transactions_requiredSignings: list, transactions_serialized: str, signatures: list, status='BUILDING', Authorization=Authorization_):
@@ -184,7 +185,10 @@ class HttpUtils:
         }
 
         logger.info("<-----Sign----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+str(headers)+'\n\n'+'Body:'+str(body))
-        res = requests.post(url=url, json=body, headers=headers, timeout=10)
+        try:
+            res = requests.post(url=url, json=body, headers=headers, timeout=10)
+        except TimeoutError as e:
+            logger.info("<-----Sign timeout----->")
         if res.status_code != 200:
             logger.error('Sign 签名失败！')
             logger.error('<-----Sign Response----->'+res.text)
@@ -213,4 +217,8 @@ class HttpUtils:
             return result
 
 if __name__ == '__main__':
-    HttpUtils.post_send_transfers('1535216278276812802')
+    # HttpUtils.post_send_transfers('1535216278276812802')
+    Authorization = ''
+    ownerPublicKey = '0x0388924a9fedf683cb9c6aec801d19afae932f767e21df4ea91cd282fa06295795'
+    deviceToken = '0x0388924a9fedf683cb9c6aec801d19afae932f767e21df4ea91cd282fa06295795'
+    print(HttpUtils.post_registrations(Authorization,ownerPublicKey,deviceToken))

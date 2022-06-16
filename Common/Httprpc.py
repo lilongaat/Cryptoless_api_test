@@ -34,7 +34,6 @@ class HttpRpcUtils:
             res = requests.post(url=url,json=body,headers=headers,timeout=timeout)
         except TimeoutError as e:
             logger.error(e)
-            HttpFs.HttpFs.send_msg
 
         if res.status_code != 200:
             raise Exception("请求异常")
