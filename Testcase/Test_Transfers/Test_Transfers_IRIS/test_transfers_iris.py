@@ -47,4 +47,4 @@ class Test_transfers_eth:
         sig = Http.HttpUtils.post_sign_transfers(res[1],res[2],res[3],res[4],res[5],res[6],signatures)
         # logger.info(sig)
 
-        # send = Http.HttpUtils.post_send_transfers()
+        send = Http.HttpUtils.post_send_transfers()

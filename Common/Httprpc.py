@@ -1,5 +1,6 @@
 from socket import timeout
 from time import sleep
+from xmlrpc.client import boolean
 from loguru import logger
 import requests
 import json
@@ -16,6 +17,21 @@ headers = {
         }
 
 class HttpRpcUtils:
+    @staticmethod
+    # RPC获取地址余额
+    def Eth_getBlockByNumber(node:str,block:str,status:boolean):
+        url = ReadConfig().get_debug_rpc(node)
+        body = {
+    "jsonrpc":"2.0",
+    "method":"eth_getBlockByNumber",
+    "params":[
+        "0x1b4",
+        "true"
+    ],
+    "id":1
+}
+
+
     @staticmethod
     # RPC获取地址余额
     def Eth_getbalance(node:str,address:str,blockhight:str):

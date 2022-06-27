@@ -1,7 +1,7 @@
 import sys
 import os
-sys.path.append(os.path.dirname(os.path.dirname(
-    os.path.dirname(os.path.abspath(__file__)))))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))))))
 from Common import Http, Conf
 
 # 测试
@@ -16,7 +16,7 @@ amount = '0.001'
 # add = "iaa1jwrwsead5ehwzy9u9uw3r6cle0np04kkurrsfe"
 # amount = '0.001'
 
-res = Http.HttpUtils.post_transfers("IRIS","IRIS",publickey,add,add,amount)
+res = Http.HttpUtils.post_transfers("IRIS","IRIS",publickey,add,'iaa1a7eqkny2ps7dlzpv4tl3k0uny630k4l06hnm2t',amount)
 
 hash = res[5][0]['hash']
 signature = Conf.Config.sign(prkey,hash)
@@ -31,3 +31,6 @@ signatures = [
 
 
 sig = Http.HttpUtils.post_sign_transfers(res[1],res[2],res[3],res[4],res[5],res[6],signatures=signatures)
+
+send = Http.HttpUtils.post_send_transfers(res[3])
+print(send)

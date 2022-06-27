@@ -1,5 +1,5 @@
 import datetime
-import secp256k1
+from secp256k1 import PrivateKey
 import time
 import random
 
@@ -51,15 +51,17 @@ class Config():
     @staticmethod
     # sign
     def sign(privkey_str: str, hash_str: str):
-        privkey = secp256k1.PrivateKey(bytes(bytearray.fromhex(privkey_str)))
+        privkey = PrivateKey(bytes(bytearray.fromhex(privkey_str)), raw=True)
         msg = bytes(bytearray.fromhex(hash_str))
 
         # 签名
-        sig = privkey.ecdsa_sign_recoverable(msg)
+
+        sig = privkey.ecdsa_sign_recoverable(msg, raw=True)
         # 序列化
-        sig_tuple = secp256k1.ECDSA().ecdsa_recoverable_serialize(sig)
+        sig_tuple = privkey.ecdsa_recoverable_serialize(sig)
 
         signature = bytes.hex(sig_tuple[0]) + "0" + str(sig_tuple[1])
+
         return signature
 
 
@@ -70,7 +72,6 @@ if __name__ == '__main__':
     # print(Config.now_time())
     # print(type(Config.random_amount(18)),Config.random_amount(18))
     
-    privkey = '1dfb5db671e7d68dda061d8a7e79a57ed9e27449d6e934c3286978ee2873a435'
-    hash = '6b797f3b17ef9d4dd434c51aabf687eb9f3a18b811c4735e6389cd2ec5a4c386'
-    print(len(Config.sign(privkey, hash)))
+    privkey = '9365d91088ca52629cd2f22bb14fda4efecf8905d53734e115cb9e1c8bb5b580'
+    hash = 'f1ca66d56a1b790897a3037d50faaab376bc67ed5d7ed35ed099aebfcd502982'
     print(Config.sign(privkey, hash))

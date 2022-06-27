@@ -206,7 +206,7 @@ class HttpUtils:
         }
 
         logger.info("<-----Send----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+str(headers))
-        res = requests.post(url=url, headers=headers, timeout=10)
+        res = requests.post(url=url, headers=headers, timeout=timeout)
         if res.status_code != 200:
             logger.error(json.loads(res.text))
             logger.error('Send 交易失败！')
@@ -216,9 +216,47 @@ class HttpUtils:
             result = json.loads(res.text)
             return result
 
+    # 查询密钥
+    def get_keys(Authorization=Authorization_):
+        url = url_ + '/keys'
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+
+        logger.info("<-----Send----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+str(headers))
+        res = requests.get(url=url,headers=headers)
+        if res.status_code != 200:
+            logger.error(json.loads(res.text))
+            logger.error('用户托管key查询失败!')
+            logger.error('Response | '+res.text)
+            # raise Exception("请求异常")
+        else:
+            result = json.loads(res.text)
+            return result
+
+    def post_keys(count=1,Authorization=Authorization_):
+        url = url_ + '/keys'
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+
+        body = {
+            "count":count
+        }
+
+        logger.info("<-----Create Key----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+str(headers)+'\n\n'+'Body:'+str(body))
+        res = requests.post(url=url, json=body, headers=headers, timeout=timeout)
+        if res.status_code != 200:
+            logger.error(json.loads(res.text))
+            logger.error('用户托管key创建失败!')
+            logger.error('Response | '+res.text)
+            # raise Exception("请求异常")
+        else:
+            result = json.loads(res.text)
+            return result
+
 if __name__ == '__main__':
-    # HttpUtils.post_send_transfers('1535216278276812802')
-    Authorization = ''
-    ownerPublicKey = '0x0388924a9fedf683cb9c6aec801d19afae932f767e21df4ea91cd282fa06295795'
-    deviceToken = '0x0388924a9fedf683cb9c6aec801d19afae932f767e21df4ea91cd282fa06295795'
-    print(HttpUtils.post_registrations(Authorization,ownerPublicKey,deviceToken))
+    print(HttpUtils.post_keys())
+    # print(HttpUtils.get_keys())
