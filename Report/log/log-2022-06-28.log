@@ -1,0 +1,71 @@
+2022-06-28 10:58:12.186 | ERROR    | Common.Http:post_transfers:151 - transfers 交易失败！
+2022-06-28 10:58:12.187 | ERROR    | Common.Http:post_transfers:152 - {"amount": 1, "definiteSignerPublicKeys": "032de47c91516ffd2985965935841fa8243894b003886a1f478682da74a848db58", "from": "iaa13cq3lkmheswkz4d00vu4663267aw6tqjep3jy4", "networkCode": "IRIS", "to": "iaa13cq3lkmheswkz4d00vu4663267aw6tqjep3jy4"}
+2022-06-28 11:03:15.629 | ERROR    | Common.Http:post_transfers:151 - transfers 交易失败！
+2022-06-28 11:03:15.629 | ERROR    | Common.Http:post_transfers:152 - {"amount": 1, "definiteSignerPublicKeys": "032de47c91516ffd2985965935841fa8243894b003886a1f478682da74a848db58", "from": "iaa13cq3lkmheswkz4d00vu4663267aw6tqjep3jy4", "networkCode": "IRIS", "to": "iaa13cq3lkmheswkz4d00vu4663267aw6tqjep3jy4"}
+2022-06-28 14:13:54.123 | ERROR    | Common.Http:post_sign_transfers:191 - Sign 签名失败！
+2022-06-28 14:13:54.124 | ERROR    | Common.Http:post_sign_transfers:192 - <-----Sign Response----->{"code":2300000,"message":"hash =  da7db867744aaa885390654fb3fef0a8cc8672ccca9e159c6979177482f1d94b，invalid publickey"}
+2022-06-28 14:13:54.371 | ERROR    | Common.Http:post_send_transfers:210 - {'code': 2300000, 'message': 'status changed'}
+2022-06-28 14:13:54.371 | ERROR    | Common.Http:post_send_transfers:211 - Send 交易失败！
+2022-06-28 14:13:54.372 | ERROR    | Common.Http:post_send_transfers:212 - 
+<-----Send Response Error----->
+{"code":2300000,"message":"status changed"}
+2022-06-28 14:19:24.991 | ERROR    | Common.Http:post_sign_transfers:191 - Sign 签名失败！
+2022-06-28 14:19:24.992 | ERROR    | Common.Http:post_sign_transfers:192 - <-----Sign Response Error----->{"code":2300000,"message":"hash =  da7db867744aaa885390654fb3fef0a8cc8672ccca9e159c6979177482f1d94b，invalid publickey"}
+2022-06-28 14:19:25.250 | ERROR    | Common.Http:post_send_transfers:210 - 
+<-----Send Response Error----->
+{"code":2300000,"message":"status changed"}
+2022-06-28 14:19:58.131 | ERROR    | Common.Http:post_sign_transfers:191 - Sign 签名失败！
+2022-06-28 14:19:58.132 | ERROR    | Common.Http:post_sign_transfers:192 - <-----Sign Response Error----->{"code":2300000,"message":"hash =  da7db867744aaa885390654fb3fef0a8cc8672ccca9e159c6979177482f1d94b，invalid publickey"}
+2022-06-28 14:19:58.604 | ERROR    | Common.Http:post_send_transfers:210 - 
+<-----Send Response Error----->
+{"code":2300000,"message":"status changed"}
+2022-06-28 14:20:20.598 | ERROR    | Common.Http:post_sign_transfers:191 - Sign 签名失败！
+2022-06-28 14:20:20.599 | ERROR    | Common.Http:post_sign_transfers:192 - <-----Sign Response Error----->{"code":2300000,"message":"hash =  67ad11f1dc5758a6ea87bd1dc6cb13d2311d30b9fcc572b44e79467d8cb4bec8，invalid publickey"}
+2022-06-28 14:20:20.820 | ERROR    | Common.Http:post_send_transfers:210 - 
+<-----Send Response Error----->
+{"code":2300000,"message":"status changed"}
+2022-06-28 14:55:49.155 | ERROR    | Common.Http:post_sign_transfers:191 - Sign 签名失败！
+2022-06-28 14:55:49.155 | ERROR    | Common.Http:post_sign_transfers:192 - <-----Sign Response Error----->{"code":2300000,"message":"hash =  0aafdbdc56ec37940e108a4dd35df8760ffba4aba596e7f4726f9166c44b40a9，invalid publickey"}
+2022-06-28 14:55:49.493 | ERROR    | Common.Http:post_send_transfers:210 - 
+<-----Send Response Error----->
+{"code":2300000,"message":"status changed"}
+2022-06-28 15:20:14.887 | ERROR    | Common.Http:post_transfers:151 - transfers 交易失败！
+2022-06-28 15:20:14.887 | ERROR    | Common.Http:post_transfers:152 - {"amount": "iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u", "definiteSignerPublicKeys": ["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"], "from": "IRIS", "networkCode": ["033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"], "to": "iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u"}
+2022-06-28 15:20:15.278 | ERROR    | Common.Http:post_transfers:151 - transfers 交易失败！
+2022-06-28 15:20:15.278 | ERROR    | Common.Http:post_transfers:152 - {"amount": "iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u", "definiteSignerPublicKeys": ["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"], "from": "IRIS", "networkCode": ["033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"], "to": "iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u"}
+2022-06-28 16:22:47.649 | ERROR    | Common.Http:post_send_transfers:208 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-28 16:22:55.079 | ERROR    | Common.Http:post_send_transfers:208 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-28 16:29:21.770 | ERROR    | Common.Http:post_send_transfers:208 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-28 16:29:28.849 | ERROR    | Common.Http:post_send_transfers:208 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-28 16:33:25.598 | ERROR    | Common.Http:post_send_transfers:208 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-28 16:33:32.821 | ERROR    | Common.Http:post_send_transfers:208 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-28 16:58:45.340 | ERROR    | Common.Http:post_send_transfers:208 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-28 16:58:52.613 | ERROR    | Common.Http:post_send_transfers:208 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-28 17:00:26.725 | ERROR    | Common.Http:post_send_transfers:208 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-28 17:00:34.072 | ERROR    | Common.Http:post_send_transfers:208 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-28 17:03:40.869 | ERROR    | Common.Http:post_send_transfers:208 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-28 17:03:48.155 | ERROR    | Common.Http:post_send_transfers:208 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}

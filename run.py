@@ -16,12 +16,19 @@ class Run():
     #Test_transfers_IRIS
     def job_transfer_iris():
         pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_transfers_IRIS",'--clean-alluredir', '--alluredir=Report/Allure_Testfile'])
-        
+
 
 if __name__ == '__main__':
-    sched_cycle = BlockingScheduler()
-    sched_cycle.add_job(Run.job_transfer_iris, 'interval', seconds=5)
-    sched_cycle.start()
+    # sched_cycle = BlockingScheduler()
+    # sched_cycle.add_job(Run.job_transfer_iris, 'interval', seconds=5)
+    # sched_cycle.start()
+    
+    pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Transfers/Test_Transfers_ETH",'--clean-alluredir', '--alluredir=Report/Allure_Testfile'])
+    pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Transfers/Test_Transfers_IRIS", '--alluredir=Report/Allure_Testfile'])
+    pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Transfers/Test_Transfers_BTC", '--alluredir=Report/Allure_Testfile'])
+    os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure_Testfile')
+    
+
 
 
 

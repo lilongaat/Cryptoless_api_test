@@ -42,7 +42,7 @@ class Config():
     def random_amount(decimals:int):
         num = random.randint(1,9)
         a = '0.'
-        for i in range(2,decimals):
+        for i in range(1,decimals):
             a = a + '0'
         random_amount = a + str(num)
         return random_amount
@@ -70,8 +70,8 @@ if __name__ == '__main__':
     # print(Config.now_time_day())
     # print(Config.now_time_second())
     # print(Config.now_time())
-    # print(type(Config.random_amount(18)),Config.random_amount(18))
+    print(type(Config.random_amount(18)),Config.random_amount(18))
     
-    privkey = '9365d91088ca52629cd2f22bb14fda4efecf8905d53734e115cb9e1c8bb5b580'
-    hash = 'f1ca66d56a1b790897a3037d50faaab376bc67ed5d7ed35ed099aebfcd502982'
-    print(Config.sign(privkey, hash))
+    # privkey = '9365d91088ca52629cd2f22bb14fda4efecf8905d53734e115cb9e1c8bb5b580'
+    # hash = 'f1ca66d56a1b790897a3037d50faaab376bc67ed5d7ed35ed099aebfcd502982'
+    # print(Config.sign(privkey, hash))

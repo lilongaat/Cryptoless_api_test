@@ -7,7 +7,7 @@ from loguru import logger
 from Config.readconfig import ReadConfig
 
 # Debug
-timeout = int(ReadConfig().get_debug('timeout'))
+timeout_ = int(ReadConfig().get_debug('timeout'))
 url_ = ReadConfig().get_debug('url')
 Authorization_ = ReadConfig().get_debug('Authorization')
 
@@ -30,16 +30,15 @@ class HttpUtils:
             "ownerPublicKey": ownerPublicKey,
             "deviceToken": deviceToken
         }
+        logger.info("<-----Register----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
 
-        logger.info("<-----Register----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+str(headers)+'\n\n'+'Body:'+str(body))
-        res = requests.post(url=url, json=body, headers=headers, timeout=10)
+        res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)
         if res.status_code != 200:
             logger.error('registrations 失败！')
             logger.error('Response | '+res.text)
             # raise Exception("请求异常")
         else:
-            result = json.loads(res.text)
-            return result
+            return res
 
     @staticmethod
     # 查询账户信息
@@ -50,15 +49,14 @@ class HttpUtils:
             "Authorization": Authorization
         }
 
-        logger.info("<-----Account----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+str(headers))
-        res = requests.get(url=url, headers=headers, timeout=10)
-        if res.status_code != 200:
-            logger.error('Account 查询失败！')
-            logger.error('Response | '+res.text)
-            # raise Exception("请求异常")
+        logger.info("<-----Account----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+        res = requests.get(url=url, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Query account Response----->"+"\n"+(res.text))
+            return res
         else:
-            result = json.loads(res.text)
-            return result
+            logger.error('<-----Query account Response Error----->'+(res.text))
+            raise Exception("请求异常")
 
     @staticmethod
     # 创建账户
@@ -74,15 +72,14 @@ class HttpUtils:
             "threshold": threshold
         }
 
-        logger.info("<-----Account-Create----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+str(headers)+'\n\n'+'Body:'+str(body))
-        res = requests.post(url=url, json=body, headers=headers, timeout=10)
-        if res.status_code != 200:
-            logger.error('Account 创建失败！')
-            logger.error('Response | '+res.text)
-            # raise Exception("请求异常")
+        logger.info("<-----Account-Create----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
+        res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Create account Response----->"+"\n"+(res.text))
+            return res
         else:
-            result = json.loads(res.text)
-            return result
+            logger.error('<-----Create account Response Error----->'+(res.text))
+            raise Exception("请求异常")
 
     @staticmethod
     # 查询networks信息
@@ -93,19 +90,18 @@ class HttpUtils:
             "Authorization": Authorization
         }
         
-        logger.info("<-----NetWorks----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+str(headers))
-        res = requests.get(url=url, headers=headers, timeout=10)
-        if res.status_code != 200:
-            logger.error('Networks 查询失败！')
-            logger.error('Response | '+res.text)
-            # raise Exception("请求异常")
-        else:
-            result = json.loads(res.text)
-            if len(result) > 0:
-                return result
+        logger.info("<-----NetWorks----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+        res = requests.get(url=url, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Query account Response----->"+"\n"+(res.text))
+            if len(json.loads(res.text)) > 0:
+                return res
             else:
-                logger.info("没有查询到任何NetWorks信息！")
-                logger.info(result)
+                logger.error('<-----Query Networks Response Error----->'+(res.text))
+                raise Exception("没有查询到任何NetWorks信息!")
+        else:
+            logger.error('<-----Query account Response Error----->'+(res.text))
+            raise Exception("请求异常")
 
     @staticmethod
     # 查询holders信息
@@ -116,19 +112,18 @@ class HttpUtils:
             "Authorization": Authorization
         }
 
-        logger.info("<-----Holders----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+str(headers))
-        res = requests.get(url=url, headers=headers, timeout=10)
-        if res.status_code != 200:
-            logger.error('Holsers 查询失败！')
-            logger.error('Response | '+res.text)
-            # raise Exception("请求异常")
-        else:
-            result = json.loads(res.text)
-            if len(result) > 0:
-                return result
+        logger.info("<-----Holders----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+        res = requests.get(url=url, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Query Holders Response----->"+"\n"+(res.text))
+            if len(json.loads(res.text)) > 0:
+                return res
             else:
-                logger.info("没有查询到用户任何Balances信息！")
-                logger.info(result)
+                logger.error('<-----Query Holders Response Error----->'+(res.text))
+                raise Exception("没有查询到任何Holders信息!")
+        else:
+            logger.error('<-----Query Holders Response Error----->'+(res.text))
+            raise Exception("请求异常")
 
     # transfers
     def post_transfers(networkCode: str, symbol: str, definiteSignerPublicKeys: list, from_add: str, to_add: str, amount: str, Authorization=Authorization_):
@@ -145,26 +140,25 @@ class HttpUtils:
             "to": to_add
         }
 
-        logger.info("<-----Transfers----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+str(headers)+'\n\n'+'Body:'+str(body))
-        res = requests.post(url=url, json=body, headers=headers, timeout=10)
-        if res.status_code != 200:
-            logger.error('transfers 交易失败！')
-            logger.error(json.dumps(body))
-            # logger.error('Response | '+res.text)
-            raise Exception("请求异常")
-        else:
-            result = json.loads(res.text)
-            r_estimatedFee = result['_embedded']['transactions'][0]['estimatedFee']
-            r_hash = result['_embedded']['transactions'][0]['hash']
-            r_id = result['_embedded']['transactions'][0]['id']
-            r_networkCode = result['_embedded']['transactions'][0]['networkCode']
-            r_requiredSignings = result['_embedded']['transactions'][0]['requiredSignings']
-            r_serialized = result['_embedded']['transactions'][0]['serialized']
-            r_status = result['_embedded']['transactions'][0]['status']
-            ID = result['id']
-            r_updatedTime = result['_embedded']['transactions'][0]['updatedTime']
+        logger.info('\n'+"<-----Transfers----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
+        res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Transfers Response----->"+"\n"+(res.text))
+            res_ = json.loads(res.text)
+            r_estimatedFee = res_['_embedded']['transactions'][0]['estimatedFee']
+            r_hash = res_['_embedded']['transactions'][0]['hash']
+            r_id = res_['_embedded']['transactions'][0]['id']
+            r_networkCode = res_['_embedded']['transactions'][0]['networkCode']
+            r_requiredSignings = res_['_embedded']['transactions'][0]['requiredSignings']
+            r_serialized = res_['_embedded']['transactions'][0]['serialized']
+            r_status = res_['_embedded']['transactions'][0]['status']
+            ID = res_['id']
+            r_updatedTime = res_['_embedded']['transactions'][0]['updatedTime']
 
-            return result,r_estimatedFee,r_hash,r_id,r_networkCode,r_requiredSignings,r_serialized,r_status,ID,r_updatedTime
+            return res,r_estimatedFee,r_hash,r_id,r_networkCode,r_requiredSignings,r_serialized,r_status,ID,r_updatedTime
+        else:
+            logger.info('\n'+"<-----Transfer Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            return res
 
     # sign
     def post_sign_transfers(transactions_estimatedFee: str, transactions_hash: str, transactions_id: str, transactions_networkCode: str, transactions_requiredSignings: list, transactions_serialized: str, signatures: list, status='BUILDING', Authorization=Authorization_):
@@ -183,19 +177,16 @@ class HttpUtils:
             "signatures": signatures,
             "status": status
         }
+        logger.info('\n'+"<-----Sign----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
 
-        logger.info("<-----Sign----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+str(headers)+'\n\n'+'Body:'+str(body))
-        try:
-            res = requests.post(url=url, json=body, headers=headers, timeout=10)
-        except TimeoutError as e:
-            logger.info("<-----Sign timeout----->")
-        if res.status_code != 200:
-            logger.error('Sign 签名失败！')
-            logger.error('<-----Sign Response----->'+res.text)
-            # raise Exception("请求异常")
+        res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Sign Response----->"+"\n"+(res.text))
+            return res
         else:
-            result = json.loads(res.text)
-            return result
+            logger.info('\n'+"<-----Sign Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            return res
+            raise Exception("请求异常")
 
     # send
     def post_send_transfers(transactions_id:str,Authorization=Authorization_):
@@ -205,16 +196,32 @@ class HttpUtils:
             "Authorization": Authorization
         }
 
-        logger.info("<-----Send----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+str(headers))
-        res = requests.post(url=url, headers=headers, timeout=timeout)
-        if res.status_code != 200:
-            logger.error(json.loads(res.text))
-            logger.error('Send 交易失败！')
-            logger.error('Response | '+res.text)
-            # raise Exception("请求异常")
+        logger.info("<-----Send----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+        res = requests.post(url=url, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Send Response----->"+"\n"+(res.text))
+            return res
         else:
-            result = json.loads(res.text)
-            return result
+            logger.info('\n'+"<-----Transfer Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            # raise Exception("请求异常")
+            return res
+
+    # 查询交易记录by hash
+    def get_transactions_byhash(hash:str,Authorization=Authorization_):
+        url = url_ + '/cryptocurrencies/balance-transactions/' + hash
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        logger.info("<-----Qurey Transactions by hash----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+
+        res = requests.get(url=url,headers=headers,timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Qurey Transactions by hash Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.info('\n'+"<-----Qurey Transactions by hash Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            raise Exception("请求异常")
 
     # 查询密钥
     def get_keys(Authorization=Authorization_):
@@ -224,19 +231,18 @@ class HttpUtils:
             "Authorization": Authorization
         }
 
-        logger.info("<-----Send----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+str(headers))
-        res = requests.get(url=url,headers=headers)
-        if res.status_code != 200:
-            logger.error(json.loads(res.text))
-            logger.error('用户托管key查询失败!')
-            logger.error('Response | '+res.text)
-            # raise Exception("请求异常")
+        logger.info("<-----Qurey Keys----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+        res = requests.get(url=url,headers=headers,timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Qurey Keys Response----->"+"\n"+(res.text))
+            return res
         else:
-            result = json.loads(res.text)
-            return result
+            logger.error('\n'+"<-----Qurey Keys Response Error----->"+"\n"+(res.text))
+            raise Exception("请求异常")
 
+    # 生成密钥
     def post_keys(count=1,Authorization=Authorization_):
-        url = url_ + '/keys'
+        url = url_ + '/vault/keys'
         headers = {
             "Content-Type": "application/json",
             "Authorization": Authorization
@@ -246,17 +252,16 @@ class HttpUtils:
             "count":count
         }
 
-        logger.info("<-----Create Key----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+str(headers)+'\n\n'+'Body:'+str(body))
-        res = requests.post(url=url, json=body, headers=headers, timeout=timeout)
-        if res.status_code != 200:
-            logger.error(json.loads(res.text))
-            logger.error('用户托管key创建失败!')
-            logger.error('Response | '+res.text)
-            # raise Exception("请求异常")
+        logger.info("<-----Create Key----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
+        res = requests.post(url=url, headers=headers, json=body, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Create Keys Response----->"+"\n"+(res.text))
+            return res
         else:
-            result = json.loads(res.text)
-            return result
+            logger.error('\n'+"<-----Create Keys Response Error----->"+"\n"+(res.text))
+            raise Exception("请求异常")
 
 if __name__ == '__main__':
-    print(HttpUtils.post_keys())
+    # print(HttpUtils.post_keys())
     # print(HttpUtils.get_keys())
+    print(HttpUtils.get_transactions_byhash("0x0c9632b57c21b4d44808589ecb5c661f892dbc2310cf9ee708d5cdf66d31badc"))

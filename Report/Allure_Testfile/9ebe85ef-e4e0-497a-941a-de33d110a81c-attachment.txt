@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:143 2022-07-04 13:50:16.20905 | 
+<-----Transfers----->
+Url:https://api.cryptoless.io/cryptocurrencies/IRIS/transfers
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweGI2Y2MzZTYxMWFhNDhhZmMzYWY0N2IzZWM3MTRkNGE5NjNjZDI5YjBhYjk5OGRjY2U2NDhhMjIyNzg2MmUxYzgwZGQ2NTQ5OTEyNjc3MWRlODdiOGQxMjE5NDMwYTllOGYzOTBlMjdiZjZhYmRmYjg3ZjdiOGNiYWNmNjVlMzRmMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogOTc1NzM3MDlcbklzc3VlZCBBdDogTW9uLCAyNyBKdW4gMjAyMiAxNTo0NTozNiBHTVRcbkV4cGlyYXRpb24gVGltZTogRnJpLCAyNyBKdW4gMjA0MiAxNTo0NTozNiBHTVQifQ=="}
+
+Body:{"amount": "0.0000000000000000003", "definiteSignerPublicKeys": ["033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"], "from": "iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u", "networkCode": "IRIS", "to": "iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u"}
+[32mINFO    [0m Common.Http:Http.py:160 2022-07-04 13:50:16.20905 | 
+<-----Transfer Response Error----->
+400
+{"code":2100000,"message":"amount decimals long too"}

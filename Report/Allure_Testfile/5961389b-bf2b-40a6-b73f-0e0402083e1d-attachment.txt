@@ -1,0 +1,34 @@
+[32mINFO    [0m Common.Http:Http.py:143 2022-07-04 13:50:16.20905 | 
+<-----Transfers----->
+Url:https://api.cryptoless.io/cryptocurrencies/ETH/transfers
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweGI2Y2MzZTYxMWFhNDhhZmMzYWY0N2IzZWM3MTRkNGE5NjNjZDI5YjBhYjk5OGRjY2U2NDhhMjIyNzg2MmUxYzgwZGQ2NTQ5OTEyNjc3MWRlODdiOGQxMjE5NDMwYTllOGYzOTBlMjdiZjZhYmRmYjg3ZjdiOGNiYWNmNjVlMzRmMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogOTc1NzM3MDlcbklzc3VlZCBBdDogTW9uLCAyNyBKdW4gMjAyMiAxNTo0NTozNiBHTVRcbkV4cGlyYXRpb24gVGltZTogRnJpLCAyNyBKdW4gMjA0MiAxNTo0NTozNiBHTVQifQ=="}
+
+Body:{"amount": "0.000005", "definiteSignerPublicKeys": ["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"], "from": "0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3", "networkCode": "ETH-RINKEBY", "to": "0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3"}
+[32mINFO    [0m Common.Http:Http.py:146 2022-07-04 13:50:16.20905 | 
+<-----Transfers Response----->
+{"_embedded":{"transactions":[{"blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-07-04T05:50:51.312Z","estimatedFee":"31500000126000","hash":"","id":"1543834704671076353","networkCode":"ETH-RINKEBY","requiredSignings":[{"hash":"52fcc74bc8e6f25e3cd821d1e9243a719ef19fea405b938f810bb1e93e30a8c5","publicKeys":["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"threshold":1}],"serialized":"e9458459682f0682520894bdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe386048c2739500080808080","status":"BUILDING","updatedTime":"2022-07-04T05:50:51.312Z"}]},"amount":"0.000005","createdTime":"2022-07-04T05:50:51.324Z","from":"0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","id":"1543834704721440769","networkCode":"ETH-RINKEBY","status":-2,"symbol":"ETH","to":"0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","type":1,"updatedTime":"2022-07-04T05:50:51.324Z"}
+[32mINFO    [0m Common.Http:Http.py:180 2022-07-04 13:50:16.20905 | 
+<-----Sign----->
+Url:https://api.cryptoless.io/transactions/1543834704671076353/sign
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweGI2Y2MzZTYxMWFhNDhhZmMzYWY0N2IzZWM3MTRkNGE5NjNjZDI5YjBhYjk5OGRjY2U2NDhhMjIyNzg2MmUxYzgwZGQ2NTQ5OTEyNjc3MWRlODdiOGQxMjE5NDMwYTllOGYzOTBlMjdiZjZhYmRmYjg3ZjdiOGNiYWNmNjVlMzRmMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogOTc1NzM3MDlcbklzc3VlZCBBdDogTW9uLCAyNyBKdW4gMjAyMiAxNTo0NTozNiBHTVRcbkV4cGlyYXRpb24gVGltZTogRnJpLCAyNyBKdW4gMjA0MiAxNTo0NTozNiBHTVQifQ=="}
+
+Body:{"estimatedFee": "31500000126000", "hash": "", "id": "1543834704671076353", "networkCode": "ETH-RINKEBY", "requiredSignings": [{"hash": "52fcc74bc8e6f25e3cd821d1e9243a719ef19fea405b938f810bb1e93e30a8c5", "publicKeys": ["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"], "threshold": 1}], "serialized": "e9458459682f0682520894bdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe386048c2739500080808080", "signatures": [{"hash": "52fcc74bc8e6f25e3cd821d1e9243a719ef19fea405b938f810bb1e93e30a8c5", "publickey": "0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0", "signature": "10160f6d893af2bc0ed74716467f81773700064fe86fad9177d51f410b09f7745b4710a52544661981caa9e2a50546477bd0c57be9db4d4372b74f43e385eda400"}], "status": "BUILDING"}
+[32mINFO    [0m Common.Http:Http.py:184 2022-07-04 13:50:16.20905 | 
+<-----Sign Response----->
+{"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-07-04T05:50:51.000Z","estimatedFee":"31500000126000","fee":"-1","hash":"0x8f4cb571c3db6a11771b52cddcbee432ad6a3ec9de2edde301cd82247d7b45a9","id":"1543834704671076353","networkCode":"ETH-RINKEBY","serialized":"f869458459682f0682520894bdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe386048c27395000802ba010160f6d893af2bc0ed74716467f81773700064fe86fad9177d51f410b09f774a05b4710a52544661981caa9e2a50546477bd0c57be9db4d4372b74f43e385eda4","status":"SIGNED","updatedTime":"2022-07-04T05:50:51.830Z"}
+[32mINFO    [0m Common.Http:Http.py:199 2022-07-04 13:50:16.20905 | <-----Send----->
+Url:https://api.cryptoless.io/transactions/1543834704671076353/send
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweGI2Y2MzZTYxMWFhNDhhZmMzYWY0N2IzZWM3MTRkNGE5NjNjZDI5YjBhYjk5OGRjY2U2NDhhMjIyNzg2MmUxYzgwZGQ2NTQ5OTEyNjc3MWRlODdiOGQxMjE5NDMwYTllOGYzOTBlMjdiZjZhYmRmYjg3ZjdiOGNiYWNmNjVlMzRmMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogOTc1NzM3MDlcbklzc3VlZCBBdDogTW9uLCAyNyBKdW4gMjAyMiAxNTo0NTozNiBHTVRcbkV4cGlyYXRpb24gVGltZTogRnJpLCAyNyBKdW4gMjA0MiAxNTo0NTozNiBHTVQifQ=="}
+[32mINFO    [0m Common.Http:Http.py:202 2022-07-04 13:50:16.20905 | 
+<-----Send Response----->
+{"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-07-04T05:50:51.000Z","estimatedFee":"31500000126000","fee":"-1","hash":"0x8f4cb571c3db6a11771b52cddcbee432ad6a3ec9de2edde301cd82247d7b45a9","id":"1543834704671076353","networkCode":"ETH-RINKEBY","serialized":"f869458459682f0682520894bdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe386048c27395000802ba010160f6d893af2bc0ed74716467f81773700064fe86fad9177d51f410b09f774a05b4710a52544661981caa9e2a50546477bd0c57be9db4d4372b74f43e385eda4","status":"PENDING","updatedTime":"2022-07-04T05:50:53.200Z"}
+[32mINFO    [0m Common.Http:Http.py:216 2022-07-04 13:50:16.20905 | <-----Qurey Transactions by hash----->
+Url:https://api.cryptoless.io/cryptocurrencies/balance-transactions/0x8f4cb571c3db6a11771b52cddcbee432ad6a3ec9de2edde301cd82247d7b45a9
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweGI2Y2MzZTYxMWFhNDhhZmMzYWY0N2IzZWM3MTRkNGE5NjNjZDI5YjBhYjk5OGRjY2U2NDhhMjIyNzg2MmUxYzgwZGQ2NTQ5OTEyNjc3MWRlODdiOGQxMjE5NDMwYTllOGYzOTBlMjdiZjZhYmRmYjg3ZjdiOGNiYWNmNjVlMzRmMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogOTc1NzM3MDlcbklzc3VlZCBBdDogTW9uLCAyNyBKdW4gMjAyMiAxNTo0NTozNiBHTVRcbkV4cGlyYXRpb24gVGltZTogRnJpLCAyNyBKdW4gMjA0MiAxNTo0NTozNiBHTVQifQ=="}
+[32mINFO    [0m Common.Http:Http.py:220 2022-07-04 13:50:16.20905 | 
+<-----Qurey Transactions by hash Response----->
+[{"address":"0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","amount":"0.000031500000126","blockHash":"0x8d892b8e6474d7e226e6f5af768dc771173caf02eb3bb7d55547a6354e317442","blockHeight":"10963798","createdTime":"2022-07-04T05:51:05.000Z","hash":"0x8f4cb571c3db6a11771b52cddcbee432ad6a3ec9de2edde301cd82247d7b45a9","id":"1543834762657361921","isReverted":false,"networkCode":"ETH-RINKEBY","symbol":"ETH","time":"2022-07-04T05:50:59.000Z","type":-1,"updatedTime":"2022-07-04T05:51:05.000Z"}]

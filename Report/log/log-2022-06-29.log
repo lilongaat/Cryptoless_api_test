@@ -1,0 +1,34 @@
+2022-06-29 11:08:45.463 | ERROR    | Common.Http:post_send_transfers:208 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-29 11:08:54.467 | ERROR    | Common.Http:post_send_transfers:208 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-29 11:13:18.470 | ERROR    | Common.Http:post_send_transfers:208 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-29 11:13:27.082 | ERROR    | Common.Http:post_send_transfers:208 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-29 14:23:24.734 | ERROR    | Common.Http:post_send_transfers:206 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-29 14:23:32.092 | ERROR    | Common.Http:post_send_transfers:206 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-29 14:45:30.932 | ERROR    | test_fail:test_transfers_address:33 - 400
+2022-06-29 15:29:19.342 | ERROR    | test_transfers_fail_eth:test_transfers_address:33 - 400
+2022-06-29 15:29:33.602 | ERROR    | Common.Http:post_send_transfers:207 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-29 15:29:40.859 | ERROR    | Common.Http:post_send_transfers:207 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-29 15:30:06.933 | ERROR    | test_transfers_fail_eth:test_transfers_address:33 - 400
+2022-06-29 15:30:24.641 | ERROR    | Common.Http:post_send_transfers:207 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-29 15:30:33.735 | ERROR    | Common.Http:post_send_transfers:207 - 
+<-----Send Response Error----->
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 9918uiris is smaller than 13537uiris: insufficient funds: insufficient funds"}
+2022-06-29 15:36:02.019 | ERROR    | test_transfers_fail_eth:test_transfers_address:33 - 400
