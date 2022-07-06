@@ -31,7 +31,7 @@ class Test_transfers_success_eth:
         signatures = [
             {
                 "hash":res[5][0]['hash'],
-                "publickey":PublicKeys[0],
+                "publickey":res[5][0]['publicKeys'][0],
                 "signature":signature
             }
         ]

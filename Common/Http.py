@@ -160,6 +160,42 @@ class HttpUtils:
             logger.info('\n'+"<-----Transfer Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
             return res
 
+    # 跨链
+    def post_crosschain(networkCode: str, symbol: str, from_add: str,toNetworkCode: str, to_add: str, amount: str, Authorization=Authorization_):
+        url = url_ + '/cryptocurrencies/'+symbol+'/transfers'
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        body = {
+            "from": from_add,
+            "networkCode": networkCode,
+            "symbol": symbol,
+            "to": to_add,
+            "toNetworkCode": toNetworkCode,
+            "amount":amount
+        }
+
+        logger.info('\n'+"<-----Cross Chain----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
+        res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Cross Chain Response----->"+"\n"+(res.text))
+            res_ = res.json()
+            r_estimatedFee = res_['_embedded']['transactions'][0]['estimatedFee']
+            r_hash = res_['_embedded']['transactions'][0]['hash']
+            r_id = res_['_embedded']['transactions'][0]['id']
+            r_networkCode = res_['_embedded']['transactions'][0]['networkCode']
+            r_requiredSignings = res_['_embedded']['transactions'][0]['requiredSignings']
+            r_serialized = res_['_embedded']['transactions'][0]['serialized']
+            r_status = res_['_embedded']['transactions'][0]['status']
+            ID = res_['id']
+            r_updatedTime = res_['_embedded']['transactions'][0]['updatedTime']
+
+            return res,r_estimatedFee,r_hash,r_id,r_networkCode,r_requiredSignings,r_serialized,r_status,ID,r_updatedTime
+        else:
+            logger.info('\n'+"<-----Cross Chain Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            return res
+
     # sign
     def post_sign_transfers(transactions_estimatedFee: str, transactions_hash: str, transactions_id: str, transactions_networkCode: str, transactions_requiredSignings: list, transactions_serialized: str, signatures: list, status='BUILDING', Authorization=Authorization_):
         url = url_ + '/transactions/'+transactions_id+'/sign'
@@ -206,7 +242,7 @@ class HttpUtils:
             # raise Exception("请求异常")
             return res
 
-    # 查询交易记录by hash
+    # 查询关联交易记录by hash
     def get_transactions_byhash(hash:str,Authorization=Authorization_):
         url = url_ + '/cryptocurrencies/balance-transactions/' + hash
         headers = {
@@ -221,6 +257,23 @@ class HttpUtils:
             return res
         else:
             logger.info('\n'+"<-----Qurey Transactions by hash Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            raise Exception("请求异常")
+
+    # 查询转账信息by id
+    def get_transactions_byid(id: str, expand = 'transactions', Authorization=Authorization_):
+        url = url_ + '/cryptocurrencies/transfers/' + id + '?expand=' + expand
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        logger.info("<-----Qurey Transactions by id----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+
+        res = requests.get(url=url,headers=headers,timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Qurey Transactions by id Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.info('\n'+"<-----Qurey Transactions by id Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
             raise Exception("请求异常")
 
     # 查询密钥
