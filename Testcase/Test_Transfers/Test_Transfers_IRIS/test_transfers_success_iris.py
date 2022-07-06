@@ -24,7 +24,10 @@ class Test_transfers_success_iris:
     def test_transfers_address(self,test_title,privatekey,PublicKeys,networkCode,symbol,from_add,to_add,amount):
 
         with allure.step("构建交易——transfers"):
-            res = Http.HttpUtils.post_transfers(networkCode,symbol,PublicKeys,from_add,to_add,amount)
+            transactionParams = {
+                "memo":"hahahhahahhahahhaahhahhahhahahahahhhhhhhahazheg1=-==-9u9reo222222@@@@#%$%%^描述一段昂撒的结合房间哈是v分，就哈是v发哈v分吧吧1"
+            }
+            res = Http.HttpUtils.post_transfers(networkCode,symbol,PublicKeys,from_add,to_add,amount,transactionParams)
             assert res[0].status_code == 200
 
         signature = Conf.Config.sign(privatekey[0],res[5][0]['hash'])

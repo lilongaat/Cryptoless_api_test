@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:144 2022-07-06 13:53:30.306601 | 
+<-----Transfers----->
+Url:https://api.cryptoless.io/cryptocurrencies/ETH/transfers
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweGI2Y2MzZTYxMWFhNDhhZmMzYWY0N2IzZWM3MTRkNGE5NjNjZDI5YjBhYjk5OGRjY2U2NDhhMjIyNzg2MmUxYzgwZGQ2NTQ5OTEyNjc3MWRlODdiOGQxMjE5NDMwYTllOGYzOTBlMjdiZjZhYmRmYjg3ZjdiOGNiYWNmNjVlMzRmMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogOTc1NzM3MDlcbklzc3VlZCBBdDogTW9uLCAyNyBKdW4gMjAyMiAxNTo0NTozNiBHTVRcbkV4cGlyYXRpb24gVGltZTogRnJpLCAyNyBKdW4gMjA0MiAxNTo0NTozNiBHTVQifQ=="}
+
+Body:{"amount": "", "definiteSignerPublicKeys": ["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"], "from": "0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3", "networkCode": "ETH-RINKEBY", "to": "0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3", "transactionParams": ""}
+[32mINFO    [0m Common.Http:Http.py:161 2022-07-06 13:53:30.306601 | 
+<-----Transfer Response Error----->
+400
+{"code":2100000,"message":"amount:not empty"}

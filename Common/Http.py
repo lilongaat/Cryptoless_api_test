@@ -126,7 +126,7 @@ class HttpUtils:
             raise Exception("请求异常")
 
     # transfers
-    def post_transfers(networkCode: str, symbol: str, definiteSignerPublicKeys: list, from_add: str, to_add: str, amount: str, Authorization=Authorization_):
+    def post_transfers(networkCode: str, symbol: str, definiteSignerPublicKeys: list, from_add: str, to_add: str, amount: str, transactionParams = '', Authorization=Authorization_):
         url = url_ + '/cryptocurrencies/'+symbol+'/transfers'
         headers = {
             "Content-Type": "application/json",
@@ -137,7 +137,8 @@ class HttpUtils:
             "definiteSignerPublicKeys": definiteSignerPublicKeys,
             "from": from_add,
             "networkCode": networkCode,
-            "to": to_add
+            "to": to_add,
+            "transactionParams":transactionParams
         }
 
         logger.info('\n'+"<-----Transfers----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))

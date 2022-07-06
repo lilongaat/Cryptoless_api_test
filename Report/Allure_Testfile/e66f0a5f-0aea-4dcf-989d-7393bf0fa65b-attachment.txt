@@ -1,0 +1,21 @@
+[32mINFO    [0m Common.Http:Http.py:144 2022-07-06 13:53:30.306601 | 
+<-----Transfers----->
+Url:https://api.cryptoless.io/cryptocurrencies/ETH/transfers
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweGI2Y2MzZTYxMWFhNDhhZmMzYWY0N2IzZWM3MTRkNGE5NjNjZDI5YjBhYjk5OGRjY2U2NDhhMjIyNzg2MmUxYzgwZGQ2NTQ5OTEyNjc3MWRlODdiOGQxMjE5NDMwYTllOGYzOTBlMjdiZjZhYmRmYjg3ZjdiOGNiYWNmNjVlMzRmMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogOTc1NzM3MDlcbklzc3VlZCBBdDogTW9uLCAyNyBKdW4gMjAyMiAxNTo0NTozNiBHTVRcbkV4cGlyYXRpb24gVGltZTogRnJpLCAyNyBKdW4gMjA0MiAxNTo0NTozNiBHTVQifQ=="}
+
+Body:{"amount": "0.000005", "definiteSignerPublicKeys": ["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"], "from": "0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3", "networkCode": "ETH-RINKEBY", "to": "0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3", "transactionParams": ""}
+[32mINFO    [0m Common.Http:Http.py:147 2022-07-06 13:53:30.306601 | 
+<-----Transfers Response----->
+{"_embedded":{"transactions":[{"blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-07-06T05:53:41.712Z","estimatedFee":"21000021252000","hash":"","id":"1544560195115872257","networkCode":"ETH-RINKEBY","requiredSignings":[{"hash":"db8899010d9f95d16b01c3e9e894acfff9f96746d65461704374babe6d2267b6","publicKeys":["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"threshold":1}],"serialized":"e950843b9acdf482520894bdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe386048c2739500080808080","status":"BUILDING","updatedTime":"2022-07-06T05:53:41.712Z"}]},"amount":"0.000005","createdTime":"2022-07-06T05:53:41.728Z","from":"0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","id":"1544560195178766338","networkCode":"ETH-RINKEBY","status":-2,"symbol":"ETH","to":"0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","type":1,"updatedTime":"2022-07-06T05:53:41.728Z"}
+[32mINFO    [0m Common.Http:Http.py:217 2022-07-06 13:53:30.306601 | 
+<-----Sign----->
+Url:https://api.cryptoless.io/transactions/1544560195115872257/sign
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweGI2Y2MzZTYxMWFhNDhhZmMzYWY0N2IzZWM3MTRkNGE5NjNjZDI5YjBhYjk5OGRjY2U2NDhhMjIyNzg2MmUxYzgwZGQ2NTQ5OTEyNjc3MWRlODdiOGQxMjE5NDMwYTllOGYzOTBlMjdiZjZhYmRmYjg3ZjdiOGNiYWNmNjVlMzRmMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogOTc1NzM3MDlcbklzc3VlZCBBdDogTW9uLCAyNyBKdW4gMjAyMiAxNTo0NTozNiBHTVRcbkV4cGlyYXRpb24gVGltZTogRnJpLCAyNyBKdW4gMjA0MiAxNTo0NTozNiBHTVQifQ=="}
+
+Body:{"estimatedFee": "21000021252000", "hash": "", "id": "1544560195115872257", "networkCode": "ETH-RINKEBY", "requiredSignings": [{"hash": "db8899010d9f95d16b01c3e9e894acfff9f96746d65461704374babe6d2267b6", "publicKeys": ["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"], "threshold": 1}], "serialized": "e950843b9acdf482520894bdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe386048c2739500080808080", "signatures": [{"hash": "db8899010d9f95d16b01c3e9e894acfff9f96746d65461704374babe6d2267b6", "publickey": "0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0", "signature": "87c9f2afdc4e668bb867f43e2b9baec1e03068c9500483222d3c84cc8f00b21c728ea869e0b5f21840ce1063a597b9c66f59f2025b5a89959ab3cdf4a08a429100"}], "status": "BUILDING"}
+[32mINFO    [0m Common.Http:Http.py:224 2022-07-06 13:53:30.306601 | 
+<-----Sign Response Error----->
+400
+{"code":2300000,"message":"invalid signature = 87c9f2afdc4e668bb867f43e2b9baec1e03068c9500483222d3c84cc8f00b21c728ea869e0b5f21840ce1063a597b9c66f59f2025b5a89959ab3cdf4a08a429100"}
