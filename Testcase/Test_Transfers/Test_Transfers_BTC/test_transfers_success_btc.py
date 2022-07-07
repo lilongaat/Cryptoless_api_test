@@ -14,7 +14,8 @@ from Common.Loguru import logger
 class Test_transfers_success_btc():
     test_data = [
         # 测试
-        ("正常转账!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun",Conf.Config.random_amount(2)),
+        ("正常转账!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun","tb1qdy5m3m7fxdgup3hu5rmh4kg5llctp3ck6sewv7",Conf.Config.random_amount(6)),
+        ("正常转账(自己转自己)!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun",Conf.Config.random_amount(5)),
     ]
 
     @allure.story("Transfers_BTC_Success!")
@@ -23,13 +24,15 @@ class Test_transfers_success_btc():
     def test_transfers_address(self,test_title,privatekey,PublicKeys,networkCode,symbol,from_add,to_add,amount):
 
         with allure.step("构建交易——transfers"):
-            res = Http.HttpUtils.post_transfers(networkCode,symbol,PublicKeys,from_add,to_add,amount)
+            transactionParams = {
+                "memo":"hahahhahahhahahhaahhahhahhahahaha@@==这是一段描述！！====@@hahahhahahhahahhaahhahhahhahahaha"
+            }
+            res = Http.HttpUtils.post_transfers(networkCode,symbol,PublicKeys,from_add,to_add,amount,transactionParams)
             assert res[0].status_code == 200
 
         signatures = []
         for i in range(len(res[5])):
             signature = Conf.Config.sign(privatekey[0],res[5][i]['hash'])
-            logger.info(signature)
             signatures.append(
                 {
                 "hash":res[5][i]['hash'],
@@ -47,14 +50,32 @@ class Test_transfers_success_btc():
             assert send.status_code == 200
 
         with allure.step("查询关联交易记录——balance-transactions by hash"):
-            sleep(20)
-            hash = send.json()["hash"]
-            transcations = Http.HttpUtils.get_transactions_byhash(hash)
-            assert transcations.status_code == 200
-
-            # BTC自己转自己一条交易记录
+            # 循环查10次关联交易记录
+            for i in range(10):
+                sleep(20)
+                logger.info("<----查询次数:第" + str(i+1) + "次---->")
+                transcations = Http.HttpUtils.get_transactions_byhash(send.json()["hash"])
+                assert transcations.status_code == 200
+                if (len(transcations.json()) > 0):
+                    break
+            
             if (from_add == to_add):
-                assert len(transcations.json()) == 1
+                assert len(transcations.json()) == 1 # 自己转自己一条交易记录
+                assert transcations.json()[0]["type"] == -1 # type 是 -1
+                assert transcations.json()[0]["address"] == res[0].json()["from"] # address 是转出地址
+                assert transcations.json()[0]["amount"] ==  res[0].json()["amount"] + Conf.Config.amount_decimals(send.json()['estimatedFee'],8)
             else:
                 assert len(transcations.json()) == 2
+                if(transcations.json()[0]["type"] == -1): # 判断第一个交易为转出地址
+                    assert transcations.json()[0]["address"] == res[0].json()["from"]
+                    assert transcations.json()[0]["amount"] ==  res[0].json()["amount"] + Conf.Config.amount_decimals(send.json()['estimatedFee'],8)
 
+                    assert transcations.json()[1]["address"] == res[0].json()["to"]
+                    assert transcations.json()[1]["amount"] ==  res[0].json()["amount"]
+
+                else:
+                    assert transcations.json()[0]["address"] == res[0].json()["to"]
+                    assert transcations.json()[0]["amount"] ==  res[0].json()["amount"]
+
+                    assert transcations.json()[1]["address"] == res[0].json()["from"]
+                    assert transcations.json()[1]["amount"] ==  res[0].json()["amount"] + Conf.Config.amount_decimals(send.json()['estimatedFee'],8)

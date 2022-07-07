@@ -145,7 +145,7 @@ class HttpUtils:
         res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)
         if res.status_code == 200:
             logger.info('\n'+"<-----Transfers Response----->"+"\n"+(res.text))
-            res_ = json.loads(res.text)
+            res_ = res.json()
             r_estimatedFee = res_['_embedded']['transactions'][0]['estimatedFee']
             r_hash = res_['_embedded']['transactions'][0]['hash']
             r_id = res_['_embedded']['transactions'][0]['id']
@@ -154,9 +154,8 @@ class HttpUtils:
             r_serialized = res_['_embedded']['transactions'][0]['serialized']
             r_status = res_['_embedded']['transactions'][0]['status']
             ID = res_['id']
-            r_updatedTime = res_['_embedded']['transactions'][0]['updatedTime']
 
-            return res,r_estimatedFee,r_hash,r_id,r_networkCode,r_requiredSignings,r_serialized,r_status,ID,r_updatedTime
+            return res,r_estimatedFee,r_hash,r_id,r_networkCode,r_requiredSignings,r_serialized,r_status,ID
         else:
             logger.info('\n'+"<-----Transfer Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
             return res
@@ -190,9 +189,8 @@ class HttpUtils:
             r_serialized = res_['_embedded']['transactions'][0]['serialized']
             r_status = res_['_embedded']['transactions'][0]['status']
             ID = res_['id']
-            r_updatedTime = res_['_embedded']['transactions'][0]['updatedTime']
 
-            return res,r_estimatedFee,r_hash,r_id,r_networkCode,r_requiredSignings,r_serialized,r_status,ID,r_updatedTime
+            return res,r_estimatedFee,r_hash,r_id,r_networkCode,r_requiredSignings,r_serialized,r_status,ID
         else:
             logger.info('\n'+"<-----Cross Chain Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
             return res

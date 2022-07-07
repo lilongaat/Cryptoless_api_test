@@ -25,9 +25,10 @@ if __name__ == '__main__':
     
     pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Transfers/Test_Transfers_ETH",'--clean-alluredir', '--alluredir=Report/Allure_Testfile'])
     pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Transfers/Test_Transfers_IRIS", '--alluredir=Report/Allure_Testfile'])
+    pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Transfers/Test_Transfers_CLV", '--alluredir=Report/Allure_Testfile'])
     pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Transfers/Test_Transfers_BTC", '--alluredir=Report/Allure_Testfile'])
-    # pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Cross_chain/Test_bsc_clv",'--clean-alluredir', '--alluredir=Report/Allure_Testfile'])
-    # pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Cross_chain/Test_bsc_matic", '--alluredir=Report/Allure_Testfile'])
+    pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Cross_chain/Test_bsc_clv",'--clean-alluredir', '--alluredir=Report/Allure_Testfile'])
+    pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Cross_chain/Test_bsc_matic", '--alluredir=Report/Allure_Testfile'])
     os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure_Testfile')
     
 

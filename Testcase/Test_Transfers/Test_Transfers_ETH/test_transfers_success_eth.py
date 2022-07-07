@@ -24,7 +24,10 @@ class Test_transfers_success_eth:
     def test_transfers_address(self,test_title,privatekey,PublicKeys,networkCode,symbol,from_add,to_add,amount):
 
         with allure.step("构建交易——transfers"):
-            res = Http.HttpUtils.post_transfers(networkCode,symbol,PublicKeys,from_add,to_add,amount)
+            transactionParams = {
+                "memo":"hahahhahahhahahhaahhahhahhahahaha@@==这是一段描述！！====@@hahahhahahhahahhaahhahhahhahahaha"
+            }
+            res = Http.HttpUtils.post_transfers(networkCode,symbol,PublicKeys,from_add,to_add,amount,transactionParams)
             assert res[0].status_code == 200
 
         signature = Conf.Config.sign(privatekey[0],res[5][0]['hash'])
@@ -45,13 +48,32 @@ class Test_transfers_success_eth:
             assert send.status_code == 200
 
         with allure.step("查询关联交易记录——balance-transactions by hash"):
-            sleep(20)
-            hash = json.loads(send.text)["hash"]
-            transcations = Http.HttpUtils.get_transactions_byhash(hash)
-            assert transcations.status_code == 200
-
-            # 自己转自己一条交易记录
+            # 循环查10次关联交易记录
+            for i in range(10):
+                sleep(20)
+                logger.info("<----查询次数:第" + str(i+1) + "次---->")
+                transcations = Http.HttpUtils.get_transactions_byhash(send.json()["hash"])
+                assert transcations.status_code == 200
+                if (len(transcations.json()) > 0):
+                    break
+            
             if (from_add == to_add):
-                assert len(transcations.json()) == 1
+                assert len(transcations.json()) == 1 # 自己转自己一条交易记录
+                assert transcations.json()[0]["type"] == -1 # type 是 -1
+                assert transcations.json()[0]["address"] == res[0].json()["from"] # address 是转出地址
+                assert transcations.json()[0]["amount"] ==  res[0].json()["amount"] + Conf.Config.amount_decimals(send.json()['estimatedFee'],18)
             else:
                 assert len(transcations.json()) == 2
+                if(transcations.json()[0]["type"] == -1): # 判断第一个交易为转出地址
+                    assert transcations.json()[0]["address"] == res[0].json()["from"]
+                    assert transcations.json()[0]["amount"] ==  res[0].json()["amount"] + Conf.Config.amount_decimals(send.json()['estimatedFee'],18)
+
+                    assert transcations.json()[1]["address"] == res[0].json()["to"]
+                    assert transcations.json()[1]["amount"] ==  res[0].json()["amount"]
+
+                else:
+                    assert transcations.json()[0]["address"] == res[0].json()["to"]
+                    assert transcations.json()[0]["amount"] ==  res[0].json()["amount"]
+
+                    assert transcations.json()[1]["address"] == res[0].json()["from"]
+                    assert transcations.json()[1]["amount"] ==  res[0].json()["amount"] + Conf.Config.amount_decimals(send.json()['estimatedFee'],18)

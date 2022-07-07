@@ -1,0 +1,21 @@
+[32mINFO    [0m Common.Http:Http.py:144 2022-07-07 11:07:31.474170 | 
+<-----Transfers----->
+Url:https://api.cryptoless.io/cryptocurrencies/CLV/transfers
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweGI2Y2MzZTYxMWFhNDhhZmMzYWY0N2IzZWM3MTRkNGE5NjNjZDI5YjBhYjk5OGRjY2U2NDhhMjIyNzg2MmUxYzgwZGQ2NTQ5OTEyNjc3MWRlODdiOGQxMjE5NDMwYTllOGYzOTBlMjdiZjZhYmRmYjg3ZjdiOGNiYWNmNjVlMzRmMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogOTc1NzM3MDlcbklzc3VlZCBBdDogTW9uLCAyNyBKdW4gMjAyMiAxNTo0NTozNiBHTVRcbkV4cGlyYXRpb24gVGltZTogRnJpLCAyNyBKdW4gMjA0MiAxNTo0NTozNiBHTVQifQ=="}
+
+Body:{"amount": "0.000005", "definiteSignerPublicKeys": ["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"], "from": "5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT", "networkCode": "CLV", "to": "5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT", "transactionParams": ""}
+[32mINFO    [0m Common.Http:Http.py:147 2022-07-07 11:07:31.474170 | 
+<-----Transfers Response----->
+{"_embedded":{"transactions":[{"blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-07-07T03:22:09.878Z","estimatedFee":"1471250000082973","hash":"","id":"1544884449065758722","networkCode":"CLV","requiredSignings":[{"hash":"4439dc71c273072351beeed236f2a84b16fce5e213e2505bac925196675b567f","publicKeys":["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"threshold":1}],"serialized":"45028400f121b8e5460a7997fbc41b5f26ea3b3280fefebfbecab0bae9b4e70f09795ddb020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001003400070000f121b8e5460a7997fbc41b5f26ea3b3280fefebfbecab0bae9b4e70f09795ddb0b005039278c04","status":"BUILDING","updatedTime":"2022-07-07T03:22:09.878Z"}]},"amount":"0.000005","createdTime":"2022-07-07T03:22:09.891Z","from":"5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","id":"1544884449111875585","networkCode":"CLV","status":-2,"symbol":"CLV","to":"5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","type":1,"updatedTime":"2022-07-07T03:22:09.891Z"}
+[32mINFO    [0m Common.Http:Http.py:215 2022-07-07 11:07:31.474170 | 
+<-----Sign----->
+Url:https://api.cryptoless.io/transactions/1544884449065758722/sign
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweGI2Y2MzZTYxMWFhNDhhZmMzYWY0N2IzZWM3MTRkNGE5NjNjZDI5YjBhYjk5OGRjY2U2NDhhMjIyNzg2MmUxYzgwZGQ2NTQ5OTEyNjc3MWRlODdiOGQxMjE5NDMwYTllOGYzOTBlMjdiZjZhYmRmYjg3ZjdiOGNiYWNmNjVlMzRmMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogOTc1NzM3MDlcbklzc3VlZCBBdDogTW9uLCAyNyBKdW4gMjAyMiAxNTo0NTozNiBHTVRcbkV4cGlyYXRpb24gVGltZTogRnJpLCAyNyBKdW4gMjA0MiAxNTo0NTozNiBHTVQifQ=="}
+
+Body:{"estimatedFee": "1471250000082973", "hash": "", "id": "1544884449065758722", "networkCode": "CLV", "requiredSignings": [{"hash": "4439dc71c273072351beeed236f2a84b16fce5e213e2505bac925196675b567f", "publicKeys": ["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"], "threshold": 1}], "serialized": "45028400f121b8e5460a7997fbc41b5f26ea3b3280fefebfbecab0bae9b4e70f09795ddb020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001003400070000f121b8e5460a7997fbc41b5f26ea3b3280fefebfbecab0bae9b4e70f09795ddb0b005039278c04", "signatures": [{"hash": "4439dc71c273072351beeed236f2a84b16fce5e213e2505bac925196675b567f", "publickey": "02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1", "signature": "9be641267b5f69ce988b9ac760e3ee1d2c505e8b59a0b4c60093dca3a9ed76306e9ff314a06f0f870180da96fb3004041f3166e4cec593a6e2042d65c416d78801"}], "status": "BUILDING"}
+[32mINFO    [0m Common.Http:Http.py:222 2022-07-07 11:07:31.474170 | 
+<-----Sign Response Error----->
+400
+{"code":2300000,"message":"invalid signature = 9be641267b5f69ce988b9ac760e3ee1d2c505e8b59a0b4c60093dca3a9ed76306e9ff314a06f0f870180da96fb3004041f3166e4cec593a6e2042d65c416d78801"}

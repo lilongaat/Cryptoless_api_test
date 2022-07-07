@@ -14,7 +14,7 @@ class Test_transfers_fail_iris:
     test_data = [
         # 测试
         ("余额不足转账",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u",'1000000',400),
-        ("精度超长(19位)转账!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u",Conf.Config.random_amount(19),400),
+        ("精度超长(7位)转账!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u",Conf.Config.random_amount(7),400),
         ("转账金额为空!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u",0,400),
         ("转账金额为空!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u","",400),
         ("转账金额为负数!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u","-0.00000001",400),
