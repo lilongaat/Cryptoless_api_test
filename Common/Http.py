@@ -1,3 +1,4 @@
+from array import array
 import requests
 import json
 import os
@@ -220,6 +221,68 @@ class HttpUtils:
             return res
         else:
             logger.info('\n'+"<-----Sign Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            return res
+            raise Exception("请求异常")
+
+    # 请求签名
+    def post_req_sign(requiredSignings:array,Authorization=Authorization_):
+        url = url_ + '/vault/keys/request-sign'
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        body = requiredSignings
+        logger.info('\n'+"<-----Request Sign----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
+
+        res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Request Sign Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.info('\n'+"<-----Request Sign Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            return res
+            raise Exception("请求异常")
+
+    # 获取验证码
+    def post_req_Verify(requestId:str,Authorization=Authorization_):
+        url = url_ + '/vault/verify/verifications'
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        body = {
+            "requestId":requestId
+        }
+        logger.info('\n'+"<-----Request Verify----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
+
+        res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Request Verify Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.info('\n'+"<-----Request Verify Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            return res
+            raise Exception("请求异常")
+
+    # 托管key签名
+    def post_confirm_sign(id:str,code:str,Authorization=Authorization_):
+        url = url_ + '/vault/keys/confirm-sign'
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        body = {
+            "id":id,
+            "code":code
+        }
+        logger.info('\n'+"<-----Confirm_Sign----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
+
+        res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Confirm_Sign Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.info('\n'+"<-----Confirm_Sign Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
             return res
             raise Exception("请求异常")
 

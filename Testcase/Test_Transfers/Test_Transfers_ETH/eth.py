@@ -26,3 +26,5 @@ signatures = [
 sig = Http.HttpUtils.post_sign_transfers(res[1],res[2],res[3],res[4],res[5],res[6],signatures=signatures)
 
 send = Http.HttpUtils.post_send_transfers(res[3])
+
+transaction = Http.HttpUtils.get_transactions_byid(res[8])

@@ -12,7 +12,7 @@ from Common.Loguru import logger
 class Test_transfers_fail_clv:
     test_data = [
         # 测试
-        ("余额不足转账!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5EMjsczhZw8mUYfyfDJT69PUBAirrviW2bH4chQxKHheCvX3",'1000000',400),
+        # ("余额不足转账!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5EMjsczhZw8mUYfyfDJT69PUBAirrviW2bH4chQxKHheCvX3",'1000000',400),
         ("精度超长(19位)转账!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5EMjsczhZw8mUYfyfDJT69PUBAirrviW2bH4chQxKHheCvX3",Conf.Config.random_amount(19),400),
         ("转账金额为空!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5EMjsczhZw8mUYfyfDJT69PUBAirrviW2bH4chQxKHheCvX3",'',400),
         ("转账金额为负数!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5EMjsczhZw8mUYfyfDJT69PUBAirrviW2bH4chQxKHheCvX3","-0.000001",400),

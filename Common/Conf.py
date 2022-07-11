@@ -77,8 +77,8 @@ if __name__ == '__main__':
     # print(Config.now_time_day())
     # print(Config.now_time_second())
     # print(Config.now_time())
-    print(type(Config.random_amount(18)),Config.random_amount(18))
+    # print(type(Config.random_amount(18)),Config.random_amount(18))
     
-    # privkey = '2f5dbc9722a4c23977e188565eaacb51b905e11927a5089f84df1c4aa1f07b0e'
-    # hash = '77b1ac565feee4bd45b5c7a105d10a660fcd9f7611e11926eac616f7dfb275ce'
-    # print(Config.sign(privkey, hash))
+    privkey = 'ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187'
+    hash = '7fb41fc4998dfd16078faa0c787c113ba3512718cbce1acdc25ed5c4d573beb3'
+    print(Config.sign(privkey, hash))

@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:144 2022-07-08 15:49:48.146634 | 
+<-----Transfers----->
+Url:https://api.cryptoless.io/cryptocurrencies/CLV/transfers
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweGI2Y2MzZTYxMWFhNDhhZmMzYWY0N2IzZWM3MTRkNGE5NjNjZDI5YjBhYjk5OGRjY2U2NDhhMjIyNzg2MmUxYzgwZGQ2NTQ5OTEyNjc3MWRlODdiOGQxMjE5NDMwYTllOGYzOTBlMjdiZjZhYmRmYjg3ZjdiOGNiYWNmNjVlMzRmMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogOTc1NzM3MDlcbklzc3VlZCBBdDogTW9uLCAyNyBKdW4gMjAyMiAxNTo0NTozNiBHTVRcbkV4cGlyYXRpb24gVGltZTogRnJpLCAyNyBKdW4gMjA0MiAxNTo0NTozNiBHTVQifQ=="}
+
+Body:{"amount": "vvvv", "definiteSignerPublicKeys": ["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"], "from": "5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT", "networkCode": "CLV", "to": "5EMjsczhZw8mUYfyfDJT69PUBAirrviW2bH4chQxKHheCvX3", "transactionParams": ""}
+[32mINFO    [0m Common.Http:Http.py:160 2022-07-08 15:49:48.146634 | 
+<-----Transfer Response Error----->
+400
+{"code":2100000,"message":"amount entered incorrectly"}
