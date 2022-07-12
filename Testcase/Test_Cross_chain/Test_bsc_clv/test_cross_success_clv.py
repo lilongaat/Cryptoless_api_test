@@ -13,8 +13,7 @@ from Common.Loguru import logger
 class Test_cross_success_usdc:
     test_data = [
         # 测试
-        # ("CLV在CLVP-BSC间正常跨链交易!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187","2f5dbc9722a4c23977e188565eaacb51b905e11927a5089f84df1c4aa1f07b0e"],"CLV-P","CLV","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","BSC","0x8d2cc82494299e0b9865d7bfd6131c1ab0c2c4f1","6","4"),
-        ("CLV在CLVP-BSC间正常跨链交易!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187","2f5dbc9722a4c23977e188565eaacb51b905e11927a5089f84df1c4aa1f07b0e"],"CLV-P","CLV","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","BSC","0x8d2cc82494299e0b9865d7bfd6131c1ab0c2c4f1","maximum","maximum"),
+        ("CLV在CLVP-BSC间正常跨链交易!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187","2f5dbc9722a4c23977e188565eaacb51b905e11927a5089f84df1c4aa1f07b0e"],"CLV-P","CLV","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","BSC","0x8d2cc82494299e0b9865d7bfd6131c1ab0c2c4f1","6","4"),
     ]
 
     @allure.story("Cross_Chain_Success!")

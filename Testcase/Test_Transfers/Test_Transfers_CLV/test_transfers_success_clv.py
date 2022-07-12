@@ -9,14 +9,14 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(
 from Common import Http, Conf
 from Common.Loguru import logger
 
-
+# 单签账户
 @allure.feature("Transfers_Success!")
 class Test_transfers_success_clv:
     test_data = [
         # 测试
-        # ("正常转账(自己转自己)!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT",Conf.Config.random_amount(9)),
-        # ("正常转账maximum(自己转自己)!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","maximum"),
-        # ("正常转账!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5GsLke2jx8tneTn9EvfzppMhzU9KmEgCSNkbz1tfRaRsiX8J",Conf.Config.random_amount(8)),
+        ("正常转账(自己转自己)!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT",Conf.Config.random_amount(9)),
+        ("正常转账maximum(自己转自己)!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","maximum"),
+        ("正常转账!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5GsLke2jx8tneTn9EvfzppMhzU9KmEgCSNkbz1tfRaRsiX8J",Conf.Config.random_amount(8)),
         ("正常转账maximum!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5GsLke2jx8tneTn9EvfzppMhzU9KmEgCSNkbz1tfRaRsiX8J","maximum"),
     ]
 
@@ -32,14 +32,14 @@ class Test_transfers_success_clv:
             res = Http.HttpUtils.post_transfers(networkCode,symbol,PublicKeys,from_add,to_add,amount,transactionParams)
             assert res[0].status_code == 200
 
-        signature = Conf.Config.sign(privatekey[0],res[5][0]['hash'])
-        signatures = [
-            {
-                "hash":res[5][0]['hash'],
-                "publickey":res[5][0]['publicKeys'][0],
-                "signature":signature
-            }
-        ]
+            signature = Conf.Config.sign(privatekey[0],res[5][0]['hash'])
+            signatures = [
+                {
+                    "hash":res[5][0]['hash'],
+                    "publickey":res[5][0]['publicKeys'][0],
+                    "signature":signature
+                }
+            ]
 
         with allure.step("签名交易——sign"):
             sig = Http.HttpUtils.post_sign_transfers(res[1],res[2],res[3],res[4],res[5],res[6],signatures)
@@ -74,7 +74,7 @@ class Test_transfers_success_clv:
                 assert transcations.json()[0]["address"] == res[0].json()["from"] # address 是转出地址
                 # assert transcations.json()[0]["amount"] ==  res[0].json()["amount"] + Conf.Config.amount_decimals(send.json()['estimatedFee'],18)
             else:
-                assert len(transcations.json()) == 2
+                assert len(transcations.json()) == 3
                 if(transcations.json()[0]["type"] == -1): # 判断第一个交易为转出地址
                     assert transcations.json()[0]["address"] == res[0].json()["from"]
                     # assert transcations.json()[0]["amount"] ==  res[0].json()["amount"] + Conf.Config.amount_decimals(send.json()['estimatedFee'],18)

@@ -79,6 +79,10 @@ if __name__ == '__main__':
     # print(Config.now_time())
     # print(type(Config.random_amount(18)),Config.random_amount(18))
     
+    # BTC:dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b
+    # ETH:ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187
+    # IRIS:49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85
+    # CLV:053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273
     privkey = 'ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187'
-    hash = '7fb41fc4998dfd16078faa0c787c113ba3512718cbce1acdc25ed5c4d573beb3'
+    hash = '490a81ac1404d52a2e4f5c72b291d20a94fdfe23501dedc20d65e59648f1ee51'
     print(Config.sign(privkey, hash))

@@ -50,14 +50,14 @@ class Test_sign_fail_iris:
             res = Http.HttpUtils.post_transfers(networkCode,symbol,PublicKeys,from_add,to_add,amount)
             assert res[0].status_code == 200
 
-        signature = Conf.Config.sign(privatekey[0],res[5][0]['hash'])
-        signatures = [
-            {
-                "hash":res[5][0]['hash'],
-                "publickey":PublicKeys[0],
-                "signature":signature
-            }
-        ]
+            signature = Conf.Config.sign(privatekey[0],res[5][0]['hash'])
+            signatures = [
+                {
+                    "hash":res[5][0]['hash'],
+                    "publickey":PublicKeys[0],
+                    "signature":signature
+                }
+            ]
 
         with allure.step("签名交易——sign"):
             sig = Http.HttpUtils.post_sign_transfers(res[1],res[2],res[3],res[4],res[5],res[6],signatures)
