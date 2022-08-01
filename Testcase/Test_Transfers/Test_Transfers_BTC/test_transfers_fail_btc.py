@@ -19,7 +19,7 @@ class Test_transfers_fail_btc():
         ("转账金额字符串类型异常!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun","0.00000i",400),
         ("转账from地址异常!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","0xE20FD35a849Ad67B2db3287d1dc3669067B237B6","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun",Conf.Config.random_amount(6),400),
         ("转账from地址为空!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun",Conf.Config.random_amount(7),400),
-        ("转账to地址异常!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun","0xFEdd6BA870090f44CE20d06fBE0806B60De6D562",Conf.Config.random_amount(9),400),
+        ("转账to地址异常!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun","0xFEdd6BA870090f44CE20d06fBE0806B60De6D562",Conf.Config.random_amount(4),400),
         ("转账to地址为空!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun","",Conf.Config.random_amount(8),400),
     ]
 
@@ -63,3 +63,10 @@ class Test_sign_fail_btc():
         with allure.step("签名交易——sign"):
             sig = Http.HttpUtils.post_sign_transfers(res[1],res[2],res[3],res[4],res[5],res[6],signatures)
             assert sig.status_code == status_code_check
+
+
+if __name__ == '__main__':
+    path = os.path.abspath(__file__) + ""
+    print(path)
+    # pytest.main(["-vs", path,'--alluredir=Report/Allure'])
+    # os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

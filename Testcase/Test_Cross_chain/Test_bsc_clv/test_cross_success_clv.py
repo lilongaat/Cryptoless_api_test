@@ -26,14 +26,14 @@ class Test_cross_success_usdc:
             res = Http.HttpUtils.post_crosschain(networkCode,symbol,from_add,tonetworkCode,to_add,amount)
             assert res[0].status_code == 200
 
-        signature = Conf.Config.sign(privatekey[0],res[5][0]['hash'])
-        signatures = [
-            {
-                "hash":res[5][0]['hash'],
-                "publickey":res[5][0]['publicKeys'][0],
-                "signature":signature
-            }
-        ]
+            signature = Conf.Config.sign(privatekey[0],res[5][0]['hash'])
+            signatures = [
+                {
+                    "hash":res[5][0]['hash'],
+                    "publickey":res[5][0]['publicKeys'][0],
+                    "signature":signature
+                }
+            ]
 
         with allure.step("签名交易——sign"):
             sig = Http.HttpUtils.post_sign_transfers(res[1],res[2],res[3],res[4],res[5],res[6],signatures)
@@ -65,14 +65,14 @@ class Test_cross_success_usdc:
             res_ = Http.HttpUtils.post_crosschain(tonetworkCode,symbol,to_add,networkCode,from_add,amount_)
             assert res_[0].status_code == 200
 
-        signature_ = Conf.Config.sign(privatekey[1],res_[5][0]['hash'])
-        signatures_ = [
-            {
-                "hash":res_[5][0]['hash'],
-                "publickey":res_[5][0]['publicKeys'][0],
-                "signature":signature_
-            }
-        ]
+            signature_ = Conf.Config.sign(privatekey[1],res_[5][0]['hash'])
+            signatures_ = [
+                {
+                    "hash":res_[5][0]['hash'],
+                    "publickey":res_[5][0]['publicKeys'][0],
+                    "signature":signature_
+                }
+            ]
 
         with allure.step("签名交易——sign"):
             sig_ = Http.HttpUtils.post_sign_transfers(res_[1],res_[2],res_[3],res_[4],res_[5],res_[6],signatures_)
@@ -95,6 +95,6 @@ class Test_cross_success_usdc:
                 assert transactions2_.status_code == 200
                 if (transactions2_.json()['status'] == 1):
                     break
-        assert len(transactions2_.json()['_embedded']['transactions']) == 2
-        assert transactions2_.json()['_embedded']['transactions'][0]['status'] == "SETTLED"
-        assert transactions2_.json()['_embedded']['transactions'][1]['status'] == "SETTLED"
+            assert len(transactions2_.json()['_embedded']['transactions']) == 2
+            assert transactions2_.json()['_embedded']['transactions'][0]['status'] == "SETTLED"
+            assert transactions2_.json()['_embedded']['transactions'][1]['status'] == "SETTLED"

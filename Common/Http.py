@@ -13,7 +13,7 @@ url_ = ReadConfig().get_debug('url')
 Authorization_ = ReadConfig().get_debug('Authorization')
 
 # Release
-# timeout = int(ReadConfig().get_release('timeout'))
+# timeout_ = int(ReadConfig().get_release('timeout'))
 # url_ = ReadConfig().get_release('url')
 # Authorization_ = ReadConfig().get_release('Authorization')
 
@@ -106,8 +106,8 @@ class HttpUtils:
 
     @staticmethod
     # 查询holders信息
-    def get_holders(Authorization=Authorization_, address=''):
-        url = url_ + '/cryptocurrencies/holders?address='+address
+    def get_holders(Network='',symbol ='',address='',Authorization=Authorization_):
+        url = url_ + '/cryptocurrencies/holders?address='+address+'&networkCode='+Network+'&symbol='+symbol
         headers = {
             "Content-Type": "application/json",
             "Authorization": Authorization
@@ -117,15 +117,94 @@ class HttpUtils:
         res = requests.get(url=url, headers=headers, timeout=timeout_)
         if res.status_code == 200:
             logger.info('\n'+"<-----Query Holders Response----->"+"\n"+(res.text))
-            if len(json.loads(res.text)) > 0:
-                return res
-            else:
-                logger.error('<-----Query Holders Response Error----->'+(res.text))
-                raise Exception("没有查询到任何Holders信息!")
+            return res
         else:
             logger.error('<-----Query Holders Response Error----->'+(res.text))
             raise Exception("请求异常")
 
+    @staticmethod
+    # 查询账户staking信息
+    def get_staking(Network='',symbol ='',address='',Authorization=Authorization_):
+        url = url_ + '/staking/delegators?networkCode='+Network+'&symbol='+symbol
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+
+        logger.info("<-----Staking----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+        res = requests.get(url=url, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Query Staking Response----->"+"\n"+(res.text))
+            if len(json.loads(res.text)) > 0:
+                return res
+            else:
+                logger.error('<-----Query Staking Response Error----->'+(res.text))
+                raise Exception("没有查询到任何Staking信息!")
+        else:
+            logger.error('<-----Query Staking Response Error----->'+(res.text))
+            raise Exception("请求异常")
+
+    @staticmethod
+    # 查询Swap路由信息
+    def get_swap_route(networkCode:str,from_coin:str,to_coin:str,amount:str,Authorization=Authorization_):
+        url = url_ + '/quote?networkCode=' + networkCode +'&from=' + from_coin +'&to=' + to_coin + '&amount=' + amount
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+
+        logger.info("<-----Swap Route----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+        res = requests.get(url=url, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Query Swap Route Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.info('\n'+"<-----Query Swap Route Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            return res
+
+
+    @staticmethod
+    #  instructions(swap_transfer)
+    def post_instructions(networkCode: str, from_coin: str,to_coin: str, definiteSignerPublicKeys: list, address: str, slippage: str, amount: str,type: str, transactionParams = '', Authorization=Authorization_):
+        url = url_ + '/instructions'
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        body = {
+            "body": {
+                "address":address,
+                "amount":amount,
+                "from": from_coin,
+                "to": to_coin,
+                "slippage":slippage
+            },
+            "networkCode": networkCode,
+            "type": type,
+            "definiteSignerPublicKeys": definiteSignerPublicKeys,
+            "transactionParams": transactionParams
+        }
+
+        logger.info('\n'+"<-----Instructions----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
+        res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Instructions Response----->"+"\n"+(res.text))
+            res_ = res.json()
+            r_estimatedFee = res_['_embedded']['transactions'][0]['estimatedFee']
+            r_hash = res_['_embedded']['transactions'][0]['hash']
+            r_id = res_['_embedded']['transactions'][0]['id']
+            r_networkCode = res_['_embedded']['transactions'][0]['networkCode']
+            r_requiredSignings = res_['_embedded']['transactions'][0]['requiredSignings']
+            r_serialized = res_['_embedded']['transactions'][0]['serialized']
+            r_status = res_['_embedded']['transactions'][0]['status']
+            ID = res_['id']
+
+            return res,r_estimatedFee,r_hash,r_id,r_networkCode,r_requiredSignings,r_serialized,r_status,ID
+        else:
+            logger.info('\n'+"<-----Instructions Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            return res
+
+    @staticmethod
     # transfers
     def post_transfers(networkCode: str, symbol: str, definiteSignerPublicKeys: list, from_add: str, to_add: str, amount: str, transactionParams = '', Authorization=Authorization_):
         url = url_ + '/cryptocurrencies/'+symbol+'/transfers'
@@ -161,6 +240,41 @@ class HttpUtils:
             logger.info('\n'+"<-----Transfer Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
             return res
 
+    @staticmethod
+    # staking
+    def post_staking(networkCode: str, symbol: str, delegator: str, amount: str, Authorization=Authorization_):
+        url = url_ + '/staking/delegations'
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        body = {
+            "networkCode": networkCode,
+            "coinSymbol":symbol,
+            "delegator":delegator,
+            "amount": amount
+        }
+
+        logger.info('\n'+"<-----Staking----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
+        res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Staking Response----->"+"\n"+(res.text))
+            res_ = res.json()
+            r_estimatedFee = res_['_embedded']['transactions'][0]['estimatedFee']
+            r_hash = res_['_embedded']['transactions'][0]['hash']
+            r_id = res_['_embedded']['transactions'][0]['id']
+            r_networkCode = res_['_embedded']['transactions'][0]['networkCode']
+            r_requiredSignings = res_['_embedded']['transactions'][0]['requiredSignings']
+            r_serialized = res_['_embedded']['transactions'][0]['serialized']
+            r_status = res_['_embedded']['transactions'][0]['status']
+            ID = res_['id']
+
+            return res,r_estimatedFee,r_hash,r_id,r_networkCode,r_requiredSignings,r_serialized,r_status,ID
+        else:
+            logger.info('\n'+"<-----Staking Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            return res
+
+    @staticmethod
     # 跨链
     def post_crosschain(networkCode: str, symbol: str, from_add: str,toNetworkCode: str, to_add: str, amount: str, Authorization=Authorization_):
         url = url_ + '/cryptocurrencies/'+symbol+'/transfers'
@@ -196,6 +310,36 @@ class HttpUtils:
             logger.info('\n'+"<-----Cross Chain Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
             return res
 
+    @staticmethod
+    # Rebuild
+    def post_rebuild(txid:str, params:list, Authorization=Authorization_):
+        url = url_ + '/transactions/' + txid + '/rebuild'
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        body = {
+           "params":params
+        }
+
+        logger.info('\n'+"<-----Rebuild----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
+        res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Rebuild Response----->"+"\n"+(res.text))
+            res_ = res.json()
+            r_estimatedFee = res_['estimatedFee']
+            r_hash = res_['hash']
+            r_id = res_['id']
+            r_networkCode = res_['networkCode']
+            r_requiredSignings = res_['requiredSignings']
+            r_serialized = res_['serialized']
+            r_status = res_['status']
+            return res,r_estimatedFee,r_hash,r_id,r_networkCode,r_requiredSignings,r_serialized,r_status
+        else:
+            logger.info('\n'+"<-----Rebuild Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            return res
+
+    @staticmethod
     # sign
     def post_sign_transfers(transactions_estimatedFee: str, transactions_hash: str, transactions_id: str, transactions_networkCode: str, transactions_requiredSignings: list, transactions_serialized: str, signatures: list, status='BUILDING', Authorization=Authorization_):
         url = url_ + '/transactions/'+transactions_id+'/sign'
@@ -224,6 +368,7 @@ class HttpUtils:
             return res
             raise Exception("请求异常")
 
+    @staticmethod
     # 请求签名
     def post_req_sign(requiredSignings:array,Authorization=Authorization_):
         url = url_ + '/vault/keys/request-sign'
@@ -243,6 +388,7 @@ class HttpUtils:
             return res
             raise Exception("请求异常")
 
+    @staticmethod
     # 获取验证码
     def post_req_Verify(requestId:str,Authorization=Authorization_):
         url = url_ + '/vault/verify/verifications'
@@ -264,6 +410,7 @@ class HttpUtils:
             return res
             raise Exception("请求异常")
 
+    @staticmethod
     # 托管key签名
     def post_confirm_sign(id:str,code:str,Authorization=Authorization_):
         url = url_ + '/vault/keys/confirm-sign'
@@ -286,6 +433,7 @@ class HttpUtils:
             return res
             raise Exception("请求异常")
 
+    @staticmethod
     # send
     def post_send_transfers(transactions_id:str,Authorization=Authorization_):
         url = url_ + '/transactions/' + transactions_id + '/send'
@@ -304,6 +452,7 @@ class HttpUtils:
             # raise Exception("请求异常")
             return res
 
+    @staticmethod
     # 查询关联交易记录by hash
     def get_transactions_byhash(hash:str,Authorization=Authorization_):
         url = url_ + '/cryptocurrencies/balance-transactions/' + hash
@@ -321,6 +470,7 @@ class HttpUtils:
             logger.info('\n'+"<-----Qurey Transactions by hash Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
             raise Exception("请求异常")
 
+    @staticmethod
     # 查询转账信息by id
     def get_transactions_byid(id: str, expand = 'transactions', Authorization=Authorization_):
         url = url_ + '/cryptocurrencies/transfers/' + id + '?expand=' + expand
@@ -338,6 +488,7 @@ class HttpUtils:
             logger.info('\n'+"<-----Qurey Transactions by id Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
             raise Exception("请求异常")
 
+    @staticmethod
     # 查询密钥
     def get_keys(Authorization=Authorization_):
         url = url_ + '/keys'
@@ -355,6 +506,7 @@ class HttpUtils:
             logger.error('\n'+"<-----Qurey Keys Response Error----->"+"\n"+(res.text))
             raise Exception("请求异常")
 
+    @staticmethod
     # 生成密钥
     def post_keys(count=1,Authorization=Authorization_):
         url = url_ + '/vault/keys'

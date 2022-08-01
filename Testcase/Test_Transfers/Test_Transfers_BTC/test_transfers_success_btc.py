@@ -17,13 +17,17 @@ class Test_transfers_success_btc():
         ("正常转账(自己转自己)!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun",Conf.Config.random_amount(5)),
         ("正常转账maximum(自己转自己)!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun","maximum"),
         ("正常转账!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun","tb1qxwtl4mmjrskgy4vtz6zcc8tkn8t6tv575mq6pf",Conf.Config.random_amount(6)),
-        ("正常转账maximum!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun","tb1qxwtl4mmjrskgy4vtz6zcc8tkn8t6tv575mq6pf","maximum"),
+        # ("正常转账maximum!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun","tb1qxwtl4mmjrskgy4vtz6zcc8tkn8t6tv575mq6pf","maximum"),
     ]
 
     @allure.story("Transfers_BTC_Success!")
     @allure.title('单签账户转账-{test_title}')
     @pytest.mark.parametrize('test_title,privatekey,PublicKeys,networkCode,symbol,from_add,to_add,amount', test_data)
     def test_transfers_address(self,test_title,privatekey,PublicKeys,networkCode,symbol,from_add,to_add,amount):
+
+        with allure.step("查询From账户holders信息——holders"):
+            holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
+            assert holders.status_code == 200
 
         with allure.step("构建交易——transfers"):
             transactionParams = {
@@ -90,6 +94,12 @@ class Test_transfers_success_btc():
 
                     assert transcations.json()[1]["address"] == res[0].json()["from"]
                     # assert transcations.json()[1]["amount"] ==  res[0].json()["amount"] + Conf.Config.amount_decimals(send.json()['estimatedFee'],8)
+        
+        with allure.step("查询From账户holders信息——holders"):
+            holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
+            assert holders.status_code == 200
+
+
 
 # 多签账户
 @allure.feature("Transfers_Success!")
@@ -99,13 +109,18 @@ class Test_transfers_success_btc_safe():
         ("正常转账(自己转自己)!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["024071bf3a05b971def0e7b01b63357e2de43b6b0f02ca43c3d8405ad52da79b4b","022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qf8ejg80dqln4t2haceu096kfn0wfta075qgq4l9r2nfxjgc3kapsnsutu3","tb1qf8ejg80dqln4t2haceu096kfn0wfta075qgq4l9r2nfxjgc3kapsnsutu3",Conf.Config.random_amount(5)),
         ("正常转账maximum(自己转自己)!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["024071bf3a05b971def0e7b01b63357e2de43b6b0f02ca43c3d8405ad52da79b4b","022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qf8ejg80dqln4t2haceu096kfn0wfta075qgq4l9r2nfxjgc3kapsnsutu3","tb1qf8ejg80dqln4t2haceu096kfn0wfta075qgq4l9r2nfxjgc3kapsnsutu3","maximum"),
         ("正常转账!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["024071bf3a05b971def0e7b01b63357e2de43b6b0f02ca43c3d8405ad52da79b4b","022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qf8ejg80dqln4t2haceu096kfn0wfta075qgq4l9r2nfxjgc3kapsnsutu3","tb1qxwtl4mmjrskgy4vtz6zcc8tkn8t6tv575mq6pf",Conf.Config.random_amount(6)),
-        ("正常转账maximum!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["024071bf3a05b971def0e7b01b63357e2de43b6b0f02ca43c3d8405ad52da79b4b","022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qf8ejg80dqln4t2haceu096kfn0wfta075qgq4l9r2nfxjgc3kapsnsutu3","tb1qxwtl4mmjrskgy4vtz6zcc8tkn8t6tv575mq6pf","maximum"),
+        # ("正常转账maximum!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["024071bf3a05b971def0e7b01b63357e2de43b6b0f02ca43c3d8405ad52da79b4b","022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qf8ejg80dqln4t2haceu096kfn0wfta075qgq4l9r2nfxjgc3kapsnsutu3","tb1qxwtl4mmjrskgy4vtz6zcc8tkn8t6tv575mq6pf","maximum"),
     ]
 
     @allure.story("Transfers_BTC_Success!")
     @allure.title('多签账户转账-{test_title}')
     @pytest.mark.parametrize('test_title,privatekey,PublicKeys,networkCode,symbol,from_add,to_add,amount', test_data)
     def test_transfers_address_safe(self,test_title,privatekey,PublicKeys,networkCode,symbol,from_add,to_add,amount):
+
+        with allure.step("查询From账户holders信息——holders"):
+            holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
+            assert holders.status_code == 200
+
 
         with allure.step("构建交易——transfers"):
             transactionParams = {
@@ -124,7 +139,6 @@ class Test_transfers_success_btc_safe():
                     "signature":signature
                 }
                 )
-            logger.error(signatures)
 
         with allure.step("请求签名交易——req_sign"):
             requiredSignings = []
@@ -152,7 +166,6 @@ class Test_transfers_success_btc_safe():
                     "publickey":confirmsign.json()[i]["publicKey"],
                     "signature":confirmsign.json()[i]["signature"]
                 })
-            logger.error(signatures)
 
         with allure.step("签名交易——sign"):
             sig = Http.HttpUtils.post_sign_transfers(res[1],res[2],res[3],res[4],res[5],res[6],signatures)
@@ -201,3 +214,13 @@ class Test_transfers_success_btc_safe():
 
                 #     assert transcations.json()[1]["address"] == res[0].json()["from"]
                 #     # assert transcations.json()[1]["amount"] ==  res[0].json()["amount"] + Conf.Config.amount_decimals(send.json()['estimatedFee'],8)
+        
+        with allure.step("查询From账户holders信息——holders"):
+            holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
+            assert holders.status_code == 200
+
+
+if __name__ == '__main__':
+    path = os.path.abspath(__file__) + ""
+    pytest.main(["-vs", path,'--alluredir=Report/Allure'])
+    os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:184 2022-07-29 18:30:21.313701 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweDg4MGM4MmYxZjFiZDc3ODAzMTQ2N2YxNGFiYjBiZTkxODQ4YzQxNTQ0NjllNzJkODA1ODZmMTRhOTY3ZDBmZDUyNDZhNGU4MmE4YzM4Yjk1NjQzZGZiNDE1NjIwNTA2MjkzNzc0M2NhMmFmMWVhYzRjZTkxNmU0NmIzNjZmZGQ1MWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNzU5MDI4MTBcbklzc3VlZCBBdDogTW9uLCA0IEp1bCAyMDIyIDExOjAwOjQ4IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBGcmksIDQgSnVsIDIwNDIgMTE6MDA6NDggR01UIn0="}
+
+Body:{"body": {"address": "0xE8e140D77F9Ff1f5b4eaC5388D182ac16D80E0f2", "amount": "", "from": "USDC", "to": "USDC", "slippage": "1"}, "networkCode": "MATIC", "type": "swap", "definiteSignerPublicKeys": ["02ac5e97a0659d6ce59c5b10b2ace331bffa276a555ff333b09beda99bd6b9f52e", "0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"], "transactionParams": {"memo": "hahahhahahhahahhaahhahhahhahahaha@@==\u8fd9\u662f\u4e00\u6bb5\u63cf\u8ff0!!--SWAP--!!====@@hahahhahahhahahhaahhahhahhahahaha"}}
+[32mINFO    [0m Common.Http:Http.py:200 2022-07-29 18:30:21.313701 | 
+<-----Instructions Response Error----->
+400
+{"code":2100000,"message":"amount entered incorrectly"}

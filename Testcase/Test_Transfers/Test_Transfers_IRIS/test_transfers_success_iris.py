@@ -12,12 +12,19 @@ from Common.Loguru import logger
 # 单签账户
 @allure.feature("Transfers_Success!")
 class Test_transfers_success_iris:
+    # test_data = [
+    #     # 测试
+    #     ("正常转账(自己转自己)!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u",Conf.Config.random_amount(4)),
+    #     ("正常转账maximum(自己转自己)!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u","maximum"),
+    #     ("正常转账!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u","iaa1jlsefxjczxg23gldzt4qcuxhddgeu4757f2pmq",Conf.Config.random_amount(4)),
+    #     ("正常转账maximum!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u","iaa1jlsefxjczxg23gldzt4qcuxhddgeu4757f2pmq","maximum"),
+    # ]
     test_data = [
-        # 测试
-        ("正常转账(自己转自己)!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u",Conf.Config.random_amount(4)),
-        ("正常转账maximum(自己转自己)!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u","maximum"),
-        ("正常转账!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u","iaa1jlsefxjczxg23gldzt4qcuxhddgeu4757f2pmq",Conf.Config.random_amount(4)),
-        ("正常转账maximum!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa1t0x3v8gtkkza4d6pyvk6aguq9kxj8trqq6vv7u","iaa1jlsefxjczxg23gldzt4qcuxhddgeu4757f2pmq","maximum"),
+        # 生产
+        ("正常转账(自己转自己)!",["973edd16fb9e4e01411a664ca771eee68314fa473d7e8a09c7e9c2c5e72384b5"],["029c9777b2ab9abff95d50011d476035ab80fef3b2962090fd04c5ea04157ccc87"],"IRIS","IRIS","iaa1j7p7j0kwceedzw6ra8jwtz9gn08h2sqzgp4ql7","iaa1j7p7j0kwceedzw6ra8jwtz9gn08h2sqzgp4ql7",Conf.Config.random_amount(4)),
+        ("正常转账maximum(自己转自己)!",["973edd16fb9e4e01411a664ca771eee68314fa473d7e8a09c7e9c2c5e72384b5"],["029c9777b2ab9abff95d50011d476035ab80fef3b2962090fd04c5ea04157ccc87"],"IRIS","IRIS","iaa1j7p7j0kwceedzw6ra8jwtz9gn08h2sqzgp4ql7","iaa1j7p7j0kwceedzw6ra8jwtz9gn08h2sqzgp4ql7","maximum"),
+        ("正常转账!",["973edd16fb9e4e01411a664ca771eee68314fa473d7e8a09c7e9c2c5e72384b5"],["029c9777b2ab9abff95d50011d476035ab80fef3b2962090fd04c5ea04157ccc87"],"IRIS","IRIS","iaa1j7p7j0kwceedzw6ra8jwtz9gn08h2sqzgp4ql7","iaa1qfx3a0rg6gufrf9n44et8cdjwwnx8zjf4wpp9a",Conf.Config.random_amount(4)),
+        ("正常转账maximum!",["973edd16fb9e4e01411a664ca771eee68314fa473d7e8a09c7e9c2c5e72384b5"],["029c9777b2ab9abff95d50011d476035ab80fef3b2962090fd04c5ea04157ccc87"],"IRIS","IRIS","iaa1j7p7j0kwceedzw6ra8jwtz9gn08h2sqzgp4ql7","iaa1qfx3a0rg6gufrf9n44et8cdjwwnx8zjf4wpp9a","maximum"),
     ]
 
     @allure.story("Transfers_IRIS_Success!")
@@ -25,10 +32,14 @@ class Test_transfers_success_iris:
     @pytest.mark.parametrize('test_title,privatekey,PublicKeys,networkCode,symbol,from_add,to_add,amount', test_data)
     def test_transfers_iris(self,test_title,privatekey,PublicKeys,networkCode,symbol,from_add,to_add,amount):
 
+        with allure.step("查询From账户holders信息——holders"):
+            holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
+            assert holders.status_code == 200
+
         with allure.step("构建交易——transfers"):
-            # transactionParams = {
-            #     "memo":"hahahhahahhahahhaahhahhahhahahaha@@==这是一段描述！！====@@hahahhahahhahahhaahhahhahhahahaha"
-            # }
+            transactionParams = {
+                "memo":"hahahhahahhahahhaahhahhahhahahaha@@==这是一段描述！！====@@hahahhahahhahahhaahhahhahhahahaha"
+            }
             res = Http.HttpUtils.post_transfers(networkCode,symbol,PublicKeys,from_add,to_add,amount)
             assert res[0].status_code == 200
 
@@ -92,21 +103,42 @@ class Test_transfers_success_iris:
                 #     assert transcations.json()[1]["address"] == res[0].json()["from"]
                 #     assert transcations.json()[1]["amount"] ==  res[0].json()["amount"] + Conf.Config.amount_decimals(send.json()['estimatedFee'],6)
 
+        with allure.step("查询From账户holders信息——holders"):
+            holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
+            assert holders.status_code == 200
+
+
+
 # 多签账户
 @allure.feature("Transfers_Success!")
 class Test_transfers_success_iris_safe:
+    # test_data = [
+    #     # 测试
+    #     ("正常转账(自己转自己)!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["026c37fcad8790e5a2b2e82e788fe36b68c0cfb9dc040b471a8a72f86a84d5fe18","033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p",Conf.Config.random_amount(4)),
+    #     ("正常转账maximum(自己转自己)!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["026c37fcad8790e5a2b2e82e788fe36b68c0cfb9dc040b471a8a72f86a84d5fe18","033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p","maximum"),
+    #     ("正常转账!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["026c37fcad8790e5a2b2e82e788fe36b68c0cfb9dc040b471a8a72f86a84d5fe18","033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p","iaa1jlsefxjczxg23gldzt4qcuxhddgeu4757f2pmq",Conf.Config.random_amount(4)),
+    #     ("正常转账maximum!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["026c37fcad8790e5a2b2e82e788fe36b68c0cfb9dc040b471a8a72f86a84d5fe18","033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p","iaa1jlsefxjczxg23gldzt4qcuxhddgeu4757f2pmq","maximum"),
+    # ]
     test_data = [
-        # 测试
-        ("正常转账(自己转自己)!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["026c37fcad8790e5a2b2e82e788fe36b68c0cfb9dc040b471a8a72f86a84d5fe18","033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p",Conf.Config.random_amount(4)),
-        ("正常转账maximum(自己转自己)!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["026c37fcad8790e5a2b2e82e788fe36b68c0cfb9dc040b471a8a72f86a84d5fe18","033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p","maximum"),
-        ("正常转账!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["026c37fcad8790e5a2b2e82e788fe36b68c0cfb9dc040b471a8a72f86a84d5fe18","033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p","iaa1jlsefxjczxg23gldzt4qcuxhddgeu4757f2pmq",Conf.Config.random_amount(4)),
-        ("正常转账maximum!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["026c37fcad8790e5a2b2e82e788fe36b68c0cfb9dc040b471a8a72f86a84d5fe18","033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p","iaa1jlsefxjczxg23gldzt4qcuxhddgeu4757f2pmq","maximum"),
+        # 生产
+        ("正常转账(自己转自己)!",["973edd16fb9e4e01411a664ca771eee68314fa473d7e8a09c7e9c2c5e72384b5"],["026c37fcad8790e5a2b2e82e788fe36b68c0cfb9dc040b471a8a72f86a84d5fe18","029c9777b2ab9abff95d50011d476035ab80fef3b2962090fd04c5ea04157ccc87"],"IRIS","IRIS","iaa142rymfv9rc8x3npaahshpw09kdr470lq7vg7d7","iaa142rymfv9rc8x3npaahshpw09kdr470lq7vg7d7",Conf.Config.random_amount(4)),
+        ("正常转账maximum(自己转自己)!",["973edd16fb9e4e01411a664ca771eee68314fa473d7e8a09c7e9c2c5e72384b5"],["026c37fcad8790e5a2b2e82e788fe36b68c0cfb9dc040b471a8a72f86a84d5fe18","029c9777b2ab9abff95d50011d476035ab80fef3b2962090fd04c5ea04157ccc87"],"IRIS","IRIS","iaa142rymfv9rc8x3npaahshpw09kdr470lq7vg7d7","iaa142rymfv9rc8x3npaahshpw09kdr470lq7vg7d7","maximum"),
+        ("正常转账!",["973edd16fb9e4e01411a664ca771eee68314fa473d7e8a09c7e9c2c5e72384b5"],["026c37fcad8790e5a2b2e82e788fe36b68c0cfb9dc040b471a8a72f86a84d5fe18","029c9777b2ab9abff95d50011d476035ab80fef3b2962090fd04c5ea04157ccc87"],"IRIS","IRIS","iaa142rymfv9rc8x3npaahshpw09kdr470lq7vg7d7","iaa1qfx3a0rg6gufrf9n44et8cdjwwnx8zjf4wpp9a",Conf.Config.random_amount(4)),
+        ("正常转账maximum!",["973edd16fb9e4e01411a664ca771eee68314fa473d7e8a09c7e9c2c5e72384b5"],["026c37fcad8790e5a2b2e82e788fe36b68c0cfb9dc040b471a8a72f86a84d5fe18","029c9777b2ab9abff95d50011d476035ab80fef3b2962090fd04c5ea04157ccc87"],"IRIS","IRIS","iaa142rymfv9rc8x3npaahshpw09kdr470lq7vg7d7","iaa1qfx3a0rg6gufrf9n44et8cdjwwnx8zjf4wpp9a","maximum"),
     ]
 
     @allure.story("Transfers_IRIS_Success!")
     @allure.title('多签账户转账-{test_title}')
     @pytest.mark.parametrize('test_title,privatekey,PublicKeys,networkCode,symbol,from_add,to_add,amount', test_data)
     def test_transfers_iris_safe(self,test_title,privatekey,PublicKeys,networkCode,symbol,from_add,to_add,amount):
+
+        with allure.step("查询From账户holders信息——holders"):
+            holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
+            assert holders.status_code == 200
+
+        with allure.step("查询to账户holders信息——holders"):
+            holders = Http.HttpUtils.get_holders(networkCode,symbol,to_add)
+            assert holders.status_code == 200
 
         with allure.step("构建交易——transfers"):
             transactionParams = {
@@ -172,9 +204,16 @@ class Test_transfers_success_iris_safe:
             sleep(15)
             transcations = Http.HttpUtils.get_transactions_byhash(send.json()["hash"])
             assert transcations.status_code == 200
-
             
             if (from_add == to_add):
                 assert len(transcations.json()) == 1
             else:
                 assert len(transcations.json()) == 2
+
+        with allure.step("查询From账户holders信息——holders"):
+            holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
+            assert holders.status_code == 200
+
+        with allure.step("查询to账户holders信息——holders"):
+            holders = Http.HttpUtils.get_holders(networkCode,symbol,to_add)
+            assert holders.status_code == 200

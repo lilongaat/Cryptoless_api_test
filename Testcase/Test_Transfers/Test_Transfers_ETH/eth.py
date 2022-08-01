@@ -7,9 +7,9 @@ from Common import Http, Conf
 prkey = "ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"
 publickey = ["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"]
 add = "0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3"
-amount = "0.0000002"
+amount = "0.01"
 
-res = Http.HttpUtils.post_transfers("ETH-RINKEBY","ETH",publickey,add,add,amount,Authorization=Http.Authorization_)
+res = Http.HttpUtils.post_transfers("ETH-RINKEBY","ETH",publickey,add,"0xbf910114Fb928d01585569f4A672A658ad644CE7",amount,Authorization=Http.Authorization_)
 
 hash = res[5][0]['hash']
 signature = Conf.Config.sign(prkey,hash)

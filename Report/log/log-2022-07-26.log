@@ -1,0 +1,52 @@
+2022-07-26 15:54:46.479 | ERROR    | test_enhanced_api:test_tokenInfo:29 - <Response [200]>
+2022-07-26 15:54:46.479 | ERROR    | test_enhanced_api:test_tokenInfo:30 - <Response [200]>
+2022-07-26 15:56:06.516 | ERROR    | test_enhanced_api:test_tokenInfo:29 - <Response [200]>
+2022-07-26 15:56:06.517 | ERROR    | test_enhanced_api:test_tokenInfo:30 - <Response [200]>
+2022-07-26 15:56:25.088 | ERROR    | test_enhanced_api:test_tokenInfo:29 - {'address': '0xdac17f958d2ee523a2206206994597c13d831ec7', 'logo': 'https://img.cryptoless.net/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png', 'type': 'erc20', 'name': 'Tether USD', 'symbol': 'USDT', 'decimals': 6, 'total_supply': '32313908246384776', 'creator': '0x36928500bc1dcd7af6a2b4008875cc336b927d57', 'created_at': '2017-11-28T00:41:21Z'}
+2022-07-26 15:56:25.089 | ERROR    | test_enhanced_api:test_tokenInfo:30 - {'address': '0xdac17f958d2ee523a2206206994597c13d831ec7', 'name': 'Tether USD', 'decimals': '6', 'symbol': 'USDT', 'totalSupply': '32313908246384776', 'owner': '0xc6cde7c39eb2f0f0095f41570af89efc2c1ea828', 'txsCount': 136549236, 'transfersCount': 152254044, 'lastUpdated': 1658820664, 'issuancesCount': 1, 'holdersCount': 4576069, 'website': 'https://tether.to/', 'image': '/images/tether.png', 'ethTransfersCount': 2289, 'price': {'rate': 1.0000601813877168, 'diff': 0, 'diff7d': 0.01, 'ts': 1658821140, 'marketCapUsd': 65850240429.72048, 'availableSupply': 65846277709.351944, 'volume24h': 57684707961.59465, 'volDiff1': 24.38730861480019, 'volDiff7': 20.688043210790426, 'volDiff30': -9.285243551113865, 'diff30d': 0.05635424719574189, 'bid': 1.002, 'currency': 'USD'}, 'publicTags': ['Stablecoins'], 'countOps': 152254044}
+2022-07-26 16:23:54.096 | ERROR    | test_enhanced_api:test_tokenInfo:29 - {'address': '0xdac17f958d2ee523a2206206994597c13d831ec7', 'logo': 'https://img.cryptoless.net/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png', 'type': 'erc20', 'name': 'Tether USD', 'symbol': 'USDT', 'decimals': 6, 'total_supply': '32313908246384776', 'creator': '0x36928500bc1dcd7af6a2b4008875cc336b927d57', 'created_at': '2017-11-28T00:41:21Z'}
+2022-07-26 16:23:54.099 | ERROR    | test_enhanced_api:test_tokenInfo:30 - {'address': '0xdac17f958d2ee523a2206206994597c13d831ec7', 'name': 'Tether USD', 'decimals': '6', 'symbol': 'USDT', 'totalSupply': '32313908246384776', 'owner': '0xc6cde7c39eb2f0f0095f41570af89efc2c1ea828', 'txsCount': 136551528, 'transfersCount': 152256782, 'lastUpdated': 1658822758, 'issuancesCount': 1, 'holdersCount': 4576257, 'website': 'https://tether.to/', 'image': '/images/tether.png', 'ethTransfersCount': 2289, 'price': {'rate': 1.0000538260124925, 'diff': 0, 'diff7d': 0.01, 'ts': 1658823060, 'marketCapUsd': 65849821951.91851, 'availableSupply': 65846277709.351944, 'volume24h': 57926131964.8383, 'volDiff1': 23.417853480119646, 'volDiff7': 19.462288926183845, 'volDiff30': -9.426449255973196, 'diff30d': 0.05571838978769961, 'bid': 1.002, 'currency': 'USD'}, 'publicTags': ['Stablecoins'], 'countOps': 152256782}
+2022-07-26 16:27:52.826 | ERROR    | test_enhanced_api:test_tokenInfo:29 - {'address': '0xdac17f958d2ee523a2206206994597c13d831ec7', 'logo': 'https://img.cryptoless.net/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png', 'type': 'erc20', 'name': 'Tether USD', 'symbol': 'USDT', 'decimals': 6, 'total_supply': '32313908246384776', 'creator': '0x36928500bc1dcd7af6a2b4008875cc336b927d57', 'created_at': '2017-11-28T00:41:21Z'}
+2022-07-26 16:27:52.827 | ERROR    | test_enhanced_api:test_tokenInfo:30 - {'address': '0xdac17f958d2ee523a2206206994597c13d831ec7', 'name': 'Tether USD', 'decimals': '6', 'symbol': 'USDT', 'totalSupply': '32313908246384776', 'owner': '0xc6cde7c39eb2f0f0095f41570af89efc2c1ea828', 'txsCount': 136551528, 'transfersCount': 152256782, 'lastUpdated': 1658822758, 'issuancesCount': 1, 'holdersCount': 4576257, 'website': 'https://tether.to/', 'image': '/images/tether.png', 'ethTransfersCount': 2289, 'price': {'rate': 1.0000538260124925, 'diff': 0, 'diff7d': 0.01, 'ts': 1658823060, 'marketCapUsd': 65849821951.91851, 'availableSupply': 65846277709.351944, 'volume24h': 57926131964.8383, 'volDiff1': 23.417853480119646, 'volDiff7': 19.462288926183845, 'volDiff30': -9.426449255973196, 'diff30d': 0.05571838978769961, 'bid': 1.002, 'currency': 'USD'}, 'publicTags': ['Stablecoins'], 'countOps': 152256782}
+2022-07-26 16:32:00.086 | ERROR    | test_enhanced_api:test_tokenInfo:29 - {'address': '0xdac17f958d2ee523a2206206994597c13d831ec7', 'logo': 'https://img.cryptoless.net/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png', 'type': 'erc20', 'name': 'Tether USD', 'symbol': 'USDT', 'decimals': 6, 'total_supply': '32313908246384776', 'creator': '0x36928500bc1dcd7af6a2b4008875cc336b927d57', 'created_at': '2017-11-28T00:41:21Z'}
+2022-07-26 16:32:00.087 | ERROR    | test_enhanced_api:test_tokenInfo:30 - {'address': '0xdac17f958d2ee523a2206206994597c13d831ec7', 'name': 'Tether USD', 'decimals': '6', 'symbol': 'USDT', 'totalSupply': '32313908246384776', 'owner': '0xc6cde7c39eb2f0f0095f41570af89efc2c1ea828', 'txsCount': 128479599, 'transfersCount': 152256782, 'lastUpdated': 1658823638, 'issuancesCount': 1, 'holdersCount': 4576487, 'website': 'https://tether.to/', 'image': '/images/tether.png', 'ethTransfersCount': 2289, 'price': {'rate': 1.0000538260124925, 'diff': 0, 'diff7d': 0.01, 'ts': 1658823060, 'marketCapUsd': 65849821951.91851, 'availableSupply': 65846277709.351944, 'volume24h': 57926131964.8383, 'volDiff1': 23.93438608142442, 'volDiff7': 19.462288926183845, 'volDiff30': -9.426449255973196, 'diff30d': 0.05571838978769961, 'bid': 1.002, 'currency': 'USD'}, 'publicTags': ['Stablecoins'], 'countOps': 152256782}
+2022-07-26 16:44:15.842 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
+2022-07-26 16:47:36.702 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
+2022-07-26 16:47:38.399 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
+2022-07-26 17:07:06.719 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
+2022-07-26 17:07:22.059 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
+2022-07-26 17:07:23.627 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
+2022-07-26 17:07:25.234 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
+2022-07-26 17:07:26.791 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
+2022-07-26 17:07:29.733 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
+2022-07-26 17:07:31.635 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
+2022-07-26 17:07:33.240 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
+2022-07-26 17:07:34.841 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
+2022-07-26 18:45:00.556 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
+2022-07-26 18:45:02.098 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
+2022-07-26 18:45:03.676 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
+2022-07-26 18:45:05.252 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
+2022-07-26 18:45:08.370 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
+2022-07-26 18:45:09.774 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
+2022-07-26 18:45:11.391 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
+2022-07-26 18:45:12.946 | ERROR    | Common.Http_Enhancedapi:get_tokenInfo_ethplorer:45 - 
+<-----Query tokenInfo Response Error----->{"error":{"code":150,"message":"Address is not a token contract"}}
