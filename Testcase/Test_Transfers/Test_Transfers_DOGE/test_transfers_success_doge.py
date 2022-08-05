@@ -226,3 +226,8 @@ class Test_transfers_success_doge_safe():
         with allure.step("查询to账户holders信息——holders"):
             holders = Http.HttpUtils.get_holders(networkCode,symbol,to_add)
             assert holders.status_code == 200
+
+if __name__ == '__main__':
+    path = os.path.abspath(__file__) + ""
+    pytest.main(["-vs", path,'--alluredir=Report/Allure'])
+    os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

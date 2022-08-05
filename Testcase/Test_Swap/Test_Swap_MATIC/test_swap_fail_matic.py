@@ -47,7 +47,7 @@ class Test_swap_fail_matic:
 
 # 单签账户
 @allure.feature("Swap_MATIC!")
-class Test_swap_fail_matic_safe:
+class Test_swap_sign_fail_matic:
     test_data = [
         # 测试&生产
         ("Swap-错误的私钥签名!",["83b749bf2fa7af2f20bd154fef973646fba9bc6c6da422ed633c653134a4a782"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(2),400),
@@ -79,7 +79,7 @@ class Test_swap_fail_matic_safe:
 
 # 多签账户
 @allure.feature("Swap_MATIC!")
-class Test_swap_fail_matic:
+class Test_swap_fail_matic_safe:
     test_data = [
         # 测试
         ("fromcoin==tocoin-Swap!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["02ac5e97a0659d6ce59c5b10b2ace331bffa276a555ff333b09beda99bd6b9f52e","0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDC","swap","0xE8e140D77F9Ff1f5b4eaC5388D182ac16D80E0f2","1","",400),
@@ -132,6 +132,6 @@ class Test_swap_fail_matic:
             assert res.status_code == status_code_check
 
 if __name__ == '__main__':
-    path = os.path.abspath(__file__) + ""
+    path = os.path.abspath(__file__) + "::Test_swap_fail_matic_safe"
     pytest.main(["-vs", path,'--alluredir=Report/Allure'])
     os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

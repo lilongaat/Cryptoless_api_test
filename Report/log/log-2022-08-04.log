@@ -1,0 +1,12 @@
+2022-08-04 15:56:50.092 | ERROR    | Common.Http:get_safe_agents:77 - 
+<-----Query Safe Agents Response Error----->{"timestamp":"2022-08-04T07:56:50.249Z","status":405,"error":"Method Not Allowed","message":"","path":"/context/api/safe/agents"}
+2022-08-04 15:58:30.337 | ERROR    | Common.Http:post_safe_activation:98 - 
+<-----Safe Account activation Response Error----->{"code":2300000,"message":"status 401 reading CoreClient#buildTransaction\u0028String,BuildTransactionRequest\u0029"}
+2022-08-04 16:00:13.516 | ERROR    | Common.Http:get_safe_agents:77 - 
+<-----Query Safe Agents Response Error----->{"timestamp":"2022-08-04T08:00:13.611Z","status":405,"error":"Method Not Allowed","message":"","path":"/context/api/safe/agents"}
+2022-08-04 16:01:05.522 | ERROR    | Common.Http:post_safe_activation:98 - 
+<-----Safe Account activation Response Error----->{"code":2300000,"message":"status 401 reading CoreClient#buildTransaction\u0028String,BuildTransactionRequest\u0029"}
+2022-08-04 16:49:16.157 | ERROR    | Common.Http:post_safe_activation:98 - 
+<-----Safe Account activation Response Error----->{"code":2300000,"message":"too many bytes written executing POST http://core-center/core/api/api/networks/ETH-RINKEBY/transactions"}
+2022-08-04 17:55:56.166 | ERROR    | Common.Http:post_safe_activation:98 - 
+<-----Safe Account activation Response Error----->{"code":2300000,"message":"too many bytes written executing POST http://core-center/core/api/api/networks/ETH-RINKEBY/transactions"}

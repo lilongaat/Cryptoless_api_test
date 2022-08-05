@@ -1,13 +1,13 @@
-print((int("0x000000000000000000000000000000000000000000002dfb683ebdaddc5e1956",16)))
+# print((int("0x000000000000000000000000000000000000000000002dfb683ebdaddc5e1956",16)))
 
-import web3
+# import web3
 
-# totalSupply   balanceOf  decimals
-method_id = web3.Web3.keccak(text = "balanceOf()").hex()[:10]
-print(method_id)
-address = "0xC88F7666330b4b511358b7742dC2a3234710e7B1"
-data = method_id + "".zfill(20) + address[2:]
-print(data)
+# # totalSupply   balanceOf  decimals
+# method_id = web3.Web3.keccak(text = "balanceOf()").hex()[:10]
+# print(method_id)
+# address = "0xC88F7666330b4b511358b7742dC2a3234710e7B1"
+# data = method_id + "".zfill(20) + address[2:]
+# print(data)
 
 
 # from web3 import Web3
@@ -29,3 +29,20 @@ print(data)
 # t = []
 # t.append({"tpo":u})
 # print(t)
+
+# from ecdsa import SigningKey, SECP256k1
+# import sha3
+
+# keccak = sha3.keccak_256()
+
+# priv = SigningKey.generate(curve=SECP256k1)
+# pub = priv.get_verifying_key().to_string()
+
+# keccak.update(pub)
+# address = keccak.hexdigest()[24:]
+
+# print("Private key:", priv.to_string().hex())
+# print("Public key: ", pub.hex())
+# print("Address:     0x" + address)
+
+

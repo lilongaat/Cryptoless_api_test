@@ -7,7 +7,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(
 from Common import Http, Conf
 from Common.Loguru import logger
 
-
+# 单签账户 ETH转账失败
 @allure.feature("Transfers_Fail!")
 class Test_transfers_fail_eth:
     test_data = [
@@ -32,6 +32,40 @@ class Test_transfers_fail_eth:
             res = Http.HttpUtils.post_transfers(networkCode,symbol,PublicKeys,from_add,to_add,amount)
             assert res.status_code == status_code_check
 
+# 单签账户 ERC20 转账失败
+@allure.feature("Transfers_Fail!")
+class Test_transfers_fail_erc20:
+    test_data = [
+        # 测试
+        # 测试
+        ("余额不足转账!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3",'9999999999999999999',400),
+        ("精度超长(19位)转账!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3",Conf.Config.random_amount(19),400),
+        ("转账金额为空!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3",'',400),
+        ("转账金额为负数!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","-0.000001",400),
+        ("转账金额字符串类型异常!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","max",400),
+        ("转账from地址异常!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","bDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3",Conf.Config.random_amount(6),400),
+        ("转账from地址为空!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3",Conf.Config.random_amount(6),400),
+        ("转账to地址异常!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","bDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3",Conf.Config.random_amount(6),400),
+        ("转账to地址为空!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","",Conf.Config.random_amount(6),400),
+    ]
+
+    @allure.story("Transfers_ERC20_Success!")
+    @allure.title('单签账户转账-{test_title}')
+    @pytest.mark.parametrize('test_title,privatekey,PublicKeys,networkCode,symbol,from_add,to_add,amount', test_data)
+    def test_transfers_erc20(self,test_title,privatekey,PublicKeys,networkCode,symbol,from_add,to_add,amount):
+
+        with allure.step("查询From账户holders信息——holders"):
+            holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
+            assert holders.status_code == 200
+
+        with allure.step("构建交易——transfers"):
+            transactionParams = {
+                "memo":"hahahhahahhahahhaahhahhahhahahaha@@==这是一段描述！！====@@hahahhahahhahahhaahhahhahhahahaha"
+            }
+            res = Http.HttpUtils.post_transfers(networkCode,symbol,PublicKeys,from_add,to_add,amount,transactionParams)
+            assert res[0].status_code == 200
+
+# 单签账户
 @allure.feature("Transfers_Fail!")
 class Test_sign_fail_eth:
     test_data = [
@@ -61,6 +95,7 @@ class Test_sign_fail_eth:
             sig = Http.HttpUtils.post_sign_transfers(res[1],res[2],res[3],res[4],res[5],res[6],signatures)
             assert sig.status_code == status_code_check
 
+# 单签账户
 @allure.feature("Transfers_Fail!")
 class Test_send_fail_eth:
     test_data = [
@@ -101,3 +136,9 @@ class Test_send_fail_eth:
         with allure.step("广播交易——send"):
             send = Http.HttpUtils.post_send_transfers(rebuild[3])
             assert send.status_code == status_code_check
+
+
+if __name__ == '__main__':
+    path = os.path.abspath(__file__) + ""
+    pytest.main(["-vs", path,'--alluredir=Report/Allure'])
+    os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

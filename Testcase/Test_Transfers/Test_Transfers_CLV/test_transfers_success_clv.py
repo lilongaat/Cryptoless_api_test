@@ -12,20 +12,20 @@ from Common.Loguru import logger
 # 单签账户
 @allure.feature("Transfers_Success!")
 class Test_transfers_success_clv:
-    # test_data = [
-    #     # 测试
-    #     ("正常转账(自己转自己)!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT",Conf.Config.random_amount(9)),
-    #     ("正常转账maximum(自己转自己)!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","maximum"),
-    #     ("正常转账!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5GsLke2jx8tneTn9EvfzppMhzU9KmEgCSNkbz1tfRaRsiX8J",Conf.Config.random_amount(8)),
-    #     ("正常转账maximum!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5GsLke2jx8tneTn9EvfzppMhzU9KmEgCSNkbz1tfRaRsiX8J","maximum"),
-    # ]
     test_data = [
-        # 生产
-        ("正常转账(自己转自己)!",["460d181b618e1748fc6632324609fd8e8e0058571fb7a932cd86596f59b2079c"],["033b345f6c30788674ff9799b377cc5da28ceb2be631c5b9e5ca538e0b4ae4dce5"],"CLV","CLV","5G7h24hiSHuewgtVBXe1dhqvRjJ5VKMzZmL1ntJb1pnW4FiC","5DPQQRu3Xne5KEKXCzFuVt7VJzkX9MiNPJBPWL66uFvBeKmU",Conf.Config.random_amount(4)),
-        ("正常转账maximum(自己转自己)!",["460d181b618e1748fc6632324609fd8e8e0058571fb7a932cd86596f59b2079c"],["033b345f6c30788674ff9799b377cc5da28ceb2be631c5b9e5ca538e0b4ae4dce5"],"CLV","CLV","5G7h24hiSHuewgtVBXe1dhqvRjJ5VKMzZmL1ntJb1pnW4FiC","5DPQQRu3Xne5KEKXCzFuVt7VJzkX9MiNPJBPWL66uFvBeKmU","maximum"),
-        ("正常转账!",["460d181b618e1748fc6632324609fd8e8e0058571fb7a932cd86596f59b2079c"],["033b345f6c30788674ff9799b377cc5da28ceb2be631c5b9e5ca538e0b4ae4dce5"],"CLV","CLV","5G7h24hiSHuewgtVBXe1dhqvRjJ5VKMzZmL1ntJb1pnW4FiC","5DPQQRu3Xne5KEKXCzFuVt7VJzkX9MiNPJBPWL66uFvBeKmU",Conf.Config.random_amount(8)),
-        # ("正常转账maximum!",["460d181b618e1748fc6632324609fd8e8e0058571fb7a932cd86596f59b2079c"],["033b345f6c30788674ff9799b377cc5da28ceb2be631c5b9e5ca538e0b4ae4dce5"],"CLV","CLV","5G7h24hiSHuewgtVBXe1dhqvRjJ5VKMzZmL1ntJb1pnW4FiC","5DPQQRu3Xne5KEKXCzFuVt7VJzkX9MiNPJBPWL66uFvBeKmU","maximum"),
+        # 测试
+        ("正常转账(自己转自己)!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT",Conf.Config.random_amount(9)),
+        ("正常转账maximum(自己转自己)!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","maximum"),
+        ("正常转账!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5GsLke2jx8tneTn9EvfzppMhzU9KmEgCSNkbz1tfRaRsiX8J",Conf.Config.random_amount(8)),
+        ("正常转账maximum!",["053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273"],["02fd88692ce948598b310d9ac081d551e74a7b4a70661f45e92544e0c3fa0b70f1"],"CLV","CLV","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","5GsLke2jx8tneTn9EvfzppMhzU9KmEgCSNkbz1tfRaRsiX8J","maximum"),
     ]
+    # test_data = [
+    #     # 生产
+    #     ("正常转账(自己转自己)!",["460d181b618e1748fc6632324609fd8e8e0058571fb7a932cd86596f59b2079c"],["033b345f6c30788674ff9799b377cc5da28ceb2be631c5b9e5ca538e0b4ae4dce5"],"CLV","CLV","5G7h24hiSHuewgtVBXe1dhqvRjJ5VKMzZmL1ntJb1pnW4FiC","5DPQQRu3Xne5KEKXCzFuVt7VJzkX9MiNPJBPWL66uFvBeKmU",Conf.Config.random_amount(4)),
+    #     ("正常转账maximum(自己转自己)!",["460d181b618e1748fc6632324609fd8e8e0058571fb7a932cd86596f59b2079c"],["033b345f6c30788674ff9799b377cc5da28ceb2be631c5b9e5ca538e0b4ae4dce5"],"CLV","CLV","5G7h24hiSHuewgtVBXe1dhqvRjJ5VKMzZmL1ntJb1pnW4FiC","5DPQQRu3Xne5KEKXCzFuVt7VJzkX9MiNPJBPWL66uFvBeKmU","maximum"),
+    #     ("正常转账!",["460d181b618e1748fc6632324609fd8e8e0058571fb7a932cd86596f59b2079c"],["033b345f6c30788674ff9799b377cc5da28ceb2be631c5b9e5ca538e0b4ae4dce5"],"CLV","CLV","5G7h24hiSHuewgtVBXe1dhqvRjJ5VKMzZmL1ntJb1pnW4FiC","5DPQQRu3Xne5KEKXCzFuVt7VJzkX9MiNPJBPWL66uFvBeKmU",Conf.Config.random_amount(8)),
+    #     ("正常转账maximum!",["460d181b618e1748fc6632324609fd8e8e0058571fb7a932cd86596f59b2079c"],["033b345f6c30788674ff9799b377cc5da28ceb2be631c5b9e5ca538e0b4ae4dce5"],"CLV","CLV","5G7h24hiSHuewgtVBXe1dhqvRjJ5VKMzZmL1ntJb1pnW4FiC","5DPQQRu3Xne5KEKXCzFuVt7VJzkX9MiNPJBPWL66uFvBeKmU","maximum"),
+    # ]
 
     @allure.story("Transfers_CLV_Success!")
     @allure.title('单签账户转账-{test_title}')
@@ -103,3 +103,8 @@ class Test_transfers_success_clv:
         with allure.step("查询From账户holders信息——holders"):
             holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
             assert holders.status_code == 200
+
+if __name__ == '__main__':
+    path = os.path.abspath(__file__) + ""
+    pytest.main(["-vs", path,'--alluredir=Report/Allure'])
+    os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

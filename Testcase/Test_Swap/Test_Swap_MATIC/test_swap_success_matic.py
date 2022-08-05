@@ -101,7 +101,7 @@ class Test_swap_success_matic:
 class Test_swap_success_matic_safe:
     test_data = [
         # 测试
-        ("正常Swap(合约地址有matic)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["03f1b7e94f4c83b3c1505cc15e4a14e172323afe0b946295eece18300da6ec2228","0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","0xcb4D1bBF74F2b068Dc7d33c965c1Fdad3d7B4D43","1",Conf.Config.random_amount(2)),
+        # ("正常Swap(合约地址有matic)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["03f1b7e94f4c83b3c1505cc15e4a14e172323afe0b946295eece18300da6ec2228","0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","0xcb4D1bBF74F2b068Dc7d33c965c1Fdad3d7B4D43","1",Conf.Config.random_amount(2)),
         ("正常Swap(合约地址无matic)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["02ac5e97a0659d6ce59c5b10b2ace331bffa276a555ff333b09beda99bd6b9f52e","0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","0xE8e140D77F9Ff1f5b4eaC5388D182ac16D80E0f2","1",Conf.Config.random_amount(2)),
         ]
     # test_data = [
@@ -242,6 +242,7 @@ class Test_swap_success_matic_safe:
             
 
 if __name__ == '__main__':
-    path = os.path.abspath(__file__) + ""
-    pytest.main(["-vs", path,'--alluredir=Report/Allure'])
+    path = os.path.abspath(__file__) + "::Test_swap_success_matic_safe"
+    for i in range(30):
+        pytest.main(["-vs", path,'--alluredir=Report/Allure'])
     os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

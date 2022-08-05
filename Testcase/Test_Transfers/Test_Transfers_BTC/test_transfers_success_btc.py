@@ -107,8 +107,8 @@ class Test_transfers_success_btc_safe():
     test_data = [
         # 测试
         ("正常转账(自己转自己)!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["024071bf3a05b971def0e7b01b63357e2de43b6b0f02ca43c3d8405ad52da79b4b","022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qf8ejg80dqln4t2haceu096kfn0wfta075qgq4l9r2nfxjgc3kapsnsutu3","tb1qf8ejg80dqln4t2haceu096kfn0wfta075qgq4l9r2nfxjgc3kapsnsutu3",Conf.Config.random_amount(5)),
-        ("正常转账maximum(自己转自己)!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["024071bf3a05b971def0e7b01b63357e2de43b6b0f02ca43c3d8405ad52da79b4b","022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qf8ejg80dqln4t2haceu096kfn0wfta075qgq4l9r2nfxjgc3kapsnsutu3","tb1qf8ejg80dqln4t2haceu096kfn0wfta075qgq4l9r2nfxjgc3kapsnsutu3","maximum"),
-        ("正常转账!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["024071bf3a05b971def0e7b01b63357e2de43b6b0f02ca43c3d8405ad52da79b4b","022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qf8ejg80dqln4t2haceu096kfn0wfta075qgq4l9r2nfxjgc3kapsnsutu3","tb1qxwtl4mmjrskgy4vtz6zcc8tkn8t6tv575mq6pf",Conf.Config.random_amount(6)),
+        # ("正常转账maximum(自己转自己)!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["024071bf3a05b971def0e7b01b63357e2de43b6b0f02ca43c3d8405ad52da79b4b","022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qf8ejg80dqln4t2haceu096kfn0wfta075qgq4l9r2nfxjgc3kapsnsutu3","tb1qf8ejg80dqln4t2haceu096kfn0wfta075qgq4l9r2nfxjgc3kapsnsutu3","maximum"),
+        # ("正常转账!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["024071bf3a05b971def0e7b01b63357e2de43b6b0f02ca43c3d8405ad52da79b4b","022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qf8ejg80dqln4t2haceu096kfn0wfta075qgq4l9r2nfxjgc3kapsnsutu3","tb1qxwtl4mmjrskgy4vtz6zcc8tkn8t6tv575mq6pf",Conf.Config.random_amount(6)),
         # ("正常转账maximum!",["dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b"],["024071bf3a05b971def0e7b01b63357e2de43b6b0f02ca43c3d8405ad52da79b4b","022bf595281b06dcb38c9261c5dfeb979ee63c79d47ad328bb8606f6b000d855ea"],"BTC","BTC","tb1qf8ejg80dqln4t2haceu096kfn0wfta075qgq4l9r2nfxjgc3kapsnsutu3","tb1qxwtl4mmjrskgy4vtz6zcc8tkn8t6tv575mq6pf","maximum"),
     ]
 
@@ -181,11 +181,11 @@ class Test_transfers_success_btc_safe():
                 sleep(30)
                 logger.info("<----查询次数:第" + str(i+1) + "次---->")
                 transfers = Http.HttpUtils.get_transactions_byid(res[8])
-                if (transfers.json()["_embedded"]["transactions"][0]["status"] == "PENDING"):
+                
+                transfers_status = transfers.json()["_embedded"]["transactions"][0]["status"]
+                if (transfers_status == "PENDING" or transfers_status == "SENT"):
                     assert transfers.json()["status"] == -1
-                elif (transfers.json()["_embedded"]["transactions"][0]["status"] == "SENT"):
-                    assert transfers.json()["status"] == -1
-                elif (transfers.json()["_embedded"]["transactions"][0]["status"] == "SETTLED"):
+                elif (transfers_status == "SETTLED"):
                     assert transfers.json()["status"] == 1
                     break
 
@@ -221,6 +221,6 @@ class Test_transfers_success_btc_safe():
 
 
 if __name__ == '__main__':
-    path = os.path.abspath(__file__) + ""
+    path = os.path.abspath(__file__) + "::Test_transfers_success_btc_safe"
     pytest.main(["-vs", path,'--alluredir=Report/Allure'])
     os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

@@ -1,8 +1,0 @@
-[32mINFO    [0m Common.Http:Http.py:156 2022-08-01 16:11:03.735671 | <-----Swap Route----->
-Url:https://api.cryptoless.io/quote?networkCode=MATIC&from=CRV&to=USDC&amount=377.823
-
-Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweDg4MGM4MmYxZjFiZDc3ODAzMTQ2N2YxNGFiYjBiZTkxODQ4YzQxNTQ0NjllNzJkODA1ODZmMTRhOTY3ZDBmZDUyNDZhNGU4MmE4YzM4Yjk1NjQzZGZiNDE1NjIwNTA2MjkzNzc0M2NhMmFmMWVhYzRjZTkxNmU0NmIzNjZmZGQ1MWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNzU5MDI4MTBcbklzc3VlZCBBdDogTW9uLCA0IEp1bCAyMDIyIDExOjAwOjQ4IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBGcmksIDQgSnVsIDIwNDIgMTE6MDA6NDggR01UIn0="}
-[32mINFO    [0m Common.Http:Http.py:162 2022-08-01 16:11:03.735671 | 
-<-----Query Swap Route Response Error----->
-404
-{"code":2200000,"message":"from not found"}

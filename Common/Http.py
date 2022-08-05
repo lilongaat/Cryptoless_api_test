@@ -43,20 +43,59 @@ class HttpUtils:
 
     @staticmethod
     # 查询账户信息
-    def get_account(Authorization=Authorization_):
-        url = url_ + '/accounts'
+    def get_account(address:str,Authorization=Authorization_):
+        url = url_ + '/accounts?address=' + address
         headers = {
             "Content-Type": "application/json",
             "Authorization": Authorization
         }
 
-        logger.info("<-----Account----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+        logger.info('\n'+"<-----Account----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
         res = requests.get(url=url, headers=headers, timeout=timeout_)
         if res.status_code == 200:
             logger.info('\n'+"<-----Query account Response----->"+"\n"+(res.text))
             return res
         else:
-            logger.error('<-----Query account Response Error----->'+(res.text))
+            logger.error('\n'+'<-----Query account Response Error----->'+(res.text))
+            raise Exception("请求异常")
+
+    @staticmethod
+    # 查询代理账户列表
+    def get_safe_agents(Authorization=Authorization_):
+        url = 'http://13.215.207.236:8888/context/api/safe/agents'
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+
+        logger.info('\n'+"<-----Query Safe Agents----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+        res = requests.get(url=url, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Query Safe Agents Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.error('\n'+'<-----Query Safe Agents Response Error----->'+(res.text))
+            raise Exception("请求异常")
+
+    @staticmethod
+    # 激活账户
+    def post_safe_activation(accountId:str,Authorization=Authorization_):
+        url = 'http://13.215.207.236:8888/context/api/safe/activations'
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        body = {
+            "accountId": accountId
+        }
+
+        logger.info('\n'+"<-----Safe Account activation----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
+        res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Safe Account activation Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.error('\n'+'<-----Safe Account activation Response Error----->'+(res.text))
             raise Exception("请求异常")
 
     @staticmethod
@@ -73,13 +112,13 @@ class HttpUtils:
             "threshold": threshold
         }
 
-        logger.info("<-----Account-Create----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
+        logger.info('\n'+"<-----Account-Create----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
         res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)
         if res.status_code == 200:
             logger.info('\n'+"<-----Create account Response----->"+"\n"+(res.text))
             return res
         else:
-            logger.error('<-----Create account Response Error----->'+(res.text))
+            logger.error('\n'+'<-----Create account Response Error----->'+(res.text))
             raise Exception("请求异常")
 
     @staticmethod
@@ -91,17 +130,17 @@ class HttpUtils:
             "Authorization": Authorization
         }
         
-        logger.info("<-----NetWorks----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+        logger.info('\n'+"<-----NetWorks----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
         res = requests.get(url=url, headers=headers, timeout=timeout_)
         if res.status_code == 200:
             logger.info('\n'+"<-----Query account Response----->"+"\n"+(res.text))
             if len(json.loads(res.text)) > 0:
                 return res
             else:
-                logger.error('<-----Query Networks Response Error----->'+(res.text))
+                logger.error('\n'+'<-----Query Networks Response Error----->'+(res.text))
                 raise Exception("没有查询到任何NetWorks信息!")
         else:
-            logger.error('<-----Query account Response Error----->'+(res.text))
+            logger.error('\n'+'<-----Query account Response Error----->'+(res.text))
             raise Exception("请求异常")
 
     @staticmethod
@@ -113,13 +152,13 @@ class HttpUtils:
             "Authorization": Authorization
         }
 
-        logger.info("<-----Holders----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+        logger.info('\n'+"<-----Holders----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
         res = requests.get(url=url, headers=headers, timeout=timeout_)
         if res.status_code == 200:
             logger.info('\n'+"<-----Query Holders Response----->"+"\n"+(res.text))
             return res
         else:
-            logger.error('<-----Query Holders Response Error----->'+(res.text))
+            logger.error('\n'+'<-----Query Holders Response Error----->'+(res.text))
             raise Exception("请求异常")
 
     @staticmethod
@@ -131,17 +170,17 @@ class HttpUtils:
             "Authorization": Authorization
         }
 
-        logger.info("<-----Staking----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+        logger.info('\n'+"<-----Staking----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
         res = requests.get(url=url, headers=headers, timeout=timeout_)
         if res.status_code == 200:
             logger.info('\n'+"<-----Query Staking Response----->"+"\n"+(res.text))
             if len(json.loads(res.text)) > 0:
                 return res
             else:
-                logger.error('<-----Query Staking Response Error----->'+(res.text))
+                logger.error('\n'+'<-----Query Staking Response Error----->'+(res.text))
                 raise Exception("没有查询到任何Staking信息!")
         else:
-            logger.error('<-----Query Staking Response Error----->'+(res.text))
+            logger.error('\n'+'<-----Query Staking Response Error----->'+(res.text))
             raise Exception("请求异常")
 
     @staticmethod
@@ -153,7 +192,7 @@ class HttpUtils:
             "Authorization": Authorization
         }
 
-        logger.info("<-----Swap Route----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+        logger.info('\n'+"<-----Swap Route----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
         res = requests.get(url=url, headers=headers, timeout=timeout_)
         if res.status_code == 200:
             logger.info('\n'+"<-----Query Swap Route Response----->"+"\n"+(res.text))
@@ -442,7 +481,7 @@ class HttpUtils:
             "Authorization": Authorization
         }
 
-        logger.info("<-----Send----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+        logger.info('\n'+"<-----Send----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
         res = requests.post(url=url, headers=headers, timeout=timeout_)
         if res.status_code == 200:
             logger.info('\n'+"<-----Send Response----->"+"\n"+(res.text))
@@ -460,7 +499,7 @@ class HttpUtils:
             "Content-Type": "application/json",
             "Authorization": Authorization
         }
-        logger.info("<-----Qurey Transactions by hash----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+        logger.info('\n'+"<-----Qurey Transactions by hash----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
 
         res = requests.get(url=url,headers=headers,timeout=timeout_)
         if res.status_code == 200:
@@ -478,7 +517,7 @@ class HttpUtils:
             "Content-Type": "application/json",
             "Authorization": Authorization
         }
-        logger.info("<-----Qurey Transactions by id----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+        logger.info('\n'+"<-----Qurey Transactions by id----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
 
         res = requests.get(url=url,headers=headers,timeout=timeout_)
         if res.status_code == 200:
@@ -497,7 +536,7 @@ class HttpUtils:
             "Authorization": Authorization
         }
 
-        logger.info("<-----Qurey Keys----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+        logger.info('\n'+"<-----Qurey Keys----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
         res = requests.get(url=url,headers=headers,timeout=timeout_)
         if res.status_code == 200:
             logger.info('\n'+"<-----Qurey Keys Response----->"+"\n"+(res.text))
@@ -519,7 +558,7 @@ class HttpUtils:
             "count":count
         }
 
-        logger.info("<-----Create Key----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
+        logger.info('\n'+"<-----Create Key----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
         res = requests.post(url=url, headers=headers, json=body, timeout=timeout_)
         if res.status_code == 200:
             logger.info('\n'+"<-----Create Keys Response----->"+"\n"+(res.text))

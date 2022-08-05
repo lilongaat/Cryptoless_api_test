@@ -1,4 +1,5 @@
 import json
+import pytest_check
 from time import sleep
 import allure
 import pytest
@@ -14,10 +15,10 @@ from Common.Loguru import logger
 class Test_transfers_success_erc20:
     test_data = [
         # 测试
-        # ("正常转账(自己转自己)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3",Conf.Config.random_amount(1)),
+        ("正常转账(自己转自己)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3",Conf.Config.random_amount(1)),
         ("正常转账maximum(自己转自己)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","maximum"),
-        # ("正常转账!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0x6146ca4fc34aaA7a6f9D0417a9A4f10e41b6a7Be",Conf.Config.random_amount(2)),
-        # ("正常转账maximum!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0x6146ca4fc34aaA7a6f9D0417a9A4f10e41b6a7Be","maximum"),
+        ("正常转账!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0x6146ca4fc34aaA7a6f9D0417a9A4f10e41b6a7Be",Conf.Config.random_amount(2)),
+        ("正常转账maximum!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0x6146ca4fc34aaA7a6f9D0417a9A4f10e41b6a7Be","maximum"),
     ]
 
     @allure.story("Transfers_ERC20_Success!")
@@ -29,15 +30,11 @@ class Test_transfers_success_erc20:
             holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
             assert holders.status_code == 200
 
-        with allure.step("查询to账户holders信息——holders"):
-            holders = Http.HttpUtils.get_holders(networkCode,symbol,to_add)
-            assert holders.status_code == 200
-
         with allure.step("构建交易——transfers"):
-            # transactionParams = {
-            #     "memo":"hahahhahahhahahhaahhahhahhahahaha@@==这是一段描述！！====@@hahahhahahhahahhaahhahhahhahahaha"
-            # }
-            res = Http.HttpUtils.post_transfers(networkCode,symbol,PublicKeys,from_add,to_add,amount)
+            transactionParams = {
+                "memo":"hahahhahahhahahhaahhahhahhahahaha@@==这是一段描述！！====@@hahahhahahhahahhaahhahhahhahahaha"
+            }
+            res = Http.HttpUtils.post_transfers(networkCode,symbol,PublicKeys,from_add,to_add,amount,transactionParams)
             assert res[0].status_code == 200
 
         with allure.step("签名交易——sign"):
@@ -68,8 +65,7 @@ class Test_transfers_success_erc20:
                     assert transfers.json()["status"] == -1
                 elif (transfers.json()["_embedded"]["transactions"][0]["status"] == "SETTLED"):
                     assert transfers.json()["status"] == 1
-                    break
-                
+                    break             
 
         with allure.step("查询关联交易记录——balance-transactions by hash"):
             sleep(15)
@@ -84,10 +80,6 @@ class Test_transfers_success_erc20:
             holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
             assert holders.status_code == 200
 
-        with allure.step("查询to账户holders信息——holders"):
-            holders = Http.HttpUtils.get_holders(networkCode,symbol,to_add)
-            assert holders.status_code == 200
-
 
 
 # 多签账户
@@ -95,10 +87,10 @@ class Test_transfers_success_erc20:
 class Test_transfers_success_erc20_safe:
     test_data = [
         # 测试
-        # ("正常转账(自己转自己)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["03f1b7e94f4c83b3c1505cc15e4a14e172323afe0b946295eece18300da6ec2228","0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3",Conf.Config.random_amount(6)),
-        # ("正常转账maximum(自己转自己)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["03f1b7e94f4c83b3c1505cc15e4a14e172323afe0b946295eece18300da6ec2228","0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3","maximum"),
+        ("正常转账(自己转自己)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["03f1b7e94f4c83b3c1505cc15e4a14e172323afe0b946295eece18300da6ec2228","0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3",Conf.Config.random_amount(6)),
+        ("正常转账maximum(自己转自己)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["03f1b7e94f4c83b3c1505cc15e4a14e172323afe0b946295eece18300da6ec2228","0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3","maximum"),
         ("正常转账!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["03f1b7e94f4c83b3c1505cc15e4a14e172323afe0b946295eece18300da6ec2228","0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3","0x6146ca4fc34aaA7a6f9D0417a9A4f10e41b6a7Be",Conf.Config.random_amount(6)),
-        # ("正常转账maximum!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["03f1b7e94f4c83b3c1505cc15e4a14e172323afe0b946295eece18300da6ec2228","0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3","0x6146ca4fc34aaA7a6f9D0417a9A4f10e41b6a7Be","maximum"),
+        ("正常转账maximum!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["03f1b7e94f4c83b3c1505cc15e4a14e172323afe0b946295eece18300da6ec2228","0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","symbol","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3","0x6146ca4fc34aaA7a6f9D0417a9A4f10e41b6a7Be","maximum"),
     ]
 
     @allure.story("Transfers_ERC20_Success!")
@@ -108,10 +100,6 @@ class Test_transfers_success_erc20_safe:
 
         with allure.step("查询From账户holders信息——holders"):
             holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
-            assert holders.status_code == 200
-
-        with allure.step("查询to账户holders信息——holders"):
-            holders = Http.HttpUtils.get_holders(networkCode,symbol,to_add)
             assert holders.status_code == 200
 
         with allure.step("构建交易——transfers"):
@@ -193,20 +181,16 @@ class Test_transfers_success_erc20_safe:
             holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
             assert holders.status_code == 200
 
-        with allure.step("查询to账户holders信息——holders"):
-            holders = Http.HttpUtils.get_holders(networkCode,symbol,to_add)
-            assert holders.status_code == 200
-
 
 # 多签账户
 @allure.feature("Transfers_Success!")
 class Test_transfers_success_eth_safe:
     test_data = [
         # 测试
-        # ("正常转账(自己转自己)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["03f1b7e94f4c83b3c1505cc15e4a14e172323afe0b946295eece18300da6ec2228","0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","ETH","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3",Conf.Config.random_amount(6)),
-        # ("正常转账maximum(自己转自己)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["03f1b7e94f4c83b3c1505cc15e4a14e172323afe0b946295eece18300da6ec2228","0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","ETH","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3","maximum"),
+        ("正常转账(自己转自己)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["03f1b7e94f4c83b3c1505cc15e4a14e172323afe0b946295eece18300da6ec2228","0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","ETH","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3",Conf.Config.random_amount(6)),
+        ("正常转账maximum(自己转自己)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["03f1b7e94f4c83b3c1505cc15e4a14e172323afe0b946295eece18300da6ec2228","0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","ETH","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3","maximum"),
         ("正常转账!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["03f1b7e94f4c83b3c1505cc15e4a14e172323afe0b946295eece18300da6ec2228","0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","ETH","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3","0x6146ca4fc34aaA7a6f9D0417a9A4f10e41b6a7Be",Conf.Config.random_amount(6)),
-        # ("正常转账maximum!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["03f1b7e94f4c83b3c1505cc15e4a14e172323afe0b946295eece18300da6ec2228","0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","ETH","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3","0x6146ca4fc34aaA7a6f9D0417a9A4f10e41b6a7Be","maximum"),
+        ("正常转账maximum!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["03f1b7e94f4c83b3c1505cc15e4a14e172323afe0b946295eece18300da6ec2228","0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","ETH","0xF0d689E18d2f000663e507A39dCfA1DdC26a8Dc3","0x6146ca4fc34aaA7a6f9D0417a9A4f10e41b6a7Be","maximum"),
     ]
 
     @allure.story("Transfers_ETH_Success!")
@@ -216,10 +200,6 @@ class Test_transfers_success_eth_safe:
 
         with allure.step("查询From账户holders信息——holders"):
             holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
-            assert holders.status_code == 200
-
-        with allure.step("查询to账户holders信息——holders"):
-            holders = Http.HttpUtils.get_holders(networkCode,symbol,to_add)
             assert holders.status_code == 200
 
         with allure.step("构建交易——transfers"):
@@ -301,9 +281,6 @@ class Test_transfers_success_eth_safe:
             holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
             assert holders.status_code == 200
 
-        with allure.step("查询to账户holders信息——holders"):
-            holders = Http.HttpUtils.get_holders(networkCode,symbol,to_add)
-            assert holders.status_code == 200
 
 
 # 单签账户
@@ -311,8 +288,8 @@ class Test_transfers_success_eth_safe:
 class Test_transfers_success_eth:
     test_data = [
         # 测试
-        # ("正常转账(自己转自己)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","ETH","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3",Conf.Config.random_amount(6)),
-        # ("正常转账maximum(自己转自己)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","ETH","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","maximum"),
+        ("正常转账(自己转自己)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","ETH","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3",Conf.Config.random_amount(6)),
+        ("正常转账maximum(自己转自己)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","ETH","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","maximum"),
         ("正常转账!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","ETH","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0x6146ca4fc34aaA7a6f9D0417a9A4f10e41b6a7Be",Conf.Config.random_amount(6)),
         # ("正常转账maximum!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"ETH-RINKEBY","ETH","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0x6146ca4fc34aaA7a6f9D0417a9A4f10e41b6a7Be","maximum"),
     ]
@@ -324,10 +301,6 @@ class Test_transfers_success_eth:
 
         with allure.step("查询From账户holders信息——holders"):
             holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
-            assert holders.status_code == 200
-
-        with allure.step("查询to账户holders信息——holders"):
-            holders = Http.HttpUtils.get_holders(networkCode,symbol,to_add)
             assert holders.status_code == 200
 
         with allure.step("构建交易——transfers"):
@@ -374,30 +347,49 @@ class Test_transfers_success_eth:
 
             
             if (from_add == to_add):
-                assert len(transcations.json()) == 1 # 自己转自己一条交易记录
-                assert transcations.json()[0]["type"] == -1 # type 是 -1
-                # assert transcations.json()[0]["address"] == res[0].json()["from"] # address 是转出地址
-                # assert transcations.json()[0]["amount"] ==  res[0].json()["amount"] + Conf.Config.amount_decimals(send.json()['estimatedFee'],18)
+                with allure.step("自己转自己1条交易记录,交易type为-1"):
+                    assert len(transcations.json()) == 1 # 自己转自己一条交易记录
+                    assert transcations.json()[0]["type"] == -1 # type 是 -1
+                    tx_amount = float([t.get("amount") for t in transcations.json() if t.get("address") == from_add][0])
+                    if amount == 'maximum':
+                        with allure.step("最大转账金额正确"):
+                            assert tx_amount == float(holders.json()[0]['quantity'])
+                    else:
+                        with allure.step("转账金额正确"):
+                            assert tx_amount == amount
             else:
-                assert len(transcations.json()) == 2
-                # if(transcations.json()[0]["type"] == -1): # 判断第一个交易为转出地址
-                #     assert transcations.json()[0]["address"] == res[0].json()["from"]
-                #     # assert transcations.json()[0]["amount"] ==  res[0].json()["amount"] + Conf.Config.amount_decimals(send.json()['estimatedFee'],18)
+                with allure.step("正常转账2条交易记录"):
+                    assert len(transcations.json()) == 2
 
-                #     assert transcations.json()[1]["address"] == res[0].json()["to"]
-                #     assert transcations.json()[1]["amount"] ==  res[0].json()["amount"]
+                # 转出地址交易信息
+                from_type = [t.get("type") for t in transcations.json() if t.get("address") == from_add][0]
+                from_amount = float([t.get("amount") for t in transcations.json() if t.get("address") == from_add][0])
 
-                # else:
-                #     assert transcations.json()[0]["address"] == res[0].json()["to"]
-                #     assert transcations.json()[0]["amount"] ==  res[0].json()["amount"]
+                # 转入地址交易信息
+                to_type = [t.get("type") for t in transcations.json() if t.get("address") == to_add][0]
+                to_amount = float([t.get("amount") for t in transcations.json() if t.get("address") == to_add][0])
 
-                #     assert transcations.json()[1]["address"] == res[0].json()["from"]
-                #     # assert transcations.json()[1]["amount"] ==  res[0].json()["amount"] + Conf.Config.amount_decimals(send.json()['estimatedFee'],18)
+                with allure.step("关联交易type:转出地址为-1,转入地址为1"):
+                    assert from_type == -1
+                    assert to_type == 1
+
+                if amount == "maximum":
+                    with allure.step("最大转账金额正确"):
+                        assert from_amount == float(holders.json()[0]['quantity'])
+                        assert to_amount == float(holders.json()[0]['quantity']) - ((transfers.json()["_embedded"]["transactions"][0]["estimatedFee"])/(10**18))
+                else:
+                    with allure.step("转账金额正确"):
+                        assert from_amount == amount
+                        assert to_amount == amount
+                
 
         with allure.step("查询From账户holders信息——holders"):
             holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
             assert holders.status_code == 200
 
-        with allure.step("查询to账户holders信息——holders"):
-            holders = Http.HttpUtils.get_holders(networkCode,symbol,to_add)
-            assert holders.status_code == 200
+
+
+if __name__ == '__main__':
+    path = os.path.abspath(__file__) + "::Test_transfers_success_eth"
+    pytest.main(["-vs", path,'--alluredir=Report/Allure'])
+    os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

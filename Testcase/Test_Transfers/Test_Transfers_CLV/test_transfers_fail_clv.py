@@ -72,3 +72,8 @@ class Test_sign_fail_clv:
         with allure.step("签名交易——sign"):
             sig = Http.HttpUtils.post_sign_transfers(res[1],res[2],res[3],res[4],res[5],res[6],signatures)
             assert sig.status_code == status_code_check
+
+if __name__ == '__main__':
+    path = os.path.abspath(__file__) + ""
+    pytest.main(["-vs", path,'--alluredir=Report/Allure'])
+    os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')
