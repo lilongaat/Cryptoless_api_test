@@ -28,9 +28,15 @@ class Test_transfers_fail_doge():
     @pytest.mark.parametrize('test_title,privatekey,PublicKeys,networkCode,symbol,from_add,to_add,amount,status_code_check', test_data)
     def test_transfers_address(self,test_title,privatekey,PublicKeys,networkCode,symbol,from_add,to_add,amount,status_code_check):
 
-        with allure.step("构建交易——transfers"):
-            res = Http.HttpUtils.post_transfers(networkCode,symbol,PublicKeys,from_add,to_add,amount)
-            assert res.status_code == status_code_check
+        with allure.step("构建交易——instructions"):
+            body = {
+                "from":from_add,
+                "to":to_add,
+                "symbol":symbol,
+                "amount":amount
+            }
+            transfer = Http.HttpUtils.post_instructions("Transfer",body,networkCode,PublicKeys)
+            assert transfer.status_code == status_code_check
 
 @allure.feature("Transfers_Fail!")
 class Test_sign_fail_doge():
@@ -44,27 +50,42 @@ class Test_sign_fail_doge():
     @pytest.mark.parametrize('test_title,privatekey,PublicKeys,networkCode,symbol,from_add,to_add,amount,status_code_check', test_data)
     def test_transfers_address(self,test_title,privatekey,PublicKeys,networkCode,symbol,from_add,to_add,amount,status_code_check):
 
-        with allure.step("构建交易——transfers"):
-            res = Http.HttpUtils.post_transfers(networkCode,symbol,PublicKeys,from_add,to_add,amount)
-            assert res[0].status_code == 200
-
-        signatures = []
-        for i in range(len(res[5])):
-            signature = Conf.Config.sign(privatekey[0],res[5][i]['hash'])
-            logger.info(signature)
-            signatures.append(
-                {
-                "hash":res[5][i]['hash'],
-                "publickey":PublicKeys[0],
-                "signature":signature
+        with allure.step("构建交易——instructions"):
+            body = {
+                "from":from_add,
+                "to":to_add,
+                "symbol":symbol,
+                "amount":amount
             }
-            )
+            transfer = Http.HttpUtils.post_instructions("Transfer",body,networkCode,PublicKeys)
+            assert transfer.status_code == 200
+
+            t_estimatedFee = transfer.json()['_embedded']['transactions'][0]['estimatedFee']
+            t_hash = transfer.json()['_embedded']['transactions'][0]['hash']
+            t_id = transfer.json()['_embedded']['transactions'][0]['id']
+            t_networkCode = transfer.json()['_embedded']['transactions'][0]['networkCode']
+            t_requiredSignings = transfer.json()['_embedded']['transactions'][0]['requiredSignings']
+            t_serialized = transfer.json()['_embedded']['transactions'][0]['serialized']
+            t_status = transfer.json()['_embedded']['transactions'][0]['status']
+            ID = transfer.json()['id']
+            body_amount = transfer.json()["body"]["amount"]
+
+            signatures = []
+            for i in range(len(t_requiredSignings)):
+                signature = Conf.Config.sign(privatekey[0],t_requiredSignings[i]['hash'])
+                signatures.append(
+                    {
+                    "hash":t_requiredSignings[i]['hash'],
+                    "publickey":t_requiredSignings[i]["publicKeys"][0],
+                    "signature":signature
+                }
+                )
 
         with allure.step("签名交易——sign"):
-            sig = Http.HttpUtils.post_sign_transfers(res[1],res[2],res[3],res[4],res[5],res[6],signatures)
+            sig = Http.HttpUtils.post_sign_transfers(t_estimatedFee,t_hash,t_id,t_networkCode,t_requiredSignings,t_serialized,signatures)
             assert sig.status_code == status_code_check
 
 if __name__ == '__main__':
     path = os.path.abspath(__file__) + ""
     pytest.main(["-vs", path,'--alluredir=Report/Allure'])
-    os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')
+    # os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

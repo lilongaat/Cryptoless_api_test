@@ -14,29 +14,29 @@ from Common.Loguru import logger
 class Test_swap_fail_matic:
     test_data = [
         # 测试&生产
-        ("amount精度超出-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDT","USDC","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(7),400),
-        ("fromcoin==tocoin-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDC","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3),400),
-        ("amount为空-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1","",400),
-        ("amount超出余额-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",100000,400),
-        ("address为空-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","","1",Conf.Config.random_amount(3),400),
-        ("address异常-Swap(USDT-USDC)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDT","USDC","swap","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun","1",Conf.Config.random_amount(3),400),
-        ("from_coin为空-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","","USDT","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3),404),
-        ("from_coin不支持-Swap(USDT-USDC)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","PAX","USDC","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3),404),
-        ("to_coin为空-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3),404),
-        ("to_coin异常-Swap(USDT-USDC)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDT","MKR","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3),400),
-        ("slippage为空-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","",Conf.Config.random_amount(3),400),
-        ("slippage为0(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0",Conf.Config.random_amount(3)),
-        ("slippage超出(51)-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","51",Conf.Config.random_amount(3),400),
-        ("networkCode为空-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"","USDC","USDT","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3),400),
-        ("networkCode不支持-Swap(USDT-USDC)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"BTC","USDT","USDC","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3),400),
-        ("type为空-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3),400),
-        ("type异常-Swap(USDT-USDC)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDT","USDC","transfer","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3),404),
+        ("networkCode为空-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"","USDC","USDT","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3),400,2100000,"networkCode:not empty"),
+        ("networkCode不支持-Swap(USDT-USDC)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"BTC","USDT","USDC","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3),404,2200000,"symbol:USDT asset network instance not found"),
+        ("from_coin为空-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","","USDT","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3),404,2200000,"code: asset not found"),
+        ("from_coin不支持-Swap(USDT-USDC)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","PAX","USDC","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3),404,2200000,"code:PAX asset not found"),
+        ("fromcoin==tocoin-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDC","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3),400,2402001,"insufficient liquidity for this trade"),
+        # ("to_coin为空-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3),404),
+        ("to_coin异常-Swap(USDT-USDC)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDT","MKR","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3),400,2402001,"insufficient liquidity for this trade"),
+        ("address为空-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","","1",Conf.Config.random_amount(3),400,2100000,"invalid address"),
+        ("address异常-Swap(USDT-USDC)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDT","USDC","swap","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun","1",Conf.Config.random_amount(3),400,2100000,"invalid address"),
+        ("amount为空-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1","",400,2100000,"amount entered incorrectly"),
+        ("amount超出余额-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",100000,400,2402001,"insufficient liquidity for this trade"),
+        ("amount精度超出-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDT","USDC","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(7),400,2100000,"amount decimals long too"),
+        ("slippage为空-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","",Conf.Config.random_amount(3),400,1100000,"Bad Request"),
+        ("slippage为0(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","0",Conf.Config.random_amount(3),400,2100000,"slippage max 50 min 1"),
+        ("slippage超出(51)-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","51",Conf.Config.random_amount(3),400,2100000,"slippage max 50 min 1"),
+        ("type为空-Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3),400,2100000,"type:not empty"),
+        ("type异常(transfer)-Swap(USDT-USDC)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDT","USDC","transfer","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3),404,1100000,"Bad Request"),
     ]
 
     @allure.story("Swap_MATIC_Fail!")
     @allure.title('单签账户Swap-{test_title}')
-    @pytest.mark.parametrize('test_title,privatekey,PublicKeys,networkCode,from_coin,to_coin,type,address,slippage,amount,status_code_check', test_data)
-    def test_swap_matic(self,test_title,privatekey,PublicKeys,networkCode,from_coin,to_coin,type,address,slippage,amount,status_code_check):
+    @pytest.mark.parametrize('test_title,privatekey,PublicKeys,networkCode,from_coin,to_coin,type,address,slippage,amount,status_code_check,code_check,message_check', test_data)
+    def test_swap_matic(self,test_title,privatekey,PublicKeys,networkCode,from_coin,to_coin,type,address,slippage,amount,status_code_check,code_check,message_check):
 
         with allure.step("构建交易——transfers"):
             transactionParams = {
@@ -44,19 +44,21 @@ class Test_swap_fail_matic:
             }
             res = Http.HttpUtils.post_instructions(networkCode,from_coin,to_coin,PublicKeys,address,slippage,amount,type,transactionParams)
             assert res.status_code == status_code_check
+            assert res.json()['code'] == code_check
+            assert res.json()['message'] == message_check
 
 # 单签账户
 @allure.feature("Swap_MATIC!")
 class Test_swap_sign_fail_matic:
     test_data = [
         # 测试&生产
-        ("Swap-错误的私钥签名!",["83b749bf2fa7af2f20bd154fef973646fba9bc6c6da422ed633c653134a4a782"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(2),400),
+        ("Swap-错误的私钥签名!",["83b749bf2fa7af2f20bd154fef973646fba9bc6c6da422ed633c653134a4a782"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(2),400,2300000,"invalid signature"),
     ]
 
     @allure.story("Swap_MATIC_Fail!")
     @allure.title('单签账户Swap-{test_title}')
-    @pytest.mark.parametrize('test_title,privatekey,PublicKeys,networkCode,from_coin,to_coin,type,address,slippage,amount,status_code_check', test_data)
-    def test_swap_matic_safe(self,test_title,privatekey,PublicKeys,networkCode,from_coin,to_coin,type,address,slippage,amount,status_code_check):
+    @pytest.mark.parametrize('test_title,privatekey,PublicKeys,networkCode,from_coin,to_coin,type,address,slippage,amount,status_code_check,code_check,message_check', test_data)
+    def test_swap_matic_safe(self,test_title,privatekey,PublicKeys,networkCode,from_coin,to_coin,type,address,slippage,amount,status_code_check,code_check,message_check):
 
         with allure.step("构建交易——transfers"):
             transactionParams = {
@@ -76,6 +78,8 @@ class Test_swap_sign_fail_matic:
             ]
             sig = Http.HttpUtils.post_sign_transfers(res[1],res[2],res[3],res[4],res[5],res[6],signatures)
             assert sig.status_code == status_code_check
+            assert sig.json()["code"] == code_check
+            assert message_check in sig.json()['message']
 
 # 多签账户
 @allure.feature("Swap_MATIC!")
@@ -132,6 +136,6 @@ class Test_swap_fail_matic_safe:
             assert res.status_code == status_code_check
 
 if __name__ == '__main__':
-    path = os.path.abspath(__file__) + "::Test_swap_fail_matic_safe"
+    path = os.path.abspath(__file__) + "::Test_swap_sign_fail_matic"
     pytest.main(["-vs", path,'--alluredir=Report/Allure'])
     os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

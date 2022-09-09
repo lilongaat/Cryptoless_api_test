@@ -1,0 +1,4 @@
+2022-08-09 19:31:36.059 | ERROR    | test_swap_success_matic:test_swap_matic_safe:136 - 03f1b7e94f4c83b3c1505cc15e4a14e172323afe0b946295eece18300da6ec2228
+2022-08-09 19:31:36.060 | ERROR    | test_swap_success_matic:test_swap_matic_safe:137 - 0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0
+2022-08-09 19:31:39.740 | ERROR    | test_swap_success_matic:test_swap_matic_safe:136 - 0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0
+2022-08-09 19:31:39.740 | ERROR    | test_swap_success_matic:test_swap_matic_safe:137 - 02ac5e97a0659d6ce59c5b10b2ace331bffa276a555ff333b09beda99bd6b9f52e

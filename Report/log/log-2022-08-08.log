@@ -1,0 +1,57 @@
+2022-08-08 14:38:53.003 | ERROR    | test_transfers_success_eth:test_transfers_eth_safe:209 - 025c380e0b51894f3593a803fa38c79b4ac004f27c1d8ebd5567828a6d1634654e
+2022-08-08 14:38:53.004 | ERROR    | test_transfers_success_eth:test_transfers_eth_safe:210 - ['03f1b7e94f4c83b3c1505cc15e4a14e172323afe0b946295eece18300da6ec2228', '0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0']
+2022-08-08 14:40:21.191 | ERROR    | test_transfers_success_eth:test_transfers_eth_safe:209 - 025c380e0b51894f3593a803fa38c79b4ac004f27c1d8ebd5567828a6d1634654e
+2022-08-08 14:40:21.192 | ERROR    | test_transfers_success_eth:test_transfers_eth_safe:210 - ['03f1b7e94f4c83b3c1505cc15e4a14e172323afe0b946295eece18300da6ec2228', '0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0']
+2022-08-08 14:40:21.192 | ERROR    | test_transfers_success_eth:test_transfers_eth_safe:212 - None
+2022-08-08 16:52:52.247 | ERROR    | Common.Http:post_safe_activation:98 - 
+<-----Safe Account activation Response Error----->{"code":2300000,"message":"nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result \u0028or null\u0029 to be returned by selectOne\u0028\u0029, but found: 2"}
+2022-08-08 16:55:59.721 | ERROR    | Common.Http:post_safe_activation:98 - 
+<-----Safe Account activation Response Error----->{"code":2300000,"message":"failed to activate account"}
+2022-08-08 17:38:13.525 | ERROR    | Common.Http:post_safe_activation:98 - 
+<-----Safe Account activation Response Error----->{"code":2100000,"message":"accountId:not null"}
+2022-08-08 17:38:13.862 | ERROR    | Common.Http:post_safe_activation:98 - 
+<-----Safe Account activation Response Error----->{"code":2200000,"message":"account not found"}
+2022-08-08 17:40:25.104 | ERROR    | Common.Http:post_safe_activation:98 - 
+400
+<-----Safe Account activation Response Error----->{"code":2100000,"message":"accountId:not null"}
+2022-08-08 17:40:25.440 | ERROR    | Common.Http:post_safe_activation:98 - 
+404
+<-----Safe Account activation Response Error----->{"code":2200000,"message":"account not found"}
+2022-08-08 17:40:38.592 | ERROR    | Common.Http:post_safe_activation:98 - 
+400
+<-----Safe Account activation Response Error----->{"code":2100000,"message":"accountId:not null"}
+2022-08-08 17:40:38.940 | ERROR    | Common.Http:post_safe_activation:98 - 
+404
+<-----Safe Account activation Response Error----->{"code":2200000,"message":"account not found"}
+2022-08-08 17:42:05.552 | ERROR    | Common.Http:post_safe_activation:98 - 
+400
+<-----Safe Account activation Response Error----->{"code":2100000,"message":"accountId:not null"}
+2022-08-08 17:42:05.885 | ERROR    | Common.Http:post_safe_activation:98 - 
+404
+<-----Safe Account activation Response Error----->{"code":2200000,"message":"account not found"}
+2022-08-08 17:42:30.687 | ERROR    | Common.Http:post_safe_activation:98 - 
+400
+<-----Safe Account activation Response Error----->{"code":2100000,"message":"accountId:not null"}
+2022-08-08 17:42:31.155 | ERROR    | Common.Http:post_safe_activation:98 - 
+404
+<-----Safe Account activation Response Error----->{"code":2200000,"message":"account not found"}
+2022-08-08 17:43:55.923 | ERROR    | Common.Http:post_safe_activation:98 - 
+400
+<-----Safe Account activation Response Error----->{"code":2100000,"message":"accountId:not null"}
+2022-08-08 17:43:56.137 | ERROR    | Common.Http:post_safe_activation:98 - 
+404
+<-----Safe Account activation Response Error----->{"code":2200000,"message":"account not found"}
+2022-08-08 17:44:32.509 | ERROR    | Common.Http:post_safe_activation:98 - 
+400
+<-----Safe Account activation Response Error----->{"code":2100000,"message":"accountId:not null"}
+2022-08-08 17:44:32.710 | ERROR    | Common.Http:post_safe_activation:98 - 
+404
+<-----Safe Account activation Response Error----->{"code":2200000,"message":"account not found"}
+2022-08-08 18:39:12.112 | ERROR    | Common.Http:post_safe_agents_sign:99 - 
+<-----Safe Agents sign Response Error----->{"timestamp":"2022-08-08T10:39:12.163Z","status":405,"error":"Method Not Allowed","message":"","path":"/context/api/safe/txs"}
+2022-08-08 18:49:06.038 | ERROR    | Common.Http:post_safe_agents_sign:99 - 
+<-----Safe Agents sign Response Error----->{"timestamp":"2022-08-08T10:49:06.093Z","status":405,"error":"Method Not Allowed","message":"","path":"/context/api/safe/txs"}
+2022-08-08 18:54:19.867 | ERROR    | Common.Http:post_safe_agents_sign:99 - 
+<-----Safe Agents sign Response Error----->{"timestamp":"2022-08-08T10:54:19.929Z","status":405,"error":"Method Not Allowed","message":"","path":"/context/api/safe/txs"}
+2022-08-08 18:55:38.017 | ERROR    | Common.Http:post_safe_agents_sign:99 - 
+<-----Safe Agents sign Response Error----->{"timestamp":"2022-08-08T10:55:38.080Z","status":405,"error":"Method Not Allowed","message":"","path":"/context/api/safe/txs"}

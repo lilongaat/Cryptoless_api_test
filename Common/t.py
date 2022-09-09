@@ -1,48 +1,56 @@
-# print((int("0x000000000000000000000000000000000000000000002dfb683ebdaddc5e1956",16)))
+import requests
+import json
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from loguru import logger
+from Config.readconfig import ReadConfig
 
-# import web3
+# Debug
+timeout_ = int(ReadConfig().get_debug('timeout'))
+url_ = ReadConfig().get_debug('url')
+Authorization_ = ReadConfig().get_debug('Authorization')
 
-# # totalSupply   balanceOf  decimals
-# method_id = web3.Web3.keccak(text = "balanceOf()").hex()[:10]
-# print(method_id)
-# address = "0xC88F7666330b4b511358b7742dC2a3234710e7B1"
-# data = method_id + "".zfill(20) + address[2:]
-# print(data)
-
-
-# from web3 import Web3
-# import ssl
-# import certifi
-# ssl_context = ssl.create_default_context()
-# ssl_context.load_verify_locations(certifi.where())
-
-# print(Web3(Web3.WebsocketProvider("wss://mainnet.infura.io/ws/v3/f8167b1c15ae4716976dd317d03b3e7f",websocket_kwargs={"ssl":ssl_context})).eth.block_number)
-# # print(Web3(Web3.WebsocketProvider("wss://eth-mainnet.cryptoless.io")).eth.block_number)
-
-# print(Web3(Web3.HTTPProvider("https://mainnet.infura.io/v3/f8167b1c15ae4716976dd317d03b3e7f",request_kwargs={'timeout': 100})).eth.block_number)
+# Release
+# timeout_ = int(ReadConfig().get_release('timeout'))
+# url_ = ReadConfig().get_release('url')
+# Authorization_ = ReadConfig().get_release('Authorization')
 
 
-# a = [{"a":1,"b":2},{"a":2,"b":9},{"a":3,"b":87},{"a":3,"b":92},{"a":0,"b":2}]
-# u = [x.get("b") for x in a if x.get("a") == 1]
-# print(u)
+class HttpUtils:
 
-# t = []
-# t.append({"tpo":u})
-# print(t)
+    @staticmethod
+    #  instructions
+    def post_instructions(type: str,body: list, networkCode: str, definiteSignerPublicKeys: list, transactionParams = '', Authorization=Authorization_):
+        url = url_ + '/instructions'
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        body_ = {
+            "body": body,
+            "networkCode": networkCode,
+            "type": type,
+            "definiteSignerPublicKeys": definiteSignerPublicKeys,
+            "transactionParams": transactionParams
+        }
 
-# from ecdsa import SigningKey, SECP256k1
-# import sha3
+        logger.info('\n'+"<-----Instructions----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
+        res = requests.post(url=url, json=body_, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Instructions Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.info('\n'+"<-----Instructions Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            return res
 
-# keccak = sha3.keccak_256()
+ 
 
-# priv = SigningKey.generate(curve=SECP256k1)
-# pub = priv.get_verifying_key().to_string()
-
-# keccak.update(pub)
-# address = keccak.hexdigest()[24:]
-
-# print("Private key:", priv.to_string().hex())
-# print("Public key: ", pub.hex())
-# print("Address:     0x" + address)
-
-
+if __name__ == '__main__':
+    body = {
+        "from":"0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3",
+        "to":"0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3",
+        "symbol":"ETH",
+        "amount":0.00001
+    }
+    r = HttpUtils.post_instructions("Transfer",body,"ETH-RINKEBY",["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"])

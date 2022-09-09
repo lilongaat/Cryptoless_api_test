@@ -1,0 +1,30 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:84 2022-09-09 14:11:33.828234 | 
+<-----balance----->
+Url:https://api.etherscan.io/api?module=account&action=balance&address=0x0d0707963952f2fba59dd06f2b425ace40b492fe&tag=latest&apikey=UDIG7EZI6J2VBUZIT6AAKXAKTVRQ64J2CF
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:86 2022-09-09 14:11:33.828234 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "4841000914697646479345"}
+[32mINFO    [0m Common.Graphql:Graphql.py:33 2022-09-09 14:11:33.828234 | 
+<-----balance----->
+Url:http://18.162.150.113:14100/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getAccountByAddress(address:\\\"0x0d0707963952f2fba59dd06f2b425ace40b492fe\\\",coinId:\\\"ETH\\\"){blockHash blockNumber address time amount coinId}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:35 2022-09-09 14:11:33.828234 | 
+<-----balance response----->
+
+Body:{"data": {"getAccountByAddress": {"blockHash": "0xa9742999a5e3cc7d78eb952d255d4dcdd1b58fb05112859ff506aa42c097697b", "blockNumber": 15501237, "address": "0x0d0707963952f2fba59dd06f2b425ace40b492fe", "time": "1662704485000", "amount": "4841000914697646479345", "coinId": "ETH"}}}
+[32mINFO    [0m Common.Http:Http.py:198 2022-09-09 14:11:33.828234 | 
+<-----Holders----->
+Url:https://api.cryptoless.net/cryptocurrencies/holders?address=0x0d0707963952f2fba59dd06f2b425ace40b492fe&networkCode=ETH&symbol=ETH
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweGU4YzU0YjkzYTRlZDBmM2UxY2FkMDVjMDQzZmQzY2U0MjUwNTExNzY4MGY4NWViMmViMzAzZjQ5ZjNhMGFmYjU1OWExOWQxNDg2OTI1YTM0YzFmYTMxNWYzMzhjYTRhNGM2NzY0YjNmNjhiODMxY2VkMmZlNGUxOGVkMWVkNTMwMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNDE0NDU2MDhcbklzc3VlZCBBdDogVGh1LCAyNSBBdWcgMjAyMiAxMTozMjoyMCBHTVRcbkV4cGlyYXRpb24gVGltZTogTW9uLCAyNSBBdWcgMjA0MiAxMTozMjoyMCBHTVQifQ=="}
+[32mINFO    [0m Common.Http:Http.py:201 2022-09-09 14:11:33.828234 | 
+<-----Query Holders Response----->
+[{"address":"0x0D0707963952f2fBA59dD06f2b425ace40b492Fe","createdTime":"2022-08-26T11:01:52.000Z","id":"1563119530111643650","networkCode":"ETH","quantity":"4842.491797215641787305","symbol":"ETH","updatedTime":"2022-09-09T06:16:38.000Z"}]

@@ -374,5 +374,5 @@ class Test_Enhanced_API_nft:
             assert res.status_code == 200
 
 if __name__ == '__main__':
-    pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Serve/Test_Enhanced_API/test_enhanced_api_success.py::Test_Enhanced_API_tokenInfo",'--alluredir=Report/a'])
+    pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Serve/Test_Enhanced_API/test_enhanced_api_success.py",'--alluredir=Report/a'])
     os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/a')

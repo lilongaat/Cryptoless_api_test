@@ -1,0 +1,3 @@
+2022-08-22 18:46:30.206 | ERROR    | Common.Http:post_safe_activation:120 - 
+400
+<-----Safe Account activation Response Error----->{"code":2400000,"message":"INTERNAL: Returned error: transaction underpriced"}

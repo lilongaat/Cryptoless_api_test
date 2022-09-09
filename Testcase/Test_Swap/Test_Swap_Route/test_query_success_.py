@@ -29,10 +29,10 @@ class Test_swap_success_matic:
             res = Http.HttpUtils.get_swap_route(networkCode,from_coin,to_coin,str(amount))
             assert res.status_code == 200
             pytest_check.equal(res.json()["networkCode"],networkCode,'networkCode check error!')
-            pytest_check.equal(res.json()["from"],from_coin,'networkCode check error!')
-            pytest_check.equal(res.json()["to"],to_coin,'networkCode check error!')
-            pytest_check.equal(float(res.json()["fromAmount"]),amount,'networkCode check error!')
-            pytest_check.greater(float(res.json()["toAmount"]),0,'networkCode check error!')
+            pytest_check.equal(res.json()["from"],from_coin,'from_coin check error!')
+            pytest_check.equal(res.json()["to"],to_coin,'to_coin check error!')
+            pytest_check.equal(float(res.json()["fromAmount"]),amount,'fromAmount check error!')
+            pytest_check.greater(float(res.json()["toAmount"]),0,'toAmount check error!')
 
 if __name__ == '__main__':
     path = os.path.abspath(__file__) + ""

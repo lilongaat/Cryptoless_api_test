@@ -297,7 +297,7 @@ class Test_transfers_success_matic:
         # 测试
         # ("正常转账(自己转自己)!",["f4e19e0bcb5ce78fcc7ca918bd6ef8248a5a832fa532c56727bef5473ea5e6c9"],["028daaa4515f3b7aa4b9842d76bfd620f0a915143324761e35ce5ecd846219b28d"],"MATIC","MATIC","0xa402336EfECc8D644CBAaA9633d7d02B7D9d585C","0xa402336EfECc8D644CBAaA9633d7d02B7D9d585C",Conf.Config.random_amount(6)),
         # ("正常转账maximum(自己转自己)!",["f4e19e0bcb5ce78fcc7ca918bd6ef8248a5a832fa532c56727bef5473ea5e6c9"],["028daaa4515f3b7aa4b9842d76bfd620f0a915143324761e35ce5ecd846219b28d"],"MATIC","MATIC","0xa402336EfECc8D644CBAaA9633d7d02B7D9d585C","0xa402336EfECc8D644CBAaA9633d7d02B7D9d585C","maximum"),
-        ("正常转账!",["f4e19e0bcb5ce78fcc7ca918bd6ef8248a5a832fa532c56727bef5473ea5e6c9"],["028daaa4515f3b7aa4b9842d76bfd620f0a915143324761e35ce5ecd846219b28d"],"MATIC","MATIC","0xa402336EfECc8D644CBAaA9633d7d02B7D9d585C","0xc78D5E7212484B01857B702B7895e16dB442CA2e",Conf.Config.random_amount(6)),
+        ("正常转账!",["f4e19e0bcb5ce78fcc7ca918bd6ef8248a5a832fa532c56727bef5473ea5e6c9"],["028daaa4515f3b7aa4b9842d76bfd620f0a915143324761e35ce5ecd846219b28d"],"MATIC","MATIC","0xa402336EfECc8D644CBAaA9633d7d02B7D9d585C","0x10f564F105Ba1DeC06087FE09329959dbD6b862D","0.5"),
         # ("正常转账maximum!",["f4e19e0bcb5ce78fcc7ca918bd6ef8248a5a832fa532c56727bef5473ea5e6c9"],["028daaa4515f3b7aa4b9842d76bfd620f0a915143324761e35ce5ecd846219b28d"],"MATIC","MATIC","0xa402336EfECc8D644CBAaA9633d7d02B7D9d585C","0xc78D5E7212484B01857B702B7895e16dB442CA2e","maximum"),
     ]
 
@@ -310,70 +310,68 @@ class Test_transfers_success_matic:
             holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
             assert holders.status_code == 200
 
-        with allure.step("构建交易——transfers"):
+        with allure.step("构建交易——instructions"):
+            body = {
+                "from":from_add,
+                "to":to_add,
+                "symbol":symbol,
+                "amount":amount
+            }
             transactionParams = {
                 "memo":"hahahhahahhahahhaahhahhahhahahaha@@==这是一段描述！！====@@hahahhahahhahahhaahhahhahhahahaha"
             }
-            res = Http.HttpUtils.post_transfers(networkCode,symbol,PublicKeys,from_add,to_add,amount,transactionParams)
-            assert res[0].status_code == 200
+            transfer = Http.HttpUtils.post_instructions("Transfer",body,networkCode,PublicKeys,transactionParams)
+            assert transfer.status_code == 200
+
+            t_estimatedFee = transfer.json()['_embedded']['transactions'][0]['estimatedFee']
+            t_hash = transfer.json()['_embedded']['transactions'][0]['hash']
+            t_id = transfer.json()['_embedded']['transactions'][0]['id']
+            t_networkCode = transfer.json()['_embedded']['transactions'][0]['networkCode']
+            t_requiredSignings = transfer.json()['_embedded']['transactions'][0]['requiredSignings']
+            t_serialized = transfer.json()['_embedded']['transactions'][0]['serialized']
+            t_status = transfer.json()['_embedded']['transactions'][0]['status']
+            ID = transfer.json()['id']
+            body_amount = transfer.json()["body"]["amount"]
 
         with allure.step("签名交易——sign"):
-            signature = Conf.Config.sign(privatekey[0],res[5][0]['hash'])
+            signature = Conf.Config.sign(privatekey[0],t_requiredSignings[0]['hash'])
             signatures = [
                 {
-                    "hash":res[5][0]['hash'],
-                    "publickey":res[5][0]['publicKeys'][0],
+                    "hash":t_requiredSignings[0]['hash'],
+                    "publickey":t_requiredSignings[0]['publicKeys'][0],
                     "signature":signature
                 }
             ]
-            sig = Http.HttpUtils.post_sign_transfers(res[1],res[2],res[3],res[4],res[5],res[6],signatures)
+            sig = Http.HttpUtils.post_sign_transfers(t_estimatedFee,t_hash,t_id,t_networkCode,t_requiredSignings,t_serialized,signatures)
             assert sig.status_code == 200
 
         with allure.step("广播交易——send"):
-            send = Http.HttpUtils.post_send_transfers(res[3])
+            send = Http.HttpUtils.post_send_transfers(t_id)
             assert send.status_code == 200
 
-        with allure.step("查询交易记录——transfers by id,交易状态变为:1"):
+        with allure.step("查询交易记录——transfers by ID,交易状态变为:1"):
             # 循环查10次交易记录
-            for i in range(10):
+            for i in range(1):
                 sleep(20)
                 logger.info("<----查询次数:第" + str(i+1) + "次---->")
-                transfers = Http.HttpUtils.get_transactions_byid(res[8])
-                if (transfers.json()["_embedded"]["transactions"][0]["status"] == "PENDING"):
-                    assert transfers.json()["status"] == -1
-                elif (transfers.json()["_embedded"]["transactions"][0]["status"] == "SENT"):
-                    assert transfers.json()["status"] == -1
-                elif (transfers.json()["_embedded"]["transactions"][0]["status"] == "SETTLED"):
-                    assert transfers.json()["status"] == 1
-                    break
+                t = Http.HttpUtils.get_transactions_byid(ID)
+                t_status = t.json()["_embedded"]["transactions"][0]["status"] #交易状态
+                if (t_status == "PENDING" or t_status == "SENT"):
+                    assert t.json()["status"] == -1
+                elif (t_status == "SETTLED"):
+                    assert t.json()["status"] == 1
+                    break             
 
         with allure.step("查询关联交易记录——balance-transactions by hash"):
             sleep(15)
             transcations = Http.HttpUtils.get_transactions_byhash(send.json()["hash"])
-            assert transcations.status_code == 200
-
-            
+   
             if (from_add == to_add):
-                assert len(transcations.json()) == 1 # 自己转自己一条交易记录
-                assert transcations.json()[0]["type"] == -1 # type 是 -1
-                # assert transcations.json()[0]["address"] == res[0].json()["from"] # address 是转出地址
-                # assert transcations.json()[0]["amount"] ==  res[0].json()["amount"] + Conf.Config.amount_decimals(send.json()['estimatedFee'],18)
+                assert len(transcations.json()) == 3 # 自己转自己3条交易记录
             else:
-                assert len(transcations.json()) == 2
-                # if(transcations.json()[0]["type"] == -1): # 判断第一个交易为转出地址
-                #     assert transcations.json()[0]["address"] == res[0].json()["from"]
-                #     # assert transcations.json()[0]["amount"] ==  res[0].json()["amount"] + Conf.Config.amount_decimals(send.json()['estimatedFee'],18)
+                assert len(transcations.json()) == 4 # 转其他地址4条交易记录
 
-                #     assert transcations.json()[1]["address"] == res[0].json()["to"]
-                #     assert transcations.json()[1]["amount"] ==  res[0].json()["amount"]
-
-                # else:
-                #     assert transcations.json()[0]["address"] == res[0].json()["to"]
-                #     assert transcations.json()[0]["amount"] ==  res[0].json()["amount"]
-
-                #     assert transcations.json()[1]["address"] == res[0].json()["from"]
-                #     # assert transcations.json()[1]["amount"] ==  res[0].json()["amount"] + Conf.Config.amount_decimals(send.json()['estimatedFee'],18)
-
-        with allure.step("查询From账户holders信息——holders"):
-            holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
-            assert holders.status_code == 200
+if __name__ == '__main__':
+    path = os.path.abspath(__file__) + "::Test_transfers_success_matic"
+    pytest.main(["-vs", path,'--alluredir=Report/Allure'])
+    # os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

@@ -115,9 +115,9 @@ class Test_transfers_success_iris_safe:
     test_data = [
         # 测试
         ("正常转账(自己转自己)!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["026c37fcad8790e5a2b2e82e788fe36b68c0cfb9dc040b471a8a72f86a84d5fe18","033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p",Conf.Config.random_amount(4)),
-        ("正常转账maximum(自己转自己)!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["026c37fcad8790e5a2b2e82e788fe36b68c0cfb9dc040b471a8a72f86a84d5fe18","033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p","maximum"),
-        ("正常转账!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["026c37fcad8790e5a2b2e82e788fe36b68c0cfb9dc040b471a8a72f86a84d5fe18","033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p","iaa1jlsefxjczxg23gldzt4qcuxhddgeu4757f2pmq",Conf.Config.random_amount(4)),
-        ("正常转账maximum!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["026c37fcad8790e5a2b2e82e788fe36b68c0cfb9dc040b471a8a72f86a84d5fe18","033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p","iaa1jlsefxjczxg23gldzt4qcuxhddgeu4757f2pmq","maximum"),
+        # ("正常转账maximum(自己转自己)!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["026c37fcad8790e5a2b2e82e788fe36b68c0cfb9dc040b471a8a72f86a84d5fe18","033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p","maximum"),
+        # ("正常转账!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["026c37fcad8790e5a2b2e82e788fe36b68c0cfb9dc040b471a8a72f86a84d5fe18","033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p","iaa1jlsefxjczxg23gldzt4qcuxhddgeu4757f2pmq",Conf.Config.random_amount(4)),
+        # ("正常转账maximum!",["49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85"],["026c37fcad8790e5a2b2e82e788fe36b68c0cfb9dc040b471a8a72f86a84d5fe18","033511e38fd373c4515ada4826616146b4c3def47da9907b59d9555b19134dd683"],"IRIS","IRIS","iaa16gtpwuqg9lerp0n39wj4xgmwyawt69p5gq9h8p","iaa1jlsefxjczxg23gldzt4qcuxhddgeu4757f2pmq","maximum"),
     ]
     # test_data = [
     #     # 生产
@@ -134,10 +134,6 @@ class Test_transfers_success_iris_safe:
 
         with allure.step("查询From账户holders信息——holders"):
             holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
-            assert holders.status_code == 200
-
-        with allure.step("查询to账户holders信息——holders"):
-            holders = Http.HttpUtils.get_holders(networkCode,symbol,to_add)
             assert holders.status_code == 200
 
         with allure.step("构建交易——transfers"):
@@ -214,11 +210,8 @@ class Test_transfers_success_iris_safe:
             holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
             assert holders.status_code == 200
 
-        with allure.step("查询to账户holders信息——holders"):
-            holders = Http.HttpUtils.get_holders(networkCode,symbol,to_add)
-            assert holders.status_code == 200
 
 if __name__ == '__main__':
-    path = os.path.abspath(__file__) + ""
+    path = os.path.abspath(__file__) + "::Test_transfers_success_iris_safe"
     pytest.main(["-vs", path,'--alluredir=Report/Allure'])
     os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

@@ -1,8 +1,5 @@
 import os
 import configparser
-from pip import main
-
-import pytest
 
 config_path = os.path.join(os.path.split(os.path.realpath(__file__))[0], 'config.ini')
 config = configparser.ConfigParser()#调用外部的读取配置文件的方法

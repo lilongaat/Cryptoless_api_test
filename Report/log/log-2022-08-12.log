@@ -1,0 +1,585 @@
+2022-08-12 14:09:30.228 | ERROR    | Common.Httpnft:get_collection_nft_list:76 - 404
+<-----Query Collection NFT List Error----->404, status found
+2022-08-12 14:11:43.056 | ERROR    | Common.Httpnft:get_collection_nft_list:76 - 404
+<-----Query Collection NFT List Error----->404, status found
+2022-08-12 14:12:57.040 | ERROR    | Common.Httpnft:get_collection_nft_list:76 - 404
+<-----Query Collection NFT List Error----->404, status found
+2022-08-12 14:16:07.523 | ERROR    | Common.Httpnft:get_collection_nft_list:76 - 404
+<-----Query Collection NFT List Error----->404, status found
+2022-08-12 14:16:12.688 | ERROR    | Common.Httpnft:get_collection_nft_list:76 - 404
+<-----Query Collection NFT List Error----->404, status found
+2022-08-12 14:17:58.876 | ERROR    | Common.Httpnft:get_collection_nft_list:76 - 404
+<-----Query Collection NFT List Error----->404, status found
+2022-08-12 14:18:03.362 | ERROR    | Common.Httpnft:get_collection_nft_list:76 - 404
+<-----Query Collection NFT List Error----->404, status found
+2022-08-12 14:19:47.732 | ERROR    | Common.Httpnft:get_collection_nft_list:76 - 404
+<-----Query Collection NFT List Error----->404, status found
+2022-08-12 14:19:53.775 | ERROR    | Common.Httpnft:get_collection_nft_list:76 - 404
+<-----Query Collection NFT List Error----->404, status found
+2022-08-12 14:28:01.358 | ERROR    | Common.Httpnft:get_collection_nft_list:76 - 404
+<-----Query Collection NFT List Error----->404, status found
+2022-08-12 14:28:05.327 | ERROR    | Common.Httpnft:get_collection_nft_list:76 - 404
+<-----Query Collection NFT List Error----->404, status found
+2022-08-12 14:39:02.717 | ERROR    | Common.Httpnft:get_collection_nft_list:76 - 404
+<-----Query Collection NFT List Error----->404, status found
+2022-08-12 14:39:06.363 | ERROR    | Common.Httpnft:get_collection_nft_list:76 - 404
+<-----Query Collection NFT List Error----->404, status found
+2022-08-12 16:24:42.416 | ERROR    | test_nft_:test_collection:72 - {'address_genie': '0x23581767a106ae21c074b2276d25e5c3e136a68b', 'slug_genie': 'proof-moonbirds', 'name_genie': <built-in method replace of str object at 0x1122d1d30>, 'symbol_genie': 'MOONBIRD'}
+2022-08-12 16:28:34.733 | ERROR    | test_nft_:test_collection:72 - {'address_genie': '0x23581767a106ae21c074b2276d25e5c3e136a68b', 'slug_genie': 'proof-moonbirds', 'symbol_genie': 'MOONBIRD'}
+2022-08-12 16:28:36.257 | ERROR    | test_nft_:test_collection:72 - {'address_genie': '0xd1258db6ac08eb0e625b75b371c023da478e94a9', 'slug_genie': 'digidaigaku', 'symbol_genie': 'DIDA'}
+2022-08-12 16:29:00.020 | ERROR    | test_nft_:test_collection:72 - {'address_genie': '0x23581767a106ae21c074b2276d25e5c3e136a68b', 'slug_genie': 'proof-moonbirds', 'name_genie': <built-in method replace of str object at 0x1107a1230>, 'symbol_genie': 'MOONBIRD'}
+2022-08-12 16:29:01.560 | ERROR    | test_nft_:test_collection:72 - {'address_genie': '0xd1258db6ac08eb0e625b75b371c023da478e94a9', 'slug_genie': 'digidaigaku', 'name_genie': <built-in method replace of str object at 0x11079e0f0>, 'symbol_genie': 'DIDA'}
+2022-08-12 16:29:33.502 | ERROR    | test_nft_:test_collection:72 - Moonbirds
+2022-08-12 16:29:33.502 | ERROR    | test_nft_:test_collection:73 - {'address_genie': '0x23581767a106ae21c074b2276d25e5c3e136a68b', 'slug_genie': 'proof-moonbirds', 'name_genie': <built-in method replace of str object at 0x107ef72f0>, 'symbol_genie': 'MOONBIRD'}
+2022-08-12 16:29:35.529 | ERROR    | test_nft_:test_collection:72 - DigiDaigaku
+2022-08-12 16:29:35.529 | ERROR    | test_nft_:test_collection:73 - {'address_genie': '0xd1258db6ac08eb0e625b75b371c023da478e94a9', 'slug_genie': 'digidaigaku', 'name_genie': <built-in method replace of str object at 0x107f00bb0>, 'symbol_genie': 'DIDA'}
+2022-08-12 16:30:22.158 | ERROR    | test_nft_:test_collection:73 - Bored Ape Yacht Club
+2022-08-12 16:30:22.159 | ERROR    | test_nft_:test_collection:74 - {'address_genie': '0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d', 'slug_genie': 'boredapeyachtclub', 'name_genie': <built-in method replace of str object at 0x104223f80>, 'symbol_genie': 'BAYC'}
+2022-08-12 16:30:59.842 | ERROR    | test_nft_:test_collection:73 - <built-in method replace of str object at 0x10b1b7bc0>
+2022-08-12 16:30:59.842 | ERROR    | test_nft_:test_collection:74 - {'address_genie': '0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d', 'slug_genie': 'boredapeyachtclub', 'name_genie': <built-in method replace of str object at 0x10b1b7b20>, 'symbol_genie': 'BAYC'}
+2022-08-12 16:32:05.189 | ERROR    | test_nft_:test_collection:73 - Bored Ape Yacht Club
+2022-08-12 16:32:05.190 | ERROR    | test_nft_:test_collection:74 - {'address_genie': '0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d', 'slug_genie': 'boredapeyachtclub', 'name_genie': 'BoredApeYachtClub', 'symbol_genie': 'BAYC'}
+2022-08-12 16:33:10.201 | ERROR    | test_nft_:test_collection:75 - {'address_genie': '0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d', 'slug_genie': 'boredapeyachtclub', 'name_genie': 'BoredApeYachtClub', 'symbol_genie': 'BAYC', 'standard_genie': 'erc721', 'description_genie': 'The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs— unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details.'}
+2022-08-12 16:45:13.184 | ERROR    | test_nft_:test_collection:66 - {'address_genie': '0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d', 'slug_genie': 'boredapeyachtclub', 'name_genie': 'BoredApeYachtClub', 'symbol_genie': 'BAYC', 'standard_genie': 'erc721', 'description_genie': 'The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs— unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details.', 'external_url_genie': 'http://www.boredapeyachtclub.com/', 'image_url_genie': 'https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120', 'banner_image_url_genie': 'https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500', 'verified_genie': True, 'stats_genie': {'one_day_volume_genie': 88.88, 'one_day_change_genie': -0.6822196002717295, 'one_day_sales_genie': 1, 'thirty_day_volume_genie': 12725.024410210002, 'thirty_day_change_genie': -0.6473665945107406, 'thirty_day_sales_genie': 133, 'thirty_day_average_price_genie': 95.67687526473686, 'total_volume_genie': 646884.0317225809, 'total_sales_genie': 26905, 'average_price_genie': 24.043264513011742, 'total_supply_genie': 10000, 'num_owners_genie': 6449, 'market_cap_genie': 912025.2039999999, 'floor_price_genie': 78.69}}
+2022-08-12 16:46:36.958 | ERROR    | test_nft_:test_collection:67 - {"address_genie": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d", "slug_genie": "boredapeyachtclub", "name_genie": "BoredApeYachtClub", "symbol_genie": "BAYC", "standard_genie": "erc721", "description_genie": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details.", "external_url_genie": "http://www.boredapeyachtclub.com/", "image_url_genie": "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120", "banner_image_url_genie": "https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500", "verified_genie": true, "stats_genie": {"one_day_volume_genie": 88.88, "one_day_change_genie": -0.6822196002717295, "one_day_sales_genie": 1, "thirty_day_volume_genie": 12725.024410210002, "thirty_day_change_genie": -0.6473665945107406, "thirty_day_sales_genie": 133, "thirty_day_average_price_genie": 95.67687526473686, "total_volume_genie": 646884.0317225809, "total_sales_genie": 26905, "average_price_genie": 24.043264513011742, "total_supply_genie": 10000, "num_owners_genie": 6449, "market_cap_genie": 912025.2039999999, "floor_price_genie": 78.69}}
+2022-08-12 16:50:47.787 | ERROR    | test_nft_:test_collection:72 - {"address_genie": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d", "slug_genie": "boredapeyachtclub", "name_genie": "BoredApeYachtClub", "symbol_genie": "BAYC", "standard_genie": "erc721", "description_genie": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details.", "external_url_genie": "http://www.boredapeyachtclub.com/", "image_url_genie": "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120", "banner_image_url_genie": "https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500", "verified_genie": true, "stats_genie": {"one_day_volume_genie": 88.88, "one_day_change_genie": -0.6822196002717295, "one_day_sales_genie": 1, "one_day_average_price_genie": 88.88, "seven_day_volume_genie": 2280.06301, "seven_day_change_genie": -0.20099156379393185, "seven_day_sales_genie": 25, "seven_day_average_price_genie": 91.2025204, "thirty_day_volume_genie": 12725.024410210002, "thirty_day_change_genie": -0.6473665945107406, "thirty_day_sales_genie": 133, "thirty_day_average_price_genie": 95.67687526473686, "total_volume_genie": 646884.0317225809, "total_sales_genie": 26905, "average_price_genie": 24.043264513011742, "total_supply_genie": 10000, "num_owners_genie": 6449, "market_cap_genie": 912025.2039999999, "floor_price_genie": 78.69}}
+2022-08-12 16:52:53.479 | ERROR    | test_nft_:test_collection:72 - <class 'dict'>
+2022-08-12 16:52:53.480 | ERROR    | test_nft_:test_collection:73 - {"address_genie": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d", "slug_genie": "boredapeyachtclub", "name_genie": "BoredApeYachtClub", "symbol_genie": "BAYC", "standard_genie": "erc721", "description_genie": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details.", "external_url_genie": "http://www.boredapeyachtclub.com/", "image_url_genie": "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120", "banner_image_url_genie": "https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500", "verified_genie": true, "stats_genie": {"one_day_volume_genie": 88.88, "one_day_change_genie": -0.6822196002717295, "one_day_sales_genie": 1, "one_day_average_price_genie": 88.88, "seven_day_volume_genie": 2280.06301, "seven_day_change_genie": -0.20099156379393185, "seven_day_sales_genie": 25, "seven_day_average_price_genie": 91.2025204, "thirty_day_volume_genie": 12725.024410210002, "thirty_day_change_genie": -0.6473665945107406, "thirty_day_sales_genie": 133, "thirty_day_average_price_genie": 95.67687526473686, "total_volume_genie": 646884.0317225809, "total_sales_genie": 26905, "average_price_genie": 24.043264513011742, "total_supply_genie": 10000, "num_owners_genie": 6449, "market_cap_genie": 912025.2039999999, "floor_price_genie": 78.69}}
+2022-08-12 16:53:11.407 | ERROR    | test_nft_:test_collection:72 - 11
+2022-08-12 16:53:11.408 | ERROR    | test_nft_:test_collection:73 - {"address_genie": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d", "slug_genie": "boredapeyachtclub", "name_genie": "BoredApeYachtClub", "symbol_genie": "BAYC", "standard_genie": "erc721", "description_genie": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details.", "external_url_genie": "http://www.boredapeyachtclub.com/", "image_url_genie": "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120", "banner_image_url_genie": "https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500", "verified_genie": true, "stats_genie": {"one_day_volume_genie": 88.88, "one_day_change_genie": -0.6822196002717295, "one_day_sales_genie": 1, "one_day_average_price_genie": 88.88, "seven_day_volume_genie": 2280.06301, "seven_day_change_genie": -0.20099156379393185, "seven_day_sales_genie": 25, "seven_day_average_price_genie": 91.2025204, "thirty_day_volume_genie": 12725.024410210002, "thirty_day_change_genie": -0.6473665945107406, "thirty_day_sales_genie": 133, "thirty_day_average_price_genie": 95.67687526473686, "total_volume_genie": 646884.0317225809, "total_sales_genie": 26905, "average_price_genie": 24.043264513011742, "total_supply_genie": 10000, "num_owners_genie": 6449, "market_cap_genie": 912025.2039999999, "floor_price_genie": 78.69}}
+2022-08-12 16:58:18.405 | ERROR    | test_nft_:test_collection:72 - 11
+2022-08-12 16:58:18.406 | ERROR    | test_nft_:test_collection:73 - {"address_genie": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d", "slug_genie": "boredapeyachtclub", "name_genie": "BoredApeYachtClub", "symbol_genie": "BAYC", "standard_genie": "erc721", "description_genie": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details.", "external_url_genie": "http://www.boredapeyachtclub.com/", "image_url_genie": "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120", "banner_image_url_genie": "https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500", "verified_genie": true, "stats_genie": {"one_day_volume_genie": 88.88, "one_day_change_genie": -0.6822196002717295, "one_day_sales_genie": 1, "one_day_average_price_genie": 88.88, "seven_day_volume_genie": 2280.06301, "seven_day_change_genie": -0.20099156379393185, "seven_day_sales_genie": 25, "seven_day_average_price_genie": 91.2025204, "thirty_day_volume_genie": 12725.024410210002, "thirty_day_change_genie": -0.6473665945107406, "thirty_day_sales_genie": 133, "thirty_day_average_price_genie": 95.67687526473686, "total_volume_genie": 646884.0317225809, "total_sales_genie": 26905, "average_price_genie": 24.043264513011742, "total_supply_genie": 10000, "num_owners_genie": 6449, "market_cap_genie": 912025.2039999999, "floor_price_genie": 78.69}}
+2022-08-12 17:01:48.240 | ERROR    | test_nft_:test_collection:72 - 11
+2022-08-12 17:01:48.240 | ERROR    | test_nft_:test_collection:73 - {"address_genie": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d", "slug_genie": "boredapeyachtclub", "name_genie": "BoredApeYachtClub", "symbol_genie": "BAYC", "standard_genie": "erc721", "description_genie": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details.", "external_url_genie": "http://www.boredapeyachtclub.com/", "image_url_genie": "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120", "banner_image_url_genie": "https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500", "verified_genie": true, "stats_genie": {"one_day_volume_genie": 88.88, "one_day_change_genie": -0.6822196002717295, "one_day_sales_genie": 1, "one_day_average_price_genie": 88.88, "seven_day_volume_genie": 2280.06301, "seven_day_change_genie": -0.20099156379393185, "seven_day_sales_genie": 25, "seven_day_average_price_genie": 91.2025204, "thirty_day_volume_genie": 12725.024410210002, "thirty_day_change_genie": -0.6473665945107406, "thirty_day_sales_genie": 133, "thirty_day_average_price_genie": 95.67687526473686, "total_volume_genie": 646884.0317225809, "total_sales_genie": 26905, "average_price_genie": 24.043264513011742, "total_supply_genie": 10000, "num_owners_genie": 6449, "market_cap_genie": 912025.2039999999, "floor_price_genie": 78.69}}
+2022-08-12 17:01:48.246 | ERROR    | test_nft_:test_collection:76 - address_genie
+2022-08-12 17:01:48.247 | ERROR    | test_nft_:test_collection:77 - 0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d
+2022-08-12 17:01:48.247 | ERROR    | test_nft_:test_collection:76 - slug_genie
+2022-08-12 17:01:48.247 | ERROR    | test_nft_:test_collection:77 - boredapeyachtclub
+2022-08-12 17:01:48.247 | ERROR    | test_nft_:test_collection:76 - name_genie
+2022-08-12 17:01:48.248 | ERROR    | test_nft_:test_collection:77 - BoredApeYachtClub
+2022-08-12 17:01:48.248 | ERROR    | test_nft_:test_collection:76 - symbol_genie
+2022-08-12 17:01:48.248 | ERROR    | test_nft_:test_collection:77 - BAYC
+2022-08-12 17:01:48.249 | ERROR    | test_nft_:test_collection:76 - standard_genie
+2022-08-12 17:01:48.249 | ERROR    | test_nft_:test_collection:77 - erc721
+2022-08-12 17:01:48.249 | ERROR    | test_nft_:test_collection:76 - description_genie
+2022-08-12 17:01:48.249 | ERROR    | test_nft_:test_collection:77 - The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs— unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details.
+2022-08-12 17:01:48.250 | ERROR    | test_nft_:test_collection:76 - external_url_genie
+2022-08-12 17:01:48.250 | ERROR    | test_nft_:test_collection:77 - http://www.boredapeyachtclub.com/
+2022-08-12 17:01:48.250 | ERROR    | test_nft_:test_collection:76 - image_url_genie
+2022-08-12 17:01:48.252 | ERROR    | test_nft_:test_collection:77 - https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120
+2022-08-12 17:01:48.253 | ERROR    | test_nft_:test_collection:76 - banner_image_url_genie
+2022-08-12 17:01:48.253 | ERROR    | test_nft_:test_collection:77 - https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500
+2022-08-12 17:01:48.253 | ERROR    | test_nft_:test_collection:76 - verified_genie
+2022-08-12 17:01:48.253 | ERROR    | test_nft_:test_collection:77 - True
+2022-08-12 17:01:48.254 | ERROR    | test_nft_:test_collection:76 - stats_genie
+2022-08-12 17:01:48.255 | ERROR    | test_nft_:test_collection:77 - {'one_day_volume_genie': 88.88, 'one_day_change_genie': -0.6822196002717295, 'one_day_sales_genie': 1, 'one_day_average_price_genie': 88.88, 'seven_day_volume_genie': 2280.06301, 'seven_day_change_genie': -0.20099156379393185, 'seven_day_sales_genie': 25, 'seven_day_average_price_genie': 91.2025204, 'thirty_day_volume_genie': 12725.024410210002, 'thirty_day_change_genie': -0.6473665945107406, 'thirty_day_sales_genie': 133, 'thirty_day_average_price_genie': 95.67687526473686, 'total_volume_genie': 646884.0317225809, 'total_sales_genie': 26905, 'average_price_genie': 24.043264513011742, 'total_supply_genie': 10000, 'num_owners_genie': 6449, 'market_cap_genie': 912025.2039999999, 'floor_price_genie': 78.69}
+2022-08-12 17:05:17.244 | ERROR    | test_nft_:test_collection:72 - 11
+2022-08-12 17:05:17.244 | ERROR    | test_nft_:test_collection:73 - {"address": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d", "slug": "boredapeyachtclub", "name": "BoredApeYachtClub", "symbol": "BAYC", "standard": "erc721", "description": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details.", "external_url": "http://www.boredapeyachtclub.com/", "image_url": "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120", "banner_image_url": "https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500", "verified": true, "stats": {"one_day_volume": 88.88, "one_day_change": -0.6822196002717295, "one_day_sales": 1, "one_day_average_price": 88.88, "seven_day_volume": 2280.06301, "seven_day_change": -0.20099156379393185, "seven_day_sales": 25, "seven_day_average_price": 91.2025204, "thirty_day_volume": 12725.024410210002, "thirty_day_change": -0.6473665945107406, "thirty_day_sales": 133, "thirty_day_average_price": 95.67687526473686, "total_volume": 646884.0317225809, "total_sales": 26905, "average_price": 24.043264513011742, "total_supply": 10000, "num_owners": 6449, "market_cap": 912025.2039999999, "floor_price": 78.69}}
+2022-08-12 17:05:17.246 | ERROR    | test_nft_:test_collection:76 - address
+2022-08-12 17:05:17.246 | ERROR    | test_nft_:test_collection:77 - 0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d
+2022-08-12 17:05:17.247 | ERROR    | test_nft_:test_collection:76 - slug
+2022-08-12 17:05:17.247 | ERROR    | test_nft_:test_collection:77 - boredapeyachtclub
+2022-08-12 17:05:17.248 | ERROR    | test_nft_:test_collection:76 - name
+2022-08-12 17:05:17.248 | ERROR    | test_nft_:test_collection:77 - BoredApeYachtClub
+2022-08-12 17:05:17.248 | ERROR    | test_nft_:test_collection:76 - symbol
+2022-08-12 17:05:17.249 | ERROR    | test_nft_:test_collection:77 - BAYC
+2022-08-12 17:05:17.253 | ERROR    | test_nft_:test_collection:76 - standard
+2022-08-12 17:05:17.253 | ERROR    | test_nft_:test_collection:77 - erc721
+2022-08-12 17:05:17.253 | ERROR    | test_nft_:test_collection:76 - description
+2022-08-12 17:05:17.253 | ERROR    | test_nft_:test_collection:77 - The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs— unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details.
+2022-08-12 17:05:17.257 | ERROR    | test_nft_:test_collection:76 - external_url
+2022-08-12 17:05:17.258 | ERROR    | test_nft_:test_collection:77 - http://www.boredapeyachtclub.com/
+2022-08-12 17:05:17.258 | ERROR    | test_nft_:test_collection:76 - image_url
+2022-08-12 17:05:17.259 | ERROR    | test_nft_:test_collection:77 - https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120
+2022-08-12 17:05:17.259 | ERROR    | test_nft_:test_collection:76 - banner_image_url
+2022-08-12 17:05:17.260 | ERROR    | test_nft_:test_collection:77 - https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500
+2022-08-12 17:05:17.260 | ERROR    | test_nft_:test_collection:76 - verified
+2022-08-12 17:05:17.260 | ERROR    | test_nft_:test_collection:77 - True
+2022-08-12 17:05:17.262 | ERROR    | test_nft_:test_collection:76 - stats
+2022-08-12 17:05:17.262 | ERROR    | test_nft_:test_collection:77 - {'one_day_volume': 88.88, 'one_day_change': -0.6822196002717295, 'one_day_sales': 1, 'one_day_average_price': 88.88, 'seven_day_volume': 2280.06301, 'seven_day_change': -0.20099156379393185, 'seven_day_sales': 25, 'seven_day_average_price': 91.2025204, 'thirty_day_volume': 12725.024410210002, 'thirty_day_change': -0.6473665945107406, 'thirty_day_sales': 133, 'thirty_day_average_price': 95.67687526473686, 'total_volume': 646884.0317225809, 'total_sales': 26905, 'average_price': 24.043264513011742, 'total_supply': 10000, 'num_owners': 6449, 'market_cap': 912025.2039999999, 'floor_price': 78.69}
+2022-08-12 17:11:57.039 | ERROR    | test_nft_:test_collection:83 - []
+2022-08-12 17:11:57.040 | ERROR    | test_nft_:test_collection:83 - [{'slug': '', 'slug_genie': 'boredapeyachtclub'}]
+2022-08-12 17:11:57.040 | ERROR    | test_nft_:test_collection:83 - [{'slug': '', 'slug_genie': 'boredapeyachtclub'}]
+2022-08-12 17:11:57.041 | ERROR    | test_nft_:test_collection:83 - [{'slug': '', 'slug_genie': 'boredapeyachtclub'}]
+2022-08-12 17:11:57.041 | ERROR    | test_nft_:test_collection:83 - [{'slug': '', 'slug_genie': 'boredapeyachtclub'}]
+2022-08-12 17:11:57.041 | ERROR    | test_nft_:test_collection:83 - [{'slug': '', 'slug_genie': 'boredapeyachtclub'}, {'description': '', 'description_genie': 'The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs— unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details.'}]
+2022-08-12 17:11:57.044 | ERROR    | test_nft_:test_collection:83 - [{'slug': '', 'slug_genie': 'boredapeyachtclub'}, {'description': '', 'description_genie': 'The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs— unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details.'}, {'external_url': '', 'external_url_genie': 'http://www.boredapeyachtclub.com/'}]
+2022-08-12 17:11:57.045 | ERROR    | test_nft_:test_collection:83 - [{'slug': '', 'slug_genie': 'boredapeyachtclub'}, {'description': '', 'description_genie': 'The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs— unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details.'}, {'external_url': '', 'external_url_genie': 'http://www.boredapeyachtclub.com/'}, {'image_url': '', 'image_url_genie': 'https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120'}]
+2022-08-12 17:11:57.046 | ERROR    | test_nft_:test_collection:83 - [{'slug': '', 'slug_genie': 'boredapeyachtclub'}, {'description': '', 'description_genie': 'The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs— unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details.'}, {'external_url': '', 'external_url_genie': 'http://www.boredapeyachtclub.com/'}, {'image_url': '', 'image_url_genie': 'https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120'}, {'banner_image_url': '', 'banner_image_url_genie': 'https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500'}]
+2022-08-12 17:11:57.047 | ERROR    | test_nft_:test_collection:83 - [{'slug': '', 'slug_genie': 'boredapeyachtclub'}, {'description': '', 'description_genie': 'The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs— unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details.'}, {'external_url': '', 'external_url_genie': 'http://www.boredapeyachtclub.com/'}, {'image_url': '', 'image_url_genie': 'https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120'}, {'banner_image_url': '', 'banner_image_url_genie': 'https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500'}, {'verified': False, 'verified_genie': True}]
+2022-08-12 17:11:57.049 | ERROR    | test_nft_:test_collection:77 - stats
+2022-08-12 17:11:57.049 | ERROR    | test_nft_:test_collection:78 - {'one_day_volume': 88.88, 'one_day_change': -0.6822196002717295, 'one_day_sales': 1, 'one_day_average_price': 88.88, 'seven_day_volume': 2280.06301, 'seven_day_change': -0.20099156379393185, 'seven_day_sales': 25, 'seven_day_average_price': 91.2025204, 'thirty_day_volume': 12725.024410210002, 'thirty_day_change': -0.6473665945107406, 'thirty_day_sales': 133, 'thirty_day_average_price': 95.67687526473686, 'total_volume': 646884.0317225809, 'total_sales': 26905, 'average_price': 24.043264513011742, 'total_supply': 10000, 'num_owners': 6449, 'market_cap': 912025.2039999999, 'floor_price': 78.69}
+2022-08-12 17:11:57.052 | ERROR    | test_nft_:test_collection:83 - [{'slug': '', 'slug_genie': 'boredapeyachtclub'}, {'description': '', 'description_genie': 'The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs— unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details.'}, {'external_url': '', 'external_url_genie': 'http://www.boredapeyachtclub.com/'}, {'image_url': '', 'image_url_genie': 'https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120'}, {'banner_image_url': '', 'banner_image_url_genie': 'https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500'}, {'verified': False, 'verified_genie': True}]
+2022-08-12 17:18:41.590 | ERROR    | test_nft_:test_collection:85 - []
+2022-08-12 17:18:41.592 | ERROR    | test_nft_:test_collection:85 - [{"slug": "", "slug_genie": "boredapeyachtclub"}]
+2022-08-12 17:19:37.289 | ERROR    | test_nft_:test_collection:85 - []
+2022-08-12 17:19:37.291 | ERROR    | test_nft_:test_collection:85 - [{"slug": "", "slug_genie": "boredapeyachtclub"}]
+2022-08-12 17:19:48.280 | ERROR    | test_nft_:test_collection:85 - []
+2022-08-12 17:19:48.280 | ERROR    | test_nft_:test_collection:85 - [{"slug": "", "slug_genie": "boredapeyachtclub"}]
+2022-08-12 17:19:48.281 | ERROR    | test_nft_:test_collection:85 - [{"slug": "", "slug_genie": "boredapeyachtclub"}]
+2022-08-12 17:19:48.282 | ERROR    | test_nft_:test_collection:85 - [{"slug": "", "slug_genie": "boredapeyachtclub"}]
+2022-08-12 17:19:48.283 | ERROR    | test_nft_:test_collection:85 - [{"slug": "", "slug_genie": "boredapeyachtclub"}]
+2022-08-12 17:19:48.283 | ERROR    | test_nft_:test_collection:85 - [{"slug": "", "slug_genie": "boredapeyachtclub"}, {"description": "", "description_genie": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details."}]
+2022-08-12 17:19:48.285 | ERROR    | test_nft_:test_collection:85 - [{"slug": "", "slug_genie": "boredapeyachtclub"}, {"description": "", "description_genie": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details."}, {"external_url": "", "external_url_genie": "http://www.boredapeyachtclub.com/"}]
+2022-08-12 17:19:48.285 | ERROR    | test_nft_:test_collection:85 - [{"slug": "", "slug_genie": "boredapeyachtclub"}, {"description": "", "description_genie": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details."}, {"external_url": "", "external_url_genie": "http://www.boredapeyachtclub.com/"}, {"image_url": "", "image_url_genie": "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120"}]
+2022-08-12 17:19:48.286 | ERROR    | test_nft_:test_collection:85 - [{"slug": "", "slug_genie": "boredapeyachtclub"}, {"description": "", "description_genie": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details."}, {"external_url": "", "external_url_genie": "http://www.boredapeyachtclub.com/"}, {"image_url": "", "image_url_genie": "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120"}, {"banner_image_url": "", "banner_image_url_genie": "https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500"}]
+2022-08-12 17:19:48.287 | ERROR    | test_nft_:test_collection:85 - [{"slug": "", "slug_genie": "boredapeyachtclub"}, {"description": "", "description_genie": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details."}, {"external_url": "", "external_url_genie": "http://www.boredapeyachtclub.com/"}, {"image_url": "", "image_url_genie": "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120"}, {"banner_image_url": "", "banner_image_url_genie": "https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500"}, {"verified": false, "verified_genie": true}]
+2022-08-12 17:19:48.288 | ERROR    | test_nft_:test_collection:85 - [{"slug": "", "slug_genie": "boredapeyachtclub"}, {"description": "", "description_genie": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details."}, {"external_url": "", "external_url_genie": "http://www.boredapeyachtclub.com/"}, {"image_url": "", "image_url_genie": "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120"}, {"banner_image_url": "", "banner_image_url_genie": "https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500"}, {"verified": false, "verified_genie": true}]
+2022-08-12 17:20:31.045 | ERROR    | test_nft_:test_collection:85 - [{"slug": "", "slug_genie": "boredapeyachtclub"}, {"description": "", "description_genie": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details."}, {"external_url": "", "external_url_genie": "http://www.boredapeyachtclub.com/"}, {"image_url": "", "image_url_genie": "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120"}, {"banner_image_url": "", "banner_image_url_genie": "https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500"}, {"verified": false, "verified_genie": true}]
+2022-08-12 17:20:51.683 | ERROR    | test_nft_:test_collection:79 - one_day_volume
+2022-08-12 17:20:51.683 | ERROR    | test_nft_:test_collection:80 - 88.88
+2022-08-12 17:20:51.684 | ERROR    | test_nft_:test_collection:79 - one_day_change
+2022-08-12 17:20:51.685 | ERROR    | test_nft_:test_collection:80 - -0.6822196002717295
+2022-08-12 17:20:51.685 | ERROR    | test_nft_:test_collection:79 - one_day_sales
+2022-08-12 17:20:51.685 | ERROR    | test_nft_:test_collection:80 - 1
+2022-08-12 17:20:51.685 | ERROR    | test_nft_:test_collection:79 - one_day_average_price
+2022-08-12 17:20:51.686 | ERROR    | test_nft_:test_collection:80 - 88.88
+2022-08-12 17:20:51.686 | ERROR    | test_nft_:test_collection:79 - seven_day_volume
+2022-08-12 17:20:51.690 | ERROR    | test_nft_:test_collection:80 - 2280.06301
+2022-08-12 17:20:51.690 | ERROR    | test_nft_:test_collection:79 - seven_day_change
+2022-08-12 17:20:51.690 | ERROR    | test_nft_:test_collection:80 - -0.20099156379393185
+2022-08-12 17:20:51.691 | ERROR    | test_nft_:test_collection:79 - seven_day_sales
+2022-08-12 17:20:51.691 | ERROR    | test_nft_:test_collection:80 - 25
+2022-08-12 17:20:51.691 | ERROR    | test_nft_:test_collection:79 - seven_day_average_price
+2022-08-12 17:20:51.692 | ERROR    | test_nft_:test_collection:80 - 91.2025204
+2022-08-12 17:20:51.694 | ERROR    | test_nft_:test_collection:79 - thirty_day_volume
+2022-08-12 17:20:51.694 | ERROR    | test_nft_:test_collection:80 - 12725.024410210002
+2022-08-12 17:20:51.694 | ERROR    | test_nft_:test_collection:79 - thirty_day_change
+2022-08-12 17:20:51.695 | ERROR    | test_nft_:test_collection:80 - -0.6473665945107406
+2022-08-12 17:20:51.695 | ERROR    | test_nft_:test_collection:79 - thirty_day_sales
+2022-08-12 17:20:51.695 | ERROR    | test_nft_:test_collection:80 - 133
+2022-08-12 17:20:51.695 | ERROR    | test_nft_:test_collection:79 - thirty_day_average_price
+2022-08-12 17:20:51.696 | ERROR    | test_nft_:test_collection:80 - 95.67687526473686
+2022-08-12 17:20:51.696 | ERROR    | test_nft_:test_collection:79 - total_volume
+2022-08-12 17:20:51.696 | ERROR    | test_nft_:test_collection:80 - 646884.0317225809
+2022-08-12 17:20:51.697 | ERROR    | test_nft_:test_collection:79 - total_sales
+2022-08-12 17:20:51.697 | ERROR    | test_nft_:test_collection:80 - 26905
+2022-08-12 17:20:51.697 | ERROR    | test_nft_:test_collection:79 - average_price
+2022-08-12 17:20:51.697 | ERROR    | test_nft_:test_collection:80 - 24.043264513011742
+2022-08-12 17:20:51.698 | ERROR    | test_nft_:test_collection:79 - total_supply
+2022-08-12 17:20:51.698 | ERROR    | test_nft_:test_collection:80 - 10000
+2022-08-12 17:20:51.698 | ERROR    | test_nft_:test_collection:79 - num_owners
+2022-08-12 17:20:51.698 | ERROR    | test_nft_:test_collection:80 - 6449
+2022-08-12 17:20:51.699 | ERROR    | test_nft_:test_collection:79 - market_cap
+2022-08-12 17:20:51.699 | ERROR    | test_nft_:test_collection:80 - 912025.2039999999
+2022-08-12 17:20:51.699 | ERROR    | test_nft_:test_collection:79 - floor_price
+2022-08-12 17:20:51.700 | ERROR    | test_nft_:test_collection:80 - 78.69
+2022-08-12 17:20:51.700 | ERROR    | test_nft_:test_collection:85 - [{"slug": "", "slug_genie": "boredapeyachtclub"}, {"description": "", "description_genie": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details."}, {"external_url": "", "external_url_genie": "http://www.boredapeyachtclub.com/"}, {"image_url": "", "image_url_genie": "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120"}, {"banner_image_url": "", "banner_image_url_genie": "https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500"}, {"verified": false, "verified_genie": true}]
+2022-08-12 17:21:41.914 | ERROR    | test_nft_:test_collection:80 - one_day_volume
+2022-08-12 17:21:41.914 | ERROR    | test_nft_:test_collection:81 - 88.88
+2022-08-12 17:21:41.915 | ERROR    | test_nft_:test_collection:80 - one_day_change
+2022-08-12 17:21:41.915 | ERROR    | test_nft_:test_collection:81 - -0.6822196002717295
+2022-08-12 17:21:41.915 | ERROR    | test_nft_:test_collection:80 - one_day_sales
+2022-08-12 17:21:41.916 | ERROR    | test_nft_:test_collection:81 - 1
+2022-08-12 17:21:41.916 | ERROR    | test_nft_:test_collection:80 - one_day_average_price
+2022-08-12 17:21:41.916 | ERROR    | test_nft_:test_collection:81 - 88.88
+2022-08-12 17:21:41.920 | ERROR    | test_nft_:test_collection:80 - seven_day_volume
+2022-08-12 17:21:41.920 | ERROR    | test_nft_:test_collection:81 - 2280.06301
+2022-08-12 17:21:41.920 | ERROR    | test_nft_:test_collection:80 - seven_day_change
+2022-08-12 17:21:41.921 | ERROR    | test_nft_:test_collection:81 - -0.20099156379393185
+2022-08-12 17:21:41.921 | ERROR    | test_nft_:test_collection:80 - seven_day_sales
+2022-08-12 17:21:41.921 | ERROR    | test_nft_:test_collection:81 - 25
+2022-08-12 17:21:41.921 | ERROR    | test_nft_:test_collection:80 - seven_day_average_price
+2022-08-12 17:21:41.923 | ERROR    | test_nft_:test_collection:81 - 91.2025204
+2022-08-12 17:21:41.923 | ERROR    | test_nft_:test_collection:80 - thirty_day_volume
+2022-08-12 17:21:41.923 | ERROR    | test_nft_:test_collection:81 - 12725.024410210002
+2022-08-12 17:21:41.924 | ERROR    | test_nft_:test_collection:80 - thirty_day_change
+2022-08-12 17:21:41.924 | ERROR    | test_nft_:test_collection:81 - -0.6473665945107406
+2022-08-12 17:21:41.924 | ERROR    | test_nft_:test_collection:80 - thirty_day_sales
+2022-08-12 17:21:41.924 | ERROR    | test_nft_:test_collection:81 - 133
+2022-08-12 17:21:41.925 | ERROR    | test_nft_:test_collection:80 - thirty_day_average_price
+2022-08-12 17:21:41.927 | ERROR    | test_nft_:test_collection:81 - 95.67687526473686
+2022-08-12 17:21:41.928 | ERROR    | test_nft_:test_collection:80 - total_volume
+2022-08-12 17:21:41.928 | ERROR    | test_nft_:test_collection:81 - 646884.0317225809
+2022-08-12 17:21:41.928 | ERROR    | test_nft_:test_collection:80 - total_sales
+2022-08-12 17:21:41.928 | ERROR    | test_nft_:test_collection:81 - 26905
+2022-08-12 17:21:41.929 | ERROR    | test_nft_:test_collection:80 - average_price
+2022-08-12 17:21:41.929 | ERROR    | test_nft_:test_collection:81 - 24.043264513011742
+2022-08-12 17:21:41.929 | ERROR    | test_nft_:test_collection:80 - total_supply
+2022-08-12 17:21:41.929 | ERROR    | test_nft_:test_collection:81 - 10000
+2022-08-12 17:21:41.930 | ERROR    | test_nft_:test_collection:80 - num_owners
+2022-08-12 17:21:41.930 | ERROR    | test_nft_:test_collection:81 - 6449
+2022-08-12 17:21:41.930 | ERROR    | test_nft_:test_collection:80 - market_cap
+2022-08-12 17:21:41.930 | ERROR    | test_nft_:test_collection:81 - 912025.2039999999
+2022-08-12 17:21:41.931 | ERROR    | test_nft_:test_collection:80 - floor_price
+2022-08-12 17:21:41.933 | ERROR    | test_nft_:test_collection:81 - 78.69
+2022-08-12 17:21:41.935 | ERROR    | test_nft_:test_collection:86 - [{"slug": "", "slug_genie": "boredapeyachtclub"}, {"description": "", "description_genie": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details."}, {"external_url": "", "external_url_genie": "http://www.boredapeyachtclub.com/"}, {"image_url": "", "image_url_genie": "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120"}, {"banner_image_url": "", "banner_image_url_genie": "https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500"}, {"verified": false, "verified_genie": true}]
+2022-08-12 17:45:55.607 | ERROR    | test_nft_:test_collection:80 - market_cap
+2022-08-12 17:45:55.608 | ERROR    | test_nft_:test_collection:92 - [{"slug": "", "slug_genie": "boredapeyachtclub"}, {"description": "", "description_genie": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details."}, {"external_url": "", "external_url_genie": "http://www.boredapeyachtclub.com/"}, {"image_url": "", "image_url_genie": "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120"}, {"banner_image_url": "", "banner_image_url_genie": "https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500"}, {"verified": false, "verified_genie": true}]
+2022-08-12 17:51:01.051 | ERROR    | test_nft_:test_collection:86 - 78
+2022-08-12 17:51:01.051 | ERROR    | test_nft_:test_collection:87 - <class 'int'>
+2022-08-12 17:51:01.052 | ERROR    | test_nft_:test_collection:86 - 0.0
+2022-08-12 17:51:01.052 | ERROR    | test_nft_:test_collection:87 - <class 'float'>
+2022-08-12 17:51:01.052 | ERROR    | test_nft_:test_collection:86 - 1
+2022-08-12 17:51:01.052 | ERROR    | test_nft_:test_collection:87 - <class 'int'>
+2022-08-12 17:51:01.053 | ERROR    | test_nft_:test_collection:86 - 78
+2022-08-12 17:51:01.053 | ERROR    | test_nft_:test_collection:87 - <class 'int'>
+2022-08-12 17:51:01.054 | ERROR    | test_nft_:test_collection:86 - 2318.78
+2022-08-12 17:51:01.054 | ERROR    | test_nft_:test_collection:87 - <class 'float'>
+2022-08-12 17:51:01.054 | ERROR    | test_nft_:test_collection:86 - 6.12
+2022-08-12 17:51:01.055 | ERROR    | test_nft_:test_collection:87 - <class 'float'>
+2022-08-12 17:51:01.055 | ERROR    | test_nft_:test_collection:86 - 28
+2022-08-12 17:51:01.055 | ERROR    | test_nft_:test_collection:87 - <class 'int'>
+2022-08-12 17:51:01.055 | ERROR    | test_nft_:test_collection:86 - 82.81357142857144
+2022-08-12 17:51:01.056 | ERROR    | test_nft_:test_collection:87 - <class 'float'>
+2022-08-12 17:51:01.056 | ERROR    | test_nft_:test_collection:86 - 0
+2022-08-12 17:51:01.057 | ERROR    | test_nft_:test_collection:87 - <class 'int'>
+2022-08-12 17:51:01.057 | ERROR    | test_nft_:test_collection:86 - None
+2022-08-12 17:51:01.057 | ERROR    | test_nft_:test_collection:87 - <class 'NoneType'>
+2022-08-12 17:51:01.057 | ERROR    | test_nft_:test_collection:86 - 0
+2022-08-12 17:51:01.058 | ERROR    | test_nft_:test_collection:87 - <class 'int'>
+2022-08-12 17:51:01.058 | ERROR    | test_nft_:test_collection:86 - 0
+2022-08-12 17:51:01.061 | ERROR    | test_nft_:test_collection:87 - <class 'int'>
+2022-08-12 17:51:01.062 | ERROR    | test_nft_:test_collection:86 - 2318.78
+2022-08-12 17:51:01.062 | ERROR    | test_nft_:test_collection:87 - <class 'float'>
+2022-08-12 17:51:01.062 | ERROR    | test_nft_:test_collection:86 - 28
+2022-08-12 17:51:01.063 | ERROR    | test_nft_:test_collection:87 - <class 'int'>
+2022-08-12 17:51:01.063 | ERROR    | test_nft_:test_collection:86 - 82.81357142857144
+2022-08-12 17:51:01.063 | ERROR    | test_nft_:test_collection:87 - <class 'float'>
+2022-08-12 17:51:01.069 | ERROR    | test_nft_:test_collection:86 - 10000
+2022-08-12 17:51:01.069 | ERROR    | test_nft_:test_collection:87 - <class 'int'>
+2022-08-12 17:51:01.070 | ERROR    | test_nft_:test_collection:86 - 0
+2022-08-12 17:51:01.070 | ERROR    | test_nft_:test_collection:87 - <class 'int'>
+2022-08-12 17:51:01.070 | ERROR    | test_nft_:test_collection:80 - market_cap
+2022-08-12 17:51:01.070 | ERROR    | test_nft_:test_collection:86 - 0
+2022-08-12 17:51:01.071 | ERROR    | test_nft_:test_collection:87 - <class 'int'>
+2022-08-12 17:51:01.072 | ERROR    | test_nft_:test_collection:94 - [{"slug": "", "slug_genie": "boredapeyachtclub"}, {"description": "", "description_genie": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details."}, {"external_url": "", "external_url_genie": "http://www.boredapeyachtclub.com/"}, {"image_url": "", "image_url_genie": "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120"}, {"banner_image_url": "", "banner_image_url_genie": "https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500"}, {"verified": false, "verified_genie": true}]
+2022-08-12 17:52:42.429 | ERROR    | test_nft_:test_collection:86 - one_day_volume
+2022-08-12 17:52:42.430 | ERROR    | test_nft_:test_collection:87 - 246
+2022-08-12 17:52:42.430 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:52:42.432 | ERROR    | test_nft_:test_collection:86 - one_day_change
+2022-08-12 17:52:42.432 | ERROR    | test_nft_:test_collection:87 - 12.82
+2022-08-12 17:52:42.432 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:52:42.433 | ERROR    | test_nft_:test_collection:86 - one_day_sales
+2022-08-12 17:52:42.433 | ERROR    | test_nft_:test_collection:87 - 3
+2022-08-12 17:52:42.433 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:52:42.433 | ERROR    | test_nft_:test_collection:86 - one_day_average_price
+2022-08-12 17:52:42.434 | ERROR    | test_nft_:test_collection:87 - 82
+2022-08-12 17:52:42.434 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:52:42.434 | ERROR    | test_nft_:test_collection:86 - seven_day_volume
+2022-08-12 17:52:42.435 | ERROR    | test_nft_:test_collection:87 - 2486.78
+2022-08-12 17:52:42.437 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:52:42.437 | ERROR    | test_nft_:test_collection:86 - seven_day_change
+2022-08-12 17:52:42.437 | ERROR    | test_nft_:test_collection:87 - 19.73
+2022-08-12 17:52:42.437 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:52:42.438 | ERROR    | test_nft_:test_collection:86 - seven_day_sales
+2022-08-12 17:52:42.438 | ERROR    | test_nft_:test_collection:87 - 30
+2022-08-12 17:52:42.438 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:52:42.439 | ERROR    | test_nft_:test_collection:86 - seven_day_average_price
+2022-08-12 17:52:42.439 | ERROR    | test_nft_:test_collection:87 - 82.89266666666667
+2022-08-12 17:52:42.439 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:52:42.439 | ERROR    | test_nft_:test_collection:86 - thirty_day_volume
+2022-08-12 17:52:42.440 | ERROR    | test_nft_:test_collection:87 - 0
+2022-08-12 17:52:42.440 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:52:42.440 | ERROR    | test_nft_:test_collection:86 - thirty_day_change
+2022-08-12 17:52:42.441 | ERROR    | test_nft_:test_collection:87 - None
+2022-08-12 17:52:42.441 | ERROR    | test_nft_:test_collection:88 - <class 'NoneType'>
+2022-08-12 17:52:42.441 | ERROR    | test_nft_:test_collection:86 - thirty_day_sales
+2022-08-12 17:52:42.441 | ERROR    | test_nft_:test_collection:87 - 0
+2022-08-12 17:52:42.442 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:52:42.442 | ERROR    | test_nft_:test_collection:86 - thirty_day_average_price
+2022-08-12 17:52:42.442 | ERROR    | test_nft_:test_collection:87 - 0
+2022-08-12 17:52:42.443 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:52:42.443 | ERROR    | test_nft_:test_collection:86 - total_volume
+2022-08-12 17:52:42.444 | ERROR    | test_nft_:test_collection:87 - 2486.78
+2022-08-12 17:52:42.444 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:52:42.444 | ERROR    | test_nft_:test_collection:86 - total_sales
+2022-08-12 17:52:42.444 | ERROR    | test_nft_:test_collection:87 - 30
+2022-08-12 17:52:42.445 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:52:42.449 | ERROR    | test_nft_:test_collection:86 - average_price
+2022-08-12 17:52:42.449 | ERROR    | test_nft_:test_collection:87 - 82.89266666666667
+2022-08-12 17:52:42.449 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:52:42.449 | ERROR    | test_nft_:test_collection:86 - total_supply
+2022-08-12 17:52:42.450 | ERROR    | test_nft_:test_collection:87 - 10000
+2022-08-12 17:52:42.450 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:52:42.450 | ERROR    | test_nft_:test_collection:86 - num_owners
+2022-08-12 17:52:42.451 | ERROR    | test_nft_:test_collection:87 - 0
+2022-08-12 17:52:42.451 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:52:42.451 | ERROR    | test_nft_:test_collection:80 - market_cap
+2022-08-12 17:52:42.451 | ERROR    | test_nft_:test_collection:86 - floor_price
+2022-08-12 17:52:42.452 | ERROR    | test_nft_:test_collection:87 - 0
+2022-08-12 17:52:42.452 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:52:42.452 | ERROR    | test_nft_:test_collection:95 - [{"slug": "", "slug_genie": "boredapeyachtclub"}, {"description": "", "description_genie": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details."}, {"external_url": "", "external_url_genie": "http://www.boredapeyachtclub.com/"}, {"image_url": "", "image_url_genie": "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120"}, {"banner_image_url": "", "banner_image_url_genie": "https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500"}, {"verified": false, "verified_genie": true}]
+2022-08-12 17:54:21.313 | ERROR    | test_nft_:test_collection:86 - one_day_volume
+2022-08-12 17:54:21.313 | ERROR    | test_nft_:test_collection:87 - 99
+2022-08-12 17:54:21.314 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:54:21.314 | ERROR    | test_nft_:test_collection:86 - one_day_change
+2022-08-12 17:54:21.315 | ERROR    | test_nft_:test_collection:87 - 0.0
+2022-08-12 17:54:21.315 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:54:21.316 | ERROR    | test_nft_:test_collection:86 - one_day_sales
+2022-08-12 17:54:21.317 | ERROR    | test_nft_:test_collection:87 - 1
+2022-08-12 17:54:21.326 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:54:21.327 | ERROR    | test_nft_:test_collection:86 - one_day_average_price
+2022-08-12 17:54:21.327 | ERROR    | test_nft_:test_collection:87 - 99
+2022-08-12 17:54:21.327 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:54:21.328 | ERROR    | test_nft_:test_collection:86 - seven_day_volume
+2022-08-12 17:54:21.328 | ERROR    | test_nft_:test_collection:87 - 2518.28
+2022-08-12 17:54:21.329 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:54:21.329 | ERROR    | test_nft_:test_collection:86 - seven_day_change
+2022-08-12 17:54:21.330 | ERROR    | test_nft_:test_collection:87 - 32.0
+2022-08-12 17:54:21.330 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:54:21.330 | ERROR    | test_nft_:test_collection:86 - seven_day_sales
+2022-08-12 17:54:21.331 | ERROR    | test_nft_:test_collection:87 - 30
+2022-08-12 17:54:21.331 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:54:21.331 | ERROR    | test_nft_:test_collection:86 - seven_day_average_price
+2022-08-12 17:54:21.331 | ERROR    | test_nft_:test_collection:87 - 83.94266666666667
+2022-08-12 17:54:21.332 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:54:21.332 | ERROR    | test_nft_:test_collection:86 - thirty_day_volume
+2022-08-12 17:54:21.336 | ERROR    | test_nft_:test_collection:87 - 0
+2022-08-12 17:54:21.336 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:54:21.336 | ERROR    | test_nft_:test_collection:80 - thirty_day_change
+2022-08-12 17:54:21.337 | ERROR    | test_nft_:test_collection:86 - thirty_day_sales
+2022-08-12 17:54:21.337 | ERROR    | test_nft_:test_collection:87 - 0
+2022-08-12 17:54:21.337 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:54:21.338 | ERROR    | test_nft_:test_collection:86 - thirty_day_average_price
+2022-08-12 17:54:21.338 | ERROR    | test_nft_:test_collection:87 - 0
+2022-08-12 17:54:21.338 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:54:21.339 | ERROR    | test_nft_:test_collection:86 - total_volume
+2022-08-12 17:54:21.339 | ERROR    | test_nft_:test_collection:87 - 2748.78
+2022-08-12 17:54:21.339 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:54:21.339 | ERROR    | test_nft_:test_collection:86 - total_sales
+2022-08-12 17:54:21.341 | ERROR    | test_nft_:test_collection:87 - 33
+2022-08-12 17:54:21.341 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:54:21.342 | ERROR    | test_nft_:test_collection:86 - average_price
+2022-08-12 17:54:21.342 | ERROR    | test_nft_:test_collection:87 - 83.29636363636364
+2022-08-12 17:54:21.342 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:54:21.342 | ERROR    | test_nft_:test_collection:86 - total_supply
+2022-08-12 17:54:21.343 | ERROR    | test_nft_:test_collection:87 - 10000
+2022-08-12 17:54:21.346 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:54:21.346 | ERROR    | test_nft_:test_collection:86 - num_owners
+2022-08-12 17:54:21.347 | ERROR    | test_nft_:test_collection:87 - 0
+2022-08-12 17:54:21.347 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:54:21.347 | ERROR    | test_nft_:test_collection:80 - market_cap
+2022-08-12 17:54:21.348 | ERROR    | test_nft_:test_collection:86 - floor_price
+2022-08-12 17:54:21.348 | ERROR    | test_nft_:test_collection:87 - 0
+2022-08-12 17:54:21.351 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:54:21.352 | ERROR    | test_nft_:test_collection:95 - [{"slug": "", "slug_genie": "boredapeyachtclub"}, {"description": "", "description_genie": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs\u2014 unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation. Visit www.BoredApeYachtClub.com for more details."}, {"external_url": "", "external_url_genie": "http://www.boredapeyachtclub.com/"}, {"image_url": "", "image_url_genie": "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s120"}, {"banner_image_url": "", "banner_image_url_genie": "https://lh3.googleusercontent.com/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs=s2500"}, {"verified": false, "verified_genie": true}, {"stats": {"one_day_change": 0.0}, "one_day_change_genie": -0.6822196002717295}, {"stats": {"seven_day_change": 32.0}, "seven_day_change_genie": -0.20099156379393185}, {"stats": {"thirty_day_volume": 0}, "thirty_day_volume_genie": 12725.024410210002}, {"stats": {"thirty_day_sales": 0}, "thirty_day_sales_genie": 133}, {"stats": {"thirty_day_average_price": 0}, "thirty_day_average_price_genie": 95.67687526473686}, {"stats": {"total_volume": 2748.78}, "total_volume_genie": 646884.0317225809}, {"stats": {"total_sales": 33}, "total_sales_genie": 26905}, {"stats": {"average_price": 83.29636363636364}, "average_price_genie": 24.043264513011742}, {"stats": {"num_owners": 0}, "num_owners_genie": 6449}, {"stats": {"floor_price": 0}, "floor_price_genie": 78.69}]
+2022-08-12 17:55:44.506 | ERROR    | test_nft_:test_collection:86 - one_day_volume
+2022-08-12 17:55:44.507 | ERROR    | test_nft_:test_collection:87 - 167
+2022-08-12 17:55:44.507 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:55:44.508 | ERROR    | test_nft_:test_collection:86 - one_day_change
+2022-08-12 17:55:44.509 | ERROR    | test_nft_:test_collection:87 - -31.31
+2022-08-12 17:55:44.509 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:55:44.510 | ERROR    | test_nft_:test_collection:86 - one_day_sales
+2022-08-12 17:55:44.510 | ERROR    | test_nft_:test_collection:87 - 2
+2022-08-12 17:55:44.511 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:55:44.511 | ERROR    | test_nft_:test_collection:86 - one_day_average_price
+2022-08-12 17:55:44.512 | ERROR    | test_nft_:test_collection:87 - 83.5
+2022-08-12 17:55:44.512 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:55:44.512 | ERROR    | test_nft_:test_collection:86 - seven_day_volume
+2022-08-12 17:55:44.513 | ERROR    | test_nft_:test_collection:87 - 2586.28
+2022-08-12 17:55:44.515 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:55:44.516 | ERROR    | test_nft_:test_collection:86 - seven_day_change
+2022-08-12 17:55:44.516 | ERROR    | test_nft_:test_collection:87 - -9.33
+2022-08-12 17:55:44.516 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:55:44.517 | ERROR    | test_nft_:test_collection:86 - seven_day_sales
+2022-08-12 17:55:44.517 | ERROR    | test_nft_:test_collection:87 - 31
+2022-08-12 17:55:44.518 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:55:44.521 | ERROR    | test_nft_:test_collection:86 - seven_day_average_price
+2022-08-12 17:55:44.522 | ERROR    | test_nft_:test_collection:87 - 83.4283870967742
+2022-08-12 17:55:44.522 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:55:44.523 | ERROR    | test_nft_:test_collection:86 - thirty_day_volume
+2022-08-12 17:55:44.523 | ERROR    | test_nft_:test_collection:87 - 2816.78
+2022-08-12 17:55:44.523 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:55:44.524 | ERROR    | test_nft_:test_collection:80 - thirty_day_change
+2022-08-12 17:55:44.526 | ERROR    | test_nft_:test_collection:86 - thirty_day_sales
+2022-08-12 17:55:44.527 | ERROR    | test_nft_:test_collection:87 - 34
+2022-08-12 17:55:44.528 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:55:44.528 | ERROR    | test_nft_:test_collection:86 - thirty_day_average_price
+2022-08-12 17:55:44.529 | ERROR    | test_nft_:test_collection:87 - 82.8464705882353
+2022-08-12 17:55:44.529 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:55:44.530 | ERROR    | test_nft_:test_collection:86 - total_volume
+2022-08-12 17:55:44.541 | ERROR    | test_nft_:test_collection:87 - 2816.78
+2022-08-12 17:55:44.542 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:55:44.542 | ERROR    | test_nft_:test_collection:86 - total_sales
+2022-08-12 17:55:44.543 | ERROR    | test_nft_:test_collection:87 - 34
+2022-08-12 17:55:44.543 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:55:44.544 | ERROR    | test_nft_:test_collection:86 - average_price
+2022-08-12 17:55:44.544 | ERROR    | test_nft_:test_collection:87 - 82.8464705882353
+2022-08-12 17:55:44.545 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:55:44.545 | ERROR    | test_nft_:test_collection:86 - total_supply
+2022-08-12 17:55:44.545 | ERROR    | test_nft_:test_collection:87 - 10000
+2022-08-12 17:55:44.546 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:55:44.546 | ERROR    | test_nft_:test_collection:86 - num_owners
+2022-08-12 17:55:44.547 | ERROR    | test_nft_:test_collection:87 - 0
+2022-08-12 17:55:44.547 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:55:44.547 | ERROR    | test_nft_:test_collection:80 - market_cap
+2022-08-12 17:55:44.548 | ERROR    | test_nft_:test_collection:86 - floor_price
+2022-08-12 17:55:44.550 | ERROR    | test_nft_:test_collection:87 - 0
+2022-08-12 17:55:44.550 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:55:44.551 | ERROR    | test_nft_:test_collection:95 - [{"stats": {"one_day_volume": 167, "one_day_volume_genie": 88.88}}, {"stats": {"one_day_change": -31.31, "one_day_change_genie": -0.6822196002717295}}, {"stats": {"one_day_sales": 2, "one_day_sales_genie": 1}}, {"stats": {"seven_day_change": -9.33, "seven_day_change_genie": -0.20099156379393185}}, {"stats": {"seven_day_sales": 31, "seven_day_sales_genie": 25}}, {"stats": {"thirty_day_volume": 2816.78, "thirty_day_volume_genie": 12725.024410210002}}, {"stats": {"thirty_day_sales": 34, "thirty_day_sales_genie": 133}}, {"stats": {"total_volume": 2816.78, "total_volume_genie": 646884.0317225809}}, {"stats": {"total_sales": 34, "total_sales_genie": 26905}}, {"stats": {"average_price": 82.8464705882353, "average_price_genie": 24.043264513011742}}, {"stats": {"num_owners": 0, "num_owners_genie": 6449}}, {"stats": {"floor_price": 0, "floor_price_genie": 78.69}}]
+2022-08-12 17:56:40.929 | ERROR    | test_nft_:test_collection:86 - one_day_volume
+2022-08-12 17:56:40.930 | ERROR    | test_nft_:test_collection:87 - 553.99
+2022-08-12 17:56:40.931 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:56:40.932 | ERROR    | test_nft_:test_collection:86 - one_day_change
+2022-08-12 17:56:40.932 | ERROR    | test_nft_:test_collection:87 - 13.33
+2022-08-12 17:56:40.933 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:56:40.934 | ERROR    | test_nft_:test_collection:86 - one_day_sales
+2022-08-12 17:56:40.934 | ERROR    | test_nft_:test_collection:87 - 7
+2022-08-12 17:56:40.935 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:56:40.935 | ERROR    | test_nft_:test_collection:86 - one_day_average_price
+2022-08-12 17:56:40.936 | ERROR    | test_nft_:test_collection:87 - 79.14142857142858
+2022-08-12 17:56:40.936 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:56:40.937 | ERROR    | test_nft_:test_collection:86 - seven_day_volume
+2022-08-12 17:56:40.938 | ERROR    | test_nft_:test_collection:87 - 784.49
+2022-08-12 17:56:40.938 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:56:40.939 | ERROR    | test_nft_:test_collection:86 - seven_day_change
+2022-08-12 17:56:40.940 | ERROR    | test_nft_:test_collection:87 - 15.65
+2022-08-12 17:56:40.940 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:56:40.959 | ERROR    | test_nft_:test_collection:86 - seven_day_sales
+2022-08-12 17:56:40.959 | ERROR    | test_nft_:test_collection:87 - 10
+2022-08-12 17:56:40.960 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:56:40.960 | ERROR    | test_nft_:test_collection:86 - seven_day_average_price
+2022-08-12 17:56:40.961 | ERROR    | test_nft_:test_collection:87 - 78.449
+2022-08-12 17:56:40.961 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:56:40.961 | ERROR    | test_nft_:test_collection:86 - thirty_day_volume
+2022-08-12 17:56:40.962 | ERROR    | test_nft_:test_collection:87 - 784.49
+2022-08-12 17:56:40.962 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:56:40.964 | ERROR    | test_nft_:test_collection:80 - thirty_day_change
+2022-08-12 17:56:40.966 | ERROR    | test_nft_:test_collection:86 - thirty_day_sales
+2022-08-12 17:56:40.967 | ERROR    | test_nft_:test_collection:87 - 10
+2022-08-12 17:56:40.967 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:56:40.968 | ERROR    | test_nft_:test_collection:86 - thirty_day_average_price
+2022-08-12 17:56:40.968 | ERROR    | test_nft_:test_collection:87 - 78.449
+2022-08-12 17:56:40.969 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:56:40.969 | ERROR    | test_nft_:test_collection:86 - total_volume
+2022-08-12 17:56:40.969 | ERROR    | test_nft_:test_collection:87 - 2816.78
+2022-08-12 17:56:40.970 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:56:40.970 | ERROR    | test_nft_:test_collection:86 - total_sales
+2022-08-12 17:56:40.971 | ERROR    | test_nft_:test_collection:87 - 34
+2022-08-12 17:56:40.971 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:56:40.972 | ERROR    | test_nft_:test_collection:86 - average_price
+2022-08-12 17:56:40.972 | ERROR    | test_nft_:test_collection:87 - 82.8464705882353
+2022-08-12 17:56:40.975 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:56:40.976 | ERROR    | test_nft_:test_collection:86 - total_supply
+2022-08-12 17:56:40.976 | ERROR    | test_nft_:test_collection:87 - 10000
+2022-08-12 17:56:40.977 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:56:40.977 | ERROR    | test_nft_:test_collection:86 - num_owners
+2022-08-12 17:56:40.978 | ERROR    | test_nft_:test_collection:87 - 0
+2022-08-12 17:56:40.978 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:56:40.979 | ERROR    | test_nft_:test_collection:80 - market_cap
+2022-08-12 17:56:40.979 | ERROR    | test_nft_:test_collection:86 - floor_price
+2022-08-12 17:56:40.980 | ERROR    | test_nft_:test_collection:87 - 0
+2022-08-12 17:56:40.980 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:56:40.981 | ERROR    | test_nft_:test_collection:95 - [{"stats": {"one_day_volume": 553.99, "one_day_volume_genie": 88.88}}, {"stats": {"one_day_change": 13.33, "one_day_change_genie": -0.6822196002717295}}, {"stats": {"one_day_sales": 7, "one_day_sales_genie": 1}}, {"stats": {"seven_day_volume": 784.49, "seven_day_volume_genie": 2280.06301}}, {"stats": {"seven_day_change": 15.65, "seven_day_change_genie": -0.20099156379393185}}, {"stats": {"seven_day_sales": 10, "seven_day_sales_genie": 25}}, {"stats": {"thirty_day_volume": 784.49, "thirty_day_volume_genie": 12725.024410210002}}, {"stats": {"thirty_day_sales": 10, "thirty_day_sales_genie": 133}}, {"stats": {"total_volume": 2816.78, "total_volume_genie": 646884.0317225809}}, {"stats": {"total_sales": 34, "total_sales_genie": 26905}}, {"stats": {"average_price": 82.8464705882353, "average_price_genie": 24.043264513011742}}, {"stats": {"num_owners": 0, "num_owners_genie": 6449}}, {"stats": {"floor_price": 0, "floor_price_genie": 78.69}}]
+2022-08-12 17:57:39.320 | ERROR    | test_nft_:test_collection:86 - one_day_volume
+2022-08-12 17:57:39.321 | ERROR    | test_nft_:test_collection:87 - 472.5
+2022-08-12 17:57:39.321 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:57:39.322 | ERROR    | test_nft_:test_collection:86 - one_day_change
+2022-08-12 17:57:39.322 | ERROR    | test_nft_:test_collection:87 - 21.21
+2022-08-12 17:57:39.323 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:57:39.323 | ERROR    | test_nft_:test_collection:86 - one_day_sales
+2022-08-12 17:57:39.324 | ERROR    | test_nft_:test_collection:87 - 5
+2022-08-12 17:57:39.324 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:57:39.325 | ERROR    | test_nft_:test_collection:86 - one_day_average_price
+2022-08-12 17:57:39.326 | ERROR    | test_nft_:test_collection:87 - 94.5
+2022-08-12 17:57:39.326 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:57:39.327 | ERROR    | test_nft_:test_collection:86 - seven_day_volume
+2022-08-12 17:57:39.327 | ERROR    | test_nft_:test_collection:87 - 2891.78
+2022-08-12 17:57:39.327 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:57:39.328 | ERROR    | test_nft_:test_collection:86 - seven_day_change
+2022-08-12 17:57:39.328 | ERROR    | test_nft_:test_collection:87 - 60.0
+2022-08-12 17:57:39.329 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:57:39.331 | ERROR    | test_nft_:test_collection:86 - seven_day_sales
+2022-08-12 17:57:39.331 | ERROR    | test_nft_:test_collection:87 - 34
+2022-08-12 17:57:39.332 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:57:39.332 | ERROR    | test_nft_:test_collection:86 - seven_day_average_price
+2022-08-12 17:57:39.333 | ERROR    | test_nft_:test_collection:87 - 85.05235294117648
+2022-08-12 17:57:39.333 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:57:39.333 | ERROR    | test_nft_:test_collection:86 - thirty_day_volume
+2022-08-12 17:57:39.337 | ERROR    | test_nft_:test_collection:87 - 3122.28
+2022-08-12 17:57:39.337 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:57:39.338 | ERROR    | test_nft_:test_collection:80 - thirty_day_change
+2022-08-12 17:57:39.338 | ERROR    | test_nft_:test_collection:86 - thirty_day_sales
+2022-08-12 17:57:39.339 | ERROR    | test_nft_:test_collection:87 - 37
+2022-08-12 17:57:39.339 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:57:39.340 | ERROR    | test_nft_:test_collection:86 - thirty_day_average_price
+2022-08-12 17:57:39.341 | ERROR    | test_nft_:test_collection:87 - 84.38594594594595
+2022-08-12 17:57:39.344 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:57:39.344 | ERROR    | test_nft_:test_collection:86 - total_volume
+2022-08-12 17:57:39.345 | ERROR    | test_nft_:test_collection:87 - 3122.28
+2022-08-12 17:57:39.345 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:57:39.346 | ERROR    | test_nft_:test_collection:86 - total_sales
+2022-08-12 17:57:39.346 | ERROR    | test_nft_:test_collection:87 - 37
+2022-08-12 17:57:39.346 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:57:39.347 | ERROR    | test_nft_:test_collection:86 - average_price
+2022-08-12 17:57:39.347 | ERROR    | test_nft_:test_collection:87 - 84.38594594594595
+2022-08-12 17:57:39.348 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 17:57:39.348 | ERROR    | test_nft_:test_collection:86 - total_supply
+2022-08-12 17:57:39.349 | ERROR    | test_nft_:test_collection:87 - 10000
+2022-08-12 17:57:39.352 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:57:39.352 | ERROR    | test_nft_:test_collection:86 - num_owners
+2022-08-12 17:57:39.352 | ERROR    | test_nft_:test_collection:87 - 0
+2022-08-12 17:57:39.353 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:57:39.353 | ERROR    | test_nft_:test_collection:80 - market_cap
+2022-08-12 17:57:39.354 | ERROR    | test_nft_:test_collection:86 - floor_price
+2022-08-12 17:57:39.354 | ERROR    | test_nft_:test_collection:87 - 0
+2022-08-12 17:57:39.355 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 17:57:39.355 | ERROR    | test_nft_:test_collection:95 - [{"one_day_volume": 472.5, "one_day_volume_genie": 88.88}, {"one_day_change": 21.21, "one_day_change_genie": -0.6822196002717295}, {"one_day_sales": 5, "one_day_sales_genie": 1}, {"seven_day_volume": 2891.78, "seven_day_volume_genie": 2280.06301}, {"seven_day_change": 60.0, "seven_day_change_genie": -0.20099156379393185}, {"seven_day_sales": 34, "seven_day_sales_genie": 25}, {"thirty_day_volume": 3122.28, "thirty_day_volume_genie": 12725.024410210002}, {"thirty_day_sales": 37, "thirty_day_sales_genie": 133}, {"total_volume": 3122.28, "total_volume_genie": 646884.0317225809}, {"total_sales": 37, "total_sales_genie": 26905}, {"average_price": 84.38594594594595, "average_price_genie": 24.043264513011742}, {"num_owners": 0, "num_owners_genie": 6449}, {"floor_price": 0, "floor_price_genie": 78.69}]
+2022-08-12 18:00:05.175 | ERROR    | test_nft_:test_collection:86 - one_day_volume
+2022-08-12 18:00:05.175 | ERROR    | test_nft_:test_collection:87 - 246.5
+2022-08-12 18:00:05.176 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 18:00:05.176 | ERROR    | test_nft_:test_collection:86 - one_day_change
+2022-08-12 18:00:05.177 | ERROR    | test_nft_:test_collection:87 - 18.67
+2022-08-12 18:00:05.177 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 18:00:05.178 | ERROR    | test_nft_:test_collection:86 - one_day_sales
+2022-08-12 18:00:05.179 | ERROR    | test_nft_:test_collection:87 - 3
+2022-08-12 18:00:05.179 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 18:00:05.180 | ERROR    | test_nft_:test_collection:86 - one_day_average_price
+2022-08-12 18:00:05.180 | ERROR    | test_nft_:test_collection:87 - 82.16666666666667
+2022-08-12 18:00:05.181 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 18:00:05.181 | ERROR    | test_nft_:test_collection:86 - seven_day_volume
+2022-08-12 18:00:05.182 | ERROR    | test_nft_:test_collection:87 - 2584.29
+2022-08-12 18:00:05.182 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 18:00:05.182 | ERROR    | test_nft_:test_collection:86 - seven_day_change
+2022-08-12 18:00:05.183 | ERROR    | test_nft_:test_collection:87 - -8.25
+2022-08-12 18:00:05.183 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 18:00:05.184 | ERROR    | test_nft_:test_collection:86 - seven_day_sales
+2022-08-12 18:00:05.184 | ERROR    | test_nft_:test_collection:87 - 30
+2022-08-12 18:00:05.184 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 18:00:05.187 | ERROR    | test_nft_:test_collection:86 - seven_day_average_price
+2022-08-12 18:00:05.187 | ERROR    | test_nft_:test_collection:87 - 86.143
+2022-08-12 18:00:05.188 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 18:00:05.188 | ERROR    | test_nft_:test_collection:86 - thirty_day_volume
+2022-08-12 18:00:05.188 | ERROR    | test_nft_:test_collection:87 - 3368.78
+2022-08-12 18:00:05.189 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 18:00:05.189 | ERROR    | test_nft_:test_collection:86 - thirty_day_change
+2022-08-12 18:00:05.191 | ERROR    | test_nft_:test_collection:87 - 21.09
+2022-08-12 18:00:05.192 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 18:00:05.192 | ERROR    | test_nft_:test_collection:86 - thirty_day_sales
+2022-08-12 18:00:05.192 | ERROR    | test_nft_:test_collection:87 - 40
+2022-08-12 18:00:05.193 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 18:00:05.194 | ERROR    | test_nft_:test_collection:86 - thirty_day_average_price
+2022-08-12 18:00:05.194 | ERROR    | test_nft_:test_collection:87 - 84.21950000000001
+2022-08-12 18:00:05.195 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 18:00:05.196 | ERROR    | test_nft_:test_collection:86 - total_volume
+2022-08-12 18:00:05.196 | ERROR    | test_nft_:test_collection:87 - 3368.78
+2022-08-12 18:00:05.196 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 18:00:05.197 | ERROR    | test_nft_:test_collection:86 - total_sales
+2022-08-12 18:00:05.197 | ERROR    | test_nft_:test_collection:87 - 40
+2022-08-12 18:00:05.198 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 18:00:05.198 | ERROR    | test_nft_:test_collection:86 - average_price
+2022-08-12 18:00:05.201 | ERROR    | test_nft_:test_collection:87 - 84.21950000000001
+2022-08-12 18:00:05.201 | ERROR    | test_nft_:test_collection:88 - <class 'float'>
+2022-08-12 18:00:05.202 | ERROR    | test_nft_:test_collection:86 - total_supply
+2022-08-12 18:00:05.202 | ERROR    | test_nft_:test_collection:87 - 10000
+2022-08-12 18:00:05.202 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 18:00:05.203 | ERROR    | test_nft_:test_collection:86 - num_owners
+2022-08-12 18:00:05.203 | ERROR    | test_nft_:test_collection:87 - 0
+2022-08-12 18:00:05.203 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 18:00:05.207 | ERROR    | test_nft_:test_collection:80 - market_cap
+2022-08-12 18:00:05.207 | ERROR    | test_nft_:test_collection:86 - floor_price
+2022-08-12 18:00:05.208 | ERROR    | test_nft_:test_collection:87 - 0
+2022-08-12 18:00:05.208 | ERROR    | test_nft_:test_collection:88 - <class 'int'>
+2022-08-12 18:00:05.209 | ERROR    | test_nft_:test_collection:95 - [{"one_day_volume": 246.5, "one_day_volume_genie": 88.88}, {"one_day_change": 18.67, "one_day_change_genie": -0.6822196002717295}, {"one_day_sales": 3, "one_day_sales_genie": 1}, {"seven_day_change": -8.25, "seven_day_change_genie": -0.20099156379393185}, {"thirty_day_volume": 3368.78, "thirty_day_volume_genie": 12725.024410210002}, {"thirty_day_change": 21.09, "thirty_day_change_genie": -0.6473665945107406}, {"thirty_day_sales": 40, "thirty_day_sales_genie": 133}, {"total_volume": 3368.78, "total_volume_genie": 646884.0317225809}, {"total_sales": 40, "total_sales_genie": 26905}, {"average_price": 84.21950000000001, "average_price_genie": 24.043264513011742}, {"num_owners": 0, "num_owners_genie": 6449}, {"floor_price": 0, "floor_price_genie": 78.69}]
+2022-08-12 18:01:38.632 | ERROR    | test_nft_:test_collection:80 - market_cap
+2022-08-12 18:01:38.633 | ERROR    | test_nft_:test_collection:92 - [{"one_day_volume": 553.99, "one_day_volume_genie": 88.88}, {"one_day_change": 13.33, "one_day_change_genie": -0.6822196002717295}, {"one_day_sales": 7, "one_day_sales_genie": 1}, {"seven_day_volume": 784.49, "seven_day_volume_genie": 2280.06301}, {"seven_day_change": 15.65, "seven_day_change_genie": -0.20099156379393185}, {"seven_day_sales": 10, "seven_day_sales_genie": 25}, {"thirty_day_volume": 784.49, "thirty_day_volume_genie": 12725.024410210002}, {"thirty_day_change": 15.65, "thirty_day_change_genie": -0.6473665945107406}, {"thirty_day_sales": 10, "thirty_day_sales_genie": 133}, {"total_volume": 3626.78, "total_volume_genie": 646884.0317225809}, {"total_sales": 43, "total_sales_genie": 26905}, {"average_price": 84.34372093023256, "average_price_genie": 24.043264513011742}, {"num_owners": 0, "num_owners_genie": 6449}, {"floor_price": 0, "floor_price_genie": 78.69}]
+2022-08-12 18:49:01.360 | ERROR    | test_nft_:test_collection_details:94 - [{"one_day_change": 0.0, "one_day_change_genie": -0.6822196002717295}, {"seven_day_volume": 9622.9149, "seven_day_volume_genie": 2280.06301}, {"seven_day_change": -10.43, "seven_day_change_genie": -0.17646099520587483}, {"seven_day_sales": 79, "seven_day_sales_genie": 25}, {"seven_day_average_price": 121.8090493670886, "seven_day_average_price_genie": 91.2025204}, {"thirty_day_volume": 15603.1118, "thirty_day_volume_genie": 12723.788690920002}, {"thirty_day_change": 40.14, "thirty_day_change_genie": -0.6445808665910483}, {"total_volume": 15603.1118, "total_volume_genie": 646879.8661139533}, {"total_sales": 147, "total_sales_genie": 26905}, {"average_price": 106.14361768707484, "average_price_genie": 24.043109686450595}, {"num_owners": 0, "num_owners_genie": 6448}, {"floor_price": 0, "floor_price_genie": 78.69}]
+2022-08-12 18:49:01.690 | ERROR    | Common.Httpnft:get_collection_nft_list:106 - 404
+<-----Query Collection NFT List Error----->404, status found
+2022-08-12 18:49:34.380 | ERROR    | test_nft_:test_collection_details:94 - [{"one_day_change": 0.0, "one_day_change_genie": -0.6822196002717295}, {"seven_day_volume": 9622.9149, "seven_day_volume_genie": 2280.06301}, {"seven_day_change": -10.43, "seven_day_change_genie": -0.17646099520587483}, {"seven_day_sales": 79, "seven_day_sales_genie": 25}, {"seven_day_average_price": 121.8090493670886, "seven_day_average_price_genie": 91.2025204}, {"thirty_day_volume": 15603.1118, "thirty_day_volume_genie": 12723.788690920002}, {"thirty_day_change": 40.14, "thirty_day_change_genie": -0.6445808665910483}, {"total_volume": 15603.1118, "total_volume_genie": 646879.8661139533}, {"total_sales": 147, "total_sales_genie": 26905}, {"average_price": 106.14361768707484, "average_price_genie": 24.043109686450595}, {"num_owners": 0, "num_owners_genie": 6448}, {"floor_price": 0, "floor_price_genie": 78.69}]
+2022-08-12 18:50:27.435 | ERROR    | test_nft_:test_collection_details:94 - [{"one_day_change": 0.0, "one_day_change_genie": -0.6822196002717295}, {"seven_day_volume": 9622.9149, "seven_day_volume_genie": 2280.06301}, {"seven_day_change": -10.43, "seven_day_change_genie": -0.17646099520587483}, {"seven_day_sales": 79, "seven_day_sales_genie": 25}, {"seven_day_average_price": 121.8090493670886, "seven_day_average_price_genie": 91.2025204}, {"thirty_day_volume": 15603.1118, "thirty_day_volume_genie": 12723.788690920002}, {"thirty_day_change": 40.14, "thirty_day_change_genie": -0.6445808665910483}, {"total_volume": 15603.1118, "total_volume_genie": 646879.8661139533}, {"total_sales": 147, "total_sales_genie": 26905}, {"average_price": 106.14361768707484, "average_price_genie": 24.043109686450595}, {"num_owners": 0, "num_owners_genie": 6448}, {"floor_price": 0, "floor_price_genie": 78.69}]
+2022-08-12 18:50:56.480 | ERROR    | test_nft_:test_collection_details:94 - [{"one_day_change": 0.0, "one_day_change_genie": -0.6822196002717295}, {"seven_day_volume": 9622.9149, "seven_day_volume_genie": 2280.06301}, {"seven_day_change": -10.43, "seven_day_change_genie": -0.17646099520587483}, {"seven_day_sales": 79, "seven_day_sales_genie": 25}, {"seven_day_average_price": 121.8090493670886, "seven_day_average_price_genie": 91.2025204}, {"thirty_day_volume": 15603.1118, "thirty_day_volume_genie": 12723.788690920002}, {"thirty_day_change": 40.14, "thirty_day_change_genie": -0.6445808665910483}, {"total_volume": 15603.1118, "total_volume_genie": 646879.8661139533}, {"total_sales": 147, "total_sales_genie": 26905}, {"average_price": 106.14361768707484, "average_price_genie": 24.043109686450595}, {"num_owners": 0, "num_owners_genie": 6448}, {"floor_price": 0, "floor_price_genie": 78.69}]
+2022-08-12 18:50:57.028 | ERROR    | test_nft_:test_collection_nft_list:105 - 1
+2022-08-12 18:51:12.483 | ERROR    | test_nft_:test_collection_details:94 - [{"one_day_volume": 140, "one_day_volume_genie": 88.88}, {"one_day_change": 0.0, "one_day_change_genie": -0.6822196002717295}, {"one_day_average_price": 140, "one_day_average_price_genie": 88.88}, {"seven_day_volume": 9077.8149, "seven_day_volume_genie": 2280.06301}, {"seven_day_change": 40.0, "seven_day_change_genie": -0.17646099520587483}, {"seven_day_sales": 73, "seven_day_sales_genie": 25}, {"seven_day_average_price": 124.35362876712328, "seven_day_average_price_genie": 91.2025204}, {"thirty_day_volume": 15743.1118, "thirty_day_volume_genie": 12723.788690920002}, {"thirty_day_change": 90.48, "thirty_day_change_genie": -0.6445808665910483}, {"total_volume": 15743.1118, "total_volume_genie": 646879.8661139533}, {"total_sales": 148, "total_sales_genie": 26905}, {"average_price": 106.37237702702703, "average_price_genie": 24.043109686450595}, {"num_owners": 0, "num_owners_genie": 6448}, {"floor_price": 0, "floor_price_genie": 78.69}]
+2022-08-12 18:51:13.124 | ERROR    | test_nft_:test_collection_nft_list:105 - 50

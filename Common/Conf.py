@@ -1,10 +1,28 @@
+import csv
 import datetime
 from secp256k1 import PrivateKey
 import time
 import random
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from loguru import logger
+from Config.readconfig import ReadConfig
 
 
 class Config():
+
+    @staticmethod
+    #读取csv文件前n行
+    def reader_csv(filepath:str, rownum:int):
+        data = []
+        with open(filepath) as csvfile:
+            reader = csv.reader(csvfile)
+            for i,row in enumerate(reader):
+                data.append(row[0])
+                if(i >= (rownum - 1)):
+                    break
+        return data
 
     @staticmethod
     # 获取当前时间戳
@@ -54,7 +72,6 @@ class Config():
         amount = ('{:.' + str(decimals) + 'f}').format(amount_decimals)
         return amount
 
-
     @staticmethod
     # sign
     def sign(privkey_str: str, hash_str: str):
@@ -62,7 +79,6 @@ class Config():
         msg = bytes(bytearray.fromhex(hash_str))
 
         # 签名
-
         sig = privkey.ecdsa_sign_recoverable(msg, raw=True)
         # 序列化
         sig_tuple = privkey.ecdsa_recoverable_serialize(sig)
@@ -78,11 +94,12 @@ if __name__ == '__main__':
     # print(Config.now_time_second())
     # print(Config.now_time())
     # print(type(Config.random_amount(18)),Config.random_amount(18))
+    print(Config.reader_csv("/Users/lilong/Documents/Test_Api/Address/Top/BTC.csv",10))
     
     # BTC:dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b
     # ETH:ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187
     # IRIS:49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85
     # CLV:053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273
-    privkey = 'f4e19e0bcb5ce78fcc7ca918bd6ef8248a5a832fa532c56727bef5473ea5e6c9'
-    hash = 'dc4fad97e84bb9a0b478b55fcd0d460e6de7172e5d46b516083ed70508ecf4d5'
-    print(Config.sign(privkey, hash))
+    # privkey = 'ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187'
+    # hash = 'd17a0c1af81282532c3c886738bb0f718fc5bfd96688df276b98897412dd61a3'
+    # print(Config.sign(privkey, hash))

@@ -10,7 +10,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from Config.readconfig import ReadConfig
 
-timeout = int(ReadConfig().get_debug_rpc('timeout'))
+timeout = 100
 headers = {
         "Content-Type":"application/json",
         }

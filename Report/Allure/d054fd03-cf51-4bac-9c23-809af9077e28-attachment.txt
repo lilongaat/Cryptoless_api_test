@@ -1,0 +1,30 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:202 2022-09-09 14:11:33.828234 | 
+<-----balance----->
+Url:https://clover.webapi.subscan.io/api/scan/account/tokens
+
+Headers:{"authority": "clover.webapi.subscan.io", "accept": "application/json, text/plain, */*", "accept-language": "zh-CN", "baggage": "", "content-type": "application/json", "origin": "https://clover.subscan.io", "referer": "https://clover.subscan.io/", "sec-ch-ua": "\"Chromium\";v=\"104\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"104\"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": "\"macOS\"", "sec-fetch-dest": "empty", "sec-fetch-mode": "cors", "sec-fetch-site": "same-site", "sentry-trace": "ea3a8691962949979b1cf67d39347ede-99c15b8b0f09a827-0", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.101 Safari/537.36"}
+
+payload:"{\"address\": \"5DkFbptNQ31hdKG1eQuqbEAWNVwNTcPSXp6UjCTkdDFUKQ4U\"}"
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:204 2022-09-09 14:11:33.828234 | 
+<-----balance response----->
+
+Body:{"code": 0, "message": "Success", "generated_at": 1662704325, "data": {"native": [{"symbol": "CLV", "decimals": 18, "balance": "5286073731076208349366000", "lock": "5274655264362437094313821", "reserved": "0", "bonded": "1949412262437094313821", "unbonding": "5272705852100000000000000", "democracy_lock": "0", "election_lock": "0"}]}}
+[32mINFO    [0m Common.Graphql:Graphql.py:33 2022-09-09 14:11:33.828234 | 
+<-----balance----->
+Url:http://18.162.150.113:14301/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getAccountByAddress(address:\\\"5DkFbptNQ31hdKG1eQuqbEAWNVwNTcPSXp6UjCTkdDFUKQ4U\\\",coinId:\\\"CLV\\\"){blockHash blockNumber address time amount coinId}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:35 2022-09-09 14:11:33.828234 | 
+<-----balance response----->
+
+Body:{"data": {"getAccountByAddress": {"blockHash": "0xa6656d973a6067cabb5c1d8694f780997f6f77acd014b44d2ea39114d6af0df5", "blockNumber": 7738246, "address": "5DkFbptNQ31hdKG1eQuqbEAWNVwNTcPSXp6UjCTkdDFUKQ4U", "time": "2022-09-09T05:48:06.000Z", "amount": "11418.466713771255052067", "coinId": null}}}
+[32mINFO    [0m Common.Http:Http.py:198 2022-09-09 14:11:33.828234 | 
+<-----Holders----->
+Url:https://api.cryptoless.net/cryptocurrencies/holders?address=5DkFbptNQ31hdKG1eQuqbEAWNVwNTcPSXp6UjCTkdDFUKQ4U&networkCode=CLV&symbol=CLV
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweGU4YzU0YjkzYTRlZDBmM2UxY2FkMDVjMDQzZmQzY2U0MjUwNTExNzY4MGY4NWViMmViMzAzZjQ5ZjNhMGFmYjU1OWExOWQxNDg2OTI1YTM0YzFmYTMxNWYzMzhjYTRhNGM2NzY0YjNmNjhiODMxY2VkMmZlNGUxOGVkMWVkNTMwMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNDE0NDU2MDhcbklzc3VlZCBBdDogVGh1LCAyNSBBdWcgMjAyMiAxMTozMjoyMCBHTVRcbkV4cGlyYXRpb24gVGltZTogTW9uLCAyNSBBdWcgMjA0MiAxMTozMjoyMCBHTVQifQ=="}
+[32mINFO    [0m Common.Http:Http.py:201 2022-09-09 14:11:33.828234 | 
+<-----Query Holders Response----->
+[{"address":"5DkFbptNQ31hdKG1eQuqbEAWNVwNTcPSXp6UjCTkdDFUKQ4U","createdTime":"2022-09-06T10:12:47.000Z","id":"1567093446148599810","networkCode":"CLV","quantity":"11418.466713771255052067","symbol":"CLV","updatedTime":"2022-09-06T10:12:47.000Z"}]

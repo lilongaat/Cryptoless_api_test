@@ -1,0 +1,30 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:72 2022-09-09 14:11:33.828234 | 
+<-----balance----->
+Url:https://dogechain.info/chain/Dogecoin/q/addressbalance/DEBmRVBhnvh36axYboCnT8C7fac5hJf5XE
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:74 2022-09-09 14:11:33.828234 | 
+<-----balance response----->
+
+Body:104141736.7590878
+[32mINFO    [0m Common.Graphql:Graphql.py:33 2022-09-09 14:11:33.828234 | 
+<-----balance----->
+Url:http://18.162.150.113:14003/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getAccountByAddress(address:\\\"DEBmRVBhnvh36axYboCnT8C7fac5hJf5XE\\\",coinId:\\\"DOGE\\\"){blockHash blockNumber address time amount coinId}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:35 2022-09-09 14:11:33.828234 | 
+<-----balance response----->
+
+Body:{"data": {"getAccountByAddress": {"blockHash": "9ad846f8543f716c2e894f8bfe8fcf108c333409f14163cbf4ee6f1a9d77bc54", "blockNumber": 4380470, "address": "DEBmRVBhnvh36axYboCnT8C7fac5hJf5XE", "time": "2022-09-07T10:02:30.000Z", "amount": "104141736.7590878", "coinId": null}}}
+[32mINFO    [0m Common.Http:Http.py:198 2022-09-09 14:11:33.828234 | 
+<-----Holders----->
+Url:https://api.cryptoless.net/cryptocurrencies/holders?address=DEBmRVBhnvh36axYboCnT8C7fac5hJf5XE&networkCode=DOGE&symbol=DOGE
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweGU4YzU0YjkzYTRlZDBmM2UxY2FkMDVjMDQzZmQzY2U0MjUwNTExNzY4MGY4NWViMmViMzAzZjQ5ZjNhMGFmYjU1OWExOWQxNDg2OTI1YTM0YzFmYTMxNWYzMzhjYTRhNGM2NzY0YjNmNjhiODMxY2VkMmZlNGUxOGVkMWVkNTMwMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNDE0NDU2MDhcbklzc3VlZCBBdDogVGh1LCAyNSBBdWcgMjAyMiAxMTozMjoyMCBHTVRcbkV4cGlyYXRpb24gVGltZTogTW9uLCAyNSBBdWcgMjA0MiAxMTozMjoyMCBHTVQifQ=="}
+[32mINFO    [0m Common.Http:Http.py:201 2022-09-09 14:11:33.828234 | 
+<-----Query Holders Response----->
+[{"address":"DEBmRVBhnvh36axYboCnT8C7fac5hJf5XE","createdTime":"2022-09-07T10:03:50.000Z","id":"1567453580653735937","networkCode":"DOGE","quantity":"104141736.7590878","symbol":"DOGE","updatedTime":"2022-09-07T10:03:50.000Z"}]
