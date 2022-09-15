@@ -342,6 +342,24 @@ class HttpUtils:
 
     @staticmethod
     # Rebuild
+    def get_balance_transactuons(networkCode:str, symbol:str, filter_address="", Authorization=Authorization_):
+        url = "http://18.163.229.203:8888/asset/api/cryptocurrencies/balance-transactions?symbol="+symbol+"&networkCode="+networkCode+"&filter=address:"+filter_address
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        logger.info('\n'+"<-----Qurey balance transactuons----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+
+        res = requests.get(url=url,headers=headers,timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Qurey balance transactuons----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.info('\n'+"<-----Qurey balance transactuons Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            raise Exception("请求异常")
+
+    @staticmethod
+    # Rebuild
     def post_rebuild(txid:str, params:list, Authorization=Authorization_):
         url = url_ + '/transactions/' + txid + '/rebuild'
         headers = {
@@ -561,4 +579,4 @@ class HttpUtils:
 if __name__ == '__main__':
     # print(HttpUtils.post_keys())
     # print(HttpUtils.get_keys())
-    print(HttpUtils.get_transactions_byhash("0x0c9632b57c21b4d44808589ecb5c661f892dbc2310cf9ee708d5cdf66d31badc"))
+    print(HttpUtils.get_balance_transactuons("BTC","BTC","34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo","eyJzaWduYXR1cmUiOiIweGU4YzU0YjkzYTRlZDBmM2UxY2FkMDVjMDQzZmQzY2U0MjUwNTExNzY4MGY4NWViMmViMzAzZjQ5ZjNhMGFmYjU1OWExOWQxNDg2OTI1YTM0YzFmYTMxNWYzMzhjYTRhNGM2NzY0YjNmNjhiODMxY2VkMmZlNGUxOGVkMWVkNTMwMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNDE0NDU2MDhcbklzc3VlZCBBdDogVGh1LCAyNSBBdWcgMjAyMiAxMTozMjoyMCBHTVRcbkV4cGlyYXRpb24gVGltZTogTW9uLCAyNSBBdWcgMjA0MiAxMTozMjoyMCBHTVQifQ==").json()[0]["blockHeight"])

@@ -1,0 +1,30 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:83 2022-09-15 15:48:01.911319 | 
+<-----balance----->
+Url:https://api.bscscan.com/api?module=account&action=balance&address=0xdaa3b5ae0521264e55f45157eb6e158e1f3e5012&apikey=1N55SHXT8U6N3YX8TZK3U8QV7862XDEG2J
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:85 2022-09-15 15:48:01.911319 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "13016549322883630779527"}
+[32mINFO    [0m Common.Graphql:Graphql.py:33 2022-09-15 15:48:01.911319 | 
+<-----balance----->
+Url:http://18.162.150.113:14101/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getAccountByAddress(address:\\\"0xdaa3b5ae0521264e55f45157eb6e158e1f3e5012\\\",coinId:\\\"BSC\\\"){blockHash blockNumber address time amount coinId}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:35 2022-09-15 15:48:01.911319 | 
+<-----balance response----->
+
+Body:{"data": {"getAccountByAddress": {"blockHash": "0xc40796c489ccfb110dd2714f80d65ade328562f2bbd82806636298e51bdb1197", "blockNumber": 20891363, "address": "0xdaa3b5ae0521264e55f45157eb6e158e1f3e5012", "time": "1661853922000", "amount": "13016549322847985835349", "coinId": "BSC"}}}
+[32mINFO    [0m Common.Http:Http.py:198 2022-09-15 15:48:01.911319 | 
+<-----Holders----->
+Url:https://api.cryptoless.net/cryptocurrencies/holders?address=0xdaa3b5ae0521264e55f45157eb6e158e1f3e5012&networkCode=BSC&symbol=BNB
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweGU4YzU0YjkzYTRlZDBmM2UxY2FkMDVjMDQzZmQzY2U0MjUwNTExNzY4MGY4NWViMmViMzAzZjQ5ZjNhMGFmYjU1OWExOWQxNDg2OTI1YTM0YzFmYTMxNWYzMzhjYTRhNGM2NzY0YjNmNjhiODMxY2VkMmZlNGUxOGVkMWVkNTMwMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNDE0NDU2MDhcbklzc3VlZCBBdDogVGh1LCAyNSBBdWcgMjAyMiAxMTozMjoyMCBHTVRcbkV4cGlyYXRpb24gVGltZTogTW9uLCAyNSBBdWcgMjA0MiAxMTozMjoyMCBHTVQifQ=="}
+[32mINFO    [0m Common.Http:Http.py:201 2022-09-15 15:48:01.911319 | 
+<-----Query Holders Response----->
+[{"address":"0xDaA3b5ae0521264e55f45157EB6e158e1F3e5012","createdTime":"2022-08-30T10:05:24.000Z","id":"1564554872446447618","networkCode":"BSC","quantity":"13016.549322847985835349","symbol":"BNB","updatedTime":"2022-08-30T10:05:24.000Z"}]

@@ -1,4 +1,5 @@
 import csv
+import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -6,7 +7,7 @@ import json
 
 # BTC DOGE LTC BCH
 # 网站: https://bitinfocharts.com/zh/top-100-richest-bitcoin-addresses.html
-def rich_address(coin:str ,netWork:str):
+def rich_address(coin:str ,netWork:str ,page_num:int): # 100Xpage_num
   payload={}
   headers = {
     'authority': 'bitinfocharts.com',
@@ -24,14 +25,18 @@ def rich_address(coin:str ,netWork:str):
     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.101 Safari/537.36'
   }
 
-  for i in range(100):
+  path = '/Users/lilong/Documents/Test_Api/Address/Top/' + netWork + '.csv'
+  with open(path,'w+') as f: # 清空文件
+      f.truncate()
+      f.close()
+
+  for i in range(page_num): # 文件追加rich address
     url = "https://bitinfocharts.com/zh/top-100-richest-" + coin + "-addresses-" + str(i+1) + ".html"
     response = requests.request("GET", url, headers=headers, data=payload)
 
     soup = BeautifulSoup(response.text, 'lxml').body
     # print(soup)
 
-    path = '/Users/lilong/Documents/Test_Api/Address/Top/' + netWork + '.csv'
     with open(path,'a+') as f:
       for tr in soup.find_all("tr"):
         for td in tr.find_all("td"):
@@ -42,10 +47,15 @@ def rich_address(coin:str ,netWork:str):
               csv_write = csv.writer(f)
               csv_write.writerow([address])
       f.close()
+  
+  # 文件地址去重
+  frame=pd.read_csv(path, names = ['address'])
+  data = frame.drop_duplicates(subset=['address'], keep='first', inplace=False)
+  data.to_csv(path, header=None , index= 0,encoding='utf8')
 
 # BSC
 # 网站:https://bscscan.com/accounts
-def rich_address_bsc():
+def rich_address_bsc(page_num:int): # 100Xpage_num
   payload={}
   headers = {
     'authority': 'bscscan.com',
@@ -63,13 +73,19 @@ def rich_address_bsc():
     'upgrade-insecure-requests': '1',
     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.101 Safari/537.36'
   }
-  for i in range(100):
+
+  path = "/Users/lilong/Documents/Test_Api/Address/Top/BSC.csv"
+  with open(path,'w+') as f: # 清空文件
+      f.truncate()
+      f.close()
+       
+  for i in range(page_num):
 
     url = "https://bscscan.com/accounts/" + str(i+1) + "?ps=100"
     response = requests.request("GET", url, headers=headers, data=payload)
     
     soup = BeautifulSoup(response.text, 'lxml').body
-    path = "/Users/lilong/Documents/Test_Api/Address/Top/BSC.csv"
+    
     with open(path,'a+') as f:
       for tr in soup.find_all("tr"):
         for td in tr.find_all("td"):
@@ -80,11 +96,21 @@ def rich_address_bsc():
               csv_write.writerow([address])
       f.close()
 
+  # 文件地址去重
+  frame=pd.read_csv(path, names = ['address'])
+  data = frame.drop_duplicates(subset=['address'], keep='first', inplace=False)
+  data.to_csv(path, header=None , index= 0,encoding='utf8')
+
 # ATOM
 # 网站:https://atomscan.com/accounts
-def rich_address_atom():
-  for i in range(1000):
-    url = "https://index.atomscan.com/accounts?orderBy=desc&order=total&page=" + str(i+783)+ "&perPage=10&withCounts=true"
+def rich_address_atom(page_num:int): # 10Xpage_num
+  path="/Users/lilong/Documents/Test_Api/Address/Top/ATOM.csv"
+  with open(path,'w+') as f: # 清空文件
+    f.truncate()
+    f.close()
+
+  for i in range(page_num):
+    url = "https://index.atomscan.com/accounts?orderBy=desc&order=total&page=" + str(i+0)+ "&perPage=10&withCounts=true"
     payload={}
     headers = {
       'authority': 'index.atomscan.com',
@@ -104,16 +130,26 @@ def rich_address_atom():
 
     response = requests.request("GET", url, headers=headers, data=payload)
 
-    path="/Users/lilong/Documents/Test_Api/Address/Top/ATOM.csv"
     with open(path,'a+') as f:
       csv_write = csv.writer(f)
       for j in range(len(response.json()["accounts"])):
         csv_write.writerow([response.json()["accounts"][j]["address"]])
+      f.close()
+
+  # 文件地址去重
+  frame=pd.read_csv(path, names = ['address'])
+  data = frame.drop_duplicates(subset=['address'], keep='first', inplace=False)
+  data.to_csv(path, header=None , index= 0,encoding='utf8')
 
 # ETH
 # 网站:https://cn.etherscan.com/accounts
-def rich_address_eth():
-  for i in range(100):
+def rich_address_eth(page_num:int): # 100Xpage_num
+  path = "/Users/lilong/Documents/Test_Api/Address/Top/ETH.csv"
+  with open(path,'w+') as f: # 清空文件
+    f.truncate()
+    f.close()
+
+  for i in range(page_num):
     url = "https://cn.etherscan.com/accounts/"+str(i+1)+"?ps=100"
     payload={}
     headers = {
@@ -135,7 +171,7 @@ def rich_address_eth():
     response = requests.request("GET", url, headers=headers, data=payload)
 
     soup = BeautifulSoup(response.text, 'lxml').body
-    path = "/Users/lilong/Documents/Test_Api/Address/Top/ETH.csv"
+
     with open(path,'a+') as f:
       for tr in soup.find_all("tr"):
         for td in tr.find_all("td"):
@@ -146,10 +182,20 @@ def rich_address_eth():
               csv_write.writerow([address])
       f.close()
 
+  # 文件地址去重
+  frame=pd.read_csv(path, names = ['address'])
+  data = frame.drop_duplicates(subset=['address'], keep='first', inplace=False)
+  data.to_csv(path, header=None , index= 0,encoding='utf8')
+
 # DOT
 # 网站:https://polkadot.subscan.io/
-def rich_address_dot():
-  for i in range(1000):
+def rich_address_dot(page_num:int): # 25Xpage_num
+  path="/Users/lilong/Documents/Test_Api/Address/Top/DOT.csv"
+  with open(path,'w+') as f: # 清空文件
+    f.truncate()
+    f.close()
+
+  for i in range(page_num):
     url = "https://polkadot.webapi.subscan.io/api/v2/scan/accounts"
     payload = json.dumps({
       "filter": "",
@@ -177,16 +223,27 @@ def rich_address_dot():
     }
 
     response = requests.request("POST", url, headers=headers, data=payload)
-    path="/Users/lilong/Documents/Test_Api/Address/Top/DOT.csv"
+    
     with open(path,'a+') as f:
       csv_write = csv.writer(f)
       for j in range(len(response.json()["data"]["list"])):
         csv_write.writerow([response.json()["data"]["list"][j]["address"]])
+      f.close()
+
+  # 文件地址去重
+  frame=pd.read_csv(path, names = ['address'])
+  data = frame.drop_duplicates(subset=['address'], keep='first', inplace=False)
+  data.to_csv(path, header=None , index= 0,encoding='utf8')
 
 # CLV
 # 网站:https://clover.subscan.io/account
-def rich_address_clv():
-  for i in range(1000):
+def rich_address_clv(page_num:int): # 25Xpage_num
+  path="/Users/lilong/Documents/Test_Api/Address/Top/CLV.csv"
+  with open(path,'w+') as f: # 清空文件
+    f.truncate()
+    f.close()
+
+  for i in range(page_num):
     url = "https://clover.webapi.subscan.io/api/v2/scan/accounts"
     payload = json.dumps({
       "filter": "",
@@ -214,19 +271,25 @@ def rich_address_clv():
     }
 
     response = requests.request("POST", url, headers=headers, data=payload)
-    path="/Users/lilong/Documents/Test_Api/Address/Top/CLV.csv"
+
     with open(path,'a+') as f:
       csv_write = csv.writer(f)
       for j in range(len(response.json()["data"]["list"])):
         csv_write.writerow([response.json()["data"]["list"][j]["address"]])
+      f.close()
+
+  # 文件地址去重
+  frame=pd.read_csv(path, names = ['address'])
+  data = frame.drop_duplicates(subset=['address'], keep='first', inplace=False)
+  data.to_csv(path, header=None , index= 0,encoding='utf8')
 
 
-# rich_address("bitcoin","BTC")
-# rich_address("dogecoin","DOGE")
-# rich_address("litecoin","LTC")
-# rich_address("bitcoin%20cash","BCH")
-# rich_address_bsc()
-# rich_address_atom()
-# rich_address_eth()
-rich_address_dot()
-# rich_address_clv()
+rich_address("bitcoin","BTC",100)
+# rich_address("dogecoin","DOGE",100)
+# rich_address("litecoin","LTC",100)
+# rich_address("bitcoin%20cash","BCH",100)
+# rich_address_bsc(100)
+# rich_address_atom(1000)
+# rich_address_eth(100)
+# rich_address_dot(100)
+# rich_address_clv(100)

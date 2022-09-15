@@ -10,24 +10,11 @@ from Config.readconfig import ReadConfig
 class BTC:
     @staticmethod
     def balance(address:str):
-        url = "https://chain.api.btc.com/v3/address/" + address
+        url = "https://blockchain.coinmarketcap.com/api/address?address="+address+"&symbol=BTC&start=1&limit=10"
 
         payload={}
         headers = {
-        'authority': 'chain.api.btc.com',
-        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-        'accept-language': 'zh-CN,zh;q=0.9',
-        'cache-control': 'max-age=0',
-        'cookie': '_globalGA=GA1.2.1091557351.1661758054; _ga_Z541BK1GZ8=GS1.1.1661758471.1.1.1661758486.0.0.0; _ga=GA1.1.281597873.1661758054; _ga_Y9QV3VGECZ=GS1.1.1661844061.1.1.1661844077.0.0.0; AWSALB=giMPruSTfW6Szb3FVhwiyDWuzWQjC1bEh41BNx04lQRaJmAuX1fI5VCtCPmGWxNzANBlYBGkgU9F6KJcYdRr/lHY80rFH/kuoZ41FhgGkV2wnCQ+WA21lnYIiNpC; AWSALBCORS=giMPruSTfW6Szb3FVhwiyDWuzWQjC1bEh41BNx04lQRaJmAuX1fI5VCtCPmGWxNzANBlYBGkgU9F6KJcYdRr/lHY80rFH/kuoZ41FhgGkV2wnCQ+WA21lnYIiNpC; AWSALB=z9rTI78sQyP1IURVTnaar95pgDyl0zhbgvjNPzFkCfM2d6qFJUn36ErJXwZD2/eBUnEzjIUdvWEblQNNBIv7fCjOaBxN1GOyMBzn/ltT0y7YJOMfU4idRJ1GYhbP; AWSALBCORS=z9rTI78sQyP1IURVTnaar95pgDyl0zhbgvjNPzFkCfM2d6qFJUn36ErJXwZD2/eBUnEzjIUdvWEblQNNBIv7fCjOaBxN1GOyMBzn/ltT0y7YJOMfU4idRJ1GYhbP',
-        'sec-ch-ua': '"Chromium";v="104", " Not A;Brand";v="99", "Google Chrome";v="104"',
-        'sec-ch-ua-mobile': '?0',
-        'sec-ch-ua-platform': '"macOS"',
-        'sec-fetch-dest': 'document',
-        'sec-fetch-mode': 'navigate',
-        'sec-fetch-site': 'none',
-        'sec-fetch-user': '?1',
-        'upgrade-insecure-requests': '1',
-        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.101 Safari/537.36'
+        'Cookie': 'next-i18next=en'
         }
 
         logger.info('\n'+"<-----balance----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'payload:'+json.dumps(payload))
@@ -213,7 +200,9 @@ if __name__ == '__main__':
     # print(price)
 
     # balance = DOGE.balance("DDogepartyxxxxxxxxxxxxxxxxxxw1dfzr")
-    balance_detail = [b for b in CLV.balance("5H3MSzCTbvwUXfRqfP5QdUKqW7LpTtMQRcH3fU7T566PyQDL").json()["data"]["native"] if b.get("symbol") == "CLV"][0]
-    print(balance_detail)
-    balance = Decimal(balance_detail["balance"]) - Decimal(balance_detail["lock"]) - Decimal(balance_detail["reserved"])
-    print(balance/Decimal(10**18))
+    # balance_detail = [b for b in CLV.balance("5H3MSzCTbvwUXfRqfP5QdUKqW7LpTtMQRcH3fU7T566PyQDL").json()["data"]["native"] if b.get("symbol") == "CLV"][0]
+    # print(balance_detail)
+    # balance = Decimal(balance_detail["balance"]) - Decimal(balance_detail["lock"]) - Decimal(balance_detail["reserved"])
+    # print(balance/Decimal(10**18))
+
+    print(BTC.balance("34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo").json()["balance"])

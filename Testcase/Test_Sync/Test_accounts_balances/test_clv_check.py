@@ -38,10 +38,10 @@ class Test_accounts_balances():
             quantity = Decimal(holder.json()[0]['quantity'])
 
         with allure.step("验证地址余额:explore==Graphql"):
-            assert abs(balance - amount) < 0.0000001,"explore!=Graphql"
+            assert balance == amount,"explore!=Graphql"
         
         with allure.step("验证地址余额:explore==holder"):
-            assert abs(balance - quantity) < 0.0000001,"explore!=holder"
+            assert balance == quantity,"explore!=holder"
 
 if __name__ == '__main__':
     path = os.path.abspath(__file__) + ""

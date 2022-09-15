@@ -15,7 +15,8 @@ from Common.Loguru import logger
 class Test_swap_success_matic:
     test_data = [
         # 测试&生产
-        ("正常Swap(MATIC-USDT)!",["6bac9b5536fe6d8758084b25f2cab21f4c5429de292ec699d28dc441701fdc23"],["03413dbd6dd45d9146ec635971672dbaf0fb9032672a7e475beb7e6f727fb8e53c"],"MATIC","USDT","USDC","swap","0xeA4669366cc50ddf3DFc5CB3c46CA07F7799Cb02","1",Conf.Config.random_amount(3)),
+        ("正常Swap(USDC-USDT)!",["c595c4b2ec28a706090e6aa7e9815504c0ece154b67b46dd26fe48cded5101b9"],["02d011bd0d5224a26075b514a116c86e0faaf9e41f120263dbc1ebfe098dd2a0ae"],"MATIC","USDC","USDT","swap","0x7580A6a9c461e76c1A6e697defB13f990Ee0Ba21","1",Conf.Config.random_amount(4)),
+        # ("正常Swap(USDC-USDT)!",["ddf90a6e02206881b7d826292c3a85eee7075453745fb99f782c7df7e29bfc13"],["0258c78eb0ace94122ba06020e54d71b2c788181649c4162ad1126fc5b33fa084f"],"MATIC","USDC","USDT","swap","0x285e304869Ade050fd62F914067E5DD240D8148c","1",Conf.Config.random_amount(4)),
         # ("正常Swap(MATIC-USDT)!",["b07cc7fe1144f17954aec1155eb216777cdd8679f1641cfa71c83223cf0a8666"],["025d28205f144187b4db46c2080406f4655a8e15e58681a4f3833618bc6738ccb4"],"MATIC","MATIC","USDT","swap","0x137ab2863110a608B4d6B55b20539AA785F73998","1",Conf.Config.random_amount(3)),
         # ("正常Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3)),
         # ("正常Swap(USDC-USDT)!",["ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187"],["0331e3ab5059c28098131d50856a99fcf40bea39b61f08ea55e1f35fbed131d2c0"],"MATIC","USDC","USDT","swap","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3","1",Conf.Config.random_amount(3)),

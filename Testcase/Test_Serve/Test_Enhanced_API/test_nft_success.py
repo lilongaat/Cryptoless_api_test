@@ -16,22 +16,22 @@ class Test_NFT_Collection:
 
     test_data_collection_address = [
         ("0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d"),
-        # ("0x495f947276749ce646f68ac8c248420045cb7b5e"),#erc1155
-        # ("0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258"),
-        # ("0x60e4d786628fea6478f785a6d7e704777c86a7c6"),
-        # ("0x23581767a106ae21c074b2276d25e5c3e136a68b"),
-        # ("0xd1258db6ac08eb0e625b75b371c023da478e94a9"),
-        # ("0xff7ee5e55b2847ace66b8e0c59ce089311325da5"),
-        # ("0x249c3a9839c27a6a79820a24e7a6fec6b5992423"),
-        # ("0x059edd72cd353df5106d2b9cc5ab83a52287ac3a"),
-        # ("0x93589ca4d8581950fbdbf8a4fe262e4a37a64331"),
-        # ("0x0406243ca557c259712be750773177bc714e49f6"),
-        # ("0x31d45de84fde2fb36575085e05754a4932dd5170"),
-        # ("0x0914d4f60f1ea6baaccb95584c9e69208b9acce9"),
-        # ("0x8847d9c052200164961e82da1624e5820cd5d2fa"),
-        # ("0xab180e1e045118701bba99b1c59b5c9b26588414"),
-        # ("0x8ca191dd59260ee226523179220421e40e763cd7"),
-        # ("0xdcb1cdfe2b5f592e7bdc2696b7a68c6e866c4cc2"),
+        ("0x495f947276749ce646f68ac8c248420045cb7b5e"),#erc1155
+        ("0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258"),
+        ("0x60e4d786628fea6478f785a6d7e704777c86a7c6"),
+        ("0x23581767a106ae21c074b2276d25e5c3e136a68b"),
+        ("0xd1258db6ac08eb0e625b75b371c023da478e94a9"),
+        ("0xff7ee5e55b2847ace66b8e0c59ce089311325da5"),
+        ("0x249c3a9839c27a6a79820a24e7a6fec6b5992423"),
+        ("0x059edd72cd353df5106d2b9cc5ab83a52287ac3a"),
+        ("0x93589ca4d8581950fbdbf8a4fe262e4a37a64331"),
+        ("0x0406243ca557c259712be750773177bc714e49f6"),
+        ("0x31d45de84fde2fb36575085e05754a4932dd5170"),
+        ("0x0914d4f60f1ea6baaccb95584c9e69208b9acce9"),
+        ("0x8847d9c052200164961e82da1624e5820cd5d2fa"),
+        ("0xab180e1e045118701bba99b1c59b5c9b26588414"),
+        ("0x8ca191dd59260ee226523179220421e40e763cd7"),
+        ("0xdcb1cdfe2b5f592e7bdc2696b7a68c6e866c4cc2"),
     ]
 
     test_data_owner_address = [
@@ -69,10 +69,11 @@ class Test_NFT_Collection:
                 }
             # logger.error(json.dumps(data_genie))
 
+
+        with allure.step("遍历合集明细所有字段与Genie对比"):
             Collection_detail_gaps = {}
             traits_gaps = []
             stats_gaps = {}
-        with allure.step("遍历合集明细所有字段与Genie对比"):
             for key,value in collection_details.json().items():
                 if key == "traits":
                     if len(value) == 0:
@@ -80,15 +81,19 @@ class Test_NFT_Collection:
                     else:
                         # 遍历特征数组
                         for i in range(len(value)):
-                            # logger.error(value[i])
-                            value_genie = [t for t in collection_details_genie.json()["data"][0]["traits"] if t.get("trait_type") == value[i]["trait_type"] and t.get("trait_value") == value[i]["trait_value"]][0]
-                            # logger.error(value_genie)
+                            # 查询genie trait_value,trait_value相同的数据
+                            value_genie = [t for t in collection_details_genie.json()["data"][0]["traits"] if t.get("trait_type") == value[i]["trait_type"] and (t.get("trait_value")).lower() == value[i]["trait_value"]][0]
                             # 遍历每个特征参数
                             trait_gaps = {}
                             for k,v in value[i].items():
                                 if (k == "percentListed" or k == "floorPrice"):
-                                    percent = v/value_genie[k]
-                                    if (percent<0.8 or percent>1.2):
+                                    # percent = v/value_genie[k]
+                                    # if (percent<0.8 or percent>1.2):
+                                    #     trait_gaps.update(value[i])
+                                    #     trait_gaps.update({k+"_genie":value_genie[k]})
+                                    pass
+                                elif (k == "trait_value"):
+                                    if (v != (value_genie[k]).lower()):
                                         trait_gaps.update(value[i])
                                         trait_gaps.update({k+"_genie":value_genie[k]})
                                 else: 
@@ -106,7 +111,7 @@ class Test_NFT_Collection:
                             if k_ == "total_supply":
                                 if v_ != data_genie[key][k_]:
                                     stats_gaps.update({k_:v_,k_+"_genie":data_genie[key][k_]})
-                            elif k_ == "market_cap":
+                            elif k_ == "market_cap" or k_ == "updated_at":
                                 pass
                             else:
                                 percent = v_/data_genie[key][k_]
@@ -119,8 +124,8 @@ class Test_NFT_Collection:
                 else:
                     if (value != data_genie[key]):
                         Collection_detail_gaps.update({key:value,key+"_genie":data_genie[key]})
-            Collection_detail_gaps.update({"traits":traits_gaps,"stats":stats_gaps})          
-            logger.error(json.dumps(Collection_detail_gaps))
+            Collection_detail_gaps.update({"traits":traits_gaps,"stats":stats_gaps})     
+            logger.info("\n\n\n" + "<-----Collection Detail Gaps----->" +"\n"+ json.dumps(Collection_detail_gaps))
             assert len(Collection_detail_gaps) == 0,"Collection Detail Gaps!"
 
 
@@ -230,6 +235,6 @@ class Test_NFT_Collection:
 
 
 if __name__ == '__main__':
-    path = os.path.abspath(__file__) + "::Test_NFT_Collection::test_owner_nfts_list"
+    path = os.path.abspath(__file__) + "::Test_NFT_Collection::test_collection_details"
     pytest.main(["-vs", path,'--alluredir=Report/Allure'])
-    # os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')
+    os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

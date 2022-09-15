@@ -141,7 +141,7 @@ class HttpUtils:
             'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
             'x-api-key': 'iMHRYlpIXs3zfcBY1r3iKLdqS2YUuOUs'
         }
-        body = {"filters":{"traits":{},"traitsRange":{},"address":"0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d","rankRange":{},"price":{}},"sort":{"currentEthPrice":"asc"},"fields":{"id":1,"name":1,"address":1,"collectionName":1,"collectionSymbol":1,"externalLink":1,"imageUrl":1,"smallImageUrl":1,"animationUrl":1,"standard":1,"market":1,"pendingTrxs":1,"currentBasePrice":1,"paymentToken":1,"marketUrl":1,"marketplace":1,"tokenId":1,"priceInfo":1,"tokenReserves":1,"ethReserves":1,"sellOrders":1,"startingPrice":1,"rarityScore":1},"offset":0,"limit":20000,"markets":[],"status":["all"]}
+        body = {"filters":{"traits":{},"traitsRange":{},"address":collection_address,"rankRange":{},"price":{}},"sort":{"currentEthPrice":"asc"},"fields":{"id":1,"name":1,"address":1,"collectionName":1,"collectionSymbol":1,"externalLink":1,"imageUrl":1,"smallImageUrl":1,"animationUrl":1,"standard":1,"market":1,"pendingTrxs":1,"currentBasePrice":1,"paymentToken":1,"marketUrl":1,"marketplace":1,"tokenId":1,"priceInfo":1,"tokenReserves":1,"ethReserves":1,"sellOrders":1,"startingPrice":1,"rarityScore":1},"offset":0,"limit":20000,"markets":[],"status":["all"]}
 
         logger.info("\n"+"<-----GEM Query Collection NFT List----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers_)+'\n\n'+"body:"+str(body))
         res = requests.post(url=url, headers=headers_, json=body ,timeout=100)
@@ -228,13 +228,13 @@ if __name__ == '__main__':
     collection_address = "0x23581767a106ae21c074b2276d25e5c3e136a68b"
     id = "8607"
     owner_address = "0x01660cc34a2ae458dc040589f65d3b31cb08b5fb"
-    # print(HttpUtils.get_collection_details(collection_address))
+    # print(HttpUtils.get_collection_details_genie(collection_address))
     # print(HttpUtils.get_nft_details(collection_address,id))
     # print(HttpUtils.get_nft_owners(collection_address,id))
-    # # print(HttpUtils.get_collection_nft_list(collection_address))
+    # print(HttpUtils.get_collection_nft_list(collection_address))
     # print(HttpUtils.get_collection_owners_list(collection_address))
     # print(HttpUtils.get_owner_nft_list(owner_address))
     # print(HttpUtils.get_collections_list())
     # print(HttpUtils.get_collections_transaction_history_list(collection_address))
     # print(HttpUtils.get_nft_transaction_history_list(collection_address,id))
-    print(HttpUtils.get_collection_nft_list_gem(collection_address))
+    # print(HttpUtils.get_collection_nft_list_gem(collection_address))

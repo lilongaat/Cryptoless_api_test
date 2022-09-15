@@ -21,10 +21,10 @@ class Test_accounts_balances():
     @pytest.mark.parametrize('address', accounts)
     def test_account_balance(self, address):
 
-        with allure.step("btc.com查询地址余额"):
+        with allure.step("blockchain.coinmarketcap.com查询地址信息"):
             response = Httpexplore.BTC.balance(address)
             assert response.status_code == 200
-            balance = Decimal(response.json()["data"]["balance"])/Decimal(10**8)
+            balance = Decimal(response.json()["balance"])/Decimal(10**8)
 
         with allure.step("Graphql查询地址余额"):
             graphql = Graphql.Graphql.getAccountByAddress("BTC",address,"BTC")
@@ -45,4 +45,4 @@ class Test_accounts_balances():
 if __name__ == '__main__':
     path = os.path.abspath(__file__) + ""
     pytest.main(["-vs", path,'--alluredir=Report/Allure'])
-    # os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')
+    os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

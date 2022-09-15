@@ -1,0 +1,30 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:71 2022-09-15 15:48:01.911319 | 
+<-----balance----->
+Url:https://api.etherscan.io/api?module=account&action=balance&address=0xb9711550ec6dc977f26b73809a2d6791c0f0e9c8&tag=latest&apikey=UDIG7EZI6J2VBUZIT6AAKXAKTVRQ64J2CF
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:73 2022-09-15 15:48:01.911319 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "1112642268021701935"}
+[32mINFO    [0m Common.Graphql:Graphql.py:33 2022-09-15 15:48:01.911319 | 
+<-----balance----->
+Url:http://18.162.150.113:14100/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getAccountByAddress(address:\\\"0xb9711550ec6dc977f26b73809a2d6791c0f0e9c8\\\",coinId:\\\"ETH\\\"){blockHash blockNumber address time amount coinId}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:35 2022-09-15 15:48:01.911319 | 
+<-----balance response----->
+
+Body:{"data": {"getAccountByAddress": {"blockHash": "0x085948ed3d94d3592bb3b7e1765dc14a89e8227bced08d97e33b6a95c7022f31", "blockNumber": 15537192, "address": "0xb9711550ec6dc977f26b73809a2d6791c0f0e9c8", "time": "1663221362000", "amount": "1112642268021701935", "coinId": "ETH"}}}
+[32mINFO    [0m Common.Http:Http.py:198 2022-09-15 15:48:01.911319 | 
+<-----Holders----->
+Url:https://api.cryptoless.net/cryptocurrencies/holders?address=0xb9711550ec6dc977f26b73809a2d6791c0f0e9c8&networkCode=ETH&symbol=ETH
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweGU4YzU0YjkzYTRlZDBmM2UxY2FkMDVjMDQzZmQzY2U0MjUwNTExNzY4MGY4NWViMmViMzAzZjQ5ZjNhMGFmYjU1OWExOWQxNDg2OTI1YTM0YzFmYTMxNWYzMzhjYTRhNGM2NzY0YjNmNjhiODMxY2VkMmZlNGUxOGVkMWVkNTMwMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNDE0NDU2MDhcbklzc3VlZCBBdDogVGh1LCAyNSBBdWcgMjAyMiAxMTozMjoyMCBHTVRcbkV4cGlyYXRpb24gVGltZTogTW9uLCAyNSBBdWcgMjA0MiAxMTozMjoyMCBHTVQifQ=="}
+[32mINFO    [0m Common.Http:Http.py:201 2022-09-15 15:48:01.911319 | 
+<-----Query Holders Response----->
+[{"address":"0xB9711550ec6Dc977f26B73809A2D6791c0F0E9C8","createdTime":"2022-08-31T10:28:33.000Z","id":"1564923083490832385","networkCode":"ETH","quantity":"166820.102031073533258504","symbol":"ETH","updatedTime":"2022-09-09T08:52:40.000Z"}]
