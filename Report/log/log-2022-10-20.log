@@ -1,0 +1,22 @@
+2022-10-20 14:28:18.834 | ERROR    | Common.Http:get_holders:202 - 
+<-----Query Holders Response Error----->{"timestamp":"2022-10-20T06:28:21.212+00:00","path":"/asset/api/cryptocurrencies//holders","status":503,"error":"Service Unavailable","message":"","requestId":"b18536d2-48383"}
+2022-10-20 14:28:19.576 | ERROR    | Common.Http:get_holders:202 - 
+<-----Query Holders Response Error----->{"timestamp":"2022-10-20T06:28:21.954+00:00","path":"/asset/api/cryptocurrencies//holders","status":503,"error":"Service Unavailable","message":"","requestId":"585d3227-48384"}
+2022-10-20 14:28:19.944 | ERROR    | Common.Http:get_holders:202 - 
+<-----Query Holders Response Error----->{"timestamp":"2022-10-20T06:28:22.322+00:00","path":"/asset/api/cryptocurrencies//holders","status":503,"error":"Service Unavailable","message":"","requestId":"12b1f614-48385"}
+2022-10-20 14:28:20.274 | ERROR    | Common.Http:get_holders:202 - 
+<-----Query Holders Response Error----->{"timestamp":"2022-10-20T06:28:22.636+00:00","path":"/asset/api/cryptocurrencies//holders","status":503,"error":"Service Unavailable","message":"","requestId":"6221891c-48386"}
+2022-10-20 14:28:20.596 | ERROR    | Common.Http:get_holders:202 - 
+<-----Query Holders Response Error----->{"timestamp":"2022-10-20T06:28:22.936+00:00","path":"/asset/api/cryptocurrencies//holders","status":503,"error":"Service Unavailable","message":"","requestId":"318a8045-48387"}
+2022-10-20 14:28:20.871 | ERROR    | Common.Http:get_holders:202 - 
+<-----Query Holders Response Error----->{"timestamp":"2022-10-20T06:28:23.249+00:00","path":"/asset/api/cryptocurrencies//holders","status":503,"error":"Service Unavailable","message":"","requestId":"bf15f503-48388"}
+2022-10-20 14:28:21.100 | ERROR    | Common.Http:get_holders:202 - 
+<-----Query Holders Response Error----->{"timestamp":"2022-10-20T06:28:23.477+00:00","path":"/asset/api/cryptocurrencies//holders","status":503,"error":"Service Unavailable","message":"","requestId":"0760320c-48389"}
+2022-10-20 14:28:21.332 | ERROR    | Common.Http:get_holders:202 - 
+<-----Query Holders Response Error----->{"timestamp":"2022-10-20T06:28:23.711+00:00","path":"/asset/api/cryptocurrencies//holders","status":503,"error":"Service Unavailable","message":"","requestId":"4464dd3a-48390"}
+2022-10-20 14:28:21.569 | ERROR    | Common.Http:get_holders:202 - 
+<-----Query Holders Response Error----->{"timestamp":"2022-10-20T06:28:23.947+00:00","path":"/asset/api/cryptocurrencies//holders","status":503,"error":"Service Unavailable","message":"","requestId":"6d1cafa7-48391"}
+2022-10-20 14:28:21.812 | ERROR    | Common.Http:get_holders:202 - 
+<-----Query Holders Response Error----->{"timestamp":"2022-10-20T06:28:24.191+00:00","path":"/asset/api/cryptocurrencies//holders","status":503,"error":"Service Unavailable","message":"","requestId":"22e4ee46-48392"}
+2022-10-20 14:28:22.098 | ERROR    | Common.Http:get_holders:202 - 
+<-----Query Holders Response Error----->{"timestamp":"2022-10-20T06:28:24.477+00:00","path":"/asset/api/cryptocurrencies//holders","status":503,"error":"Service Unavailable","message":"","requestId":"e5f2233c-48393"}

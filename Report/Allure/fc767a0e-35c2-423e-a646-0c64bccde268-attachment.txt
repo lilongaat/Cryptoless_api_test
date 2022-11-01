@@ -1,0 +1,18 @@
+[32mINFO    [0m Common.Http:Http.py:198 2022-10-27 17:51:10.740107 | 
+<-----Holders----->
+Url:https://api.cryptoless.io/cryptocurrencies/holders?address=0x343d0b801Fcb032ccEB7D5411cd404816d203B91&networkCode=MATIC&symbol=MATIC
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+[32mINFO    [0m Common.Http:Http.py:201 2022-10-27 17:51:10.740107 | 
+<-----Query Holders Response----->
+[{"address":"0x343d0b801Fcb032ccEB7D5411cd404816d203B91","createdTime":"2022-10-26T08:48:31.000Z","id":"1585191632479109121","networkCode":"MATIC","quantity":"0.317815715442348","symbol":"MATIC","updatedTime":"2022-10-27T09:48:46.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:288 2022-10-27 17:51:10.740107 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"body": {"from": "0x343d0b801Fcb032ccEB7D5411cd404816d203B91", "to": "0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A", "symbol": "MATIC", "amount": "0.00000004"}, "networkCode": "MATIC", "type": "transfer", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "2joMJZA3vQ"}}
+[32mINFO    [0m Common.Http:Http.py:291 2022-10-27 17:51:10.740107 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-10-27T09:51:19.000Z","createdTime":"2022-10-27T09:51:15.000Z","description":"Send 0.00000004 MATIC","estimatedFee":"1843132978722000","fee":"-1","hash":"0x61ab462f98f3339b1715294648f56e1e8730c8e3399b606f30ca9e1fd14d990e","id":"1585569802545942529","networkCode":"MATIC","serialized":"f86b0185146f65041a82520894dba67baa3ca1e89a2bdf0feee4592595b130888a8509502f900080820136a0e3999d54d9c3fbac6b32b647b4ca649d1f764a63d6efd6e82abbad8324529053a06d6a5d679f992019b755b809d66d9cf3ca75ed79bddf6699f11122062bef6d4b","status":"PENDING","updatedTime":"2022-10-27T09:51:19.000Z"}]},"body":{"symbol":"MATIC","amount":"0.00000004","from":"0x343d0b801Fcb032ccEB7D5411cd404816d203B91","to":"0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A"},"createdTime":"2022-10-27T09:51:15.000Z","id":"1585569806723526657","networkCode":"MATIC","status":-2,"transactionParams":{"memo":"2joMJZA3vQ"},"type":"TRANSFER","updatedTime":"2022-10-27T09:51:18.000Z"}

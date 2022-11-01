@@ -1,0 +1,18 @@
+[32mINFO    [0m Common.Http:Http.py:198 2022-10-27 19:06:30.279988 | 
+<-----Holders----->
+Url:https://api.cryptoless.io/cryptocurrencies/holders?address=0x343d0b801Fcb032ccEB7D5411cd404816d203B91&networkCode=MATIC&symbol=USDC
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+[32mINFO    [0m Common.Http:Http.py:201 2022-10-27 19:06:30.279988 | 
+<-----Query Holders Response----->
+[{"address":"0x343d0b801Fcb032ccEB7D5411cd404816d203B91","createdTime":"2022-10-27T09:50:09.000Z","id":"1585569528867663873","networkCode":"MATIC","quantity":"0.09992","symbol":"USDC","updatedTime":"2022-10-27T09:52:04.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:288 2022-10-27 19:06:30.279988 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"body": {"from": "0x343d0b801Fcb032ccEB7D5411cd404816d203B91", "to": "0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A", "symbol": "USDC", "amount": "0.00004"}, "networkCode": "MATIC", "type": "transfer", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "z2tK8mqCNe"}}
+[32mINFO    [0m Common.Http:Http.py:291 2022-10-27 19:06:30.279988 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-10-27T11:06:47.000Z","createdTime":"2022-10-27T11:06:42.000Z","description":"Contract Execution","estimatedFee":"4926231177820962","fee":"-1","hash":"0x41667d49893dbb4c3382c353bdd8c87cdc9a852ffed7f3cf4155a1c2fc698d20","id":"1585588788012666882","networkCode":"MATIC","serialized":"f8ab0885155598449182d202942791bca1f2de4661ed88a30c99a7a9449aa8417480b844a9059cbb000000000000000000000000dba67baa3ca1e89a2bdf0feee4592595b130888a0000000000000000000000000000000000000000000000000000000000000028820135a067d4b044923b1e924e098a138c0bc2361e83e5bb3eef1a4666f8022e37c70462a049bb956f1a97242c63d15a128aebe2320ee5f65154cf08e0a9360821f43cba62","status":"PENDING","updatedTime":"2022-10-27T11:06:47.000Z"}]},"body":{"symbol":"USDC","amount":"0.00004","from":"0x343d0b801Fcb032ccEB7D5411cd404816d203B91","to":"0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A"},"createdTime":"2022-10-27T11:06:42.000Z","id":"1585588795679911938","networkCode":"MATIC","status":-2,"transactionParams":{"memo":"z2tK8mqCNe"},"type":"TRANSFER","updatedTime":"2022-10-27T11:06:46.000Z"}

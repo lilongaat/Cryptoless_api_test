@@ -7,43 +7,25 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from loguru import logger
 from Config.readconfig import ReadConfig
 
-# Debug
-# timeout_ = int(ReadConfig().get_debug('timeout'))
-# url_ = ReadConfig().get_debug('url')
-# Authorization_ = ReadConfig().get_debug('Authorization')
+env_type = int(ReadConfig().get_env('type'))
+if env_type == 0: # Debug
+    timeout_ = int(ReadConfig().get_debug('timeout'))
+    url_ = ReadConfig().get_debug('url')
+    token = ReadConfig().get_debug('token')
+    web3token = ReadConfig().get_debug('web3token')
 
-# Release
-timeout_ = int(ReadConfig().get_release('timeout'))
-url_ = ReadConfig().get_release('url')
-Authorization_ = ReadConfig().get_release('Authorization')
+elif env_type == 1: # Release
+    timeout_ = int(ReadConfig().get_release('timeout'))
+    url_ = ReadConfig().get_release('url')
+    token = ReadConfig().get_release('token')
+    web3token = ReadConfig().get_release('web3token')
 
 
 class HttpUtils:
-    @staticmethod
-    # 注册web3token
-    def post_registrations(Authorization, ownerPublicKey, deviceToken):
-        url = url_ + '/registrations'
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": Authorization
-        }
-        body = {
-            "ownerPublicKey": ownerPublicKey,
-            "deviceToken": deviceToken
-        }
-        logger.info("<-----Register----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
-
-        res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)
-        if res.status_code != 200:
-            logger.error('registrations 失败！')
-            logger.error('Response | '+res.text)
-            # raise Exception("请求异常")
-        else:
-            return res
 
     @staticmethod
     # 查询账户信息
-    def get_account(address="",Authorization=Authorization_):
+    def get_account(address="",Authorization=web3token):
         url = url_ + '/accounts?address=' + address
         headers = {
             "Content-Type": "application/json",
@@ -59,9 +41,27 @@ class HttpUtils:
             logger.error('\n'+'<-----Query account Response Error----->'+(res.text))
             raise Exception("请求异常")
 
+    # @staticmethod
+    # # 创建账户
+    # def post_create_account(body:list,Authorization=token):
+    #     url = url_ + '/accounts/save'
+    #     headers = {
+    #         "Content-Type": "application/json",
+    #         "Authorization": Authorization
+    #     }
+
+    #     logger.info('\n'+"<-----Create Account----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'body:'+json.dumps(body))
+    #     res = requests.post(url=url, headers=headers, json=body, timeout=timeout_)
+    #     if res.status_code == 200:
+    #         logger.info('\n'+"<-----Create account Response----->"+"\n"+(res.text))
+    #         return res
+    #     else:
+    #         logger.error('\n'+'<-----Create account Error----->'+(res.text))
+    #         raise Exception("请求异常")
+
     @staticmethod
     # 查询代理账户列表
-    def get_safe_agents(Authorization=Authorization_):
+    def get_safe_agents(Authorization=web3token):
         url = 'http://13.215.207.236:8888/context/api/safe/agents'
         headers = {
             "Content-Type": "application/json",
@@ -79,7 +79,7 @@ class HttpUtils:
 
     @staticmethod
     # 代理账户签名交易
-    def post_safe_agents_sign(networkCode:str,hash:str,Authorization=Authorization_):
+    def post_safe_agents_sign(networkCode:str,hash:str,Authorization=web3token):
         url = 'http://13.215.207.236:8888/context/api/safe/txs'
         headers = {
             "Content-Type": "application/json",
@@ -101,7 +101,7 @@ class HttpUtils:
 
     @staticmethod
     # 激活账户
-    def post_safe_activation(accountId:str,Authorization=Authorization_):
+    def post_safe_activation(accountId:str,Authorization=web3token):
         url = 'http://13.215.207.236:8888/context/api/safe/activations'
         headers = {
             "Content-Type": "application/json",
@@ -123,7 +123,7 @@ class HttpUtils:
 
     @staticmethod
     # 查询激活账户交易及状态
-    def get_safe_activation(accountId:str,Authorization=Authorization_):
+    def get_safe_activation(accountId:str,Authorization=web3token):
         url = 'http://13.215.207.236:8888/context/api/safe/activations?accountId=' + accountId
         headers = {
             "Content-Type": "application/json",
@@ -142,8 +142,8 @@ class HttpUtils:
 
     @staticmethod
     # 创建账户
-    def post_create_account(networkcode: str, publickeys: list, threshold =1, address = "", Authorization=Authorization_):
-        url = 'http://18.163.229.203:8888/core/api/accounts/save'
+    def post_create_account(networkcode: str, publickeys: list, threshold =1, address = "", Authorization=web3token):
+        url = url_ + '/accounts/save'
         headers = {
             "Content-Type": "application/json",
             "Authorization": Authorization
@@ -166,7 +166,7 @@ class HttpUtils:
 
     @staticmethod
     # 查询networks信息
-    def get_networks(Authorization=Authorization_):
+    def get_networks(Authorization=web3token):
         url = url_ + '/networks'
         headers = {
             "Content-Type": "application/json",
@@ -188,7 +188,7 @@ class HttpUtils:
 
     @staticmethod
     # 查询holders信息
-    def get_holders(Network='',symbol ='',address='',Authorization=Authorization_):
+    def get_holders(Network='',symbol ='',address='',Authorization=web3token):
         url = url_ + '/cryptocurrencies/holders?address='+address+'&networkCode='+Network+'&symbol='+symbol
         headers = {
             "Content-Type": "application/json",
@@ -206,7 +206,7 @@ class HttpUtils:
 
     @staticmethod
     # 查询账户staking信息
-    def get_staking(Network='',symbol ='',address='',Authorization=Authorization_):
+    def get_staking(Network='',symbol ='',address='',Authorization=web3token):
         url = url_ + '/staking/delegators?networkCode='+Network+'&symbol='+symbol
         headers = {
             "Content-Type": "application/json",
@@ -228,7 +228,7 @@ class HttpUtils:
 
     @staticmethod
     # 查询Swap路由信息
-    def get_swap_route(networkCode:str,from_coin:str,to_coin:str,amount:str,Authorization=Authorization_):
+    def get_swap_route(networkCode:str,from_coin:str,to_coin:str,amount:str,Authorization=web3token):
         url = url_ + '/quote?networkCode=' + networkCode +'&from=' + from_coin +'&to=' + to_coin + '&amount=' + amount
         headers = {
             "Content-Type": "application/json",
@@ -246,8 +246,33 @@ class HttpUtils:
 
     @staticmethod
     #  instructions (type: Transfer/CrossChainTransfer/SwapTransfer)
-    def post_instructions(type: str,body: list, networkCode: str, definiteSignerPublicKeys: list, transactionParams = '', Authorization=Authorization_):
+    def post_instructions(type: str,body: list, networkCode: str, definiteSignerPublicKeys: list, transactionParams = '', Authorization=web3token):
         url = url_ + '/instructions'
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        body_ = {
+            "body": body,
+            "networkCode": networkCode,
+            "type": type,
+            "definiteSignerPublicKeys": definiteSignerPublicKeys,
+            "transactionParams": transactionParams
+        }
+
+        logger.info('\n'+"<-----Instructions----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body_))
+        res = requests.post(url=url, json=body_, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Instructions Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.info('\n'+"<-----Instructions Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            return res
+
+    @staticmethod
+    #  instructions (type: Transfer/CrossChainTransfer/SwapTransfer)
+    def instructions(type: str,body: list, networkCode: str, definiteSignerPublicKeys: list, transactionParams = '', Authorization=token):
+        url = url_ + "/vault/instructions"
         headers = {
             "Content-Type": "application/json",
             "Authorization": Authorization
@@ -272,7 +297,7 @@ class HttpUtils:
 
     @staticmethod
     # staking
-    def post_staking(networkCode: str, symbol: str, delegator: str, amount: str, Authorization=Authorization_):
+    def post_staking(networkCode: str, symbol: str, delegator: str, amount: str, Authorization=web3token):
         url = url_ + '/staking/delegations'
         headers = {
             "Content-Type": "application/json",
@@ -342,7 +367,7 @@ class HttpUtils:
 
     @staticmethod
     # Rebuild
-    def get_balance_transactuons(networkCode:str, symbol:str, filter_address="", Authorization=Authorization_):
+    def get_balance_transactuons(networkCode:str, symbol:str, filter_address="", Authorization=token):
         url = "http://18.163.229.203:8888/asset/api/cryptocurrencies/balance-transactions?symbol="+symbol+"&networkCode="+networkCode+"&filter=address:"+filter_address
         headers = {
             "Content-Type": "application/json",
@@ -360,7 +385,7 @@ class HttpUtils:
 
     @staticmethod
     # Rebuild
-    def post_rebuild(txid:str, params:list, Authorization=Authorization_):
+    def post_rebuild(txid:str, params:list, Authorization=web3token):
         url = url_ + '/transactions/' + txid + '/rebuild'
         headers = {
             "Content-Type": "application/json",
@@ -389,7 +414,7 @@ class HttpUtils:
 
     @staticmethod
     # sign
-    def post_sign_transfers(transactions_estimatedFee: str, transactions_hash: str, transactions_id: str, transactions_networkCode: str, transactions_requiredSignings: list, transactions_serialized: str, signatures: list, status='BUILDING', Authorization=Authorization_):
+    def post_sign_transfers(transactions_estimatedFee: str, transactions_hash: str, transactions_id: str, transactions_networkCode: str, transactions_requiredSignings: list, transactions_serialized: str, signatures: list, status='BUILDING', Authorization=web3token):
         url = url_ + '/transactions/'+transactions_id+'/sign'
         headers = {
             "Content-Type": "application/json",
@@ -417,8 +442,30 @@ class HttpUtils:
             raise Exception("请求异常")
 
     @staticmethod
+    # sign
+    def sign(id: str, signatures: list, serialized: str, Authorization=token):
+        url = url_ + "/vault/transactions/" + id + "/signatures"
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        body = {
+            "signatures":signatures,
+            "serialized": serialized
+        }
+        logger.info('\n'+"<-----Sign----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
+
+        res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Sign Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.info('\n'+"<-----Sign Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            raise Exception("请求异常")
+
+    @staticmethod
     # 请求签名
-    def post_req_sign(requiredSignings:array,Authorization=Authorization_):
+    def post_req_sign(requiredSignings:array,Authorization=web3token):
         url = url_ + '/vault/keys/request-sign'
         headers = {
             "Content-Type": "application/json",
@@ -438,7 +485,7 @@ class HttpUtils:
 
     @staticmethod
     # 获取验证码
-    def post_req_Verify(requestId:str,Authorization=Authorization_):
+    def post_req_Verify(requestId:str,Authorization=web3token):
         url = url_ + '/vault/verify/verifications'
         headers = {
             "Content-Type": "application/json",
@@ -460,7 +507,7 @@ class HttpUtils:
 
     @staticmethod
     # 托管key签名
-    def post_confirm_sign(id:str,code:str,Authorization=Authorization_):
+    def post_confirm_sign(id:str,code:str,Authorization=web3token):
         url = url_ + '/vault/keys/confirm-sign'
         headers = {
             "Content-Type": "application/json",
@@ -483,7 +530,7 @@ class HttpUtils:
 
     @staticmethod
     # send
-    def post_send_transfers(transactions_id:str,Authorization=Authorization_):
+    def post_send_transfers(transactions_id:str,Authorization=web3token):
         url = url_ + '/transactions/' + transactions_id + '/send'
         headers = {
             "Content-Type": "application/json",
@@ -496,13 +543,13 @@ class HttpUtils:
             logger.info('\n'+"<-----Send Response----->"+"\n"+(res.text))
             return res
         else:
-            logger.info('\n'+"<-----Transfer Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            logger.info('\n'+"<-----Send Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
             # raise Exception("请求异常")
             return res
 
     @staticmethod
     # 查询关联交易记录by hash
-    def get_transactions_byhash(hash:str,Authorization=Authorization_):
+    def get_transactions_byhash(hash:str,Authorization=web3token):
         url = url_ + '/cryptocurrencies/balance-transactions/' + hash
         headers = {
             "Content-Type": "application/json",
@@ -519,8 +566,26 @@ class HttpUtils:
             raise Exception("请求异常")
 
     @staticmethod
-    # 查询转账信息by id
-    def get_transactions_byid(id: str, expand = 'transactions', Authorization=Authorization_):
+    # 查询交易
+    def get_transactions(address: str, expand = 'transactions', Authorization=token):
+        url = "http://13.215.207.236:8888/escrow/api/transactions?address="+address+"&asset=&categoryId=&network=MATIC"
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        logger.info('\n'+"<-----Qurey Transactions by id----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+
+        res = requests.get(url=url,headers=headers,timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Qurey Transactions by id Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.info('\n'+"<-----Qurey Transactions by id Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            raise Exception("请求异常")
+
+    @staticmethod
+    # 查询交易
+    def get_transactions_byid(id: str, expand = 'transactions', Authorization=web3token):
         url = url_ + '/cryptocurrencies/transfers/' + id + '?expand=' + expand
         headers = {
             "Content-Type": "application/json",
@@ -538,7 +603,7 @@ class HttpUtils:
 
     @staticmethod
     # 查询密钥
-    def get_keys(Authorization=Authorization_):
+    def get_keys(Authorization=web3token):
         url = url_ + '/vault/keys'
         headers = {
             "Content-Type": "application/json",
@@ -556,7 +621,7 @@ class HttpUtils:
 
     @staticmethod
     # 生成密钥
-    def post_keys(count=1,Authorization=Authorization_):
+    def post_keys(count=1,Authorization=web3token):
         url = url_ + '/vault/keys'
         headers = {
             "Content-Type": "application/json",
@@ -577,6 +642,8 @@ class HttpUtils:
             raise Exception("请求异常")
 
 if __name__ == '__main__':
+    print(url_)
     # print(HttpUtils.post_keys())
     # print(HttpUtils.get_keys())
-    print(HttpUtils.get_balance_transactuons("BTC","BTC","34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo","eyJzaWduYXR1cmUiOiIweGU4YzU0YjkzYTRlZDBmM2UxY2FkMDVjMDQzZmQzY2U0MjUwNTExNzY4MGY4NWViMmViMzAzZjQ5ZjNhMGFmYjU1OWExOWQxNDg2OTI1YTM0YzFmYTMxNWYzMzhjYTRhNGM2NzY0YjNmNjhiODMxY2VkMmZlNGUxOGVkMWVkNTMwMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNDE0NDU2MDhcbklzc3VlZCBBdDogVGh1LCAyNSBBdWcgMjAyMiAxMTozMjoyMCBHTVRcbkV4cGlyYXRpb24gVGltZTogTW9uLCAyNSBBdWcgMjA0MiAxMTozMjoyMCBHTVQifQ==").json()[0]["blockHeight"])
+    # print(HttpUtils.get_balance_transactuons("BTC","BTC","34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo","eyJzaWduYXR1cmUiOiIweGU4YzU0YjkzYTRlZDBmM2UxY2FkMDVjMDQzZmQzY2U0MjUwNTExNzY4MGY4NWViMmViMzAzZjQ5ZjNhMGFmYjU1OWExOWQxNDg2OTI1YTM0YzFmYTMxNWYzMzhjYTRhNGM2NzY0YjNmNjhiODMxY2VkMmZlNGUxOGVkMWVkNTMwMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNDE0NDU2MDhcbklzc3VlZCBBdDogVGh1LCAyNSBBdWcgMjAyMiAxMTozMjoyMCBHTVRcbkV4cGlyYXRpb24gVGltZTogTW9uLCAyNSBBdWcgMjA0MiAxMTozMjoyMCBHTVQifQ==").json()[0]["blockHeight"])
+    # print(HttpUtils.post_create_account("MATIC",["0293f4fefcaca702e09c0a121c33bc0059cc649079f26d420ed3fb64809e044565"]).json())

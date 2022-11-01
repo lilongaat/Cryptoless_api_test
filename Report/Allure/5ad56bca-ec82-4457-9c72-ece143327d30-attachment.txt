@@ -1,0 +1,35 @@
+[32mINFO    [0m Common.Http:Http.py:198 2022-10-27 14:25:38.61300 | 
+<-----Holders----->
+Url:https://api.cryptoless.io/cryptocurrencies/holders?address=5Hgu6xq1ETv3kbjBnhqZCzaDFtqUhxfFBogZuJ2RnqsoXmWk&networkCode=CLV&symbol=CLV
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+[32mINFO    [0m Common.Http:Http.py:201 2022-10-27 14:25:38.61300 | 
+<-----Query Holders Response----->
+[{"address":"5Hgu6xq1ETv3kbjBnhqZCzaDFtqUhxfFBogZuJ2RnqsoXmWk","createdTime":"2022-10-27T03:40:20.000Z","id":"1585476461791735810","networkCode":"CLV","quantity":"0.00001","symbol":"CLV","updatedTime":"2022-10-27T03:40:20.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:288 2022-10-27 14:25:38.61300 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"body": {"from": "5Hgu6xq1ETv3kbjBnhqZCzaDFtqUhxfFBogZuJ2RnqsoXmWk", "to": "5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT", "symbol": "CLV", "amount": "0.0000001"}, "networkCode": "CLV", "type": "transfer", "definiteSignerPublicKeys": [], "transactionParams": {}}
+[32mINFO    [0m Common.Http:Http.py:291 2022-10-27 14:25:38.61300 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-10-27T06:25:47.000Z","description":"Custom Excution","estimatedFee":"1461250000002256","fee":"-1","hash":"0xd3e4f9b07d8d50cfc81957761b69efd996ea0e445b65251f73e89b7c6cc775d6","id":"1585518081778012161","networkCode":"CLV","serialized":"41028400f8c7dc5be26161129f9e189b16e5002ee3def0d189e73dfb58e343e5fafdbcad02e1c3680dfb10aa1e53e7f0339298890cd3d621e71206316d970cca3238c5df973782307bcc04d0b94ae085b2fd956e888ce9b50509f1d47eaa2198046c70ba0100000000070000f121b8e5460a7997fbc41b5f26ea3b3280fefebfbecab0bae9b4e70f09795ddb0700e8764817","status":"SIGNED","updatedTime":"2022-10-27T06:25:50.000Z"}]},"body":{"symbol":"CLV","amount":"0.0000001","from":"5Hgu6xq1ETv3kbjBnhqZCzaDFtqUhxfFBogZuJ2RnqsoXmWk","to":"5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT"},"createdTime":"2022-10-27T06:25:47.000Z","id":"1585518099717091330","networkCode":"CLV","status":-2,"transactionParams":{},"type":"TRANSFER","updatedTime":"2022-10-27T06:25:50.000Z"}
+[32mINFO    [0m Common.Http:Http.py:540 2022-10-27 14:25:38.61300 | 
+<-----Send----->
+Url:https://api.cryptoless.io/transactions/1585518081778012161/send
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+[32mINFO    [0m Common.Http:Http.py:546 2022-10-27 14:25:38.61300 | 
+<-----Send Error----->
+400
+{"code":2400000,"message":"INTERNAL: 1012: Transaction is temporarily banned"}
+[32mINFO    [0m Common.Http:Http.py:198 2022-10-27 14:25:38.61300 | 
+<-----Holders----->
+Url:https://api.cryptoless.io/cryptocurrencies/holders?address=5Hgu6xq1ETv3kbjBnhqZCzaDFtqUhxfFBogZuJ2RnqsoXmWk&networkCode=CLV&symbol=CLV
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+[32mINFO    [0m Common.Http:Http.py:201 2022-10-27 14:25:38.61300 | 
+<-----Query Holders Response----->
+[{"address":"5Hgu6xq1ETv3kbjBnhqZCzaDFtqUhxfFBogZuJ2RnqsoXmWk","createdTime":"2022-10-27T03:40:20.000Z","id":"1585476461791735810","networkCode":"CLV","quantity":"0.00001","symbol":"CLV","updatedTime":"2022-10-27T03:40:20.000Z"}]

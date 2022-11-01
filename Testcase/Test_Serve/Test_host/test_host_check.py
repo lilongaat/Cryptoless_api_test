@@ -20,7 +20,8 @@ class Test_host_check:
 
     test_data = [
             # infura                                                        # 测试的节点
-            ("https://mainnet.infura.io/v3/f8167b1c15ae4716976dd317d03b3e7f","https://eth-mainnet.cryptoless.io/v1")
+            # ("https://mainnet.infura.io/v3/f8167b1c15ae4716976dd317d03b3e7f","https://eth-mainnet.cryptoless.io/v1")
+            ("https://mainnet.infura.io/v3/5d6fbdc545934723b28072344efcf9e5","https://eth-mainnet.cryptoless.io/v1")
     ]
 
     @allure.story("RPC_ETH_Host_Check!!")
@@ -635,3 +636,8 @@ class Test_host_check:
             logger.info("<-----Rquest----->"+"\n"+"Url:"+host_test + "\n"+"params:"+str(params)+"\n"+"<-----Response----->" + "\n"+str(test))
 
             assert infura == test
+
+if __name__ == '__main__':
+    path = os.path.abspath(__file__) + ""
+    pytest.main(["-vs", path,'--alluredir=Report/Allure'])
+    os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

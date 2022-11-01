@@ -1,5 +1,7 @@
 import csv
 import datetime
+from decimal import Decimal
+from gevent import config
 from secp256k1 import PrivateKey
 import time
 import random
@@ -87,6 +89,12 @@ class Config():
 
         return signature
 
+    @staticmethod
+    def fee_evm(gas:str, gasPrice:str):
+        gas_int = int(gas,16)
+        gasPrice_int = int(gasPrice,16)
+        gasfee = Decimal(gas_int)*Decimal(gasPrice_int)/Decimal(10**18)
+        return gasfee
 
 if __name__ == '__main__':
     # print(Config.now_timestamp())
@@ -94,12 +102,11 @@ if __name__ == '__main__':
     # print(Config.now_time_second())
     # print(Config.now_time())
     # print(type(Config.random_amount(18)),Config.random_amount(18))
-    print(Config.reader_csv("/Users/lilong/Documents/Test_Api/Address/Top/BTC.csv",10))
+    # print(Config.reader_csv("/Users/lilong/Documents/Test_Api/Address/Top/BTC.csv",10))
     
-    # BTC:dd4e89dbb052b5ba7981c3353b24a0740f6bbc7bfffc20e4808ddb1d42bee65b
-    # ETH:ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187
-    # IRIS:49f38a07d4d0e72d9ecde2baae0506a6aa9718a06a82371eafa30105180ebd85
-    # CLV:053d329fb54f8ab36473e74fd4905644a4d5857836274d3116675bad4cfa4273
-    # privkey = 'ae0f28a2d98211ea6f656ecffa8a821235f78354921d63346c6be48a52610187'
-    # hash = 'd17a0c1af81282532c3c886738bb0f718fc5bfd96688df276b98897412dd61a3'
-    # print(Config.sign(privkey, hash))
+
+    privkey = '4d87c72cee9d4b257368f448f4f7406d0ce98947eb30fcaa8194319303534b13'
+    hash = 'a4a2fcd041343ce2eb27935993273ed72633360f2e7ec57ecf0c3a4ffc309182'
+    print(Config.sign(privkey, hash))
+
+    print(Config.fee_evm("0x45c80","0x12c262656"))

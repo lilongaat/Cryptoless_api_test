@@ -3,6 +3,8 @@ from decimal import Decimal
 import json
 import os
 import sys
+
+from Conf import Config
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from loguru import logger
 from Config.readconfig import ReadConfig
@@ -61,6 +63,20 @@ class DOGE:
         logger.info('\n'+"<-----balance response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
         return response
 
+    @staticmethod
+    # https://dogechain.info/api/simple
+    def block():
+        url = "https://dogechain.info/chain/Dogecoin/q/getblockcount"
+        payload={}
+        headers = {}
+
+        response = requests.request("GET", url, headers=headers, data=payload)
+
+        logger.info('\n'+"<-----block----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'payload:'+json.dumps(payload))
+        response = requests.request("GET", url, headers=headers, data=payload)
+        logger.info('\n'+"<-----block response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
+        return response
+
 class ETH:
     @staticmethod
     def balance(address:str):
@@ -71,6 +87,39 @@ class ETH:
         logger.info('\n'+"<-----balance----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'payload:'+json.dumps(payload))
         response = requests.request("GET", url, headers=headers, data=payload)
         logger.info('\n'+"<-----balance response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
+        return response
+
+    @staticmethod
+    # https://blockchain.coinmarketcap.com/chain/ethereum 
+    # 查询 块信息、价格信息
+    def block():
+        url = "https://blockchain.coinmarketcap.com/api/blocks?symbol=ETH&start=1&limit=50&quote=true"
+        payload={}
+        headers = {
+        'authority': 'blockchain.coinmarketcap.com',
+        'accept': '*/*',
+        'accept-language': 'zh-CN,zh;q=0.9',
+        'cookie': 'sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22182e87f785ea7e-037c0825a51e454-56510c16-2073600-182e87f785fc62%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E8%87%AA%E7%84%B6%E6%90%9C%E7%B4%A2%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC%22%2C%22%24latest_referrer%22%3A%22https%3A%2F%2Fwww.google.com.hk%2F%22%7D%2C%22identities%22%3A%22eyIkaWRlbnRpdHlfY29va2llX2lkIjoiMTgyZTg3Zjc4NWVhN2UtMDM3YzA4MjVhNTFlNDU0LTU2NTEwYzE2LTIwNzM2MDAtMTgyZTg3Zjc4NWZjNjIifQ%3D%3D%22%2C%22history_login_id%22%3A%7B%22name%22%3A%22%22%2C%22value%22%3A%22%22%7D%2C%22%24device_id%22%3A%22182e87f785ea7e-037c0825a51e454-56510c16-2073600-182e87f785fc62%22%7D; _ga=GA1.2.1664231870.1661758046; _gid=GA1.2.1193544221.1662016585; _fbp=fb.1.1662016589906.1009730436; _tt_enable_cookie=1; _ttp=6a64d327-d346-4dc6-a7de-3503846df3b9; next-i18next=en; _gat_UA-40475998-1=1; _hjSessionUser_1295813=eyJpZCI6ImZjMzk2OGY1LTVlNzYtNWE4OC04ZGYwLWU5ZTk4Nzk0MWNhMSIsImNyZWF0ZWQiOjE2NjIwMTY2MzkyMjIsImV4aXN0aW5nIjpmYWxzZX0=; _hjFirstSeen=1; _hjIncludedInSessionSample=0; _hjSession_1295813=eyJpZCI6IjM0Nzk1YjMzLTM5OTEtNDYyMC1hYTJhLWE0YWFiZmJhNmUyNiIsImNyZWF0ZWQiOjE2NjIwMTY2Mzk4NTUsImluU2FtcGxlIjpmYWxzZX0=; _hjIncludedInPageviewSample=1; _hjAbsoluteSessionInProgress=0; intercom-id-h7krdida=edc0dcd2-5893-4b8e-9864-ecec886c9735; intercom-session-h7krdida=; next-i18next=en',
+        'referer': 'https://blockchain.coinmarketcap.com/chain/bitcoin',
+        'sec-ch-ua': '"Chromium";v="104", " Not A;Brand";v="99", "Google Chrome";v="104"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"macOS"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-origin',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.101 Safari/537.36'
+        }
+
+        response = requests.request("GET", url, headers=headers, data=payload)
+        return response
+
+    @staticmethod
+    def block_etherscanapi():
+        url = "https://api.etherscan.io/api?module=proxy&action=eth_blockNumber&apikey=UDIG7EZI6J2VBUZIT6AAKXAKTVRQ64J2CF"
+        payload={}
+        headers = {}
+
+        response = requests.request("GET", url, headers=headers, data=payload)
         return response
 
 class BSC:
@@ -84,6 +133,42 @@ class BSC:
         response = requests.request("GET", url, headers=headers, data=payload)
         logger.info('\n'+"<-----balance response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
         return response
+
+    @staticmethod
+    # https://blockchain.coinmarketcap.com/chain/binance-coin
+    # 查询 块信息、价格信息
+    def block():
+        url = "https://api.bscscan.com/api?module=block&action=getblocknobytime&timestamp="+str(Config.now_timestamp())+"&closest=before&apikey=1N55SHXT8U6N3YX8TZK3U8QV7862XDEG2J"
+        payload={}
+        headers = {}
+
+        logger.info('\n'+"<-----block----->"+"\n"+"Url:"+url+'\n\n')
+        response = requests.request("GET", url, headers=headers, data=payload)
+        logger.info('\n'+"<-----block response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
+        return response
+
+class MATIC:
+    @staticmethod
+    def balance(address:str):
+        url = "https://api.polygonscan.com/api?module=account&action=balance&address="+address+"&apikey=85W6B7V5TPH7TDZA3JQCFT8UN8RKAEMA4Y"
+        payload={}
+        headers = {}
+
+        logger.info('\n'+"<-----balance----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'payload:'+json.dumps(payload))
+        response = requests.request("GET", url, headers=headers, data=payload)
+        logger.info('\n'+"<-----balance response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
+        return response  
+
+    @staticmethod
+    def block():
+        url = "https://api.polygonscan.com/api?module=block&action=getblocknobytime&timestamp="+str(Config.now_timestamp())+"&closest=before&apikey=85W6B7V5TPH7TDZA3JQCFT8UN8RKAEMA4Y"
+        payload={}
+        headers = {}
+
+        logger.info('\n'+"<-----block----->"+"\n"+"Url:"+url+'\n\n')
+        response = requests.request("GET", url, headers=headers, data=payload)
+        logger.info('\n'+"<-----block response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
+        return response     
 
 class ATOM:
     # 网站:https://www.mintscan.io/cosmos/
@@ -160,6 +245,15 @@ class ATOM:
         logger.info('\n'+"<-----price response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
         return response
 
+    @staticmethod
+    def block():
+        url = "https://api.cosmostation.io/v1/status"
+        payload={}
+        headers = {}
+
+        response = requests.request("GET", url, headers=headers, data=payload)
+        return response
+
 class CLV:
     @staticmethod
     # https://clover.subscan.io/
@@ -191,6 +285,19 @@ class CLV:
         logger.info('\n'+"<-----balance response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
         return response
 
+    @staticmethod
+    def block():
+        url = "https://clover.webapi.subscan.io/api/v2/scan/blocks"
+        payload = "{\"row\":25,\"page\":0}"
+        headers = {
+        'sentry-trace': '89b2e03907c247be8ac631d7fa25e2e3-9de03032876be9f4-0',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36',
+        'Content-Type': 'text/plain'
+        }
+
+        response = requests.request("POST", url, headers=headers, data=payload)
+        return response
+
 if __name__ == '__main__':
     # decimal = [a.get("decimal") for a in ATOM.assets().json()["assets"] if a.get("denom") == "uatom"][0]
     # print(decimal)
@@ -205,4 +312,6 @@ if __name__ == '__main__':
     # balance = Decimal(balance_detail["balance"]) - Decimal(balance_detail["lock"]) - Decimal(balance_detail["reserved"])
     # print(balance/Decimal(10**18))
 
-    print(BTC.balance("34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo").json()["balance"])
+    # print(BTC.balance("34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo").json()["balance"])
+    print((ETH.block().json()))
+

@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:288 2022-10-27 11:32:27.577742 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"body": {"from": "0x821647aF7f50717500E008dE239f8692216cBC67", "to": "mpUC1Ypz43ixUQbLnn9PesgQpA6RZr9Lib", "symbol": "GoerliETH", "amount": "2.6491"}, "networkCode": "GOERLI", "type": "transfer", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "Fw5cQki8WK"}}
+[32mINFO    [0m Common.Http:Http.py:294 2022-10-27 11:32:27.577742 | 
+<-----Instructions Response Error----->
+400
+{"code":2102001,"message":"insufficient GOERLI balance"}

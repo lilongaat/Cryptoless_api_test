@@ -1,0 +1,6 @@
+2022-10-26 10:18:26.169 | ERROR    | Common.Http:get_holders:202 - 
+<-----Query Holders Response Error----->{"timestamp":"2022-10-26T02:18:28.320+00:00","path":"/asset/api/cryptocurrencies//holders","status":503,"error":"Service Unavailable","message":"","requestId":"57429eb8-57524"}
+2022-10-26 10:19:31.564 | ERROR    | Common.Http:get_holders:202 - 
+<-----Query Holders Response Error----->{"timestamp":"2022-10-26T02:19:33.714+00:00","path":"/asset/api/cryptocurrencies//holders","status":503,"error":"Service Unavailable","message":"","requestId":"dae4e8d9-57525"}
+2022-10-26 11:47:16.050 | ERROR    | Common.Http:get_staking:223 - 
+<-----Query Staking Response Error----->[]

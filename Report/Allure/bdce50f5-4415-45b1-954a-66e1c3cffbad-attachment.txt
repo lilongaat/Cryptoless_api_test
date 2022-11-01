@@ -1,0 +1,35 @@
+[32mINFO    [0m Common.Http:Http.py:198 2022-10-27 11:32:27.577742 | 
+<-----Holders----->
+Url:https://api.cryptoless.io/cryptocurrencies/holders?address=tb1qwc23lh8cvc8wm086h88905gxt03pkq0pu3cnth&networkCode=BTC&symbol=BTC
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+[32mINFO    [0m Common.Http:Http.py:201 2022-10-27 11:32:27.577742 | 
+<-----Query Holders Response----->
+[{"address":"tb1qwc23lh8cvc8wm086h88905gxt03pkq0pu3cnth","createdTime":"2022-10-26T10:41:32.000Z","id":"1585220074880823298","networkCode":"BTC","quantity":"0.0000001","symbol":"BTC","updatedTime":"2022-10-26T10:41:32.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:288 2022-10-27 11:32:27.577742 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"body": {"from": "tb1qwc23lh8cvc8wm086h88905gxt03pkq0pu3cnth", "to": "tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun", "symbol": "BTC", "amount": "0.00000009"}, "networkCode": "BTC", "type": "transfer", "definiteSignerPublicKeys": [], "transactionParams": {}}
+[32mINFO    [0m Common.Http:Http.py:291 2022-10-27 11:32:27.577742 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-10-27T03:32:40.000Z","description":"Custom Excution","estimatedFee":"1","fee":"-1","hash":"4c8196541eebfd9b99a84d35dc869e0d66be27cbfd789771863a14f79f98d4cb","id":"1585474531044511746","networkCode":"BTC","serialized":"01000000000101147212d4531e10a299272bf89abcea333bb355111c8a5a1f6955345d87dfe8730000000000ffffffff01090000000000000016001400dc7e0ab28be8ed2643aedd343eaf833d611ef802473044022070862578037512a4329594a1a75acc89bb652d110143113408ccc1df470b5e560220750e97f1ce4098ca251aab97b257e05bf0c0cd11abace0fd8f6afdd4fe8a81f901210346d8d48aac4663ca57f2b7d53fee3757a29499d3c4c523f471ebc947a77e23aa00000000","status":"SIGNED","updatedTime":"2022-10-27T03:32:44.000Z"}]},"body":{"symbol":"BTC","amount":"0.00000009","from":"tb1qwc23lh8cvc8wm086h88905gxt03pkq0pu3cnth","to":"tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun"},"createdTime":"2022-10-27T03:32:40.000Z","id":"1585474531484954625","networkCode":"BTC","status":-2,"transactionParams":{},"type":"TRANSFER","updatedTime":"2022-10-27T03:32:44.000Z"}
+[32mINFO    [0m Common.Http:Http.py:540 2022-10-27 11:32:27.577742 | 
+<-----Send----->
+Url:https://api.cryptoless.io/transactions/1585474531044511746/send
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+[32mINFO    [0m Common.Http:Http.py:546 2022-10-27 11:32:27.577742 | 
+<-----Send Error----->
+400
+{"code":2400000,"message":"INTERNAL: 500 - {\"result\":null,\"error\":{\"code\":-26,\"message\":\"min relay fee not met, 1 \u003C 110\"},\"id\":1666841564370}"}
+[32mINFO    [0m Common.Http:Http.py:198 2022-10-27 11:32:27.577742 | 
+<-----Holders----->
+Url:https://api.cryptoless.io/cryptocurrencies/holders?address=tb1qwc23lh8cvc8wm086h88905gxt03pkq0pu3cnth&networkCode=BTC&symbol=BTC
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+[32mINFO    [0m Common.Http:Http.py:201 2022-10-27 11:32:27.577742 | 
+<-----Query Holders Response----->
+[{"address":"tb1qwc23lh8cvc8wm086h88905gxt03pkq0pu3cnth","createdTime":"2022-10-26T10:41:32.000Z","id":"1585220074880823298","networkCode":"BTC","quantity":"0.0000001","symbol":"BTC","updatedTime":"2022-10-26T10:41:32.000Z"}]

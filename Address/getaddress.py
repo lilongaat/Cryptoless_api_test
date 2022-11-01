@@ -141,6 +141,31 @@ def rich_address_atom(page_num:int): # 10Xpage_num
   data = frame.drop_duplicates(subset=['address'], keep='first', inplace=False)
   data.to_csv(path, header=None , index= 0,encoding='utf8')
 
+# MATIC
+# https://polygonscan.com/accounts
+def rich_address_matic(page_num:int): # 100Xpage_num
+  path = "/Users/lilong/Documents/Test_Api/Address/Top/MATIC.csv"
+  with open(path,'w+') as f: # 清空文件
+    f.truncate()
+    f.close()
+
+  for i in range(page_num):
+    url = "https://polygonscan.com/accounts/"+str(i+1)+"?ps=100"
+    payload={}
+    headers={}
+    response = requests.request("GET", url, headers=headers, data=payload)
+
+    soup = BeautifulSoup(response.text, 'lxml').body
+    with open(path,'a+') as f:
+      for tr in soup.find_all("tr"):
+        for td in tr.find_all("td"):
+          for a in td.find_all("a"):
+            if "/address/" in a.get('href'):
+              address = a.get('href').split("/address/")[1]
+              csv_write = csv.writer(f)
+              csv_write.writerow([address])
+      f.close()
+
 # ETH
 # 网站:https://cn.etherscan.com/accounts
 def rich_address_eth(page_num:int): # 100Xpage_num
@@ -284,12 +309,13 @@ def rich_address_clv(page_num:int): # 25Xpage_num
   data.to_csv(path, header=None , index= 0,encoding='utf8')
 
 
-rich_address("bitcoin","BTC",100)
+# rich_address("bitcoin","BTC",100)
 # rich_address("dogecoin","DOGE",100)
 # rich_address("litecoin","LTC",100)
 # rich_address("bitcoin%20cash","BCH",100)
 # rich_address_bsc(100)
 # rich_address_atom(1000)
+rich_address_matic(100)
 # rich_address_eth(100)
 # rich_address_dot(100)
 # rich_address_clv(100)

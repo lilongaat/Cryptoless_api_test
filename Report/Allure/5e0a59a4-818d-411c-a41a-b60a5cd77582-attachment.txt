@@ -1,0 +1,35 @@
+[32mINFO    [0m Common.Http:Http.py:198 2022-10-27 11:32:27.577742 | 
+<-----Holders----->
+Url:https://api.cryptoless.io/cryptocurrencies/holders?address=0x86cfeDCb5cC8826eA804Fc516Da72a6D2801F0d1&networkCode=MATIC&symbol=MATIC
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+[32mINFO    [0m Common.Http:Http.py:201 2022-10-27 11:32:27.577742 | 
+<-----Query Holders Response----->
+[{"address":"0x86cfeDCb5cC8826eA804Fc516Da72a6D2801F0d1","createdTime":"2022-10-26T10:49:40.000Z","id":"1585222121583734786","networkCode":"MATIC","quantity":"0.00001","symbol":"MATIC","updatedTime":"2022-10-26T10:49:41.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:288 2022-10-27 11:32:27.577742 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"body": {"from": "0x86cfeDCb5cC8826eA804Fc516Da72a6D2801F0d1", "to": "0xdba67baa3ca1e89a2bdf0feee4592595b130888a", "symbol": "MATIC", "amount": "0.00000001"}, "networkCode": "MATIC", "type": "transfer", "definiteSignerPublicKeys": [], "transactionParams": {}}
+[32mINFO    [0m Common.Http:Http.py:291 2022-10-27 11:32:27.577742 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-10-27T03:32:56.000Z","description":"Send 0.00000001 MATIC","estimatedFee":"1276120178487000","fee":"-1","hash":"0x4d5fece5a2e64a4a99ff6319a240632173535b8e2b53ac9c86db862bca60fa76","id":"1585474591186636801","networkCode":"MATIC","serialized":"f86b80850e2608691b82520894dba67baa3ca1e89a2bdf0feee4592595b130888a8502540be40080820136a0eaff2212c3a0b25bb39f324928d44093ead3df29ecbde422bdccc590b36d6b90a0393dedb6b3eb084da9cb8bdf3ccda3134d070b63cc4739779b4535ca1d7a4314","status":"SIGNED","updatedTime":"2022-10-27T03:33:00.000Z"}]},"body":{"symbol":"MATIC","amount":"0.00000001","from":"0x86cfeDCb5cC8826eA804Fc516Da72a6D2801F0d1","to":"0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A"},"createdTime":"2022-10-27T03:32:56.000Z","id":"1585474601374642177","networkCode":"MATIC","status":-2,"transactionParams":{},"type":"TRANSFER","updatedTime":"2022-10-27T03:33:00.000Z"}
+[32mINFO    [0m Common.Http:Http.py:540 2022-10-27 11:32:27.577742 | 
+<-----Send----->
+Url:https://api.cryptoless.io/transactions/1585474591186636801/send
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+[32mINFO    [0m Common.Http:Http.py:546 2022-10-27 11:32:27.577742 | 
+<-----Send Error----->
+400
+{"code":2400000,"message":"INTERNAL: Returned error: insufficient funds for gas * price + value"}
+[32mINFO    [0m Common.Http:Http.py:198 2022-10-27 11:32:27.577742 | 
+<-----Holders----->
+Url:https://api.cryptoless.io/cryptocurrencies/holders?address=0x86cfeDCb5cC8826eA804Fc516Da72a6D2801F0d1&networkCode=MATIC&symbol=MATIC
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+[32mINFO    [0m Common.Http:Http.py:201 2022-10-27 11:32:27.577742 | 
+<-----Query Holders Response----->
+[{"address":"0x86cfeDCb5cC8826eA804Fc516Da72a6D2801F0d1","createdTime":"2022-10-26T10:49:40.000Z","id":"1585222121583734786","networkCode":"MATIC","quantity":"0.00001","symbol":"MATIC","updatedTime":"2022-10-26T10:49:41.000Z"}]

@@ -1,0 +1,5 @@
+from decimal import Decimal
+
+assert Decimal("1897677004426153290")/Decimal(10**18) == Decimal("1.898696055779133916") - Decimal("0.001019051352980626")
+
+assert Decimal("459375573119585726645690")/Decimal(10**18) == Decimal("59718.824505546144463939") + Decimal("399656.748614039582181751")
