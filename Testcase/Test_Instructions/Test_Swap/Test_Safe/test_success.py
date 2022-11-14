@@ -11,55 +11,58 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(
 from Common import Http, Conf
 from Common.Loguru import logger
 
-token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTczOTM3MDIxNzEzNzc2NjQyIiwiZXhwIjoxNjY0Njk1NjE2LCJpYXQiOjE2NjQwOTA4MTYsInVzZXJJZCI6MTU3MzkzNzAyMTcxMzc3NjY0Mn0.TfkTJsH4rp4FCmciMn1BUVlnev1JPI7glaTUjyVUz8M"
-web3token = "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU3MzkzNzAyMTcxMzc3NjY0MlxuSXNzdWVkIEF0OiBTdW4sIDI1IFNlcCAyMDIyIDA3OjI2OjQyIEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBXZWQsIDIyIFNlcCAyMDMyIDA3OjI2OjQyIEdNVCIsInNpZ25hdHVyZSI6IjB4MDdhMzI4M2IxY2JmNWRkOTQwNTFhNWM5NjYxNWM4NTY5ZDQ0ZGEzZTJkODIzZGI4NzE5YjA0YWUwYmRhZWE4NzY4OTZiZGY5ZjEzZTU3YWUxMDRjNTExZDMwODQwMTgxMjE5Zjg1Y2ExZTkwNTIwYzgxMjRlM2I3MjAwNmI1YjUxYiJ9"
+from Config.readconfig import ReadConfig
+env_type = int(ReadConfig().get_env('type'))
 
 # safe
-@allure.feature("Transfers_Success!")
-class Test_transfers_success:
-    test_data = [
-        # MATIC网络
-        # ("Safe2-2账户MATIC转账",["4d87c72cee9d4b257368f448f4f7406d0ce98947eb30fcaa8194319303534b13"],"MATIC","MATIC","0x584f8BD2E046BFDEb786Ab63482f6740E4d827D1","0x5981B8b531ee7f8ECf1b72138031Ca2D4cDB6E8E",str(Conf.Config.random_amount(4))),
-        # ("Safe2-2账户USDC转账",["4d87c72cee9d4b257368f448f4f7406d0ce98947eb30fcaa8194319303534b13"],"MATIC","USDC","0x584f8BD2E046BFDEb786Ab63482f6740E4d827D1","0x5981B8b531ee7f8ECf1b72138031Ca2D4cDB6E8E",str(Conf.Config.random_amount(5))),
-        # ("Safe2-2账户MATIC转账self",["4d87c72cee9d4b257368f448f4f7406d0ce98947eb30fcaa8194319303534b13"],"MATIC","MATIC","0x584f8BD2E046BFDEb786Ab63482f6740E4d827D1","0x584f8BD2E046BFDEb786Ab63482f6740E4d827D1",str(Conf.Config.random_amount(4))),
-        # ("Safe2-2账户USDC转账self",["4d87c72cee9d4b257368f448f4f7406d0ce98947eb30fcaa8194319303534b13"],"MATIC","USDC","0x584f8BD2E046BFDEb786Ab63482f6740E4d827D1","0x584f8BD2E046BFDEb786Ab63482f6740E4d827D1",str(Conf.Config.random_amount(5))),
-        # ("Safe2-3账户MATIC转账",["4d87c72cee9d4b257368f448f4f7406d0ce98947eb30fcaa8194319303534b13"],"MATIC","MATIC","0x276812F8cF009a9D6e69d0FBaF94Edc19D79b9Df","0x5981B8b531ee7f8ECf1b72138031Ca2D4cDB6E8E",str(Conf.Config.random_amount(4))),
-        # ("Safe2-3账户USDC转账",["4d87c72cee9d4b257368f448f4f7406d0ce98947eb30fcaa8194319303534b13"],"MATIC","USDC","0x276812F8cF009a9D6e69d0FBaF94Edc19D79b9Df","0x5981B8b531ee7f8ECf1b72138031Ca2D4cDB6E8E",str(Conf.Config.random_amount(5))),
-        # IRIS网络
-        # ("Safe2-2账户IRIS转账",["050e2d7791425a80046e4a8ec2c5f0d48964453603d7cbbfb5d5cbecb76f0591"],"IRIS","IRIS","iaa1nwg4qcr07un797xk72c5vph4xaay02zdvaejxl","iaa18hxtn9lx9swxf4j7ytdmn8yxsvyknh86kdgpvc",str(Conf.Config.random_amount(4))),
-        ("Safe2-2账户IRIS转账",["050e2d7791425a80046e4a8ec2c5f0d48964453603d7cbbfb5d5cbecb76f0591"],"IRIS","IRIS","iaa1nwg4qcr07un797xk72c5vph4xaay02zdvaejxl","iaa1nwg4qcr07un797xk72c5vph4xaay02zdvaejxl",str(Conf.Config.random_amount(4))),
-        #BTC网络
-        # ("Safe2-2账户BTC转账",["254e6db4f76209b7cb501e36dbb7d050dd1ff95f6c4d4b951d186b35ad7b295d"],"BTC","BTC","tb1qzd9jum9sels7zuezp0t575tkyttdaklgvzu2cdvfgx6agzj3v63qquf4k7","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq",str(Conf.Config.random_amount(6))),
-        # ("Safe2-3账户BTC转账",["254e6db4f76209b7cb501e36dbb7d050dd1ff95f6c4d4b951d186b35ad7b295d"],"BTC","BTC","tb1qvnuj9aer9m9a4vm4rjnypdchfyrjrrp22tenzjrx9ajt6fjlzwuqrrkclj","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq",str(Conf.Config.random_amount(7))),
-    ]
+@allure.feature("Swap_Success!")
+class Test_swap_success:
+    if env_type == 0: #测试
+        test_data = [
+            # MATIC网络2-2
+            # ("正常SWAP(MATIC-USDC)",["dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da"],"MATIC","MATIC","USDC","0x42aD4f9111c14C1beE0c142EF275Ee08AA7B1E5e","1",str(Conf.Config.random_amount(4))),
+            # ("正常SWAP(USDC-MATIC)",["dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da"],"MATIC","USDC","MATIC","0x42aD4f9111c14C1beE0c142EF275Ee08AA7B1E5e","1",str(Conf.Config.random_amount(4))),
+            # ("正常SWAP(USDC-USDT)",["dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da"],"MATIC","USDC","USDT","0x42aD4f9111c14C1beE0c142EF275Ee08AA7B1E5e","1",str(Conf.Config.random_amount(4))),
+            # MATIC网络2-3
+            ("正常SWAP(MATIC-USDC)",["dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da"],"MATIC","MATIC","USDC","0x1037477a2e863DA6f242ee06E106E8116857bF6E","1",str(Conf.Config.random_amount(4))),
+            # ("正常SWAP(USDC-MATIC)",["dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da"],"MATIC","USDC","MATIC","0x1037477a2e863DA6f242ee06E106E8116857bF6E","1",str(Conf.Config.random_amount(4))),
+            # ("正常SWAP(USDC-USDT)",["dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da"],"MATIC","USDC","USDT","0x1037477a2e863DA6f242ee06E106E8116857bF6E","1",str(Conf.Config.random_amount(4))),
+        ]
+    if env_type == 1: #生产
+        test_data = [
+            # MATIC网络2-2
+            ("正常SWAP(MATIC-USDC)",["100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33"],"MATIC","MATIC","USDC","0x266d59b84c1CDc55E8fE11C5e27810de581C8037","1",str(Conf.Config.random_amount(4))),
+            # ("正常SWAP(USDC-MATIC)",["100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33"],"MATIC","USDC","MATIC","0x266d59b84c1CDc55E8fE11C5e27810de581C8037","1",str(Conf.Config.random_amount(4))),
+            # ("正常SWAP(USDC-USDT)",["100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33"],"MATIC","USDC","USDT","0x266d59b84c1CDc55E8fE11C5e27810de581C8037","1",str(Conf.Config.random_amount(4))),
+        ]
 
-    @allure.story("Safe_Transfers_Success!")
+    @allure.story("Safe_Swap_Success!")
     @allure.title('{test_title}')
-    @pytest.mark.parametrize('test_title,privatekey,networkCode,symbol,from_add,to_add,amount', test_data)
-    def test_safe(self,test_title,privatekey,networkCode,symbol,from_add,to_add,amount):
+    @pytest.mark.parametrize('test_title,privatekey,networkCode,from_coin,to_coin,address,slippage,fromAmount', test_data)
+    def test_safe(self,test_title,privatekey,networkCode,from_coin,to_coin,address,slippage,fromAmount):
 
-        with allure.step("查询From账户holders信息——holders"):
-            holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add,web3token)
+        with allure.step("查询账户from_coin holders信息——holders"):
+            holders = Http.HttpUtils.get_holders(networkCode,from_coin,address)
+            assert holders.status_code == 200
+
+        with allure.step("查询账户to_coin holders信息——holders"):
+            holders = Http.HttpUtils.get_holders(networkCode,to_coin,address)
             assert holders.status_code == 200
 
         with allure.step("构建交易——instructions"):
             body = {
-                "from":from_add,
-                "to":to_add,
-                "symbol":symbol,
-                "amount":amount
+                "from":from_coin,
+                "to":to_coin,
+                "address":address,
+                "fromAmount":fromAmount,
+                "slippage":slippage
             }
             transactionParams = {
                 "memo":''.join(random.sample(string.ascii_letters + string.digits, 10))
             }
-            transfer = Http.HttpUtils.instructions("transfer",body,networkCode,[],transactionParams,token)
+            transfer = Http.HttpUtils.instructions("swap",body,networkCode,[],transactionParams)
 
             assert transfer.status_code == 200
-            assert transfer.json()["_embedded"]["transactions"][0]["status"] == "BUILDING"
-            assert transfer.json()["body"]["symbol"] == symbol
-            assert transfer.json()["body"]["amount"] == amount
-            assert transfer.json()["body"]["from"] == from_add
-            assert transfer.json()["body"]["to"] == to_add
 
             id = transfer.json()["_embedded"]["transactions"][0]["id"]
             requiredSignings = transfer.json()["_embedded"]["transactions"][0]["requiredSignings"]
@@ -78,9 +81,22 @@ class Test_transfers_success:
                 signatures.append(signature)
 
         with allure.step("签名交易——instructions"):
-            sign = Http.HttpUtils.sign(id,signatures,serialized,token)
+            sign = Http.HttpUtils.sign(id,signatures,serialized)
             assert sign.status_code == 200
-            assert sign.json()["status"] == "PENDING"
+            assert sign.json()["status"] == "SIGNED"
+
+        with allure.step("广播交易"):
+            send = Http.HttpUtils.send(id)
+            assert send.status_code == 200
+            assert send.json()["status"] == "PENDING"
+
+        # with allure.step("查询账户from_coin holders信息——holders"):
+        #     holders = Http.HttpUtils.get_holders(networkCode,from_coin,address)
+        #     assert holders.status_code == 200
+
+        # with allure.step("查询账户to_coin holders信息——holders"):
+        #     holders = Http.HttpUtils.get_holders(networkCode,to_coin,address)
+        #     assert holders.status_code == 200
 
 if __name__ == '__main__':
     path = os.path.abspath(__file__) + ""

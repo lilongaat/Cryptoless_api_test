@@ -1,0 +1,16 @@
+2022-11-09 11:27:55.920 | ERROR    | Common.Http:create_safe_account:188 - 
+<-----Create account Response Error----->{"code":1400000,"message":"Request method 'POST' not supported"}
+2022-11-09 11:30:57.705 | ERROR    | Common.Http:create_safe_account:188 - 
+<-----Create account Response Error----->{"code":1400000,"message":"Request method 'POST' not supported"}
+2022-11-09 11:53:43.003 | ERROR    | Common.Http:activation_safe_account:210 - 
+<-----Activation account Response Error----->{"code":2100000,"message":"accountId not null"}
+2022-11-09 14:29:41.955 | ERROR    | Common.Http:activation_safe_account:210 - 
+<-----Activation account Response Error----->{"code":2100000,"message":"accountId not null"}
+2022-11-09 15:19:54.306 | ERROR    | Common.Http:get_account_byid:268 - 
+<-----Query Account Byid Response Error----->{"code":2200000,"message":"account not found"}
+2022-11-09 17:10:37.145 | ERROR    | Common.Http:activation_safe_account:232 - 
+<-----Activation account Response Error----->{"code":2200000,"message":"account not found"}
+2022-11-09 17:14:46.779 | ERROR    | Common.Http:activation_safe_account:232 - 
+<-----Activation account Response Error----->{"code":2200000,"message":"account not found"}
+2022-11-09 18:40:26.765 | ERROR    | Common.Http:activation_safe_account:232 - 
+<-----Activation account Response Error----->{"code":2400000,"message":"INTERNAL: EIP-1559 not enabled on Common"}

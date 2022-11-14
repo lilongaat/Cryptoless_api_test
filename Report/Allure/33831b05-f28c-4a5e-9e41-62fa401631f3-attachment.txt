@@ -1,0 +1,18 @@
+[32mINFO    [0m Common.Http:Http.py:198 2022-11-04 10:59:34.307827 | 
+<-----Holders----->
+Url:https://api.cryptoless.io/cryptocurrencies/holders?address=0x821647aF7f50717500E008dE239f8692216cBC67&networkCode=GOERLI&symbol=GoerliETH
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+[32mINFO    [0m Common.Http:Http.py:201 2022-11-04 10:59:34.307827 | 
+<-----Query Holders Response----->
+[]
+[32mINFO    [0m Common.Http:Http.py:288 2022-11-04 10:59:34.307827 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"body": {"from": "0x821647aF7f50717500E008dE239f8692216cBC67", "to": "0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3", "symbol": "GoerliETH", "amount": "0.00000007"}, "networkCode": "GOERLI", "type": "transfer", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "FzcptrZ7D8"}}
+[32mINFO    [0m Common.Http:Http.py:291 2022-11-04 10:59:34.307827 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-11-04T02:59:47.000Z","createdTime":"2022-11-04T02:59:41.000Z","description":"Send 0.00000007 GoerliETH","estimatedFee":"21000000000","fee":"-1","hash":"0x1828ddac4fbc38f70c4d525f80bbb9fa0828c848ef5c343967187a64776ceac2","id":"1588365325095100417","networkCode":"GOERLI","serialized":"02f86f0505830f42408502cc99c61682520894bdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe385104c533c0080c080a0dea7bda6918f27a11a767f31ac818458ba8c5d2e43110c74adb94e1851d803f1a070fd48af7155c15182708851ab5eb01a19ff8aabb1e5a091b5f55bd166b1d1df","status":"PENDING","updatedTime":"2022-11-04T02:59:47.000Z"}]},"body":{"symbol":"GoerliETH","amount":"0.00000007","from":"0x821647aF7f50717500E008dE239f8692216cBC67","to":"0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3"},"createdTime":"2022-11-04T02:59:41.000Z","id":"1588365336453251073","networkCode":"GOERLI","status":-1,"transactionParams":{"memo":"FzcptrZ7D8"},"type":"TRANSFER","updatedTime":"2022-11-04T02:59:47.000Z"}

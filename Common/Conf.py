@@ -105,8 +105,8 @@ if __name__ == '__main__':
     # print(Config.reader_csv("/Users/lilong/Documents/Test_Api/Address/Top/BTC.csv",10))
     
 
-    privkey = '4d87c72cee9d4b257368f448f4f7406d0ce98947eb30fcaa8194319303534b13'
-    hash = 'a4a2fcd041343ce2eb27935993273ed72633360f2e7ec57ecf0c3a4ffc309182'
+    privkey = 'dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da'
+    hash = '8860e56e093b8e0095863903fc2b7737f85b8fe3d1b23fe30533b05104d70e4a'
     print(Config.sign(privkey, hash))
 
-    print(Config.fee_evm("0x45c80","0x12c262656"))
+    # print(Config.fee_evm("0x5208","0x1dcd65000"))

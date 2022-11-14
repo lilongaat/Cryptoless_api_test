@@ -1,0 +1,20 @@
+[32mINFO    [0m Common.Http:Http.py:288 2022-11-04 18:33:56.820602 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"body": {"from": "USDC", "to": "MATIC", "address": "0x343d0b801Fcb032ccEB7D5411cd404816d203B91", "fromAmount": "0.008", "slippage": "1"}, "networkCode": "MATIC", "type": "swap", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "YpJBfNogOS"}}
+[32mINFO    [0m Common.Http:Http.py:291 2022-11-04 18:33:56.820602 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-11-04T10:34:08.000Z","description":"Contract Execution","estimatedFee":"5322052037766656","fee":"-1","hash":"0x75f6d3f1630d6d24352a7b3bd81c7d5bb52671d90c0e26e516531813de2d44af","id":"1588479691706519553","networkCode":"MATIC","serialized":"f8ac1a8512d58b41ee83010100942791bca1f2de4661ed88a30c99a7a9449aa8417480b844095ea7b30000000000000000000000001111111254fb6c44bac0bed2854e76f90643097d1999999999999999999999999999999999999999999999999999999999999999820136a05ddcc91ed8381da09e9d9b7e387adeb992b8277b3062e54d15a44348c05f73a9a03edb9138acffe4011f40d37b837641e7e716cd5ec84d2957ec07bcc59ec32ef1","status":"SIGNED","updatedTime":"2022-11-04T10:34:11.000Z"}]},"body":{"address":"0x343d0b801Fcb032ccEB7D5411cd404816d203B91","fromAmount":"0.008","toAmount":"0.007254111424412042","from":"USDC","to":"MATIC","slippage":1},"createdTime":"2022-11-04T10:34:08.000Z","id":"1588479700099371010","networkCode":"MATIC","status":-2,"transactionParams":{"memo":"YpJBfNogOS"},"type":"SWAP","updatedTime":"2022-11-04T10:34:08.000Z"}
+[32mINFO    [0m Common.Http:Http.py:475 2022-11-04 18:33:56.820602 | 
+<-----Send----->
+Url:https://api.cryptoless.io/vault/transactions/1588479691706519553
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:479 2022-11-04 18:33:56.820602 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-11-04T10:34:12.145Z","createdTime":"2022-11-04T10:34:08.000Z","description":"Contract Execution","estimatedFee":"5322052037766656","fee":"-1","hash":"0x75f6d3f1630d6d24352a7b3bd81c7d5bb52671d90c0e26e516531813de2d44af","id":"1588479691706519553","networkCode":"MATIC","serialized":"f8ac1a8512d58b41ee83010100942791bca1f2de4661ed88a30c99a7a9449aa8417480b844095ea7b30000000000000000000000001111111254fb6c44bac0bed2854e76f90643097d1999999999999999999999999999999999999999999999999999999999999999820136a05ddcc91ed8381da09e9d9b7e387adeb992b8277b3062e54d15a44348c05f73a9a03edb9138acffe4011f40d37b837641e7e716cd5ec84d2957ec07bcc59ec32ef1","status":"PENDING","updatedTime":"2022-11-04T10:34:12.145Z"}

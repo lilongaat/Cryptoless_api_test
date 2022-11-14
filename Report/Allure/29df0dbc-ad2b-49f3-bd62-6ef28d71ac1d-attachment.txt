@@ -1,0 +1,38 @@
+[32mINFO    [0m Common.Http:Http.py:216 2022-11-08 16:53:18.720006 | 
+<-----Holders----->
+Url:https://api.cryptoless.net/cryptocurrencies/holders?address=0x9b532cf5F662e51ba643672797Ad3eC1A60bb939&networkCode=BSC&symbol=USDC
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4MzAxOTk1NTUzMDg5NTM2MVxuSXNzdWVkIEF0OiBUaHUsIDIwIE9jdCAyMDIyIDA4OjU5OjAzIEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTdW4sIDE3IE9jdCAyMDMyIDA4OjU5OjAzIEdNVCIsInNpZ25hdHVyZSI6IjB4MDA4NTA0NmM1YmYwYWFkZjkwMjIyMWFhNGU0OTFjODllYTU5ZTAxZGQ2ODIwNTdkMDU0Y2U2MzcyNTdkYTE2ZTIyNTJlMzYxYWJmNjE4ZmEwOWJmODVmYjEwM2RjMmZhYzg4MzFkODNmMDcwNGZlMjdhZmUzYTdjYWY0NGE2YjYxYyJ9"}
+[32mINFO    [0m Common.Http:Http.py:219 2022-11-08 16:53:18.720006 | 
+<-----Query Holders Response----->
+[{"address":"0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","createdTime":"2022-10-24T06:48:01.000Z","id":"1584436532394545154","networkCode":"BSC","quantity":"0.09999987","symbol":"USDC","updatedTime":"2022-11-07T07:20:44.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:306 2022-11-08 16:53:18.720006 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTgzMDE5OTU1NTMwODk1MzYxIiwiZXhwIjoxNjY4NDA2MDg4LCJpYXQiOjE2Njc4MDEyODgsInVzZXJJZCI6MTU4MzAxOTk1NTUzMDg5NTM2MX0.t8TZeGPZfNhs1U3syLsqgadq1-RKf_GU2nGWQWoWW9w"}
+
+Body:{"body": {"from": "0x9b532cf5F662e51ba643672797Ad3eC1A60bb939", "to": "0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A", "symbol": "USDC", "amount": "0.00000006"}, "networkCode": "BSC", "type": "transfer", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "NGdRPpTUng"}}
+[32mINFO    [0m Common.Http:Http.py:309 2022-11-08 16:53:18.720006 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-11-08T08:53:21.000Z","createdTime":"2022-11-08T08:53:21.000Z","description":"Contract Execution","estimatedFee":"195180000000000","fee":"0","hash":"","id":"1589903886943498241","networkCode":"BSC","requiredSignings":[{"hash":"4feb23e0c355d2d73f1334e8e0169933cb7378791fa30f9dfb79627d0a01a10d","publicKeys":["02e1cf1f9502c433efd31a1e7c8948b5e9a6d1929a8cbd3d97dcc11d4b358c6dec"],"threshold":1}],"serialized":"f8690885012a05f20082987c948ac76a51cc950d9822d68b83fe1ad97b32cd580d80b844a9059cbb000000000000000000000000dba67baa3ca1e89a2bdf0feee4592595b130888a0000000000000000000000000000000000000000000000000000000df8475800808080","status":"BUILDING","updatedTime":"2022-11-08T08:53:21.000Z"}]},"body":{"symbol":"USDC","amount":"0.00000006","from":"0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","to":"0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A"},"createdTime":"2022-11-08T08:53:21.000Z","id":"1589903891511095297","networkCode":"BSC","status":-2,"transactionParams":{"memo":"NGdRPpTUng"},"type":"TRANSFER","updatedTime":"2022-11-08T08:53:21.000Z"}
+[32mINFO    [0m Common.Http:Http.py:474 2022-11-08 16:53:18.720006 | 
+<-----Sign----->
+Url:https://api.cryptoless.net/vault/transactions/1589903886943498241/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTgzMDE5OTU1NTMwODk1MzYxIiwiZXhwIjoxNjY4NDA2MDg4LCJpYXQiOjE2Njc4MDEyODgsInVzZXJJZCI6MTU4MzAxOTk1NTUzMDg5NTM2MX0.t8TZeGPZfNhs1U3syLsqgadq1-RKf_GU2nGWQWoWW9w"}
+
+Body:{"signatures": [{"hash": "4feb23e0c355d2d73f1334e8e0169933cb7378791fa30f9dfb79627d0a01a10d", "publicKey": "02e1cf1f9502c433efd31a1e7c8948b5e9a6d1929a8cbd3d97dcc11d4b358c6dec", "signature": "42039a0874e8abb813351c073381c7d648eff178096c62bc7adfdd905876747e2eb39c14c199ab4044884040daff3ca0a9390f3d6f35aebbecc618a072c89b7401"}], "serialized": "f8690885012a05f20082987c948ac76a51cc950d9822d68b83fe1ad97b32cd580d80b844a9059cbb000000000000000000000000dba67baa3ca1e89a2bdf0feee4592595b130888a0000000000000000000000000000000000000000000000000000000df8475800808080"}
+[32mINFO    [0m Common.Http:Http.py:478 2022-11-08 16:53:18.720006 | 
+<-----Sign Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-11-08T08:53:21.000Z","description":"Contract Execution","estimatedFee":"195180000000000","fee":"0","hash":"0xfeec17e0e14227cb08af33b34bed37f2a0a2f64bc8ca9a5827276fe0f8d4711c","id":"1589903886943498241","networkCode":"BSC","serialized":"f8aa0885012a05f20082987c948ac76a51cc950d9822d68b83fe1ad97b32cd580d80b844a9059cbb000000000000000000000000dba67baa3ca1e89a2bdf0feee4592595b130888a0000000000000000000000000000000000000000000000000000000df84758008194a042039a0874e8abb813351c073381c7d648eff178096c62bc7adfdd905876747ea02eb39c14c199ab4044884040daff3ca0a9390f3d6f35aebbecc618a072c89b74","status":"SIGNED","updatedTime":"2022-11-08T08:53:21.760Z"}
+[32mINFO    [0m Common.Http:Http.py:493 2022-11-08 16:53:18.720006 | 
+<-----Send----->
+Url:https://api.cryptoless.net/vault/transactions/1589903886943498241
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTgzMDE5OTU1NTMwODk1MzYxIiwiZXhwIjoxNjY4NDA2MDg4LCJpYXQiOjE2Njc4MDEyODgsInVzZXJJZCI6MTU4MzAxOTk1NTUzMDg5NTM2MX0.t8TZeGPZfNhs1U3syLsqgadq1-RKf_GU2nGWQWoWW9w"}
+
+
+[32mINFO    [0m Common.Http:Http.py:497 2022-11-08 16:53:18.720006 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-11-08T08:53:22.294Z","createdTime":"2022-11-08T08:53:21.000Z","description":"Contract Execution","estimatedFee":"195180000000000","fee":"0","hash":"0xfeec17e0e14227cb08af33b34bed37f2a0a2f64bc8ca9a5827276fe0f8d4711c","id":"1589903886943498241","networkCode":"BSC","serialized":"f8aa0885012a05f20082987c948ac76a51cc950d9822d68b83fe1ad97b32cd580d80b844a9059cbb000000000000000000000000dba67baa3ca1e89a2bdf0feee4592595b130888a0000000000000000000000000000000000000000000000000000000df84758008194a042039a0874e8abb813351c073381c7d648eff178096c62bc7adfdd905876747ea02eb39c14c199ab4044884040daff3ca0a9390f3d6f35aebbecc618a072c89b74","status":"PENDING","updatedTime":"2022-11-08T08:53:22.294Z"}

@@ -1,0 +1,21 @@
+[32mINFO    [0m Common.Http:Http.py:454 2022-11-11 14:41:37.96287 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk5NjAyNjg2LCJpYXQiOjE2NjgwNjY2ODYsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.crnXQzc0JOD7wPow9R3P3-uZrJmzOeUF6WOqy5OhxqY"}
+
+Body:{"body": {"delegator": "iaa180qh39f68devetnda4t28drsrhgxnjha5eqhus", "coinSymbol": "IRIS", "amount": "0.000001"}, "networkCode": "IRIS", "type": "stake", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "TbShmMes1j"}}
+[32mINFO    [0m Common.Http:Http.py:457 2022-11-11 14:41:37.96287 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-11-11T06:41:38.000Z","description":"Custom Excution","estimatedFee":"31028","fee":"-1","hash":"F644587E905E207E1153499222F8AA5297906E90676B6B1248C743A8DC7B5A55","id":"1590957906769461249","networkCode":"IRIS","serialized":"0a9a010a8b010a232f636f736d6f732e7374616b696e672e763162657461312e4d736744656c656761746512640a2a6961613138307168333966363864657665746e646134743238647273726867786e6a6861356571687573122a697661313534336e6a347a3037766a717a747675333335386672327a326863703071746d6365616e6b351a0a0a057569726973120131120a546253686d4d6573316a12680a500a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2103d8b4472406dad5905c4b75d4b6ae9df1918627b5db8a46ed3497bc973840bab312040a020801180812140a0e0a057569726973120533313032381081bc091a403a1910197bafd753fa527af2778c3a93b95e6490f1cddd319c77cc125e9307e952e4385b30d0a5a6fc2d3d1b87e6549b5fc09ae7242a8643391c309d91904e81","status":"SIGNED","updatedTime":"2022-11-11T06:41:42.000Z"}]},"body":{"amount":"0.000001","coinSymbol":"IRIS","delegator":"iaa180qh39f68devetnda4t28drsrhgxnjha5eqhus"},"createdTime":"2022-11-11T06:41:38.000Z","id":"1590957907461492737","networkCode":"IRIS","status":-2,"transactionParams":{"memo":"TbShmMes1j"},"type":"STAKE","updatedTime":"2022-11-11T06:41:38.000Z"}
+[32mINFO    [0m Common.Http:Http.py:641 2022-11-11 14:41:37.96287 | 
+<-----Send----->
+Url:https://api.cryptoless.io/vault/transactions/1590957906769461249
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk5NjAyNjg2LCJpYXQiOjE2NjgwNjY2ODYsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.crnXQzc0JOD7wPow9R3P3-uZrJmzOeUF6WOqy5OhxqY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:648 2022-11-11 14:41:37.96287 | 
+<-----Send Response Error----->
+400
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 5 \u0028codespace: sdk\u0029. Log: 3510uiris is smaller than 31028uiris: insufficient funds: insufficient funds"}

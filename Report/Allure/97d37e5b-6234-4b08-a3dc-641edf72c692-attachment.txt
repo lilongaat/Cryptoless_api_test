@@ -1,0 +1,26 @@
+[32mINFO    [0m Common.Http:Http.py:368 2022-11-10 17:18:54.713165 | 
+<-----Holders----->
+Url:https://api.cryptoless.net/cryptocurrencies/holders?address=5DiDtDkGFJ4CtgdEnGHaWU3JwSmCro26FozcqyTY8Brk3KSo&networkCode=CLV&symbol=CLV
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4MzAxOTk1NTUzMDg5NTM2MVxuSXNzdWVkIEF0OiBUaHUsIDIwIE9jdCAyMDIyIDA4OjU5OjAzIEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTdW4sIDE3IE9jdCAyMDMyIDA4OjU5OjAzIEdNVCIsInNpZ25hdHVyZSI6IjB4MDA4NTA0NmM1YmYwYWFkZjkwMjIyMWFhNGU0OTFjODllYTU5ZTAxZGQ2ODIwNTdkMDU0Y2U2MzcyNTdkYTE2ZTIyNTJlMzYxYWJmNjE4ZmEwOWJmODVmYjEwM2RjMmZhYzg4MzFkODNmMDcwNGZlMjdhZmUzYTdjYWY0NGE2YjYxYyJ9"}
+[32mINFO    [0m Common.Http:Http.py:371 2022-11-10 17:18:54.713165 | 
+<-----Query Holders Response----->
+[{"address":"5DiDtDkGFJ4CtgdEnGHaWU3JwSmCro26FozcqyTY8Brk3KSo","createdTime":"2022-10-24T03:26:31.000Z","id":"1584385820822294530","networkCode":"CLV","quantity":"0.091884999999983327","symbol":"CLV","updatedTime":"2022-11-08T08:46:40.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:386 2022-11-10 17:18:54.713165 | 
+<-----Staking----->
+Url:https://api.cryptoless.net/staking/delegators?networkCode=CLV&symbol=CLV
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4MzAxOTk1NTUzMDg5NTM2MVxuSXNzdWVkIEF0OiBUaHUsIDIwIE9jdCAyMDIyIDA4OjU5OjAzIEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTdW4sIDE3IE9jdCAyMDMyIDA4OjU5OjAzIEdNVCIsInNpZ25hdHVyZSI6IjB4MDA4NTA0NmM1YmYwYWFkZjkwMjIyMWFhNGU0OTFjODllYTU5ZTAxZGQ2ODIwNTdkMDU0Y2U2MzcyNTdkYTE2ZTIyNTJlMzYxYWJmNjE4ZmEwOWJmODVmYjEwM2RjMmZhYzg4MzFkODNmMDcwNGZlMjdhZmUzYTdjYWY0NGE2YjYxYyJ9"}
+[32mINFO    [0m Common.Http:Http.py:389 2022-11-10 17:18:54.713165 | 
+<-----Query Staking Response----->
+[{"address":"5GF2XqzK1ERH6AGkyHz1jmMLMCVGBUEyRBxJb5TFWxhiS6EY","coinSymbol":"CLV","createdTime":"2022-10-26T02:33:38.000Z","id":"1585097289390002178","networkCode":"CLV","pendings":"0.00008","staked":"0.00062","updatedTime":"2022-10-26T02:33:38.000Z"},{"address":"5DiDtDkGFJ4CtgdEnGHaWU3JwSmCro26FozcqyTY8Brk3KSo","coinSymbol":"CLV","createdTime":"2022-10-25T02:15:28.000Z","id":"1584730330630672386","networkCode":"CLV","pendings":"0","staked":"0.0001","updatedTime":"2022-10-25T02:15:28.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:454 2022-11-10 17:18:54.713165 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTgzMDE5OTU1NTMwODk1MzYxIiwiZXhwIjoxNjY4NDA2MDg4LCJpYXQiOjE2Njc4MDEyODgsInVzZXJJZCI6MTU4MzAxOTk1NTUzMDg5NTM2MX0.t8TZeGPZfNhs1U3syLsqgadq1-RKf_GU2nGWQWoWW9w"}
+
+Body:{"body": {"delegator": "5DiDtDkGFJ4CtgdEnGHaWU3JwSmCro26FozcqyTY8Brk3KSo", "coinSymbol": "CLV", "amount": "0.0009"}, "networkCode": "CLV", "type": "stake", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "ONouBIDZav"}}
+[32mINFO    [0m Common.Http:Http.py:457 2022-11-10 17:18:54.713165 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-11-10T09:19:01.000Z","description":"Custom Excution","estimatedFee":"1151250000003620","fee":"0","hash":"0xe6dea8c00975f0f2cde5aa8069ef74dc3147e611ec4eb3226688cfa9233b1dfa","id":"1590635106551705602","networkCode":"CLV","serialized":"c501840048d96479d22065e2d5ef7819aeb8bae5944e041310f42aa26d31ec1205a87cd1024709d1e62b0f0336420d556ab69d48234d4524c835d1ddcc364b6db4eadeccb57bcdc1db2298a7eec819fad0579f519e1c53f4ca206b852d8a1b39a27fc3cee60100100009010f00404c948b3203","status":"SIGNED","updatedTime":"2022-11-10T09:19:02.000Z"}]},"body":{"amount":"0.0009","coinSymbol":"CLV","delegator":"5DiDtDkGFJ4CtgdEnGHaWU3JwSmCro26FozcqyTY8Brk3KSo"},"createdTime":"2022-11-10T09:19:01.000Z","id":"1590635124184522755","networkCode":"CLV","status":-2,"transactionParams":{"memo":"ONouBIDZav"},"type":"STAKE","updatedTime":"2022-11-10T09:19:02.000Z"}

@@ -139,6 +139,22 @@ class Test_block_height_check:
         if abs(block_height - block_height_network) > 5:
             Httpfs.HttpFs.send_msg(('CLV Block_Height异常!\n' + "https://clover.subscan.io/block查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network)))
 
+    def test_block_height_dot():
+        dot = Httpexplore.DOT.block()
+        time = Conf.Config.now_time()
+        assert dot.status_code == 200
+        block_height = dot.json()["data"]["blocks"][0]["block_num"]
+
+        dot_graphql = Graphql.Graphql.getLatestBlock("DOT")
+        time_ = Conf.Config.now_time()
+        block_height_graphql = dot_graphql.json()["data"]["getLatestBlock"]["blockNumber"]
+
+        networks = Http.HttpUtils.get_networks(web3token)
+        block_height_network = int([n.get("blocks") for n in networks.json() if n.get("code") == "DOT"][0])
+
+        if abs(block_height - block_height_network) > 10:
+            Httpfs.HttpFs.send_msg(('DOT Height!\n' + "https://polkadot.subscan.io/查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network)))
+
 if __name__ == '__main__':
     Test_block_height_check.test_block_height_btc()
     Test_block_height_check.test_block_height_doge()
@@ -147,3 +163,4 @@ if __name__ == '__main__':
     Test_block_height_check.test_block_height_matic()
     Test_block_height_check.test_block_height_atom()
     Test_block_height_check.test_block_height_clv()
+    Test_block_height_check.test_block_height_dot()

@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:288 2022-11-04 16:34:14.655143 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"body": {"from": "tb1q8g0jhxa3t0uyufec29xexw6fwnkvw94v3jlw7e", "to": "tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun", "symbol": "BTC", "amount": "0"}, "networkCode": "BTC", "type": "transfer", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "NlpWgH2PbE"}}
+[32mINFO    [0m Common.Http:Http.py:294 2022-11-04 16:34:14.655143 | 
+<-----Instructions Response Error----->
+400
+{"code":2300000,"message":"amount entered incorrectly"}

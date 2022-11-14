@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:454 2022-11-11 16:34:02.106832 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk5NjAyNjg2LCJpYXQiOjE2NjgwNjY2ODYsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.crnXQzc0JOD7wPow9R3P3-uZrJmzOeUF6WOqy5OhxqY"}
+
+Body:{"body": {"from": "MATIC", "to": "BTC", "address": "0x55D6AB99596d002AF4d51CDCD83259030F4d4B5c", "fromAmount": "0.00000009", "slippage": "1"}, "networkCode": "MATIC", "type": "swap", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "QDxLuV4eAc"}}
+[32mINFO    [0m Common.Http:Http.py:460 2022-11-11 16:34:02.106832 | 
+<-----Instructions Response Error----->
+400
+{"code":2402001,"message":"insufficient liquidity for this trade"}

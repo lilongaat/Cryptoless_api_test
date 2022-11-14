@@ -1,0 +1,18 @@
+[32mINFO    [0m Common.Http:Http.py:216 2022-11-08 16:07:10.261090 | 
+<-----Holders----->
+Url:https://api.cryptoless.net/cryptocurrencies/holders?address=0x4adf9724723CAB3263a5f4adfBE28888EDB785b5&networkCode=BSC&symbol=BNB
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4MzAxOTk1NTUzMDg5NTM2MVxuSXNzdWVkIEF0OiBUaHUsIDIwIE9jdCAyMDIyIDA4OjU5OjAzIEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTdW4sIDE3IE9jdCAyMDMyIDA4OjU5OjAzIEdNVCIsInNpZ25hdHVyZSI6IjB4MDA4NTA0NmM1YmYwYWFkZjkwMjIyMWFhNGU0OTFjODllYTU5ZTAxZGQ2ODIwNTdkMDU0Y2U2MzcyNTdkYTE2ZTIyNTJlMzYxYWJmNjE4ZmEwOWJmODVmYjEwM2RjMmZhYzg4MzFkODNmMDcwNGZlMjdhZmUzYTdjYWY0NGE2YjYxYyJ9"}
+[32mINFO    [0m Common.Http:Http.py:219 2022-11-08 16:07:10.261090 | 
+<-----Query Holders Response----->
+[{"address":"0x4adf9724723CAB3263a5f4adfBE28888EDB785b5","createdTime":"2022-10-21T10:05:17.000Z","id":"1583399010658897922","networkCode":"BSC","quantity":"0.00594828","symbol":"BNB","updatedTime":"2022-11-07T08:50:31.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:306 2022-11-08 16:07:10.261090 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTgzMDE5OTU1NTMwODk1MzYxIiwiZXhwIjoxNjY4NDA2MDg4LCJpYXQiOjE2Njc4MDEyODgsInVzZXJJZCI6MTU4MzAxOTk1NTUzMDg5NTM2MX0.t8TZeGPZfNhs1U3syLsqgadq1-RKf_GU2nGWQWoWW9w"}
+
+Body:{"body": {"from": "0x4adf9724723CAB3263a5f4adfBE28888EDB785b5", "to": "0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A", "symbol": "BNB", "amount": "0.00000009"}, "networkCode": "BSC", "type": "transfer", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "6fpAdzo9kO"}}
+[32mINFO    [0m Common.Http:Http.py:309 2022-11-08 16:07:10.261090 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-11-08T08:07:12.000Z","description":"Send 0.00000009 BNB","estimatedFee":"105000000000000","fee":"0","hash":"0xf0e7268ac7e18e564f92f1d65220e322505ec75c90c98fb36868b2921fce6ab3","id":"1589892274505363458","networkCode":"BSC","serialized":"f86a0d85012a05f20082520894dba67baa3ca1e89a2bdf0feee4592595b130888a8514f46b0400808193a028a16bb6e31532a5eef7b7eed09c3bd1dff0acb93ac26cf49ba896674908ea20a07b26047f9d94cd348dec9869da7c6167328e9f2f098481155e1de516840851c7","status":"SIGNED","updatedTime":"2022-11-08T08:07:13.000Z"}]},"body":{"symbol":"BNB","amount":"0.00000009","from":"0x4adf9724723CAB3263a5f4adfBE28888EDB785b5","to":"0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A"},"createdTime":"2022-11-08T08:07:12.000Z","id":"1589892277286187010","networkCode":"BSC","status":-2,"transactionParams":{"memo":"6fpAdzo9kO"},"type":"TRANSFER","updatedTime":"2022-11-08T08:07:13.000Z"}

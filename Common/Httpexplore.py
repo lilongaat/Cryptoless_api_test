@@ -298,6 +298,33 @@ class CLV:
         response = requests.request("POST", url, headers=headers, data=payload)
         return response
 
+class DOT:
+    @staticmethod
+    def block():
+        url = "https://polkadot.api.subscan.io/api/scan/blocks"
+        payload = json.dumps({
+        "row": 1,
+        "page": 0
+        })
+        headers = {
+        'Content-Type': 'application/json',
+        'X-API-Key': '0a2600579990474e888ffd2b5d932969'
+        }
+
+        response = requests.request("POST", url, headers=headers, data=payload)
+        return response
+
+class BN:
+    @staticmethod
+    def BN_price(symbol:str):
+        url = "https://api.binance.com/api/v3/avgPrice?symbol="+symbol+"USDT"
+        payload={}
+        headers = {}
+
+        response = requests.request("GET", url, headers=headers, data=payload)
+        logger.info('\n'+"<-----balance response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
+        return response
+
 if __name__ == '__main__':
     # decimal = [a.get("decimal") for a in ATOM.assets().json()["assets"] if a.get("denom") == "uatom"][0]
     # print(decimal)
@@ -313,5 +340,6 @@ if __name__ == '__main__':
     # print(balance/Decimal(10**18))
 
     # print(BTC.balance("34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo").json()["balance"])
-    print((ETH.block().json()))
+    # print((ETH.block().json()))
+    print(BN.BN_price("BTC"))
 

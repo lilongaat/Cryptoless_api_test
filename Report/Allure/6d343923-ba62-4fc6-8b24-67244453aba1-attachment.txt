@@ -1,0 +1,39 @@
+[32mINFO    [0m Common.Http:Http.py:198 2022-11-04 17:02:00.137210 | 
+<-----Holders----->
+Url:https://api.cryptoless.io/cryptocurrencies/holders?address=0xe525E7cd17f6Dc950492755A089E452fd5d9d44f&networkCode=GOERLI&symbol=Long
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+[32mINFO    [0m Common.Http:Http.py:201 2022-11-04 17:02:00.137210 | 
+<-----Query Holders Response----->
+[]
+[32mINFO    [0m Common.Http:Http.py:288 2022-11-04 17:02:00.137210 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"body": {"from": "0xe525E7cd17f6Dc950492755A089E452fd5d9d44f", "to": "0x2B0EfCF16EC1E4C5eD82dBB4Fce9B4811485e650", "symbol": "Long", "amount": "9.366977497"}, "networkCode": "GOERLI", "type": "transfer", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "oAktiKZw0S"}}
+[32mINFO    [0m Common.Http:Http.py:291 2022-11-04 17:02:00.137210 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-11-04T09:02:04.000Z","createdTime":"2022-11-04T09:02:04.000Z","description":"Contract Execution","estimatedFee":"24441380392358","fee":"-1","hash":"","id":"1588456524216717313","networkCode":"GOERLI","requiredSignings":[{"hash":"1fc292513c22c41d65f94da4f97c02c9a1720737881f5578f656ed3d50136ea4","publicKeys":["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],"threshold":1}],"serialized":"02f8700508841de89c6e85184e7fb65282be4594fbec94fda367359025419f622cf89e623b34b4f880b844a9059cbb0000000000000000000000002b0efcf16ec1e4c5ed82dbb4fce9b4811485e65000000000000000000000000000000000000000000000000081fe3067b7c33a00c0808080","status":"BUILDING","updatedTime":"2022-11-04T09:02:04.000Z"}]},"body":{"symbol":"Long","amount":"9.366977497","from":"0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","to":"0x2B0EfCF16EC1E4C5eD82dBB4Fce9B4811485e650"},"createdTime":"2022-11-04T09:02:04.000Z","id":"1588456530910875650","networkCode":"GOERLI","status":-2,"transactionParams":{"memo":"oAktiKZw0S"},"type":"TRANSFER","updatedTime":"2022-11-04T09:02:04.000Z"}
+[32mINFO    [0m Common.Http:Http.py:456 2022-11-04 17:02:00.137210 | 
+<-----Sign----->
+Url:https://api.cryptoless.io/vault/transactions/1588456524216717313/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"signatures": [{"hash": "1fc292513c22c41d65f94da4f97c02c9a1720737881f5578f656ed3d50136ea4", "publicKey": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "signature": "933bd40bee2bb86eab668ec864b9df9670fbe2882903b530e6eb33ced1acef4812b836eab040ab017dc8109e4ebafbf81a6663d30b3afd894c3e46c7e94eff6200"}], "serialized": "02f8700508841de89c6e85184e7fb65282be4594fbec94fda367359025419f622cf89e623b34b4f880b844a9059cbb0000000000000000000000002b0efcf16ec1e4c5ed82dbb4fce9b4811485e65000000000000000000000000000000000000000000000000081fe3067b7c33a00c0808080"}
+[32mINFO    [0m Common.Http:Http.py:460 2022-11-04 17:02:00.137210 | 
+<-----Sign Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-11-04T09:02:04.000Z","description":"Contract Execution","estimatedFee":"24441380392358","fee":"-1","hash":"0x0c299105ec0662ed2ab49acceff5b8871d7640e25b4861fcb13566b86617c4b8","id":"1588456524216717313","networkCode":"GOERLI","serialized":"02f8b00508841de89c6e85184e7fb65282be4594fbec94fda367359025419f622cf89e623b34b4f880b844a9059cbb0000000000000000000000002b0efcf16ec1e4c5ed82dbb4fce9b4811485e65000000000000000000000000000000000000000000000000081fe3067b7c33a00c080a0933bd40bee2bb86eab668ec864b9df9670fbe2882903b530e6eb33ced1acef48a012b836eab040ab017dc8109e4ebafbf81a6663d30b3afd894c3e46c7e94eff62","status":"SIGNED","updatedTime":"2022-11-04T09:02:06.792Z"}
+[32mINFO    [0m Common.Http:Http.py:475 2022-11-04 17:02:00.137210 | 
+<-----Send----->
+Url:https://api.cryptoless.io/vault/transactions/1588456524216717313
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:482 2022-11-04 17:02:00.137210 | 
+<-----Send Response Error----->
+400
+{"code":2400000,"message":"INTERNAL: Returned error: insufficient funds for gas * price + value"}

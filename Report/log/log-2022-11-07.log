@@ -1,0 +1,2 @@
+2022-11-07 17:30:26.213 | ERROR    | Common.Http:get_cryptocurrencies:204 - 
+<-----Query account Response Error----->{"code":2300000,"message":"For input string: \"\""}

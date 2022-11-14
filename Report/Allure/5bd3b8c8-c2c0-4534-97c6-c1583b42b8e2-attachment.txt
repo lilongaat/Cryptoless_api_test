@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:454 2022-11-11 16:04:57.200901 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk5NjAyNjg2LCJpYXQiOjE2NjgwNjY2ODYsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.crnXQzc0JOD7wPow9R3P3-uZrJmzOeUF6WOqy5OhxqY"}
+
+Body:{"body": {"from": "ETH", "to": "USDC", "address": "0x821647aF7f50717500E008dE239f8692216cBC67", "fromAmount": "0.00000001", "slippage": "1"}, "networkCode": "goerli", "type": "swap", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "rpvzj1QaLi"}}
+[32mINFO    [0m Common.Http:Http.py:460 2022-11-11 16:04:57.200901 | 
+<-----Instructions Response Error----->
+400
+{"code":2200000,"message":"symbol:ETH asset network instance not found"}

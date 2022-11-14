@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:454 2022-11-11 11:41:05.574012 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk5NjAyNjg2LCJpYXQiOjE2NjgwNjY2ODYsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.crnXQzc0JOD7wPow9R3P3-uZrJmzOeUF6WOqy5OhxqY"}
+
+Body:{"body": {"delegator": "iaa1vywcfmff44nlhud05nlzlpw0hrlxenptn9ff7r", "coinSymbol": "IIRS", "amount": "0.00007"}, "networkCode": "IRIS", "type": "stake", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "UKrpOoVfwl"}}
+[32mINFO    [0m Common.Http:Http.py:460 2022-11-11 11:41:05.574012 | 
+<-----Instructions Response Error----->
+400
+{"code":2200000,"message":"code:IIRS asset not found"}

@@ -1,0 +1,28 @@
+[32mINFO    [0m Common.Http:Http.py:198 2022-11-04 14:06:20.913860 | 
+<-----Holders----->
+Url:https://api.cryptoless.io/cryptocurrencies/holders?address=0xe525E7cd17f6Dc950492755A089E452fd5d9d44f&networkCode=MATIC&symbol=USDC
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+[32mINFO    [0m Common.Http:Http.py:201 2022-11-04 14:06:20.913860 | 
+<-----Query Holders Response----->
+[{"address":"0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","createdTime":"2022-10-27T06:59:01.000Z","id":"1585526461431230465","networkCode":"MATIC","quantity":"0.0923","symbol":"USDC","updatedTime":"2022-10-27T09:54:18.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:288 2022-11-04 14:06:20.913860 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"body": {"from": "0xe525E7cd17f6Dc950492755A089E452fd5d9d44f", "to": "0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A", "symbol": "USDC", "amount": "0.00007"}, "networkCode": "MATIC", "type": "transfer", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "6HUBVjPhFO"}}
+[32mINFO    [0m Common.Http:Http.py:291 2022-11-04 14:06:20.913860 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-11-04T06:06:29.000Z","createdTime":"2022-11-04T06:06:29.000Z","description":"Contract Execution","estimatedFee":"11291463820014264","fee":"-1","hash":"","id":"1588412340709580802","networkCode":"MATIC","requiredSignings":[{"hash":"9c245455663e5b427b07f56aa0ae356fb7c071eb3282392b737a693c44c1e267","publicKeys":["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],"threshold":1}],"serialized":"f8691b8530e6937d5c82d202942791bca1f2de4661ed88a30c99a7a9449aa8417480b844a9059cbb000000000000000000000000dba67baa3ca1e89a2bdf0feee4592595b130888a0000000000000000000000000000000000000000000000000000000000000046808080","status":"BUILDING","updatedTime":"2022-11-04T06:06:29.000Z"}]},"body":{"symbol":"USDC","amount":"0.00007","from":"0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","to":"0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A"},"createdTime":"2022-11-04T06:06:29.000Z","id":"1588412344878694402","networkCode":"MATIC","status":-2,"transactionParams":{"memo":"6HUBVjPhFO"},"type":"TRANSFER","updatedTime":"2022-11-04T06:06:29.000Z"}
+[32mINFO    [0m Common.Http:Http.py:456 2022-11-04 14:06:20.913860 | 
+<-----Sign----->
+Url:https://api.cryptoless.io/vault/transactions/1588412340709580802/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"signatures": [{"hash": "9c245455663e5b427b07f56aa0ae356fb7c071eb3282392b737a693c44c1e267", "publicKey": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "signature": "c36fe1309dda9f4060e76b973fd861e75d750bdb7cbac0270d83f136237ee2be54d7a145444c2a2cf19d538306d06e1990bd20907c117e5dc7a82e44aae0024d00"}], "serialized": "f8691b8530e6937d5c82d202942791bca1f2de4661ed88a30c99a7a9449aa8417480b844a9059cbb000000000000000000000000dba67baa3ca1e89a2bdf0feee4592595b130888a0000000000000000000000000000000000000000000000000000000000000046808080"}
+[32mINFO    [0m Common.Http:Http.py:460 2022-11-04 14:06:20.913860 | 
+<-----Sign Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-11-04T06:06:30.636Z","createdTime":"2022-11-04T06:06:29.000Z","description":"Contract Execution","estimatedFee":"11291463820014264","fee":"-1","hash":"0xadca1165c4bd0d6dd30a679cc74cfa37116e02950f679671b805421605b1107c","id":"1588412340709580802","networkCode":"MATIC","serialized":"f8ab1b8530e6937d5c82d202942791bca1f2de4661ed88a30c99a7a9449aa8417480b844a9059cbb000000000000000000000000dba67baa3ca1e89a2bdf0feee4592595b130888a0000000000000000000000000000000000000000000000000000000000000046820135a0c36fe1309dda9f4060e76b973fd861e75d750bdb7cbac0270d83f136237ee2bea054d7a145444c2a2cf19d538306d06e1990bd20907c117e5dc7a82e44aae0024d","status":"PENDING","updatedTime":"2022-11-04T06:06:30.636Z"}

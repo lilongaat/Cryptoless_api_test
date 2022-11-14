@@ -10,7 +10,7 @@ webhook_url = ReadConfig().get_debug('webhook_url')
 
 class HttpFs:
          
-    def send_msg(text):
+    def send_msg(text:str):
         #webhook
         header = {
             "Content-type": "application/json",

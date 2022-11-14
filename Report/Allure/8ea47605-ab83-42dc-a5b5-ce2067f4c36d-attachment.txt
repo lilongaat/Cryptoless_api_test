@@ -1,0 +1,38 @@
+[32mINFO    [0m Common.Http:Http.py:198 2022-11-07 15:08:22.822005 | 
+<-----Holders----->
+Url:https://api.cryptoless.net/cryptocurrencies/holders?address=0x9b532cf5F662e51ba643672797Ad3eC1A60bb939&networkCode=BSC&symbol=BNB
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4MzAxOTk1NTUzMDg5NTM2MVxuSXNzdWVkIEF0OiBUaHUsIDIwIE9jdCAyMDIyIDA4OjU5OjAzIEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTdW4sIDE3IE9jdCAyMDMyIDA4OjU5OjAzIEdNVCIsInNpZ25hdHVyZSI6IjB4MDA4NTA0NmM1YmYwYWFkZjkwMjIyMWFhNGU0OTFjODllYTU5ZTAxZGQ2ODIwNTdkMDU0Y2U2MzcyNTdkYTE2ZTIyNTJlMzYxYWJmNjE4ZmEwOWJmODVmYjEwM2RjMmZhYzg4MzFkODNmMDcwNGZlMjdhZmUzYTdjYWY0NGE2YjYxYyJ9"}
+[32mINFO    [0m Common.Http:Http.py:201 2022-11-07 15:08:22.822005 | 
+<-----Query Holders Response----->
+[{"address":"0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","createdTime":"2022-10-24T06:47:02.000Z","id":"1584436281428365314","networkCode":"BSC","quantity":"0.00216562","symbol":"BNB","updatedTime":"2022-10-27T06:54:54.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:288 2022-11-07 15:08:22.822005 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTgzMDE5OTU1NTMwODk1MzYxIiwiZXhwIjoxNjY4NDA2MDg4LCJpYXQiOjE2Njc4MDEyODgsInVzZXJJZCI6MTU4MzAxOTk1NTUzMDg5NTM2MX0.t8TZeGPZfNhs1U3syLsqgadq1-RKf_GU2nGWQWoWW9w"}
+
+Body:{"body": {"from": "0x9b532cf5F662e51ba643672797Ad3eC1A60bb939", "to": "0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A", "symbol": "BNB", "amount": "0.00000003"}, "networkCode": "BSC", "type": "transfer", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "UDrwhLZl43"}}
+[32mINFO    [0m Common.Http:Http.py:291 2022-11-07 15:08:22.822005 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-11-07T07:08:25.000Z","createdTime":"2022-11-07T07:08:25.000Z","description":"Send 0.00000003 BNB","estimatedFee":"105000000000000","fee":"0","hash":"","id":"1589515091601502210","networkCode":"BSC","requiredSignings":[{"hash":"5358d4271af1acea893afc697bb1519020440a305095f9e75479ae9b7788f6d9","publicKeys":["02e1cf1f9502c433efd31a1e7c8948b5e9a6d1929a8cbd3d97dcc11d4b358c6dec"],"threshold":1}],"serialized":"e90585012a05f20082520894dba67baa3ca1e89a2bdf0feee4592595b130888a8506fc23ac0080808080","status":"BUILDING","updatedTime":"2022-11-07T07:08:25.000Z"}]},"body":{"symbol":"BNB","amount":"0.00000003","from":"0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","to":"0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A"},"createdTime":"2022-11-07T07:08:25.000Z","id":"1589515096122945538","networkCode":"BSC","status":-2,"transactionParams":{"memo":"UDrwhLZl43"},"type":"TRANSFER","updatedTime":"2022-11-07T07:08:25.000Z"}
+[32mINFO    [0m Common.Http:Http.py:456 2022-11-07 15:08:22.822005 | 
+<-----Sign----->
+Url:https://api.cryptoless.net/vault/transactions/1589515091601502210/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTgzMDE5OTU1NTMwODk1MzYxIiwiZXhwIjoxNjY4NDA2MDg4LCJpYXQiOjE2Njc4MDEyODgsInVzZXJJZCI6MTU4MzAxOTk1NTUzMDg5NTM2MX0.t8TZeGPZfNhs1U3syLsqgadq1-RKf_GU2nGWQWoWW9w"}
+
+Body:{"signatures": [{"hash": "5358d4271af1acea893afc697bb1519020440a305095f9e75479ae9b7788f6d9", "publicKey": "02e1cf1f9502c433efd31a1e7c8948b5e9a6d1929a8cbd3d97dcc11d4b358c6dec", "signature": "e5f0d812cc25191e0ff33091667afce58c0b82929f505f25686d163068408df75daa1565247d345b93d66e2b09d4f8d8c6e76ee6b3884ef6c8c2d5da4167710801"}], "serialized": "e90585012a05f20082520894dba67baa3ca1e89a2bdf0feee4592595b130888a8506fc23ac0080808080"}
+[32mINFO    [0m Common.Http:Http.py:460 2022-11-07 15:08:22.822005 | 
+<-----Sign Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-11-07T07:08:25.000Z","description":"Send 0.00000003 BNB","estimatedFee":"105000000000000","fee":"0","hash":"0x19a36d5fb6957efe1a9300391df455ac6b2270dfd59a5a281585b160f12af0ac","id":"1589515091601502210","networkCode":"BSC","serialized":"f86a0585012a05f20082520894dba67baa3ca1e89a2bdf0feee4592595b130888a8506fc23ac00808194a0e5f0d812cc25191e0ff33091667afce58c0b82929f505f25686d163068408df7a05daa1565247d345b93d66e2b09d4f8d8c6e76ee6b3884ef6c8c2d5da41677108","status":"SIGNED","updatedTime":"2022-11-07T07:08:25.685Z"}
+[32mINFO    [0m Common.Http:Http.py:475 2022-11-07 15:08:22.822005 | 
+<-----Send----->
+Url:https://api.cryptoless.net/vault/transactions/1589515091601502210
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTgzMDE5OTU1NTMwODk1MzYxIiwiZXhwIjoxNjY4NDA2MDg4LCJpYXQiOjE2Njc4MDEyODgsInVzZXJJZCI6MTU4MzAxOTk1NTUzMDg5NTM2MX0.t8TZeGPZfNhs1U3syLsqgadq1-RKf_GU2nGWQWoWW9w"}
+
+
+[32mINFO    [0m Common.Http:Http.py:479 2022-11-07 15:08:22.822005 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-11-07T07:08:26.175Z","createdTime":"2022-11-07T07:08:25.000Z","description":"Send 0.00000003 BNB","estimatedFee":"105000000000000","fee":"0","hash":"0x19a36d5fb6957efe1a9300391df455ac6b2270dfd59a5a281585b160f12af0ac","id":"1589515091601502210","networkCode":"BSC","serialized":"f86a0585012a05f20082520894dba67baa3ca1e89a2bdf0feee4592595b130888a8506fc23ac00808194a0e5f0d812cc25191e0ff33091667afce58c0b82929f505f25686d163068408df7a05daa1565247d345b93d66e2b09d4f8d8c6e76ee6b3884ef6c8c2d5da41677108","status":"PENDING","updatedTime":"2022-11-07T07:08:26.175Z"}

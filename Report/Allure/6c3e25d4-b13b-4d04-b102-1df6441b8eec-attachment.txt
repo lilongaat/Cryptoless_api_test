@@ -1,0 +1,38 @@
+[32mINFO    [0m Common.Http:Http.py:216 2022-11-08 16:48:06.324393 | 
+<-----Holders----->
+Url:https://api.cryptoless.net/cryptocurrencies/holders?address=DK2mfHibfaudY7EviQ1KESpLjyiQXHLbAA&networkCode=DOGE&symbol=DOGE
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4MzAxOTk1NTUzMDg5NTM2MVxuSXNzdWVkIEF0OiBUaHUsIDIwIE9jdCAyMDIyIDA4OjU5OjAzIEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTdW4sIDE3IE9jdCAyMDMyIDA4OjU5OjAzIEdNVCIsInNpZ25hdHVyZSI6IjB4MDA4NTA0NmM1YmYwYWFkZjkwMjIyMWFhNGU0OTFjODllYTU5ZTAxZGQ2ODIwNTdkMDU0Y2U2MzcyNTdkYTE2ZTIyNTJlMzYxYWJmNjE4ZmEwOWJmODVmYjEwM2RjMmZhYzg4MzFkODNmMDcwNGZlMjdhZmUzYTdjYWY0NGE2YjYxYyJ9"}
+[32mINFO    [0m Common.Http:Http.py:219 2022-11-08 16:48:06.324393 | 
+<-----Query Holders Response----->
+[{"address":"DK2mfHibfaudY7EviQ1KESpLjyiQXHLbAA","createdTime":"2022-10-24T03:42:31.000Z","id":"1584389846464942082","networkCode":"DOGE","quantity":"5.1986646","symbol":"DOGE","updatedTime":"2022-11-07T07:00:55.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:306 2022-11-08 16:48:06.324393 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTgzMDE5OTU1NTMwODk1MzYxIiwiZXhwIjoxNjY4NDA2MDg4LCJpYXQiOjE2Njc4MDEyODgsInVzZXJJZCI6MTU4MzAxOTk1NTUzMDg5NTM2MX0.t8TZeGPZfNhs1U3syLsqgadq1-RKf_GU2nGWQWoWW9w"}
+
+Body:{"body": {"from": "DK2mfHibfaudY7EviQ1KESpLjyiQXHLbAA", "to": "DGnb5SNRnEyAx9xNuHGxbiY4ysHPsxegP9", "symbol": "DOGE", "amount": "2.92712"}, "networkCode": "DOGE", "type": "transfer", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "5b0xSo7MnY"}}
+[32mINFO    [0m Common.Http:Http.py:309 2022-11-08 16:48:06.324393 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-11-08T08:48:08.000Z","createdTime":"2022-11-08T08:48:08.000Z","description":"Custom Excution","estimatedFee":"261660","fee":"0","hash":"","id":"1589902577930579970","networkCode":"DOGE","requiredSignings":[{"hash":"350fd6aea9a3e333cb22bc85f490e8ee5a3e5fe7dd54007d818d3112f4d26a28","publicKeys":["030880a72c683a2507eb41e304419eb548f2d32bf6ad6f323b4d7c86c51052fcda"],"threshold":1}],"serialized":"0100000001a5f4a4ec091bfa8babb08c64e6c9bfd93a975d4af51ae50f7ca63ffe9212bcaa0100000000ffffffff02406e7211000000001976a9147fc0989f60a3c46e3d3a75b315feb27907d81bb688ac001c860d000000001976a914985f81886dffde8af33951d970851de816669e9588ac00000000","status":"BUILDING","updatedTime":"2022-11-08T08:48:08.000Z"}]},"body":{"symbol":"DOGE","amount":"2.92712","from":"DK2mfHibfaudY7EviQ1KESpLjyiQXHLbAA","to":"DGnb5SNRnEyAx9xNuHGxbiY4ysHPsxegP9"},"createdTime":"2022-11-08T08:48:08.000Z","id":"1589902578958184449","networkCode":"DOGE","status":-2,"transactionParams":{"memo":"5b0xSo7MnY"},"type":"TRANSFER","updatedTime":"2022-11-08T08:48:08.000Z"}
+[32mINFO    [0m Common.Http:Http.py:474 2022-11-08 16:48:06.324393 | 
+<-----Sign----->
+Url:https://api.cryptoless.net/vault/transactions/1589902577930579970/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTgzMDE5OTU1NTMwODk1MzYxIiwiZXhwIjoxNjY4NDA2MDg4LCJpYXQiOjE2Njc4MDEyODgsInVzZXJJZCI6MTU4MzAxOTk1NTUzMDg5NTM2MX0.t8TZeGPZfNhs1U3syLsqgadq1-RKf_GU2nGWQWoWW9w"}
+
+Body:{"signatures": [{"hash": "350fd6aea9a3e333cb22bc85f490e8ee5a3e5fe7dd54007d818d3112f4d26a28", "publicKey": "030880a72c683a2507eb41e304419eb548f2d32bf6ad6f323b4d7c86c51052fcda", "signature": "ae43b1d74bd1dc864740eba14649e2ed2652fa2949a28b98aabb7373ef9d1ff362248082a83b00f815a6d72ebe7841bb55bede68b80c5aa7e098c4938ea3466f01"}], "serialized": "0100000001a5f4a4ec091bfa8babb08c64e6c9bfd93a975d4af51ae50f7ca63ffe9212bcaa0100000000ffffffff02406e7211000000001976a9147fc0989f60a3c46e3d3a75b315feb27907d81bb688ac001c860d000000001976a914985f81886dffde8af33951d970851de816669e9588ac00000000"}
+[32mINFO    [0m Common.Http:Http.py:478 2022-11-08 16:48:06.324393 | 
+<-----Sign Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-11-08T08:48:08.000Z","description":"Custom Excution","estimatedFee":"261660","fee":"0","hash":"dda7f1178d0de456a3edf68f6fcab631452c6375c303404e41f6d6ebbfa96d6d","id":"1589902577930579970","networkCode":"DOGE","serialized":"0100000001a5f4a4ec091bfa8babb08c64e6c9bfd93a975d4af51ae50f7ca63ffe9212bcaa010000006b483045022100ae43b1d74bd1dc864740eba14649e2ed2652fa2949a28b98aabb7373ef9d1ff3022062248082a83b00f815a6d72ebe7841bb55bede68b80c5aa7e098c4938ea3466f0121030880a72c683a2507eb41e304419eb548f2d32bf6ad6f323b4d7c86c51052fcdaffffffff02406e7211000000001976a9147fc0989f60a3c46e3d3a75b315feb27907d81bb688ac001c860d000000001976a914985f81886dffde8af33951d970851de816669e9588ac00000000","status":"SIGNED","updatedTime":"2022-11-08T08:48:09.339Z"}
+[32mINFO    [0m Common.Http:Http.py:493 2022-11-08 16:48:06.324393 | 
+<-----Send----->
+Url:https://api.cryptoless.net/vault/transactions/1589902577930579970
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTgzMDE5OTU1NTMwODk1MzYxIiwiZXhwIjoxNjY4NDA2MDg4LCJpYXQiOjE2Njc4MDEyODgsInVzZXJJZCI6MTU4MzAxOTk1NTUzMDg5NTM2MX0.t8TZeGPZfNhs1U3syLsqgadq1-RKf_GU2nGWQWoWW9w"}
+
+
+[32mINFO    [0m Common.Http:Http.py:497 2022-11-08 16:48:06.324393 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-11-08T08:48:09.690Z","createdTime":"2022-11-08T08:48:08.000Z","description":"Custom Excution","estimatedFee":"261660","fee":"0","hash":"dda7f1178d0de456a3edf68f6fcab631452c6375c303404e41f6d6ebbfa96d6d","id":"1589902577930579970","networkCode":"DOGE","serialized":"0100000001a5f4a4ec091bfa8babb08c64e6c9bfd93a975d4af51ae50f7ca63ffe9212bcaa010000006b483045022100ae43b1d74bd1dc864740eba14649e2ed2652fa2949a28b98aabb7373ef9d1ff3022062248082a83b00f815a6d72ebe7841bb55bede68b80c5aa7e098c4938ea3466f0121030880a72c683a2507eb41e304419eb548f2d32bf6ad6f323b4d7c86c51052fcdaffffffff02406e7211000000001976a9147fc0989f60a3c46e3d3a75b315feb27907d81bb688ac001c860d000000001976a914985f81886dffde8af33951d970851de816669e9588ac00000000","status":"PENDING","updatedTime":"2022-11-08T08:48:09.690Z"}

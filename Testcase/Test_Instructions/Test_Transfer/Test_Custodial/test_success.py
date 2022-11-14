@@ -20,36 +20,37 @@ class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
             # BTC网络
-            ("Custodial账户BTC转账","BTC","BTC","tb1q8g0jhxa3t0uyufec29xexw6fwnkvw94v3jlw7e","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun",str(Conf.Config.random_amount(8))),
+            # ("Custodial账户BTC转账","BTC","BTC","tb1q8g0jhxa3t0uyufec29xexw6fwnkvw94v3jlw7e","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun",str(Conf.Config.random_amount(8))),
             # Goerli网络
-            ("Custodial账户Goerli转账","GOERLI","GoerliETH","0x821647aF7f50717500E008dE239f8692216cBC67","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3",str(Conf.Config.random_amount(8))),
+            # ("Custodial账户Goerli转账","GOERLI","GoerliETH","0x821647aF7f50717500E008dE239f8692216cBC67","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3",str(Conf.Config.random_amount(8))),
+            # ("Custodial账户ERC20转账","GOERLI","Long","0x821647aF7f50717500E008dE239f8692216cBC67","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3",str(round(random.uniform(1,10), random.randint(1,18)))),
             # MATIC网络
-            ("Custodial账户MATIC转账","MATIC","MATIC","0x343d0b801Fcb032ccEB7D5411cd404816d203B91","0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A",str(Conf.Config.random_amount(8))),
-            ("Custodial账户MATIC转账","MATIC","USDC","0x343d0b801Fcb032ccEB7D5411cd404816d203B91","0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A",str(Conf.Config.random_amount(5))),
+            # ("Custodial账户MATIC转账","MATIC","MATIC","0x343d0b801Fcb032ccEB7D5411cd404816d203B91","0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A",str(Conf.Config.random_amount(8))),
+            # ("Custodial账户MATIC转账","MATIC","USDC","0x343d0b801Fcb032ccEB7D5411cd404816d203B91","0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A",str(Conf.Config.random_amount(5))),
             # IRIS
-            ("Custodial账户IRIS转账","IRIS","IRIS","iaa1vywcfmff44nlhud05nlzlpw0hrlxenptn9ff7r","iaa18hxtn9lx9swxf4j7ytdmn8yxsvyknh86kdgpvc",str(Conf.Config.random_amount(5))),
+            # ("Custodial账户IRIS转账","IRIS","IRIS","iaa1vywcfmff44nlhud05nlzlpw0hrlxenptn9ff7r","iaa18hxtn9lx9swxf4j7ytdmn8yxsvyknh86kdgpvc",str(Conf.Config.random_amount(5))),
             # CLV
             ("Custodial账户CLV转账","CLV","CLV","5CFStFse5QY5dyfeHeTDSnMeBBRgxXse2D8k1TUbM67HeA9h","5FXjWgPEDvrc5A3SDVHayVGfdAp9QquU5jANaZMfLzVue5k6",str(Conf.Config.random_amount(5))),
         ]
     elif env_type == 1: #生产
         test_data = [
             # DOGE网络
-            ("Custodial账户DOGE转账","DOGE","DOGE","DDgRrcfZ1ZFgonHzNU7b1xbFMbDSakPGT9","DGnb5SNRnEyAx9xNuHGxbiY4ysHPsxegP9",str(round(random.uniform(2,3), random.randint(3,5)))),
-            ("Custodial账户DOGE转账self","DOGE","DOGE","DDgRrcfZ1ZFgonHzNU7b1xbFMbDSakPGT9","DDgRrcfZ1ZFgonHzNU7b1xbFMbDSakPGT9",str(round(random.uniform(2,3), random.randint(3,5)))),
+            # ("Custodial账户DOGE转账","DOGE","DOGE","DDgRrcfZ1ZFgonHzNU7b1xbFMbDSakPGT9","DGnb5SNRnEyAx9xNuHGxbiY4ysHPsxegP9",str(round(random.uniform(2,3), random.randint(3,5)))),
+            # ("Custodial账户DOGE转账self","DOGE","DOGE","DDgRrcfZ1ZFgonHzNU7b1xbFMbDSakPGT9","DDgRrcfZ1ZFgonHzNU7b1xbFMbDSakPGT9",str(round(random.uniform(2,3), random.randint(3,5)))),
             # BSC网络
-            ("Custodial账户BNB转账","BSC","BNB","0x4adf9724723CAB3263a5f4adfBE28888EDB785b5","0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A",str(Conf.Config.random_amount(8))),
-            ("Custodial账户BNB转账","BSC","USDC","0x4adf9724723CAB3263a5f4adfBE28888EDB785b5","0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A",str(Conf.Config.random_amount(8))),
-            # MATIC网络
-            ("Custodial账户MATIC转账","MATIC","MATIC","0x985f8D18a50AF2Cb91f52f9A63d9b5eEc1f60047","0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A",str(Conf.Config.random_amount(4))),
-            ("Custodial账户USDC转账","MATIC","USDC","0x985f8D18a50AF2Cb91f52f9A63d9b5eEc1f60047","0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A",str(Conf.Config.random_amount(5))),
-            ("Custodial账户MATIC转账self","MATIC","MATIC","0x985f8D18a50AF2Cb91f52f9A63d9b5eEc1f60047","0x985f8D18a50AF2Cb91f52f9A63d9b5eEc1f60047",str(Conf.Config.random_amount(4))),
-            ("Custodial账户USDC转账self","MATIC","USDC","0x985f8D18a50AF2Cb91f52f9A63d9b5eEc1f60047","0x985f8D18a50AF2Cb91f52f9A63d9b5eEc1f60047",str(Conf.Config.random_amount(5))),
-            # IRIS网络
-            ("Custodial账户IRIS转账","IRIS","IRIS","iaa1yvgc6tjuetv6hzchnvnqg4r09ltzk8ld6m0vcu","iaa18hxtn9lx9swxf4j7ytdmn8yxsvyknh86kdgpvc",str(Conf.Config.random_amount(4))),
-            ("Custodial账户IRIS转账self","IRIS","IRIS","iaa1yvgc6tjuetv6hzchnvnqg4r09ltzk8ld6m0vcu","iaa1yvgc6tjuetv6hzchnvnqg4r09ltzk8ld6m0vcu",str(Conf.Config.random_amount(4))),
-            # CLV网络
-            ("Custodial账户CLV转账","CLV","CLV","5DiDtDkGFJ4CtgdEnGHaWU3JwSmCro26FozcqyTY8Brk3KSo","5FXjWgPEDvrc5A3SDVHayVGfdAp9QquU5jANaZMfLzVue5k6",str(Conf.Config.random_amount(4))),
-            ("Custodial账户CLV转账self","CLV","CLV","5DiDtDkGFJ4CtgdEnGHaWU3JwSmCro26FozcqyTY8Brk3KSo","5DiDtDkGFJ4CtgdEnGHaWU3JwSmCro26FozcqyTY8Brk3KSo",str(Conf.Config.random_amount(4))),
+            # ("Custodial账户BNB转账","BSC","BNB","0x4adf9724723CAB3263a5f4adfBE28888EDB785b5","0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A",str(Conf.Config.random_amount(8))),
+            # ("Custodial账户BNB转账","BSC","USDC","0x4adf9724723CAB3263a5f4adfBE28888EDB785b5","0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A",str(Conf.Config.random_amount(8))),
+            # # MATIC网络
+            # ("Custodial账户MATIC转账","MATIC","MATIC","0x985f8D18a50AF2Cb91f52f9A63d9b5eEc1f60047","0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A",str(Conf.Config.random_amount(4))),
+            # ("Custodial账户USDC转账","MATIC","USDC","0x985f8D18a50AF2Cb91f52f9A63d9b5eEc1f60047","0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A",str(Conf.Config.random_amount(5))),
+            # ("Custodial账户MATIC转账self","MATIC","MATIC","0x985f8D18a50AF2Cb91f52f9A63d9b5eEc1f60047","0x985f8D18a50AF2Cb91f52f9A63d9b5eEc1f60047",str(Conf.Config.random_amount(4))),
+            # ("Custodial账户USDC转账self","MATIC","USDC","0x985f8D18a50AF2Cb91f52f9A63d9b5eEc1f60047","0x985f8D18a50AF2Cb91f52f9A63d9b5eEc1f60047",str(Conf.Config.random_amount(5))),
+            # # IRIS网络
+            # ("Custodial账户IRIS转账","IRIS","IRIS","iaa1yvgc6tjuetv6hzchnvnqg4r09ltzk8ld6m0vcu","iaa18hxtn9lx9swxf4j7ytdmn8yxsvyknh86kdgpvc",str(Conf.Config.random_amount(4))),
+            # ("Custodial账户IRIS转账self","IRIS","IRIS","iaa1yvgc6tjuetv6hzchnvnqg4r09ltzk8ld6m0vcu","iaa1yvgc6tjuetv6hzchnvnqg4r09ltzk8ld6m0vcu",str(Conf.Config.random_amount(4))),
+            # # CLV网络
+            # ("Custodial账户CLV转账","CLV","CLV","5DiDtDkGFJ4CtgdEnGHaWU3JwSmCro26FozcqyTY8Brk3KSo","5FXjWgPEDvrc5A3SDVHayVGfdAp9QquU5jANaZMfLzVue5k6",str(Conf.Config.random_amount(4))),
+            # ("Custodial账户CLV转账self","CLV","CLV","5DiDtDkGFJ4CtgdEnGHaWU3JwSmCro26FozcqyTY8Brk3KSo","5DiDtDkGFJ4CtgdEnGHaWU3JwSmCro26FozcqyTY8Brk3KSo",str(Conf.Config.random_amount(4))),
         ]
 
     @allure.story("Custodial_Transfers_Success!")
@@ -78,8 +79,15 @@ class Test_transfers_success:
             assert transfer.json()["body"]["amount"] == amount
             assert transfer.json()["body"]["from"] == from_add
             assert transfer.json()["body"]["to"] == to_add
-            assert transfer.json()["_embedded"]["transactions"][0]["status"] == "PENDING"
-        #     sleep(30)
+            assert transfer.json()["_embedded"]["transactions"][0]["status"] == "SIGNED"
+
+            id = transfer.json()["_embedded"]["transactions"][0]["id"]
+
+        with allure.step("广播交易"):
+            send = Http.HttpUtils.send(id)
+            assert send.status_code == 200
+            assert send.json()["status"] == "PENDING"
+            # sleep(30)
 
         # with allure.step("查询From账户holders信息——holders"):
         #     holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)

@@ -1,0 +1,21 @@
+[32mINFO    [0m Common.Http:Http.py:454 2022-11-11 14:51:05.41259 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk5NjAyNjg2LCJpYXQiOjE2NjgwNjY2ODYsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.crnXQzc0JOD7wPow9R3P3-uZrJmzOeUF6WOqy5OhxqY"}
+
+Body:{"body": {"delegator": "5Hgu6xq1ETv3kbjBnhqZCzaDFtqUhxfFBogZuJ2RnqsoXmWk", "coinSymbol": "CLV", "amount": "0.000005"}, "networkCode": "CLV", "type": "stake", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "Y0Mmdvgpse"}}
+[32mINFO    [0m Common.Http:Http.py:457 2022-11-11 14:51:05.41259 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-11-11T06:51:08.000Z","description":"Custom Excution","estimatedFee":"1871250000009905","fee":"-1","hash":"0x06bd50c7af600a8f92b465e8c7c88e1ad797a4c60d23772dfc843ef7528d383b","id":"1590960288110723073","networkCode":"CLV","serialized":"e5028400f8c7dc5be26161129f9e189b16e5002ee3def0d189e73dfb58e343e5fafdbcad020606cee16fe0cb6baf107c0c01174eaf9f1b88c89aff44cb7c3b0adadbfd13011abec90ae117a370b41c4f72b53dfebb13ecc58793b87943b5fe9473b24ee46a000000001a0008090000f8c7dc5be26161129f9e189b16e5002ee3def0d189e73dfb58e343e5fafdbcad0b005039278c040009050400222c5fa244583b1734ceb6515916efc5e103f65b869ebec4e56b989d9dbb446e","status":"SIGNED","updatedTime":"2022-11-11T06:51:11.000Z"}]},"body":{"amount":"0.000005","coinSymbol":"CLV","delegator":"5Hgu6xq1ETv3kbjBnhqZCzaDFtqUhxfFBogZuJ2RnqsoXmWk"},"createdTime":"2022-11-11T06:51:08.000Z","id":"1590960295308120065","networkCode":"CLV","status":-2,"transactionParams":{"memo":"Y0Mmdvgpse"},"type":"STAKE","updatedTime":"2022-11-11T06:51:11.000Z"}
+[32mINFO    [0m Common.Http:Http.py:641 2022-11-11 14:51:05.41259 | 
+<-----Send----->
+Url:https://api.cryptoless.io/vault/transactions/1590960288110723073
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk5NjAyNjg2LCJpYXQiOjE2NjgwNjY2ODYsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.crnXQzc0JOD7wPow9R3P3-uZrJmzOeUF6WOqy5OhxqY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:648 2022-11-11 14:51:05.41259 | 
+<-----Send Response Error----->
+400
+{"code":2400000,"message":"INTERNAL: 1010: Invalid Transaction: Inability to pay some fees , e.g. account balance too low"}

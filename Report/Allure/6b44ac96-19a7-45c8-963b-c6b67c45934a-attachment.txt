@@ -1,0 +1,41 @@
+[32mINFO    [0m Common.Http:Http.py:454 2022-11-11 14:31:53.634918 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk5NjAyNjg2LCJpYXQiOjE2NjgwNjY2ODYsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.crnXQzc0JOD7wPow9R3P3-uZrJmzOeUF6WOqy5OhxqY"}
+
+Body:{"body": {"delegator": "5CFStFse5QY5dyfeHeTDSnMeBBRgxXse2D8k1TUbM67HeA9h", "coinSymbol": "CLV", "amount": "0.0006"}, "networkCode": "CLV", "type": "stake", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "z5JZspSElx"}}
+[32mINFO    [0m Common.Http:Http.py:457 2022-11-11 14:31:53.634918 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-11-11T06:31:59.000Z","description":"Custom Excution","estimatedFee":"1151250000003620","fee":"-1","hash":"0x6f1cc93f144bf25f4643a7e3a5e4fd284785e833573f612c6f78afbc357f409e","id":"1590955458189312002","networkCode":"CLV","serialized":"c501840008314c118b4fbd9c6ee839c47fb4bcce02158c7472bb2341fdedb0dec08974fb02c5f6f6f99d2577efd10eff33e50bae2df2dc88ed876f7703391769cdab14e97d451fa30ff9da91630f962d23d8fd9b79e768d9b9cdda9608518a9fc2f83a08460100240009010f0080dd62b22102","status":"SIGNED","updatedTime":"2022-11-11T06:32:03.000Z"}]},"body":{"amount":"0.0006","coinSymbol":"CLV","delegator":"5CFStFse5QY5dyfeHeTDSnMeBBRgxXse2D8k1TUbM67HeA9h"},"createdTime":"2022-11-11T06:31:59.000Z","id":"1590955477046874114","networkCode":"CLV","status":-2,"transactionParams":{"memo":"z5JZspSElx"},"type":"STAKE","updatedTime":"2022-11-11T06:32:03.000Z"}
+[32mINFO    [0m Common.Http:Http.py:454 2022-11-11 14:31:53.634918 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk5NjAyNjg2LCJpYXQiOjE2NjgwNjY2ODYsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.crnXQzc0JOD7wPow9R3P3-uZrJmzOeUF6WOqy5OhxqY"}
+
+Body:{"body": {"delegator": "5CFStFse5QY5dyfeHeTDSnMeBBRgxXse2D8k1TUbM67HeA9h", "coinSymbol": "CLV", "amount": "0.0006"}, "networkCode": "CLV", "type": "stake", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "yOhESKnVWA"}}
+[32mINFO    [0m Common.Http:Http.py:457 2022-11-11 14:31:53.634918 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-11-11T06:32:05.000Z","description":"Custom Excution","estimatedFee":"1151250000003620","fee":"-1","hash":"0x0d98ac3d361127b1922a1edd944b70b85b099eae4b9d6b148534eac5053894ce","id":"1590955497334751233","networkCode":"CLV","serialized":"c501840008314c118b4fbd9c6ee839c47fb4bcce02158c7472bb2341fdedb0dec08974fb02a91f2b7ea8ba2a65d2021e8d098dcc497340c309c97f2c56aebcc6daee42558920e9b8c903dbf6b8ba1c72746f44d69aa65a158761f30124c67d1b9396569ea80100240009010f0080dd62b22102","status":"SIGNED","updatedTime":"2022-11-11T06:32:10.000Z"}]},"body":{"amount":"0.0006","coinSymbol":"CLV","delegator":"5CFStFse5QY5dyfeHeTDSnMeBBRgxXse2D8k1TUbM67HeA9h"},"createdTime":"2022-11-11T06:32:05.000Z","id":"1590955503823310850","networkCode":"CLV","status":-2,"transactionParams":{"memo":"yOhESKnVWA"},"type":"STAKE","updatedTime":"2022-11-11T06:32:10.000Z"}
+[32mINFO    [0m Common.Http:Http.py:641 2022-11-11 14:31:53.634918 | 
+<-----Send----->
+Url:https://api.cryptoless.io/vault/transactions/1590955458189312002
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk5NjAyNjg2LCJpYXQiOjE2NjgwNjY2ODYsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.crnXQzc0JOD7wPow9R3P3-uZrJmzOeUF6WOqy5OhxqY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:645 2022-11-11 14:31:53.634918 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-11-11T06:32:10.435Z","createdTime":"2022-11-11T06:31:59.000Z","description":"Custom Excution","estimatedFee":"1151250000003620","fee":"-1","hash":"0x6f1cc93f144bf25f4643a7e3a5e4fd284785e833573f612c6f78afbc357f409e","id":"1590955458189312002","networkCode":"CLV","serialized":"c501840008314c118b4fbd9c6ee839c47fb4bcce02158c7472bb2341fdedb0dec08974fb02c5f6f6f99d2577efd10eff33e50bae2df2dc88ed876f7703391769cdab14e97d451fa30ff9da91630f962d23d8fd9b79e768d9b9cdda9608518a9fc2f83a08460100240009010f0080dd62b22102","status":"PENDING","updatedTime":"2022-11-11T06:32:10.435Z"}
+[32mINFO    [0m Common.Http:Http.py:641 2022-11-11 14:31:53.634918 | 
+<-----Send----->
+Url:https://api.cryptoless.io/vault/transactions/1590955497334751233
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk5NjAyNjg2LCJpYXQiOjE2NjgwNjY2ODYsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.crnXQzc0JOD7wPow9R3P3-uZrJmzOeUF6WOqy5OhxqY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:648 2022-11-11 14:31:53.634918 | 
+<-----Send Response Error----->
+400
+{"code":2400000,"message":"INTERNAL: 1014: Priority is too low: \u00286358353750382055260 vs 6358353750382055260\u0029: The transaction has too low priority to replace another transaction already in the pool."}

@@ -1,0 +1,18 @@
+[32mINFO    [0m Common.Http:Http.py:198 2022-11-03 15:06:33.220649 | 
+<-----Holders----->
+Url:https://api.cryptoless.io/cryptocurrencies/holders?address=tb1q8g0jhxa3t0uyufec29xexw6fwnkvw94v3jlw7e&networkCode=BTC&symbol=BTC
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+[32mINFO    [0m Common.Http:Http.py:201 2022-11-03 15:06:33.220649 | 
+<-----Query Holders Response----->
+[{"address":"tb1q8g0jhxa3t0uyufec29xexw6fwnkvw94v3jlw7e","createdTime":"2022-10-26T08:13:48.000Z","id":"1585182894464614401","networkCode":"BTC","quantity":"0.00999805","symbol":"BTC","updatedTime":"2022-10-26T09:32:48.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:288 2022-11-03 15:06:33.220649 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"body": {"from": "tb1q8g0jhxa3t0uyufec29xexw6fwnkvw94v3jlw7e", "to": "tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun", "symbol": "BTC", "amount": "0.00000004"}, "networkCode": "BTC", "type": "transfer", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "oTdvlenSfO"}}
+[32mINFO    [0m Common.Http:Http.py:291 2022-11-03 15:06:33.220649 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-11-03T07:06:40.000Z","createdTime":"2022-11-03T07:06:36.000Z","description":"Custom Excution","estimatedFee":"187","fee":"-1","hash":"4e2b2efdf93538402887530265dfda218388d95e3ad27d368e9dcfb0d89f329e","id":"1588065084730978306","networkCode":"BTC","serialized":"01000000000101dacb0a9e59b8954959e71a810c4f29aa880036d862e12b1abed74c5e4b1fa99b0100000000ffffffff02040000000000000016001400dc7e0ab28be8ed2643aedd343eaf833d611ef8be400f00000000001600143a1f2b9bb15bf84e2738514d933b4974ecc716ac0247304402200243b607a79250a12132b12c6b8b68d4f4fd2cbc43ce00628b410a95f758348102203f39ee172ddde1b90ca2696b055c4bb36b4c393ccb04263b31f86010774a56a3012103d33e7e925a23c3925eeddb393fd236d742370eacda8d160a631a3ddbf8aa910d00000000","status":"PENDING","updatedTime":"2022-11-03T07:06:40.000Z"}]},"body":{"symbol":"BTC","amount":"0.00000004","from":"tb1q8g0jhxa3t0uyufec29xexw6fwnkvw94v3jlw7e","to":"tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun"},"createdTime":"2022-11-03T07:06:36.000Z","id":"1588065085162975234","networkCode":"BTC","status":-2,"transactionParams":{"memo":"oTdvlenSfO"},"type":"TRANSFER","updatedTime":"2022-11-03T07:06:40.000Z"}

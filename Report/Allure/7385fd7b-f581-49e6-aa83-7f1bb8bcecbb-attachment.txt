@@ -1,0 +1,38 @@
+[32mINFO    [0m Common.Http:Http.py:198 2022-11-04 16:37:56.695148 | 
+<-----Holders----->
+Url:https://api.cryptoless.io/cryptocurrencies/holders?address=0xe525E7cd17f6Dc950492755A089E452fd5d9d44f&networkCode=GOERLI&symbol=GoerliETH
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+[32mINFO    [0m Common.Http:Http.py:201 2022-11-04 16:37:56.695148 | 
+<-----Query Holders Response----->
+[{"address":"0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","createdTime":"2022-10-27T06:58:47.000Z","id":"1585526405231751169","networkCode":"GOERLI","quantity":"0.005138538552405","symbol":"GoerliETH","updatedTime":"2022-11-01T03:40:55.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:288 2022-11-04 16:37:56.695148 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"body": {"from": "0xe525E7cd17f6Dc950492755A089E452fd5d9d44f", "to": "0x2B0EfCF16EC1E4C5eD82dBB4Fce9B4811485e650", "symbol": "GoerliETH", "amount": "0.0000007"}, "networkCode": "GOERLI", "type": "transfer", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "hkyf3AwVdL"}}
+[32mINFO    [0m Common.Http:Http.py:291 2022-11-04 16:37:56.695148 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-11-04T08:38:01.000Z","createdTime":"2022-11-04T08:38:01.000Z","description":"Send 0.0000007 GoerliETH","estimatedFee":"10923628737000","fee":"-1","hash":"","id":"1588450468807757825","networkCode":"GOERLI","requiredSignings":[{"hash":"91a193f6cbd4c2c9efdd250f30e1d8194ff0f11c923dd0eef861748e9dc3eb2b","publicKeys":["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],"threshold":1}],"serialized":"02f00507841f0134fd851830f25761825208942b0efcf16ec1e4c5ed82dbb4fce9b4811485e65085a2fb40580080c0808080","status":"BUILDING","updatedTime":"2022-11-04T08:38:01.000Z"}]},"body":{"symbol":"GoerliETH","amount":"0.0000007","from":"0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","to":"0x2B0EfCF16EC1E4C5eD82dBB4Fce9B4811485e650"},"createdTime":"2022-11-04T08:38:01.000Z","id":"1588450478534361090","networkCode":"GOERLI","status":-2,"transactionParams":{"memo":"hkyf3AwVdL"},"type":"TRANSFER","updatedTime":"2022-11-04T08:38:01.000Z"}
+[32mINFO    [0m Common.Http:Http.py:456 2022-11-04 16:37:56.695148 | 
+<-----Sign----->
+Url:https://api.cryptoless.io/vault/transactions/1588450468807757825/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"signatures": [{"hash": "91a193f6cbd4c2c9efdd250f30e1d8194ff0f11c923dd0eef861748e9dc3eb2b", "publicKey": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "signature": "d5935050fc408c4c2d82c2e668ed6219c42c35810faae01994fa6db3101a39dc0100b0f524762e45623b5c3f930f387678acfa9ed7cbb952ecbc392654917f5400"}], "serialized": "02f00507841f0134fd851830f25761825208942b0efcf16ec1e4c5ed82dbb4fce9b4811485e65085a2fb40580080c0808080"}
+[32mINFO    [0m Common.Http:Http.py:460 2022-11-04 16:37:56.695148 | 
+<-----Sign Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-11-04T08:38:01.000Z","description":"Send 0.0000007 GoerliETH","estimatedFee":"10923628737000","fee":"-1","hash":"0xb790d9c5a8b4f9f299c39c69ba94078af3dcd88d1be1efee9b68b358b59ba8bd","id":"1588450468807757825","networkCode":"GOERLI","serialized":"02f8700507841f0134fd851830f25761825208942b0efcf16ec1e4c5ed82dbb4fce9b4811485e65085a2fb40580080c080a0d5935050fc408c4c2d82c2e668ed6219c42c35810faae01994fa6db3101a39dca00100b0f524762e45623b5c3f930f387678acfa9ed7cbb952ecbc392654917f54","status":"SIGNED","updatedTime":"2022-11-04T08:38:02.838Z"}
+[32mINFO    [0m Common.Http:Http.py:475 2022-11-04 16:37:56.695148 | 
+<-----Send----->
+Url:https://api.cryptoless.io/vault/transactions/1588450468807757825
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:479 2022-11-04 16:37:56.695148 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-11-04T08:38:03.555Z","createdTime":"2022-11-04T08:38:01.000Z","description":"Send 0.0000007 GoerliETH","estimatedFee":"10923628737000","fee":"-1","hash":"0xb790d9c5a8b4f9f299c39c69ba94078af3dcd88d1be1efee9b68b358b59ba8bd","id":"1588450468807757825","networkCode":"GOERLI","serialized":"02f8700507841f0134fd851830f25761825208942b0efcf16ec1e4c5ed82dbb4fce9b4811485e65085a2fb40580080c080a0d5935050fc408c4c2d82c2e668ed6219c42c35810faae01994fa6db3101a39dca00100b0f524762e45623b5c3f930f387678acfa9ed7cbb952ecbc392654917f54","status":"PENDING","updatedTime":"2022-11-04T08:38:03.555Z"}

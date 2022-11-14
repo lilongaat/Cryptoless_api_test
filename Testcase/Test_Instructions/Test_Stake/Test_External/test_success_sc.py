@@ -17,16 +17,28 @@ env_type = int(ReadConfig().get_env('type'))
 # External
 @allure.feature("Stake_Success!")
 class Test_stake_success:
-    test_data = [
-        # IRIS网络
-        # ("External账户IRIS质押",["a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c"],"IRIS","IRIS","stake","iaa18j8rds5hqwp88s4qsrytq5w4eafu288cfza9th",str(Conf.Config.random_amount(4))),
-        # ("External账户IRIS赎回",["a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c"],"IRIS","IRIS","unstake","iaa18j8rds5hqwp88s4qsrytq5w4eafu288cfza9th",str(Conf.Config.random_amount(5))),
-        # ("External账户IRISclaim",["a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c"],"IRIS","IRIS","claim","iaa18j8rds5hqwp88s4qsrytq5w4eafu288cfza9th",0),
-        # CLV网络
-        # ("External账户CLV质押",["426a6690c29c5ee0052712c1fda0cc38691f3faf2a571f4b04c9705bbf3f921b"],"CLV","CLV","stake","5GF2XqzK1ERH6AGkyHz1jmMLMCVGBUEyRBxJb5TFWxhiS6EY",str(Conf.Config.random_amount(4))),
-        # ("External账户CLV赎回",["426a6690c29c5ee0052712c1fda0cc38691f3faf2a571f4b04c9705bbf3f921b"],"CLV","CLV","unstake","5GF2XqzK1ERH6AGkyHz1jmMLMCVGBUEyRBxJb5TFWxhiS6EY",str(Conf.Config.random_amount(5))),
-        ("External账户CLVclaim",["426a6690c29c5ee0052712c1fda0cc38691f3faf2a571f4b04c9705bbf3f921b"],"CLV","CLV","claim","5GF2XqzK1ERH6AGkyHz1jmMLMCVGBUEyRBxJb5TFWxhiS6EY",0),
-    ]
+    if env_type == 0: #测试
+        test_data = [
+            # IRIS网络
+            ("External账户IRIS质押",["d10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b"],"IRIS","IRIS","stake","iaa1ed68xf6453t7u4ttsmphdrwqflx2l90e6ymuaq",str(Conf.Config.random_amount(4))),
+            # ("External账户IRIS赎回",["d10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b"],"IRIS","IRIS","unstake","iaa1ed68xf6453t7u4ttsmphdrwqflx2l90e6ymuaq",str(Conf.Config.random_amount(5))),
+            # ("External账户IRISclaim",["d10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b"],"IRIS","IRIS","claim","iaa1ed68xf6453t7u4ttsmphdrwqflx2l90e6ymuaq",0),
+            # CLV网络
+            ("External账户CLV质押",["7967c43bd3f3874ccfa6ff6ceda5faa8c699ad0fe2be33f44c8bb8abcb23a2fd"],"CLV","CLV","stake","5Hdmv7BeAe1XFJXso8oGMidGp186cb4uNTNMywp6fBY7UEsr",str(Conf.Config.random_amount(4))),
+            # ("External账户CLV赎回",["7967c43bd3f3874ccfa6ff6ceda5faa8c699ad0fe2be33f44c8bb8abcb23a2fd"],"CLV","CLV","unstake","5Hdmv7BeAe1XFJXso8oGMidGp186cb4uNTNMywp6fBY7UEsr",str(Conf.Config.random_amount(5))),
+            # ("External账户CLVclaim",["7967c43bd3f3874ccfa6ff6ceda5faa8c699ad0fe2be33f44c8bb8abcb23a2fd"],"CLV","CLV","claim","5Hdmv7BeAe1XFJXso8oGMidGp186cb4uNTNMywp6fBY7UEsr",0),
+        ]
+    if env_type == 1: #生产
+        test_data = [
+            # IRIS网络
+            # ("External账户IRIS质押",["a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c"],"IRIS","IRIS","stake","iaa18j8rds5hqwp88s4qsrytq5w4eafu288cfza9th",str(Conf.Config.random_amount(4))),
+            # ("External账户IRIS赎回",["a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c"],"IRIS","IRIS","unstake","iaa18j8rds5hqwp88s4qsrytq5w4eafu288cfza9th",str(Conf.Config.random_amount(5))),
+            # ("External账户IRISclaim",["a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c"],"IRIS","IRIS","claim","iaa18j8rds5hqwp88s4qsrytq5w4eafu288cfza9th",0),
+            # CLV网络
+            # ("External账户CLV质押",["426a6690c29c5ee0052712c1fda0cc38691f3faf2a571f4b04c9705bbf3f921b"],"CLV","CLV","stake","5GF2XqzK1ERH6AGkyHz1jmMLMCVGBUEyRBxJb5TFWxhiS6EY",str(Conf.Config.random_amount(4))),
+            # ("External账户CLV赎回",["426a6690c29c5ee0052712c1fda0cc38691f3faf2a571f4b04c9705bbf3f921b"],"CLV","CLV","unstake","5GF2XqzK1ERH6AGkyHz1jmMLMCVGBUEyRBxJb5TFWxhiS6EY",str(Conf.Config.random_amount(5))),
+            # ("External账户CLVclaim",["426a6690c29c5ee0052712c1fda0cc38691f3faf2a571f4b04c9705bbf3f921b"],"CLV","CLV","claim","5GF2XqzK1ERH6AGkyHz1jmMLMCVGBUEyRBxJb5TFWxhiS6EY",0),
+        ]
 
     @allure.story("Custodial_Stake_Success!")
     @allure.title('{test_title}')
@@ -80,7 +92,14 @@ class Test_stake_success:
         with allure.step("签名交易——instructions"):
             sign = Http.HttpUtils.sign(id,signatures,serialized)
             assert sign.status_code == 200
-            assert sign.json()["status"] == "PENDING"
+            assert sign.json()["status"] == "SIGNED"
+
+            id = stake.json()["_embedded"]["transactions"][0]["id"]
+
+        with allure.step("广播交易"):
+            send = Http.HttpUtils.send(id)
+            assert send.status_code == 200
+            assert send.json()["status"] == "PENDING"
 
 
         sleep(20)

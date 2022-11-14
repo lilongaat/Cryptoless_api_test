@@ -1,0 +1,19 @@
+[32mINFO    [0m Common.Http:Http.py:198 2022-11-07 11:36:13.616520 | 
+<-----Holders----->
+Url:https://api.cryptoless.io/cryptocurrencies/holders?address=tb1q8g0jhxa3t0uyufec29xexw6fwnkvw94v3jlw7e&networkCode=BTC&symbol=BTC
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+[32mINFO    [0m Common.Http:Http.py:201 2022-11-07 11:36:13.616520 | 
+<-----Query Holders Response----->
+[{"address":"tb1q8g0jhxa3t0uyufec29xexw6fwnkvw94v3jlw7e","createdTime":"2022-10-26T08:13:48.000Z","id":"1585182894464614401","networkCode":"BTC","quantity":"0.01668354","symbol":"BTC","updatedTime":"2022-11-04T03:00:06.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:288 2022-11-07 11:36:13.616520 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"body": {"from": "tb1q8g0jhxa3t0uyufec29xexw6fwnkvw94v3jlw7e", "to": "tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun", "symbol": "BTC", "amount": "0.00000008"}, "networkCode": "BTC", "type": "transfer", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "rFoGtnJMis"}}
+[32mINFO    [0m Common.Http:Http.py:294 2022-11-07 11:36:13.616520 | 
+<-----Instructions Response Error----->
+400
+{"code":2400000,"message":"UNAVAILABLE: io exception"}

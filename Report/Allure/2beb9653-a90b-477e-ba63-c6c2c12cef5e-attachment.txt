@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:454 2022-11-11 16:27:58.474767 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk5NjAyNjg2LCJpYXQiOjE2NjgwNjY2ODYsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.crnXQzc0JOD7wPow9R3P3-uZrJmzOeUF6WOqy5OhxqY"}
+
+Body:{"body": {"from": "MATIC", "to": "USDC", "address": "0x0b1c8f78F0d8CE21e284b5Acd521f8d13DC0AC94", "fromAmount": "0.00000008", "slippage": "1"}, "networkCode": "MATIC", "type": "swap", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "Qk1chH2md4"}}
+[32mINFO    [0m Common.Http:Http.py:460 2022-11-11 16:27:58.474767 | 
+<-----Instructions Response Error----->
+404
+{"code":2200000,"message":"account not found"}

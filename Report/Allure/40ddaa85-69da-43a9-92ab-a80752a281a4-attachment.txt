@@ -1,0 +1,20 @@
+[32mINFO    [0m Common.Http:Http.py:180 2022-11-09 15:01:33.801748 | 
+<-----Create custodial Account------>
+Url:https://api.cryptoless.io/vault/accounts/custodial
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"name": "\u6258\u7ba1\u8d26\u6237MATIC1667977294", "networkCode": "MATIC"}
+[32mINFO    [0m Common.Http:Http.py:183 2022-11-09 15:01:33.801748 | 
+<-----Create custodial Response----->
+{"address":"0x074a85A3242a883B0db957d901FD2710dF7A8811","createdTime":"2022-11-09T07:01:38.699Z","finalized":false,"id":"1590238166296006657","name":"托管账户MATIC1667977294","networkCode":"MATIC","publicKeys":[{"source":"custodial","type":"secp256k1","value":"03138bed533a79c05af196196078c1da09e4872cc94d5fcea44745c5d30c8472dc"}],"status":"enable","threshold":1,"type":"custodial","updatedTime":"2022-11-09T07:01:38.699Z"}
+[32mINFO    [0m Common.Http:Http.py:244 2022-11-09 15:01:33.801748 | 
+<-----Query Account List------>
+Url:https://api.cryptoless.io/vault/accounts?networkCode=MATIC&address=0x074a85A3242a883B0db957d901FD2710dF7A8811&type=custodial
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:247 2022-11-09 15:01:33.801748 | 
+<-----Query Account List Response----->
+[{"address":"0x074a85A3242a883B0db957d901FD2710dF7A8811","createdTime":"2022-11-09T07:01:38.699Z","finalized":false,"id":"1590238166296006657","name":"托管账户MATIC1667977294","networkCode":"MATIC","publicKeys":[{"source":"custodial","type":"secp256k1","value":"03138bed533a79c05af196196078c1da09e4872cc94d5fcea44745c5d30c8472dc"}],"status":"enable","threshold":1,"type":"custodial","updatedTime":"2022-11-09T07:01:38.699Z"}]

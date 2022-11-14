@@ -1,0 +1,9 @@
+[32mINFO    [0m Common.Http:Http.py:180 2022-11-10 15:01:02.546842 | 
+<-----Create custodial Account------>
+Url:https://api.cryptoless.io/vault/accounts/custodial
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"name": "", "networkCode": "BTC"}
+[1m[31mERROR   [0m Common.Http:Http.py:186 2022-11-10 15:01:02.546842 | 
+<-----Create custodial Response Error----->{"code":2100000,"message":"name not empty"}

@@ -1,0 +1,15 @@
+[32mINFO    [0m Common.Http:Http.py:198 2022-11-07 14:51:37.518673 | 
+<-----Holders----->
+Url:https://api.cryptoless.net/cryptocurrencies/holders?address=0x4adf9724723CAB3263a5f4adfBE28888EDB785b5&networkCode=BSC&symbol=BNB
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4MzAxOTk1NTUzMDg5NTM2MVxuSXNzdWVkIEF0OiBUaHUsIDIwIE9jdCAyMDIyIDA4OjU5OjAzIEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTdW4sIDE3IE9jdCAyMDMyIDA4OjU5OjAzIEdNVCIsInNpZ25hdHVyZSI6IjB4MDA4NTA0NmM1YmYwYWFkZjkwMjIyMWFhNGU0OTFjODllYTU5ZTAxZGQ2ODIwNTdkMDU0Y2U2MzcyNTdkYTE2ZTIyNTJlMzYxYWJmNjE4ZmEwOWJmODVmYjEwM2RjMmZhYzg4MzFkODNmMDcwNGZlMjdhZmUzYTdjYWY0NGE2YjYxYyJ9"}
+[32mINFO    [0m Common.Http:Http.py:201 2022-11-07 14:51:37.518673 | 
+<-----Query Holders Response----->
+[{"address":"0x4adf9724723CAB3263a5f4adfBE28888EDB785b5","createdTime":"2022-10-21T10:05:17.000Z","id":"1583399010658897922","networkCode":"BSC","quantity":"0.006247565","symbol":"BNB","updatedTime":"2022-10-26T09:27:01.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:288 2022-11-07 14:51:37.518673 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTgzMDE5OTU1NTMwODk1MzYxIiwiZXhwIjoxNjY4NDA2MDg4LCJpYXQiOjE2Njc4MDEyODgsInVzZXJJZCI6MTU4MzAxOTk1NTUzMDg5NTM2MX0.t8TZeGPZfNhs1U3syLsqgadq1-RKf_GU2nGWQWoWW9w"}
+
+Body:{"body": {"from": "0x4adf9724723CAB3263a5f4adfBE28888EDB785b5", "to": "0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A", "symbol": "BNB", "amount": "0.00000008"}, "networkCode": "BSC", "type": "transfer", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "XsuvpVABZy"}}

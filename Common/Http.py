@@ -165,6 +165,158 @@ class HttpUtils:
             raise Exception("请求异常")
 
     @staticmethod
+    # 创建托管账户
+    def create_custodial_account(name: str, networkCode: str, Authorization=token):
+        url = url_ + '/vault/accounts/custodial'
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        body = {
+            "name":name,
+            "networkCode": networkCode
+        }
+
+        logger.info('\n'+"<-----Create custodial Account------>"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
+        res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Create custodial Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.error('\n'+'<-----Create custodial Response Error----->'+(res.text))
+            return res
+            raise Exception("请求异常")
+
+    @staticmethod
+    # 创建安全账户
+    def create_safe_account(name: str, networkCode: str, owner: str, recovery:str , Authorization=token):
+        url = url_ + '/vault/accounts/safe'
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        body = {
+            "name":name,
+            "networkCode": networkCode,
+            "owner": owner,
+            "recovery": recovery
+        }
+
+        logger.info('\n'+"<-----Create Safe Account------>"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
+        res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Create account Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.error('\n'+'<-----Create account Response Error----->'+(res.text))
+            return res
+            raise Exception("请求异常")
+
+    @staticmethod
+    # 激活安全账户
+    def activation_safe_account(id: str, payer: str, Authorization=token):
+        url = url_ + '/vault/accounts/activations'
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        body = {
+            "accountId":id,
+            "payer": payer
+        }
+
+        logger.info('\n'+"<-----Activation Safe Account------>"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'Body:'+json.dumps(body))
+        res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Activation account Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.error('\n'+'<-----Activation account Response Error----->'+(res.text))
+            return res
+            raise Exception("请求异常")
+
+    @staticmethod
+    # 查询账户列表
+    def get_account_list(networkCode='', address='',  type='', Authorization=token):
+        url = url_ + '/vault/accounts?networkCode='+networkCode+'&address='+address+'&type='+type
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+
+        logger.info('\n'+"<-----Query Account List------>"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n')
+        res = requests.get(url=url, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Query Account List Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.error('\n'+'<-----Query Account List Response Error----->'+(res.text))
+            return res
+            raise Exception("请求异常")
+
+    @staticmethod
+    # 通过id查询账户
+    def get_account_byid(id:str, Authorization=token):
+        url = url_ + "/vault/accounts/"+id
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+
+        logger.info('\n'+"<-----Query Account Byid------>"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n')
+        res = requests.get(url=url,headers=headers,timeout=timeout_)
+        if res.status_code == 200 or res.status_code == 404:
+            logger.info('\n'+"<-----Query Account Byid Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.error('\n'+'<-----Query Account Byid Response Error----->'+(res.text))
+            return res
+            raise Exception("请求异常")
+
+
+    @staticmethod
+    # 通过id修改账户
+    def update_account_byid(id:str,name:str, Authorization=token):
+        url = url_ + "/vault/accounts/"+id
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        body = {
+            "name":name
+        }
+
+        logger.info('\n'+"<-----Upadate Account Byid------>"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n')
+        res = requests.put(url=url, json=body, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Upadate Account Byid Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.error('\n'+'<-----Upadate Account Byid Response Error----->'+(res.text))
+            return res
+            raise Exception("请求异常")
+
+    @staticmethod
+    # 通过id删除账户
+    def del_account_byid(id:str, Authorization=token):
+        url = url_ + "/vault/accounts/"+id
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+
+        logger.info('\n'+"<-----Delete Account Byid------>"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n')
+        res = requests.delete(url=url,headers=headers,timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Delete Account Byid Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.error('\n'+'<-----Delete Account Byid Response Error----->'+(res.text))
+            return res
+            raise Exception("请求异常")
+
+
+    @staticmethod
     # 查询networks信息
     def get_networks(Authorization=web3token):
         url = url_ + '/networks'
@@ -182,6 +334,24 @@ class HttpUtils:
             else:
                 logger.error('\n'+'<-----Query Networks Response Error----->'+(res.text))
                 raise Exception("没有查询到任何NetWorks信息!")
+        else:
+            logger.error('\n'+'<-----Query account Response Error----->'+(res.text))
+            raise Exception("请求异常")
+
+    @staticmethod
+    # 查询所有资产信息
+    def get_cryptocurrencies(symbol="", source="",isFavorite="",limit="10000", Authorization=web3token):
+        url = url_ + "/cryptocurrencies?symbol="+symbol+"&source="+source+"&isFavorite="+isFavorite+"&limit="+limit
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        
+        logger.info('\n'+"<-----Cryptocurrencies----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+        res = requests.get(url=url, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Query Cryptocurrencies Response----->"+"\n"+(res.text))
+            return res
         else:
             logger.error('\n'+'<-----Query account Response Error----->'+(res.text))
             raise Exception("请求异常")
@@ -217,11 +387,7 @@ class HttpUtils:
         res = requests.get(url=url, headers=headers, timeout=timeout_)
         if res.status_code == 200:
             logger.info('\n'+"<-----Query Staking Response----->"+"\n"+(res.text))
-            if len(json.loads(res.text)) > 0:
-                return res
-            else:
-                logger.error('\n'+'<-----Query Staking Response Error----->'+(res.text))
-                raise Exception("没有查询到任何Staking信息!")
+            return res
         else:
             logger.error('\n'+'<-----Query Staking Response Error----->'+(res.text))
             raise Exception("请求异常")
@@ -461,6 +627,27 @@ class HttpUtils:
             return res
         else:
             logger.info('\n'+"<-----Sign Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            return res
+            raise Exception("请求异常")
+
+    @staticmethod
+    # send
+    def send(id: str, Authorization=token):
+        url = url_ + "/vault/transactions/" + id
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+
+        logger.info('\n'+"<-----Send----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n')
+
+        res = requests.patch(url=url, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Send Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.info('\n'+"<-----Send Response Error----->"+"\n"+str(res.status_code)+"\n"+(res.text))
+            return res
             raise Exception("请求异常")
 
     @staticmethod
@@ -642,7 +829,7 @@ class HttpUtils:
             raise Exception("请求异常")
 
 if __name__ == '__main__':
-    print(url_)
+    print(HttpUtils.get_account_list())
     # print(HttpUtils.post_keys())
     # print(HttpUtils.get_keys())
     # print(HttpUtils.get_balance_transactuons("BTC","BTC","34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo","eyJzaWduYXR1cmUiOiIweGU4YzU0YjkzYTRlZDBmM2UxY2FkMDVjMDQzZmQzY2U0MjUwNTExNzY4MGY4NWViMmViMzAzZjQ5ZjNhMGFmYjU1OWExOWQxNDg2OTI1YTM0YzFmYTMxNWYzMzhjYTRhNGM2NzY0YjNmNjhiODMxY2VkMmZlNGUxOGVkMWVkNTMwMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNDE0NDU2MDhcbklzc3VlZCBBdDogVGh1LCAyNSBBdWcgMjAyMiAxMTozMjoyMCBHTVRcbkV4cGlyYXRpb24gVGltZTogTW9uLCAyNSBBdWcgMjA0MiAxMTozMjoyMCBHTVQifQ==").json()[0]["blockHeight"])

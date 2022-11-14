@@ -1,0 +1,49 @@
+[32mINFO    [0m Common.Http:Http.py:180 2022-11-09 15:39:48.541002 | 
+<-----Create custodial Account------>
+Url:https://api.cryptoless.io/vault/accounts/custodial
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+Body:{"name": "\u6258\u7ba1\u8d26\u6237MATIC1667979588", "networkCode": "ATOM"}
+[32mINFO    [0m Common.Http:Http.py:183 2022-11-09 15:39:48.541002 | 
+<-----Create custodial Response----->
+{"address":"cosmos1axsdrypkw68yuflfae635592xaas36fdpn9v3e","createdTime":"2022-11-09T07:40:38.584Z","finalized":false,"id":"1590247980485021697","name":"托管账户MATIC1667979588","networkCode":"ATOM","publicKeys":[{"source":"custodial","type":"secp256k1","value":"021551b2ed1c50dd2bb71df4c5e00f9c565378a0601a9aa03d873641cb7d5d692c"}],"status":"enable","threshold":1,"type":"custodial","updatedTime":"2022-11-09T07:40:38.584Z"}
+[32mINFO    [0m Common.Http:Http.py:244 2022-11-09 15:39:48.541002 | 
+<-----Query Account List------>
+Url:https://api.cryptoless.io/vault/accounts?networkCode=ATOM&address=cosmos1axsdrypkw68yuflfae635592xaas36fdpn9v3e&type=custodial
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:247 2022-11-09 15:39:48.541002 | 
+<-----Query Account List Response----->
+[{"address":"cosmos1axsdrypkw68yuflfae635592xaas36fdpn9v3e","createdTime":"2022-11-09T07:40:38.584Z","finalized":false,"id":"1590247980485021697","name":"托管账户MATIC1667979588","networkCode":"ATOM","publicKeys":[{"source":"custodial","type":"secp256k1","value":"021551b2ed1c50dd2bb71df4c5e00f9c565378a0601a9aa03d873641cb7d5d692c"}],"status":"enable","threshold":1,"type":"custodial","updatedTime":"2022-11-09T07:40:38.584Z"}]
+[32mINFO    [0m Common.Http:Http.py:262 2022-11-09 15:39:48.541002 | 
+<-----Query Account Byid------>
+Url:https://api.cryptoless.io/vault/accounts/1590247980485021697
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:265 2022-11-09 15:39:48.541002 | 
+<-----Query Account Byid Response----->
+{"address":"cosmos1axsdrypkw68yuflfae635592xaas36fdpn9v3e","createdTime":"2022-11-09T07:40:38.584Z","finalized":false,"id":"1590247980485021697","name":"托管账户MATIC1667979588","networkCode":"ATOM","publicKeys":[{"source":"custodial","type":"secp256k1","value":"021551b2ed1c50dd2bb71df4c5e00f9c565378a0601a9aa03d873641cb7d5d692c"}],"status":"enable","threshold":1,"type":"custodial","updatedTime":"2022-11-09T07:40:38.584Z"}
+[32mINFO    [0m Common.Http:Http.py:284 2022-11-09 15:39:48.541002 | 
+<-----Upadate Account Byid------>
+Url:https://api.cryptoless.io/vault/accounts/1590247980485021697
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:287 2022-11-09 15:39:48.541002 | 
+<-----Upadate Account Byid Response----->
+{"address":"cosmos1axsdrypkw68yuflfae635592xaas36fdpn9v3e","createdTime":"2022-11-09T07:40:39.000Z","finalized":false,"id":"1590247980485021697","name":"托管账户MATIC1667979588_1667979639","networkCode":"ATOM","publicKeys":[{"source":"custodial","type":"secp256k1","value":"021551b2ed1c50dd2bb71df4c5e00f9c565378a0601a9aa03d873641cb7d5d692c"}],"status":"enable","threshold":1,"type":"custodial","updatedTime":"2022-11-09T07:40:39.481Z"}
+[32mINFO    [0m Common.Http:Http.py:302 2022-11-09 15:39:48.541002 | 
+<-----Delete Account Byid------>
+Url:https://api.cryptoless.io/vault/accounts/1590247980485021697
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk4Mjg4OTM1LCJpYXQiOjE2NjY3NTI5MzUsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.4o43r1upI2Qzcs46wf3gqb2Kq6kq0I7qGST6qPspfjY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:305 2022-11-09 15:39:48.541002 | 
+<-----Delete Account Byid Response----->

@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:454 2022-11-11 14:28:43.538439 | 
+<-----Instructions----->
+Url:https://api.cryptoless.io/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk5NjAyNjg2LCJpYXQiOjE2NjgwNjY2ODYsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.crnXQzc0JOD7wPow9R3P3-uZrJmzOeUF6WOqy5OhxqY"}
+
+Body:{"body": {"delegator": "iaa180qh39f68devetnda4t28drsrhgxnjha5eqhus", "coinSymbol": "IRIS", "amount": "100000"}, "networkCode": "IRIS", "type": "stake", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "fK9GLMUzHs"}}
+[32mINFO    [0m Common.Http:Http.py:460 2022-11-11 14:28:43.538439 | 
+<-----Instructions Response Error----->
+400
+{"code":2102001,"message":"insufficient IRIS balance"}
