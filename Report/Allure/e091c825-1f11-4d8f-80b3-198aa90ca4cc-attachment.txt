@@ -1,8 +1,0 @@
-[32mINFO    [0m Common.Http:Http.py:198 2022-10-27 14:40:26.194391 | 
-<-----Holders----->
-Url:https://api.cryptoless.net/cryptocurrencies/holders?address=5EUNMnhcjb6KQCPMiBj54Pc4ydjWFnGnYDcJya4QGREbjfe6&networkCode=CLV&symbol=CLV
-
-Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4MzAxOTk1NTUzMDg5NTM2MVxuSXNzdWVkIEF0OiBUaHUsIDIwIE9jdCAyMDIyIDA4OjU5OjAzIEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTdW4sIDE3IE9jdCAyMDMyIDA4OjU5OjAzIEdNVCIsInNpZ25hdHVyZSI6IjB4MDA4NTA0NmM1YmYwYWFkZjkwMjIyMWFhNGU0OTFjODllYTU5ZTAxZGQ2ODIwNTdkMDU0Y2U2MzcyNTdkYTE2ZTIyNTJlMzYxYWJmNjE4ZmEwOWJmODVmYjEwM2RjMmZhYzg4MzFkODNmMDcwNGZlMjdhZmUzYTdjYWY0NGE2YjYxYyJ9"}
-[32mINFO    [0m Common.Http:Http.py:201 2022-10-27 14:40:26.194391 | 
-<-----Query Holders Response----->
-[]

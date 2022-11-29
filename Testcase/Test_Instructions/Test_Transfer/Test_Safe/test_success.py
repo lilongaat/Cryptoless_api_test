@@ -44,10 +44,10 @@ class Test_transfers_success:
     elif env_type == 1: #生产
         test_data = [
             # # DOGE网络
-            # ("Safe2-2账户DOGE转账",["6a7e8dceb20664b93a7a901e23ba05c34b4378a58e8b409cfceac35a3740345f"],"DOGE","DOGE","AF5UUawSaatGJTYZd65RCBp4D6aSXxEvjm","DGnb5SNRnEyAx9xNuHGxbiY4ysHPsxegP9",str(round(random.uniform(2,3), random.randint(3,5)))),
+            # ("Safe2-2账户DOGE转账",["6a7e8dceb20664b93a7a901e23ba05c34b4378a58e8b409cfceac35a3740345f"],"DOGE","DOGE","AF5UUawSaatGJTYZd65RCBp4D6aSXxEvjm","DGnb5SNRnEyAx9xNuHGxbiY4ysHPsxegP9",str(round(random.uniform(2,2.3), random.randint(3,5)))),
             # ("Safe2-3账户DOGE转账",["f4277914268b68080303d73c44a8adb38673bae19a99df921b4fba050a2ba86c"],"DOGE","DOGE","A6eYDsPe5AhAdRnidjY4mJxxDC2w1tikjG","DGnb5SNRnEyAx9xNuHGxbiY4ysHPsxegP9",str(round(random.uniform(2,3), random.randint(3,5)))),
             # # BSC网络
-            ("Safe2-2账户BNB转账",["100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33"],"BSC","BNB","0x790a34b998Ad6b2Fcfe0a3669E860B29847C5Ef9","0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A",str(Conf.Config.random_amount(4))),
+            # ("Safe2-2账户BNB转账",["100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33"],"BSC","BNB","0x790a34b998Ad6b2Fcfe0a3669E860B29847C5Ef9","0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A",str(Conf.Config.random_amount(4))),
             # ("Safe2-2账户USDC转账",["100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33"],"BSC","USDC","0x790a34b998Ad6b2Fcfe0a3669E860B29847C5Ef9","0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A",str(Conf.Config.random_amount(4))),
             # # MATIC网络
             # ("Safe2-2账户MATIC转账",["100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33"],"MATIC","MATIC","0x266d59b84c1CDc55E8fE11C5e27810de581C8037","0xDBA67bAa3CA1e89a2BDf0fEeE4592595b130888A",str(Conf.Config.random_amount(4))),

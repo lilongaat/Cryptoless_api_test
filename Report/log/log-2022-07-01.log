@@ -1,6 +1,0 @@
-2022-07-01 17:02:51.525 | ERROR    | test_transfers_success_btc:test_transfers_address:50 - b645995f56beb127650afc7b005f72c9b70a950d5c024d525b1ca26e12ea92e7
-2022-07-01 17:05:34.914 | ERROR    | test_transfers_success_btc:test_transfers_address:52 - 2
-2022-07-01 17:07:42.269 | ERROR    | test_transfers_success_btc:test_transfers_address:54 - []
-2022-07-01 17:07:42.270 | ERROR    | test_transfers_success_btc:test_transfers_address:55 - 0
-2022-07-01 17:22:59.501 | ERROR    | test_transfers_success_btc:test_transfers_address:55 - [{'address': 'tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun', 'amount': '0.00000405', 'blockHash': '0000000000003e129e570e733ffd6e99ba7407761a93c613bb27aaf6e80b9a0a', 'blockHeight': '2283537', 'createdTime': '2022-07-01T09:20:15.000Z', 'hash': 'b8ea3c2ac0da67f8aa6cff7e4ad68025dda7a10ec83d4456eabbb3ee50db431c', 'id': '1542800238443966465', 'isReverted': False, 'networkCode': 'BTC', 'symbol': 'BTC', 'time': '2022-07-01T09:20:11.000Z', 'type': -1, 'updatedTime': '2022-07-01T09:20:15.000Z'}]
-2022-07-01 17:22:59.502 | ERROR    | test_transfers_success_btc:test_transfers_address:56 - 1

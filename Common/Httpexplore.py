@@ -3,11 +3,10 @@ from decimal import Decimal
 import json
 import os
 import sys
-
-from Conf import Config
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from loguru import logger
-from Config.readconfig import ReadConfig
+import Conf
+
 
 class BTC:
     @staticmethod
@@ -138,7 +137,7 @@ class BSC:
     # https://blockchain.coinmarketcap.com/chain/binance-coin
     # 查询 块信息、价格信息
     def block():
-        url = "https://api.bscscan.com/api?module=block&action=getblocknobytime&timestamp="+str(Config.now_timestamp())+"&closest=before&apikey=1N55SHXT8U6N3YX8TZK3U8QV7862XDEG2J"
+        url = "https://api.bscscan.com/api?module=block&action=getblocknobytime&timestamp="+str(Conf.Config.now_timestamp())+"&closest=before&apikey=1N55SHXT8U6N3YX8TZK3U8QV7862XDEG2J"
         payload={}
         headers = {}
 
@@ -161,7 +160,7 @@ class MATIC:
 
     @staticmethod
     def block():
-        url = "https://api.polygonscan.com/api?module=block&action=getblocknobytime&timestamp="+str(Config.now_timestamp())+"&closest=before&apikey=85W6B7V5TPH7TDZA3JQCFT8UN8RKAEMA4Y"
+        url = "https://api.polygonscan.com/api?module=block&action=getblocknobytime&timestamp="+str(Conf.Config.now_timestamp())+"&closest=before&apikey=85W6B7V5TPH7TDZA3JQCFT8UN8RKAEMA4Y"
         payload={}
         headers = {}
 
@@ -247,7 +246,17 @@ class ATOM:
 
     @staticmethod
     def block():
-        url = "https://api.cosmostation.io/v1/status"
+        url = "https://cosmos.lcd.atomscan.com/cosmos/base/tendermint/v1beta1/blocks/latest"
+        payload={}
+        headers = {}
+
+        response = requests.request("GET", url, headers=headers, data=payload)
+        return response
+
+class IRIS:
+    @staticmethod
+    def block():
+        url = "https://proxy.atomscan.com/iris-lcd/cosmos/base/tendermint/v1beta1/blocks/latest"
         payload={}
         headers = {}
 
@@ -314,6 +323,36 @@ class DOT:
         response = requests.request("POST", url, headers=headers, data=payload)
         return response
 
+    @staticmethod
+    def balance(address:str):
+        url = "https://polkadot.webapi.subscan.io/api/scan/account/tokens"
+        payload = json.dumps({
+        "address": address
+        })
+        headers = {
+        'authority': 'polkadot.webapi.subscan.io',
+        'accept': 'application/json, text/plain, */*',
+        'accept-language': 'zh-CN',
+        'baggage': 'sentry-public_key=da3d374c00b64b6196b5d5861d4d1374,sentry-trace_id=8bf2b9324f364eb2895338cd25bbf1e3,sentry-sample_rate=0.01',
+        'content-type': 'application/json',
+        'cookie': '_ga_CP7HRJLKYD=GS1.1.1665632649.1.0.1665632651.0.0.0; local_language=zh-CN; _ga_3HWKS4132B=GS1.1.1667806991.6.1.1667807260.0.0.0; _ga_C466PTP61F=GS1.1.1668503324.10.0.1668503324.0.0.0; _gid=GA1.2.1260619428.1669174936; _ga_8WG03ZR03E=GS1.1.1669174939.12.0.1669174941.0.0.0; _ga_1HVHK949MH=GS1.1.1669183047.6.1.1669183400.0.0.0; _gat_UA15256131410=1; _gat_UA1525613147=1; _ga_RLSZTY8RF0=GS1.1.1669183047.20.1.1669183402.0.0.0; _ga=GA1.1.1366628872.1667532296',
+        'origin': 'https://polkadot.subscan.io',
+        'referer': 'https://polkadot.subscan.io/',
+        'sec-ch-ua': '"Google Chrome";v="107", "Chromium";v="107", "Not=A?Brand";v="24"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"macOS"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-site',
+        'sentry-trace': '8bf2b9324f364eb2895338cd25bbf1e3-b6ae778e5d1ab4b5-0',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+        }
+
+        logger.info('\n'+"<-----balance----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'payload:'+json.dumps(payload))
+        response = requests.request("POST", url, headers=headers, data=payload)
+        logger.info('\n'+"<-----balance response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
+        return response
+
 class BN:
     @staticmethod
     def BN_price(symbol:str):
@@ -322,7 +361,7 @@ class BN:
         headers = {}
 
         response = requests.request("GET", url, headers=headers, data=payload)
-        logger.info('\n'+"<-----balance response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
+        logger.info('\n'+"<-----BN balance response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
         return response
 
 if __name__ == '__main__':
@@ -342,4 +381,6 @@ if __name__ == '__main__':
     # print(BTC.balance("34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo").json()["balance"])
     # print((ETH.block().json()))
     print(BN.BN_price("BTC"))
+
+    # print(IRIS.block().json()["block"]["last_commit"]["height"])
 

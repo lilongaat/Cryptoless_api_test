@@ -22,7 +22,7 @@ class Test_stake_success:
             # IRIS网络
             # ("Custodial账户IRIS质押","IRIS","IRIS","stake","iaa1vywcfmff44nlhud05nlzlpw0hrlxenptn9ff7r",str(Conf.Config.random_amount(4))),
             # ("Custodial账户IRIS赎回","IRIS","IRIS","unstake","iaa1vywcfmff44nlhud05nlzlpw0hrlxenptn9ff7r",str(Conf.Config.random_amount(5))),
-            # ("Custodial账户IRISclaim","IRIS","IRIS","claim","iaa1vywcfmff44nlhud05nlzlpw0hrlxenptn9ff7r",0),
+            ("Custodial账户IRISclaim","IRIS","IRIS","claim","iaa1vywcfmff44nlhud05nlzlpw0hrlxenptn9ff7r",0),
             # CLV网络
             # ("Custodial账户IRIS质押","CLV","CLV","stake","5CFStFse5QY5dyfeHeTDSnMeBBRgxXse2D8k1TUbM67HeA9h",str(Conf.Config.random_amount(4))),
             # ("Custodial账户IRIS赎回","CLV","CLV","unstake","5CFStFse5QY5dyfeHeTDSnMeBBRgxXse2D8k1TUbM67HeA9h",str(Conf.Config.random_amount(5))),
@@ -31,11 +31,11 @@ class Test_stake_success:
     if env_type == 1: #生产
         test_data = [
             # IRIS网络
-            # ("Custodial账户IRIS质押","IRIS","IRIS","stake","iaa1yvgc6tjuetv6hzchnvnqg4r09ltzk8ld6m0vcu",str(Conf.Config.random_amount(4))),
+            ("Custodial账户IRIS质押","IRIS","IRIS","stake","iaa1yvgc6tjuetv6hzchnvnqg4r09ltzk8ld6m0vcu",str(Conf.Config.random_amount(4))),
             # ("Custodial账户IRIS赎回","IRIS","IRIS","unstake","iaa1yvgc6tjuetv6hzchnvnqg4r09ltzk8ld6m0vcu",str(Conf.Config.random_amount(5))),
             # ("Custodial账户IRISclaim","IRIS","IRIS","claim","iaa1yvgc6tjuetv6hzchnvnqg4r09ltzk8ld6m0vcu",0),
             # CLV网络
-            ("Custodial账户CLV质押","CLV","CLV","stake","5DiDtDkGFJ4CtgdEnGHaWU3JwSmCro26FozcqyTY8Brk3KSo",str(Conf.Config.random_amount(4))),
+            # ("Custodial账户CLV质押","CLV","CLV","stake","5DiDtDkGFJ4CtgdEnGHaWU3JwSmCro26FozcqyTY8Brk3KSo",str(Conf.Config.random_amount(4))),
             # ("Custodial账户CLV赎回","CLV","CLV","unstake","5DiDtDkGFJ4CtgdEnGHaWU3JwSmCro26FozcqyTY8Brk3KSo",str(Conf.Config.random_amount(5))),
             # ("Custodial账户CLVclaim","CLV","CLV","claim","5DiDtDkGFJ4CtgdEnGHaWU3JwSmCro26FozcqyTY8Brk3KSo",0),
         ]

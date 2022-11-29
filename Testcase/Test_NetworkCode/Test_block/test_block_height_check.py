@@ -107,7 +107,7 @@ class Test_block_height_check:
         atom = Httpexplore.ATOM.block()
         time = Conf.Config.now_time()
         assert atom.status_code == 200
-        block_height = atom.json()["block_height"]
+        block_height = int(atom.json()["block"]["last_commit"]["height"])
 
         atom_graphql = Graphql.Graphql.getLatestBlock("ATOM")
         time_ = Conf.Config.now_time()
@@ -120,6 +120,24 @@ class Test_block_height_check:
 
         if abs(block_height - block_height_network) > 3:
             Httpfs.HttpFs.send_msg(('ATOM Block_Height异常!\n' + "Mintscan查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network)))
+
+    def test_block_height_iris():
+        iris = Httpexplore.IRIS.block()
+        time = Conf.Config.now_time()
+        assert iris.status_code == 200
+        block_height = int(iris.json()["block"]["last_commit"]["height"])
+
+        iris_graphql = Graphql.Graphql.getLatestBlock("IRIS")
+        time_ = Conf.Config.now_time()
+        block_height_graphql = iris_graphql.json()["data"]["getLatestBlock"]["blockNumber"]
+
+        networks = Http.HttpUtils.get_networks(web3token)
+        block_height_network = int([n.get("blocks") for n in networks.json() if n.get("code") == "IRIS"][0])
+
+        # Httpfs.HttpFs.send_msg(('IRIS Height!\n' + "Mintscan查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network)))
+
+        if abs(block_height - block_height_network) > 5:
+            Httpfs.HttpFs.send_msg(('IRIS Block_Height异常!\n' + "Mintscan查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network)))
 
     def test_block_height_clv():
         clv = Httpexplore.CLV.block()
@@ -162,5 +180,7 @@ if __name__ == '__main__':
     Test_block_height_check.test_block_height_bsc()
     Test_block_height_check.test_block_height_matic()
     Test_block_height_check.test_block_height_atom()
+    Test_block_height_check.test_block_height_iris()
     Test_block_height_check.test_block_height_clv()
     Test_block_height_check.test_block_height_dot()
+    

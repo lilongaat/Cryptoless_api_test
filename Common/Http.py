@@ -237,8 +237,8 @@ class HttpUtils:
 
     @staticmethod
     # 查询账户列表
-    def get_account_list(networkCode='', address='',  type='', Authorization=token):
-        url = url_ + '/vault/accounts?networkCode='+networkCode+'&address='+address+'&type='+type
+    def get_account_list(networkCode:str='', address:str='',  type='',limit:str="1000", Authorization=token):
+        url = url_ + '/vault/accounts?networkCode='+networkCode+'&address='+address+'&type='+type+'&limit='+limit
         headers = {
             "Content-Type": "application/json",
             "Authorization": Authorization
@@ -360,6 +360,24 @@ class HttpUtils:
     # 查询holders信息
     def get_holders(Network='',symbol ='',address='',Authorization=web3token):
         url = url_ + '/cryptocurrencies/holders?address='+address+'&networkCode='+Network+'&symbol='+symbol
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+
+        logger.info('\n'+"<-----Holders----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
+        res = requests.get(url=url, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Query Holders Response----->"+"\n"+(res.text))
+            return res
+        else:
+            logger.error('\n'+'<-----Query Holders Response Error----->'+(res.text))
+            raise Exception("请求异常")
+
+    @staticmethod
+    # 查询holders信息
+    def holders(Network='',symbol ='',address='',Authorization=token):
+        url = url_ + '/vault/proxy/cryptocurrencies/holders?address='+address+'&networkCode='+Network+'&symbol='+symbol
         headers = {
             "Content-Type": "application/json",
             "Authorization": Authorization

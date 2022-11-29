@@ -1,0 +1,30 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:156 2022-11-28 17:59:10.167467 | 
+<-----balance----->
+Url:https://api.polygonscan.com/api?module=account&action=balance&address=0xbe85b4bc400d6723fbd1fc6853a7806fd37499f0&apikey=85W6B7V5TPH7TDZA3JQCFT8UN8RKAEMA4Y
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:158 2022-11-28 17:59:10.167467 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "922625947197732264408000"}
+[32mINFO    [0m Common.Graphql:Graphql.py:34 2022-11-28 17:59:10.167467 | 
+<-----balance----->
+Url:http://18.162.150.113:14102/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getAccountByAddress(address:\\\"0xbe85b4bc400d6723fbd1fc6853a7806fd37499f0\\\",coinId:\\\"MATIC\\\"){blockHash blockNumber address time amount coinId}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:36 2022-11-28 17:59:10.167467 | 
+<-----balance response----->
+
+Body:{"data": {"getAccountByAddress": {"blockHash": "0xb3c34d43e1a107aa060c4a2771935058e44b2ea1293b0378cd0900b720925494", "blockNumber": 36168244, "address": "0xbe85b4bc400d6723fbd1fc6853a7806fd37499f0", "time": "1669629753000", "amount": "922625947197732264408000", "coinId": "MATIC"}}}
+[32mINFO    [0m Common.Http:Http.py:386 2022-11-28 17:59:10.167467 | 
+<-----Holders----->
+Url:https://api.cryptoless.net/vault/proxy/cryptocurrencies/holders?address=0xbe85b4bc400d6723fbd1fc6853a7806fd37499f0&networkCode=MATIC&symbol=MATIC
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTk0OTM1NDgxNTA1MDY3MDEwIiwiZXhwIjoxNjY5NzAyMDI2LCJpYXQiOjE2NjkwOTcyMjYsInVzZXJJZCI6MTU5NDkzNTQ4MTUwNTA2NzAxMH0.KRM4Ob7rE-E59gUGCJBRbHjRAqNbcC-iPzUjLjsPyok"}
+[32mINFO    [0m Common.Http:Http.py:389 2022-11-28 17:59:10.167467 | 
+<-----Query Holders Response----->
+[{"address":"0xbe85b4Bc400D6723FbD1fC6853a7806fd37499F0","createdTime":"2022-11-22T07:46:09.000Z","id":"1594960408283127810","networkCode":"MATIC","quantity":"922625.947197732264408","symbol":"MATIC","updatedTime":"2022-11-28T10:02:44.000Z"}]

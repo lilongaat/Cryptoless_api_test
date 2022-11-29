@@ -1,0 +1,30 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:86 2022-11-28 17:59:10.167467 | 
+<-----balance----->
+Url:https://api.etherscan.io/api?module=account&action=balance&address=0x07ee55aa48bb72dcc6e9d78256648910de513eca&tag=latest&apikey=UDIG7EZI6J2VBUZIT6AAKXAKTVRQ64J2CF
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:88 2022-11-28 17:59:10.167467 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "274696049022935468400001"}
+[32mINFO    [0m Common.Graphql:Graphql.py:34 2022-11-28 17:59:10.167467 | 
+<-----balance----->
+Url:http://18.162.150.113:14100/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getAccountByAddress(address:\\\"0x07ee55aa48bb72dcc6e9d78256648910de513eca\\\",coinId:\\\"ETH\\\"){blockHash blockNumber address time amount coinId}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:36 2022-11-28 17:59:10.167467 | 
+<-----balance response----->
+
+Body:{"data": {"getAccountByAddress": {"blockHash": "0xfc7acd7e1964137049a7dac6f02732e79f4a09ce558217e0b30f1a53f65f08ee", "blockNumber": 16042540, "address": "0x07ee55aa48bb72dcc6e9d78256648910de513eca", "time": "1669325483000", "amount": "274696049022935468400001", "coinId": "ETH"}}}
+[32mINFO    [0m Common.Http:Http.py:386 2022-11-28 17:59:10.167467 | 
+<-----Holders----->
+Url:https://api.cryptoless.net/vault/proxy/cryptocurrencies/holders?address=0x07ee55aa48bb72dcc6e9d78256648910de513eca&networkCode=ETH&symbol=ETH
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTk0OTM1NDgxNTA1MDY3MDEwIiwiZXhwIjoxNjY5NzAyMDI2LCJpYXQiOjE2NjkwOTcyMjYsInVzZXJJZCI6MTU5NDkzNTQ4MTUwNTA2NzAxMH0.KRM4Ob7rE-E59gUGCJBRbHjRAqNbcC-iPzUjLjsPyok"}
+[32mINFO    [0m Common.Http:Http.py:389 2022-11-28 17:59:10.167467 | 
+<-----Query Holders Response----->
+[{"address":"0x07Ee55aA48Bb72DcC6E9D78256648910De513eca","createdTime":"2022-11-22T10:19:55.000Z","id":"1594999105053466626","networkCode":"ETH","quantity":"274696.049022935468400001","symbol":"ETH","updatedTime":"2022-11-24T21:31:34.000Z"}]

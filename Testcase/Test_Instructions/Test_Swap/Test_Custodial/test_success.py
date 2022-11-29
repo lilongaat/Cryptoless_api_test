@@ -20,9 +20,10 @@ env_type = int(ReadConfig().get_env('type'))
 class Test_swap_success:
     if env_type == 0: #测试
         test_data = [
-        ("正常Swap(MATIC-USDC)!","MATIC","MATIC","USDC","0x343d0b801Fcb032ccEB7D5411cd404816d203B91","1",Conf.Config.random_amount(3)),
-        # ("正常Swap(USDC-MATIC)!","MATIC","USDC","MATIC","0x343d0b801Fcb032ccEB7D5411cd404816d203B91","1",Conf.Config.random_amount(3)),
-        # ("正常Swap(USDC-USDT)!","MATIC","USDC","USDT","0x343d0b801Fcb032ccEB7D5411cd404816d203B91","1",Conf.Config.random_amount(3)),
+            # MATIC
+            ("正常Swap(MATIC-USDC)!","MATIC","MATIC","USDC","0x343d0b801Fcb032ccEB7D5411cd404816d203B91","1",Conf.Config.random_amount(3)),
+            # ("正常Swap(USDC-MATIC)!","MATIC","USDC","MATIC","0x343d0b801Fcb032ccEB7D5411cd404816d203B91","1",Conf.Config.random_amount(3)),
+            # ("正常Swap(USDC-USDT)!","MATIC","USDC","USDT","0x343d0b801Fcb032ccEB7D5411cd404816d203B91","1",Conf.Config.random_amount(3)),
         ]
     elif env_type == 1: #生产
         test_data = [

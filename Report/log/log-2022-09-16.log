@@ -1,2 +1,0 @@
-2022-09-16 18:18:12.433 | ERROR    | Common.Http:post_create_account:182 - 
-<-----Create account Response Error----->{"code":2200000,"message":"network not found"}

@@ -1,8 +1,0 @@
-2022-08-24 11:56:23.351 | ERROR    | Common.Http:post_create_account:163 - 
-<-----Create account Response Error----->{"code":2400000,"message":"UNAVAILABLE: io exception"}
-2022-08-24 14:33:13.541 | ERROR    | Common.Http:post_safe_activation:120 - 
-404
-<-----Safe Account activation Response Error----->{"code":2200000,"message":"agent not found"}
-2022-08-24 14:34:45.050 | ERROR    | Common.Http:post_safe_activation:120 - 
-404
-<-----Safe Account activation Response Error----->{"code":2200000,"message":"agent not found"}

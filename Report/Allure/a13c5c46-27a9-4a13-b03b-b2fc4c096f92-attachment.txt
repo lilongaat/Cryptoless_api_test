@@ -1,0 +1,30 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:60 2022-11-28 17:59:10.167467 | 
+<-----balance----->
+Url:https://dogechain.info/chain/Dogecoin/q/addressbalance/DJfU2p6woQ9GiBdiXsWZWJnJ9uDdZfSSNC
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:62 2022-11-28 17:59:10.167467 | 
+<-----balance response----->
+
+Body:726846334.9331982
+[32mINFO    [0m Common.Graphql:Graphql.py:34 2022-11-28 17:59:10.167467 | 
+<-----balance----->
+Url:http://18.162.150.113:14003/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getAccountByAddress(address:\\\"DJfU2p6woQ9GiBdiXsWZWJnJ9uDdZfSSNC\\\",coinId:\\\"DOGE\\\"){blockHash blockNumber address time amount coinId}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:36 2022-11-28 17:59:10.167467 | 
+<-----balance response----->
+
+Body:{"data": {"getAccountByAddress": {"blockHash": "f1c8e27848f27d5342de10ab6806e84837ea3c57b00377ca4dd2873fa02342fc", "blockNumber": 4491068, "address": "DJfU2p6woQ9GiBdiXsWZWJnJ9uDdZfSSNC", "time": "2022-11-28T10:06:33.000Z", "amount": "726846334.9331982", "coinId": null}}}
+[32mINFO    [0m Common.Http:Http.py:386 2022-11-28 17:59:10.167467 | 
+<-----Holders----->
+Url:https://api.cryptoless.net/vault/proxy/cryptocurrencies/holders?address=DJfU2p6woQ9GiBdiXsWZWJnJ9uDdZfSSNC&networkCode=DOGE&symbol=DOGE
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTk0OTM1NDgxNTA1MDY3MDEwIiwiZXhwIjoxNjY5NzAyMDI2LCJpYXQiOjE2NjkwOTcyMjYsInVzZXJJZCI6MTU5NDkzNTQ4MTUwNTA2NzAxMH0.KRM4Ob7rE-E59gUGCJBRbHjRAqNbcC-iPzUjLjsPyok"}
+[32mINFO    [0m Common.Http:Http.py:389 2022-11-28 17:59:10.167467 | 
+<-----Query Holders Response----->
+[{"address":"DJfU2p6woQ9GiBdiXsWZWJnJ9uDdZfSSNC","createdTime":"2022-11-22T10:31:37.000Z","id":"1595002050356649985","networkCode":"DOGE","quantity":"726846334.9331982","symbol":"DOGE","updatedTime":"2022-11-28T10:07:12.000Z"}]

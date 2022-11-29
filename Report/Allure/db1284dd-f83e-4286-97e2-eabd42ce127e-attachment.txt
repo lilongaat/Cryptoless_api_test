@@ -1,0 +1,30 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:292 2022-11-28 17:59:10.167467 | 
+<-----balance----->
+Url:https://clover.webapi.subscan.io/api/scan/account/tokens
+
+Headers:{"authority": "clover.webapi.subscan.io", "accept": "application/json, text/plain, */*", "accept-language": "zh-CN", "baggage": "", "content-type": "application/json", "origin": "https://clover.subscan.io", "referer": "https://clover.subscan.io/", "sec-ch-ua": "\"Chromium\";v=\"104\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"104\"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": "\"macOS\"", "sec-fetch-dest": "empty", "sec-fetch-mode": "cors", "sec-fetch-site": "same-site", "sentry-trace": "ea3a8691962949979b1cf67d39347ede-99c15b8b0f09a827-0", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.101 Safari/537.36"}
+
+payload:"{\"address\": \"5DcXuqcSfVespqVMvKsbdeoZ2eFihQd6qw9zjnfjds8NxCaV\"}"
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:294 2022-11-28 17:59:10.167467 | 
+<-----balance response----->
+
+Body:{"code": 0, "message": "Success", "generated_at": 1669630029, "data": {"native": [{"symbol": "CLV", "decimals": 18, "balance": "3215163193485846919841013", "lock": "3200742257741627205738946", "reserved": "0", "bonded": "3200742257741627205738946", "unbonding": "0", "democracy_lock": "0", "election_lock": "0"}]}}
+[32mINFO    [0m Common.Graphql:Graphql.py:34 2022-11-28 17:59:10.167467 | 
+<-----balance----->
+Url:http://18.162.150.113:14301/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getAccountByAddress(address:\\\"5DcXuqcSfVespqVMvKsbdeoZ2eFihQd6qw9zjnfjds8NxCaV\\\",coinId:\\\"CLV\\\"){blockHash blockNumber address time amount coinId}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:36 2022-11-28 17:59:10.167467 | 
+<-----balance response----->
+
+Body:{"data": {"getAccountByAddress": {"blockHash": "0x1d895def093f57b1ed512cf12fcf318462c4337c6801e7da3a2ca69f9e3a902e", "blockNumber": 8888757, "address": "5DcXuqcSfVespqVMvKsbdeoZ2eFihQd6qw9zjnfjds8NxCaV", "time": "2022-11-28T05:56:18.000Z", "amount": "14420.935744219714102067", "coinId": null}}}
+[32mINFO    [0m Common.Http:Http.py:386 2022-11-28 17:59:10.167467 | 
+<-----Holders----->
+Url:https://api.cryptoless.net/vault/proxy/cryptocurrencies/holders?address=5DcXuqcSfVespqVMvKsbdeoZ2eFihQd6qw9zjnfjds8NxCaV&networkCode=CLV&symbol=CLV
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTk0OTM1NDgxNTA1MDY3MDEwIiwiZXhwIjoxNjY5NzAyMDI2LCJpYXQiOjE2NjkwOTcyMjYsInVzZXJJZCI6MTU5NDkzNTQ4MTUwNTA2NzAxMH0.KRM4Ob7rE-E59gUGCJBRbHjRAqNbcC-iPzUjLjsPyok"}
+[32mINFO    [0m Common.Http:Http.py:389 2022-11-28 17:59:10.167467 | 
+<-----Query Holders Response----->
+[{"address":"5DcXuqcSfVespqVMvKsbdeoZ2eFihQd6qw9zjnfjds8NxCaV","createdTime":"2022-11-23T07:14:38.000Z","id":"1595314865109934082","networkCode":"CLV","quantity":"9242.325387272950806049","symbol":"CLV","updatedTime":"2022-11-23T07:14:38.000Z"}]

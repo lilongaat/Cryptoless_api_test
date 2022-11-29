@@ -19,12 +19,14 @@ env_type = int(ReadConfig().get_env('type'))
 class Test_swap_success:
     if env_type == 0: #测试
         test_data = [
+            # MATIC网络2-2 手续费不足
+            ("正常SWAP(MATIC-USDC)",["dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da"],"MATIC","USDC","MATIC","0x10A9A486E809CE76F6C34f26f9595a8325479278","1",str(Conf.Config.random_amount(4))),
             # MATIC网络2-2
             # ("正常SWAP(MATIC-USDC)",["dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da"],"MATIC","MATIC","USDC","0x42aD4f9111c14C1beE0c142EF275Ee08AA7B1E5e","1",str(Conf.Config.random_amount(4))),
             # ("正常SWAP(USDC-MATIC)",["dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da"],"MATIC","USDC","MATIC","0x42aD4f9111c14C1beE0c142EF275Ee08AA7B1E5e","1",str(Conf.Config.random_amount(4))),
             # ("正常SWAP(USDC-USDT)",["dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da"],"MATIC","USDC","USDT","0x42aD4f9111c14C1beE0c142EF275Ee08AA7B1E5e","1",str(Conf.Config.random_amount(4))),
             # MATIC网络2-3
-            ("正常SWAP(MATIC-USDC)",["dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da"],"MATIC","MATIC","USDC","0x1037477a2e863DA6f242ee06E106E8116857bF6E","1",str(Conf.Config.random_amount(4))),
+            # ("正常SWAP(MATIC-USDC)",["dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da"],"MATIC","MATIC","USDC","0x1037477a2e863DA6f242ee06E106E8116857bF6E","1",str(Conf.Config.random_amount(4))),
             # ("正常SWAP(USDC-MATIC)",["dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da"],"MATIC","USDC","MATIC","0x1037477a2e863DA6f242ee06E106E8116857bF6E","1",str(Conf.Config.random_amount(4))),
             # ("正常SWAP(USDC-USDT)",["dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da"],"MATIC","USDC","USDT","0x1037477a2e863DA6f242ee06E106E8116857bF6E","1",str(Conf.Config.random_amount(4))),
         ]

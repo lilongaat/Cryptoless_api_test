@@ -35,11 +35,11 @@ class Test_stake_success:
     if env_type == 1: #生产
         test_data = [
             # IRIS网络2-2
-            # ("Safe2-2账户IRIS质押",["a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c"],"IRIS","IRIS","stake","iaa1mmdw5mw2nw9wvqrzjzarkt46pkfn2n5hwpwz0w",str(Conf.Config.random_amount(4))),
+            ("Safe2-2账户IRIS质押",["a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c"],"IRIS","IRIS","stake","iaa1mmdw5mw2nw9wvqrzjzarkt46pkfn2n5hwpwz0w",str(Conf.Config.random_amount(4))),
             # ("Safe2-2账户IRIS赎回",["a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c"],"IRIS","IRIS","unstake","iaa1mmdw5mw2nw9wvqrzjzarkt46pkfn2n5hwpwz0w",str(Conf.Config.random_amount(5))),
             # ("Safe2-2账户IRIS赎回",["a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c"],"IRIS","IRIS","claim","iaa1mmdw5mw2nw9wvqrzjzarkt46pkfn2n5hwpwz0w",0),
             # IRIS网络2-3
-            ("Safe2-3账户IRIS质押",["a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c"],"IRIS","IRIS","stake","iaa1n367xt7536vhcxrnjx60na77afw2dzecxlmnah",str(Conf.Config.random_amount(4))),
+            # ("Safe2-3账户IRIS质押",["a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c"],"IRIS","IRIS","stake","iaa1n367xt7536vhcxrnjx60na77afw2dzecxlmnah",str(Conf.Config.random_amount(4))),
             # ("Safe2-3账户IRIS赎回",["a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c"],"IRIS","IRIS","unstake","iaa1n367xt7536vhcxrnjx60na77afw2dzecxlmnah",str(Conf.Config.random_amount(5))),
             # ("Safe2-3账户IRIS赎回",["a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c"],"IRIS","IRIS","claim","iaa1n367xt7536vhcxrnjx60na77afw2dzecxlmnah",0),
             # CLV网络

@@ -42,7 +42,6 @@ class Test_price_check:
 
         # Httpfs.HttpFs.send_msg('Price 异常!\n' + str(symbol_price_caps))
         if len(symbol_price_caps) > 0:
-            logger.error(json.dumps(symbol_price_caps))
             Httpfs.HttpFs.send_msg('Price 差距大于3%!\n' + str(symbol_price_caps))
 
 

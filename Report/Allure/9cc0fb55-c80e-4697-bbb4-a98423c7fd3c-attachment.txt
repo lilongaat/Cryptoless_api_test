@@ -1,0 +1,30 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:131 2022-11-28 17:59:10.167467 | 
+<-----balance----->
+Url:https://api.bscscan.com/api?module=account&action=balance&address=0xf9597e0364df5480f3002320f328a881de8f8976&apikey=1N55SHXT8U6N3YX8TZK3U8QV7862XDEG2J
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:133 2022-11-28 17:59:10.167467 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "2220717664356936937"}
+[32mINFO    [0m Common.Graphql:Graphql.py:34 2022-11-28 17:59:10.167467 | 
+<-----balance----->
+Url:http://18.162.150.113:14101/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getAccountByAddress(address:\\\"0xf9597e0364df5480f3002320f328a881de8f8976\\\",coinId:\\\"BSC\\\"){blockHash blockNumber address time amount coinId}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:36 2022-11-28 17:59:10.167467 | 
+<-----balance response----->
+
+Body:{"data": {"getAccountByAddress": {"blockHash": "0x9a73a67d9630c4f6e2ad826d5ebffb62ae61f4dd3fca1d4c4cb25c8a7a3c82cd", "blockNumber": 23403578, "address": "0xf9597e0364df5480f3002320f328a881de8f8976", "time": "1669512006000", "amount": "2220717664356936937", "coinId": "BSC"}}}
+[32mINFO    [0m Common.Http:Http.py:386 2022-11-28 17:59:10.167467 | 
+<-----Holders----->
+Url:https://api.cryptoless.net/vault/proxy/cryptocurrencies/holders?address=0xf9597e0364df5480f3002320f328a881de8f8976&networkCode=BSC&symbol=BNB
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTk0OTM1NDgxNTA1MDY3MDEwIiwiZXhwIjoxNjY5NzAyMDI2LCJpYXQiOjE2NjkwOTcyMjYsInVzZXJJZCI6MTU5NDkzNTQ4MTUwNTA2NzAxMH0.KRM4Ob7rE-E59gUGCJBRbHjRAqNbcC-iPzUjLjsPyok"}
+[32mINFO    [0m Common.Http:Http.py:389 2022-11-28 17:59:10.167467 | 
+<-----Query Holders Response----->
+[{"address":"0xf9597e0364DF5480f3002320F328A881DE8F8976","createdTime":"2022-11-23T02:50:05.000Z","id":"1595248290667372546","networkCode":"BSC","quantity":"2.220717664356936937","symbol":"BNB","updatedTime":"2022-11-27T01:20:36.000Z"}]
