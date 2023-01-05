@@ -1,0 +1,10 @@
+[32mINFO    [0m Common.Http:Http.py:164 2022-12-10 16:35:46.283433 | 
+<-----Create Safe Account------>
+Url:http://54.251.78.181:8888/escrow/api/accounts/safe
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg1MTAyNzkxNDY2NDg3ODEwIiwiZXhwIjoxNjk5NjAyNjg2LCJpYXQiOjE2NjgwNjY2ODYsInVzZXJJZCI6MTU4NTEwMjc5MTQ2NjQ4NzgxMH0.crnXQzc0JOD7wPow9R3P3-uZrJmzOeUF6WOqy5OhxqY"}
+Body:{"name": "safe", "networkCode": "GOERLI", "owner": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "recovery": ""}
+
+
+[31m[1mERROR   [0m Common.Http:Http.py:170 2022-12-10 16:35:46.283433 | 
+<-----Create account Response Error----->
+{"code":2000000,"message":"Unauthorized"}

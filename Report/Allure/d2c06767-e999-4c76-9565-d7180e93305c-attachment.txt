@@ -1,0 +1,31 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:60 2022-12-21 11:32:24.953956 | 
+<-----Core Holders List----->
+Url:https://api.dhandho.xyz/assets/holders?networkCode=BTC&symbol=BTC&address=tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:63 2022-12-21 11:32:24.953956 | 
+<-----Core Holders Response----->
+{"current":1,"list":[{"address":"tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33","id":"1603217983278403585","networkCode":"BTC","quantity":"0.00098128","symbol":"BTC","updatedTime":"2022-12-19T07:24:00.000Z"}],"size":10,"total":1}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:190 2022-12-21 11:32:24.953956 | 
+<-----Core Instructions------>
+Url:https://api.dhandho.xyz/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+body:{"networkCode": "BTC", "type": "transfer", "body": {"from": "tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33", "to": "tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33", "symbol": "BTC", "amount": "0.0000001"}, "transactionParams": {"memo": "Sgso1WYKkd"}}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:193 2022-12-21 11:32:24.953956 | 
+<-----Core Instructions Response---->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-21T03:32:27.000Z","description":"","estimatedFee":"226","fee":"-1","hash":"","id":"1605405809295245314","networkCode":"BTC","requiredSignings":[{"hash":"322e5af3af772a51b6412927eea7878d3c4806bac4935370455b06e0cc70ff49","publicKeys":["0231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f70","02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6"],"threshold":2}],"serialized":"010000000150f0865d712c293d002480eccc5051da7e9421f95d4fe67d7bd35d142b68106c0100000000ffffffff020a00000000000000220020aacf2586a97491580532bfb86a62d71f7ff96a8ab3872a9d18635e35d105cf62647e010000000000220020aacf2586a97491580532bfb86a62d71f7ff96a8ab3872a9d18635e35d105cf6200000000","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-21T03:32:27.000Z"}]},"body":{"amount":"0.0000001","from":"tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33","symbol":"BTC","to":"tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33"},"createdTime":"2022-12-21T03:32:26.000Z","id":"1605405809781788674","networkCode":"BTC","status":-2,"transactionParams":{"memo":"Sgso1WYKkd"},"type":"TRANSFER","updatedTime":"2022-12-21T03:32:26.000Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:213 2022-12-21 11:32:24.953956 | 
+<-----Core Sign------>
+Url:https://api.dhandho.xyz/transactions/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+body:{"id": "1605405809295245314", "signatures": [{"hash": "322e5af3af772a51b6412927eea7878d3c4806bac4935370455b06e0cc70ff49", "publicKey": "0231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f70", "signature": "575a1b2c458dbd2badecf04c2028aa94e8cf3ad84b672bfa00f9e323f9692d33046bb797fcc42f2b77b20b8f974d808a74bbd5c208433469d117acd10a3b071a01"}, {"hash": "322e5af3af772a51b6412927eea7878d3c4806bac4935370455b06e0cc70ff49", "publicKey": "02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6", "signature": "c685986b37cf2b05d63d5f1e6612a6843e83c0439f6c3e44036bce4d1400153d3cf11d7ff5aa7bd10f9047393e63f1a544d0f22baafb92d7e98adc97ddd120e401"}]}
+
+
+[1m[31mERROR   [0m Common.Httpcore:Httpcore.py:219 2022-12-21 11:32:24.953956 | 
+<-----Core Sign Response Error----->{"code":2100000,"message":"invalid signature 575a1b2c458dbd2badecf04c2028aa94e8cf3ad84b672bfa00f9e323f9692d33046bb797fcc42f2b77b20b8f974d808a74bbd5c208433469d117acd10a3b071a01"}

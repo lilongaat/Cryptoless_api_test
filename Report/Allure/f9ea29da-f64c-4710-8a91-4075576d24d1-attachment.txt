@@ -1,0 +1,43 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:339 2023-01-05 17:31:12.55238 | 
+<-----balance----->
+Url:https://clover.webapi.subscan.io/api/scan/account/tokens
+
+Headers:{"authority": "clover.webapi.subscan.io", "accept": "application/json, text/plain, */*", "accept-language": "zh-CN", "baggage": "", "content-type": "application/json", "origin": "https://clover.subscan.io", "referer": "https://clover.subscan.io/", "sec-ch-ua": "\"Chromium\";v=\"104\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"104\"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": "\"macOS\"", "sec-fetch-dest": "empty", "sec-fetch-mode": "cors", "sec-fetch-site": "same-site", "sentry-trace": "ea3a8691962949979b1cf67d39347ede-99c15b8b0f09a827-0", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.101 Safari/537.36"}
+
+payload:"{\"address\": \"5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc\"}"
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:341 2023-01-05 17:31:12.55238 | 
+<-----balance response----->
+
+Body:{"code": 0, "message": "Success", "generated_at": 1672911073, "data": {"native": [{"symbol": "CLV", "decimals": 18, "balance": "94666249999981599", "lock": "100000000000000", "reserved": "0", "bonded": "100000000000000", "unbonding": "0", "democracy_lock": "0", "election_lock": "0"}]}}
+[32mINFO    [0m Common.Http:Http.py:421 2023-01-05 17:31:12.55238 | 
+<-----Query Holders----->
+Url:http://api.orbital3.xyz/vault/proxy/assets/holders/?networkCode=CLV&address=5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc&symbol=CLV
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+
+
+[32mINFO    [0m Common.Http:Http.py:424 2023-01-05 17:31:12.55238 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc","createdTime":"2023-01-05T03:42:00.000Z","id":"1610844034002194433","networkCode":"CLV","quantity":"0.094566249999981599","symbol":"CLV","updatedTime":"2023-01-05T09:27:00.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_success:test_success.py:58 2023-01-05 17:31:12.55238 | 浏览器查询账户balance为:0.094566249999981599
+[35mDEBUG   [0m test_success:test_success.py:59 2023-01-05 17:31:12.55238 | 查询账户holder为:0.094566249999981599
+[32mINFO    [0m Common.Http:Http.py:498 2023-01-05 17:31:12.55238 | 
+<-----Query Staking----->
+Url:http://api.orbital3.xyz/vault/proxy/stakes/delegators?address=5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc&networkCode=CLV
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+[32mINFO    [0m Common.Http:Http.py:501 2023-01-05 17:31:12.55238 | 
+<-----Query Staking Response----->
+[{"address":"5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc","coinSymbol":"CLV","createdTime":"2023-01-03T06:38:59.000Z","id":"1610163797629358082","networkCode":"CLV","pendings":"0","staked":"0","updatedTime":"2023-01-03T06:39:00.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:261 2023-01-05 17:31:12.55238 | 
+<-----Instructions----->
+Url:http://api.orbital3.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+Body:{"networkCode": "CLV", "type": "unstake", "body": {"delegator": "5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc", "coinSymbol": "CLV", "amount": "0.00001"}, "transactionParams": {"memo": "vrSTX2j35l"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:267 2023-01-05 17:31:12.55238 | 
+<-----Instructions Response Error----->
+400
+{"code":2300000,"message":"No enum constant io.cryptoless.simple.enums.OperateType.UNSTAKE"}

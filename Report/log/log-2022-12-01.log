@@ -1,0 +1,6 @@
+2022-12-01 14:11:58.601 | ERROR    | Common.Httpcore:core_build:136 - 
+<-----Core Build Response Error----->{"code":2400000,"message":"INVALID_ARGUMENT: must have required property 'value'"}
+2022-12-01 14:13:25.298 | ERROR    | Common.Httpcore:core_sign:159 - 
+<-----Core Sign Response Error----->{"code":2100000,"message":"invalid signature 792e1f572981041f223ba369b2dcab09d1a223e7441277047e8a22801eb376397e4ba02394f4cd68f51eaaebfe3cd6319a0cd33434fcdeb2cc4a5a616558e43a00"}
+2022-12-01 19:04:36.307 | ERROR    | Common.Httpcore:query_utxo:219 - networkCode not support!
+2022-12-01 19:04:59.865 | ERROR    | Common.Httpcore:query_utxo:219 - networkCode not support!

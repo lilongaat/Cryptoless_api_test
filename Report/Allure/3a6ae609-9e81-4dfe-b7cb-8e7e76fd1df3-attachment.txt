@@ -1,0 +1,22 @@
+[32mINFO    [0m Common.Http:Http.py:425 2022-12-14 11:13:10.955641 | 
+<-----Query Holders----->
+Url:http://54.251.78.181:8888/escrow/api//proxy/core/api/assets/holders/?networkCode=BTC&address=tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x&symbol=BTC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:428 2022-12-14 11:13:10.955641 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x","id":"1602203347439538177","networkCode":"BTC","quantity":"0.01548432","symbol":"BTC","updatedTime":"2022-12-13T08:31:54.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:265 2022-12-14 11:13:10.955641 | 
+<-----Instructions----->
+Url:http://54.251.78.181:8888/escrow/api//instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "BTC", "type": "transfer", "body": {"from": "tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x", "to": "tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt", "symbol": "BTC", "amount": "0.000000001"}, "transactionParams": {"memo": "PiB19NDRxF"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:271 2022-12-14 11:13:10.955641 | 
+<-----Instructions Response Error----->
+400
+{"code":2100000,"message":"amount decimals long too"}

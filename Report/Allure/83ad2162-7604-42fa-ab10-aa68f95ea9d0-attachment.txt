@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:265 2022-12-17 14:12:57.976262 | 
+<-----Instructions----->
+Url:http://54.251.78.181:8888/escrow/api//instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "BTC", "type": "transfer", "body": {"from": "tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x", "to": "tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq", "symbol": "BTC", "amount": "0.000008"}, "transactionParams": {"memo": "MjnUzI1QLS"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:271 2022-12-17 14:12:57.976262 | 
+<-----Instructions Response Error----->
+400
+{"code":1100000,"message":"Bad Request"}

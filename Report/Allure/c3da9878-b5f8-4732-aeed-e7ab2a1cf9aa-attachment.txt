@@ -1,0 +1,10 @@
+[32mINFO    [0m Common.Http:Http.py:164 2022-12-09 18:25:13.418205 | 
+<-----Create Safe Account------>
+Url:http://54.251.78.181:8888/escrow/api//accounts/safe
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"name": "safe", "networkCode": "MATIC", "owner": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "recovery": ""}
+
+
+[31m[1mERROR   [0m Common.Http:Http.py:170 2022-12-09 18:25:13.418205 | 
+<-----Create account Response Error----->
+{"code":2300000,"message":"com.netflix.client.ClientException: Load balancer does not have available server for client: core-center"}

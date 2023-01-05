@@ -1,0 +1,20 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:142 2023-01-04 11:29:16.772278 | 
+<-----Balance EEC20----->
+Url:https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress=0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d&address=0x9b532cf5f662e51ba643672797ad3ec1a60bb939&tag=latest&apikey=1N55SHXT8U6N3YX8TZK3U8QV7862XDEG2J
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:144 2023-01-04 11:29:16.772278 | 
+<-----Balance EEC20 response----->
+
+Body:{"status": "1", "message": "OK", "result": "99999810000000000"}
+[32mINFO    [0m Common.Http:Http.py:421 2023-01-04 11:29:16.772278 | 
+<-----Query Holders----->
+Url:http://api.orbital3.xyz/vault/proxy/assets/holders/?networkCode=BSC&address=0x9b532cf5f662e51ba643672797ad3ec1a60bb939&symbol=USDC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+
+
+[32mINFO    [0m Common.Http:Http.py:424 2023-01-04 11:29:16.772278 | 
+<-----Query Holders Response----->
+{"current":1,"list":[],"size":10,"total":0}

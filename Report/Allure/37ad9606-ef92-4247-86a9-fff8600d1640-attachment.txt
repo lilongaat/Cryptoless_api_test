@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:132 2022-12-02 17:39:47.42263 | 
+<-----Core Build------>
+Url:http://54.251.78.181:8888/core/api/transactions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+
+body:{"networkCode": "MATIC", "payload": {"from": "0xe525e7cd17f6dc950492755a089e452fd5d9d44f", "calls": [{"to": "0x6ea3e44492a82b226111991db003e2f993ec18b2", "value": "0x64"}, {"to": "0x6ea3e44492a82b226111991db003e2f993ec18b2", "value": "0xc8"}, {"to": "0xe525e7cd17f6dc950492755a089e452fd5d9d44f", "value": "0x12c"}]}, "type": "MULTISEND_TRANSACTION"}
+
+
+[31m[1mERROR   [0m Common.Httpcore:Httpcore.py:138 2022-12-02 17:39:47.42263 | 
+<-----Core Build Response Error----->{"code":2400000,"message":"INVALID_ARGUMENT: must have required property 'value'"}

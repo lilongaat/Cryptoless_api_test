@@ -1,0 +1,21 @@
+[32mINFO    [0m Common.Http:Http.py:283 2022-12-13 15:38:58.365997 | 
+<-----Transactions----->
+Url:http://54.251.78.181:8888/escrow/api//transactions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "GOERLI", "payload": {"from": "0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca", "to": "0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2", "value": "0x64"}, "type": "TRANSACTION"}
+
+
+[32mINFO    [0m Common.Http:Http.py:286 2022-12-13 15:38:58.365997 | 
+<-----Transactions Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-13T07:39:02.000Z","description":"","estimatedFee":"20239154187000","fee":"-1","hash":"0x556cc984c89deba752ef05d173348311424fffff592a7306926751902415d7f9","id":"1602568754201608194","networkCode":"GOERLI","serialized":"02f86a0507843971f39f844ffaa46d82520894a7a9e710f9a3b4184d4f8b7d379cec262f2382c26480c001a063148d420aa83af694f854e8a719e51c9c4a16b1f81b258baa6904ed2b218cf7a032a9eb04964c412b9ea1852fdfda6333da884175416ec42779ace7e3903eb715","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-13T07:39:04.166Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:364 2022-12-13 15:38:58.365997 | 
+<-----Send----->
+Url:http://54.251.78.181:8888/escrow/api//transactions/send/1602568754201608194
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:368 2022-12-13 15:38:58.365997 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-12-13T07:39:07.844Z","createdTime":"2022-12-13T07:39:02.000Z","description":"","estimatedFee":"20239154187000","fee":"-1","hash":"0x556cc984c89deba752ef05d173348311424fffff592a7306926751902415d7f9","id":"1602568754201608194","networkCode":"GOERLI","serialized":"02f86a0507843971f39f844ffaa46d82520894a7a9e710f9a3b4184d4f8b7d379cec262f2382c26480c001a063148d420aa83af694f854e8a719e51c9c4a16b1f81b258baa6904ed2b218cf7a032a9eb04964c412b9ea1852fdfda6333da884175416ec42779ace7e3903eb715","status":3,"statusDesc":"PENDING","updatedTime":"2022-12-13T07:39:07.844Z"}

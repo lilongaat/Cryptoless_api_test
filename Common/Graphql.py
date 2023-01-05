@@ -6,22 +6,44 @@ sys.path.append(os.path.dirname((os.path.abspath(__file__))))
 from loguru import logger
 from Httpfs import HttpFs
 
-url_ = "http://18.162.150.113"
 
 class Graphql:
     @staticmethod
     def getAccountByAddress(netWorkcode:str,address:str,coinId:str):
 
-        if netWorkcode == "ETH":prot = "14100"
-        elif netWorkcode == "BTC":prot = "14000"
-        elif netWorkcode == "BSC":prot = "14101"
-        elif netWorkcode == "DOT":prot = "14300"
-        elif netWorkcode == "CLV":prot = "14301"
-        elif netWorkcode == "ATOM":prot = "14200"
-        elif netWorkcode == "IRIS":prot = "14201"
-        elif netWorkcode == "DOGE":prot = "14003"
-        elif netWorkcode == "LTC":prot = "14002"
-        elif netWorkcode == "MATIC":prot = "14102"
+        if netWorkcode == "ETH":
+            url_ = "http://18.166.208.93"
+            prot = "14100"
+        elif netWorkcode == "BTC":
+            url_ = "http://18.162.150.113"
+            prot = "14000"
+        elif netWorkcode == "BSC":
+            url_ = "http://18.166.208.93"
+            prot = "14101"
+        elif netWorkcode == "DOT":
+            url_ = "http://18.162.150.113"
+            prot = "14300"
+        elif netWorkcode == "CLV":
+            url_ = "http://18.162.150.113"
+            prot = "14301"
+        elif netWorkcode == "ATOM":
+            url_ = "http://18.162.150.113"
+            prot = "14200"
+        elif netWorkcode == "IRIS":
+            url_ = "http://18.162.150.113"
+            prot = "14201"
+        elif netWorkcode == "DOGE":
+            url_ = "http://18.162.150.113"
+            prot = "14003"
+        elif netWorkcode == "LTC":
+            url_ = "http://18.162.150.113"
+            prot = "14002"
+        elif netWorkcode == "MATIC":
+            url_ = "http://18.166.208.93"
+            prot = "14102"
+        elif netWorkcode == "GOERLI":
+            url_ = "http://13.212.89.244"
+            prot = "4005"
 
         url = url_ + ":" + prot+ "/graphql/"
         payload = json.dumps({
@@ -39,16 +61,36 @@ class Graphql:
     @staticmethod
     def getLatestBlock(netWorkcode:str):
 
-        if netWorkcode == "ETH":prot = "14100"
-        elif netWorkcode == "BTC":prot = "14000"
-        elif netWorkcode == "BSC":prot = "14101"
-        elif netWorkcode == "DOT":prot = "14300"
-        elif netWorkcode == "CLV":prot = "14301"
-        elif netWorkcode == "ATOM":prot = "14200"
-        elif netWorkcode == "IRIS":prot = "14201"
-        elif netWorkcode == "DOGE":prot = "14003"
-        elif netWorkcode == "LTC":prot = "14002"
-        elif netWorkcode == "MATIC":prot = "14102"
+        if netWorkcode == "ETH":
+            url_ = "http://18.166.208.93"
+            prot = "14100"
+        elif netWorkcode == "BTC":
+            url_ = "http://18.162.150.113"
+            prot = "14000"
+        elif netWorkcode == "BSC":
+            url_ = "http://18.166.208.93"
+            prot = "14101"
+        elif netWorkcode == "DOT":
+            url_ = "http://18.162.150.113"
+            prot = "14300"
+        elif netWorkcode == "CLV":
+            url_ = "http://18.162.150.113"
+            prot = "14301"
+        elif netWorkcode == "ATOM":
+            url_ = "http://18.162.150.113"
+            prot = "14200"
+        elif netWorkcode == "IRIS":
+            url_ = "http://18.162.150.113"
+            prot = "14201"
+        elif netWorkcode == "DOGE":
+            url_ = "http://18.162.150.113"
+            prot = "14003"
+        elif netWorkcode == "LTC":
+            url_ = "http://18.162.150.113"
+            prot = "14002"
+        elif netWorkcode == "MATIC":
+            url_ = "http://18.166.208.93"
+            prot = "14102"
 
         url = url_ + ":" + prot+ "/graphql/"
         payload = json.dumps({
@@ -68,5 +110,5 @@ class Graphql:
 
 
 if __name__ == '__main__':
-    print(Graphql.getAccountByAddress("ATOM","cosmos1nm0rrq86ucezaf8uj35pq9fpwr5r82cl8sc7p5","ATOM"))
-    # print(Graphql.getLatestBlock("BTC"))
+    # print(Graphql.getAccountByAddress("GOERLI","0xc53ce86d5b3fcf72963df2faa0856a3d9bc7a1ae","goerliETH"))
+    print(Graphql.getLatestBlock("ATOM"))

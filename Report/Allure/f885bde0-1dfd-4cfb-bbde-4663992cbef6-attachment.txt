@@ -1,0 +1,21 @@
+[32mINFO    [0m Common.Http:Http.py:265 2022-12-15 18:35:13.747513 | 
+<-----Instructions----->
+Url:http://54.251.78.181:8888/escrow/api//instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "BTC", "type": "transfer", "body": {"from": "tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x", "to": "tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq", "symbol": "BTC", "amount": "0.000008"}, "transactionParams": {"memo": "0Cnob26Pyv"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:268 2022-12-15 18:35:13.747513 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-15T10:35:17.000Z","description":"","estimatedFee":"187","fee":"-1","hash":"243c54f9d5441e0d378c86cb28c77c4dd1e1c981a25b4ebbc88e38eb525a7298","id":"1603337888493457409","networkCode":"BTC","serialized":"01000000000101f655676e0ca35030a9f8b26084314af320c9f4de2621ecb89564c3a1b24be6890100000000ffffffff022003000000000000160014ea2cc3344a103daead8378c573ccbfcba5bfed549d68170000000000160014f136ddf8a32711e62d6eac8693f82dc6e7af4e210247304402201f608c9a4350fb352f97d55ccf74da4a149ef084eff69d706418f362f89a275e02205df24a4f989c513dc51703cb01f3e34bd634f82aafe135470a046deb420298b5012103fc4bdc2e6a1337c9e0dfbb888b4e7178cd1746ee789477a42695d971afd8d67900000000","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-15T10:35:20.000Z"}]},"body":{"symbol":"BTC","amount":"0.000008","from":"tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x","to":"tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq"},"createdTime":"2022-12-15T10:35:16.000Z","id":"1603337892859711490","networkCode":"BTC","status":-2,"transactionParams":{"memo":"0Cnob26Pyv"},"type":"TRANSFER","updatedTime":"2022-12-15T10:35:16.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:364 2022-12-15 18:35:13.747513 | 
+<-----Send----->
+Url:http://54.251.78.181:8888/escrow/api//transactions/send/1603337888493457409
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:368 2022-12-15 18:35:13.747513 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-12-15T10:35:20.337Z","createdTime":"2022-12-15T10:35:17.000Z","description":"","estimatedFee":"187","fee":"-1","hash":"243c54f9d5441e0d378c86cb28c77c4dd1e1c981a25b4ebbc88e38eb525a7298","id":"1603337888493457409","networkCode":"BTC","serialized":"01000000000101f655676e0ca35030a9f8b26084314af320c9f4de2621ecb89564c3a1b24be6890100000000ffffffff022003000000000000160014ea2cc3344a103daead8378c573ccbfcba5bfed549d68170000000000160014f136ddf8a32711e62d6eac8693f82dc6e7af4e210247304402201f608c9a4350fb352f97d55ccf74da4a149ef084eff69d706418f362f89a275e02205df24a4f989c513dc51703cb01f3e34bd634f82aafe135470a046deb420298b5012103fc4bdc2e6a1337c9e0dfbb888b4e7178cd1746ee789477a42695d971afd8d67900000000","status":3,"statusDesc":"PENDING","updatedTime":"2022-12-15T10:35:20.337Z"}

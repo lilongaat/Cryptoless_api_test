@@ -1,0 +1,22 @@
+[32mINFO    [0m Common.Http:Http.py:425 2022-12-28 16:07:47.546092 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=MATIC&address=0x25f7f610a1dc5f674a5e2bb9c2846be076814cd7&symbol=USDC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:428 2022-12-28 16:07:47.546092 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0x25f7f610a1dc5f674a5e2bb9c2846be076814cd7","createdTime":"2022-12-26T10:20:01.000Z","id":"1607320318216720390","networkCode":"MATIC","quantity":"0.100083","symbol":"USDC","updatedTime":"2022-12-28T08:07:45.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:265 2022-12-28 16:07:47.546092 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "MATIC", "type": "swap", "body": {"address": "0x25f7f610a1dc5f674a5e2bb9c2846be076814cd7", "from": "USDC", "to": "MATIC", "fromAmount": "0.0000111", "slippage": "1"}, "transactionParams": {"memo": "r6vm1Kb3Xl"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:271 2022-12-28 16:07:47.546092 | 
+<-----Instructions Response Error----->
+400
+{"code":2300000,"message":"For input string: \"11.1\""}

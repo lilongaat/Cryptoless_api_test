@@ -1,0 +1,27 @@
+[32mINFO    [0m Common.Http:Http.py:163 2022-12-15 19:22:05.550080 | 
+<-----Create Safe Account------>
+Url:http://54.251.78.181:8888/escrow/api/accounts/safe
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"name": "\u5b89\u5168\u8d26\u6237GOERLI2-2-1671103325", "networkCode": "GOERLI", "owner": "", "recovery": ""}
+
+
+[32mINFO    [0m Common.Http:Http.py:166 2022-12-15 19:22:05.550080 | 
+<-----Create account Response----->
+{"address":"0x47b4f852a5dfb79696b2f2c9cca95d2393dcf4c1","createdTime":"2022-12-15T11:22:13.585Z","finalized":false,"id":"1603349706934841346","name":"安全账户GOERLI2-2-1671103325","networkCode":"GOERLI","publicKeys":[{"source":"custodial","type":"secp256k1","value":"021d66dba5f999478db797ee7478c96209f7141215236eba7d0c692e437ba736ce"},{"source":"custodial","type":"secp256k1","value":"03c9d658fad76cfc182db992ac71165638852c3e7881455fd39de4951debdf1041"}],"status":"inactive","threshold":2,"type":"safe","updatedTime":"2022-12-15T11:22:13.585Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:205 2022-12-15 19:22:05.550080 | 
+<-----Query Account Byid------>
+Url:http://54.251.78.181:8888/escrow/api//accounts/1603349706934841346
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:208 2022-12-15 19:22:05.550080 | 
+<-----Query Account Byid Response----->
+{"address":"0x47b4f852a5dfb79696b2f2c9cca95d2393dcf4c1","createdTime":"2022-12-15T11:22:13.585Z","finalized":false,"id":"1603349706934841346","name":"安全账户GOERLI2-2-1671103325","networkCode":"GOERLI","publicKeys":[{"source":"custodial","type":"secp256k1","value":"021d66dba5f999478db797ee7478c96209f7141215236eba7d0c692e437ba736ce"},{"source":"custodial","type":"secp256k1","value":"03c9d658fad76cfc182db992ac71165638852c3e7881455fd39de4951debdf1041"}],"status":"inactive","threshold":2,"type":"safe","updatedTime":"2022-12-15T11:22:13.585Z"}
+
+
+[31m[1mERROR   [0m test_create_success:test_create_success.py:67 2022-12-15 19:22:05.550080 | 
+
+Goerli创建2-2安全账户 全custodial
+0x47b4f852a5dfb79696b2f2c9cca95d2393dcf4c1

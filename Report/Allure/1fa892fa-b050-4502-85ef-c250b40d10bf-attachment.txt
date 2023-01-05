@@ -1,0 +1,42 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:60 2022-12-22 10:45:42.755537 | 
+<-----Core Holders List----->
+Url:https://api.dhandho.xyz/assets/holders?networkCode=CLV&symbol=CLV&address=5EwMcCvUPD7RKUTs86NoLPame9oCg8edtdKCdbcsxTFL3aTQ
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:63 2022-12-22 10:45:42.755537 | 
+<-----Core Holders Response----->
+{"current":1,"list":[{"address":"5EwMcCvUPD7RKUTs86NoLPame9oCg8edtdKCdbcsxTFL3aTQ","id":"1605394621558558721","networkCode":"CLV","quantity":"13.1","symbol":"CLV","updatedTime":"2022-12-21T11:16:16.000Z"}],"size":10,"total":1}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:190 2022-12-22 10:45:42.755537 | 
+<-----Core Instructions------>
+Url:https://api.dhandho.xyz/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+body:{"networkCode": "CLV", "type": "transfer", "body": {"from": "5EwMcCvUPD7RKUTs86NoLPame9oCg8edtdKCdbcsxTFL3aTQ", "to": "5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT", "symbol": "CLV", "amount": "0.000102"}, "transactionParams": {"memo": "9eCVZFIdJm"}}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:193 2022-12-22 10:45:42.755537 | 
+<-----Core Instructions Response---->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-22T02:45:49.000Z","description":"","estimatedFee":"1831250000007640","fee":"-1","hash":"","id":"1605756447253278722","networkCode":"CLV","requiredSignings":[{"hash":"8b5d42eda7726398b95260815d30f38902d2e5867936f38a243b1c9e37bdfb59","publicKeys":["0211580d646f8b3d460ab558da9b7dde4117f5f071ef39b38be258af269df32aab"],"threshold":1}],"serialized":"d5028400f665ee2df4b1559cc0470b8a3a94e4a81ca4c34941247f8308b46f659b2744180200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010048001d020200045516d72dfb89571d89f2be500dd637d94128645415b73e136a8f4745920a78d6007d83c93561f86306ab868c30ddab071581bc4b146693721ebc2260f09bf4fdc5d0e0730d00000000","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-22T02:45:49.000Z"}]},"body":{"amount":"0.000102","from":"5EwMcCvUPD7RKUTs86NoLPame9oCg8edtdKCdbcsxTFL3aTQ","symbol":"CLV","to":"5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT"},"createdTime":"2022-12-22T02:45:48.000Z","id":"1605756461930303489","networkCode":"CLV","status":-2,"transactionParams":{"memo":"9eCVZFIdJm"},"type":"TRANSFER","updatedTime":"2022-12-22T02:45:48.000Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:213 2022-12-22 10:45:42.755537 | 
+<-----Core Sign------>
+Url:https://api.dhandho.xyz/transactions/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+body:{"id": "1605756447253278722", "signatures": [{"hash": "8b5d42eda7726398b95260815d30f38902d2e5867936f38a243b1c9e37bdfb59", "publicKey": "0211580d646f8b3d460ab558da9b7dde4117f5f071ef39b38be258af269df32aab", "signature": "76383893dc3bad3fda8c94b34c466bf2a97a6ab2f57981b2b4261fee3c7e35882c6b6d6424c3b5eeb06782091b6954d0f8fdd57f1fda937520ef52db75980e9401"}]}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:216 2022-12-22 10:45:42.755537 | 
+<-----Core Sign Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-22T02:45:49.000Z","description":"","estimatedFee":"","fee":"-1","hash":"0x4823915edd54340b2da0c559ad976bc2a2aa0a1622b94def550e6560c60fde39","id":"1605756447253278722","networkCode":"CLV","serialized":"d5028400f665ee2df4b1559cc0470b8a3a94e4a81ca4c34941247f8308b46f659b2744180276383893dc3bad3fda8c94b34c466bf2a97a6ab2f57981b2b4261fee3c7e35882c6b6d6424c3b5eeb06782091b6954d0f8fdd57f1fda937520ef52db75980e94010048001d020200045516d72dfb89571d89f2be500dd637d94128645415b73e136a8f4745920a78d6007d83c93561f86306ab868c30ddab071581bc4b146693721ebc2260f09bf4fdc5d0e0730d00000000","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-22T02:45:49.210Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:232 2022-12-22 10:45:42.755537 | 
+<-----Core Send------>
+Url:https://api.dhandho.xyz/transactions/send/1605756447253278722
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:235 2022-12-22 10:45:42.755537 | 
+<-----Core Send Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"2022-12-22T02:45:50.113Z","createdTime":"2022-12-22T02:45:49.000Z","description":"","estimatedFee":"","fee":"-1","hash":"0x4823915edd54340b2da0c559ad976bc2a2aa0a1622b94def550e6560c60fde39","id":"1605756447253278722","networkCode":"CLV","serialized":"d5028400f665ee2df4b1559cc0470b8a3a94e4a81ca4c34941247f8308b46f659b2744180276383893dc3bad3fda8c94b34c466bf2a97a6ab2f57981b2b4261fee3c7e35882c6b6d6424c3b5eeb06782091b6954d0f8fdd57f1fda937520ef52db75980e94010048001d020200045516d72dfb89571d89f2be500dd637d94128645415b73e136a8f4745920a78d6007d83c93561f86306ab868c30ddab071581bc4b146693721ebc2260f09bf4fdc5d0e0730d00000000","status":3,"statusDesc":"PENDING","updatedTime":"2022-12-22T02:45:50.113Z"}

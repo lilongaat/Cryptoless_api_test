@@ -1,0 +1,32 @@
+[32mINFO    [0m Common.Http:Http.py:425 2022-12-17 15:38:39.163876 | 
+<-----Query Holders----->
+Url:http://54.251.78.181:8888/escrow/api//proxy/core/api/assets/holders/?networkCode=GOERLI&address=0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca&symbol=GoerliETH
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:428 2022-12-17 15:38:39.163876 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","id":"1602198201359880194","networkCode":"GOERLI","quantity":"0.008809497555869502","symbol":"GoerliETH","updatedTime":"2022-12-14T12:03:00.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:265 2022-12-17 15:38:39.163876 | 
+<-----Instructions----->
+Url:http://54.251.78.181:8888/escrow/api/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "GOERLI", "type": "transfer", "body": {"from": "0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca", "to": "0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2", "symbol": "GoerliETH", "amount": "0.00012"}, "transactionParams": {"memo": "CsbSIR9vOa"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:268 2022-12-17 15:38:39.163876 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-17T07:38:42.000Z","description":"","estimatedFee":"465634176000","fee":"-1","hash":"0x39fbfc94df0ece5e73deee3c6877b9a394185d9b9e36c1338bdfc3728ac0ac08","id":"1604018222444802050","networkCode":"GOERLI","serialized":"02f86f0515835b8752840152558082520894a7a9e710f9a3b4184d4f8b7d379cec262f2382c2866d23ad5f800080c080a0367672213a1ebee075045d10f0365064e239c36ae6f73e94f39beeb5d47c25cba0744ff3a34cc73148849d9aacf10b65ea317b8ed42044ded47363b991221430c3","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-17T07:38:44.000Z"}]},"body":{"symbol":"GoerliETH","amount":"0.00012","from":"0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","to":"0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2"},"createdTime":"2022-12-17T07:38:41.000Z","id":"1604018228782383105","networkCode":"GOERLI","status":-2,"transactionParams":{"memo":"CsbSIR9vOa"},"type":"TRANSFER","updatedTime":"2022-12-17T07:38:41.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:364 2022-12-17 15:38:39.163876 | 
+<-----Send----->
+Url:http://54.251.78.181:8888/escrow/api//transactions/send/1604018222444802050
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:368 2022-12-17 15:38:39.163876 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-12-17T07:38:47.840Z","createdTime":"2022-12-17T07:38:42.000Z","description":"","estimatedFee":"465634176000","fee":"-1","hash":"0x39fbfc94df0ece5e73deee3c6877b9a394185d9b9e36c1338bdfc3728ac0ac08","id":"1604018222444802050","networkCode":"GOERLI","serialized":"02f86f0515835b8752840152558082520894a7a9e710f9a3b4184d4f8b7d379cec262f2382c2866d23ad5f800080c080a0367672213a1ebee075045d10f0365064e239c36ae6f73e94f39beeb5d47c25cba0744ff3a34cc73148849d9aacf10b65ea317b8ed42044ded47363b991221430c3","status":3,"statusDesc":"PENDING","updatedTime":"2022-12-17T07:38:47.840Z"}

@@ -1,0 +1,41 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:60 2022-12-22 11:44:59.349152 | 
+<-----Core Holders List----->
+Url:https://api.dhandho.xyz/assets/holders?networkCode=IRIS&symbol=IRIS&address=iaa13wwxj3mqjn77x524lhzf4s94dqh4rphe8d5sq8
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:63 2022-12-22 11:44:59.349152 | 
+<-----Core Holders Response----->
+{"current":1,"list":[{"address":"iaa13wwxj3mqjn77x524lhzf4s94dqh4rphe8d5sq8","id":"1605764189402718210","networkCode":"IRIS","quantity":"0.5","symbol":"IRIS","updatedTime":"2022-12-22T03:16:31.000Z"}],"size":10,"total":1}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:190 2022-12-22 11:44:59.349152 | 
+<-----Core Instructions------>
+Url:https://api.dhandho.xyz/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+body:{"networkCode": "IRIS", "type": "transfer", "body": {"from": "iaa13wwxj3mqjn77x524lhzf4s94dqh4rphe8d5sq8", "to": "iaa1laewhl28xx9fujqawfnmt4wls2dgyvs6qz7vle", "symbol": "IRIS", "amount": "0.000101"}, "transactionParams": {"memo": "wo1vVmbxSh"}}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:193 2022-12-22 11:44:59.349152 | 
+<-----Core Instructions Response---->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-22T03:45:03.000Z","description":"","estimatedFee":"20000","fee":"-1","hash":"","id":"1605771366616051713","networkCode":"IRIS","requiredSignings":[{"hash":"a149d4e3a0e83ba6ecbd54529e71bb0f6bea77d57d7c5a17113f45a1f61d2a60","publicKeys":["0260fbc9e026fe789a5a3c26289577719900c6046dc1d9ac1471b8eb08d15d0de4","02e3209ac96c70b2d3366bb2a7cf54b93592b63093431a853679ca8c74b4dbb545"],"threshold":1}],"serialized":"0a95010a86010a1c2f636f736d6f732e62616e6b2e763162657461312e4d736753656e6412660a2a69616131337777786a336d716a6e3737783532346c687a66347339346471683472706865386435737138122a696161316c616577686c323878783966756a716177666e6d7434776c7332646779767336717a37766c651a0c0a0575697269731203313031120a776f3176566d6278536812b6010a4e0a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a210260fbc9e026fe789a5a3c26289577719900c6046dc1d9ac1471b8eb08d15d0de412040a02087f0a4e0a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102e3209ac96c70b2d3366bb2a7cf54b93592b63093431a853679ca8c74b4dbb54512040a02087f12140a0e0a0575697269731205323030303010a08d06","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-22T03:45:03.000Z"}]},"body":{"amount":"0.000101","from":"iaa13wwxj3mqjn77x524lhzf4s94dqh4rphe8d5sq8","symbol":"IRIS","to":"iaa1laewhl28xx9fujqawfnmt4wls2dgyvs6qz7vle"},"createdTime":"2022-12-22T03:45:03.000Z","id":"1605771372314939393","networkCode":"IRIS","status":-2,"transactionParams":{"memo":"wo1vVmbxSh"},"type":"TRANSFER","updatedTime":"2022-12-22T03:45:03.000Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:213 2022-12-22 11:44:59.349152 | 
+<-----Core Sign------>
+Url:https://api.dhandho.xyz/transactions/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+body:{"id": "1605771366616051713", "signatures": [{"hash": "a149d4e3a0e83ba6ecbd54529e71bb0f6bea77d57d7c5a17113f45a1f61d2a60", "publicKey": "0260fbc9e026fe789a5a3c26289577719900c6046dc1d9ac1471b8eb08d15d0de4", "signature": "4973a88298c525fc0bad84293a070adebe36a111de7560725dc68aa3e3c75bcb470d0750960c49842fb3e8db88c675ad744899bce3ff4aea0848d4a7a356682d00"}, {"hash": "a149d4e3a0e83ba6ecbd54529e71bb0f6bea77d57d7c5a17113f45a1f61d2a60", "publicKey": "02e3209ac96c70b2d3366bb2a7cf54b93592b63093431a853679ca8c74b4dbb545", "signature": "4f3c659d45736c2e1ca1c7ade8ff822e19356b5ebcbbb6def4188320d39ba318743200cfa52f9c992d97d45f89eb0052adaa0dd1a6ed88036b9f6f5fa1bb112701"}]}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:216 2022-12-22 11:44:59.349152 | 
+<-----Core Sign Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-22T03:45:03.000Z","description":"","estimatedFee":"20000","fee":"-1","hash":"","id":"1605771366616051713","networkCode":"IRIS","requiredSignings":[{"hash":"a149d4e3a0e83ba6ecbd54529e71bb0f6bea77d57d7c5a17113f45a1f61d2a60","publicKeys":["0260fbc9e026fe789a5a3c26289577719900c6046dc1d9ac1471b8eb08d15d0de4","02e3209ac96c70b2d3366bb2a7cf54b93592b63093431a853679ca8c74b4dbb545"],"threshold":1}],"serialized":"0a95010a86010a1c2f636f736d6f732e62616e6b2e763162657461312e4d736753656e6412660a2a69616131337777786a336d716a6e3737783532346c687a66347339346471683472706865386435737138122a696161316c616577686c323878783966756a716177666e6d7434776c7332646779767336717a37766c651a0c0a0575697269731203313031120a776f3176566d6278536812b6010a4e0a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a210260fbc9e026fe789a5a3c26289577719900c6046dc1d9ac1471b8eb08d15d0de412040a02087f0a4e0a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102e3209ac96c70b2d3366bb2a7cf54b93592b63093431a853679ca8c74b4dbb54512040a02087f12140a0e0a0575697269731205323030303010a08d06","status":1,"statusDesc":"SIGNING","updatedTime":"2022-12-22T03:45:04.640Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:232 2022-12-22 11:44:59.349152 | 
+<-----Core Send------>
+Url:https://api.dhandho.xyz/transactions/send/1605771366616051713
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+
+[31m[1mERROR   [0m Common.Httpcore:Httpcore.py:238 2022-12-22 11:44:59.349152 | 
+<-----Core Send Response Error----->{"code":2300000,"message":"transaction status change cannot be send"}

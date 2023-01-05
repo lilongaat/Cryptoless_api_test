@@ -1,0 +1,9 @@
+[32mINFO    [0m Common.Http:Http.py:425 2022-12-20 15:37:38.27941 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/core/api/assets/holders/?networkCode=IRIS&address=iaa1laewhl28xx9fujqawfnmt4wls2dgyvs6qz7vle&symbol=IRIS
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[1m[31mERROR   [0m Common.Http:Http.py:431 2022-12-20 15:37:38.27941 | 
+<-----Query Holders Response Error----->
+{"code":1400000,"message":"Connection refused \u0028Connection refused\u0029"}

@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:261 2023-01-05 12:02:01.322318 | 
+<-----Instructions----->
+Url:http://api.orbital3.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+Body:{"networkCode": "DOGE", "type": "transfer", "body": {"from": "", "to": "D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j", "symbol": "DOGE", "amount": "0.00001"}, "transactionParams": {"memo": "9dgMNs1jwc"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:267 2023-01-05 12:02:01.322318 | 
+<-----Instructions Response Error----->
+400
+{"code":2300000,"message":"from not empty"}

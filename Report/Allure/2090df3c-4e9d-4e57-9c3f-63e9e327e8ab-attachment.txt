@@ -1,0 +1,10 @@
+[32mINFO    [0m Common.Http:Http.py:163 2022-12-13 17:31:26.693146 | 
+<-----Create Safe Account------>
+Url:http://54.251.78.181:8888/escrow/api/accounts/safe
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"name": "safe", "networkCode": "GOERLI", "owner": [], "recovery": []}
+
+
+[31m[1mERROR   [0m Common.Http:Http.py:169 2022-12-13 17:31:26.693146 | 
+<-----Create account Response Error----->
+{"code":2100000,"message":"owner and recovery cannot be the same"}

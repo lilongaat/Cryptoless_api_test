@@ -1,0 +1,42 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:60 2022-12-26 17:27:18.911432 | 
+<-----Core Holders List----->
+Url:https://api.dhandho.xyz/assets/holders?networkCode=MATIC&symbol=USDT&address=0xe525E7cd17f6Dc950492755A089E452fd5d9d44f
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:63 2022-12-26 17:27:18.911432 | 
+<-----Core Holders Response----->
+{"current":1,"list":[{"address":"0xe525e7cd17f6dc950492755a089e452fd5d9d44f","createdTime":"2022-12-26T08:42:01.000Z","id":"1607295657077698562","networkCode":"MATIC","quantity":"0.1","symbol":"USDT","updatedTime":"2022-12-26T08:42:01.000Z"}],"size":10,"total":1}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:208 2022-12-26 17:27:18.911432 | 
+<-----Core Instructions------>
+Url:https://api.dhandho.xyz/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+body:{"networkCode": "MATIC", "type": "swap", "body": {"address": "0xe525E7cd17f6Dc950492755A089E452fd5d9d44f", "from": "USDT", "to": "MATIC", "fromAmount": "0.000123", "slippage": "1"}, "transactionParams": {"memo": "6k2aBgczIt"}}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:211 2022-12-26 17:27:18.911432 | 
+<-----Core Instructions Response---->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-26T09:27:25.000Z","description":"","estimatedFee":"4939212722337630","fee":"-1","hash":"","id":"1607307073028313090","networkCode":"MATIC","requiredSignings":[{"hash":"f6c4d2ab3bfbe06d01dd4a73bdc3007cbc76fcea208cb5d0a443541bbd5059c0","publicKeys":["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],"threshold":1}],"serialized":"02f8728189548506fc23ac0085135afa605282e81794c2132d05d31c914a87c6611c10748aeb04b58e8f80b844095ea7b30000000000000000000000001111111254fb6c44bac0bed2854e76f90643097d1999999999999999999999999999999999999999999999999999999999999999c0808080","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-26T09:27:25.000Z"}]},"body":{"address":"0xe525e7cd17f6dc950492755a089e452fd5d9d44f","from":"USDT","fromAmount":"0.000123","slippage":1,"to":"MATIC","toAmount":"0.000154357460276911"},"createdTime":"2022-12-26T09:27:25.000Z","id":"1607307079778054145","networkCode":"MATIC","status":-2,"transactionParams":{"memo":"6k2aBgczIt"},"type":"SWAP","updatedTime":"2022-12-26T09:27:25.000Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:231 2022-12-26 17:27:18.911432 | 
+<-----Core Sign------>
+Url:https://api.dhandho.xyz/transactions/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+body:{"id": "1607307073028313090", "signatures": [{"hash": "f6c4d2ab3bfbe06d01dd4a73bdc3007cbc76fcea208cb5d0a443541bbd5059c0", "publicKey": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "signature": "f8b6897810632fd191593dd5013754b535408558e3257688736de0eb54f702281e23a9386b96b3d9990ab18a61c7b71da77c60505fe16e7d2a3e7f88bbb2de6400"}]}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:234 2022-12-26 17:27:18.911432 | 
+<-----Core Sign Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-26T09:27:25.000Z","description":"","estimatedFee":"4939212722337630","fee":"-1","hash":"0x6a0b0e0ecfd7589ef904d10f28669114fb66b975575333c44e7f4532a34ff1f4","id":"1607307073028313090","networkCode":"MATIC","serialized":"02f8b28189548506fc23ac0085135afa605282e81794c2132d05d31c914a87c6611c10748aeb04b58e8f80b844095ea7b30000000000000000000000001111111254fb6c44bac0bed2854e76f90643097d1999999999999999999999999999999999999999999999999999999999999999c080a0f8b6897810632fd191593dd5013754b535408558e3257688736de0eb54f70228a01e23a9386b96b3d9990ab18a61c7b71da77c60505fe16e7d2a3e7f88bbb2de64","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-26T09:27:26.170Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:250 2022-12-26 17:27:18.911432 | 
+<-----Core Send------>
+Url:https://api.dhandho.xyz/transactions/send/1607307073028313090
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:253 2022-12-26 17:27:18.911432 | 
+<-----Core Send Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"2022-12-26T09:27:28.590Z","createdTime":"2022-12-26T09:27:25.000Z","description":"","estimatedFee":"4939212722337630","fee":"-1","hash":"0x6a0b0e0ecfd7589ef904d10f28669114fb66b975575333c44e7f4532a34ff1f4","id":"1607307073028313090","networkCode":"MATIC","serialized":"02f8b28189548506fc23ac0085135afa605282e81794c2132d05d31c914a87c6611c10748aeb04b58e8f80b844095ea7b30000000000000000000000001111111254fb6c44bac0bed2854e76f90643097d1999999999999999999999999999999999999999999999999999999999999999c080a0f8b6897810632fd191593dd5013754b535408558e3257688736de0eb54f70228a01e23a9386b96b3d9990ab18a61c7b71da77c60505fe16e7d2a3e7f88bbb2de64","status":3,"statusDesc":"PENDING","updatedTime":"2022-12-26T09:27:28.590Z"}

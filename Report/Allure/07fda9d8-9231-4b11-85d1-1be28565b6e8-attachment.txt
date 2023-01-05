@@ -1,0 +1,33 @@
+[32mINFO    [0m Common.Http:Http.py:265 2022-12-30 17:07:56.863991 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "GOERLI", "type": "transfer", "body": {"from": "0xe525E7cd17f6Dc950492755A089E452fd5d9d44f", "to": "0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2", "symbol": "GoerliETH", "amount": "0.000121"}, "transactionParams": {"memo": "qvUQRn0ebK"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:268 2022-12-30 17:07:56.863991 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-30T09:08:01.000Z","description":"Send 0.000121 ETH","estimatedFee":"103236000","fee":"-1","hash":"","id":"1608751742183591937","networkCode":"GOERLI","requiredSignings":[{"hash":"ed9020bc9cb054eb5f80eed8874179984bad3d594a02005545afaff858f1df4d","publicKeys":["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],"threshold":1}],"serialized":"02ec053c82043682133482520894a7a9e710f9a3b4184d4f8b7d379cec262f2382c2866e0c8204900080c0808080","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-30T09:08:01.000Z"}]},"body":{"symbol":"GoerliETH","amount":"0.000121","from":"0xe525e7cd17f6dc950492755a089e452fd5d9d44f","to":"0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2"},"createdTime":"2022-12-30T09:08:01.000Z","id":"1608751753348857857","networkCode":"GOERLI","status":-2,"transactionParams":{"memo":"qvUQRn0ebK"},"type":"TRANSFER","updatedTime":"2022-12-30T09:08:01.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:344 2022-12-30 17:07:56.863991 | 
+<-----Sign----->
+Url:https://api.dhandho.xyz/vault/transactions/signatures
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"id": "1608751742183591937", "signatures": [{"hash": "ed9020bc9cb054eb5f80eed8874179984bad3d594a02005545afaff858f1df4d", "publicKey": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "signature": "e479e148b057b51d18fe7630d52b2e32b2923f4698c874feb46cbd36293bf29e367bd63ed5dd151411c03c10a85d85c4234f83615fdb6b39eda5926e58bbb18a00"}]}
+
+
+[32mINFO    [0m Common.Http:Http.py:348 2022-12-30 17:07:56.863991 | 
+<-----Sign Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-30T09:08:01.000Z","description":"Send 0.000121 ETH","estimatedFee":"103236000","fee":"-1","hash":"0x181201d82b7054901696b9078d9c729eb3e89a5d223592b43877e54c5180f19b","id":"1608751742183591937","networkCode":"GOERLI","serialized":"02f86c053c82043682133482520894a7a9e710f9a3b4184d4f8b7d379cec262f2382c2866e0c8204900080c080a0e479e148b057b51d18fe7630d52b2e32b2923f4698c874feb46cbd36293bf29ea0367bd63ed5dd151411c03c10a85d85c4234f83615fdb6b39eda5926e58bbb18a","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-30T09:08:02.383Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:364 2022-12-30 17:07:56.863991 | 
+<-----Send----->
+Url:https://api.dhandho.xyz/vault/transactions/send/1608751742183591937
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:368 2022-12-30 17:07:56.863991 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"2022-12-30T09:08:03.104Z","createdTime":"2022-12-30T09:08:01.000Z","description":"Send 0.000121 ETH","estimatedFee":"103236000","fee":"-1","hash":"0x181201d82b7054901696b9078d9c729eb3e89a5d223592b43877e54c5180f19b","id":"1608751742183591937","networkCode":"GOERLI","serialized":"02f86c053c82043682133482520894a7a9e710f9a3b4184d4f8b7d379cec262f2382c2866e0c8204900080c080a0e479e148b057b51d18fe7630d52b2e32b2923f4698c874feb46cbd36293bf29ea0367bd63ed5dd151411c03c10a85d85c4234f83615fdb6b39eda5926e58bbb18a","status":3,"statusDesc":"PENDING","updatedTime":"2022-12-30T09:08:03.104Z"}

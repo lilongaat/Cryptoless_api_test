@@ -1,0 +1,65 @@
+[32mINFO    [0m Common.Http:Http.py:115 2022-12-14 19:44:27.367367 | 
+<-----Create Custodial Account------>
+Url:http://54.251.78.181:8888/escrow/api//accounts/custodial
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"name": "\u6258\u7ba1\u8d26\u6237BSC1671018267", "networkCode": "BSC"}
+
+
+[32mINFO    [0m Common.Http:Http.py:118 2022-12-14 19:44:27.367367 | 
+<-----Create Custodial Response----->
+{"address":"0xaee7997c1cd4e9748a70042aaf80dcbf7d0c7320","createdTime":"2022-12-14T11:44:54.909Z","finalized":false,"id":"1602993028875870210","name":"托管账户BSC1671018267","networkCode":"BSC","publicKeys":[{"source":"custodial","type":"secp256k1","value":"02fd840e8451f8ce2f1553090a27f8e534e2966d1867963854c6f2b3a47e768ea3"}],"status":"enable","threshold":1,"type":"custodial","updatedTime":"2022-12-14T11:44:54.909Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:93 2022-12-14 19:44:27.367367 | 
+<-----Query Accounts----->
+Url:http://54.251.78.181:8888/escrow/api//accounts?networkCode=BSC&address=0xaee7997c1cd4e9748a70042aaf80dcbf7d0c7320&type=
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:96 2022-12-14 19:44:27.367367 | 
+<-----Query Accounts Response----->
+{"current":1,"list":[{"address":"0xaee7997c1cd4e9748a70042aaf80dcbf7d0c7320","createdTime":"2022-12-14T11:44:55.000Z","finalized":false,"id":"1602993028875870210","name":"托管账户BSC1671018267","networkCode":"BSC","publicKeys":[{"source":"custodial","type":"secp256k1","value":"02fd840e8451f8ce2f1553090a27f8e534e2966d1867963854c6f2b3a47e768ea3"}],"status":"enable","threshold":1,"type":"custodial","updatedTime":"2022-12-14T11:44:55.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:205 2022-12-14 19:44:27.367367 | 
+<-----Query Account Byid------>
+Url:http://54.251.78.181:8888/escrow/api//accounts/1602993028875870210
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:208 2022-12-14 19:44:27.367367 | 
+<-----Query Account Byid Response----->
+{"address":"0xaee7997c1cd4e9748a70042aaf80dcbf7d0c7320","createdTime":"2022-12-14T11:44:54.909Z","finalized":false,"id":"1602993028875870210","name":"托管账户BSC1671018267","networkCode":"BSC","publicKeys":[{"source":"custodial","type":"secp256k1","value":"02fd840e8451f8ce2f1553090a27f8e534e2966d1867963854c6f2b3a47e768ea3"}],"status":"enable","threshold":1,"type":"custodial","updatedTime":"2022-12-14T11:44:54.909Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:227 2022-12-14 19:44:27.367367 | 
+<-----Upadate Account Byid------>
+Url:http://54.251.78.181:8888/escrow/api//accounts/1602993028875870210
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:230 2022-12-14 19:44:27.367367 | 
+<-----Upadate Account Byid Response----->
+{"address":"0xaee7997c1cd4e9748a70042aaf80dcbf7d0c7320","createdTime":"2022-12-14T11:44:54.909Z","finalized":false,"id":"1602993028875870210","name":"托管账户BSC1671018267_1671018295","networkCode":"BSC","publicKeys":[{"source":"custodial","type":"secp256k1","value":"02fd840e8451f8ce2f1553090a27f8e534e2966d1867963854c6f2b3a47e768ea3"}],"status":"enable","threshold":1,"type":"custodial","updatedTime":"2022-12-14T11:44:55.424Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:246 2022-12-14 19:44:27.367367 | 
+<-----Delete Account Byid------>
+Url:http://54.251.78.181:8888/escrow/api//accounts/1602993028875870210
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:249 2022-12-14 19:44:27.367367 | 
+<-----Delete Account Byid Response----->
+
+
+
+[32mINFO    [0m Common.Http:Http.py:205 2022-12-14 19:44:27.367367 | 
+<-----Query Account Byid------>
+Url:http://54.251.78.181:8888/escrow/api//accounts/1602993028875870210
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:208 2022-12-14 19:44:27.367367 | 
+<-----Query Account Byid Response----->
+{"code":2200000,"message":"account not found"}

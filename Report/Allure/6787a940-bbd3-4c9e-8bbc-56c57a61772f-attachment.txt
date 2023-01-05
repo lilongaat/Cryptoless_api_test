@@ -1,0 +1,9 @@
+[32mINFO    [0m Common.Http:Http.py:421 2023-01-05 16:30:37.44837 | 
+<-----Query Holders----->
+Url:http://api.orbital3.xyz/vault/proxy/assets/holders/?networkCode=IRIS&address=iaa1j9vswglv54xlmrza98ww44jgnm0j0hncw2t7v9&symbol=IRIS
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+
+
+[32mINFO    [0m Common.Http:Http.py:424 2023-01-05 16:30:37.44837 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"iaa1j9vswglv54xlmrza98ww44jgnm0j0hncw2t7v9","createdTime":"2023-01-05T03:22:00.000Z","id":"1610839000814473217","networkCode":"IRIS","quantity":"0.281658","symbol":"IRIS","updatedTime":"2023-01-05T03:25:00.000Z"}],"size":10,"total":1}

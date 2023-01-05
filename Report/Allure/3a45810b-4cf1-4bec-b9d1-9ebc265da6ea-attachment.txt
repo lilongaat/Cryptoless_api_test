@@ -1,0 +1,20 @@
+[32mINFO    [0m Common.Graphql:Graphql.py:37 2022-12-15 18:23:30.477777 | 
+<-----balance----->
+Url:http://13.212.89.244:4005/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getAccountByAddress(address:\\\"0x0e37Be2E43571de1E723241b70cEab25d991E965\\\",coinId:\\\"goerliETH\\\"){blockHash blockNumber address time amount coinId}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:39 2022-12-15 18:23:30.477777 | 
+<-----balance response----->
+
+Body:{"data": {"getAccountByAddress": {"blockHash": "0x4464cdad5594fbc0a20e1f202b62582c87e541fe1d23149756828f8720f6acbe", "blockNumber": 8138973, "address": "0x0e37Be2E43571de1E723241b70cEab25d991E965", "time": "1671099708000", "amount": "97316004226408250", "coinId": "goerliETH"}}}
+[32mINFO    [0m Common.Http:Http.py:425 2022-12-15 18:23:30.477777 | 
+<-----Query Holders----->
+Url:http://54.251.78.181:8888/escrow/api//proxy/core/api/assets/holders/?networkCode=GOERLI&address=0x0e37Be2E43571de1E723241b70cEab25d991E965&symbol=GoerliETH
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAzMzMxODA1MzMwNzk2NTQ1IiwiZXhwIjo0ODI0Njk5MDcxLCJpYXQiOjE2NzEwOTkwNzEsInVzZXJJZCI6MTYwMzMzMTgwNTMzMDc5NjU0NX0.LqXvFCF47GglM26lQPD8aGsPGVBaOpwrRLK18kN3B20"}
+
+
+[32mINFO    [0m Common.Http:Http.py:428 2022-12-15 18:23:30.477777 | 
+<-----Query Holders Response----->
+{"current":1,"list":[],"size":10,"total":0}

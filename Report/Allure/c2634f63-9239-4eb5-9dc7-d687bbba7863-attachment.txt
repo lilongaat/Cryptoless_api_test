@@ -1,0 +1,33 @@
+[32mINFO    [0m Common.Http:Http.py:425 2022-12-29 19:47:42.704901 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=GOERLI&address=0xe525E7cd17f6Dc950492755A089E452fd5d9d44f&symbol=GoerliETH
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:428 2022-12-29 19:47:42.704901 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0xe525e7cd17f6dc950492755a089e452fd5d9d44f","createdTime":"2022-11-25T11:05:16.000Z","id":"1596097681096425474","networkCode":"GOERLI","quantity":"0.014030635178870309","symbol":"GoerliETH","updatedTime":"2022-12-29T11:38:25.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:265 2022-12-29 19:47:42.704901 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "GOERLI", "type": "transfer", "body": {"from": "0xe525E7cd17f6Dc950492755A089E452fd5d9d44f", "to": "0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2", "symbol": "GoerliETH", "amount": "0.000121"}, "transactionParams": {"memo": "duHo1EM6pv"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:268 2022-12-29 19:47:42.704901 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-29T11:47:53.000Z","description":"","estimatedFee":"41994309000","fee":"-1","hash":"","id":"1608429589859876865","networkCode":"GOERLI","requiredSignings":[{"hash":"37a46abd7b96b2d35e63cab03bb917f98202cc6bf6d59d379781e399adc739b6","publicKeys":["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],"threshold":1}],"serialized":"e834831e837182520894a7a9e710f9a3b4184d4f8b7d379cec262f2382c2866e0c8204900080808080","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-29T11:47:53.000Z"}]},"body":{"symbol":"GoerliETH","amount":"0.000121","from":"0xe525e7cd17f6dc950492755a089e452fd5d9d44f","to":"0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2"},"createdTime":"2022-12-29T11:47:54.000Z","id":"1608429596974596098","networkCode":"GOERLI","status":-2,"transactionParams":{"memo":"duHo1EM6pv"},"type":"TRANSFER","updatedTime":"2022-12-29T11:47:54.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:344 2022-12-29 19:47:42.704901 | 
+<-----Sign----->
+Url:https://api.dhandho.xyz/vault/transactions/signatures
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"id": "1608429589859876865", "signatures": [{"hash": "37a46abd7b96b2d35e63cab03bb917f98202cc6bf6d59d379781e399adc739b6", "publicKey": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "signature": "738e0f9321fe397148c8e7f9f4e7cc8400ead55d468192faa265b12dcafabe616cacc900b56ba2fa0ac80f44ff7a93078e10d225123142529aefde2cb7d0747b01"}]}
+
+
+[32mINFO    [0m Common.Http:Http.py:348 2022-12-29 19:47:42.704901 | 
+<-----Sign Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-29T11:47:53.000Z","description":"","estimatedFee":"41994309000","fee":"-1","hash":"0xcf7150c2856d70e16b7da57e10032d6e45a50addfabfd7f97f1e6b4c75df00bc","id":"1608429589859876865","networkCode":"GOERLI","serialized":"f86834831e837182520894a7a9e710f9a3b4184d4f8b7d379cec262f2382c2866e0c82049000802ea0738e0f9321fe397148c8e7f9f4e7cc8400ead55d468192faa265b12dcafabe61a06cacc900b56ba2fa0ac80f44ff7a93078e10d225123142529aefde2cb7d0747b","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-29T11:48:33.483Z"}

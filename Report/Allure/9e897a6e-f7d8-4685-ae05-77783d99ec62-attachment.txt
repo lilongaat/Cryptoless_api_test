@@ -1,0 +1,43 @@
+[32mINFO    [0m Common.Http:Http.py:115 2022-12-14 19:43:30.258018 | 
+<-----Create Custodial Account------>
+Url:http://54.251.78.181:8888/escrow/api//accounts/custodial
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"name": "\u6258\u7ba1\u8d26\u6237BTC1671018210", "networkCode": "BTC"}
+
+
+[32mINFO    [0m Common.Http:Http.py:118 2022-12-14 19:43:30.258018 | 
+<-----Create Custodial Response----->
+{"address":"tb1qercl5zunkra3sc004usl2selzm3g273mvgala2","createdTime":"2022-12-14T11:43:34.425Z","finalized":false,"id":"1602992691301507074","name":"托管账户BTC1671018210","networkCode":"BTC","publicKeys":[{"source":"custodial","type":"secp256k1","value":"034f5c8ec1b35dc9736fda89ddad161a363e46b143c69188d99d509af8d724dd33"}],"status":"enable","threshold":1,"type":"custodial","updatedTime":"2022-12-14T11:43:34.425Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:93 2022-12-14 19:43:30.258018 | 
+<-----Query Accounts----->
+Url:http://54.251.78.181:8888/escrow/api//accounts?networkCode=BTC&address=tb1qercl5zunkra3sc004usl2selzm3g273mvgala2&type=
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:96 2022-12-14 19:43:30.258018 | 
+<-----Query Accounts Response----->
+{"current":1,"list":[{"address":"tb1qercl5zunkra3sc004usl2selzm3g273mvgala2","createdTime":"2022-12-14T11:43:34.000Z","finalized":false,"id":"1602992691301507074","name":"托管账户BTC1671018210","networkCode":"BTC","publicKeys":[{"source":"custodial","type":"secp256k1","value":"034f5c8ec1b35dc9736fda89ddad161a363e46b143c69188d99d509af8d724dd33"}],"status":"enable","threshold":1,"type":"custodial","updatedTime":"2022-12-14T11:43:34.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:205 2022-12-14 19:43:30.258018 | 
+<-----Query Account Byid------>
+Url:http://54.251.78.181:8888/escrow/api//accounts/1602992691301507074
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:208 2022-12-14 19:43:30.258018 | 
+<-----Query Account Byid Response----->
+{"address":"tb1qercl5zunkra3sc004usl2selzm3g273mvgala2","createdTime":"2022-12-14T11:43:34.425Z","finalized":false,"id":"1602992691301507074","name":"托管账户BTC1671018210","networkCode":"BTC","publicKeys":[{"source":"custodial","type":"secp256k1","value":"034f5c8ec1b35dc9736fda89ddad161a363e46b143c69188d99d509af8d724dd33"}],"status":"enable","threshold":1,"type":"custodial","updatedTime":"2022-12-14T11:43:34.425Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:227 2022-12-14 19:43:30.258018 | 
+<-----Upadate Account Byid------>
+Url:http://54.251.78.181:8888/escrow/api//accounts/1602992691301507074
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:230 2022-12-14 19:43:30.258018 | 
+<-----Upadate Account Byid Response----->
+{"address":"tb1qercl5zunkra3sc004usl2selzm3g273mvgala2","createdTime":"2022-12-14T11:43:34.425Z","finalized":false,"id":"1602992691301507074","name":"托管账户BTC1671018210","networkCode":"BTC","publicKeys":[{"source":"custodial","type":"secp256k1","value":"034f5c8ec1b35dc9736fda89ddad161a363e46b143c69188d99d509af8d724dd33"}],"status":"enable","threshold":1,"type":"custodial","updatedTime":"2022-12-14T11:43:34.942Z"}

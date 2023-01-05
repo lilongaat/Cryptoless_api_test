@@ -1,0 +1,40 @@
+2022-12-13 10:31:11.597 | ERROR    | Test_c_t:test_safe:52 - safe账户:0xe1206fb8f9814f964c2d63a6c10613bd4649bb52
+2022-12-13 10:54:08.815 | ERROR    | Test_c_t:test_safe:58 - 
+safe账户：0x3d9853b911b9f73fabded04e67051b79830516fb
+
+
+2022-12-13 17:31:27.257 | ERROR    | Common.Http:create_safe_account:169 - 
+<-----Create account Response Error----->
+{"code":2100000,"message":"owner and recovery cannot be the same"}
+
+
+2022-12-13 18:30:09.492 | ERROR    | Common.Http:create_safe_account:169 - 
+<-----Create account Response Error----->
+{"code":2100000,"message":"owner and recovery cannot be the same"}
+
+
+2022-12-13 18:30:44.942 | ERROR    | Common.Http:create_safe_account:169 - 
+<-----Create account Response Error----->
+{"code":1400000,"message":"Handler dispatch failed; nested exception is java.lang.NoClassDefFoundError: Could not initialize class com.alibaba.csp.sentinel.slots.block.BlockException"}
+
+
+2022-12-13 18:35:03.913 | ERROR    | Common.Http:create_safe_account:169 - 
+<-----Create account Response Error----->
+{"code":2400000,"message":"INTERNAL: Cannot convert string to buffer. toBuffer only supports 0x-prefixed hex strings and this string was given: 0x[\"\"]"}
+
+
+2022-12-13 18:36:10.855 | ERROR    | Common.Http:create_safe_account:169 - 
+<-----Create account Response Error----->
+{"code":2400000,"message":"INTERNAL: Cannot convert string to buffer. toBuffer only supports 0x-prefixed hex strings and this string was given: 0x[\"0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113\"]"}
+
+
+2022-12-13 18:36:42.671 | ERROR    | Test_c_t:test_safe:49 - 
+safe账
+0x39446305f61bbb2a96f23152a5bb0398d49ab554
+
+
+2022-12-13 18:38:13.116 | ERROR    | Test_c_t:test_safe:49 - 
+safe账户
+0xf816cd38ae9fa3125cfc69749f94ba10ad0df1d0
+
+

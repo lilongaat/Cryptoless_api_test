@@ -1,0 +1,27 @@
+[32mINFO    [0m Common.Http:Http.py:163 2022-12-30 11:12:58.930538 | 
+<-----Create Safe Account------>
+Url:https://api.dhandho.xyz/vault/accounts/safe
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"name": "\u5b89\u5168\u8d26\u6237GOERLI2-2-1672369979", "networkCode": "GOERLI", "owner": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "recovery": ""}
+
+
+[32mINFO    [0m Common.Http:Http.py:166 2022-12-30 11:12:58.930538 | 
+<-----Create account Response----->
+{"address":"0x9bbe623e579b65ac8355815b006d45ca1b2ddb6a","createdTime":"2022-12-30T03:13:03.769Z","finalized":false,"id":"1608662422865113089","name":"安全账户GOERLI2-2-1672369979","networkCode":"GOERLI","publicKeys":[{"source":"custodial","type":"secp256k1","value":"021eb0e33386f579e64b65a0f9e8ab8c3a1e8d9b700140062aa387de3d239a002f"},{"source":"owner","type":"secp256k1","value":"0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"}],"status":"inactive","threshold":2,"type":"safe","updatedTime":"2022-12-30T03:13:03.769Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:205 2022-12-30 11:12:58.930538 | 
+<-----Query Account Byid------>
+Url:https://api.dhandho.xyz/vault/accounts/1608662422865113089
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:208 2022-12-30 11:12:58.930538 | 
+<-----Query Account Byid Response----->
+{"address":"0x9bbe623e579b65ac8355815b006d45ca1b2ddb6a","createdTime":"2022-12-30T03:13:03.769Z","finalized":false,"id":"1608662422865113089","name":"安全账户GOERLI2-2-1672369979","networkCode":"GOERLI","publicKeys":[{"source":"custodial","type":"secp256k1","value":"021eb0e33386f579e64b65a0f9e8ab8c3a1e8d9b700140062aa387de3d239a002f"},{"source":"owner","type":"secp256k1","value":"0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"}],"status":"inactive","threshold":2,"type":"safe","updatedTime":"2022-12-30T03:13:03.769Z"}
+
+
+[31m[1mERROR   [0m test_create_success:test_create_success.py:72 2022-12-30 11:12:58.930538 | 
+
+Goerli创建2-2安全账户 custodial+owner
+0x9bbe623e579b65ac8355815b006d45ca1b2ddb6a

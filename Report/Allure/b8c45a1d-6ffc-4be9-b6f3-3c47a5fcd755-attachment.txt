@@ -1,0 +1,32 @@
+[32mINFO    [0m Common.Http:Http.py:425 2022-12-26 14:52:55.564949 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=GOERLI&address=0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca&symbol=USDCC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:428 2022-12-26 14:52:55.564949 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","createdTime":"2022-12-12T09:40:57.000Z","id":"1602237056616202241","networkCode":"GOERLI","quantity":"9.876385","symbol":"USDCC","updatedTime":"2022-12-19T08:06:42.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:265 2022-12-26 14:52:55.564949 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "GOERLI", "type": "transfer", "body": {"from": "0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca", "to": "0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3", "symbol": "USDCC", "amount": "0.123"}, "transactionParams": {"memo": "xScu9aJ5DH"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:268 2022-12-26 14:52:55.564949 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-26T06:53:00.000Z","description":"","estimatedFee":"58972067","fee":"-1","hash":"0xbe7e170add1a05b27279ac96fa878a7ea885bc174a35258518fd370146bafd78","id":"1607268213100703745","networkCode":"GOERLI","serialized":"02f8ab051e8204798204bb82be39941ec2ce6108240118ff2c66ec8afac28618d7e06680b844a9059cbb000000000000000000000000bdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe300000000000000000000000000000000000000000000000001b4fbd92b5f8000c001a04448d3120793a862398eaed225d8e26eb8b66366dd2a1a96700fdc9c41c83a5da014367119fe9fc28e3224a4ef939ffd525d498de5087a3ca305b59d73474e7f71","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-26T06:53:02.000Z"}]},"body":{"symbol":"USDCC","amount":"0.123","from":"0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","to":"0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3"},"createdTime":"2022-12-26T06:52:59.000Z","id":"1607268219672043522","networkCode":"GOERLI","status":-2,"transactionParams":{"memo":"xScu9aJ5DH"},"type":"TRANSFER","updatedTime":"2022-12-26T06:52:59.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:364 2022-12-26 14:52:55.564949 | 
+<-----Send----->
+Url:https://api.dhandho.xyz/vault/transactions/send/1607268213100703745
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:368 2022-12-26 14:52:55.564949 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"2022-12-26T06:53:11.159Z","createdTime":"2022-12-26T06:53:00.000Z","description":"","estimatedFee":"58972067","fee":"-1","hash":"0xbe7e170add1a05b27279ac96fa878a7ea885bc174a35258518fd370146bafd78","id":"1607268213100703745","networkCode":"GOERLI","serialized":"02f8ab051e8204798204bb82be39941ec2ce6108240118ff2c66ec8afac28618d7e06680b844a9059cbb000000000000000000000000bdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe300000000000000000000000000000000000000000000000001b4fbd92b5f8000c001a04448d3120793a862398eaed225d8e26eb8b66366dd2a1a96700fdc9c41c83a5da014367119fe9fc28e3224a4ef939ffd525d498de5087a3ca305b59d73474e7f71","status":3,"statusDesc":"PENDING","updatedTime":"2022-12-26T06:53:11.159Z"}

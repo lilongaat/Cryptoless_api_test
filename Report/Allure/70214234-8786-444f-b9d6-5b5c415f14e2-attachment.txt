@@ -1,0 +1,22 @@
+[32mINFO    [0m Common.Http:Http.py:425 2022-12-30 14:52:15.580507 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=GOERLI&address=0xacd5c6a98407469856b47d333309ed814fc64ebe&symbol=GoerliETH
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:428 2022-12-30 14:52:15.580507 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0xacd5c6a98407469856b47d333309ed814fc64ebe","createdTime":"2022-12-30T06:52:00.000Z","id":"1608717521712893953","networkCode":"GOERLI","quantity":"0.004","symbol":"GoerliETH","updatedTime":"2022-12-30T06:52:00.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:265 2022-12-30 14:52:15.580507 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "GOERLI", "type": "transfer", "body": {"from": "0xacd5c6a98407469856b47d333309ed814fc64ebe", "to": "0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2", "symbol": "GoerliETH", "amount": "0.00023"}, "transactionParams": {"memo": "JGMgTpB5Vu"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:271 2022-12-30 14:52:15.580507 | 
+<-----Instructions Response Error----->
+400
+{"code":2300000,"message":"account pending"}

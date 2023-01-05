@@ -1,0 +1,9 @@
+[32mINFO    [0m Common.Http:Http.py:425 2022-12-29 18:36:47.241854 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=BTC&address=tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0&symbol=BTC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[31m[1mERROR   [0m Common.Http:Http.py:431 2022-12-29 18:36:47.241854 | 
+<-----Query Holders Response Error----->
+{"code":2300000,"message":"Redis server response timeout \u00283000 ms\u0029 occured after 3 retry attempts. Increase nettyThreads and/or timeout settings. Try to define pingConnectionInterval setting. Command: \u0028GET\u0029, params: [cryptoless:escrow:user:token:2f30c53ed4d1eb13959d171fbc96cb5d], channel: [id: 0x8e27f193, L:/172.31.19.149:42232 - R:172.31.23.214/172.31.23.214:6379]"}

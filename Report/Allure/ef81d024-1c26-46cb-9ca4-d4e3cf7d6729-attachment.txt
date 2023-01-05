@@ -1,0 +1,34 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:130 2022-11-30 15:03:27.306071 | 
+<-----Core Build------>
+Url:http://54.251.78.181:8888/core/api/transactions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+
+body:{"networkCode": "MATIC", "payload": {"from": "0xe525e7cd17f6dc950492755a089e452fd5d9d44f", "to": "0xe525e7cd17f6dc950492755a089e452fd5d9d44f", "data": "0x", "value": "0x0"}, "type": "TRANSACTION"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:133 2022-11-30 15:03:27.306071 | 
+<-----Core Build Response---->
+{"balanceChanges":[],"blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-11-30T07:03:29.375Z","description":"Send 0 MATIC","estimatedFee":"683657901738000","hash":"","id":"1597848769441009665","networkCode":"MATIC","requiredSignings":[{"hash":"f164b618b58987e84b2a781a9b85afc778934399d591d1b9803c67d8e3554cb1","publicKeys":["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],"threshold":1}],"serialized":"02ed8189208507946ffc828507947008a882520894e525e7cd17f6dc950492755a089e452fd5d9d44f8080c0808080","status":"BUILDING","updatedTime":"2022-11-30T07:03:29.375Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:153 2022-11-30 15:03:27.306071 | 
+<-----Core Sign------>
+Url:http://54.251.78.181:8888/core/api/transactions/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+
+body:{"id": "1597848769441009665", "signatures": [{"hash": "f164b618b58987e84b2a781a9b85afc778934399d591d1b9803c67d8e3554cb1", "publicKey": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "signature": "05a70755b4a4bb24644557e12f0666857b551aab5d09c6599b56c51fa634a86c4801c7782e84127768c4985746d594588eb013b7d14c4cd47779095876ed161600"}]}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:156 2022-11-30 15:03:27.306071 | 
+<-----Core Sign Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-11-30T07:03:29.000Z","description":"Send 0 MATIC","estimatedFee":"683657901738000","fee":"-1","hash":"0x73535f2d2059aa7498cbfa612fc6005b9de7726cd7b5eb0b5bcfcbc6ea1c3613","id":"1597848769441009665","networkCode":"MATIC","serialized":"02f86d8189208507946ffc828507947008a882520894e525e7cd17f6dc950492755a089e452fd5d9d44f8080c080a005a70755b4a4bb24644557e12f0666857b551aab5d09c6599b56c51fa634a86ca04801c7782e84127768c4985746d594588eb013b7d14c4cd47779095876ed1616","status":"SIGNED","updatedTime":"2022-11-30T07:03:29.677Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:172 2022-11-30 15:03:27.306071 | 
+<-----Core Send------>
+Url:http://54.251.78.181:8888/core/api/transactions/send/1597848769441009665
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:175 2022-11-30 15:03:27.306071 | 
+<-----Core Send Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-11-30T07:03:30.232Z","createdTime":"2022-11-30T07:03:29.000Z","description":"Send 0 MATIC","estimatedFee":"683657901738000","fee":"-1","hash":"0x73535f2d2059aa7498cbfa612fc6005b9de7726cd7b5eb0b5bcfcbc6ea1c3613","id":"1597848769441009665","networkCode":"MATIC","serialized":"02f86d8189208507946ffc828507947008a882520894e525e7cd17f6dc950492755a089e452fd5d9d44f8080c080a005a70755b4a4bb24644557e12f0666857b551aab5d09c6599b56c51fa634a86ca04801c7782e84127768c4985746d594588eb013b7d14c4cd47779095876ed1616","status":"PENDING","updatedTime":"2022-11-30T07:03:30.232Z"}

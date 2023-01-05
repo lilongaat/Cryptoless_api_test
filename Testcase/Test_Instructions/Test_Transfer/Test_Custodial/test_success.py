@@ -20,9 +20,9 @@ class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
             # BTC网络
-            ("Custodial账户BTC转账","BTC","BTC","tb1q8g0jhxa3t0uyufec29xexw6fwnkvw94v3jlw7e","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun",str(Conf.Config.random_amount(8))),
+            # ("Custodial账户BTC转账","BTC","BTC","tb1q8g0jhxa3t0uyufec29xexw6fwnkvw94v3jlw7e","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun",str(Conf.Config.random_amount(8))),
             # Goerli网络
-            # ("Custodial账户Goerli转账","GOERLI","GoerliETH","0x821647aF7f50717500E008dE239f8692216cBC67","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3",str(Conf.Config.random_amount(8))),
+            ("Custodial账户Goerli转账","GOERLI","GoerliETH","0x821647aF7f50717500E008dE239f8692216cBC67","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3",str(Conf.Config.random_amount(8))),
             # ("Custodial账户ERC20转账","GOERLI","Long","0x821647aF7f50717500E008dE239f8692216cBC67","0xbDb3bd7b3F3DAEADC58D00EF5f15ED9a476B8fe3",str(round(random.uniform(1,10), random.randint(1,18)))),
             # MATIC网络
             # ("Custodial账户MATIC转账","MATIC","MATIC","0x343d0b801Fcb032ccEB7D5411cd404816d203B91","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591",str(Conf.Config.random_amount(8))),
@@ -43,7 +43,7 @@ class Test_transfers_success:
             # ("Custodial账户BNB转账","BSC","USDC","0x4adf9724723CAB3263a5f4adfBE28888EDB785b5","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591",str(Conf.Config.random_amount(8))),
             # # MATIC网络
             ("Custodial账户MATIC转账","MATIC","MATIC","0x985f8D18a50AF2Cb91f52f9A63d9b5eEc1f60047","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591",str(Conf.Config.random_amount(4))),
-            ("Custodial账户USDC转账","MATIC","USDC","0x985f8D18a50AF2Cb91f52f9A63d9b5eEc1f60047","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591",str(Conf.Config.random_amount(5))),
+            # ("Custodial账户USDC转账","MATIC","USDC","0x985f8D18a50AF2Cb91f52f9A63d9b5eEc1f60047","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591",str(Conf.Config.random_amount(5))),
             # ("Custodial账户MATIC转账self","MATIC","MATIC","0x985f8D18a50AF2Cb91f52f9A63d9b5eEc1f60047","0x985f8D18a50AF2Cb91f52f9A63d9b5eEc1f60047",str(Conf.Config.random_amount(4))),
             # ("Custodial账户USDC转账self","MATIC","USDC","0x985f8D18a50AF2Cb91f52f9A63d9b5eEc1f60047","0x985f8D18a50AF2Cb91f52f9A63d9b5eEc1f60047",str(Conf.Config.random_amount(5))),
             # # IRIS网络

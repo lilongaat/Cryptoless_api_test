@@ -1,0 +1,10 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:114 2022-12-26 17:54:51.841183 | 
+<-----Core Create Account----->
+Url:https://api.dhandho.xyz/accounts
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+body:{"networkCode": "MATIC", "publicKeys": ["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "03c420167aaf4fc7106646b2fe485519e5569ceb1584ae31d62537e349a4e4b5a9"], "threshold": "2"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:117 2022-12-26 17:54:51.841183 | 
+<-----Core Create account Response----->
+{"address":"0x05578be5c8cea082bb05980b3aa15a59832166f6","createdTime":"2022-12-26T09:54:53.079Z","id":"1607313991583092738","isObserved":0,"networkCode":"MATIC","publicKeys":["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113","03c420167aaf4fc7106646b2fe485519e5569ceb1584ae31d62537e349a4e4b5a9"],"status":0,"threshold":2,"updatedTime":"2022-12-26T09:54:53.079Z"}

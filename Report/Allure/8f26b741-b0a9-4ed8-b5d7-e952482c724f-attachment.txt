@@ -1,0 +1,10 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:201 2022-12-01 18:29:04.762085 | 
+<-----Relay estimate----->
+Url:http://16.163.105.179:18000/api/v2/safes/0x6490C1b13A4576128159576F9d3acadF79e8dd6f/transactions/estimate/
+
+Headers:{"Content-Type": "application/json"}
+
+Body:{"gasToken": "0x0000000000000000000000000000000000000000", "operation": "0", "safe": "0x6490C1b13A4576128159576F9d3acadF79e8dd6f", "to": "0x6490C1b13A4576128159576F9d3acadF79e8dd6f", "data": "0x", "value": "100"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:204 2022-12-01 18:29:04.762085 | 
+<-----Relay estimate Response----->
+{"safeTxGas":"45006","baseGas":"54900","dataGas":"54900","operationalGas":"0","gasPrice":"31826817100","lastUsedNonce":7,"gasToken":"0x0000000000000000000000000000000000000000","refundReceiver":"0xbA7024EE0273C30a479838DA4Ad31718436b453e"}

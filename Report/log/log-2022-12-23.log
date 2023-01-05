@@ -1,0 +1,23 @@
+2022-12-23 10:04:27.559 | ERROR    | test_create_success:test_create_account_safe:67 - 
+
+Goerli创建2-2安全账户 全custodial
+0xeb114213911dd5f79939fd6a3e02a1c8f678efdb
+2022-12-23 10:09:53.288 | ERROR    | Common.Http:holders:431 - 
+<-----Query Holders Response Error----->
+{"timestamp":"2022-12-23T02:09:53.462Z","status":404,"error":"Not Found","message":"","path":"/core/api/core/api/assets/holders/"}
+
+
+2022-12-23 15:30:38.346 | ERROR    | Common.Httpcore:core_instructions:214 - 
+<-----Core Instructions Response Error----->{"code":2300000,"message":"account pending"}
+2022-12-23 15:47:44.810 | ERROR    | Test_c_t:test_safe:49 - 
+safe账户
+0x9fcf78df6c44833d0549a041dd500f7cfcfaaa27
+
+
+2022-12-23 15:53:31.037 | ERROR    | Test_c_t:test_safe:49 - 
+safe账户
+0x2bf894ab121035107337049d16ce793f161979a0
+
+
+2022-12-23 16:01:43.601 | ERROR    | Common.Httpcore:core_instructions:214 - 
+<-----Core Instructions Response Error----->{"code":2102001,"message":"insufficient MATIC balance"}

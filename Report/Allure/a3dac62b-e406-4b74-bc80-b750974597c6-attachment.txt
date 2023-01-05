@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:268 2022-12-09 14:34:53.694797 | 
+<-----Instructions----->
+Url:http://54.251.78.181:8888/escrow/api//instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"from": "0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2", "to": "0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2", "symbol": "MATIC", "amount": "0.00012"}
+
+
+[32mINFO    [0m Common.Http:Http.py:274 2022-12-09 14:34:53.694797 | 
+<-----Instructions Response Error----->
+400
+{"code":2100000,"message":"body not empty"}

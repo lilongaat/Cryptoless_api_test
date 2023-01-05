@@ -1,0 +1,32 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:60 2022-12-19 15:44:45.361432 | 
+<-----Core Holders List----->
+Url:https://api.dhandho.xyz/assets/holders?networkCode=GOERLI&symbol=&address=0xfa9309dba246e10b9bcc79641535a2f4d1fd35ce
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:63 2022-12-19 15:44:45.361432 | 
+<-----Core Holders Response----->
+{"current":1,"list":[{"address":"0xfa9309dba246e10b9bcc79641535a2f4d1fd35ce","id":"1603647333064712194","networkCode":"GOERLI","quantity":"0.001","symbol":"GoerliETH","updatedTime":"2022-12-16T07:04:53.000Z"}],"size":10,"total":1}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:172 2022-12-19 15:44:45.361432 | 
+<-----Core Build------>
+Url:https://api.dhandho.xyz/transactions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+body:{"networkCode": "GOERLI", "payload": {"from": "0xe525E7cd17f6Dc950492755A089E452fd5d9d44f", "to": "0x6490C1b13A4576128159576F9d3acadF79e8dd6f", "value": "0x64", "senderPublicKey": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "payType": "1"}, "type": "TRANSACTION"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:175 2022-12-19 15:44:45.361432 | 
+<-----Core Build Response---->
+{"balanceChanges":[],"blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-19T07:44:48.039Z","estimatedFee":"2077803000","hash":"","id":"1604744535048683521","networkCode":"GOERLI","requiredSignings":[{"hash":"51978d858aa6b1d19f262729f827d78e2b5e680e9c8820861334eba7884184e7","publicKeys":["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],"threshold":1}],"serialized":"02e805218301809b8301827f825208946490c1b13a4576128159576f9d3acadf79e8dd6f6480c0808080","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-19T07:44:48.039Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:214 2022-12-19 15:44:45.361432 | 
+<-----Core Sign------>
+Url:https://api.dhandho.xyz/transactions/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+body:{"id": "1604744535048683521", "signatures": [{"hash": "51978d858aa6b1d19f262729f827d78e2b5e680e9c8820861334eba7884184e7", "publicKey": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "signature": "7e72342e772e82176db7c485b40e8e698392842e07d6d41995105c5312185af12dc1dec8109ab67934674413957fd9c8c00f04c2f1753a02a2be07832b30497800"}]}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:217 2022-12-19 15:44:45.361432 | 
+<-----Core Sign Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-19T07:44:48.000Z","description":"","estimatedFee":"2077803000","fee":"-1","hash":"0xeb0a47c720715ce585fddd68144575e3bf79150856b4359ef554f0c814130e0d","id":"1604744535048683521","networkCode":"GOERLI","serialized":"02f86805218301809b8301827f825208946490c1b13a4576128159576f9d3acadf79e8dd6f6480c080a07e72342e772e82176db7c485b40e8e698392842e07d6d41995105c5312185af1a02dc1dec8109ab67934674413957fd9c8c00f04c2f1753a02a2be07832b304978","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-19T07:44:48.425Z"}

@@ -1,0 +1,32 @@
+2022-12-17 15:02:16.340 | ERROR    | Test_c_t:test_safe:49 - 
+safe账户
+0x35d56204840b32c3bcb0d30a7a65bec43fde89b9
+
+
+2022-12-17 15:47:22.641 | ERROR    | test_success:test_custodial:90 - 
+
+GOERLI--GoerliETH--GOERLI safe账户转账 nativecoin
+0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17--0.007651354499039036
+0x1f2bfa294ab055bb5262201cb52845b4997aeb6a86d5e2ceba74aa7aef7ab393
+
+
+2022-12-17 15:50:23.501 | ERROR    | test_success:test_custodial:90 - 
+
+GOERLI--USDCC--GOERLI safe账户转账 erc20coin
+0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17--0.999508
+0xf77955966f19d4951d38a954ac414e0e8e8238b22f9e2cd2baf0dfece574b5d9
+
+
+2022-12-17 16:00:02.108 | ERROR    | test_create_success:test_create_account_safe:67 - 
+
+Goerli创建2-2安全账户 全custodial
+0xeb69947869312949ba6dcbbfead304662abba2ae
+2022-12-17 16:02:01.379 | ERROR    | test_create_success:test_create_account_safe:67 - 
+
+Goerli创建2-2安全账户 全custodial
+0x2bf97f7a89b7c846e166af55d07cb1f2a6977b6b
+2022-12-17 17:02:34.617 | ERROR    | Common.Http:activation_safe_account:192 - 
+<-----Activation account Response Error----->
+{"code":2400000,"message":"INTERNAL: Error: [number-to-bn] while converting number \"\\\"\\u00012\" to BN.js instance, error: invalid number value. Value must be an integer, hex string, BN or BigNumber instance. Note, decimals are not supported. Given value: \"\"\u00012\""}
+
+

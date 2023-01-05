@@ -5,7 +5,10 @@ import os
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from loguru import logger
-import Conf
+from Common import Conf
+from Config.readconfig import ReadConfig
+
+env_type = int(ReadConfig().get_env('type'))
 
 
 class BTC:
@@ -121,6 +124,18 @@ class ETH:
         response = requests.request("GET", url, headers=headers, data=payload)
         return response
 
+class GOERLI:
+    @staticmethod
+    def balance(address:str):
+        url = "https://api-goerli.etherscan.io/api?module=account&action=balance&address="+address+"&tag=latest&apikey=UDIG7EZI6J2VBUZIT6AAKXAKTVRQ64J2CF"
+        payload={}
+        headers = {}
+
+        logger.info('\n'+"<-----balance----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'payload:'+json.dumps(payload))
+        response = requests.request("GET", url, headers=headers, data=payload)
+        logger.info('\n'+"<-----balance response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
+        return response
+
 class BSC:
     @staticmethod
     def balance(address:str):
@@ -131,6 +146,17 @@ class BSC:
         logger.info('\n'+"<-----balance----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'payload:'+json.dumps(payload))
         response = requests.request("GET", url, headers=headers, data=payload)
         logger.info('\n'+"<-----balance response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
+        return response
+
+    @staticmethod
+    def balance_erc20(address:str,contractaddress:str):
+        url = "https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress="+contractaddress+"&address="+address+"&tag=latest&apikey=1N55SHXT8U6N3YX8TZK3U8QV7862XDEG2J"
+        payload={}
+        headers = {}
+
+        logger.info('\n'+"<-----Balance EEC20----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'payload:'+json.dumps(payload))
+        response = requests.request("GET", url, headers=headers, data=payload)
+        logger.info('\n'+"<-----Balance EEC20 response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
         return response
 
     @staticmethod
@@ -157,6 +183,17 @@ class MATIC:
         response = requests.request("GET", url, headers=headers, data=payload)
         logger.info('\n'+"<-----balance response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
         return response  
+
+    @staticmethod
+    def balance_erc20(address:str,contractaddress:str):
+        url = "https://api.polygonscan.com/api?module=account&action=tokenbalance&contractaddress="+contractaddress+"&address="+address+"&tag=latest&apikey=85W6B7V5TPH7TDZA3JQCFT8UN8RKAEMA4Y"
+        payload={}
+        headers = {}
+
+        logger.info('\n'+"<-----Balance ERC20----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'payload:'+json.dumps(payload))
+        response = requests.request("GET", url, headers=headers, data=payload)
+        logger.info('\n'+"<-----Balance ERC20 response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
+        return response 
 
     @staticmethod
     def block():
@@ -254,6 +291,28 @@ class ATOM:
         return response
 
 class IRIS:
+    @staticmethod
+    def balance(address:str):
+        url = "https://proxy.atomscan.com/iris-lcd/cosmos/bank/v1beta1/balances/" + address
+        payload={}
+        headers = {
+        'authority': 'proxy.atomscan.com',
+        'accept': '*/*',
+        'accept-language': 'zh-CN,zh;q=0.9',
+        'origin': 'https://atomscan.com',
+        'referer': 'https://atomscan.com/',
+        'sec-ch-ua': '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"macOS"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-site',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+        }
+
+        response = requests.request("GET", url, headers=headers, data=payload)
+        return response
+
     @staticmethod
     def block():
         url = "https://proxy.atomscan.com/iris-lcd/cosmos/base/tendermint/v1beta1/blocks/latest"
@@ -364,6 +423,63 @@ class BN:
         logger.info('\n'+"<-----BN balance response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
         return response
 
+
+class Balances_explore:
+    @staticmethod
+    def query(networkCode:str, address:str, symbol="USDC"):
+        if networkCode == "BTC":
+                    pass
+        elif networkCode == "DOGE":
+            response = DOGE.balance(address)
+            assert response.status_code == 200
+            balance = Decimal(str(response.json()))
+        elif networkCode == "ETH":
+            pass
+        elif networkCode == "GOERLI":
+            if symbol == "GoerliETH":
+                response = GOERLI.balance(address)
+                assert response.status_code == 200
+                balance = Decimal(str(response.json()["result"]))/Decimal(10**18)
+        elif networkCode == "BSC":
+            if symbol == "BNB":
+                response = BSC.balance(address)
+                assert response.status_code == 200
+                balance = Decimal(response.json()["result"])/Decimal(10**18)
+            else:
+                response = BSC.balance_erc20(address,"0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d")
+                assert response.status_code == 200
+                balance = Decimal(response.json()["result"])/Decimal(10**18)
+        elif networkCode == "MATIC":
+            if symbol == "MATIC":
+                response = MATIC.balance(address)
+                assert response.status_code == 200
+                balance = Decimal(response.json()["result"])/Decimal(10**18)
+            else:
+                response = MATIC.balance_erc20(address,"0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174")
+                assert response.status_code == 200
+                balance = Decimal(response.json()["result"])/Decimal(10**6)
+        elif networkCode == "ATOM":
+            response = ATOM.balance(address)
+            assert response.status_code == 200
+            balance_ = [b.get("amount") for b in response.json()["balances"] if b.get("denom") == "uatom"]
+            balance = (Decimal(int(balance_[0]))/Decimal(10**6))
+        elif networkCode == "IRIS":
+            response = IRIS.balance(address)
+            assert response.status_code == 200
+            balance_detail = [b for b in response.json()["balances"] if b.get("denom") == "uiris"][0]
+            balance = Decimal(balance_detail["amount"])/Decimal(10**6)
+        elif networkCode == "CLV":
+            if env_type == 1:
+                response = CLV.balance(address)
+                assert response.status_code == 200
+                balance_detail = [b for b in response.json()["data"]["native"] if b.get("symbol") == "CLV"][0]
+                balance = (Decimal(balance_detail["balance"]) - Decimal(balance_detail["lock"]) - Decimal(balance_detail["reserved"]))/Decimal(10**18)
+            elif env_type == 0:
+                pass
+        else:
+            raise Exception("networkCode No support")
+        return balance
+
 if __name__ == '__main__':
     # decimal = [a.get("decimal") for a in ATOM.assets().json()["assets"] if a.get("denom") == "uatom"][0]
     # print(decimal)
@@ -380,7 +496,13 @@ if __name__ == '__main__':
 
     # print(BTC.balance("34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo").json()["balance"])
     # print((ETH.block().json()))
-    print(BN.BN_price("BTC"))
+    # print(BN.BN_price("BTC"))
+    # MATIC.balance_erc20("0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174")
+    # print(IRIS.balance("iaa18j8rds5hqwp88s4qsrytq5w4eafu288cfza9th").json())
+    # GOERLI.balance("0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17")
+    print(Balances_explore.query("GOERLI","0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17","GoerliETH"))
+
+    # print((Balances_explore.query("DOGE","AEhsyQZDp5yTRyb9SRg1eto1xVyhP4g4ij")))
 
     # print(IRIS.block().json()["block"]["last_commit"]["height"])
 

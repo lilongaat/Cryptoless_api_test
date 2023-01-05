@@ -1,0 +1,42 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:60 2022-12-28 14:36:41.737486 | 
+<-----Core Holders List----->
+Url:https://api.dhandho.xyz/assets/holders?networkCode=GOERLI&symbol=GoerliETH&address=0xe525E7cd17f6Dc950492755A089E452fd5d9d44f
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:63 2022-12-28 14:36:41.737486 | 
+<-----Core Holders Response----->
+{"current":1,"list":[{"address":"0xe525e7cd17f6dc950492755a089e452fd5d9d44f","createdTime":"2022-11-25T11:05:16.000Z","id":"1596097681096425474","networkCode":"GOERLI","quantity":"0.014750813837966309","symbol":"GoerliETH","updatedTime":"2022-12-22T07:28:55.000Z"}],"size":10,"total":1}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:232 2022-12-28 14:36:41.737486 | 
+<-----Core Instructions------>
+Url:https://api.dhandho.xyz/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+body:{"networkCode": "GOERLI", "type": "transfer", "body": {"from": "0xe525E7cd17f6Dc950492755A089E452fd5d9d44f", "to": "0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2", "symbol": "GoerliETH", "amount": "0.00012"}, "transactionParams": {"memo": "wD6Ud4P0vr"}}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:235 2022-12-28 14:36:41.737486 | 
+<-----Core Instructions Response---->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-28T06:36:44.000Z","description":"","estimatedFee":"5397000","fee":"-1","hash":"","id":"1607988898705993729","networkCode":"GOERLI","requiredSignings":[{"hash":"ede8e8a0250de153dd2e10e5136db091ab40d79a42e76d8e67fedb1aee1ac9ac","publicKeys":["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],"threshold":1}],"serialized":"e72c82010182520894a7a9e710f9a3b4184d4f8b7d379cec262f2382c2866d23ad5f800080808080","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-28T06:36:44.000Z"}]},"body":{"amount":"0.00012","from":"0xe525e7cd17f6dc950492755a089e452fd5d9d44f","symbol":"GoerliETH","to":"0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2"},"createdTime":"2022-12-28T06:36:44.000Z","id":"1607988904833880066","networkCode":"GOERLI","status":-2,"transactionParams":{"memo":"wD6Ud4P0vr"},"type":"TRANSFER","updatedTime":"2022-12-28T06:36:44.000Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:255 2022-12-28 14:36:41.737486 | 
+<-----Core Sign------>
+Url:https://api.dhandho.xyz/transactions/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+body:{"id": "1607988898705993729", "signatures": [{"hash": "ede8e8a0250de153dd2e10e5136db091ab40d79a42e76d8e67fedb1aee1ac9ac", "publicKey": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "signature": "93abfdf95db9c925ba21f03b1eefc69c38d2202ea505bf2e76d7ac2fddd5e6e463f66abe41601d23fb64390c1fb4a3542854b79740ace371442089d0212f4f1901"}]}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:258 2022-12-28 14:36:41.737486 | 
+<-----Core Sign Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-28T06:36:44.000Z","description":"","estimatedFee":"5397000","fee":"-1","hash":"0x4b5d8f806b4ef491bc5052c357948c7ce87bb3c741b45e562fda1205b1c58f1e","id":"1607988898705993729","networkCode":"GOERLI","serialized":"f8672c82010182520894a7a9e710f9a3b4184d4f8b7d379cec262f2382c2866d23ad5f8000802ea093abfdf95db9c925ba21f03b1eefc69c38d2202ea505bf2e76d7ac2fddd5e6e4a063f66abe41601d23fb64390c1fb4a3542854b79740ace371442089d0212f4f19","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-28T06:36:44.974Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:274 2022-12-28 14:36:41.737486 | 
+<-----Core Send------>
+Url:https://api.dhandho.xyz/transactions/send/1607988898705993729
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:277 2022-12-28 14:36:41.737486 | 
+<-----Core Send Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"2022-12-28T06:36:50.097Z","createdTime":"2022-12-28T06:36:44.000Z","description":"","estimatedFee":"5397000","fee":"-1","hash":"0x4b5d8f806b4ef491bc5052c357948c7ce87bb3c741b45e562fda1205b1c58f1e","id":"1607988898705993729","networkCode":"GOERLI","serialized":"f8672c82010182520894a7a9e710f9a3b4184d4f8b7d379cec262f2382c2866d23ad5f8000802ea093abfdf95db9c925ba21f03b1eefc69c38d2202ea505bf2e76d7ac2fddd5e6e4a063f66abe41601d23fb64390c1fb4a3542854b79740ace371442089d0212f4f19","status":3,"statusDesc":"PENDING","updatedTime":"2022-12-28T06:36:50.097Z"}

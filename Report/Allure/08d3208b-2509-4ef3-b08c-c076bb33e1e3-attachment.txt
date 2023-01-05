@@ -1,0 +1,24 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:134 2023-01-05 18:53:19.338008 | 
+<-----balance----->
+Url:https://api-goerli.etherscan.io/api?module=account&action=balance&address=0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17&tag=latest&apikey=UDIG7EZI6J2VBUZIT6AAKXAKTVRQ64J2CF
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:136 2023-01-05 18:53:19.338008 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "5340249759900877"}
+[32mINFO    [0m Common.Http:Http.py:421 2023-01-05 18:53:19.338008 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=GOERLI&address=0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17&symbol=GoerliETH
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:424 2023-01-05 18:53:19.338008 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0x9d055026eb8d83ef561d5d8084f2dd02e7ad2c17","createdTime":"2022-12-12T11:35:41.000Z","id":"1602265931102535681","networkCode":"GOERLI","quantity":"0.005460249759900877","symbol":"GoerliETH","updatedTime":"2022-12-30T09:11:00.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_success:test_success.py:82 2023-01-05 18:53:19.338008 | 浏览器查询账户balance为:0.005340249759900877
+[35mDEBUG   [0m test_success:test_success.py:83 2023-01-05 18:53:19.338008 | 查询账户holder为:0.005460249759900877

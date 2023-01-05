@@ -71,7 +71,7 @@ class Test_transfers_success:
     def test_safe(self,test_title,privatekey,networkCode,symbol,from_add,to_add,amount):
 
         with allure.step("查询From账户holders信息——holders"):
-            holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
+            holders = Http.HttpUtils.holders(networkCode,symbol,from_add)
             assert holders.status_code == 200
 
         with allure.step("构建交易——instructions"):
@@ -119,9 +119,6 @@ class Test_transfers_success:
             assert send.status_code == 200
             assert send.json()["status"] == "PENDING"
 
-        # with allure.step("查询From账户holders信息——holders"):
-        #     holders = Http.HttpUtils.get_holders(networkCode,symbol,from_add)
-        #     assert holders.status_code == 200
 
 if __name__ == '__main__':
     path = os.path.abspath(__file__) + ""

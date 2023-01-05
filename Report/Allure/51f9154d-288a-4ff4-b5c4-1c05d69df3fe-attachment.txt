@@ -1,0 +1,22 @@
+[32mINFO    [0m Common.Http:Http.py:425 2022-12-21 11:12:51.789736 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/core/api/assets/holders/?networkCode=IRIS&address=iaa1laewhl28xx9fujqawfnmt4wls2dgyvs6qz7vle&symbol=IRIS
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:428 2022-12-21 11:12:51.789736 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"iaa1laewhl28xx9fujqawfnmt4wls2dgyvs6qz7vle","id":"1605106173966778370","networkCode":"IRIS","quantity":"0.5","symbol":"IRIS","updatedTime":"2022-12-20T07:41:48.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:265 2022-12-21 11:12:51.789736 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "IRIS", "type": "transfer", "body": {"from": "iaa1laewhl28xx9fujqawfnmt4wls2dgyvs6qz7vle", "to": "iaa1laewhl28xx9fujqawfnmt4wls2dgyvs6qz7vle", "symbol": "IRIS", "amount": "0.000101"}, "transactionParams": {"memo": "BFCi75o4WY"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:271 2022-12-21 11:12:51.789736 | 
+<-----Instructions Response Error----->
+400
+{"code":2200000,"message":"account not found"}

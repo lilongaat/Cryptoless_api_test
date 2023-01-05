@@ -1,0 +1,12 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:224 2022-12-05 11:33:02.363205 | 
+<-----Query UTXO----->
+Url:https://api.bitcore.io/api/BTC/testnet/address/tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33?unspent=true
+
+Headers:{"Content-Type": "application/json"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:227 2022-12-05 11:33:02.363205 | 
+<-----Query UTXO Response----->
+[
+{"_id":"6385d239d3bfc9e8e120b72a","chain":"BTC","network":"testnet","coinbase":false,"mintIndex":0,"spentTxid":"","mintTxid":"96f20d3215de90d2a4722c39fe7eb9599958fc0b19839ee33254f9e779beb0de","mintHeight":2408949,"spentHeight":-2,"address":"tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33","script":"0020aacf2586a97491580532bfb86a62d71f7ff96a8ab3872a9d18635e35d105cf62","value":100000,"confirmations":-1}
+]

@@ -1,0 +1,27 @@
+[32mINFO    [0m Common.Http:Http.py:163 2022-12-14 19:54:34.25686 | 
+<-----Create Safe Account------>
+Url:http://54.251.78.181:8888/escrow/api/accounts/safe
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"name": "\u5b89\u5168\u8d26\u6237ATOM2-3-1671018874", "networkCode": "ATOM", "owner": "027243806b1abdb1737b45d4a0619112bf464e13407b7d37dd2da2821bc6fbcac4", "recovery": "03d36556045bc8bac44e1fb88bd1840d68077fded4371e8e8c45ffb9788b525329"}
+
+
+[32mINFO    [0m Common.Http:Http.py:166 2022-12-14 19:54:34.25686 | 
+<-----Create account Response----->
+{"address":"cosmos1pkclem9eaq306s80y35g7yxfw6ardxcnzn46tp","createdTime":"2022-12-14T11:54:55.336Z","finalized":false,"id":"1602995547249238017","name":"安全账户ATOM2-3-1671018874","networkCode":"ATOM","publicKeys":[{"source":"custodial","type":"secp256k1","value":"02705ff2e03e509e0cf2a6aec5e67f8e1aae78b20b1d31cb6267fa6735a17a9bda"},{"source":"owner","type":"secp256k1","value":"027243806b1abdb1737b45d4a0619112bf464e13407b7d37dd2da2821bc6fbcac4"},{"source":"recovery","type":"secp256k1","value":"03d36556045bc8bac44e1fb88bd1840d68077fded4371e8e8c45ffb9788b525329"}],"status":"enable","threshold":2,"type":"safe","updatedTime":"2022-12-14T11:54:55.336Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:205 2022-12-14 19:54:34.25686 | 
+<-----Query Account Byid------>
+Url:http://54.251.78.181:8888/escrow/api//accounts/1602995547249238017
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:208 2022-12-14 19:54:34.25686 | 
+<-----Query Account Byid Response----->
+{"address":"cosmos1pkclem9eaq306s80y35g7yxfw6ardxcnzn46tp","createdTime":"2022-12-14T11:54:55.336Z","finalized":false,"id":"1602995547249238017","name":"安全账户ATOM2-3-1671018874","networkCode":"ATOM","publicKeys":[{"source":"custodial","type":"secp256k1","value":"02705ff2e03e509e0cf2a6aec5e67f8e1aae78b20b1d31cb6267fa6735a17a9bda"},{"source":"owner","type":"secp256k1","value":"027243806b1abdb1737b45d4a0619112bf464e13407b7d37dd2da2821bc6fbcac4"},{"source":"recovery","type":"secp256k1","value":"03d36556045bc8bac44e1fb88bd1840d68077fded4371e8e8c45ffb9788b525329"}],"status":"enable","threshold":2,"type":"safe","updatedTime":"2022-12-14T11:54:55.336Z"}
+
+
+[1m[31mERROR   [0m test_create_success:test_create_success.py:67 2022-12-14 19:54:34.25686 | 
+
+ATOM创建2-3安全账户
+cosmos1pkclem9eaq306s80y35g7yxfw6ardxcnzn46tp

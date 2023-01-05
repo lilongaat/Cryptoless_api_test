@@ -1,0 +1,83 @@
+[32mINFO    [0m Common.Http:Http.py:163 2022-12-19 18:22:34.316933 | 
+<-----Create Safe Account------>
+Url:https://api.dhandho.xyz/vault/accounts/safe
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"name": "safe", "networkCode": "GOERLI", "owner": "", "recovery": ""}
+
+
+[32mINFO    [0m Common.Http:Http.py:166 2022-12-19 18:22:34.316933 | 
+<-----Create account Response----->
+{"address":"0x347536a890735fcd613d0549d236ebd4c203146b","createdTime":"2022-12-19T10:22:42.537Z","finalized":false,"id":"1604784280336281601","name":"safe","networkCode":"GOERLI","publicKeys":[{"source":"custodial","type":"secp256k1","value":"0306a47ef2fb8a206852863458de47fa94cb8895786ce88dd0144304311e55e026"},{"source":"custodial","type":"secp256k1","value":"039aa3517a3801b0ad351c3743013836f4c64e6e10ae758e1abf75c10dc94e3e43"}],"status":"inactive","threshold":2,"type":"safe","updatedTime":"2022-12-19T10:22:42.537Z"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:172 2022-12-19 18:22:34.316933 | 
+<-----Core Build------>
+Url:https://api.dhandho.xyz/transactions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweDJmMjdiYzZlYzhjYjUwM2VmYmRhYWEzMmNjOWRmODc5ZDZlN2M1MTFmYjk3ZTgwYTQxMGM3MWU1ZDY4YzI5ODk2ZDQxMzk5ZmE3Y2E1NjlkOGMxMGU4ZmIwODk5MzI5MmRlZjJlM2ExY2ZmZjhjYjMxODNjYzQ1ZGQ1ZjdjNDFjMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNjczNDUwMDdcbklzc3VlZCBBdDogVGh1LCA4IERlYyAyMDIyIDE0OjQzOjI0IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBNb24sIDggRGVjIDIwNDIgMTQ6NDM6MjQgR01UIn0="}
+
+body:{"networkCode": "GOERLI", "payload": {"from": "0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591", "to": "0x347536a890735fcd613d0549d236ebd4c203146b", "value": "4000000000000000"}, "type": "TRANSACTION"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:175 2022-12-19 18:22:34.316933 | 
+<-----Core Build Response---->
+{"balanceChanges":[],"blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-19T10:22:44.804Z","estimatedFee":"110263356000","hash":"","id":"1604784282680909826","networkCode":"GOERLI","requiredSignings":[{"hash":"42a1bd52a7c49f712c6d1093f257a2c0c7dfb3e6394a8f15226909bcb7c98f8c","publicKeys":["0326288a7bbff5dc672bfec0a0a02ccae3eeb3e93a0294c8e0f534c97438de0fce"],"threshold":1}],"serialized":"02ee053582ecc283501e4c82520894347536a890735fcd613d0549d236ebd4c203146b870e35fa931a000080c0808080","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-19T10:22:44.804Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:214 2022-12-19 18:22:34.316933 | 
+<-----Core Sign------>
+Url:https://api.dhandho.xyz/transactions/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweDJmMjdiYzZlYzhjYjUwM2VmYmRhYWEzMmNjOWRmODc5ZDZlN2M1MTFmYjk3ZTgwYTQxMGM3MWU1ZDY4YzI5ODk2ZDQxMzk5ZmE3Y2E1NjlkOGMxMGU4ZmIwODk5MzI5MmRlZjJlM2ExY2ZmZjhjYjMxODNjYzQ1ZGQ1ZjdjNDFjMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNjczNDUwMDdcbklzc3VlZCBBdDogVGh1LCA4IERlYyAyMDIyIDE0OjQzOjI0IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBNb24sIDggRGVjIDIwNDIgMTQ6NDM6MjQgR01UIn0="}
+
+body:{"id": "1604784282680909826", "signatures": [{"hash": "42a1bd52a7c49f712c6d1093f257a2c0c7dfb3e6394a8f15226909bcb7c98f8c", "publickey": "0326288a7bbff5dc672bfec0a0a02ccae3eeb3e93a0294c8e0f534c97438de0fce", "signature": "b6046db7681010d1601cc2ca84b61e8f10595e27aed61d2ee2913e5c04d5a5323ac27a509c5c2bebd98dc33adcb57fb921aa2ce96740d85f88c28a48e2e6a18900"}]}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:217 2022-12-19 18:22:34.316933 | 
+<-----Core Sign Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-19T10:22:45.000Z","description":"","estimatedFee":"110263356000","fee":"-1","hash":"0xa426bb2e8392674d959b963a29a8ee5ad83a473132c97274419fd6f2cb77a150","id":"1604784282680909826","networkCode":"GOERLI","serialized":"02f86e053582ecc283501e4c82520894347536a890735fcd613d0549d236ebd4c203146b870e35fa931a000080c080a0b6046db7681010d1601cc2ca84b61e8f10595e27aed61d2ee2913e5c04d5a532a03ac27a509c5c2bebd98dc33adcb57fb921aa2ce96740d85f88c28a48e2e6a189","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-19T10:22:45.310Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:233 2022-12-19 18:22:34.316933 | 
+<-----Core Send------>
+Url:https://api.dhandho.xyz/transactions/send/1604784282680909826
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweDJmMjdiYzZlYzhjYjUwM2VmYmRhYWEzMmNjOWRmODc5ZDZlN2M1MTFmYjk3ZTgwYTQxMGM3MWU1ZDY4YzI5ODk2ZDQxMzk5ZmE3Y2E1NjlkOGMxMGU4ZmIwODk5MzI5MmRlZjJlM2ExY2ZmZjhjYjMxODNjYzQ1ZGQ1ZjdjNDFjMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNjczNDUwMDdcbklzc3VlZCBBdDogVGh1LCA4IERlYyAyMDIyIDE0OjQzOjI0IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBNb24sIDggRGVjIDIwNDIgMTQ6NDM6MjQgR01UIn0="}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:236 2022-12-19 18:22:34.316933 | 
+<-----Core Send Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"2022-12-19T10:22:49.149Z","createdTime":"2022-12-19T10:22:45.000Z","description":"","estimatedFee":"110263356000","fee":"-1","hash":"0xa426bb2e8392674d959b963a29a8ee5ad83a473132c97274419fd6f2cb77a150","id":"1604784282680909826","networkCode":"GOERLI","serialized":"02f86e053582ecc283501e4c82520894347536a890735fcd613d0549d236ebd4c203146b870e35fa931a000080c080a0b6046db7681010d1601cc2ca84b61e8f10595e27aed61d2ee2913e5c04d5a532a03ac27a509c5c2bebd98dc33adcb57fb921aa2ce96740d85f88c28a48e2e6a189","status":3,"statusDesc":"PENDING","updatedTime":"2022-12-19T10:22:49.149Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:172 2022-12-19 18:22:34.316933 | 
+<-----Core Build------>
+Url:https://api.dhandho.xyz/transactions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweDJmMjdiYzZlYzhjYjUwM2VmYmRhYWEzMmNjOWRmODc5ZDZlN2M1MTFmYjk3ZTgwYTQxMGM3MWU1ZDY4YzI5ODk2ZDQxMzk5ZmE3Y2E1NjlkOGMxMGU4ZmIwODk5MzI5MmRlZjJlM2ExY2ZmZjhjYjMxODNjYzQ1ZGQ1ZjdjNDFjMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNjczNDUwMDdcbklzc3VlZCBBdDogVGh1LCA4IERlYyAyMDIyIDE0OjQzOjI0IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBNb24sIDggRGVjIDIwNDIgMTQ6NDM6MjQgR01UIn0="}
+
+body:{"networkCode": "GOERLI", "payload": {"from": "0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591", "to": "0x347536a890735fcd613d0549d236ebd4c203146b", "value": "1000000000000000000", "tokenaddress": "0x1eC2CE6108240118Ff2c66eC8AFAC28618D7e066"}, "type": "TRANSACTION"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:175 2022-12-19 18:22:34.316933 | 
+<-----Core Build Response---->
+{"balanceChanges":[],"blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-19T10:22:51.516Z","estimatedFee":"346904269884","hash":"","id":"1604784309365071874","networkCode":"GOERLI","requiredSignings":[{"hash":"ff4448a62d39fcc3931ae9606f465bc5489e2177d9d9df410748c605869cc3f2","publicKeys":["0326288a7bbff5dc672bfec0a0a02ccae3eeb3e93a0294c8e0f534c97438de0fce"],"threshold":1}],"serialized":"02f86d053682ecc283501e4c83010215941ec2ce6108240118ff2c66ec8afac28618d7e06680b844a9059cbb000000000000000000000000347536a890735fcd613d0549d236ebd4c203146b0000000000000000000000000000000000000000000000000de0b6b3a7640000c0808080","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-19T10:22:51.516Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:214 2022-12-19 18:22:34.316933 | 
+<-----Core Sign------>
+Url:https://api.dhandho.xyz/transactions/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweDJmMjdiYzZlYzhjYjUwM2VmYmRhYWEzMmNjOWRmODc5ZDZlN2M1MTFmYjk3ZTgwYTQxMGM3MWU1ZDY4YzI5ODk2ZDQxMzk5ZmE3Y2E1NjlkOGMxMGU4ZmIwODk5MzI5MmRlZjJlM2ExY2ZmZjhjYjMxODNjYzQ1ZGQ1ZjdjNDFjMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNjczNDUwMDdcbklzc3VlZCBBdDogVGh1LCA4IERlYyAyMDIyIDE0OjQzOjI0IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBNb24sIDggRGVjIDIwNDIgMTQ6NDM6MjQgR01UIn0="}
+
+body:{"id": "1604784309365071874", "signatures": [{"hash": "ff4448a62d39fcc3931ae9606f465bc5489e2177d9d9df410748c605869cc3f2", "publickey": "0326288a7bbff5dc672bfec0a0a02ccae3eeb3e93a0294c8e0f534c97438de0fce", "signature": "e634603748a334f89e31048965e6ee395a1154fbe9a6ef5883a70d26d89c96ce2af74d24635a558d45307588cb8b1b7f3e65298f7323939c479aa87b0cf479c000"}]}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:217 2022-12-19 18:22:34.316933 | 
+<-----Core Sign Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-19T10:22:52.000Z","description":"","estimatedFee":"346904269884","fee":"-1","hash":"0x8e17b8552f2951a0975fcbbb50a812dc85370a1b58d37c638d8f0104dd84c032","id":"1604784309365071874","networkCode":"GOERLI","serialized":"02f8ad053682ecc283501e4c83010215941ec2ce6108240118ff2c66ec8afac28618d7e06680b844a9059cbb000000000000000000000000347536a890735fcd613d0549d236ebd4c203146b0000000000000000000000000000000000000000000000000de0b6b3a7640000c080a0e634603748a334f89e31048965e6ee395a1154fbe9a6ef5883a70d26d89c96cea02af74d24635a558d45307588cb8b1b7f3e65298f7323939c479aa87b0cf479c0","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-19T10:22:51.932Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:233 2022-12-19 18:22:34.316933 | 
+<-----Core Send------>
+Url:https://api.dhandho.xyz/transactions/send/1604784309365071874
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweDJmMjdiYzZlYzhjYjUwM2VmYmRhYWEzMmNjOWRmODc5ZDZlN2M1MTFmYjk3ZTgwYTQxMGM3MWU1ZDY4YzI5ODk2ZDQxMzk5ZmE3Y2E1NjlkOGMxMGU4ZmIwODk5MzI5MmRlZjJlM2ExY2ZmZjhjYjMxODNjYzQ1ZGQ1ZjdjNDFjMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNjczNDUwMDdcbklzc3VlZCBBdDogVGh1LCA4IERlYyAyMDIyIDE0OjQzOjI0IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBNb24sIDggRGVjIDIwNDIgMTQ6NDM6MjQgR01UIn0="}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:236 2022-12-19 18:22:34.316933 | 
+<-----Core Send Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"2022-12-19T10:22:55.701Z","createdTime":"2022-12-19T10:22:52.000Z","description":"","estimatedFee":"346904269884","fee":"-1","hash":"0x8e17b8552f2951a0975fcbbb50a812dc85370a1b58d37c638d8f0104dd84c032","id":"1604784309365071874","networkCode":"GOERLI","serialized":"02f8ad053682ecc283501e4c83010215941ec2ce6108240118ff2c66ec8afac28618d7e06680b844a9059cbb000000000000000000000000347536a890735fcd613d0549d236ebd4c203146b0000000000000000000000000000000000000000000000000de0b6b3a7640000c080a0e634603748a334f89e31048965e6ee395a1154fbe9a6ef5883a70d26d89c96cea02af74d24635a558d45307588cb8b1b7f3e65298f7323939c479aa87b0cf479c0","status":3,"statusDesc":"PENDING","updatedTime":"2022-12-19T10:22:55.701Z"}
+[31m[1mERROR   [0m Test_c_t:Test_c_t.py:49 2022-12-19 18:22:34.316933 | 
+safe账户
+0x347536a890735fcd613d0549d236ebd4c203146b

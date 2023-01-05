@@ -1,0 +1,23 @@
+2022-12-30 11:13:07.162 | ERROR    | test_create_success:test_create_account_safe:72 - 
+
+Goerli创建2-2安全账户 custodial+owner
+0x9bbe623e579b65ac8355815b006d45ca1b2ddb6a
+2022-12-30 11:17:09.725 | ERROR    | Test_c_t:test_safe:49 - 
+safe账户
+0x79f255cec4b987a4b4fd10858bc815a3b6134006
+
+
+2022-12-30 11:25:12.076 | ERROR    | test_create_success:test_create_account_safe:72 - 
+
+Goerli创建2-2安全账户 custodial+owner
+0xbb80978baa828a7296a5ae45f7d77a02ff5bcd72
+2022-12-30 11:32:08.027 | ERROR    | Test_c_t:test_safe:49 - 
+safe账户
+0x1dc8b303498e3fe1b4cc6f5ecf3b2976eaceae36
+
+
+2022-12-30 14:51:09.553 | ERROR    | Test_c_t:test_safe:49 - 
+safe账户
+0xacd5c6a98407469856b47d333309ed814fc64ebe
+
+

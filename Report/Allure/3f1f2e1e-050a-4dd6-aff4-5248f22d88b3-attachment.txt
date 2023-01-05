@@ -1,0 +1,33 @@
+[32mINFO    [0m Common.Http:Http.py:425 2022-12-19 16:09:24.65566 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/core/api/assets/holders/?networkCode=CLV&address=5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te&symbol=CLV
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:428 2022-12-19 16:09:24.65566 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te","id":"1603223817513324545","networkCode":"CLV","quantity":"0.001","symbol":"CLV","updatedTime":"2022-12-15T03:01:59.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:265 2022-12-19 16:09:24.65566 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "CLV", "type": "transfer", "body": {"from": "5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te", "to": "5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te", "symbol": "CLV", "amount": "0.000123"}, "transactionParams": {"memo": "MKhJpg5472"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:268 2022-12-19 16:09:24.65566 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-19T08:09:32.000Z","description":"","estimatedFee":"","fee":"-1","hash":"0x33ed654a3ff2d41d38087e59e7d81780871ec128b60caf55c90c9907d5745678","id":"1604750746192150530","networkCode":"CLV","serialized":"45028400b3d6099d80aa52c2ad20e06cbf8575ef8b7ee59cd5e93f8f943d76a2755dbdae02ba1ad0e6fd088cb57108f3e260798664f40278e9867060699b4eb56b1dbac9703deb4ddaaf053958298927114e30a78a562e0935d3ab7c7542b8bb98fce6540a00000000070000b3d6099d80aa52c2ad20e06cbf8575ef8b7ee59cd5e93f8f943d76a2755dbdae0b00b04e2bde6f","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-19T08:09:35.000Z"}]},"body":{"symbol":"CLV","amount":"0.000123","from":"5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te","to":"5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te"},"createdTime":"2022-12-19T08:09:31.000Z","id":"1604750764303106049","networkCode":"CLV","status":-2,"transactionParams":{"memo":"MKhJpg5472"},"type":"TRANSFER","updatedTime":"2022-12-19T08:09:31.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:364 2022-12-19 16:09:24.65566 | 
+<-----Send----->
+Url:https://api.dhandho.xyz/vault/transactions/send/1604750746192150530
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:371 2022-12-19 16:09:24.65566 | 
+<-----Send Response Error----->
+400
+{"code":2400000,"message":"INTERNAL: 1010: Invalid Transaction: Inability to pay some fees , e.g. account balance too low"}

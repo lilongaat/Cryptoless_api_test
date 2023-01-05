@@ -1,0 +1,34 @@
+[32mINFO    [0m Common.Http:Http.py:93 2022-12-30 11:25:24.624161 | 
+<-----Query Accounts----->
+Url:https://api.dhandho.xyz/vault/accounts?networkCode=&address=0xbb80978baa828a7296a5ae45f7d77a02ff5bcd72&type=
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:96 2022-12-30 11:25:24.624161 | 
+<-----Query Accounts Response----->
+{"current":1,"list":[{"address":"0xbb80978baa828a7296a5ae45f7d77a02ff5bcd72","createdTime":"2022-12-30T03:25:09.000Z","finalized":true,"id":"1608665463499501570","name":"安全账户GOERLI2-2-1672370704","networkCode":"GOERLI","publicKeys":[{"source":"owner","type":"secp256k1","value":"0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"},{"source":"custodial","type":"secp256k1","value":"0256f0de8c9f31fc0cbf57f31ac035806c0e1f6f1c38c98979e5e9f38e5af83a4f"}],"status":"inactive","threshold":2,"type":"safe","updatedTime":"2022-12-30T03:25:19.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:186 2022-12-30 11:25:24.624161 | 
+<-----Activation Safe Account------>
+Url:https://api.dhandho.xyz/vault/accounts/activations
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"accountId": "1608665463499501570", "payer": ""}
+
+
+[32mINFO    [0m Common.Http:Http.py:189 2022-12-30 11:25:24.624161 | 
+<-----Activation account Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-30T03:25:26.000Z","description":"","estimatedFee":"-1","fee":"-1","hash":"","id":"1608665535013507074","networkCode":"GOERLI","requiredSignings":[{"hash":"9380a9bfe9c054060512940a293173b0a1e87d12251e94e2a0609592d70c7e1d","publicKeys":["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],"threshold":1}],"serialized":"6a76120200000000000000000000000010f564f105ba1dec06087fe09329959dbd6b862d00000000000000000000000000000000000000000000000000000000270962c20000000000000000000000000000000000000000000000000000000000000140000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000016000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","status":1,"statusDesc":"SIGNING","updatedTime":"2022-12-30T03:25:30.112Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:344 2022-12-30 11:25:24.624161 | 
+<-----Sign----->
+Url:https://api.dhandho.xyz/vault/transactions/signatures
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"id": "1608665535013507074", "signatures": {"hash": "9380a9bfe9c054060512940a293173b0a1e87d12251e94e2a0609592d70c7e1d", "publicKey": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "signature": "900dc3b2b3b16816072d646396e4704ebb87f17a10df077ca29da101084c1d29084b046bdaa965d3f8b9d5468efa9d082db54858c38041bd133d8b2573dde06a00"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:351 2022-12-30 11:25:24.624161 | 
+<-----Sign Response Error----->
+400
+{"code":2400000,"message":"INTERNAL: Returned error: execution reverted"}

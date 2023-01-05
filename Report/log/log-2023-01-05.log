@@ -1,0 +1,4 @@
+2023-01-05 16:37:17.627 | ERROR    | Common.Http:staking:504 - 
+<-----Query Staking Response Error----->{"timestamp":"2023-01-05T08:37:17.948Z","status":404,"error":"Not Found","message":"","path":"/core/api/staking/delegators"}
+2023-01-05 16:39:16.770 | ERROR    | Common.Http:staking:504 - 
+<-----Query Staking Response Error----->{"code":1400000,"message":"Required List parameter 'address' is not present"}

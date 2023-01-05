@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:283 2022-12-13 11:59:09.452912 | 
+<-----Transactions----->
+Url:http://54.251.78.181:8888/escrow/api//transactions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "GOERLI", "payload": {"from": "0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca", "to": "0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2", "value": "0.00012"}, "type": "TRANSACTION"}
+
+
+[32mINFO    [0m Common.Http:Http.py:289 2022-12-13 11:59:09.452912 | 
+<-----Transactions Response Error----->
+400
+{"code":2400000,"message":"INTERNAL: Error: [number-to-bn] while converting number \"0.00012\" to BN.js instance, error: invalid number value. Value must be an integer, hex string, BN or BigNumber instance. Note, decimals are not supported. Given value: \"0.00012\""}

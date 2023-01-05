@@ -1,0 +1,42 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:60 2022-12-21 10:44:00.876714 | 
+<-----Core Holders List----->
+Url:https://api.dhandho.xyz/assets/holders?networkCode=BTC&symbol=BTC&address=tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:63 2022-12-21 10:44:00.876714 | 
+<-----Core Holders Response----->
+{"current":1,"list":[{"address":"tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0","id":"1602242291732570114","networkCode":"BTC","quantity":"0.00888331","symbol":"BTC","updatedTime":"2022-12-19T07:24:00.000Z"}],"size":10,"total":1}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:190 2022-12-21 10:44:00.876714 | 
+<-----Core Instructions------>
+Url:https://api.dhandho.xyz/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+body:{"networkCode": "BTC", "type": "transfer", "body": {"from": "tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0", "to": "tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq", "symbol": "BTC", "amount": "0.000008"}, "transactionParams": {"memo": "GwPHRJ2E8q"}}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:193 2022-12-21 10:44:00.876714 | 
+<-----Core Instructions Response---->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-21T02:44:03.000Z","description":"","estimatedFee":"187","fee":"-1","hash":"","id":"1605393631645286402","networkCode":"BTC","requiredSignings":[{"hash":"a1db0f30e54080881d4cc46ea1414052c48efc3d5289a0c6e5c076909e478e9a","publicKeys":["02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6"],"threshold":1}],"serialized":"010000000190e375c2e168c41a19cf5c58a4cc4da2e60e112d3e717c30253a4bb337f97e600100000000ffffffff022003000000000000160014ea2cc3344a103daead8378c573ccbfcba5bfed5455860d0000000000160014be39cfa9382328360e9bc5304a43a2782818d8cf00000000","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-21T02:44:03.000Z"}]},"body":{"amount":"0.000008","from":"tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0","symbol":"BTC","to":"tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq"},"createdTime":"2022-12-21T02:44:03.000Z","id":"1605393632568037377","networkCode":"BTC","status":-2,"transactionParams":{"memo":"GwPHRJ2E8q"},"type":"TRANSFER","updatedTime":"2022-12-21T02:44:03.000Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:213 2022-12-21 10:44:00.876714 | 
+<-----Core Sign------>
+Url:https://api.dhandho.xyz/transactions/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+body:{"id": "1605393631645286402", "signatures": [{"hash": "a1db0f30e54080881d4cc46ea1414052c48efc3d5289a0c6e5c076909e478e9a", "publicKey": "02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6", "signature": "74e1e27608d4a8544df7b065e18c132b46aa02ba49cba94c76e20fea051d9b64794be0b6064ac26bf2fd8f4daea0f52c2f9aff7db8d2fba946db3eda2ea5348a01"}]}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:216 2022-12-21 10:44:00.876714 | 
+<-----Core Sign Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-21T02:44:03.000Z","description":"","estimatedFee":"187","fee":"-1","hash":"4cd0da0b7e46215bcaa0da4c3ae6da8c04139e1586d733de912636e68a64eb8a","id":"1605393631645286402","networkCode":"BTC","serialized":"0100000000010190e375c2e168c41a19cf5c58a4cc4da2e60e112d3e717c30253a4bb337f97e600100000000ffffffff022003000000000000160014ea2cc3344a103daead8378c573ccbfcba5bfed5455860d0000000000160014be39cfa9382328360e9bc5304a43a2782818d8cf02473044022074e1e27608d4a8544df7b065e18c132b46aa02ba49cba94c76e20fea051d9b640220794be0b6064ac26bf2fd8f4daea0f52c2f9aff7db8d2fba946db3eda2ea5348a012102e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a600000000","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-21T02:44:04.012Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:232 2022-12-21 10:44:00.876714 | 
+<-----Core Send------>
+Url:https://api.dhandho.xyz/transactions/send/1605393631645286402
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:235 2022-12-21 10:44:00.876714 | 
+<-----Core Send Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"2022-12-21T02:44:04.476Z","createdTime":"2022-12-21T02:44:03.000Z","description":"","estimatedFee":"187","fee":"-1","hash":"4cd0da0b7e46215bcaa0da4c3ae6da8c04139e1586d733de912636e68a64eb8a","id":"1605393631645286402","networkCode":"BTC","serialized":"0100000000010190e375c2e168c41a19cf5c58a4cc4da2e60e112d3e717c30253a4bb337f97e600100000000ffffffff022003000000000000160014ea2cc3344a103daead8378c573ccbfcba5bfed5455860d0000000000160014be39cfa9382328360e9bc5304a43a2782818d8cf02473044022074e1e27608d4a8544df7b065e18c132b46aa02ba49cba94c76e20fea051d9b640220794be0b6064ac26bf2fd8f4daea0f52c2f9aff7db8d2fba946db3eda2ea5348a012102e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a600000000","status":3,"statusDesc":"PENDING","updatedTime":"2022-12-21T02:44:04.476Z"}

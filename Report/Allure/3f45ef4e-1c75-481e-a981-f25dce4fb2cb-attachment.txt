@@ -1,0 +1,57 @@
+[32mINFO    [0m Common.Http:Http.py:163 2022-12-14 16:10:23.342741 | 
+<-----Create Safe Account------>
+Url:http://54.251.78.181:8888/escrow/api/accounts/safe
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"name": "safe", "networkCode": "GOERLI", "owner": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "recovery": ""}
+
+
+[32mINFO    [0m Common.Http:Http.py:166 2022-12-14 16:10:23.342741 | 
+<-----Create account Response----->
+{"address":"0xd6fd2feed542f2b2ab63178fe93313cd1533bc29","createdTime":"2022-12-14T08:10:27.970Z","finalized":false,"id":"1602939061022179329","name":"safe","networkCode":"GOERLI","publicKeys":[{"source":"owner","type":"secp256k1","value":"0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"},{"source":"custodial","type":"secp256k1","value":"03d4da7fc030fa73f76442c7cb0e555b30776df0b1a2e52d1ff0da9b4c076408f9"}],"status":"inactive","threshold":2,"type":"safe","updatedTime":"2022-12-14T08:10:27.970Z"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:135 2022-12-14 16:10:23.342741 | 
+<-----Core Build------>
+Url:http://54.251.78.181:8888/core/api/transactions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweDJmMjdiYzZlYzhjYjUwM2VmYmRhYWEzMmNjOWRmODc5ZDZlN2M1MTFmYjk3ZTgwYTQxMGM3MWU1ZDY4YzI5ODk2ZDQxMzk5ZmE3Y2E1NjlkOGMxMGU4ZmIwODk5MzI5MmRlZjJlM2ExY2ZmZjhjYjMxODNjYzQ1ZGQ1ZjdjNDFjMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNjczNDUwMDdcbklzc3VlZCBBdDogVGh1LCA4IERlYyAyMDIyIDE0OjQzOjI0IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBNb24sIDggRGVjIDIwNDIgMTQ6NDM6MjQgR01UIn0="}
+
+body:{"networkCode": "GOERLI", "payload": {"from": "0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591", "to": "0xd6fd2feed542f2b2ab63178fe93313cd1533bc29", "value": "2000000000000000"}, "type": "TRANSACTION"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:138 2022-12-14 16:10:23.342741 | 
+<-----Core Build Response---->
+{"balanceChanges":[],"blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-14T08:10:29.947Z","estimatedFee":"90288324000","hash":"","id":"1602939062020435970","networkCode":"GOERLI","requiredSignings":[{"hash":"2f1d391b392319cd38208a6b74075cc92499e3b242c0f0d7a41b10d7a23b0fed","publicKeys":["0326288a7bbff5dc672bfec0a0a02ccae3eeb3e93a0294c8e0f534c97438de0fce"],"threshold":1}],"serialized":"02ef051c833b0e5683419ab482520894d6fd2feed542f2b2ab63178fe93313cd1533bc2987071afd498d000080c0808080","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-14T08:10:29.947Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:177 2022-12-14 16:10:23.342741 | 
+<-----Core Sign------>
+Url:http://54.251.78.181:8888/core/api/transactions/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweDJmMjdiYzZlYzhjYjUwM2VmYmRhYWEzMmNjOWRmODc5ZDZlN2M1MTFmYjk3ZTgwYTQxMGM3MWU1ZDY4YzI5ODk2ZDQxMzk5ZmE3Y2E1NjlkOGMxMGU4ZmIwODk5MzI5MmRlZjJlM2ExY2ZmZjhjYjMxODNjYzQ1ZGQ1ZjdjNDFjMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNjczNDUwMDdcbklzc3VlZCBBdDogVGh1LCA4IERlYyAyMDIyIDE0OjQzOjI0IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBNb24sIDggRGVjIDIwNDIgMTQ6NDM6MjQgR01UIn0="}
+
+body:{"id": "1602939062020435970", "signatures": [{"hash": "2f1d391b392319cd38208a6b74075cc92499e3b242c0f0d7a41b10d7a23b0fed", "publickey": "0326288a7bbff5dc672bfec0a0a02ccae3eeb3e93a0294c8e0f534c97438de0fce", "signature": "e29b56f15bc29482b23bf745e4ca7592adda0a603eb3503b3408d2a7aae7845433a6c869aa505630f09a32fe0fb0bfd125eb35869aec8232f4170261a6bd264500"}]}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:180 2022-12-14 16:10:23.342741 | 
+<-----Core Sign Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-14T08:10:30.000Z","description":"","estimatedFee":"90288324000","fee":"-1","hash":"0xcb0630eb4ee3ed89230fe9f26a9d559edaf1706456283e6c586ae13a37a4bd9d","id":"1602939062020435970","networkCode":"GOERLI","serialized":"02f86f051c833b0e5683419ab482520894d6fd2feed542f2b2ab63178fe93313cd1533bc2987071afd498d000080c080a0e29b56f15bc29482b23bf745e4ca7592adda0a603eb3503b3408d2a7aae78454a033a6c869aa505630f09a32fe0fb0bfd125eb35869aec8232f4170261a6bd2645","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-14T08:10:30.187Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:196 2022-12-14 16:10:23.342741 | 
+<-----Core Send------>
+Url:http://54.251.78.181:8888/core/api/transactions/send/1602939062020435970
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweDJmMjdiYzZlYzhjYjUwM2VmYmRhYWEzMmNjOWRmODc5ZDZlN2M1MTFmYjk3ZTgwYTQxMGM3MWU1ZDY4YzI5ODk2ZDQxMzk5ZmE3Y2E1NjlkOGMxMGU4ZmIwODk5MzI5MmRlZjJlM2ExY2ZmZjhjYjMxODNjYzQ1ZGQ1ZjdjNDFjMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNjczNDUwMDdcbklzc3VlZCBBdDogVGh1LCA4IERlYyAyMDIyIDE0OjQzOjI0IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBNb24sIDggRGVjIDIwNDIgMTQ6NDM6MjQgR01UIn0="}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:199 2022-12-14 16:10:23.342741 | 
+<-----Core Send Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-12-14T08:10:33.839Z","createdTime":"2022-12-14T08:10:30.000Z","description":"","estimatedFee":"90288324000","fee":"-1","hash":"0xcb0630eb4ee3ed89230fe9f26a9d559edaf1706456283e6c586ae13a37a4bd9d","id":"1602939062020435970","networkCode":"GOERLI","serialized":"02f86f051c833b0e5683419ab482520894d6fd2feed542f2b2ab63178fe93313cd1533bc2987071afd498d000080c080a0e29b56f15bc29482b23bf745e4ca7592adda0a603eb3503b3408d2a7aae78454a033a6c869aa505630f09a32fe0fb0bfd125eb35869aec8232f4170261a6bd2645","status":3,"statusDesc":"PENDING","updatedTime":"2022-12-14T08:10:33.839Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:135 2022-12-14 16:10:23.342741 | 
+<-----Core Build------>
+Url:http://54.251.78.181:8888/core/api/transactions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweDJmMjdiYzZlYzhjYjUwM2VmYmRhYWEzMmNjOWRmODc5ZDZlN2M1MTFmYjk3ZTgwYTQxMGM3MWU1ZDY4YzI5ODk2ZDQxMzk5ZmE3Y2E1NjlkOGMxMGU4ZmIwODk5MzI5MmRlZjJlM2ExY2ZmZjhjYjMxODNjYzQ1ZGQ1ZjdjNDFjMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNjczNDUwMDdcbklzc3VlZCBBdDogVGh1LCA4IERlYyAyMDIyIDE0OjQzOjI0IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBNb24sIDggRGVjIDIwNDIgMTQ6NDM6MjQgR01UIn0="}
+
+body:{"networkCode": "GOERLI", "payload": {"from": "0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591", "to": "0x1eC2CE6108240118Ff2c66eC8AFAC28618D7e066", "inputRequest": {"to": "0xd6fd2feed542f2b2ab63178fe93313cd1533bc29", "value": "1000000000000000000"}}, "type": "TOKEN_TRANSFER_TRANSACTION"}
+
+
+[31m[1mERROR   [0m Common.Httpcore:Httpcore.py:141 2022-12-14 16:10:23.342741 | 
+<-----Core Build Response Error----->{"code":2400000,"message":"INVALID_ARGUMENT: must have required property 'value'\nmust have required property 'data'\nmust match a schema in anyOf"}

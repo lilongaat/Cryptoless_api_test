@@ -1,0 +1,46 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:224 2022-12-05 11:07:03.694202 | 
+<-----Query UTXO----->
+Url:https://api.bitcore.io/api/BTC/testnet/address/tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0?unspent=true
+
+Headers:{"Content-Type": "application/json"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:227 2022-12-05 11:07:03.694202 | 
+<-----Query UTXO Response----->
+[
+{"_id":"638d5868d3bfc9e8e19e2fdf","chain":"BTC","network":"testnet","coinbase":false,"mintIndex":3,"spentTxid":"","mintTxid":"0eb8b8b9d8a88dfe3bc56179514fe542fb10be8a0307c90cdfffee6460be9d38","mintHeight":2409847,"spentHeight":-2,"address":"tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0","script":"0014be39cfa9382328360e9bc5304a43a2782818d8cf","value":896342,"confirmations":-1}
+]
+[32mINFO    [0m Common.Httpcore:Httpcore.py:132 2022-12-05 11:07:03.694202 | 
+<-----Core Build------>
+Url:http://54.251.78.181:8888/core/api/transactions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+
+body:{"networkCode": "BTC", "payload": {"changer": "tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0", "recipients": [{"address": "tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0", "value": "100"}], "utxos": [{"amount": 896342, "scriptPubKey": "0014be39cfa9382328360e9bc5304a43a2782818d8cf", "signers": ["02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6"], "txid": "0eb8b8b9d8a88dfe3bc56179514fe542fb10be8a0307c90cdfffee6460be9d38", "vout": 3}]}, "type": "TRANSACTION"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:135 2022-12-05 11:07:03.694202 | 
+<-----Core Build Response---->
+{"balanceChanges":[],"blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-05T03:07:08.099Z","description":"Custom Excution","estimatedFee":"187","hash":"","id":"1599601234133864449","networkCode":"BTC","requiredSignings":[{"hash":"29bf62469524ea19305d9179d50b5e68c57ef20c8b8c24fe16308db9b8f76460","publicKeys":["02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6"],"threshold":1}],"serialized":"0100000001389dbe6064eeffdf0cc907038abe10fb42e54f517961c53bfe8da8d8b9b8b80e0300000000ffffffff026400000000000000160014be39cfa9382328360e9bc5304a43a2782818d8cf37ac0d0000000000160014be39cfa9382328360e9bc5304a43a2782818d8cf00000000","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-05T03:07:08.099Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:155 2022-12-05 11:07:03.694202 | 
+<-----Core Sign------>
+Url:http://54.251.78.181:8888/core/api/transactions/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+
+body:{"id": "1599601234133864449", "signatures": [{"hash": "29bf62469524ea19305d9179d50b5e68c57ef20c8b8c24fe16308db9b8f76460", "publicKey": "02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6", "signature": "2a80cbd21087367249b1be46aff882a701106911d9e6405b746d4be7f5753b3a540ad0fc67d5e514b8490a8f55cda26db1381b476dc137aa3956be6e1c1b1b3701"}]}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:158 2022-12-05 11:07:03.694202 | 
+<-----Core Sign Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-05T03:07:08.000Z","description":"Custom Excution","estimatedFee":"187","fee":"-1","hash":"c9de1701a11305013f98de8a4d532bed723243eddfcd1db9367f6f5b3181d65d","id":"1599601234133864449","networkCode":"BTC","serialized":"01000000000101389dbe6064eeffdf0cc907038abe10fb42e54f517961c53bfe8da8d8b9b8b80e0300000000ffffffff026400000000000000160014be39cfa9382328360e9bc5304a43a2782818d8cf37ac0d0000000000160014be39cfa9382328360e9bc5304a43a2782818d8cf0247304402202a80cbd21087367249b1be46aff882a701106911d9e6405b746d4be7f5753b3a0220540ad0fc67d5e514b8490a8f55cda26db1381b476dc137aa3956be6e1c1b1b37012102e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a600000000","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-05T03:07:08.334Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:174 2022-12-05 11:07:03.694202 | 
+<-----Core Send------>
+Url:http://54.251.78.181:8888/core/api/transactions/send/1599601234133864449
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:177 2022-12-05 11:07:03.694202 | 
+<-----Core Send Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-12-05T03:07:08.548Z","createdTime":"2022-12-05T03:07:08.000Z","description":"Custom Excution","estimatedFee":"187","fee":"-1","hash":"c9de1701a11305013f98de8a4d532bed723243eddfcd1db9367f6f5b3181d65d","id":"1599601234133864449","networkCode":"BTC","serialized":"01000000000101389dbe6064eeffdf0cc907038abe10fb42e54f517961c53bfe8da8d8b9b8b80e0300000000ffffffff026400000000000000160014be39cfa9382328360e9bc5304a43a2782818d8cf37ac0d0000000000160014be39cfa9382328360e9bc5304a43a2782818d8cf0247304402202a80cbd21087367249b1be46aff882a701106911d9e6405b746d4be7f5753b3a0220540ad0fc67d5e514b8490a8f55cda26db1381b476dc137aa3956be6e1c1b1b37012102e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a600000000","status":3,"statusDesc":"PENDING","updatedTime":"2022-12-05T03:07:08.548Z"}

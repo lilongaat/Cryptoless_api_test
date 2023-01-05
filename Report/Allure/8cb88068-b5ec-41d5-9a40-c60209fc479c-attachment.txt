@@ -1,0 +1,69 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:167 2023-01-04 17:25:59.670682 | 
+<-----balance----->
+Url:https://api.polygonscan.com/api?module=account&action=balance&address=0x9b532cf5f662e51ba643672797ad3ec1a60bb939&apikey=85W6B7V5TPH7TDZA3JQCFT8UN8RKAEMA4Y
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:169 2023-01-04 17:25:59.670682 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "180761004374002672"}
+[32mINFO    [0m Common.Http:Http.py:421 2023-01-04 17:25:59.670682 | 
+<-----Query Holders----->
+Url:http://api.orbital3.xyz/vault/proxy/assets/holders/?networkCode=MATIC&address=0x9b532cf5f662e51ba643672797ad3ec1a60bb939&symbol=MATIC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+
+
+[32mINFO    [0m Common.Http:Http.py:424 2023-01-04 17:25:59.670682 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0x9b532cf5f662e51ba643672797ad3ec1a60bb939","createdTime":"2023-01-04T02:58:12.000Z","id":"1610470621920235521","networkCode":"MATIC","quantity":"0.180761004374002672","symbol":"MATIC","updatedTime":"2023-01-04T07:02:00.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_rebuild_maxfee:test_rebuild_maxfee.py:92 2023-01-04 17:25:59.670682 | 浏览器查询账户balance为:0.180761004374002672
+[35mDEBUG   [0m test_rebuild_maxfee:test_rebuild_maxfee.py:93 2023-01-04 17:25:59.670682 | 查询账户holder为:0.180761004374002672
+[32mINFO    [0m Common.Http:Http.py:261 2023-01-04 17:25:59.670682 | 
+<-----Instructions----->
+Url:http://api.orbital3.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+Body:{"networkCode": "MATIC", "type": "transfer", "body": {"from": "0x9b532cf5f662e51ba643672797ad3ec1a60bb939", "to": "0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591", "symbol": "MATIC", "amount": "0.000001"}, "transactionParams": {"memo": "7O2vIpXTqa"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:264 2023-01-04 17:25:59.670682 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-01-04T09:26:03.000Z","description":"Send 0.000001 MATIC","estimatedFee":"1639440522384000","fee":"-1","hash":"","id":"1610568221763702785","networkCode":"MATIC","requiredSignings":[{"hash":"3fffcbc0a3d1bb1c37af51c45713d6d141f60a25ae6751e258a7d791b4c0ab68","publicKeys":["02e1cf1f9502c433efd31a1e7c8948b5e9a6d1929a8cbd3d97dcc11d4b358c6dec"],"threshold":1}],"serialized":"02f28189228506fc23ac0085122d403e50825208943d7f18ad2cea9b59e54dfaf09b327c1ccd89959185e8d4a5100080c0808080","status":0,"statusDesc":"BUILDING","updatedTime":"2023-01-04T09:26:03.000Z"}]},"body":{"symbol":"MATIC","amount":"0.000001","from":"0x9b532cf5f662e51ba643672797ad3ec1a60bb939","to":"0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591"},"createdTime":"2023-01-04T09:26:03.000Z","id":"1610568227814150145","networkCode":"MATIC","status":-2,"transactionParams":{"memo":"7O2vIpXTqa"},"type":"TRANSFER","updatedTime":"2023-01-04T09:26:03.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:301 2023-01-04 17:25:59.670682 | 
+<-----Rebuild----->
+Url:http://api.orbital3.xyz/vault/transactions/params
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+Body:{"id": "1610568221763702785", "params": {"gasPrice": "0x454b7a44c36"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:304 2023-01-04 17:25:59.670682 | 
+<-----Rebuild Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-01-04T09:26:03.000Z","description":"Send 0.000001 MATIC","estimatedFee":"1639440522384000","fee":"-1","hash":"","id":"1610568221763702785","networkCode":"MATIC","requiredSignings":[{"hash":"3fffcbc0a3d1bb1c37af51c45713d6d141f60a25ae6751e258a7d791b4c0ab68","publicKeys":["02e1cf1f9502c433efd31a1e7c8948b5e9a6d1929a8cbd3d97dcc11d4b358c6dec"],"threshold":1}],"serialized":"02f28189228506fc23ac0085122d403e50825208943d7f18ad2cea9b59e54dfaf09b327c1ccd89959185e8d4a5100080c0808080","status":0,"statusDesc":"BUILDING","updatedTime":"2023-01-04T09:26:03.432Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:340 2023-01-04 17:25:59.670682 | 
+<-----Sign----->
+Url:http://api.orbital3.xyz/vault/transactions/signatures
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+Body:{"id": "1610568221763702785", "signatures": [{"hash": "3fffcbc0a3d1bb1c37af51c45713d6d141f60a25ae6751e258a7d791b4c0ab68", "publicKey": "02e1cf1f9502c433efd31a1e7c8948b5e9a6d1929a8cbd3d97dcc11d4b358c6dec", "signature": "57dfa3c771e17696e132f33f076de586055cb30975a0fa982ef235cca92eaa1c6a0345b4748895ac67e314193803aa6aadcea8fb520dc7a510802157dd32433a01"}]}
+
+
+[32mINFO    [0m Common.Http:Http.py:344 2023-01-04 17:25:59.670682 | 
+<-----Sign Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-01-04T09:26:03.000Z","description":"Send 0.000001 MATIC","estimatedFee":"1639440522384000","fee":"-1","hash":"0x8ec3cf84908c6a35905af69ef86134aaed8692167e964e62d0e7bd20c5728c8c","id":"1610568221763702785","networkCode":"MATIC","serialized":"02f8728189228506fc23ac0085122d403e50825208943d7f18ad2cea9b59e54dfaf09b327c1ccd89959185e8d4a5100080c001a057dfa3c771e17696e132f33f076de586055cb30975a0fa982ef235cca92eaa1ca06a0345b4748895ac67e314193803aa6aadcea8fb520dc7a510802157dd32433a","status":2,"statusDesc":"SIGNED","updatedTime":"2023-01-04T09:26:03.582Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:360 2023-01-04 17:25:59.670682 | 
+<-----Send----->
+Url:http://api.orbital3.xyz/vault/transactions/send/1610568221763702785
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+
+
+[32mINFO    [0m Common.Http:Http.py:364 2023-01-04 17:25:59.670682 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"2023-01-04T09:26:04.735Z","createdTime":"2023-01-04T09:26:03.000Z","description":"Send 0.000001 MATIC","estimatedFee":"1639440522384000","fee":"-1","hash":"0x8ec3cf84908c6a35905af69ef86134aaed8692167e964e62d0e7bd20c5728c8c","id":"1610568221763702785","networkCode":"MATIC","serialized":"02f8728189228506fc23ac0085122d403e50825208943d7f18ad2cea9b59e54dfaf09b327c1ccd89959185e8d4a5100080c001a057dfa3c771e17696e132f33f076de586055cb30975a0fa982ef235cca92eaa1ca06a0345b4748895ac67e314193803aa6aadcea8fb520dc7a510802157dd32433a","status":3,"statusDesc":"PENDING","updatedTime":"2023-01-04T09:26:04.735Z"}

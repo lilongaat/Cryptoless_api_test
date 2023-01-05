@@ -1,0 +1,51 @@
+[32mINFO    [0m Common.Http:Http.py:425 2022-12-15 10:41:27.986647 | 
+<-----Query Holders----->
+Url:http://54.251.78.181:8888/escrow/api//proxy/core/api/assets/holders/?networkCode=BTC&address=tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33&symbol=BTC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:428 2022-12-15 10:41:27.986647 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33","id":"1603217983278403585","networkCode":"BTC","quantity":"0.0009878","symbol":"BTC","updatedTime":"2022-12-15T02:38:48.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:265 2022-12-15 10:41:27.986647 | 
+<-----Instructions----->
+Url:http://54.251.78.181:8888/escrow/api//instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "BTC", "type": "transfer", "body": {"from": "tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33", "to": "tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq", "symbol": "BTC", "amount": "0.000001"}, "transactionParams": {"memo": "d5njVA3Y8K"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:268 2022-12-15 10:41:27.986647 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-15T02:41:30.000Z","description":"","estimatedFee":"226","fee":"-1","hash":"","id":"1603218661308616706","networkCode":"BTC","requiredSignings":[{"hash":"42b01ff74064a943847fc5dd5d19ed2bbfbd2cbe51044557069404b8edb39c08","publicKeys":["0231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f70","02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6"],"threshold":2}],"serialized":"01000000010d962f91d7573b76b6db783feba99c89a1e9b9ed6ed6726589f0b090dfceb59d0300000000ffffffff026400000000000000160014ea2cc3344a103daead8378c573ccbfcba5bfed549680010000000000220020aacf2586a97491580532bfb86a62d71f7ff96a8ab3872a9d18635e35d105cf6200000000","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-15T02:41:30.000Z"}]},"body":{"symbol":"BTC","amount":"0.000001","from":"tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33","to":"tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq"},"createdTime":"2022-12-15T02:41:29.000Z","id":"1603218661618999297","networkCode":"BTC","status":-2,"transactionParams":{"memo":"d5njVA3Y8K"},"type":"TRANSFER","updatedTime":"2022-12-15T02:41:29.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:344 2022-12-15 10:41:27.986647 | 
+<-----Sign----->
+Url:http://54.251.78.181:8888/escrow/api/transactions/signatures
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"id": "1603218661308616706", "signatures": [{"hash": "42b01ff74064a943847fc5dd5d19ed2bbfbd2cbe51044557069404b8edb39c08", "publicKey": "0231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f70", "signature": "16dd0beafc7e1d78695549f4a40f0a2f9df90566739227aa9c3666498a91f0334163c74e95f88b1c8596ca437b50239f890a8cd83d26801f209f61a06121352000"}, {"hash": "42b01ff74064a943847fc5dd5d19ed2bbfbd2cbe51044557069404b8edb39c08", "publicKey": "02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6", "signature": "c7d2e1cd5d6250878591028503bc73fbd3419d343dc758486e6c56a7b0188eda2785aadad3688d18310d033d76cbbb9212392a7be537ae961f1a452888516f4601"}]}
+
+
+[32mINFO    [0m Common.Http:Http.py:348 2022-12-15 10:41:27.986647 | 
+<-----Sign Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-15T02:41:30.000Z","description":"","estimatedFee":"226","fee":"-1","hash":"7093a2184e4c6ffef0b705d32733a413383912063fd32f2463f1b1647d81502a","id":"1603218661308616706","networkCode":"BTC","serialized":"010000000001010d962f91d7573b76b6db783feba99c89a1e9b9ed6ed6726589f0b090dfceb59d0300000000ffffffff026400000000000000160014ea2cc3344a103daead8378c573ccbfcba5bfed549680010000000000220020aacf2586a97491580532bfb86a62d71f7ff96a8ab3872a9d18635e35d105cf620400473044022016dd0beafc7e1d78695549f4a40f0a2f9df90566739227aa9c3666498a91f03302204163c74e95f88b1c8596ca437b50239f890a8cd83d26801f209f61a06121352001483045022100c7d2e1cd5d6250878591028503bc73fbd3419d343dc758486e6c56a7b0188eda02202785aadad3688d18310d033d76cbbb9212392a7be537ae961f1a452888516f46014752210231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f702102e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a652ae00000000","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-15T02:41:30.390Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:364 2022-12-15 10:41:27.986647 | 
+<-----Send----->
+Url:http://54.251.78.181:8888/escrow/api//transactions/send/1603218661308616706
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:368 2022-12-15 10:41:27.986647 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-12-15T02:41:30.727Z","createdTime":"2022-12-15T02:41:30.000Z","description":"","estimatedFee":"226","fee":"-1","hash":"7093a2184e4c6ffef0b705d32733a413383912063fd32f2463f1b1647d81502a","id":"1603218661308616706","networkCode":"BTC","serialized":"010000000001010d962f91d7573b76b6db783feba99c89a1e9b9ed6ed6726589f0b090dfceb59d0300000000ffffffff026400000000000000160014ea2cc3344a103daead8378c573ccbfcba5bfed549680010000000000220020aacf2586a97491580532bfb86a62d71f7ff96a8ab3872a9d18635e35d105cf620400473044022016dd0beafc7e1d78695549f4a40f0a2f9df90566739227aa9c3666498a91f03302204163c74e95f88b1c8596ca437b50239f890a8cd83d26801f209f61a06121352001483045022100c7d2e1cd5d6250878591028503bc73fbd3419d343dc758486e6c56a7b0188eda02202785aadad3688d18310d033d76cbbb9212392a7be537ae961f1a452888516f46014752210231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f702102e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a652ae00000000","status":3,"statusDesc":"PENDING","updatedTime":"2022-12-15T02:41:30.727Z"}
+
+
+[31m[1mERROR   [0m test_success:test_success.py:87 2022-12-15 10:41:27.986647 | 
+
+BTC--BTC--BTC share账户转账
+tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33--0.0009878
+7093a2184e4c6ffef0b705d32733a413383912063fd32f2463f1b1647d81502a

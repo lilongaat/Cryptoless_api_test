@@ -1,0 +1,42 @@
+[32mINFO    [0m Common.Http:Http.py:115 2022-12-14 19:39:35.394848 | 
+<-----Create Custodial Account------>
+Url:http://54.251.78.181:8888/escrow/api//accounts/custodial
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"name": "\u6258\u7ba1\u8d26\u6237BTC1671017975", "networkCode": "BTC"}
+
+
+[32mINFO    [0m Common.Http:Http.py:118 2022-12-14 19:39:35.394848 | 
+<-----Create Custodial Response----->
+{"address":"tb1qsn0fyj65lt675tgklfksv5futv4zzuvs45q8y5","createdTime":"2022-12-14T11:39:39.465Z","finalized":false,"id":"1602991705803644930","name":"托管账户BTC1671017975","networkCode":"BTC","publicKeys":[{"source":"custodial","type":"secp256k1","value":"03f2fb2a55b72589be987d6215eb1fde27153975c8c688c246bba214376ab84d4a"}],"status":"enable","threshold":1,"type":"custodial","updatedTime":"2022-12-14T11:39:39.465Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:93 2022-12-14 19:39:35.394848 | 
+<-----Query Accounts----->
+Url:http://54.251.78.181:8888/escrow/api//accounts?networkCode=BTC&address=tb1qsn0fyj65lt675tgklfksv5futv4zzuvs45q8y5&type=
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:96 2022-12-14 19:39:35.394848 | 
+<-----Query Accounts Response----->
+{"current":1,"list":[{"address":"tb1qsn0fyj65lt675tgklfksv5futv4zzuvs45q8y5","createdTime":"2022-12-14T11:39:39.000Z","finalized":false,"id":"1602991705803644930","name":"托管账户BTC1671017975","networkCode":"BTC","publicKeys":[{"source":"custodial","type":"secp256k1","value":"03f2fb2a55b72589be987d6215eb1fde27153975c8c688c246bba214376ab84d4a"}],"status":"enable","threshold":1,"type":"custodial","updatedTime":"2022-12-14T11:39:39.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:205 2022-12-14 19:39:35.394848 | 
+<-----Query Account Byid------>
+Url:http://54.251.78.181:8888/escrow/api//accounts/1602991705803644930
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:208 2022-12-14 19:39:35.394848 | 
+<-----Query Account Byid Response----->
+{"address":"tb1qsn0fyj65lt675tgklfksv5futv4zzuvs45q8y5","createdTime":"2022-12-14T11:39:39.465Z","finalized":false,"id":"1602991705803644930","name":"托管账户BTC1671017975","networkCode":"BTC","publicKeys":[{"source":"custodial","type":"secp256k1","value":"03f2fb2a55b72589be987d6215eb1fde27153975c8c688c246bba214376ab84d4a"}],"status":"enable","threshold":1,"type":"custodial","updatedTime":"2022-12-14T11:39:39.465Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:246 2022-12-14 19:39:35.394848 | 
+<-----Delete Account Byid------>
+Url:http://54.251.78.181:8888/escrow/api//accounts/1602991705803644930
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:249 2022-12-14 19:39:35.394848 | 
+<-----Delete Account Byid Response----->

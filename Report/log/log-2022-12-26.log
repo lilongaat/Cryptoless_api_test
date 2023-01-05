@@ -1,0 +1,12 @@
+2022-12-26 16:13:05.693 | ERROR    | Common.Httpcore:core_instructions:214 - 
+<-----Core Instructions Response Error----->{"code":2200000,"message":"instance not found"}
+2022-12-26 16:13:56.485 | ERROR    | Common.Httpcore:core_send:256 - 
+<-----Core Send Response Error----->{"code":2300000,"message":"send transaction fail"}
+2022-12-26 16:35:20.115 | ERROR    | Common.Httpcore:core_instructions:214 - 
+<-----Core Instructions Response Error----->{"code":2400000,"message":"INTERNAL: Returned error: execution reverted"}
+2022-12-26 16:42:45.988 | ERROR    | Common.Httpcore:core_instructions:214 - 
+<-----Core Instructions Response Error----->{"code":1100000,"message":"Bad Request"}
+2022-12-26 17:05:04.699 | ERROR    | Common.Httpcore:core_instructions:214 - 
+<-----Core Instructions Response Error----->{"code":2300000,"message":"account pending"}
+2022-12-26 17:56:13.839 | ERROR    | Common.Httpcore:core_active_acc:200 - 
+<-----Core Active Account Byid Response Error----->{"code":1400000,"message":"Request method 'POST' not supported"}

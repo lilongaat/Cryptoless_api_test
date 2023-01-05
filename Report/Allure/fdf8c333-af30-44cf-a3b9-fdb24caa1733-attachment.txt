@@ -1,0 +1,25 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:224 2022-12-02 10:23:37.775114 | 
+<-----Query UTXO----->
+Url:https://api.bitcore.io/api/BTC/testnet/address/tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0?unspent=true
+
+Headers:{"Content-Type": "application/json"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:227 2022-12-02 10:23:37.775114 | 
+<-----Query UTXO Response----->
+[
+{"_id":"6385d239d3bfc9e8e120b729","chain":"BTC","network":"testnet","coinbase":false,"mintIndex":1,"spentTxid":"","mintTxid":"96f20d3215de90d2a4722c39fe7eb9599958fc0b19839ee33254f9e779beb0de","mintHeight":2408949,"spentHeight":-2,"address":"tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0","script":"0014be39cfa9382328360e9bc5304a43a2782818d8cf","value":898949,"confirmations":-1},
+{"_id":"6385ac0fd3bfc9e8e17f09de","chain":"BTC","network":"testnet","coinbase":false,"mintIndex":0,"spentTxid":"","mintTxid":"9aa6d0c2e5b677480d08b1f90c989f599ec16342cdee9e1fe48a698030a38eae","mintHeight":2408923,"spentHeight":-2,"address":"tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0","script":"0014be39cfa9382328360e9bc5304a43a2782818d8cf","value":100,"confirmations":-1}
+]
+[31m[1mERROR   [0m test_success:test_success.py:44 2022-12-02 10:23:37.775114 | [{'amount': 898949, 'txid': '96f20d3215de90d2a4722c39fe7eb9599958fc0b19839ee33254f9e779beb0de', 'vout': 1}, {'amount': 100, 'txid': '9aa6d0c2e5b677480d08b1f90c989f599ec16342cdee9e1fe48a698030a38eae', 'vout': 0}]
+[32mINFO    [0m Common.Httpcore:Httpcore.py:132 2022-12-02 10:23:37.775114 | 
+<-----Core Build------>
+Url:http://54.251.78.181:8888/core/api/transactions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+
+body:{"networkCode": "BTC", "payload": {"changer": "tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0", "recipients": [{"address": "tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0", "value": "100"}], "utxos": [{"amount": 898949, "txid": "96f20d3215de90d2a4722c39fe7eb9599958fc0b19839ee33254f9e779beb0de", "vout": 1}, {"amount": 100, "txid": "9aa6d0c2e5b677480d08b1f90c989f599ec16342cdee9e1fe48a698030a38eae", "vout": 0}]}, "type": "TRANSACTION"}
+
+
+[31m[1mERROR   [0m Common.Httpcore:Httpcore.py:138 2022-12-02 10:23:37.775114 | 
+<-----Core Build Response Error----->{"code":2400000,"message":"INTERNAL: signers is not iterable"}

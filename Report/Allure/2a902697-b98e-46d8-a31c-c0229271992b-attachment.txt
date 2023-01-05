@@ -1,0 +1,10 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:201 2022-12-01 18:27:54.588218 | 
+<-----Relay estimate----->
+Url:http://16.163.105.179:18000/api/v2/safes/0x6490C1b13A4576128159576F9d3acadF79e8dd6f/transactions/estimate/
+
+Headers:{"Content-Type": "application/json"}
+
+Body:{"gasToken": "0x0000000000000000000000000000000000000000", "operation": "0", "safe": "0x6490C1b13A4576128159576F9d3acadF79e8dd6f", "to": "0x6490C1b13A4576128159576F9d3acadF79e8dd6f", "data": "0x", "value": "0x64"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:207 2022-12-01 18:27:54.588218 | 
+400
+<-----Relay estimate Response Error----->{"value":["A valid integer is required."]}

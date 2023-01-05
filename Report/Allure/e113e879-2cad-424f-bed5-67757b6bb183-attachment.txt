@@ -1,0 +1,33 @@
+[32mINFO    [0m Common.Http:Http.py:265 2022-12-12 18:00:32.638994 | 
+<-----Instructions----->
+Url:http://54.251.78.181:8888/escrow/api//instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "BTC", "type": "transfer", "body": {"from": "tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0", "to": "tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq", "symbol": "BTC", "amount": "0.000008"}, "transactionParams": {"memo": "GZLCBrwdhS"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:268 2022-12-12 18:00:32.638994 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-12T10:00:34.000Z","description":"","estimatedFee":"187","fee":"-1","hash":"","id":"1602241994679377921","networkCode":"BTC","requiredSignings":[{"hash":"39805c2a3e4a893ac298cd9e49dcfbc5366c05bae45d4f8807a93bcbb8dfdaef","publicKeys":["02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6"],"threshold":1}],"serialized":"0100000001619ed64612c803a192531bbf348649a703a906d550827ef432743744ed0713670300000000ffffffff022003000000000000160014ea2cc3344a103daead8378c573ccbfcba5bfed547da00d0000000000160014be39cfa9382328360e9bc5304a43a2782818d8cf00000000","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-12T10:00:34.000Z"}]},"body":{"symbol":"BTC","amount":"0.000008","from":"tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0","to":"tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq"},"createdTime":"2022-12-12T10:00:34.000Z","id":"1602241994972938242","networkCode":"BTC","status":-2,"transactionParams":{"memo":"GZLCBrwdhS"},"type":"TRANSFER","updatedTime":"2022-12-12T10:00:34.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:286 2022-12-12 18:00:32.638994 | 
+<-----Sign----->
+Url:http://54.251.78.181:8888/escrow/api/transactions/signatures
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"id": "1602241994679377921", "signatures": [{"hash": "39805c2a3e4a893ac298cd9e49dcfbc5366c05bae45d4f8807a93bcbb8dfdaef", "publicKey": "02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6", "signature": "0c7ffeaafdb8d619bb89f4dbf22eb1232c8e977f59802bb0e1aa1a09da959ad67cd358530e74669b979a1f7a716ee461e17ce5b441093f4b83488afc5fae4ac100"}]}
+
+
+[32mINFO    [0m Common.Http:Http.py:290 2022-12-12 18:00:32.638994 | 
+<-----Sign Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-12T10:00:34.000Z","description":"","estimatedFee":"187","fee":"-1","hash":"cc900227e434121f2e7afed3cfc0825908bd9b86f3fc1b7b88083ad713705b9c","id":"1602241994679377921","networkCode":"BTC","serialized":"01000000000101619ed64612c803a192531bbf348649a703a906d550827ef432743744ed0713670300000000ffffffff022003000000000000160014ea2cc3344a103daead8378c573ccbfcba5bfed547da00d0000000000160014be39cfa9382328360e9bc5304a43a2782818d8cf0247304402200c7ffeaafdb8d619bb89f4dbf22eb1232c8e977f59802bb0e1aa1a09da959ad602207cd358530e74669b979a1f7a716ee461e17ce5b441093f4b83488afc5fae4ac1012102e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a600000000","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-12T10:00:34.847Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:306 2022-12-12 18:00:32.638994 | 
+<-----Send----->
+Url:http://54.251.78.181:8888/escrow/api//transactions/send/1602241994679377921
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:310 2022-12-12 18:00:32.638994 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-12-12T10:00:35.145Z","createdTime":"2022-12-12T10:00:34.000Z","description":"","estimatedFee":"187","fee":"-1","hash":"cc900227e434121f2e7afed3cfc0825908bd9b86f3fc1b7b88083ad713705b9c","id":"1602241994679377921","networkCode":"BTC","serialized":"01000000000101619ed64612c803a192531bbf348649a703a906d550827ef432743744ed0713670300000000ffffffff022003000000000000160014ea2cc3344a103daead8378c573ccbfcba5bfed547da00d0000000000160014be39cfa9382328360e9bc5304a43a2782818d8cf0247304402200c7ffeaafdb8d619bb89f4dbf22eb1232c8e977f59802bb0e1aa1a09da959ad602207cd358530e74669b979a1f7a716ee461e17ce5b441093f4b83488afc5fae4ac1012102e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a600000000","status":3,"statusDesc":"PENDING","updatedTime":"2022-12-12T10:00:35.145Z"}

@@ -1,0 +1,22 @@
+[32mINFO    [0m Common.Http:Http.py:425 2022-12-28 18:23:09.459149 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=MATIC&address=0xe525E7cd17f6Dc950492755A089E452fd5d9d44f&symbol=USDC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:428 2022-12-28 18:23:09.459149 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0xe525e7cd17f6dc950492755a089e452fd5d9d44f","createdTime":"2022-12-26T08:32:01.000Z","id":"1607293140213125122","networkCode":"MATIC","quantity":"0.096021","symbol":"USDC","updatedTime":"2022-12-28T08:47:08.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:265 2022-12-28 18:23:09.459149 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "MATIC", "type": "CROSS_CHAIN", "body": {"from": "0xe525E7cd17f6Dc950492755A089E452fd5d9d44f", "to": "0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591", "symbol": "USDC", "amount": "0.000012", "toNetworkCode": "BSC"}, "transactionParams": {"memo": "P1zpTnUQJ5"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:271 2022-12-28 18:23:09.459149 | 
+<-----Instructions Response Error----->
+400
+{"code":2102002,"message":"Min amount for current cross-chain is 12 USDC"}

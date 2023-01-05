@@ -1,0 +1,77 @@
+2022-12-02 10:18:30.312 | ERROR    | Common.Httpcore:query_utxo:219 - networkCode not support!
+2022-12-02 10:18:49.269 | ERROR    | test_success:test_custodial:44 - []
+2022-12-02 10:19:06.885 | ERROR    | test_success:test_custodial:44 - [{'amount': 898949, 'txid': '96f20d3215de90d2a4722c39fe7eb9599958fc0b19839ee33254f9e779beb0de', 'vout': 1}, {'amount': 100, 'txid': '9aa6d0c2e5b677480d08b1f90c989f599ec16342cdee9e1fe48a698030a38eae', 'vout': 0}]
+2022-12-02 10:23:41.303 | ERROR    | test_success:test_custodial:44 - [{'amount': 898949, 'txid': '96f20d3215de90d2a4722c39fe7eb9599958fc0b19839ee33254f9e779beb0de', 'vout': 1}, {'amount': 100, 'txid': '9aa6d0c2e5b677480d08b1f90c989f599ec16342cdee9e1fe48a698030a38eae', 'vout': 0}]
+2022-12-02 10:23:43.715 | ERROR    | Common.Httpcore:core_build:138 - 
+<-----Core Build Response Error----->{"code":2400000,"message":"INTERNAL: signers is not iterable"}
+2022-12-02 10:25:19.037 | ERROR    | test_success:test_custodial:45 - [{'amount': 898949, 'signers': ['02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6'], 'txid': '96f20d3215de90d2a4722c39fe7eb9599958fc0b19839ee33254f9e779beb0de', 'vout': 1}, {'amount': 100, 'signers': ['02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6'], 'txid': '9aa6d0c2e5b677480d08b1f90c989f599ec16342cdee9e1fe48a698030a38eae', 'vout': 0}]
+2022-12-02 10:29:37.325 | ERROR    | Common.Httpcore:core_sign:161 - 
+<-----Core Sign Response Error----->{"code":2400000,"message":"INVALID_ARGUMENT: Invalid signatures"}
+2022-12-02 10:33:55.254 | ERROR    | Common.Httpcore:core_sign:161 - 
+<-----Core Sign Response Error----->{"code":2400000,"message":"INVALID_ARGUMENT: Invalid signatures"}
+2022-12-02 10:57:47.137 | ERROR    | Common.Httpcore:core_send:180 - 
+<-----Core Send Response Error----->{"code":2300000,"message":"transaction status change cannot be send"}
+2022-12-02 11:02:56.598 | ERROR    | Common.Httpcore:core_sign:161 - 
+<-----Core Sign Response Error----->{"code":2400000,"message":"INVALID_ARGUMENT: Invalid signatures"}
+2022-12-02 11:04:13.605 | ERROR    | Common.Httpcore:core_build:138 - 
+<-----Core Build Response Error----->{"code":2400000,"message":"INTERNAL: Witness script inconsistent with prevOutScript"}
+2022-12-02 11:10:00.471 | ERROR    | Common.Httpcore:core_sign:161 - 
+<-----Core Sign Response Error----->{"code":2400000,"message":"INVALID_ARGUMENT: Invalid signatures"}
+2022-12-02 11:34:07.863 | ERROR    | Common.Httpcore:core_build:138 - 
+<-----Core Build Response Error----->{"timestamp":"2022-12-02T03:34:07.839+00:00","path":"/core/api/transactions","status":503,"error":"Service Unavailable","message":"","requestId":"69ce154e-143"}
+2022-12-02 11:40:09.624 | ERROR    | Common.Httpcore:core_send:180 - 
+<-----Core Send Response Error----->{"code":2400000,"message":"INTERNAL: 500 - {\"result\":null,\"error\":{\"code\":-26,\"message\":\"non-mandatory-script-verify-flag \u0028Witness program hash mismatch\u0029\"},\"id\":1669952409542}"}
+2022-12-02 11:44:28.510 | ERROR    | Common.Httpcore:core_send:180 - 
+<-----Core Send Response Error----->{"code":2400000,"message":"INTERNAL: 500 - {\"result\":null,\"error\":{\"code\":-26,\"message\":\"non-mandatory-script-verify-flag \u0028Witness program hash mismatch\u0029\"},\"id\":1669952668463}"}
+2022-12-02 11:44:41.143 | ERROR    | Common.Httpcore:core_sign:161 - 
+<-----Core Sign Response Error----->{"code":2400000,"message":"INTERNAL: Returned error: execution reverted"}
+2022-12-02 14:05:10.902 | ERROR    | Common.Httpcore:core_send:180 - 
+<-----Core Send Response Error----->{"code":2400000,"message":"INTERNAL: 500 - {\"result\":null,\"error\":{\"code\":-26,\"message\":\"non-mandatory-script-verify-flag \u0028Witness program hash mismatch\u0029\"},\"id\":1669961110911}"}
+2022-12-02 14:14:48.205 | ERROR    | Common.Httpcore:core_sign:161 - 
+<-----Core Sign Response Error----->{"code":2400000,"message":"INTERNAL: Returned error: execution reverted"}
+2022-12-02 14:28:44.829 | ERROR    | Common.Httpcore:core_sign:161 - 
+<-----Core Sign Response Error----->{"code":2400000,"message":"INTERNAL: Returned error: execution reverted"}
+2022-12-02 14:32:00.771 | ERROR    | Common.Httpcore:core_send:180 - 
+<-----Core Send Response Error----->{"code":2400000,"message":"INTERNAL: 500 - {\"result\":null,\"error\":{\"code\":-26,\"message\":\"non-mandatory-script-verify-flag \u0028Witness program hash mismatch\u0029\"},\"id\":1669962720828}"}
+2022-12-02 16:10:43.162 | ERROR    | Common.Httpcore:core_build:138 - 
+<-----Core Build Response Error----->{"code":2200000,"message":"account not found"}
+2022-12-02 16:15:12.079 | ERROR    | Common.Httpcore:core_build:138 - 
+<-----Core Build Response Error----->{"code":2200000,"message":"account not found"}
+2022-12-02 16:15:59.339 | ERROR    | Common.Httpcore:core_send:180 - 
+<-----Core Send Response Error----->{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 13 \u0028codespace: sdk\u0029. Log: insufficient fees; got: 13552uiris required: 1iris: insufficient fee"}
+2022-12-02 16:17:07.608 | ERROR    | Common.Httpcore:core_send:180 - 
+<-----Core Send Response Error----->{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 13 \u0028codespace: sdk\u0029. Log: insufficient fees; got: 13552uiris required: 1iris: insufficient fee"}
+2022-12-02 16:43:27.469 | ERROR    | Common.Httpcore:core_send:180 - 
+<-----Core Send Response Error----->{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 13 \u0028codespace: sdk\u0029. Log: insufficient fees; got: 13552uiris required: 1iris: insufficient fee"}
+2022-12-02 16:46:15.029 | ERROR    | Common.Httpcore:core_send:180 - 
+<-----Core Send Response Error----->{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 13 \u0028codespace: sdk\u0029. Log: insufficient fees; got: 6776uiris required: 1iris: insufficient fee"}
+2022-12-02 16:46:30.198 | ERROR    | Common.Httpcore:core_send:180 - 
+<-----Core Send Response Error----->{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 13 \u0028codespace: sdk\u0029. Log: insufficient fees; got: 13552uiris required: 1iris: insufficient fee"}
+2022-12-02 16:51:45.187 | ERROR    | Common.Httpcore:core_send:180 - 
+<-----Core Send Response Error----->{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 13 \u0028codespace: sdk\u0029. Log: insufficient fees; got: 13552uiris required: 1iris: insufficient fee"}
+2022-12-02 17:10:52.539 | ERROR    | Common.Httpcore:core_send:180 - 
+<-----Core Send Response Error----->{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 13 \u0028codespace: sdk\u0029. Log: insufficient fees; got: 13552uiris required: 1iris: insufficient fee"}
+2022-12-02 17:22:20.663 | ERROR    | Common.Httpcore:core_build:138 - 
+<-----Core Build Response Error----->{"code":2400000,"message":"INTERNAL: Bad status on response: 502"}
+2022-12-02 17:39:47.737 | ERROR    | Common.Httpcore:core_build:138 - 
+<-----Core Build Response Error----->{"code":2400000,"message":"INVALID_ARGUMENT: must have required property 'value'"}
+2022-12-02 17:40:16.981 | ERROR    | Common.Httpcore:core_build:138 - 
+<-----Core Build Response Error----->{"code":2400000,"message":"INVALID_ARGUMENT: must have required property 'value'"}
+2022-12-02 17:40:53.027 | ERROR    | Common.Httpcore:core_build:138 - 
+<-----Core Build Response Error----->{"code":2400000,"message":"INTERNAL: Returned error: execution reverted"}
+2022-12-02 17:41:53.604 | ERROR    | Common.Httpcore:core_build:138 - 
+<-----Core Build Response Error----->{"code":2400000,"message":"INTERNAL: Returned error: execution reverted"}
+2022-12-02 17:42:18.023 | ERROR    | Common.Httpcore:core_build:138 - 
+<-----Core Build Response Error----->{"code":2400000,"message":"INTERNAL: Returned error: execution reverted"}
+2022-12-02 17:42:52.834 | ERROR    | Common.Httpcore:core_sign:161 - 
+<-----Core Sign Response Error----->{"code":2400000,"message":"INTERNAL: Returned error: execution reverted"}
+2022-12-02 17:43:02.583 | ERROR    | Common.Httpcore:core_build:138 - 
+<-----Core Build Response Error----->{"code":2400000,"message":"INTERNAL: Returned error: execution reverted"}
+2022-12-02 18:21:37.468 | ERROR    | Common.Httpcore:core_send:180 - 
+<-----Core Send Response Error----->{"code":2400000,"message":"INTERNAL: 500 - {\"result\":null,\"error\":{\"code\":-26,\"message\":\"txn-mempool-conflict\"},\"id\":1669976497426}"}
+2022-12-02 18:23:45.933 | ERROR    | Common.Httpcore:core_send:180 - 
+<-----Core Send Response Error----->{"code":2400000,"message":"INTERNAL: 500 - {\"result\":null,\"error\":{\"code\":-26,\"message\":\"txn-mempool-conflict\"},\"id\":1669976625889}"}
+2022-12-02 18:54:10.009 | ERROR    | Common.Httpcore:core_build:138 - 
+<-----Core Build Response Error----->{"code":2400000,"message":"INTERNAL: Returned error: execution reverted"}
+2022-12-02 19:08:26.406 | ERROR    | Common.Httpcore:core_send:180 - 
+<-----Core Send Response Error----->{"code":2400000,"message":"INTERNAL: 500 - {\"result\":null,\"error\":{\"code\":-26,\"message\":\"non-mandatory-script-verify-flag \u0028Witness program hash mismatch\u0029\"},\"id\":1669979306402}"}

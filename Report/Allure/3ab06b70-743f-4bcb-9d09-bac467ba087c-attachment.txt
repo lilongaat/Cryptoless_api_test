@@ -1,0 +1,10 @@
+[32mINFO    [0m Common.Http:Http.py:163 2022-12-14 19:48:24.284550 | 
+<-----Create Safe Account------>
+Url:http://54.251.78.181:8888/escrow/api/accounts/safe
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"name": "\u5b89\u5168\u8d26\u6237BTC2-2-1671018504", "networkCode": "BTC", "owner": "", "recovery": ""}
+
+
+[32mINFO    [0m Common.Http:Http.py:166 2022-12-14 19:48:24.284550 | 
+<-----Create account Response----->
+{"address":"tb1qc4z32dmhfw5hm48mlud03f2et077kklhn2sj4kp25vwunhns54jq85yqq9","createdTime":"2022-12-14T11:48:31.894Z","finalized":false,"id":"1602993938972729345","name":"安全账户BTC2-2-1671018504","networkCode":"BTC","publicKeys":[{"source":"custodial","type":"secp256k1","value":"0299e875e9d880b0d1e02876dfe2bf9ba6cdffe6efb4de79b1493e482ea1bf2f85"},{"source":"custodial","type":"secp256k1","value":"03b508614c62505b6c7021a0e626dca6dca6af73a48d88ad64bc49a4968a624636"}],"status":"enable","threshold":2,"type":"safe","updatedTime":"2022-12-14T11:48:31.894Z"}

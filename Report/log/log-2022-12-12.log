@@ -1,0 +1,15 @@
+2022-12-12 16:30:17.914 | ERROR    | Common.Httpcore:core_send:202 - 
+<-----Core Send Response Error----->{"code":2300000,"message":"send transaction fail"}
+2022-12-12 17:42:58.588 | ERROR    | Common.Http:create_safe_account:169 - 
+<-----Create account Response Error----->
+{"timestamp":"2022-12-12T09:42:58.669+00:00","path":"/escrow/api/accounts/safe","status":500,"error":"Internal Server Error","message":"","requestId":"3fb7f1fe-3168"}
+
+
+2022-12-12 17:44:18.056 | ERROR    | Common.Httpcore:core_send:202 - 
+<-----Core Send Response Error----->{"code":2300000,"message":"send transaction fail"}
+2022-12-12 17:50:43.232 | ERROR    | Common.Httpcore:core_send:202 - 
+<-----Core Send Response Error----->{"code":2300000,"message":"send transaction fail"}
+2022-12-12 18:12:45.816 | ERROR    | Common.Httpcore:core_send:202 - 
+<-----Core Send Response Error----->{"code":2300000,"message":"send transaction fail"}
+2022-12-12 18:34:11.101 | ERROR    | Test_c_t:test_safe:52 - safe账户0x9d055026eb8d83ef561d5d8084f2dd02e7ad2c17
+2022-12-12 19:40:16.230 | ERROR    | Test_c_t:test_safe:52 - safe账户:0xe70eab6ed9f893da9db822d578562443d7a4fcdd

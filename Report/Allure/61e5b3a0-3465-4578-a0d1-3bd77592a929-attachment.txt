@@ -1,0 +1,35 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:134 2023-01-05 14:26:35.669909 | 
+<-----balance----->
+Url:https://api.bscscan.com/api?module=account&action=balance&address=0x49624761fca25f4782f88dc67aac8e8a48f54411&apikey=1N55SHXT8U6N3YX8TZK3U8QV7862XDEG2J
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:136 2023-01-05 14:26:35.669909 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "2000000000000000"}
+[32mINFO    [0m Common.Http:Http.py:421 2023-01-05 14:26:35.669909 | 
+<-----Query Holders----->
+Url:http://api.orbital3.xyz/vault/proxy/assets/holders/?networkCode=BSC&address=0x49624761fca25f4782f88dc67aac8e8a48f54411&symbol=BNB
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+
+
+[32mINFO    [0m Common.Http:Http.py:424 2023-01-05 14:26:35.669909 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0x49624761fca25f4782f88dc67aac8e8a48f54411","createdTime":"2023-01-05T06:26:00.000Z","id":"1610885305121132545","networkCode":"BSC","quantity":"0.002","symbol":"BNB","updatedTime":"2023-01-05T06:26:00.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_success:test_success.py:74 2023-01-05 14:26:35.669909 | 浏览器查询账户balance为:0.002
+[35mDEBUG   [0m test_success:test_success.py:75 2023-01-05 14:26:35.669909 | 查询账户holder为:0.002
+[32mINFO    [0m Common.Http:Http.py:261 2023-01-05 14:26:35.669909 | 
+<-----Instructions----->
+Url:http://api.orbital3.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+Body:{"networkCode": "BSC", "type": "transfer", "body": {"from": "0x49624761fca25f4782f88dc67aac8e8a48f54411", "to": "0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591", "symbol": "BNB", "amount": "0.0000014"}, "transactionParams": {"memo": "nFDuzea5G8"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:267 2023-01-05 14:26:35.669909 | 
+<-----Instructions Response Error----->
+400
+{"code":2400000,"message":"INTERNAL: Error: [number-to-bn] while converting number undefined to BN.js instance, error: invalid number value. Value must be an integer, hex string, BN or BigNumber instance. Note, decimals are not supported. Given value: \"undefined\""}

@@ -1,0 +1,22 @@
+[32mINFO    [0m Common.Http:Http.py:163 2022-12-10 16:37:49.968156 | 
+<-----Create Safe Account------>
+Url:http://54.251.78.181:8888/escrow/api/accounts/safe
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"name": "safe", "networkCode": "GOERLI", "owner": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "recovery": ""}
+
+
+[32mINFO    [0m Common.Http:Http.py:166 2022-12-10 16:37:49.968156 | 
+<-----Create account Response----->
+{"address":"0x9780258d71776c86f67439cae890d7252f0c830f","createdTime":"2022-12-10T08:37:54.459Z","finalized":false,"id":"1601496415430975490","name":"safe","networkCode":"GOERLI","publicKeys":[{"source":"owner","type":"secp256k1","value":"0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"},{"source":"custodial","type":"secp256k1","value":"036746d887fb6fb88f393680e6be2b470a40bd3db48d2ea0a4dc069992dfcabd37"}],"status":"inactive","threshold":2,"type":"safe","updatedTime":"2022-12-10T08:37:54.459Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:186 2022-12-10 16:37:49.968156 | 
+<-----Activation Safe Account------>
+Url:http://54.251.78.181:8888/escrow/api//accounts/activations
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"accountId": "1601496415430975490", "payer": ""}
+
+
+[1m[31mERROR   [0m Common.Http:Http.py:192 2022-12-10 16:37:49.968156 | 
+<-----Activation account Response Error----->
+{"code":2200000,"message":"agent not found"}

@@ -1,0 +1,10 @@
+[32mINFO    [0m Common.Http:Http.py:163 2022-12-14 18:32:35.729089 | 
+<-----Create Safe Account------>
+Url:http://54.251.78.181:8888/escrow/api/accounts/safe
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"name": "\u5b89\u5168\u8d26\u6237GOERLI2-2-1671013956", "networkCode": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "owner": "", "recovery": "GOERLI"}
+
+
+[31m[1mERROR   [0m Common.Http:Http.py:169 2022-12-14 18:32:35.729089 | 
+<-----Create account Response Error----->
+{"code":2200000,"message":"network not found"}

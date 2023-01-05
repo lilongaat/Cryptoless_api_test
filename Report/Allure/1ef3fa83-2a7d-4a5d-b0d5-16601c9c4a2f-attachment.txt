@@ -1,0 +1,34 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:151 2022-12-07 15:52:27.239891 | 
+<-----Core Instructions------>
+Url:http://54.251.78.181:8888/simple/api/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+
+body:{"networkCode": "MATIC", "body": {"from": "0xe525e7cd17f6dc950492755a089e452fd5d9d44f", "to": "0xe525e7cd17f6dc950492755a089e452fd5d9d44f", "symbol": "MATIC", "amount": "0.0001"}, "type": "TRANSFER"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:154 2022-12-07 15:52:27.239891 | 
+<-----Core Instructions Response---->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-07T07:52:35.000Z","description":"Send 0.0001 MATIC","estimatedFee":"642343958361000","fee":"-1","hash":"","id":"1600397839552454657","networkCode":"MATIC","requiredSignings":[{"hash":"9cd55fa0dce41bcf5f18163cb25e45b202bde7a36cecfdfbb469381cdf1c9377","publicKeys":["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],"threshold":1}],"serialized":"02f381894e85071f2ce7358527baa2a3d182520894e525e7cd17f6dc950492755a089e452fd5d9d44f865af3107a400080c0808080","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-07T07:52:35.000Z"}]},"body":{"amount":"0.0001","from":"0xe525e7cd17f6dc950492755a089e452fd5d9d44f","symbol":"MATIC","to":"0xe525e7cd17f6dc950492755a089e452fd5d9d44f"},"networkCode":"MATIC","status":-2,"type":"TRANSFER"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:174 2022-12-07 15:52:27.239891 | 
+<-----Core Sign------>
+Url:http://54.251.78.181:8888/core/api/transactions/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+
+body:{"id": "1600397839552454657", "signatures": [{"hash": "9cd55fa0dce41bcf5f18163cb25e45b202bde7a36cecfdfbb469381cdf1c9377", "publicKey": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "signature": "3c93b880bd62a5111ee4368c398959c09bc4ddd229bb175adf3a8e46f5a480fc04b2d89af42b2d7371e9c2b69e9ea7cf2dbfa14f41612359f3378cb86294453300"}]}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:177 2022-12-07 15:52:27.239891 | 
+<-----Core Sign Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-07T07:52:35.000Z","description":"Send 0.0001 MATIC","estimatedFee":"642343958361000","fee":"-1","hash":"0x4224d48afd3f2ddb2da868ca7f6e127e1a4ee46711763e9f3f832fc5002cc61b","id":"1600397839552454657","networkCode":"MATIC","serialized":"02f87381894e85071f2ce7358527baa2a3d182520894e525e7cd17f6dc950492755a089e452fd5d9d44f865af3107a400080c080a03c93b880bd62a5111ee4368c398959c09bc4ddd229bb175adf3a8e46f5a480fca004b2d89af42b2d7371e9c2b69e9ea7cf2dbfa14f41612359f3378cb862944533","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-07T07:52:35.416Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:193 2022-12-07 15:52:27.239891 | 
+<-----Core Send------>
+Url:http://54.251.78.181:8888/core/api/transactions/send/1600397839552454657
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:196 2022-12-07 15:52:27.239891 | 
+<-----Core Send Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-12-07T07:52:35.948Z","createdTime":"2022-12-07T07:52:35.000Z","description":"Send 0.0001 MATIC","estimatedFee":"642343958361000","fee":"-1","hash":"0x4224d48afd3f2ddb2da868ca7f6e127e1a4ee46711763e9f3f832fc5002cc61b","id":"1600397839552454657","networkCode":"MATIC","serialized":"02f87381894e85071f2ce7358527baa2a3d182520894e525e7cd17f6dc950492755a089e452fd5d9d44f865af3107a400080c080a03c93b880bd62a5111ee4368c398959c09bc4ddd229bb175adf3a8e46f5a480fca004b2d89af42b2d7371e9c2b69e9ea7cf2dbfa14f41612359f3378cb862944533","status":3,"statusDesc":"PENDING","updatedTime":"2022-12-07T07:52:35.948Z"}

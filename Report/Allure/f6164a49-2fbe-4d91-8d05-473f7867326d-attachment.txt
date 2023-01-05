@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:261 2023-01-05 13:58:57.934582 | 
+<-----Instructions----->
+Url:http://api.orbital3.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+Body:{"networkCode": "BSC", "type": "transfer", "body": {"from": "0x5f0a7433a68626c018ecae3cb69889184e8db970", "to": "0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591", "symbol": "BNB", "amount": "0.0000000001000000009"}, "transactionParams": {"memo": "epSGiLkKE5"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:267 2023-01-05 13:58:57.934582 | 
+<-----Instructions Response Error----->
+400
+{"code":2100000,"message":"amount decimals long too"}

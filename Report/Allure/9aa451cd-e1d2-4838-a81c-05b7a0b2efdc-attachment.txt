@@ -1,0 +1,14 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:224 2022-12-02 10:19:05.660958 | 
+<-----Query UTXO----->
+Url:https://api.bitcore.io/api/BTC/testnet/address/tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0?unspent=true
+
+Headers:{"Content-Type": "application/json"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:227 2022-12-02 10:19:05.660958 | 
+<-----Query UTXO Response----->
+[
+{"_id":"6385d239d3bfc9e8e120b729","chain":"BTC","network":"testnet","coinbase":false,"mintIndex":1,"spentTxid":"","mintTxid":"96f20d3215de90d2a4722c39fe7eb9599958fc0b19839ee33254f9e779beb0de","mintHeight":2408949,"spentHeight":-2,"address":"tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0","script":"0014be39cfa9382328360e9bc5304a43a2782818d8cf","value":898949,"confirmations":-1},
+{"_id":"6385ac0fd3bfc9e8e17f09de","chain":"BTC","network":"testnet","coinbase":false,"mintIndex":0,"spentTxid":"","mintTxid":"9aa6d0c2e5b677480d08b1f90c989f599ec16342cdee9e1fe48a698030a38eae","mintHeight":2408923,"spentHeight":-2,"address":"tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0","script":"0014be39cfa9382328360e9bc5304a43a2782818d8cf","value":100,"confirmations":-1}
+]
+[1m[31mERROR   [0m test_success:test_success.py:44 2022-12-02 10:19:05.660958 | [{'amount': 898949, 'txid': '96f20d3215de90d2a4722c39fe7eb9599958fc0b19839ee33254f9e779beb0de', 'vout': 1}, {'amount': 100, 'txid': '9aa6d0c2e5b677480d08b1f90c989f599ec16342cdee9e1fe48a698030a38eae', 'vout': 0}]

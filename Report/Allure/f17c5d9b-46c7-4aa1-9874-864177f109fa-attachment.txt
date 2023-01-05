@@ -1,0 +1,21 @@
+[32mINFO    [0m Common.Http:Http.py:163 2022-12-14 19:00:28.187078 | 
+<-----Create Safe Account------>
+Url:http://54.251.78.181:8888/escrow/api/accounts/safe
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"name": "\u5b89\u5168\u8d26\u6237GOERLI2-2-1671015628", "networkCode": "GOERLI", "owner": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "recovery": ""}
+
+
+[32mINFO    [0m Common.Http:Http.py:166 2022-12-14 19:00:28.187078 | 
+<-----Create account Response----->
+{"address":"0x3294e1cf5f0a0a835ecb424fe09437879a18bda6","createdTime":"2022-12-14T11:00:34.559Z","finalized":false,"id":"1602981870555029506","name":"安全账户GOERLI2-2-1671015628","networkCode":"GOERLI","publicKeys":[{"source":"owner","type":"secp256k1","value":"0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"},{"source":"custodial","type":"secp256k1","value":"02db02bff23cce7818e5f3235c969561770c6a9a5bbf314abe9b85ec321db09f0c"}],"status":"inactive","threshold":2,"type":"safe","updatedTime":"2022-12-14T11:00:34.559Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:205 2022-12-14 19:00:28.187078 | 
+<-----Query Account Byid------>
+Url:http://54.251.78.181:8888/escrow/api//accounts/1602981870555029506
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:208 2022-12-14 19:00:28.187078 | 
+<-----Query Account Byid Response----->
+{"address":"0x3294e1cf5f0a0a835ecb424fe09437879a18bda6","createdTime":"2022-12-14T11:00:34.559Z","finalized":false,"id":"1602981870555029506","name":"安全账户GOERLI2-2-1671015628","networkCode":"GOERLI","publicKeys":[{"source":"owner","type":"secp256k1","value":"0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"},{"source":"custodial","type":"secp256k1","value":"02db02bff23cce7818e5f3235c969561770c6a9a5bbf314abe9b85ec321db09f0c"}],"status":"inactive","threshold":2,"type":"safe","updatedTime":"2022-12-14T11:00:34.559Z"}

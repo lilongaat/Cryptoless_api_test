@@ -1,0 +1,172 @@
+2022-12-14 15:57:53.490 | ERROR    | test_success:test_custodial:86 - 
+
+GOERLI--GoerliETH--
+0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17--0.008372492608779054
+0x9934a0f6130e4e3243ac57f946800713198c198c1dbdb0385b9e4a0e62f45693
+
+
+2022-12-14 16:10:34.078 | ERROR    | Common.Httpcore:core_build:141 - 
+<-----Core Build Response Error----->{"code":2400000,"message":"INVALID_ARGUMENT: must have required property 'value'\nmust have required property 'data'\nmust match a schema in anyOf"}
+2022-12-14 16:13:25.476 | ERROR    | Common.Httpcore:core_build:141 - 
+<-----Core Build Response Error----->{"code":2100000,"message":"type not empty"}
+2022-12-14 16:21:32.138 | ERROR    | Common.Httpcore:core_build:141 - 
+<-----Core Build Response Error----->{"code":2400000,"message":"INVALID_ARGUMENT: must have required property 'value'\nmust have required property 'data'\nmust match a schema in anyOf"}
+2022-12-14 16:22:50.693 | ERROR    | Common.Httpcore:core_build:141 - 
+<-----Core Build Response Error----->{"code":2400000,"message":"INVALID_ARGUMENT: must have required property 'value'\nmust have required property 'data'\nmust match a schema in anyOf"}
+2022-12-14 16:24:51.223 | ERROR    | Common.Http:create_safe_account:169 - 
+<-----Create account Response Error----->
+{"code":2300000,"message":"Connect to 172.31.19.149:8080 [/172.31.19.149] failed: Connection refused \u0028Connection refused\u0029 executing POST http://core-center/core/api/accounts"}
+
+
+2022-12-14 16:27:51.970 | ERROR    | test_success:test_custodial:90 - 
+
+GOERLI--GoerliETH--
+0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17--0.008372492608779054
+0xc8460070989eb189ee6505239007baabd68906a0f2d67f7115deaeb510f6019e
+
+
+2022-12-14 16:32:11.870 | ERROR    | Test_c_t:test_safe:49 - 
+safe账户
+0x94d6e964a6f722d8e7427ecd417c8ec7e174a876
+
+
+2022-12-14 17:37:20.885 | ERROR    | test_success:test_custodial:90 - 
+
+GOERLI--USDCC--
+0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17--0.999877
+0xfba6ebfdcc543c0254b8487dda8524e8d7be39a9be381a3416f356b88a591a7f
+
+
+2022-12-14 17:39:40.286 | ERROR    | test_success:test_custodial:90 - 
+
+GOERLI--GoerliETH--
+0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17--0.008372492608779054
+0x8a839a6e107d3372e54ecb7ef3908aca2779ca9fe88d9dab6df519b8162a0c92
+
+
+2022-12-14 17:49:43.224 | ERROR    | test_success:test_custodial:90 - 
+
+GOERLI--GoerliETH--
+0x94D6E964a6F722d8e7427EcD417c8Ec7E174a876--0.002
+0x750a9c758f6daf715eaee21efc8bd1318fbef2d802c0ac93cf72f32e88cf656c
+
+
+2022-12-14 17:55:24.971 | ERROR    | Test_c_t:test_safe:49 - 
+safe账户
+0x85adf04b3be528bcd830b1569211924361571223
+
+
+2022-12-14 18:13:10.163 | ERROR    | Test_c_t:test_safe:49 - 
+safe账户
+0xfd2e9626b8988182ecef17745cb0ac5f01592a75
+
+
+2022-12-14 18:13:43.740 | ERROR    | Test_c_t:test_safe:49 - 
+safe账户
+0xd01ccdbd669dc9bd197ebaf2b656c8e7d7e8893b
+
+
+2022-12-14 18:16:14.683 | ERROR    | test_success:test_custodial:90 - 
+
+GOERLI--GoerliETH--
+0xfd2e9626b8988182ecef17745cb0ac5f01592a75--0.002
+0x5be1df908f3899819caa79e01ecbe8ec66518c6191eb557616b58750da149271
+
+
+2022-12-14 18:19:31.593 | ERROR    | test_success:test_custodial:90 - 
+
+GOERLI--GoerliETH--
+0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17--0.008372492608779054
+0x241b5cda50b36e8d1c48d0f355bfe1b283a96ea075453cfa9a16f7e61f40dc2a
+
+
+2022-12-14 18:21:47.202 | ERROR    | test_success:test_custodial:90 - 
+
+GOERLI--USDCC--GOERLI safe账户转账 erc20coin
+0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17--0.999877
+0xfd8845b763678b27c9d9c1f99a1dc01730cbebb0f193295f45e08c21828b9d17
+
+
+2022-12-14 18:27:19.445 | ERROR    | test_success:test_custodial:90 - 
+
+GOERLI--GoerliETH--GOERLI safe账户转账 nativecoin
+0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17--0.008372492608779054
+0x77c48f617d9c9521ab7b12b357b867f1e65cad57d4cfcb9c13ccbe625e4c98be
+
+
+2022-12-14 18:32:36.830 | ERROR    | Common.Http:create_safe_account:169 - 
+<-----Create account Response Error----->
+{"code":2200000,"message":"network not found"}
+
+
+2022-12-14 19:16:47.677 | ERROR    | test_success:test_custodial:86 - 
+
+GOERLI--GoerliETH--GOERLI share账户转账 nativecoin
+0x24ca55d569ca99ae648949147ccb3e0024ec1098--0.05
+0x7cfb3d620b8e388eed843b63ac74391a621913c9000fa8c73c602ff39cae0d80
+
+
+2022-12-14 19:20:49.784 | ERROR    | test_success:test_custodial:86 - 
+
+GOERLI--USDCC--GOERLI share账户转账 erc20coin
+0x24ca55d569ca99ae648949147ccb3e0024ec1098--1000
+0x3c21bf8be902cca126f6866f859b0660e0f4efb708f78384f0eea5695e1e1d5d
+
+
+2022-12-14 19:30:51.196 | ERROR    | test_sign_success:test_custodial:105 - 
+
+GOERLI--GoerliETH--GOERLI share账户转账 nativecoin
+0x24ca55d569ca99ae648949147ccb3e0024ec1098--0.04988
+0xb826eea3b5bdaa6cc7e1d0d38d50b1ce10448904bbac3e1d684b4a523d5c7717
+
+
+2022-12-14 19:34:29.418 | ERROR    | test_success:test_custodial:86 - 
+
+GOERLI--GoerliETH--GOERLI share账户转账 nativecoin
+0x24ca55d569ca99ae648949147ccb3e0024ec1098--0.04976
+0xbe1824a42defa0ad7d0f0ce66670c4124db8e5f4c75ec384750bd5e32159fe91
+
+
+2022-12-14 19:36:05.295 | ERROR    | test_success:test_custodial:86 - 
+
+GOERLI--USDCC--GOERLI share账户转账 erc20coin
+0x24ca55d569ca99ae648949147ccb3e0024ec1098--999.999877
+0xc64d0a157df0adfc2a253ddc3ee0b9c978ad18c9bd3a0f42db82450810cae46c
+
+
+2022-12-14 19:50:43.682 | ERROR    | test_create_success:test_create_account_safe:57 - 
+
+BTC创建2-2安全账户 全custodial
+tb1qxgjm3md0s9cw7dhm5ns7faa7lxv0hk0ddmrdmugkpn4m75jj4haqgvty54
+2022-12-14 19:50:50.638 | ERROR    | test_create_success:test_create_account_safe:57 - 
+
+BTC创建2-2安全账户 custodial+owner
+tb1qzlqyqxhqgjmln6qmtv7d6sn64ezjrfhhvn0xcx2q6xx333hts89qu72tzz
+2022-12-14 19:50:57.572 | ERROR    | test_create_success:test_create_account_safe:57 - 
+
+BTC创建2-2安全账户 custodial+owner
+tb1qansqswhtndzst56yslllk84lq5x7slhx3zjxhnaq4r8u565w0ykq2khscf
+2022-12-14 19:52:51.582 | ERROR    | test_create_success:test_create_account_safe:62 - 
+
+IRIS创建2-2安全账户 全custodial
+iaa1zaswvkjcf36953ylc4emnhw5jtfhaccdpa9y27
+2022-12-14 19:52:58.572 | ERROR    | test_create_success:test_create_account_safe:62 - 
+
+IRIS创建2-2安全账户 custodial+owner
+iaa1pfrzyzluq5p2x92a8zex4lqp488az8p86mjnww
+2022-12-14 19:53:05.521 | ERROR    | test_create_success:test_create_account_safe:62 - 
+
+IRIS创建2-3安全账户
+iaa12r6hmasjhfutuvshpp5d4709uvlku2fctcheu4
+2022-12-14 19:54:44.834 | ERROR    | test_create_success:test_create_account_safe:67 - 
+
+ATOM创建2-2安全账户 全custodial
+cosmos1kax6jnjllz2hctun042tdj62gjztjvxwpxwwhp
+2022-12-14 19:54:51.704 | ERROR    | test_create_success:test_create_account_safe:67 - 
+
+ATOM创建2-2安全账户 custodial+owner
+cosmos1qfpjjja75uc478ptxul8f3287xssaj3u3gu7qt
+2022-12-14 19:54:58.528 | ERROR    | test_create_success:test_create_account_safe:67 - 
+
+ATOM创建2-3安全账户
+cosmos1pkclem9eaq306s80y35g7yxfw6ardxcnzn46tp

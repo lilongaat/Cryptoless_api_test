@@ -1,0 +1,9 @@
+[32mINFO    [0m Common.Http:Http.py:425 2022-12-29 18:56:06.243475 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=BTC&address=tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0&symbol=BTC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[1m[31mERROR   [0m Common.Http:Http.py:431 2022-12-29 18:56:06.243475 | 
+<-----Query Holders Response Error----->
+{"code":2300000,"message":"Command still hasn't been written into connection! Try to increase nettyThreads setting. Payload size in bytes: 0. Node source: NodeSource [slot=0, addr=null, redisClient=null, redirect=null, entry=null], connection: RedisConnection@1901257702 [redisClient=[addr=redis://172.31.23.214:6379], channel=[id: 0xd9d01ddc, L:/172.31.24.58:60746 - R:172.31.23.214/172.31.23.214:6379], currentCommand=CommandData [promise=RedissonPromise [promise=ImmediateEventExecutor$ImmediatePromise@4b9e61b0\u0028failure: org.redisson.client.RedisTimeoutException: Command execution timeout for command: \u0028PING\u0029, params: [], Redis client: [addr=redis://172.31.23.214:6379]\u0029], command=\u0028PING\u0029, params=[], codec=org.redisson.client.codec.StringCodec]], command: \u0028LRANGE\u0029, params: [{cryptoless:core:ua:user}:iMk5LoP3F+D8PpdNDxBf9g, 0, -1] after 3 retry attempts"}

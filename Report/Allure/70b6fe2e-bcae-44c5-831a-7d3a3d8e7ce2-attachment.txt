@@ -1,0 +1,34 @@
+[32mINFO    [0m Common.Http:Http.py:425 2022-12-17 17:05:29.683354 | 
+<-----Query Holders----->
+Url:http://54.251.78.181:8888/escrow/api//proxy/core/api/assets/holders/?networkCode=GOERLI&address=0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17&symbol=GoerliETH
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:428 2022-12-17 17:05:29.683354 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0x9d055026eb8d83ef561d5d8084f2dd02e7ad2c17","id":"1602265931102535681","networkCode":"GOERLI","quantity":"0.007531354499039036","symbol":"GoerliETH","updatedTime":"2022-12-17T07:48:00.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:265 2022-12-17 17:05:29.683354 | 
+<-----Instructions----->
+Url:http://54.251.78.181:8888/escrow/api/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "GOERLI", "type": "transfer", "body": {"from": "0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17", "to": "0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2", "symbol": "GoerliETH", "amount": "0.00012"}, "transactionParams": {"memo": "jelPd9TWaH"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:268 2022-12-17 17:05:29.683354 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-17T09:05:33.000Z","description":"","estimatedFee":"-1","fee":"-1","hash":"","id":"1604040081143996418","networkCode":"GOERLI","requiredSignings":[{"hash":"994b538c7b4f36d185d65700201d791de83c0817529206ad871a05457bb5ec25","publicKeys":["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],"threshold":1}],"serialized":"6a761202000000000000000000000000a7a9e710f9a3b4184d4f8b7d379cec262f2382c200000000000000000000000000000000000000000000000000006d23ad5f80000000000000000000000000000000000000000000000000000000000000000140000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000016000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","status":1,"statusDesc":"SIGNING","updatedTime":"2022-12-17T09:05:35.000Z"}]},"body":{"symbol":"GoerliETH","amount":"0.00012","from":"0x9d055026eb8d83ef561d5d8084f2dd02e7ad2c17","to":"0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2"},"createdTime":"2022-12-17T09:05:32.000Z","id":"1604040085220835330","networkCode":"GOERLI","status":-2,"transactionParams":{"nonce":178},"type":"TRANSFER","updatedTime":"2022-12-17T09:05:32.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:344 2022-12-17 17:05:29.683354 | 
+<-----Sign----->
+Url:http://54.251.78.181:8888/escrow/api/transactions/signatures
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"id": "1604040081143996418", "signatures": [{"hash": "994b538c7b4f36d185d65700201d791de83c0817529206ad871a05457bb5ec25", "publicKey": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "signature": "79b8b3a1a233177bd93c59b8e286ea07b98cb6300000075697a6e0a57a759e0b6f5206163c0169ea51e34b2ee21a857c59afc1216f50df683289b977963e9a1500"}]}
+
+
+[32mINFO    [0m Common.Http:Http.py:351 2022-12-17 17:05:29.683354 | 
+<-----Sign Response Error----->
+400
+{"code":2400000,"message":"INTERNAL: Error: [number-to-bn] while converting number \"\\\"\\u00012\" to BN.js instance, error: invalid number value. Value must be an integer, hex string, BN or BigNumber instance. Note, decimals are not supported. Given value: \"\"\u00012\""}

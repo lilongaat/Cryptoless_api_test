@@ -1,0 +1,29 @@
+[32mINFO    [0m Common.Http:Http.py:368 2022-12-02 17:07:55.29685 | 
+<-----Holders----->
+Url:https://api.cryptoless.net/cryptocurrencies/holders?address=iaa1yvgc6tjuetv6hzchnvnqg4r09ltzk8ld6m0vcu&networkCode=IRIS&symbol=IRIS
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4MzAxOTk1NTUzMDg5NTM2MVxuSXNzdWVkIEF0OiBUaHUsIDIwIE9jdCAyMDIyIDA4OjU5OjAzIEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTdW4sIDE3IE9jdCAyMDMyIDA4OjU5OjAzIEdNVCIsInNpZ25hdHVyZSI6IjB4MDA4NTA0NmM1YmYwYWFkZjkwMjIyMWFhNGU0OTFjODllYTU5ZTAxZGQ2ODIwNTdkMDU0Y2U2MzcyNTdkYTE2ZTIyNTJlMzYxYWJmNjE4ZmEwOWJmODVmYjEwM2RjMmZhYzg4MzFkODNmMDcwNGZlMjdhZmUzYTdjYWY0NGE2YjYxYyJ9"}
+[32mINFO    [0m Common.Http:Http.py:371 2022-12-02 17:07:55.29685 | 
+<-----Query Holders Response----->
+[{"address":"iaa1yvgc6tjuetv6hzchnvnqg4r09ltzk8ld6m0vcu","createdTime":"2022-10-21T06:33:09.000Z","id":"1583345627046563842","networkCode":"IRIS","quantity":"0.641489","symbol":"IRIS","updatedTime":"2022-11-23T09:17:01.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:472 2022-12-02 17:07:55.29685 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTgzMDE5OTU1NTMwODk1MzYxIiwiZXhwIjoxNjcwNTc2ODQ5LCJpYXQiOjE2Njk5NzIwNDksInVzZXJJZCI6MTU4MzAxOTk1NTUzMDg5NTM2MX0.UkwpyPcqZKMfqWUfkoO8S_TS_42AJuS13GS2R398LaI"}
+
+Body:{"body": {"from": "iaa1yvgc6tjuetv6hzchnvnqg4r09ltzk8ld6m0vcu", "to": "iaa18hxtn9lx9swxf4j7ytdmn8yxsvyknh86kdgpvc", "symbol": "IRIS", "amount": "0.0004"}, "networkCode": "IRIS", "type": "transfer", "definiteSignerPublicKeys": [], "transactionParams": {"memo": "w0RK82eFSu"}}
+[32mINFO    [0m Common.Http:Http.py:475 2022-12-02 17:07:55.29685 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-02T09:07:57.000Z","description":"Custom Excution","estimatedFee":"13536","fee":"0","hash":"96D62AD915445ADBEF3F874E00F23319EFFBB4603408F41A5957AF0119B7DC2F","id":"1598604871043776513","networkCode":"IRIS","serialized":"0a95010a86010a1c2f636f736d6f732e62616e6b2e763162657461312e4d736753656e6412660a2a696161317976676336746a7565747636687a63686e766e7167347230396c747a6b386c64366d30766375122a69616131386878746e396c783973777866346a377974646d6e3879787376796b6e6838366b64677076631a0c0a0575697269731203343030120a7730524b38326546537512680a500a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102711281db461296bb8f4387daeb325e63baa269d6b51819283ad785fafa6e882d12040a020801181012140a0e0a0575697269731205313335333610df90041a40b3dda903f7240d34be8273e0e9e9f74e13684f0b364473c7418c654391054cb433cc5dc4eaa1a7674ea1dceb89528235bc66a50d2d71100b7a67169c5c6a78ff","status":"SIGNED","updatedTime":"2022-12-02T09:07:58.000Z"}]},"body":{"symbol":"IRIS","amount":"0.0004","from":"iaa1yvgc6tjuetv6hzchnvnqg4r09ltzk8ld6m0vcu","to":"iaa18hxtn9lx9swxf4j7ytdmn8yxsvyknh86kdgpvc"},"createdTime":"2022-12-02T09:07:57.000Z","id":"1598604872306335746","networkCode":"IRIS","status":-2,"transactionParams":{"memo":"w0RK82eFSu"},"type":"TRANSFER","updatedTime":"2022-12-02T09:07:58.000Z"}
+[32mINFO    [0m Common.Http:Http.py:660 2022-12-02 17:07:55.29685 | 
+<-----Send----->
+Url:https://api.cryptoless.net/vault/transactions/1598604871043776513
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTgzMDE5OTU1NTMwODk1MzYxIiwiZXhwIjoxNjcwNTc2ODQ5LCJpYXQiOjE2Njk5NzIwNDksInVzZXJJZCI6MTU4MzAxOTk1NTUzMDg5NTM2MX0.UkwpyPcqZKMfqWUfkoO8S_TS_42AJuS13GS2R398LaI"}
+
+
+[32mINFO    [0m Common.Http:Http.py:667 2022-12-02 17:07:55.29685 | 
+<-----Send Response Error----->
+400
+{"code":2400000,"message":"INTERNAL: Broadcasting transaction failed with code 13 \u0028codespace: sdk\u0029. Log: insufficient fees; got: 13536uiris required: 1iris: insufficient fee"}

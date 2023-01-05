@@ -1,0 +1,7 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:60 2022-12-22 11:25:11.50192 | 
+<-----Core Holders List----->
+Url:https://api.dhandho.xyz/assets/holders?networkCode=IRIS&symbol=IRIS&address=iaa13wwxj3mqjn77x524lhzf4s94dqh4rphe8d5sq8
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+[1m[31mERROR   [0m Common.Httpcore:Httpcore.py:66 2022-12-22 11:25:11.50192 | 
+<-----Core Holders Response Error----->{"timestamp":"2022-12-22T03:25:13.008+00:00","path":"/core/api/assets//holders","status":503,"error":"Service Unavailable","message":"","requestId":"c45f743d-5617"}

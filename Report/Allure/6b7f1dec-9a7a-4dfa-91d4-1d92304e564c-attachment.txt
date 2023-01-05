@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:265 2022-12-29 20:00:36.387320 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "GOERLI", "type": "transfer", "body": {"from": "0xe525E7cd17f6Dc950492755A089E452fd5d9d44f", "to": "0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2", "symbol": "GoerliETH", "amount": "0.000121"}, "transactionParams": {"memo": "5yr1DdYPGh"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:271 2022-12-29 20:00:36.387320 | 
+<-----Instructions Response Error----->
+400
+{"code":2300000,"message":"Redis server response timeout \u00283000 ms\u0029 occured after 3 retry attempts. Increase nettyThreads and/or timeout settings. Try to define pingConnectionInterval setting. Command: \u0028GET\u0029, params: [cryptoless:escrow:user:token:2f30c53ed4d1eb13959d171fbc96cb5d], channel: [id: 0x6a5f392f, L:/172.31.19.149:33388 - R:172.31.23.214/172.31.23.214:6379]"}

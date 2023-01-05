@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:132 2022-12-06 15:20:29.566574 | 
+<-----Core Build------>
+Url:http://54.251.78.181:8888/core/api/transactions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+
+body:{"networkCode": "IRIS", "payload": {"from": "iaa1ed68xf6453t7u4ttsmphdrwqflx2l90e6ymuaq", "to": "iaa1ed68xf6453t7u4ttsmphdrwqflx2l90e6ymuaq", "pubKey": "0260fbc9e026fe789a5a3c26289577719900c6046dc1d9ac1471b8eb08d15d0de4", "amount": {"denom": "uiris", "amount": "40"}, "params": {"fee": {"gasPrice": "0.2uiris"}}, "memo": "mnwVYt5UjZ"}, "type": "TRANSFER_TRANSACTION"}
+
+
+[1m[31mERROR   [0m Common.Httpcore:Httpcore.py:138 2022-12-06 15:20:29.566574 | 
+<-----Core Build Response Error----->{"code":2400000,"message":"INVALID_ARGUMENT: cannot query account info"}

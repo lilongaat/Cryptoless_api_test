@@ -1,0 +1,17 @@
+[32mINFO    [0m Common.Http:Http.py:283 2022-12-13 18:13:29.554504 | 
+<-----Transactions----->
+Url:http://54.251.78.181:8888/escrow/api//transactions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "GOERLI", "payload": {"from": "0x24ca55d569ca99ae648949147ccb3e0024ec1098", "to": "0x24ca55d569ca99ae648949147ccb3e0024ec1098", "value": "0x64"}, "type": "TRANSACTION"}
+
+
+[32mINFO    [0m Common.Http:Http.py:286 2022-12-13 18:13:29.554504 | 
+<-----Transactions Response----->
+{"balanceChanges":[],"blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-13T10:13:33.849Z","estimatedFee":"53694331251644","hash":"","id":"1602607645436657665","networkCode":"GOERLI","requiredSignings":[{"hash":"a88fe9b42251ee584cf0c0b5953e01c22488cd877ed5160e23b5cec9b958d6f5","publicKeys":["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113","03c420167aaf4fc7106646b2fe485519e5569ceb1584ae31d62537e349a4e4b5a9"],"threshold":2}],"serialized":"02ea0501840271265684751b86bc826ac19424ca55d569ca99ae648949147ccb3e0024ec10986480c0808080","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-13T10:13:33.849Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:344 2022-12-13 18:13:29.554504 | 
+<-----Sign----->
+Url:http://54.251.78.181:8888/escrow/api/transactions/signatures
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"id": "1602607645436657665", "signatures": [{"hash": "a88fe9b42251ee584cf0c0b5953e01c22488cd877ed5160e23b5cec9b958d6f5", "publicKey": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "signature": "0de95dbb6901f8d5ec78b1cf752721210e1c44e0abd8140f6597d88351ef110f50a823b5b662a13b2951af1b269185be39560930f016be1259e66da3140b99ad00"}]}

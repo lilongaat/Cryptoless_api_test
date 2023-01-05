@@ -1,0 +1,12 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:292 2023-01-03 18:34:22.202976 | 
+<-----balance----->
+Url:https://clover.webapi.subscan.io/api/scan/account/tokens
+
+Headers:{"authority": "clover.webapi.subscan.io", "accept": "application/json, text/plain, */*", "accept-language": "zh-CN", "baggage": "", "content-type": "application/json", "origin": "https://clover.subscan.io", "referer": "https://clover.subscan.io/", "sec-ch-ua": "\"Chromium\";v=\"104\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"104\"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": "\"macOS\"", "sec-fetch-dest": "empty", "sec-fetch-mode": "cors", "sec-fetch-site": "same-site", "sentry-trace": "ea3a8691962949979b1cf67d39347ede-99c15b8b0f09a827-0", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.101 Safari/537.36"}
+
+payload:"{\"address\": \"5E3WH2aEqMFQPe7yAG9AAVxYbcitmgGEya9ASAKFJsuPFo27\"}"
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:294 2023-01-03 18:34:22.202976 | 
+<-----balance response----->
+
+Body:{"code": 0, "message": "Success", "generated_at": 1672742062, "data": {"native": [{"symbol": "CLV", "decimals": 18, "balance": "14155246774956291787", "lock": "4290888888000000000", "reserved": "0", "bonded": "2990888888000000000", "unbonding": "1300000000000000000", "democracy_lock": "0", "election_lock": "0"}]}}
+[35mDEBUG   [0m test_success:test_success.py:57 2023-01-03 18:34:22.202976 | 9.864357886956291787

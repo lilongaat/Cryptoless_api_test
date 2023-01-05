@@ -1,0 +1,12 @@
+2022-12-07 14:21:37.694 | ERROR    | Common.Httpcore:core_sign:161 - 
+<-----Core Sign Response Error----->{"code":2400000,"message":"INTERNAL: Returned error: execution reverted"}
+2022-12-07 14:23:47.682 | ERROR    | Common.Httpcore:core_sign:161 - 
+<-----Core Sign Response Error----->{"code":2400000,"message":"INTERNAL: Returned error: execution reverted"}
+2022-12-07 15:50:11.702 | ERROR    | Common.Httpcore:core_instructions:157 - 
+<-----Core Instructions Response Error----->{"code":2300000,"message":"amount entered incorrectly"}
+2022-12-07 16:17:04.834 | ERROR    | Common.Httpcore:core_instructions:157 - 
+<-----Core Instructions Response Error----->{"code":1100000,"message":"Bad Request"}
+2022-12-07 16:34:51.934 | ERROR    | Common.Httpcore:core_instructions:157 - 
+<-----Core Instructions Response Error----->{"code":2400000,"message":"INVALID_ARGUMENT: must have required property 'participants'"}
+2022-12-07 19:04:38.703 | ERROR    | Common.Httpcore:core_send:199 - 
+<-----Core Send Response Error----->{"code":2300000,"message":"transaction status change cannot be send"}

@@ -1,0 +1,36 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:224 2022-12-02 10:33:53.131144 | 
+<-----Query UTXO----->
+Url:https://api.bitcore.io/api/BTC/testnet/address/tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0?unspent=true
+
+Headers:{"Content-Type": "application/json"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:227 2022-12-02 10:33:53.131144 | 
+<-----Query UTXO Response----->
+[
+{"_id":"6385d239d3bfc9e8e120b729","chain":"BTC","network":"testnet","coinbase":false,"mintIndex":1,"spentTxid":"","mintTxid":"96f20d3215de90d2a4722c39fe7eb9599958fc0b19839ee33254f9e779beb0de","mintHeight":2408949,"spentHeight":-2,"address":"tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0","script":"0014be39cfa9382328360e9bc5304a43a2782818d8cf","value":898949,"confirmations":-1},
+{"_id":"6385ac0fd3bfc9e8e17f09de","chain":"BTC","network":"testnet","coinbase":false,"mintIndex":0,"spentTxid":"","mintTxid":"9aa6d0c2e5b677480d08b1f90c989f599ec16342cdee9e1fe48a698030a38eae","mintHeight":2408923,"spentHeight":-2,"address":"tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0","script":"0014be39cfa9382328360e9bc5304a43a2782818d8cf","value":100,"confirmations":-1}
+]
+[32mINFO    [0m Common.Httpcore:Httpcore.py:132 2022-12-02 10:33:53.131144 | 
+<-----Core Build------>
+Url:http://54.251.78.181:8888/core/api/transactions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+
+body:{"networkCode": "BTC", "payload": {"changer": "tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0", "recipients": [{"address": "tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0", "value": "100"}], "utxos": {"amount": 898949, "signers": ["02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6"], "txid": "96f20d3215de90d2a4722c39fe7eb9599958fc0b19839ee33254f9e779beb0de", "vout": 1}}, "type": "TRANSACTION"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:135 2022-12-02 10:33:53.131144 | 
+<-----Core Build Response---->
+{"balanceChanges":[],"blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-02T02:33:54.342Z","description":"Custom Excution","estimatedFee":"226","hash":"","id":"1598505707929468930","networkCode":"BTC","requiredSignings":[{"hash":"b2790b502709caf0541016fc53a79004c166e0aecaa77b0bcf8b7555652b5a4b","publicKeys":["02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6"],"threshold":1}],"serialized":"0100000001deb0be79e7f95432e39e83190bfc589959b97efe392c72a4d290de15320df2960100000000ffffffff026400000000000000160014be39cfa9382328360e9bc5304a43a2782818d8cf3fb60d0000000000160014be39cfa9382328360e9bc5304a43a2782818d8cf00000000","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-02T02:33:54.342Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:155 2022-12-02 10:33:53.131144 | 
+<-----Core Sign------>
+Url:http://54.251.78.181:8888/core/api/transactions/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+
+body:{"id": "1598505707929468930", "signatures": [{"hash": "b2790b502709caf0541016fc53a79004c166e0aecaa77b0bcf8b7555652b5a4b", "publicKey": "02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6", "signature": "1ed84b841782d6569f6a11bae97f89ee66d1d45fdfb029b964244bd036b842981324c2ccf43342794adc4390acc4e9ce5b26db6d579480a7e87e78685c5cffa801"}]}
+
+
+[31m[1mERROR   [0m Common.Httpcore:Httpcore.py:161 2022-12-02 10:33:53.131144 | 
+<-----Core Sign Response Error----->{"code":2400000,"message":"INVALID_ARGUMENT: Invalid signatures"}

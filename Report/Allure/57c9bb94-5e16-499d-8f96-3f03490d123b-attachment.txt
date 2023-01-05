@@ -1,0 +1,9 @@
+[32mINFO    [0m Common.Http:Http.py:425 2022-12-29 19:09:25.59721 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=GOERLI&address=0xe525E7cd17f6Dc950492755A089E452fd5d9d44f&symbol=USDCC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[1m[31mERROR   [0m Common.Http:Http.py:431 2022-12-29 19:09:25.59721 | 
+<-----Query Holders Response Error----->
+{"code":2300000,"message":"Redis server response timeout \u00283000 ms\u0029 occured after 3 retry attempts. Increase nettyThreads and/or timeout settings. Try to define pingConnectionInterval setting. Command: \u0028HGETALL\u0029, params: [cryptoless:core:account:id], channel: [id: 0xe92b68dc, L:/172.31.24.58:43876 - R:172.31.23.214/172.31.23.214:6379]"}

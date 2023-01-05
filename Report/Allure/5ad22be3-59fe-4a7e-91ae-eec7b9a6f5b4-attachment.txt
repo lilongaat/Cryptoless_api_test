@@ -1,0 +1,7 @@
+[32mINFO    [0m Common.Graphql:Graphql.py:37 2022-12-15 18:04:43.309488 | 
+<-----balance----->
+Url:http://13.212.89.244/:4005/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getAccountByAddress(address:\\\"0x4ff79526ea1d492a3db2aa210d7318ff13f2012c\\\",coinId:\\\"GOERLI\\\"){blockHash blockNumber address time amount coinId}}\"}"

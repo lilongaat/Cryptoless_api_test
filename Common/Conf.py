@@ -1,7 +1,7 @@
 import csv
 import datetime
 from decimal import Decimal
-from gevent import config
+from bitcoin import *
 from secp256k1 import PrivateKey
 import time
 import random
@@ -90,6 +90,13 @@ class Config():
         return signature
 
     @staticmethod
+    #  witnessScript
+    def witnessScript(publickeys: list,threshold: int=2):
+        witnessScript = mk_multisig_script(publickeys,threshold)
+        return witnessScript
+
+    @staticmethod
+    #  EVM gasfee计算
     def fee_evm(gas:str, gasPrice:str):
         gas_int = int(gas,16)
         gasPrice_int = int(gasPrice,16)
@@ -105,8 +112,19 @@ if __name__ == '__main__':
     # print(Config.reader_csv("/Users/lilong/Documents/Test_Api/Address/Top/BTC.csv",10))
     
 
-    privkey = 'b61190f8b2fcb4754ff8527f083bb3df68bf89285d7c5e428276f5f4572b7abe'
-    hash = '2f6dc4c91bebc0c2cdeb4dcb2d8782f3d90e4168b9f0f8b403523fec673ea4e5'
+    privkey1 = 'dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da'
+    privkey2 = '0fbde0fc6a050c10f98ea3fd2921d2b52780667eed2871a132b60c7aab3ff51d'
+    # privkey3 = '71b037b45f7d0d35685ff8b68fe0187bf8849c64e6571e0687bf548bc5f0b716'
+    # privkey_m = '9cbca176aff8c48ebd9a27c31455e34ebc86e25a17e22b3d65a716fc851ada38'
+    # hash = 'cdfb98a786398fe3b2a04cbd89524820a60781ebbd6912ab8b653d6466c38d24'
+    # print(Config.sign(privkey1, hash))
+    # print(Config.sign(privkey2, hash))
+    # print(Config.sign(privkey3, hash))
+    # print(Config.sign(privkey_m, hash))
+
+    privkey = '9cbca176aff8c48ebd9a27c31455e34ebc86e25a17e22b3d65a716fc851ada38'
+    hash = '307f98e99df420b142059cf9e6ae8ab8ade0f639d951e824e3340e4354138ad5'
     print(Config.sign(privkey, hash))
+
 
     # print(Config.fee_evm("0x5208","0x1dcd65000"))

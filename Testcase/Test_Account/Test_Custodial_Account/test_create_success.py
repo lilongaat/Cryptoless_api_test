@@ -17,15 +17,15 @@ class Test_create_custodial_account:
     if env_type == 0: #测试
         test_data = [
             ("BTC 创建+查询+删除托管账户","托管账户BTC"+str(Conf.Config.now_timestamp()),"BTC"),
-            # ("DOGE 创建+查询+删除托管账户","托管账户DOGE"+str(Conf.Config.now_timestamp()),"DOGE"),
-            # ("ETH 创建+查询+删除托管账户","托管账户ETH"+str(Conf.Config.now_timestamp()),"ETH"),
-            # ("GOERLI 创建+查询+删除托管账户","托管账户GOERLI"+str(Conf.Config.now_timestamp()),"GOERLI"),
-            # ("MATIC 创建+查询+删除托管账户","托管账户MATIC"+str(Conf.Config.now_timestamp()),"MATIC"),
-            # ("BSC 创建+查询+删除托管账户","托管账户BSC"+str(Conf.Config.now_timestamp()),"BSC"),
-            # ("IRIS 创建+查询+删除托管账户","托管账户IRIS"+str(Conf.Config.now_timestamp()),"IRIS"),
-            # ("ATOM 创建+查询+删除托管账户","托管账户ATOM"+str(Conf.Config.now_timestamp()),"ATOM"),
-            # ("CLV 创建+查询+删除托管账户","托管账户CLV"+str(Conf.Config.now_timestamp()),"CLV"),
-            # ("DOT 创建+查询+删除托管账户","托管账户DOT"+str(Conf.Config.now_timestamp()),"DOT")
+            ("DOGE 创建+查询+删除托管账户","托管账户DOGE"+str(Conf.Config.now_timestamp()),"DOGE"),
+            ("ETH 创建+查询+删除托管账户","托管账户ETH"+str(Conf.Config.now_timestamp()),"ETH"),
+            ("GOERLI 创建+查询+删除托管账户","托管账户GOERLI"+str(Conf.Config.now_timestamp()),"GOERLI"),
+            ("MATIC 创建+查询+删除托管账户","托管账户MATIC"+str(Conf.Config.now_timestamp()),"MATIC"),
+            ("BSC 创建+查询+删除托管账户","托管账户BSC"+str(Conf.Config.now_timestamp()),"BSC"),
+            ("IRIS 创建+查询+删除托管账户","托管账户IRIS"+str(Conf.Config.now_timestamp()),"IRIS"),
+            ("ATOM 创建+查询+删除托管账户","托管账户ATOM"+str(Conf.Config.now_timestamp()),"ATOM"),
+            ("CLV 创建+查询+删除托管账户","托管账户CLV"+str(Conf.Config.now_timestamp()),"CLV"),
+            ("DOT 创建+查询+删除托管账户","托管账户DOT"+str(Conf.Config.now_timestamp()),"DOT")
         ]
 
     if env_type == 1: #生产
@@ -54,13 +54,13 @@ class Test_create_custodial_account:
             address = custodial_account.json()["address"]
 
         with allure.step("查询账户列表"):
-            account_list = Http.HttpUtils.get_account_list(networkCode,address,"custodial")
+            account_list = Http.HttpUtils.accounts(networkCode,address)
             assert account_list.status_code == 200
-            assert account_list.json()[0]["id"] == id
-            assert account_list.json()[0]["address"] == address
+            assert account_list.json()["list"][0]["id"] == id
+            assert account_list.json()["list"][0]["address"] == address
 
         with allure.step("查询账户byid"):
-            account_detail = Http.HttpUtils.get_account_byid(id)
+            account_detail = Http.HttpUtils.account_byid(id)
             assert account_detail.status_code == 200
             assert account_detail.json()["id"] == id
             assert account_detail.json()["address"] == address
@@ -76,7 +76,7 @@ class Test_create_custodial_account:
             assert account_del.status_code == 200
 
         with allure.step("查询账户byid"):
-            account_detail = Http.HttpUtils.get_account_byid(id)
+            account_detail = Http.HttpUtils.account_byid(id)
             assert account_detail.status_code == 404
             assert account_detail.json()["code"] == 2200000
             assert account_detail.json()["message"] == "account not found"

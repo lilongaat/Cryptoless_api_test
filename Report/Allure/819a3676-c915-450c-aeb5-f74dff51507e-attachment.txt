@@ -1,0 +1,33 @@
+[32mINFO    [0m Common.Http:Http.py:425 2022-12-17 15:01:16.114228 | 
+<-----Query Holders----->
+Url:http://54.251.78.181:8888/escrow/api//proxy/core/api/assets/holders/?networkCode=CLV&address=5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te&symbol=CLV
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:428 2022-12-17 15:01:16.114228 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te","id":"1603223817513324545","networkCode":"CLV","quantity":"0.001","symbol":"CLV","updatedTime":"2022-12-15T03:01:59.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:265 2022-12-17 15:01:16.114228 | 
+<-----Instructions----->
+Url:http://54.251.78.181:8888/escrow/api/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "CLV", "type": "transfer", "body": {"from": "5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te", "to": "5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te", "symbol": "CLV", "amount": "0.000123"}, "transactionParams": {"memo": "9M0bHGqBIR"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:268 2022-12-17 15:01:16.114228 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-17T07:01:21.000Z","description":"","estimatedFee":"","fee":"-1","hash":"0xd85625e3acba523cc0f374ee28782b4c8538a7c82e9ab83c1ae1b48a8cd50837","id":"1604008815409459202","networkCode":"CLV","serialized":"45028400b3d6099d80aa52c2ad20e06cbf8575ef8b7ee59cd5e93f8f943d76a2755dbdae0227885636cba5216532e833f292f50df3819535f1bf7d14ab92ae11d49e59586c4c29cd7239d6f959fb778aa0e112d97f9005cb3a9b00f1842b4982dd2ec4041b00000000070000b3d6099d80aa52c2ad20e06cbf8575ef8b7ee59cd5e93f8f943d76a2755dbdae0b00b04e2bde6f","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-17T07:01:24.000Z"}]},"body":{"symbol":"CLV","amount":"0.000123","from":"5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te","to":"5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te"},"createdTime":"2022-12-17T07:01:21.000Z","id":"1604008833008746497","networkCode":"CLV","status":-2,"transactionParams":{"memo":"9M0bHGqBIR"},"type":"TRANSFER","updatedTime":"2022-12-17T07:01:21.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:364 2022-12-17 15:01:16.114228 | 
+<-----Send----->
+Url:http://54.251.78.181:8888/escrow/api//transactions/send/1604008815409459202
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:371 2022-12-17 15:01:16.114228 | 
+<-----Send Response Error----->
+400
+{"code":2300000,"message":"send transaction fail"}

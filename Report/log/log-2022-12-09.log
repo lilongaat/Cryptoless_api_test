@@ -1,0 +1,10 @@
+2022-12-09 18:24:05.846 | ERROR    | Common.Http:create_safe_account:170 - 
+<-----Create account Response Error----->
+{"code":2300000,"message":"Connect to 172.31.19.149:8080 [/172.31.19.149] failed: Connection refused \u0028Connection refused\u0029 executing POST http://core-center/core/api/accounts"}
+
+
+2022-12-09 18:25:17.610 | ERROR    | Common.Http:create_safe_account:170 - 
+<-----Create account Response Error----->
+{"code":2300000,"message":"com.netflix.client.ClientException: Load balancer does not have available server for client: core-center"}
+
+

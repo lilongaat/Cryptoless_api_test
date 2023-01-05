@@ -1,0 +1,34 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:232 2022-12-28 10:05:44.458111 | 
+<-----Core Instructions------>
+Url:https://api.dhandho.xyz/instructions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+body:{"networkCode": "CLV", "type": "transfer", "body": {"from": "5Hdmv7BeAe1XFJXso8oGMidGp186cb4uNTNMywp6fBY7UEsr", "to": "5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT", "symbol": "CLV", "amount": "0.00123"}, "transactionParams": {"memo": "3aFoRhzGjH"}}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:235 2022-12-28 10:05:44.458111 | 
+<-----Core Instructions Response---->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-28T02:05:50.000Z","description":"","estimatedFee":"1481250000002256","fee":"-1","hash":"","id":"1607920708600782849","networkCode":"CLV","requiredSignings":[{"hash":"f9340a5db40c53694ccd29b6e325e9f92b9d32de664d40b3e3f11ad8add4fa75","publicKeys":["0211580d646f8b3d460ab558da9b7dde4117f5f071ef39b38be258af269df32aab"],"threshold":1}],"serialized":"49028400f665ee2df4b1559cc0470b8a3a94e4a81ca4c34941247f8308b46f659b274418020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001007800070000f121b8e5460a7997fbc41b5f26ea3b3280fefebfbecab0bae9b4e70f09795ddb0f00e012b1ad5e04","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-28T02:05:50.000Z"}]},"body":{"amount":"0.00123","from":"5Hdmv7BeAe1XFJXso8oGMidGp186cb4uNTNMywp6fBY7UEsr","symbol":"CLV","to":"5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT"},"createdTime":"2022-12-28T02:05:50.000Z","id":"1607920730029436930","networkCode":"CLV","status":-2,"transactionParams":{"memo":"3aFoRhzGjH"},"type":"TRANSFER","updatedTime":"2022-12-28T02:05:50.000Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:255 2022-12-28 10:05:44.458111 | 
+<-----Core Sign------>
+Url:https://api.dhandho.xyz/transactions/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+body:{"id": "1607920708600782849", "signatures": [{"hash": "f9340a5db40c53694ccd29b6e325e9f92b9d32de664d40b3e3f11ad8add4fa75", "publicKey": "0211580d646f8b3d460ab558da9b7dde4117f5f071ef39b38be258af269df32aab", "signature": "f2eeefde97524aa043a4516879c8d9c6ff0b82cca6d4480b371ebd3cb2c2a90a20f452fff1650331234dfad0b8b0afe504a83af66b92287ed7c8c3265dd859a200"}]}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:258 2022-12-28 10:05:44.458111 | 
+<-----Core Sign Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-28T02:05:50.000Z","description":"","estimatedFee":"","fee":"-1","hash":"0xa9277a21e15d7d06432acb0fc19d5a7e25aaae050979cc20d88138f3d73a0dd8","id":"1607920708600782849","networkCode":"CLV","serialized":"49028400f665ee2df4b1559cc0470b8a3a94e4a81ca4c34941247f8308b46f659b27441802f2eeefde97524aa043a4516879c8d9c6ff0b82cca6d4480b371ebd3cb2c2a90a20f452fff1650331234dfad0b8b0afe504a83af66b92287ed7c8c3265dd859a200007800070000f121b8e5460a7997fbc41b5f26ea3b3280fefebfbecab0bae9b4e70f09795ddb0f00e012b1ad5e04","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-28T02:05:50.767Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:274 2022-12-28 10:05:44.458111 | 
+<-----Core Send------>
+Url:https://api.dhandho.xyz/transactions/send/1607920708600782849
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:277 2022-12-28 10:05:44.458111 | 
+<-----Core Send Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"2022-12-28T02:05:51.358Z","createdTime":"2022-12-28T02:05:50.000Z","description":"","estimatedFee":"","fee":"-1","hash":"0xa9277a21e15d7d06432acb0fc19d5a7e25aaae050979cc20d88138f3d73a0dd8","id":"1607920708600782849","networkCode":"CLV","serialized":"49028400f665ee2df4b1559cc0470b8a3a94e4a81ca4c34941247f8308b46f659b27441802f2eeefde97524aa043a4516879c8d9c6ff0b82cca6d4480b371ebd3cb2c2a90a20f452fff1650331234dfad0b8b0afe504a83af66b92287ed7c8c3265dd859a200007800070000f121b8e5460a7997fbc41b5f26ea3b3280fefebfbecab0bae9b4e70f09795ddb0f00e012b1ad5e04","status":3,"statusDesc":"PENDING","updatedTime":"2022-12-28T02:05:51.358Z"}

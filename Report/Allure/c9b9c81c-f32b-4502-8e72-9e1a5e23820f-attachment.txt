@@ -1,0 +1,46 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:60 2023-01-04 17:45:45.128826 | 
+<-----balance----->
+Url:https://dogechain.info/chain/Dogecoin/q/addressbalance/D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:62 2023-01-04 17:45:45.128826 | 
+<-----balance response----->
+
+Body:3.0
+[32mINFO    [0m Common.Http:Http.py:421 2023-01-04 17:45:45.128826 | 
+<-----Query Holders----->
+Url:http://api.orbital3.xyz/vault/proxy/assets/holders/?networkCode=DOGE&address=D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6&symbol=DOGE
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+
+
+[32mINFO    [0m Common.Http:Http.py:424 2023-01-04 17:45:45.128826 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","createdTime":"2023-01-03T06:24:00.000Z","id":"1610160027052675073","networkCode":"DOGE","quantity":"3","symbol":"DOGE","updatedTime":"2023-01-03T06:24:00.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_success:test_success.py:102 2023-01-04 17:45:45.128826 | 浏览器查询账户balance为:3.0
+[35mDEBUG   [0m test_success:test_success.py:103 2023-01-04 17:45:45.128826 | 查询账户holder为:3
+[32mINFO    [0m Common.Http:Http.py:261 2023-01-04 17:45:45.128826 | 
+<-----Instructions----->
+Url:http://api.orbital3.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+Body:{"networkCode": "DOGE", "type": "transfer", "body": {"from": "D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6", "to": "D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j", "symbol": "DOGE", "amount": "0.0000001"}, "transactionParams": {"memo": "W81mDj5ud3"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:264 2023-01-04 17:45:45.128826 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-01-04T09:45:48.000Z","description":"Send DOGE","estimatedFee":"261660","fee":"-1","hash":"27983184f72b9d91aad146039492d1bed48d698a62e517b02526fc1edea1bb06","id":"1610573195256139777","networkCode":"DOGE","serialized":"0100000001409a658383530d6985f513b47fc7d2ddf4faf80bf2f684fb299b266d32f708b2000000006a4730440220211bff75d276908b92cc7681076b5467cc413e221e6eade6c82e76077ff5ade1022065bfb4f7c6a2bcb131c1194fefd9c2fdd8d89f48ac74fb61d3d76af61d5210ae012103515fc3ca5b4429ead74c0c47a19534194dde9a1a2a1b7a6e96a52c465cc40ebbffffffff020a000000000000001976a9142d7f61cf518210cd20aefe35d69464f040cb814188acdaa4dd11000000001976a914347ac4d31ccb7ac8b58931594cd70bd691aad49a88ac00000000","status":2,"statusDesc":"SIGNED","updatedTime":"2023-01-04T09:45:48.000Z"}]},"body":{"symbol":"DOGE","amount":"0.0000001","from":"D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","to":"D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j"},"createdTime":"2023-01-04T09:45:47.000Z","id":"1610573197003231233","networkCode":"DOGE","status":-2,"transactionParams":{"memo":"W81mDj5ud3"},"type":"TRANSFER","updatedTime":"2023-01-04T09:45:47.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:360 2023-01-04 17:45:45.128826 | 
+<-----Send----->
+Url:http://api.orbital3.xyz/vault/transactions/send/1610573195256139777
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+
+
+[32mINFO    [0m Common.Http:Http.py:367 2023-01-04 17:45:45.128826 | 
+<-----Send Response Error----->
+400
+{"code":2300000,"message":"send transaction fail"}

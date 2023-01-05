@@ -1,0 +1,32 @@
+[32mINFO    [0m Common.Http:Http.py:425 2022-12-17 15:40:31.312240 | 
+<-----Query Holders----->
+Url:http://54.251.78.181:8888/escrow/api//proxy/core/api/assets/holders/?networkCode=GOERLI&address=0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca&symbol=USDCC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:428 2022-12-17 15:40:31.312240 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","id":"1602237056616202241","networkCode":"GOERLI","quantity":"9.999631","symbol":"USDCC","updatedTime":"2022-12-14T06:38:43.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:265 2022-12-17 15:40:31.312240 | 
+<-----Instructions----->
+Url:http://54.251.78.181:8888/escrow/api/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "GOERLI", "type": "transfer", "body": {"from": "0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca", "to": "0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2", "symbol": "USDCC", "amount": "0.000123"}, "transactionParams": {"memo": "g1H2ZYiQcl"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:268 2022-12-17 15:40:31.312240 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-17T07:40:34.000Z","description":"","estimatedFee":"979728566180","fee":"-1","hash":"0xfdce8695539702603fec69afac2a57346c421b6933f606439e8e23334cac11a1","id":"1604018693960069121","networkCode":"GOERLI","serialized":"02f8ae0516835b875284013310b482be2d941ec2ce6108240118ff2c66ec8afac28618d7e06680b844a9059cbb000000000000000000000000a7a9e710f9a3b4184d4f8b7d379cec262f2382c200000000000000000000000000000000000000000000000000006fde2b4eb000c080a0443b7596ceb1e486d8956af702bc1a6afdc1650df78e1b69f998c5772c445b57a005a01ac7eb08716c3bcc747906f2634558b4f609ae49fab780434514a95b4bc0","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-17T07:40:37.000Z"}]},"body":{"symbol":"USDCC","amount":"0.000123","from":"0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","to":"0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2"},"createdTime":"2022-12-17T07:40:34.000Z","id":"1604018700234735618","networkCode":"GOERLI","status":-2,"transactionParams":{"memo":"g1H2ZYiQcl"},"type":"TRANSFER","updatedTime":"2022-12-17T07:40:34.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:364 2022-12-17 15:40:31.312240 | 
+<-----Send----->
+Url:http://54.251.78.181:8888/escrow/api//transactions/send/1604018693960069121
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:368 2022-12-17 15:40:31.312240 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-12-17T07:40:40.241Z","createdTime":"2022-12-17T07:40:34.000Z","description":"","estimatedFee":"979728566180","fee":"-1","hash":"0xfdce8695539702603fec69afac2a57346c421b6933f606439e8e23334cac11a1","id":"1604018693960069121","networkCode":"GOERLI","serialized":"02f8ae0516835b875284013310b482be2d941ec2ce6108240118ff2c66ec8afac28618d7e06680b844a9059cbb000000000000000000000000a7a9e710f9a3b4184d4f8b7d379cec262f2382c200000000000000000000000000000000000000000000000000006fde2b4eb000c080a0443b7596ceb1e486d8956af702bc1a6afdc1650df78e1b69f998c5772c445b57a005a01ac7eb08716c3bcc747906f2634558b4f609ae49fab780434514a95b4bc0","status":3,"statusDesc":"PENDING","updatedTime":"2022-12-17T07:40:40.241Z"}

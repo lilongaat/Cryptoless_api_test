@@ -1,0 +1,46 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:224 2022-12-06 15:32:47.679553 | 
+<-----Query UTXO----->
+Url:https://api.bitcore.io/api/BTC/testnet/address/tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33?unspent=true
+
+Headers:{"Content-Type": "application/json"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:227 2022-12-06 15:32:47.679553 | 
+<-----Query UTXO Response----->
+[
+{"_id":"6385d239d3bfc9e8e120b72a","chain":"BTC","network":"testnet","coinbase":false,"mintIndex":0,"spentTxid":"","mintTxid":"96f20d3215de90d2a4722c39fe7eb9599958fc0b19839ee33254f9e779beb0de","mintHeight":2408949,"spentHeight":-2,"address":"tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33","script":"0020aacf2586a97491580532bfb86a62d71f7ff96a8ab3872a9d18635e35d105cf62","value":100000,"confirmations":-1}
+]
+[32mINFO    [0m Common.Httpcore:Httpcore.py:132 2022-12-06 15:32:47.679553 | 
+<-----Core Build------>
+Url:http://54.251.78.181:8888/core/api/transactions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+
+body:{"networkCode": "BTC", "payload": {"changer": "tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33", "recipients": [{"address": "tb1q0558s53xchyghw34tqm4x8t2n8swf666nvhffq", "value": "100"}], "utxos": [{"amount": 100000, "witnessScript": "52210231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f702102e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a652ae", "signers": ["02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6", "0231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f70"], "txid": "96f20d3215de90d2a4722c39fe7eb9599958fc0b19839ee33254f9e779beb0de", "vout": 0}]}, "type": "TRANSACTION"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:135 2022-12-06 15:32:47.679553 | 
+<-----Core Build Response---->
+{"balanceChanges":[],"blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-06T07:32:55.389Z","description":"Custom Excution","estimatedFee":"226","hash":"","id":"1600030504895369218","networkCode":"BTC","requiredSignings":[{"hash":"5d60d2a44022aa5da5ee6cb84ffa6a39cfa29e3fa98800df19293519beade0c4","publicKeys":["02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6","0231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f70"],"threshold":2}],"serialized":"0100000001deb0be79e7f95432e39e83190bfc589959b97efe392c72a4d290de15320df2960000000000ffffffff0264000000000000001600147d28785226c5c88bba355837531d6a99e0e4eb5a5a85010000000000220020aacf2586a97491580532bfb86a62d71f7ff96a8ab3872a9d18635e35d105cf6200000000","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-06T07:32:55.389Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:155 2022-12-06 15:32:47.679553 | 
+<-----Core Sign------>
+Url:http://54.251.78.181:8888/core/api/transactions/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+
+body:{"id": "1600030504895369218", "signatures": [{"hash": "5d60d2a44022aa5da5ee6cb84ffa6a39cfa29e3fa98800df19293519beade0c4", "publicKey": "02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6", "signature": "ec36ec2a61c2230508c5ca2dfcaf7d4e3249494edbe9768d51f8e32e4a63b96c5903108523cdb03d26878186bf67182eb45a875fc5d490320f7dfae067ea693701"}, {"hash": "5d60d2a44022aa5da5ee6cb84ffa6a39cfa29e3fa98800df19293519beade0c4", "publicKey": "0231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f70", "signature": "29fd0ad7d7eebeb3c0e27d486bc0147e15f76bda30336a95a751d930f8f1002d53e35514c52a2f6b63c52c76946e0a91ffdc26a40a6f86a00a0effb039aa83f300"}]}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:158 2022-12-06 15:32:47.679553 | 
+<-----Core Sign Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-06T07:32:55.000Z","description":"Custom Excution","estimatedFee":"226","fee":"-1","hash":"be143ee516b4845782e90c6663bc81163cdf22f57c7b070b9be8c07c726c1ccf","id":"1600030504895369218","networkCode":"BTC","serialized":"01000000000101deb0be79e7f95432e39e83190bfc589959b97efe392c72a4d290de15320df2960000000000ffffffff0264000000000000001600147d28785226c5c88bba355837531d6a99e0e4eb5a5a85010000000000220020aacf2586a97491580532bfb86a62d71f7ff96a8ab3872a9d18635e35d105cf620400473044022029fd0ad7d7eebeb3c0e27d486bc0147e15f76bda30336a95a751d930f8f1002d022053e35514c52a2f6b63c52c76946e0a91ffdc26a40a6f86a00a0effb039aa83f301483045022100ec36ec2a61c2230508c5ca2dfcaf7d4e3249494edbe9768d51f8e32e4a63b96c02205903108523cdb03d26878186bf67182eb45a875fc5d490320f7dfae067ea6937014752210231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f702102e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a652ae00000000","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-06T07:32:56.305Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:174 2022-12-06 15:32:47.679553 | 
+<-----Core Send------>
+Url:http://54.251.78.181:8888/core/api/transactions/send/1600030504895369218
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4NTEwMjc5MTQ2NjQ4NzgxMFxuSXNzdWVkIEF0OiBXZWQsIDI2IE9jdCAyMDIyIDAyOjU1OjI5IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTYXQsIDIzIE9jdCAyMDMyIDAyOjU1OjI5IEdNVCIsInNpZ25hdHVyZSI6IjB4OTE1NWMyOGM3NjVjZjk1YTBjNjdiZGNhYzExNzIwYTRkNDQ4NDc4YmU5ZDZhNjE3ZWQzNDUzZDU3MDgzZjNjZTA2N2Q5OGUwMGI0YTVhMmJmOTlkY2I5Y2VmNzg5Yjc4OWViNzI5OTk4YzgxYWQzOWFhMTUzZTcxM2Q4M2FhYWUxYiJ9"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:177 2022-12-06 15:32:47.679553 | 
+<-----Core Send Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"0","blockTime":"2022-12-06T07:32:56.681Z","createdTime":"2022-12-06T07:32:55.000Z","description":"Custom Excution","estimatedFee":"226","fee":"-1","hash":"be143ee516b4845782e90c6663bc81163cdf22f57c7b070b9be8c07c726c1ccf","id":"1600030504895369218","networkCode":"BTC","serialized":"01000000000101deb0be79e7f95432e39e83190bfc589959b97efe392c72a4d290de15320df2960000000000ffffffff0264000000000000001600147d28785226c5c88bba355837531d6a99e0e4eb5a5a85010000000000220020aacf2586a97491580532bfb86a62d71f7ff96a8ab3872a9d18635e35d105cf620400473044022029fd0ad7d7eebeb3c0e27d486bc0147e15f76bda30336a95a751d930f8f1002d022053e35514c52a2f6b63c52c76946e0a91ffdc26a40a6f86a00a0effb039aa83f301483045022100ec36ec2a61c2230508c5ca2dfcaf7d4e3249494edbe9768d51f8e32e4a63b96c02205903108523cdb03d26878186bf67182eb45a875fc5d490320f7dfae067ea6937014752210231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f702102e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a652ae00000000","status":3,"statusDesc":"PENDING","updatedTime":"2022-12-06T07:32:56.681Z"}

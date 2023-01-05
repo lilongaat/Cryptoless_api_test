@@ -1,0 +1,46 @@
+[32mINFO    [0m Common.Httpcore:Httpcore.py:340 2022-12-19 15:05:53.415931 | 
+<-----Query UTXO----->
+Url:https://api.bitcore.io/api/BTC/testnet/address/tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33?unspent=true
+
+Headers:{"Content-Type": "application/json"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:343 2022-12-19 15:05:53.415931 | 
+<-----Query UTXO Response----->
+[
+{"_id":"63a00d3bd3bfc9e8e1f66dfc","chain":"BTC","network":"testnet","coinbase":false,"mintIndex":1,"spentTxid":"","mintTxid":"6c10682b145dd37b7de64f5df921947eda5150ccec8024003d292c715d86f050","mintHeight":-1,"spentHeight":-2,"address":"tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33","script":"0020aacf2586a97491580532bfb86a62d71f7ff96a8ab3872a9d18635e35d105cf62","value":98128,"confirmations":-1},
+{"_id":"639a8963d3bfc9e8e17fe774","chain":"BTC","network":"testnet","coinbase":false,"mintIndex":1,"spentTxid":"6c10682b145dd37b7de64f5df921947eda5150ccec8024003d292c715d86f050","mintTxid":"7093a2184e4c6ffef0b705d32733a413383912063fd32f2463f1b1647d81502a","mintHeight":2411310,"spentHeight":-1,"address":"tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33","script":"0020aacf2586a97491580532bfb86a62d71f7ff96a8ab3872a9d18635e35d105cf62","value":98454,"confirmations":-1,"sequenceNumber":4294967295}
+]
+[32mINFO    [0m Common.Httpcore:Httpcore.py:172 2022-12-19 15:05:53.415931 | 
+<-----Core Build------>
+Url:https://api.dhandho.xyz/transactions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+body:{"networkCode": "BTC", "payload": {"changer": "tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33", "recipients": [{"address": "tb1qyczy479xgg8flr4amkrxp6s4an7huecg9mq2ay", "value": "100"}, {"address": "tb1q9ps855ksckycta6kqjecszvu39pg4nedkx540t", "value": "200"}, {"address": "tb1q0r3zhkjf408nf069dd9z7lal6zzyhva860pt3y", "value": "300"}], "utxos": [{"amount": 98128, "witnessScript": "52210231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f702102e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a652ae", "signers": ["02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6", "0231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f70"], "txid": "6c10682b145dd37b7de64f5df921947eda5150ccec8024003d292c715d86f050", "vout": 1}, {"amount": 98454, "witnessScript": "52210231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f702102e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a652ae", "signers": ["02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6", "0231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f70"], "txid": "7093a2184e4c6ffef0b705d32733a413383912063fd32f2463f1b1647d81502a", "vout": 1}]}, "type": "TRANSACTION"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:175 2022-12-19 15:05:53.415931 | 
+<-----Core Build Response---->
+{"balanceChanges":[],"blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-19T07:05:54.971Z","estimatedFee":"442","hash":"","id":"1604734755601043457","networkCode":"BTC","requiredSignings":[{"hash":"868053eb30df32aa0e9230888f13be41aeb8360e37f89c454e3897b08fcc2cd1","publicKeys":["02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6","0231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f70"],"threshold":2},{"hash":"b600b827582b2fd36fa837be0c737b9d7549c4518e10d55c7ec5c4c5e0c50ac9","publicKeys":["02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6","0231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f70"],"threshold":2}],"serialized":"010000000250f0865d712c293d002480eccc5051da7e9421f95d4fe67d7bd35d142b68106c0100000000ffffffff2a50817d64b1f163242fd33f0612393813a43327d305b7f0fe6f4c4e18a293700100000000ffffffff04640000000000000016001426044af8a6420e9f8ebddd8660ea15ecfd7e6708c80000000000000016001428607a52d0c58985f75604b388099c89428acf2d2c0100000000000016001478e22bda49abcf34bf456b4a2f7fbfd0844bb3a7d4fb020000000000220020aacf2586a97491580532bfb86a62d71f7ff96a8ab3872a9d18635e35d105cf6200000000","status":0,"statusDesc":"BUILDING","updatedTime":"2022-12-19T07:05:54.971Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:214 2022-12-19 15:05:53.415931 | 
+<-----Core Sign------>
+Url:https://api.dhandho.xyz/transactions/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+body:{"id": "1604734755601043457", "signatures": [{"hash": "868053eb30df32aa0e9230888f13be41aeb8360e37f89c454e3897b08fcc2cd1", "publicKey": "02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6", "signature": "e3220f49f009087a2acac87f417dc40819213867545557dd21eb7231f1b96d392965eca9506346d291251316d3ccfcc5ae12a62541928f4f5adb76c02288e7d500"}, {"hash": "868053eb30df32aa0e9230888f13be41aeb8360e37f89c454e3897b08fcc2cd1", "publicKey": "0231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f70", "signature": "7db8ac57ca2110efb79795ae902fd3e08b540f6dda90127382a36c4677d3c87e22f91d691203661cd12527df3f6ff6cf08341c91335021fdae237bedb0a9a66401"}, {"hash": "b600b827582b2fd36fa837be0c737b9d7549c4518e10d55c7ec5c4c5e0c50ac9", "publicKey": "02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6", "signature": "3fbec9ff8955d53677996c14bb912123c9c93f0c8388f80b326d00512e72aedc044f2c9b6e09a52f4b63fb4ea56bb8777796f83f081bfd94e9139cf792e7391d00"}, {"hash": "b600b827582b2fd36fa837be0c737b9d7549c4518e10d55c7ec5c4c5e0c50ac9", "publicKey": "0231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f70", "signature": "d11385010e88b46c08db4b5606a0ae9d4f29bf403c061f7b778e51d76cf8ec883217e74f2900c8e76a8d7b44b7f3efab49db94ac5423fe2c200d2a5466be6b7b01"}]}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:217 2022-12-19 15:05:53.415931 | 
+<-----Core Sign Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2022-12-19T07:05:55.000Z","description":"","estimatedFee":"442","fee":"-1","hash":"b702bd8a1c212e71424540f86487edb48f3291f121f88f0fdf086034165e30fd","id":"1604734755601043457","networkCode":"BTC","serialized":"0100000000010250f0865d712c293d002480eccc5051da7e9421f95d4fe67d7bd35d142b68106c0100000000ffffffff2a50817d64b1f163242fd33f0612393813a43327d305b7f0fe6f4c4e18a293700100000000ffffffff04640000000000000016001426044af8a6420e9f8ebddd8660ea15ecfd7e6708c80000000000000016001428607a52d0c58985f75604b388099c89428acf2d2c0100000000000016001478e22bda49abcf34bf456b4a2f7fbfd0844bb3a7d4fb020000000000220020aacf2586a97491580532bfb86a62d71f7ff96a8ab3872a9d18635e35d105cf620400483045022100d11385010e88b46c08db4b5606a0ae9d4f29bf403c061f7b778e51d76cf8ec8802203217e74f2900c8e76a8d7b44b7f3efab49db94ac5423fe2c200d2a5466be6b7b0147304402203fbec9ff8955d53677996c14bb912123c9c93f0c8388f80b326d00512e72aedc0220044f2c9b6e09a52f4b63fb4ea56bb8777796f83f081bfd94e9139cf792e7391d014752210231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f702102e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a652ae040047304402207db8ac57ca2110efb79795ae902fd3e08b540f6dda90127382a36c4677d3c87e022022f91d691203661cd12527df3f6ff6cf08341c91335021fdae237bedb0a9a66401483045022100e3220f49f009087a2acac87f417dc40819213867545557dd21eb7231f1b96d3902202965eca9506346d291251316d3ccfcc5ae12a62541928f4f5adb76c02288e7d5014752210231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f702102e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a652ae00000000","status":2,"statusDesc":"SIGNED","updatedTime":"2022-12-19T07:05:55.383Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:233 2022-12-19 15:05:53.415931 | 
+<-----Core Send------>
+Url:https://api.dhandho.xyz/transactions/send/1604734755601043457
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
+
+
+[31m[1mERROR   [0m Common.Httpcore:Httpcore.py:239 2022-12-19 15:05:53.415931 | 
+<-----Core Send Response Error----->{"code":2400000,"message":"INTERNAL: 500 - {\"result\":null,\"error\":{\"code\":-26,\"message\":\"txn-mempool-conflict\"},\"id\":1671433555848}"}

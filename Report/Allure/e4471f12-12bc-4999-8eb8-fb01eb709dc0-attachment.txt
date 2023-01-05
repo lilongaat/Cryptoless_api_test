@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:283 2022-12-13 11:54:04.715073 | 
+<-----Transactions----->
+Url:http://54.251.78.181:8888/escrow/api//proxy/escrow/api/transactions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "BTC", "payload": {"from": "tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x", "to": "tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq", "value": "0.000008"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:289 2022-12-13 11:54:04.715073 | 
+<-----Transactions Response Error----->
+400
+{"code":1400000,"message":"cannot retry due to server authentication, in streaming mode"}

@@ -1,0 +1,35 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:181 2023-01-05 14:39:06.841989 | 
+<-----Balance ERC20----->
+Url:https://api.polygonscan.com/api?module=account&action=tokenbalance&contractaddress=0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174&address=0x66c1d34c273cc09df9072f49aeba4b09e017bc5c&tag=latest&apikey=85W6B7V5TPH7TDZA3JQCFT8UN8RKAEMA4Y
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:183 2023-01-05 14:39:06.841989 | 
+<-----Balance ERC20 response----->
+
+Body:{"status": "1", "message": "OK", "result": "100000"}
+[32mINFO    [0m Common.Http:Http.py:421 2023-01-05 14:39:06.841989 | 
+<-----Query Holders----->
+Url:http://api.orbital3.xyz/vault/proxy/assets/holders/?networkCode=MATIC&address=0x66c1d34c273cc09df9072f49aeba4b09e017bc5c&symbol=USDC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+
+
+[32mINFO    [0m Common.Http:Http.py:424 2023-01-05 14:39:06.841989 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","createdTime":"2023-01-05T06:31:00.000Z","id":"1610886563663990786","networkCode":"MATIC","quantity":"0.1","symbol":"USDC","updatedTime":"2023-01-05T06:31:00.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_success:test_success.py:77 2023-01-05 14:39:06.841989 | 浏览器查询账户balance为:0.1
+[35mDEBUG   [0m test_success:test_success.py:78 2023-01-05 14:39:06.841989 | 查询账户holder为:0.1
+[32mINFO    [0m Common.Http:Http.py:261 2023-01-05 14:39:06.841989 | 
+<-----Instructions----->
+Url:http://api.orbital3.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+Body:{"networkCode": "MATIC", "type": "transfer", "body": {"from": "0x66c1d34c273cc09df9072f49aeba4b09e017bc5c", "to": "0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591", "symbol": "USDC", "amount": "0.00000151"}, "transactionParams": {"memo": "R1YyA6ntpx"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:267 2023-01-05 14:39:06.841989 | 
+<-----Instructions Response Error----->
+400
+{"code":2100000,"message":"amount decimals long too"}
