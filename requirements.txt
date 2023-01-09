@@ -12,3 +12,7 @@ eth-rlp==0.2.1
 eth-typing==2.3.0
 eth-utils==1.10.0
 loguru==0.6.0
+coincurve~=15.0.1
+green~=3.3.0
+protobuf~=3.19.1
+pycryptodome>=3.14.1
