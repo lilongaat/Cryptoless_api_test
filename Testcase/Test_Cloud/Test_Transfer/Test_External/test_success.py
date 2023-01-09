@@ -24,7 +24,7 @@ class Test_transfers_success:
             # ("BTC extarnal账户转账","BTC","BTC","b61190f8b2fcb4754ff8527f083bb3df68bf89285d7c5e428276f5f4572b7abe","tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.000008"),
 
             # GOERLI 
-            # ("GOERLI extarnal账户转账 nativecoin","GOERLI","GoerliETH","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.000121"),
+            ("GOERLI extarnal账户转账 nativecoin","GOERLI","GoerliETH","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.000121"),
             # ("GOERLI extarnal账户转账 erc20coin","GOERLI","USDCC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.000123"),
 
             # MATIC 

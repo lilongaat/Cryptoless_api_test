@@ -24,7 +24,11 @@ class Test_transfers_success:
             # ("MATIC SWAP:USDC->MATIC","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x25f7f610a1dc5f674a5e2bb9c2846be076814cd7","USDC","MATIC","1","0.000011"),
         ]
     elif env_type == 1: #生产
-        test_data = []
+        test_data = [
+             # MATIC
+            # ("MATIC SWAP:MATIC->USDC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","MATIC","USDC","1","0.00012"),
+            ("MATIC SWAP:USDC->MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","USDC","MATIC","1","0.000011"),
+        ]
 
     @allure.story("Custodial Transfers Success!")
     @allure.title('{test_title}')

@@ -1,0 +1,85 @@
+[32mINFO    [0m Common.Http:Http.py:421 2023-01-06 13:52:32.327959 | 
+<-----Query Holders----->
+Url:http://api.orbital3.xyz/vault/proxy/assets/holders/?networkCode=IRIS&address=iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j&symbol=IRIS
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+
+
+[32mINFO    [0m Common.Http:Http.py:424 2023-01-06 13:52:32.327959 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j","createdTime":"2023-01-05T07:08:00.000Z","id":"1610895875486388225","networkCode":"IRIS","quantity":"0.279893","symbol":"IRIS","updatedTime":"2023-01-05T07:11:00.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_success:test_success.py:63 2023-01-06 13:52:32.327959 | 浏览器查询账户balance为:0.279893
+[35mDEBUG   [0m test_success:test_success.py:64 2023-01-06 13:52:32.327959 | 查询账户holder为:0.279893
+[32mINFO    [0m Common.Http:Http.py:498 2023-01-06 13:52:32.327959 | 
+<-----Query Staking----->
+Url:http://api.orbital3.xyz/vault/proxy/stakes/delegators?address=iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j&networkCode=IRIS
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+[32mINFO    [0m Common.Http:Http.py:501 2023-01-06 13:52:32.327959 | 
+<-----Query Staking Response----->
+[{"address":"iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j","coinSymbol":"IRIS","createdTime":"2023-01-05T07:06:45.000Z","id":"1610895560005668866","networkCode":"IRIS","pendings":"0","rewards":"0","staked":"0","updatedTime":"2023-01-05T07:06:45.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:261 2023-01-06 13:52:32.327959 | 
+<-----Instructions----->
+Url:http://api.orbital3.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+Body:{"networkCode": "IRIS", "type": "stake", "body": {"delegator": "iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j", "coinSymbol": "IRIS", "amount": "0.0001"}, "transactionParams": {"memo": "YA8o6R0vcB"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:264 2023-01-06 13:52:32.327959 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-01-06T05:52:37.000Z","description":"","estimatedFee":"54000","fee":"-1","hash":"","id":"1611239288968859650","networkCode":"IRIS","requiredSignings":[{"hash":"339ded11083f63cb7c540695a49433fa75f9c38423078e81ca946ea388d73bf8","publicKeys":["021055ec656e80c61346f406b092a02df24e0dcba1582fc9c73f4fa0b310116be6"],"threshold":1}],"serialized":"0a9c010a8d010a232f636f736d6f732e7374616b696e672e763162657461312e4d736744656c656761746512660a2a696161316d7a616e39376b75303974797633776375356c6b7466777a727166736b616c3465657a76346a122a697661313534336e6a347a3037766a717a747675333335386672327a326863703071746d6365616e6b351a0c0a0575697269731203313030120a5941386f36523076634212ba010a500a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a21021055ec656e80c61346f406b092a02df24e0dcba1582fc9c73f4fa0b310116be612040a02087f18010a500a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2103cb1a46c0b79e02e65301043826e83a535bf20cd3fc09690d6cc42ae485322d2112040a02087f180112140a0e0a0575697269731205353430303010b0bd10","status":1,"statusDesc":"SIGNING","updatedTime":"2023-01-06T05:52:38.000Z"}]},"body":{"amount":"0.0001","coinSymbol":"IRIS","delegator":"iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j"},"createdTime":"2023-01-06T05:52:37.000Z","id":"1611239291477069825","networkCode":"IRIS","status":-2,"transactionParams":{"memo":"YA8o6R0vcB"},"type":"STAKE","updatedTime":"2023-01-06T05:52:37.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:340 2023-01-06 13:52:32.327959 | 
+<-----Sign----->
+Url:http://api.orbital3.xyz/vault/transactions/signatures
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+Body:{"id": "1611239288968859650", "signatures": [{"hash": "339ded11083f63cb7c540695a49433fa75f9c38423078e81ca946ea388d73bf8", "publicKey": "021055ec656e80c61346f406b092a02df24e0dcba1582fc9c73f4fa0b310116be6", "signature": "32970eb7d1d83c4db667d0addf662211d9a6fb7707dd5c13443abf80fbab0cc86a90abb6a13d6b650d46bc485964ca35633adefe1fc82418f411386c0244513c01"}]}
+
+
+[32mINFO    [0m Common.Http:Http.py:344 2023-01-06 13:52:32.327959 | 
+<-----Sign Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-01-06T05:52:37.000Z","description":"","estimatedFee":"54000","fee":"-1","hash":"6CBDBA089AD5FC3394AE030F708AAE5C0907673D20C864412A61CF34E99CBB26","id":"1611239288968859650","networkCode":"IRIS","serialized":"0a9c010a8d010a232f636f736d6f732e7374616b696e672e763162657461312e4d736744656c656761746512660a2a696161316d7a616e39376b75303974797633776375356c6b7466777a727166736b616c3465657a76346a122a697661313534336e6a347a3037766a717a747675333335386672327a326863703071746d6365616e6b351a0c0a0575697269731203313030120a5941386f36523076634212f5010adc010ac0010a292f636f736d6f732e63727970746f2e6d756c74697369672e4c6567616379416d696e6f5075624b6579129201080212460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a21021055ec656e80c61346f406b092a02df24e0dcba1582fc9c73f4fa0b310116be612460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2103cb1a46c0b79e02e65301043826e83a535bf20cd3fc09690d6cc42ae485322d21121512130a0508021201c012040a02087f12040a02087f180112140a0e0a0575697269731205353430303010b0bd101a84010a4032970eb7d1d83c4db667d0addf662211d9a6fb7707dd5c13443abf80fbab0cc86a90abb6a13d6b650d46bc485964ca35633adefe1fc82418f411386c0244513c0a4056e4d89065a86793057aa4df8464b8dc917db9c29156d294d33f96849f3ac0211cc18298fbaaef3c18d4d283b03c8be5f4be8e0ac65e75ed3e39c00f63758c8f","status":2,"statusDesc":"SIGNED","updatedTime":"2023-01-06T05:52:38.221Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:360 2023-01-06 13:52:32.327959 | 
+<-----Send----->
+Url:http://api.orbital3.xyz/vault/transactions/send/1611239288968859650
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+
+
+[32mINFO    [0m Common.Http:Http.py:364 2023-01-06 13:52:32.327959 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"2023-01-06T05:52:45.200Z","createdTime":"2023-01-06T05:52:37.000Z","description":"","estimatedFee":"54000","fee":"-1","hash":"6CBDBA089AD5FC3394AE030F708AAE5C0907673D20C864412A61CF34E99CBB26","id":"1611239288968859650","networkCode":"IRIS","serialized":"0a9c010a8d010a232f636f736d6f732e7374616b696e672e763162657461312e4d736744656c656761746512660a2a696161316d7a616e39376b75303974797633776375356c6b7466777a727166736b616c3465657a76346a122a697661313534336e6a347a3037766a717a747675333335386672327a326863703071746d6365616e6b351a0c0a0575697269731203313030120a5941386f36523076634212f5010adc010ac0010a292f636f736d6f732e63727970746f2e6d756c74697369672e4c6567616379416d696e6f5075624b6579129201080212460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a21021055ec656e80c61346f406b092a02df24e0dcba1582fc9c73f4fa0b310116be612460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2103cb1a46c0b79e02e65301043826e83a535bf20cd3fc09690d6cc42ae485322d21121512130a0508021201c012040a02087f12040a02087f180112140a0e0a0575697269731205353430303010b0bd101a84010a4032970eb7d1d83c4db667d0addf662211d9a6fb7707dd5c13443abf80fbab0cc86a90abb6a13d6b650d46bc485964ca35633adefe1fc82418f411386c0244513c0a4056e4d89065a86793057aa4df8464b8dc917db9c29156d294d33f96849f3ac0211cc18298fbaaef3c18d4d283b03c8be5f4be8e0ac65e75ed3e39c00f63758c8f","status":3,"statusDesc":"PENDING","updatedTime":"2023-01-06T05:52:45.200Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:480 2023-01-06 13:52:32.327959 | 
+<-----Query Transactions byid----->
+Url:http://api.orbital3.xyz/vault/transactions/1611239288968859650
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+[32mINFO    [0m Common.Http:Http.py:483 2023-01-06 13:52:32.327959 | 
+<-----Query Transactions Response----->
+{"balanceChanges":[{"address":"iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j","amount":"0.0541","asset":{"category":"","createdTime":"2022-02-10T09:11:59.000Z","iconURL":"https://img.cryptoless.net/cryptos/iris.png","id":"1481508696499367940","name":"IRISnet","source":1,"symbol":"IRIS","updatedTime":"2022-06-24T10:41:11.000Z"},"direction":"OUT"},{"address":"iaa1fl48vsnmsdzcv85q5d2q4z5ajdha8yu3qef7mx","amount":"0.0001","asset":{"category":"","createdTime":"2022-02-10T09:11:59.000Z","iconURL":"https://img.cryptoless.net/cryptos/iris.png","id":"1481508696499367940","name":"IRISnet","source":1,"symbol":"IRIS","updatedTime":"2022-06-24T10:41:11.000Z"},"direction":"IN"}],"blockHash":"1D4E22EAEBD5DF318A2667113FD0AF83CD593E909C001E23E76A3A0E0844877B","blockHeight":"18115204","blockTime":"2023-01-06T05:52:36.000Z","createdTime":"2023-01-06T05:52:37.000Z","description":"","estimatedFee":"54000","fee":"54000uiris","hash":"6CBDBA089AD5FC3394AE030F708AAE5C0907673D20C864412A61CF34E99CBB26","id":"1611239288968859650","networkCode":"IRIS","serialized":"0a9c010a8d010a232f636f736d6f732e7374616b696e672e763162657461312e4d736744656c656761746512660a2a696161316d7a616e39376b75303974797633776375356c6b7466777a727166736b616c3465657a76346a122a697661313534336e6a347a3037766a717a747675333335386672327a326863703071746d6365616e6b351a0c0a0575697269731203313030120a5941386f36523076634212f5010adc010ac0010a292f636f736d6f732e63727970746f2e6d756c74697369672e4c6567616379416d696e6f5075624b6579129201080212460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a21021055ec656e80c61346f406b092a02df24e0dcba1582fc9c73f4fa0b310116be612460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2103cb1a46c0b79e02e65301043826e83a535bf20cd3fc09690d6cc42ae485322d21121512130a0508021201c012040a02087f12040a02087f180112140a0e0a0575697269731205353430303010b0bd101a84010a4032970eb7d1d83c4db667d0addf662211d9a6fb7707dd5c13443abf80fbab0cc86a90abb6a13d6b650d46bc485964ca35633adefe1fc82418f411386c0244513c0a4056e4d89065a86793057aa4df8464b8dc917db9c29156d294d33f96849f3ac0211cc18298fbaaef3c18d4d283b03c8be5f4be8e0ac65e75ed3e39c00f63758c8f","status":8,"statusDesc":"SETTLED","updatedTime":"2023-01-06T05:53:00.000Z"}
+[32mINFO    [0m Common.Http:Http.py:421 2023-01-06 13:52:32.327959 | 
+<-----Query Holders----->
+Url:http://api.orbital3.xyz/vault/proxy/assets/holders/?networkCode=IRIS&address=iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j&symbol=IRIS
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+
+
+[32mINFO    [0m Common.Http:Http.py:424 2023-01-06 13:52:32.327959 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j","createdTime":"2023-01-05T07:08:00.000Z","id":"1610895875486388225","networkCode":"IRIS","quantity":"0.225793","symbol":"IRIS","updatedTime":"2023-01-06T05:53:00.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_success:test_success.py:148 2023-01-06 13:52:32.327959 | 浏览器查询账户balance为:0.225793
+[35mDEBUG   [0m test_success:test_success.py:149 2023-01-06 13:52:32.327959 | 查询账户holder为:0.225793
+[32mINFO    [0m Common.Http:Http.py:498 2023-01-06 13:52:32.327959 | 
+<-----Query Staking----->
+Url:http://api.orbital3.xyz/vault/proxy/stakes/delegators?address=iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j&networkCode=IRIS
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+[32mINFO    [0m Common.Http:Http.py:501 2023-01-06 13:52:32.327959 | 
+<-----Query Staking Response----->
+[{"address":"iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j","coinSymbol":"IRIS","createdTime":"2023-01-05T07:06:45.000Z","id":"1610895560005668866","networkCode":"IRIS","pendings":"0","rewards":"0.000000000009182901953999","staked":"0.000099","updatedTime":"2023-01-05T07:06:45.000Z"}]

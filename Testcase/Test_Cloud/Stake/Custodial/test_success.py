@@ -33,8 +33,8 @@ class Test_stake_success:
     if env_type == 1: #生产
         test_data = [
             # ATOM
-            # ("ATOM Custodial账户质押","ATOM","ATOM","stake","cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc",str(Conf.Config.random_amount(4))),
-            ("ATOM Custodial账户赎回","ATOM","ATOM","un_stake","cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc",str(Conf.Config.random_amount(5))),
+            ("ATOM Custodial账户质押","ATOM","ATOM","stake","cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc",str(Conf.Config.random_amount(4))),
+            # ("ATOM Custodial账户赎回","ATOM","ATOM","un_stake","cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc",str(Conf.Config.random_amount(5))),
             # ("ATOM Custodial账户claim","ATOM","ATOM","claim","cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc",0),
 
             # IRIS

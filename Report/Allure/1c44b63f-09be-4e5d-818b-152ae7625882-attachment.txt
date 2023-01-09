@@ -1,0 +1,35 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:160 2023-01-06 15:30:46.167579 | 
+<-----balance----->
+Url:https://api-goerli.etherscan.io/api?module=account&action=balance&address=0xacd5c6a98407469856b47d333309ed814fc64ebe&tag=latest&apikey=UDIG7EZI6J2VBUZIT6AAKXAKTVRQ64J2CF
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:162 2023-01-06 15:30:46.167579 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "3770000000000000"}
+[32mINFO    [0m Common.Http:Http.py:421 2023-01-06 15:30:46.167579 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=GOERLI&address=0xacd5c6a98407469856b47d333309ed814fc64ebe&symbol=GoerliETH
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:424 2023-01-06 15:30:46.167579 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0xacd5c6a98407469856b47d333309ed814fc64ebe","createdTime":"2022-12-30T06:52:00.000Z","id":"1608717521712893953","networkCode":"GOERLI","quantity":"0.00377","symbol":"GoerliETH","updatedTime":"2022-12-30T06:56:00.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_success:test_success.py:82 2023-01-06 15:30:46.167579 | 浏览器查询账户balance为:0.00377
+[35mDEBUG   [0m test_success:test_success.py:83 2023-01-06 15:30:46.167579 | 查询账户holder为:0.00377
+[32mINFO    [0m Common.Http:Http.py:261 2023-01-06 15:30:46.167579 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "GOERLI", "type": "transfer", "body": {"from": "0xacd5c6a98407469856b47d333309ed814fc64ebe", "to": "0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2", "symbol": "GoerliETH", "amount": "0.00023"}, "transactionParams": {"memo": "5kxhml4qop"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:267 2023-01-06 15:30:46.167579 | 
+<-----Instructions Response Error----->
+400
+{"code":2300000,"message":"expect '[', but {, pos 1, line 1, column 2{\"createTime\":1672990256000,\"editTime\":1672990256000,\"id\":\"1611264035680034818\",\"inData\":\"[{\\\"hash\\\": \\\"c177031beac5bb69f7b53206f041daaaeadabd47c66cb87308ecd5618baf88e5\\\", \\\"publicKey\\\": \\\"03d674b2865a6dafa032398b32abe32fece3a42743a62877835e3a307fd837ae33\\\", \\\"signature\\\": \\\"16fe97bbdcbb86e881c3c12b628441131efd4a744463f353ed22b96d59c4b0c114d95481289d3453be09788e00f3167cae1c580acc748c2901c12d75d0800a7600\\\"}]\",\"insert\":true,\"outData\":\"{}\",\"prevProcess\":{\"createTime\":1672990252000,\"editTime\":1672990252000,\"id\":\"1611264018311421954\",\"inData\":\"{\\\"to\\\": \\\"0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2\\\", \\\"from\\\": \\\"0xacd5c6a98407469856b47d333309ed814fc64ebe\\\", \\\"value\\\": \\\"230000000000000\\\", \\\"params\\\": {\\\"type\\\": \\\"2\\\", \\\"maxFeePerGas\\\": \\\"0x1647be77d\\\", \\\"maxPriorityFeePerGas\\\": \\\"0x129033f\\\"}, \\\"payType\\\": 2, \\\"senderPublicKey\\\": \\\"025c380e0b51894f3593a803fa38c79b4ac004f27c1d8ebd5567828a6d1634654e\\\"}\",\"insert\":true,\"outData\":\"{\\\"type\\\": 3, \\\"isActive\\\": true, \\\"signInput\\\": true, \\\"requiredSignings\\\": [{\\\"hash\\\": \\\"c177031beac5bb69f7b53206f041daaaeadabd47c66cb87308ecd5618baf88e5\\\", \\\"threshold\\\": 2, \\\"publicKeys\\\": [\\\"0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113\\\", \\\"03d674b2865a6dafa032398b32abe32fece3a42743a62877835e3a307fd837ae33\\\"]}]}\",\"prevProcessId\":\"0\",\"step\":1,\"transactionId\":\"1611264006881943553\",\"type\":1},\"prevProcessId\":\"1611264018311421954\",\"step\":2,\"transactionId\":\"1611264006881943553\",\"type\":3}"}

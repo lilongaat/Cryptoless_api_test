@@ -1,0 +1,20 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:74 2023-01-07 11:21:06.515678 | 
+<-----balance----->
+Url:https://mempool.emzy.de/testnet/api/address/tb1qear90rkncgh46gdh39k42y77xpd6uawfkxh0xw8puz6jdmsys8hs66yacu
+
+Headers:{"authority": "mempool.emzy.de", "accept": "application/json, text/plain, */*", "accept-language": "zh-CN,zh;q=0.9", "referer": "https://mempool.emzy.de/testnet/address/tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq", "sec-ch-ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": "\"macOS\"", "sec-fetch-dest": "empty", "sec-fetch-mode": "cors", "sec-fetch-site": "same-origin", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:76 2023-01-07 11:21:06.515678 | 
+<-----balance response----->
+
+Body:{"address": "tb1qear90rkncgh46gdh39k42y77xpd6uawfkxh0xw8puz6jdmsys8hs66yacu", "chain_stats": {"funded_txo_count": 1, "funded_txo_sum": 100000, "spent_txo_count": 0, "spent_txo_sum": 0, "tx_count": 1}, "mempool_stats": {"funded_txo_count": 0, "funded_txo_sum": 0, "spent_txo_count": 0, "spent_txo_sum": 0, "tx_count": 0}}
+[32mINFO    [0m Common.Http:Http.py:421 2023-01-07 11:21:06.515678 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=BTC&address=tb1qear90rkncgh46gdh39k42y77xpd6uawfkxh0xw8puz6jdmsys8hs66yacu&symbol=BTC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:424 2023-01-07 11:21:06.515678 | 
+<-----Query Holders Response----->
+{"current":1,"list":[],"size":10,"total":0}

@@ -114,17 +114,17 @@ if __name__ == '__main__':
 
     privkey1 = 'dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da'
     privkey2 = '0fbde0fc6a050c10f98ea3fd2921d2b52780667eed2871a132b60c7aab3ff51d'
-    # privkey3 = '71b037b45f7d0d35685ff8b68fe0187bf8849c64e6571e0687bf548bc5f0b716'
+    privkey3 = '71b037b45f7d0d35685ff8b68fe0187bf8849c64e6571e0687bf548bc5f0b716'
     # privkey_m = '9cbca176aff8c48ebd9a27c31455e34ebc86e25a17e22b3d65a716fc851ada38'
-    # hash = 'cdfb98a786398fe3b2a04cbd89524820a60781ebbd6912ab8b653d6466c38d24'
-    # print(Config.sign(privkey1, hash))
-    # print(Config.sign(privkey2, hash))
-    # print(Config.sign(privkey3, hash))
+    hash = 'a403b9c28d72f0ee9f46ead412caa0679aaa565333f3553e8457da1ee4b64842'
+    print(Config.sign(privkey1, hash))
+    print(Config.sign(privkey2, hash))
+    print(Config.sign(privkey3, hash))
     # print(Config.sign(privkey_m, hash))
 
-    privkey = '9cbca176aff8c48ebd9a27c31455e34ebc86e25a17e22b3d65a716fc851ada38'
-    hash = '307f98e99df420b142059cf9e6ae8ab8ade0f639d951e824e3340e4354138ad5'
-    print(Config.sign(privkey, hash))
+    # privkey = '9cbca176aff8c48ebd9a27c31455e34ebc86e25a17e22b3d65a716fc851ada38'
+    # hash = '307f98e99df420b142059cf9e6ae8ab8ade0f639d951e824e3340e4354138ad5'
+    # print(Config.sign(privkey, hash))
 
 
     # print(Config.fee_evm("0x5208","0x1dcd65000"))

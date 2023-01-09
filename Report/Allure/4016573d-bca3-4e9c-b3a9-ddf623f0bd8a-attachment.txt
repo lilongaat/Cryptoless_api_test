@@ -1,0 +1,20 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:134 2023-01-06 10:13:45.851824 | 
+<-----balance----->
+Url:https://api-goerli.etherscan.io/api?module=account&action=balance&address=0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17&tag=latest&apikey=UDIG7EZI6J2VBUZIT6AAKXAKTVRQ64J2CF
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:136 2023-01-06 10:13:45.851824 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "5340249759900877"}
+[32mINFO    [0m Common.Http:Http.py:421 2023-01-06 10:13:45.851824 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=GOERLI&address=0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17&symbol=GoerliETH
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:424 2023-01-06 10:13:45.851824 | 
+<-----Query Holders Response----->
+{"current":1,"list":[],"size":10,"total":0}

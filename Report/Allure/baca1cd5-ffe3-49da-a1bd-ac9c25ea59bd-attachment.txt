@@ -1,0 +1,43 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:377 2023-01-06 13:45:01.94979 | 
+<-----balance----->
+Url:https://clover.webapi.subscan.io/api/scan/account/tokens
+
+Headers:{"authority": "clover.webapi.subscan.io", "accept": "application/json, text/plain, */*", "accept-language": "zh-CN", "baggage": "", "content-type": "application/json", "origin": "https://clover.subscan.io", "referer": "https://clover.subscan.io/", "sec-ch-ua": "\"Chromium\";v=\"104\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"104\"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": "\"macOS\"", "sec-fetch-dest": "empty", "sec-fetch-mode": "cors", "sec-fetch-site": "same-site", "sentry-trace": "ea3a8691962949979b1cf67d39347ede-99c15b8b0f09a827-0", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.101 Safari/537.36"}
+
+payload:"{\"address\": \"5GF2XqzK1ERH6AGkyHz1jmMLMCVGBUEyRBxJb5TFWxhiS6EY\"}"
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:379 2023-01-06 13:45:01.94979 | 
+<-----balance response----->
+
+Body:{"code": 0, "message": "Success", "generated_at": 1672983902, "data": {"native": [{"symbol": "CLV", "decimals": 18, "balance": "137479999999967809", "lock": "800000000000000", "reserved": "0", "bonded": "630000000000000", "unbonding": "170000000000000", "democracy_lock": "0", "election_lock": "0"}]}}
+[32mINFO    [0m Common.Http:Http.py:421 2023-01-06 13:45:01.94979 | 
+<-----Query Holders----->
+Url:http://api.orbital3.xyz/vault/proxy/assets/holders/?networkCode=CLV&address=5GF2XqzK1ERH6AGkyHz1jmMLMCVGBUEyRBxJb5TFWxhiS6EY&symbol=CLV
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+
+
+[32mINFO    [0m Common.Http:Http.py:424 2023-01-06 13:45:01.94979 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"5GF2XqzK1ERH6AGkyHz1jmMLMCVGBUEyRBxJb5TFWxhiS6EY","createdTime":"2023-01-04T08:32:48.000Z","id":"1610554827295821825","networkCode":"CLV","quantity":"0.136679999999967809","symbol":"CLV","updatedTime":"2023-01-06T05:43:00.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_success:test_success.py:66 2023-01-06 13:45:01.94979 | 浏览器查询账户balance为:0.136679999999967809
+[35mDEBUG   [0m test_success:test_success.py:67 2023-01-06 13:45:01.94979 | 查询账户holder为:0.136679999999967809
+[32mINFO    [0m Common.Http:Http.py:498 2023-01-06 13:45:01.94979 | 
+<-----Query Staking----->
+Url:http://api.orbital3.xyz/vault/proxy/stakes/delegators?address=5GF2XqzK1ERH6AGkyHz1jmMLMCVGBUEyRBxJb5TFWxhiS6EY&networkCode=CLV
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+[32mINFO    [0m Common.Http:Http.py:501 2023-01-06 13:45:01.94979 | 
+<-----Query Staking Response----->
+[{"address":"5GF2XqzK1ERH6AGkyHz1jmMLMCVGBUEyRBxJb5TFWxhiS6EY","coinSymbol":"CLV","createdTime":"2023-01-04T08:32:48.000Z","id":"1610554825750368257","networkCode":"CLV","pendings":"0.00017","staked":"0.00063","updatedTime":"2023-01-04T08:32:48.000Z"}]
+[32mINFO    [0m Common.Http:Http.py:261 2023-01-06 13:45:01.94979 | 
+<-----Instructions----->
+Url:http://api.orbital3.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczMzIwOTk3LCJpYXQiOjE2NzI3MTYxOTcsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.9vznH272VKqWnptn0EfNo50jfo_0o5xCfo2jAKAGpdQ"}
+Body:{"networkCode": "CLV", "type": "claim", "body": {"delegator": "5GF2XqzK1ERH6AGkyHz1jmMLMCVGBUEyRBxJb5TFWxhiS6EY", "coinSymbol": "CLV"}, "transactionParams": {"memo": "g9dcokvWH5"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:267 2023-01-06 13:45:01.94979 | 
+<-----Instructions Response Error----->
+400
+{"code":2100000,"message":"no withdrawable rewards"}
