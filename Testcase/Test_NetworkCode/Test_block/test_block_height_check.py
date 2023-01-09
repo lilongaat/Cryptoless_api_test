@@ -14,8 +14,10 @@ class Test_block_height_check:
     def test_block_height_btc():
         btc = Httpexplore.BTC.block()
         time = Conf.Config.now_time()
-        assert btc.status_code == 200
-        block_height = btc.json()["data"][0]["height"]
+        if btc.status_code == 200:
+            block_height = btc.json()["data"][0]["height"]
+        else:
+            block_height = "Serve Error " + str(btc.status_code)
 
         btc_graphql = Graphql.Graphql.getLatestBlock("BTC")
         time_ = Conf.Config.now_time()

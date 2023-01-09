@@ -1,9 +1,0 @@
-[32mINFO    [0m Common.Http:Http.py:425 2022-12-15 15:40:14.768692 | 
-<-----Query Holders----->
-Url:http://54.251.78.181:8888/escrow/api//proxy/core/api/assets/holders/?networkCode=GOERLI&address=0xc53ce86d5b3fcf72963df2faa0856a3d9bc7a1ae&symbol=USDCC
-Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
-
-
-[31m[1mERROR   [0m Common.Http:Http.py:431 2022-12-15 15:40:14.768692 | 
-<-----Query Holders Response Error----->
-{"timestamp":"2022-12-15T07:40:15.227+00:00","path":"/escrow/api//proxy/core/api/assets/holders/","status":503,"error":"Service Unavailable","message":"","requestId":"62512e38-5278"}

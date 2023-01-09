@@ -1,8 +1,0 @@
-[32mINFO    [0m Common.Httpcore:Httpcore.py:60 2022-12-22 17:16:35.748741 | 
-<-----Core Holders List----->
-Url:https://api.dhandho.xyz/assets/holders?networkCode=CLV&symbol=CLV&address=5EwMcCvUPD7RKUTs86NoLPame9oCg8edtdKCdbcsxTFL3aTQ
-
-Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
-[32mINFO    [0m Common.Httpcore:Httpcore.py:63 2022-12-22 17:16:35.748741 | 
-<-----Core Holders Response----->
-{"current":1,"list":[],"size":10,"total":0}

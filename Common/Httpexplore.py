@@ -1,5 +1,6 @@
 import requests
 from decimal import Decimal
+from enum import Enum
 import json
 import os
 import sys
@@ -171,6 +172,15 @@ class GOERLI:
         logger.info('\n'+"<-----balance Erc20----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'payload:'+json.dumps(payload))
         response = requests.request("GET", url, headers=headers, data=payload)
         logger.info('\n'+"<-----balance Erc20 response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
+        return response
+
+    @staticmethod
+    def block():
+        url = "https://api-goerli.etherscan.io/api?module=proxy&action=eth_blockNumber&apikey=UDIG7EZI6J2VBUZIT6AAKXAKTVRQ64J2CF"
+        payload={}
+        headers = {}
+
+        response = requests.request("GET", url, headers=headers, data=payload)
         return response
 
 class BSC:
@@ -579,8 +589,9 @@ class Balances_explore:
 
 class Block_explore:
     @staticmethod
-    def query(networkCode:str):
+    def block_height():
         pass
+    
 
 if __name__ == '__main__':
     # decimal = [a.get("decimal") for a in ATOM.assets().json()["assets"] if a.get("denom") == "uatom"][0]
@@ -603,9 +614,9 @@ if __name__ == '__main__':
     # print(IRIS.balance("iaa18j8rds5hqwp88s4qsrytq5w4eafu288cfza9th").json())
     # GOERLI.balance("0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17")
     # print(Balances_explore.query("GOERLI","0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17","GoerliETH"))
-    BTC_Test.balance("tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq")
+    # BTC_Test.balance("tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq")
 
-    print((Balances_explore.query("CLV","5EwMcCvUPD7RKUTs86NoLPame9oCg8edtdKCdbcsxTFL3aTQ")))
+    # print((Balances_explore.query("CLV","5EwMcCvUPD7RKUTs86NoLPame9oCg8edtdKCdbcsxTFL3aTQ")))
 
     # print(IRIS.block().json()["block"]["last_commit"]["height"])
-
+    print(int(GOERLI.block().json()["result"],16))

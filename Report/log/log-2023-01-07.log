@@ -1,4 +1,0 @@
-2023-01-07 14:08:34.699 | ERROR    | Common.Http:transactions_byid:486 - 
-<-----Query Transactions Response Error----->{"timestamp":"2023-01-07T06:08:36.477+00:00","path":"/escrow/api/transactions/1611605538357051394","status":500,"error":"Internal Server Error","message":"","requestId":"221aefbc-381606"}
-2023-01-07 15:52:43.263 | ERROR    | Common.Http:transactions_byid:486 - 
-<-----Query Transactions Response Error----->{"code":2300000,"message":"Connect to 172.31.19.149:8080 [/172.31.19.149] failed: Connection refused \u0028Connection refused\u0029 executing GET http://core-center/core/api/transactions/1611631375529738242"}

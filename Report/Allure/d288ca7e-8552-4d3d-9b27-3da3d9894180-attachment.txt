@@ -1,9 +1,0 @@
-[32mINFO    [0m Common.Http:Http.py:425 2022-12-26 10:34:46.291688 | 
-<-----Query Holders----->
-Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=GOERLI&address=0x9fcf78df6c44833d0549a041dd500f7cfcfaaa27&symbol=goerliETH
-Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
-
-
-[32mINFO    [0m Common.Http:Http.py:428 2022-12-26 10:34:46.291688 | 
-<-----Query Holders Response----->
-{"current":1,"list":[],"size":10,"total":0}

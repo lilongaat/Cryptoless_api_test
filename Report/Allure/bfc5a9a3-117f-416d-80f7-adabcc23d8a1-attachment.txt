@@ -1,9 +1,0 @@
-[32mINFO    [0m Common.Http:Http.py:421 2023-01-06 15:44:03.542603 | 
-<-----Query Holders----->
-Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=MATIC&address=0xa374f6ac3df090035f9a3b0993b5eeddad29b949&symbol=MATIC
-Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
-
-
-[32mINFO    [0m Common.Http:Http.py:424 2023-01-06 15:44:03.542603 | 
-<-----Query Holders Response----->
-{"current":1,"list":[],"size":10,"total":0}

@@ -1,9 +1,0 @@
-[32mINFO    [0m Common.Http:Http.py:425 2022-12-19 15:59:56.306231 | 
-<-----Query Holders----->
-Url:https://api.dhandho.xyz/vault/assets/holders/?networkCode=BTC&address=tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x&symbol=BTC
-Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
-
-
-[31m[1mERROR   [0m Common.Http:Http.py:431 2022-12-19 15:59:56.306231 | 
-<-----Query Holders Response Error----->
-{"timestamp":"2022-12-19T07:59:56.998Z","status":404,"error":"Not Found","message":"","path":"/escrow/api/assets/holders/"}

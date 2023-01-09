@@ -1,1 +1,0 @@
-[1m[31mERROR   [0m Common.Httpcore:Httpcore.py:219 2022-12-01 19:04:59.580273 | networkCode not support!

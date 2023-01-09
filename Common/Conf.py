@@ -112,14 +112,14 @@ if __name__ == '__main__':
     # print(Config.reader_csv("/Users/lilong/Documents/Test_Api/Address/Top/BTC.csv",10))
     
 
-    privkey1 = 'dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da'
-    privkey2 = '0fbde0fc6a050c10f98ea3fd2921d2b52780667eed2871a132b60c7aab3ff51d'
-    privkey3 = '71b037b45f7d0d35685ff8b68fe0187bf8849c64e6571e0687bf548bc5f0b716'
+    # privkey1 = 'dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da'
+    # privkey2 = '0fbde0fc6a050c10f98ea3fd2921d2b52780667eed2871a132b60c7aab3ff51d'
+    # privkey3 = '71b037b45f7d0d35685ff8b68fe0187bf8849c64e6571e0687bf548bc5f0b716'
     # privkey_m = '9cbca176aff8c48ebd9a27c31455e34ebc86e25a17e22b3d65a716fc851ada38'
-    hash = 'a403b9c28d72f0ee9f46ead412caa0679aaa565333f3553e8457da1ee4b64842'
-    print(Config.sign(privkey1, hash))
-    print(Config.sign(privkey2, hash))
-    print(Config.sign(privkey3, hash))
+    # hash = '77b7f5da8d60c94b15e33b6a508cee67b9ca550576c15cd9048feaa4f78bee36'
+    # print(Config.sign(privkey1, hash))
+    # print(Config.sign(privkey2, hash))
+    # print(Config.sign(privkey3, hash))
     # print(Config.sign(privkey_m, hash))
 
     # privkey = '9cbca176aff8c48ebd9a27c31455e34ebc86e25a17e22b3d65a716fc851ada38'
@@ -128,3 +128,12 @@ if __name__ == '__main__':
 
 
     # print(Config.fee_evm("0x5208","0x1dcd65000"))
+
+
+    privkey1 = 'd10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b'
+    privkey2 = 'e560c8c3353414a3339f17001c563cd816be808799889aa3827ea5465124a790'
+    privkey3 = '1cd79b63d47b3b6cf013a7d7f812dc16cbeefdde815dea4893d81a91ae1ba099'
+    hash = '35e29b8ee22770dc0167009fa31746b7e019b2af6d5d855242a39a45d573fe5c'
+    print(Config.sign(privkey1, hash))
+    print(Config.sign(privkey2, hash))
+    print(Config.sign(privkey3, hash))

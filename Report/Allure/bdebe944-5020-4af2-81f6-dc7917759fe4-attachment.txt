@@ -1,8 +1,0 @@
-[32mINFO    [0m Common.Httpcore:Httpcore.py:60 2022-12-21 11:27:33.374063 | 
-<-----Core Holders List----->
-Url:https://api.dhandho.xyz/assets/holders?networkCode=BTC&symbol=BTC&address=tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33
-
-Headers:{"Content-Type": "application/json", "Authorization": "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="}
-[32mINFO    [0m Common.Httpcore:Httpcore.py:63 2022-12-21 11:27:33.374063 | 
-<-----Core Holders Response----->
-{"current":1,"list":[{"address":"tb1q4t8jtp4fwjg4spfjh7ux5ckhrallj652kwrj48gcvd0rt5g9ea3q4vlm33","id":"1603217983278403585","networkCode":"BTC","quantity":"0.00098128","symbol":"BTC","updatedTime":"2022-12-19T07:24:00.000Z"}],"size":10,"total":1}

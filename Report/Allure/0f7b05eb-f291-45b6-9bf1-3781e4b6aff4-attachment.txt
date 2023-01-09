@@ -1,5 +1,0 @@
-[32mINFO    [0m Common.Http:Http.py:265 2022-12-16 14:52:53.406343 | 
-<-----Instructions----->
-Url:http://54.251.78.181:8888/escrow/api//instructions
-Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
-Body:{"networkCode": "CLV", "type": "transfer", "body": {"from": "5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te", "to": "5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te", "symbol": "CLV", "amount": "0.000123"}, "transactionParams": {"memo": "lxOc5qXKb0"}}

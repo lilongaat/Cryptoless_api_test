@@ -1,9 +1,0 @@
-[32mINFO    [0m Common.Http:Http.py:93 2022-12-13 15:29:21.311275 | 
-<-----Query Accounts----->
-Url:http://54.251.78.181:8888/escrow/api//accounts?networkCode=&address=tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x&type=
-Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
-
-
-[32mINFO    [0m Common.Http:Http.py:96 2022-12-13 15:29:21.311275 | 
-<-----Query Accounts Response----->
-{"current":1,"list":[{"address":"tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x","createdTime":"2022-12-12T07:16:00.000Z","finalized":true,"id":"1602200578745896961","name":"custodial","networkCode":"BTC","publicKeys":[{"source":"custodial","type":"secp256k1","value":"03fc4bdc2e6a1337c9e0dfbb888b4e7178cd1746ee789477a42695d971afd8d679"}],"status":"enable","threshold":1,"type":"custodial","updatedTime":"2022-12-12T07:21:58.000Z"}],"size":10,"total":1}
