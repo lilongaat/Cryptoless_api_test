@@ -1,0 +1,11 @@
+.cache
+Dockerfile
+.dockerignore
+.gitignore
+.git
+.env
+.pylintrc
+__pycache__
+*.pyc
+*.egg-info
+.idea/
