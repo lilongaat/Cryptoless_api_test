@@ -1,0 +1,20 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:229 2023-01-10 18:01:49.810196 | 
+<-----balance----->
+Url:https://api.polygonscan.com/api?module=account&action=balance&address=0xe525E7cd17f6Dc950492755A089E452fd5d9d44f&apikey=85W6B7V5TPH7TDZA3JQCFT8UN8RKAEMA4Y
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:231 2023-01-10 18:01:49.810196 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "45873727585615000"}
+[32mINFO    [0m Common.Http:Http.py:421 2023-01-10 18:01:49.810196 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=MATIC&address=0xe525E7cd17f6Dc950492755A089E452fd5d9d44f&symbol=MATIC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:424 2023-01-10 18:01:49.810196 | 
+<-----Query Holders Response----->
+{"current":1,"list":[],"size":10,"total":0}

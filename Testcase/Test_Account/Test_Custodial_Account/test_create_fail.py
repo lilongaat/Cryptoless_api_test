@@ -22,7 +22,7 @@ class Test_create_custodial_account:
             ("创建托管账户网络被禁用","Custodial_account","RINKEBY",400,2300000)
         ]
 
-    if env_type == 1: #生产
+    elif env_type == 1: #生产
         test_data = [
             ("创建托管账户name为空","","BTC",400,2100000),
             ("创建托管账户name超长","uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu","DOGE",400,2100000),

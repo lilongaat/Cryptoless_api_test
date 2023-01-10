@@ -21,14 +21,14 @@ class Test_stake_success:
     if env_type == 0: #测试
         test_data = [
             # IRIS
-            # ("IRIS Custodial账户质押","IRIS","IRIS","stake","iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe",str(Conf.Config.random_amount(4))),
-            # ("IRIS Custodial账户赎回","IRIS","IRIS","un_stake","iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe",str(Conf.Config.random_amount(5))),
-            # ("IRIS Custodial账户claim","IRIS","IRIS","claim","iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe",0),
+            ("IRIS Custodial账户质押","IRIS","IRIS","stake","iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe",str(Conf.Config.random_amount(4))),
+            ("IRIS Custodial账户赎回","IRIS","IRIS","un_stake","iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe",str(Conf.Config.random_amount(5))),
+            ("IRIS Custodial账户claim","IRIS","IRIS","claim","iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe",0),
 
             # CLV
-            # ("CLV Custodial账户质押","CLV","CLV","stake","5CFStFse5QY5dyfeHeTDSnMeBBRgxXse2D8k1TUbM67HeA9h",str(Conf.Config.random_amount(4))),
-            # ("CLV Custodial账户赎回","CLV","CLV","un_stake","5CFStFse5QY5dyfeHeTDSnMeBBRgxXse2D8k1TUbM67HeA9h",str(Conf.Config.random_amount(5))),
-            # ("CLV Custodial账户claim","CLV","CLV","claim","5CFStFse5QY5dyfeHeTDSnMeBBRgxXse2D8k1TUbM67HeA9h",0),
+            ("CLV Custodial账户质押","CLV","CLV","stake","5CFStFse5QY5dyfeHeTDSnMeBBRgxXse2D8k1TUbM67HeA9h",str(Conf.Config.random_amount(4))),
+            ("CLV Custodial账户赎回","CLV","CLV","un_stake","5CFStFse5QY5dyfeHeTDSnMeBBRgxXse2D8k1TUbM67HeA9h",str(Conf.Config.random_amount(5))),
+            ("CLV Custodial账户claim","CLV","CLV","claim","5CFStFse5QY5dyfeHeTDSnMeBBRgxXse2D8k1TUbM67HeA9h",0),
         ]
     if env_type == 1: #生产
         test_data = [

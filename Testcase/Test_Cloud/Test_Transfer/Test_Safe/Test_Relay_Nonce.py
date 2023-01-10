@@ -21,7 +21,7 @@ class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
             # GOERLI
-            # ("GOERLI 多个safe账户构建+签名交易后同时广播","GOERLI","GoerliETH","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da",["0xf4c4b7803447dc6d3a00ed765e10fdb1bfa1ec23","0xacd5c6a98407469856b47d333309ed814fc64ebe","0x1dc8b303498e3fe1b4cc6f5ecf3b2976eaceae36","0x79f255cec4b987a4b4fd10858bc815a3b6134006","0x2bf894ab121035107337049d16ce793f161979a0"],"","0x2B0EfCF16EC1E4C5eD82dBB4Fce9B4811485e650",str(Conf.Config.random_amount(8))),
+            ("GOERLI 多个safe账户构建+签名交易后同时广播","GOERLI","GoerliETH","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da",["0xf4c4b7803447dc6d3a00ed765e10fdb1bfa1ec23","0xacd5c6a98407469856b47d333309ed814fc64ebe","0x1dc8b303498e3fe1b4cc6f5ecf3b2976eaceae36","0x79f255cec4b987a4b4fd10858bc815a3b6134006","0x2bf894ab121035107337049d16ce793f161979a0"],"","0x2B0EfCF16EC1E4C5eD82dBB4Fce9B4811485e650",str(Conf.Config.random_amount(8))),
             ("GOERLI 多个safe账户构建+签名交易后,另外一个safe账户完成一笔交易后,同时广播之前的已签名交易","GOERLI","GoerliETH","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da",["0xf4c4b7803447dc6d3a00ed765e10fdb1bfa1ec23","0xacd5c6a98407469856b47d333309ed814fc64ebe","0x1dc8b303498e3fe1b4cc6f5ecf3b2976eaceae36","0x79f255cec4b987a4b4fd10858bc815a3b6134006","0x2bf894ab121035107337049d16ce793f161979a0"],"0xa491f7d4d19c4e3907910be05f19e78fbd97412b","0x2B0EfCF16EC1E4C5eD82dBB4Fce9B4811485e650",str(Conf.Config.random_amount(8))),
         ]
     elif env_type == 1: #生产

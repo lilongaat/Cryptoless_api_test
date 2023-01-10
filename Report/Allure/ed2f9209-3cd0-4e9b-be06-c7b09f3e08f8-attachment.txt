@@ -1,0 +1,105 @@
+[32mINFO    [0m Common.Http:Http.py:159 2023-01-10 17:54:49.438875 | 
+<-----Create Safe Account------>
+Url:https://api.dhandho.xyz/vault/accounts/safe
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"name": "safe", "networkCode": "GOERLI", "owner": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "recovery": ""}
+
+
+[32mINFO    [0m Common.Http:Http.py:162 2023-01-10 17:54:49.438875 | 
+<-----Create account Response----->
+{"address":"0x5db47680ea799e68027de473d025f2a2c283d99f","createdTime":"2023-01-10T09:54:53.516Z","finalized":false,"id":"1612749812990820353","name":"safe","networkCode":"GOERLI","publicKeys":[{"source":"owner","type":"secp256k1","value":"0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"},{"source":"custodial","type":"secp256k1","value":"02d873ccc9d28107f7ddf6c91663499a99f4b6fbd872533fe9de364e8a84ff9c12"}],"status":"inactive","threshold":2,"type":"safe","updatedTime":"2023-01-10T09:54:53.516Z"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:210 2023-01-10 17:54:49.438875 | 
+<-----Core Build------>
+Url:https://api.dhandho.xyz/transactions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweDJmMjdiYzZlYzhjYjUwM2VmYmRhYWEzMmNjOWRmODc5ZDZlN2M1MTFmYjk3ZTgwYTQxMGM3MWU1ZDY4YzI5ODk2ZDQxMzk5ZmE3Y2E1NjlkOGMxMGU4ZmIwODk5MzI5MmRlZjJlM2ExY2ZmZjhjYjMxODNjYzQ1ZGQ1ZjdjNDFjMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNjczNDUwMDdcbklzc3VlZCBBdDogVGh1LCA4IERlYyAyMDIyIDE0OjQzOjI0IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBNb24sIDggRGVjIDIwNDIgMTQ6NDM6MjQgR01UIn0="}
+
+body:{"networkCode": "GOERLI", "payload": {"from": "0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591", "to": "0x5db47680ea799e68027de473d025f2a2c283d99f", "value": "4000000000000000"}, "type": "TRANSACTION"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:213 2023-01-10 17:54:49.438875 | 
+<-----Core Build Response---->
+{"balanceChanges":[],"blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-01-10T09:54:55.507Z","description":"Send 0.004 ETH","estimatedFee":"6169013015130000","hash":"","id":"1612749814675771394","networkCode":"GOERLI","requiredSignings":[{"hash":"77107ded08fbcee3e30a9b72f6d9de90613fff5a25cbf875a18681498716e127","publicKeys":["0326288a7bbff5dc672bfec0a0a02ccae3eeb3e93a0294c8e0f534c97438de0fce"],"threshold":1}],"serialized":"02f2054c8405f5e1008544659c6572825208945db47680ea799e68027de473d025f2a2c283d99f870e35fa931a000080c0808080","status":0,"statusDesc":"BUILDING","updatedTime":"2023-01-10T09:54:55.507Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:252 2023-01-10 17:54:49.438875 | 
+<-----Core Sign------>
+Url:https://api.dhandho.xyz/transactions/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweDJmMjdiYzZlYzhjYjUwM2VmYmRhYWEzMmNjOWRmODc5ZDZlN2M1MTFmYjk3ZTgwYTQxMGM3MWU1ZDY4YzI5ODk2ZDQxMzk5ZmE3Y2E1NjlkOGMxMGU4ZmIwODk5MzI5MmRlZjJlM2ExY2ZmZjhjYjMxODNjYzQ1ZGQ1ZjdjNDFjMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNjczNDUwMDdcbklzc3VlZCBBdDogVGh1LCA4IERlYyAyMDIyIDE0OjQzOjI0IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBNb24sIDggRGVjIDIwNDIgMTQ6NDM6MjQgR01UIn0="}
+
+body:{"id": "1612749814675771394", "signatures": [{"hash": "77107ded08fbcee3e30a9b72f6d9de90613fff5a25cbf875a18681498716e127", "publickey": "0326288a7bbff5dc672bfec0a0a02ccae3eeb3e93a0294c8e0f534c97438de0fce", "signature": "28dbb106b53929dbbaa76ced75eef129c046c7c0209378407d16e0204ea4d31e0b9047d3db67acd6a2ffc64c91489896c802034e744220a65f8df6ac582b567400"}]}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:255 2023-01-10 17:54:49.438875 | 
+<-----Core Sign Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-01-10T09:54:56.000Z","description":"Send 0.004 ETH","estimatedFee":"6169013015130000","fee":"-1","hash":"0xf5f94fd98458499c505fcf5ec3662e844c22d5e3eaa9cc02651a6099da8b006b","id":"1612749814675771394","networkCode":"GOERLI","serialized":"02f872054c8405f5e1008544659c6572825208945db47680ea799e68027de473d025f2a2c283d99f870e35fa931a000080c080a028dbb106b53929dbbaa76ced75eef129c046c7c0209378407d16e0204ea4d31ea00b9047d3db67acd6a2ffc64c91489896c802034e744220a65f8df6ac582b5674","status":2,"statusDesc":"SIGNED","updatedTime":"2023-01-10T09:54:56.103Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:271 2023-01-10 17:54:49.438875 | 
+<-----Core Send------>
+Url:https://api.dhandho.xyz/transactions/send/1612749814675771394
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweDJmMjdiYzZlYzhjYjUwM2VmYmRhYWEzMmNjOWRmODc5ZDZlN2M1MTFmYjk3ZTgwYTQxMGM3MWU1ZDY4YzI5ODk2ZDQxMzk5ZmE3Y2E1NjlkOGMxMGU4ZmIwODk5MzI5MmRlZjJlM2ExY2ZmZjhjYjMxODNjYzQ1ZGQ1ZjdjNDFjMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNjczNDUwMDdcbklzc3VlZCBBdDogVGh1LCA4IERlYyAyMDIyIDE0OjQzOjI0IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBNb24sIDggRGVjIDIwNDIgMTQ6NDM6MjQgR01UIn0="}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:274 2023-01-10 17:54:49.438875 | 
+<-----Core Send Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"2023-01-10T09:54:58.920Z","createdTime":"2023-01-10T09:54:56.000Z","description":"Send 0.004 ETH","estimatedFee":"6169013015130000","fee":"-1","hash":"0xf5f94fd98458499c505fcf5ec3662e844c22d5e3eaa9cc02651a6099da8b006b","id":"1612749814675771394","networkCode":"GOERLI","serialized":"02f872054c8405f5e1008544659c6572825208945db47680ea799e68027de473d025f2a2c283d99f870e35fa931a000080c080a028dbb106b53929dbbaa76ced75eef129c046c7c0209378407d16e0204ea4d31ea00b9047d3db67acd6a2ffc64c91489896c802034e744220a65f8df6ac582b5674","status":3,"statusDesc":"PENDING","updatedTime":"2023-01-10T09:54:58.920Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:210 2023-01-10 17:54:49.438875 | 
+<-----Core Build------>
+Url:https://api.dhandho.xyz/transactions
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweDJmMjdiYzZlYzhjYjUwM2VmYmRhYWEzMmNjOWRmODc5ZDZlN2M1MTFmYjk3ZTgwYTQxMGM3MWU1ZDY4YzI5ODk2ZDQxMzk5ZmE3Y2E1NjlkOGMxMGU4ZmIwODk5MzI5MmRlZjJlM2ExY2ZmZjhjYjMxODNjYzQ1ZGQ1ZjdjNDFjMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNjczNDUwMDdcbklzc3VlZCBBdDogVGh1LCA4IERlYyAyMDIyIDE0OjQzOjI0IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBNb24sIDggRGVjIDIwNDIgMTQ6NDM6MjQgR01UIn0="}
+
+body:{"networkCode": "GOERLI", "payload": {"from": "0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591", "to": "0x5db47680ea799e68027de473d025f2a2c283d99f", "value": "1000000000000000000", "tokenaddress": "0x1eC2CE6108240118Ff2c66eC8AFAC28618D7e066"}, "type": "TRANSACTION"}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:213 2023-01-10 17:54:49.438875 | 
+<-----Core Build Response---->
+{"balanceChanges":[],"blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-01-10T09:55:02.211Z","description":"Send 1 USDCC","estimatedFee":"19408596233172570","hash":"","id":"1612749837015748610","networkCode":"GOERLI","requiredSignings":[{"hash":"7936afffe6404290d43ed259806b904a1ead3f5d69d1447da65074c52ed01045","publicKeys":["0326288a7bbff5dc672bfec0a0a02ccae3eeb3e93a0294c8e0f534c97438de0fce"],"threshold":1}],"serialized":"02f871054d8405f5e1008544659c657283010215941ec2ce6108240118ff2c66ec8afac28618d7e06680b844a9059cbb0000000000000000000000005db47680ea799e68027de473d025f2a2c283d99f0000000000000000000000000000000000000000000000000de0b6b3a7640000c0808080","status":0,"statusDesc":"BUILDING","updatedTime":"2023-01-10T09:55:02.211Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:252 2023-01-10 17:54:49.438875 | 
+<-----Core Sign------>
+Url:https://api.dhandho.xyz/transactions/signatures
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweDJmMjdiYzZlYzhjYjUwM2VmYmRhYWEzMmNjOWRmODc5ZDZlN2M1MTFmYjk3ZTgwYTQxMGM3MWU1ZDY4YzI5ODk2ZDQxMzk5ZmE3Y2E1NjlkOGMxMGU4ZmIwODk5MzI5MmRlZjJlM2ExY2ZmZjhjYjMxODNjYzQ1ZGQ1ZjdjNDFjMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNjczNDUwMDdcbklzc3VlZCBBdDogVGh1LCA4IERlYyAyMDIyIDE0OjQzOjI0IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBNb24sIDggRGVjIDIwNDIgMTQ6NDM6MjQgR01UIn0="}
+
+body:{"id": "1612749837015748610", "signatures": [{"hash": "7936afffe6404290d43ed259806b904a1ead3f5d69d1447da65074c52ed01045", "publickey": "0326288a7bbff5dc672bfec0a0a02ccae3eeb3e93a0294c8e0f534c97438de0fce", "signature": "f910967da46b6a6fa6a3ae9ebfef51b253aa4314f049b75ea8742a4f09922d522c281534737e734565cf455930c58aa3a9f7b47cc6a19c6e41b34f99909f022500"}]}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:255 2023-01-10 17:54:49.438875 | 
+<-----Core Sign Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-01-10T09:55:02.000Z","description":"Send 1 USDCC","estimatedFee":"19408596233172570","fee":"-1","hash":"0x311374864264f586dbb21d100256c47505062c53398ab9ed7f07fac57492f8ec","id":"1612749837015748610","networkCode":"GOERLI","serialized":"02f8b1054d8405f5e1008544659c657283010215941ec2ce6108240118ff2c66ec8afac28618d7e06680b844a9059cbb0000000000000000000000005db47680ea799e68027de473d025f2a2c283d99f0000000000000000000000000000000000000000000000000de0b6b3a7640000c080a0f910967da46b6a6fa6a3ae9ebfef51b253aa4314f049b75ea8742a4f09922d52a02c281534737e734565cf455930c58aa3a9f7b47cc6a19c6e41b34f99909f0225","status":2,"statusDesc":"SIGNED","updatedTime":"2023-01-10T09:55:02.718Z"}
+[32mINFO    [0m Common.Httpcore:Httpcore.py:271 2023-01-10 17:54:49.438875 | 
+<-----Core Send------>
+Url:https://api.dhandho.xyz/transactions/send/1612749837015748610
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJzaWduYXR1cmUiOiIweDJmMjdiYzZlYzhjYjUwM2VmYmRhYWEzMmNjOWRmODc5ZDZlN2M1MTFmYjk3ZTgwYTQxMGM3MWU1ZDY4YzI5ODk2ZDQxMzk5ZmE3Y2E1NjlkOGMxMGU4ZmIwODk5MzI5MmRlZjJlM2ExY2ZmZjhjYjMxODNjYzQ1ZGQ1ZjdjNDFjMWMiLCJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogNjczNDUwMDdcbklzc3VlZCBBdDogVGh1LCA4IERlYyAyMDIyIDE0OjQzOjI0IEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBNb24sIDggRGVjIDIwNDIgMTQ6NDM6MjQgR01UIn0="}
+
+
+[32mINFO    [0m Common.Httpcore:Httpcore.py:274 2023-01-10 17:54:49.438875 | 
+<-----Core Send Response---->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"2023-01-10T09:55:04.324Z","createdTime":"2023-01-10T09:55:02.000Z","description":"Send 1 USDCC","estimatedFee":"19408596233172570","fee":"-1","hash":"0x311374864264f586dbb21d100256c47505062c53398ab9ed7f07fac57492f8ec","id":"1612749837015748610","networkCode":"GOERLI","serialized":"02f8b1054d8405f5e1008544659c657283010215941ec2ce6108240118ff2c66ec8afac28618d7e06680b844a9059cbb0000000000000000000000005db47680ea799e68027de473d025f2a2c283d99f0000000000000000000000000000000000000000000000000de0b6b3a7640000c080a0f910967da46b6a6fa6a3ae9ebfef51b253aa4314f049b75ea8742a4f09922d52a02c281534737e734565cf455930c58aa3a9f7b47cc6a19c6e41b34f99909f0225","status":3,"statusDesc":"PENDING","updatedTime":"2023-01-10T09:55:04.324Z"}
+[1m[31mERROR   [0m Test_active_transfer:Test_active_transfer.py:53 2023-01-10 17:54:49.438875 | 
+safe账户
+0x5db47680ea799e68027de473d025f2a2c283d99f
+
+
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:161 2023-01-10 17:54:49.438875 | 
+<-----balance----->
+Url:https://api-goerli.etherscan.io/api?module=account&action=balance&address=0x5db47680ea799e68027de473d025f2a2c283d99f&tag=latest&apikey=UDIG7EZI6J2VBUZIT6AAKXAKTVRQ64J2CF
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:163 2023-01-10 17:54:49.438875 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "0"}
+[32mINFO    [0m Common.Http:Http.py:421 2023-01-10 17:54:49.438875 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=GOERLI&address=0x5db47680ea799e68027de473d025f2a2c283d99f&symbol=GoerliETH
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:424 2023-01-10 17:54:49.438875 | 
+<-----Query Holders Response----->
+{"current":1,"list":[],"size":10,"total":0}

@@ -18,29 +18,29 @@ class Test_create_safe_account:
     if env_type == 0: #测试
         test_data = [
             # BTC
-            # ("BTC创建2-2安全账户 全custodial","安全账户BTC2-2-"+str(Conf.Config.now_timestamp()),"BTC","",""),
-            # ("BTC创建2-2安全账户 custodial+owner","安全账户BTC2-2-"+str(Conf.Config.now_timestamp()),"BTC","02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6",""),
-            # ("BTC创建2-2安全账户 custodial+owner","安全账户BTC2-2-"+str(Conf.Config.now_timestamp()),"BTC","02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6","0231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f70"),
+            ("BTC创建2-2安全账户 全custodial","安全账户BTC2-2-"+str(Conf.Config.now_timestamp()),"BTC","",""),
+            ("BTC创建2-2安全账户 custodial+owner","安全账户BTC2-2-"+str(Conf.Config.now_timestamp()),"BTC","02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6",""),
+            ("BTC创建2-2安全账户 custodial+owner","安全账户BTC2-2-"+str(Conf.Config.now_timestamp()),"BTC","02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6","0231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f70"),
 
             #GOERLI
-            # ("Goerli创建2-2安全账户 全custodial","安全账户GOERLI2-2-"+str(Conf.Config.now_timestamp()),"GOERLI","",""),
+            ("Goerli创建2-2安全账户 全custodial","安全账户GOERLI2-2-"+str(Conf.Config.now_timestamp()),"GOERLI","",""),
             ("Goerli创建2-2安全账户 custodial+owner","安全账户GOERLI2-2-"+str(Conf.Config.now_timestamp()),"GOERLI","0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113",""),
-            # ("Goerli创建2-3安全账户","安全账户GOERLI2-3-"+str(Conf.Config.now_timestamp()),"GOERLI","0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113","03c420167aaf4fc7106646b2fe485519e5569ceb1584ae31d62537e349a4e4b5a9"),
+            ("Goerli创建2-3安全账户","安全账户GOERLI2-3-"+str(Conf.Config.now_timestamp()),"GOERLI","0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113","03c420167aaf4fc7106646b2fe485519e5569ceb1584ae31d62537e349a4e4b5a9"),
 
             #MATIC
-            # ("MATIC创建2-2安全账户 全custodial","安全账户MATIC2-2-"+str(Conf.Config.now_timestamp()),"MATIC","",""),
-            # ("MATIC创建2-2安全账户 custodial+owner","安全账户MATIC2-2-"+str(Conf.Config.now_timestamp()),"MATIC","0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113",""),
-            # ("MATIC创建2-3安全账户","安全账户MATIC2-3-"+str(Conf.Config.now_timestamp()),"MATIC","0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113","03c420167aaf4fc7106646b2fe485519e5569ceb1584ae31d62537e349a4e4b5a9"),
+            ("MATIC创建2-2安全账户 全custodial","安全账户MATIC2-2-"+str(Conf.Config.now_timestamp()),"MATIC","",""),
+            ("MATIC创建2-2安全账户 custodial+owner","安全账户MATIC2-2-"+str(Conf.Config.now_timestamp()),"MATIC","0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113",""),
+            ("MATIC创建2-3安全账户","安全账户MATIC2-3-"+str(Conf.Config.now_timestamp()),"MATIC","0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113","03c420167aaf4fc7106646b2fe485519e5569ceb1584ae31d62537e349a4e4b5a9"),
 
             #IRIS
-            # ("IRIS创建2-2安全账户 全custodial","安全账户IRIS2-2-"+str(Conf.Config.now_timestamp()),"IRIS","",""),
-            # ("IRIS创建2-2安全账户 custodial+owner","安全账户IRIS2-2-"+str(Conf.Config.now_timestamp()),"IRIS","0260fbc9e026fe789a5a3c26289577719900c6046dc1d9ac1471b8eb08d15d0de4",""),
-            # ("IRIS创建2-3安全账户","安全账户IRIS2-3-"+str(Conf.Config.now_timestamp()),"IRIS","0260fbc9e026fe789a5a3c26289577719900c6046dc1d9ac1471b8eb08d15d0de4","02e3209ac96c70b2d3366bb2a7cf54b93592b63093431a853679ca8c74b4dbb545"),
+            ("IRIS创建2-2安全账户 全custodial","安全账户IRIS2-2-"+str(Conf.Config.now_timestamp()),"IRIS","",""),
+            ("IRIS创建2-2安全账户 custodial+owner","安全账户IRIS2-2-"+str(Conf.Config.now_timestamp()),"IRIS","0260fbc9e026fe789a5a3c26289577719900c6046dc1d9ac1471b8eb08d15d0de4",""),
+            ("IRIS创建2-3安全账户","安全账户IRIS2-3-"+str(Conf.Config.now_timestamp()),"IRIS","0260fbc9e026fe789a5a3c26289577719900c6046dc1d9ac1471b8eb08d15d0de4","02e3209ac96c70b2d3366bb2a7cf54b93592b63093431a853679ca8c74b4dbb545"),
 
             #ATOM
-            # ("ATOM创建2-2安全账户 全custodial","安全账户ATOM2-2-"+str(Conf.Config.now_timestamp()),"ATOM","",""),
-            # ("ATOM创建2-2安全账户 custodial+owner","安全账户ATOM2-2-"+str(Conf.Config.now_timestamp()),"ATOM","027243806b1abdb1737b45d4a0619112bf464e13407b7d37dd2da2821bc6fbcac4",""),
-            # ("ATOM创建2-3安全账户","安全账户ATOM2-3-"+str(Conf.Config.now_timestamp()),"ATOM","027243806b1abdb1737b45d4a0619112bf464e13407b7d37dd2da2821bc6fbcac4","03d36556045bc8bac44e1fb88bd1840d68077fded4371e8e8c45ffb9788b525329"),
+            ("ATOM创建2-2安全账户 全custodial","安全账户ATOM2-2-"+str(Conf.Config.now_timestamp()),"ATOM","",""),
+            ("ATOM创建2-2安全账户 custodial+owner","安全账户ATOM2-2-"+str(Conf.Config.now_timestamp()),"ATOM","027243806b1abdb1737b45d4a0619112bf464e13407b7d37dd2da2821bc6fbcac4",""),
+            ("ATOM创建2-3安全账户","安全账户ATOM2-3-"+str(Conf.Config.now_timestamp()),"ATOM","027243806b1abdb1737b45d4a0619112bf464e13407b7d37dd2da2821bc6fbcac4","03d36556045bc8bac44e1fb88bd1840d68077fded4371e8e8c45ffb9788b525329"),
             
         ]
 
@@ -69,7 +69,11 @@ class Test_create_safe_account:
             else:
                 assert safe_account.json()["status"] == "enable"
 
-        logger.error("\n\n"+test_title+"\n"+address)
+        logger.debug("\n\n"+test_title+"\n"+address)
+
+        with allure.step("删除账户byid"):
+            account_del = Http.HttpUtils.del_account_byid(id)
+            assert account_del.status_code == 200
 
 
 

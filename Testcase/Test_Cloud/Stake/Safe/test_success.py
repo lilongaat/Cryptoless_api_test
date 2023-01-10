@@ -21,14 +21,14 @@ class Test_stake_success:
     if env_type == 0: #测试
         test_data = [
             # IRIS
-            # ("IRIS External账户质押","IRIS","IRIS","stake","","",str(Conf.Config.random_amount(4))),
-            # ("IRIS External账户赎回","IRIS","IRIS","un_stake","","",str(Conf.Config.random_amount(5))),
-            # ("IRIS External账户claim","IRIS","IRIS","claim","","",0),
+            ("IRIS External账户质押","IRIS","IRIS","stake","","",str(Conf.Config.random_amount(4))),
+            ("IRIS External账户赎回","IRIS","IRIS","un_stake","","",str(Conf.Config.random_amount(5))),
+            ("IRIS External账户claim","IRIS","IRIS","claim","","",0),
 
             # CLV
-            # ("CLV External账户质押","CLV","CLV","stake","","",str(Conf.Config.random_amount(4))),
-            # ("CLV External账户赎回","CLV","CLV","un_stake","","",str(Conf.Config.random_amount(5))),
-            # ("CLV External账户claim","CLV","CLV","claim","","",0),
+            ("CLV External账户质押","CLV","CLV","stake","","",str(Conf.Config.random_amount(4))),
+            ("CLV External账户赎回","CLV","CLV","un_stake","","",str(Conf.Config.random_amount(5))),
+            ("CLV External账户claim","CLV","CLV","claim","","",0),
         ]
     if env_type == 1: #生产
         test_data = [

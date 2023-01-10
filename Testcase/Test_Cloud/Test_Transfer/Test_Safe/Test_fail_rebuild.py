@@ -21,12 +21,12 @@ class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
             # GOERLI
-            # ("GOERLI safe账户转账 nativecoin 交易不能Rebuild","GOERLI","GoerliETH","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17","0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2","0.00012",400,2300000),
-            # ("GOERLI safe账户转账 erc20coin 交易不能Rebuild","GOERLI","USDCC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17","0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2","0.00123",400,2300000),
+            ("GOERLI safe账户转账 nativecoin 交易不能Rebuild","GOERLI","GoerliETH","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17","0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2","0.00012",400,2300000),
+            ("GOERLI safe账户转账 erc20coin 交易不能Rebuild","GOERLI","USDCC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17","0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2","0.00123",400,2300000),
 
             # MATIC
-            # ("MATIC safe账户转账 nativecoin 交易不能Rebuild","MATIC","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x585eab16d5494f01bae462d4719d12214a443eec","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","0.000012",400,2300000),
-            # ("MATIC safe账户转账 erc20coin 交易不能Rebuild","MATIC","USDC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x585eab16d5494f01bae462d4719d12214a443eec","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","0.00123",400,2300000),
+            ("MATIC safe账户转账 nativecoin 交易不能Rebuild","MATIC","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x585eab16d5494f01bae462d4719d12214a443eec","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","0.000012",400,2300000),
+            ("MATIC safe账户转账 erc20coin 交易不能Rebuild","MATIC","USDC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x585eab16d5494f01bae462d4719d12214a443eec","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","0.00123",400,2300000),
         ]
     elif env_type == 1: #生产
         test_data = [

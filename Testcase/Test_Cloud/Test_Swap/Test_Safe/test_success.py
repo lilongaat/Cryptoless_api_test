@@ -1,3 +1,4 @@
+from decimal import Decimal
 import json
 import random
 import string
@@ -8,14 +9,14 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__)))))))
-from Common import Http, Conf, Httpcore
+from Common import Http, Conf, Httpexplore
 from Common.Loguru import logger
 
 from Config.readconfig import ReadConfig
 env_type = int(ReadConfig().get_env('type'))
 
 
-@allure.feature("Transfers Success!")
+@allure.feature("Swap Success!")
 class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
@@ -27,18 +28,28 @@ class Test_transfers_success:
         test_data = [
              # MATIC
             # ("MATIC SWAP:MATIC->USDC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","MATIC","USDC","1","0.00012"),
-            ("MATIC SWAP:USDC->MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","USDC","MATIC","1","0.000011"),
+            # ("MATIC SWAP:USDC->MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","USDC","MATIC","1","0.000011"),
         ]
 
-    @allure.story("Custodial Transfers Success!")
+    @allure.story("Custodial Swap Success!")
     @allure.title('{test_title}')
     @pytest.mark.parametrize('test_title,networkCode,privatekey,address,from_coin,to_coin,slippage,fromamount', test_data)
     def test_custodial(self,test_title,networkCode,privatekey,address,from_coin,to_coin,slippage,fromamount):
 
-        with allure.step("core查询账户holder信息"):
+        with allure.step("浏览器查询from账户balance信息"):
+            balance = Httpexplore.Balances_explore.query(networkCode,address,from_coin)
+                
+        with allure.step("查询from账户holder信息"):
             holder = Http.HttpUtils.holders(networkCode=networkCode,symbol=from_coin,address=address)
             assert holder.status_code ==200
-            quantity = holder.json()["list"][0]["quantity"]
+            quantity = Decimal(holder.json()["list"][0]["quantity"])
+
+        logger.debug("浏览器查询账户balance为:" + str(balance))
+        logger.debug("查询账户holder为:" + str(quantity))
+
+        with allure.step("账户余额相等验证 浏览器查询==holder"):
+            assert balance == quantity
+
 
         with allure.step("core构建交易——instructions"):
             body = {
@@ -81,6 +92,34 @@ class Test_transfers_success:
             send = Http.HttpUtils.send(id)
             assert send.status_code == 200
             assert send.json()["statusDesc"] == "PENDING"
+
+        with allure.step("通过id查询交易记录"):
+            sleep(30)
+            for n in range(10):
+                transaction = Http.HttpUtils.transactions_byid(id)
+                assert transaction.status_code == 200
+                statusDesc = transaction.json()["statusDesc"]
+                if statusDesc == "SETTLED" and len(transaction.json()["balanceChanges"]) > 0:
+                    break
+                else:
+                    sleep(30)
+            sleep(5)
+
+
+        with allure.step("浏览器查询from账户balance信息"):
+            balance = Httpexplore.Balances_explore.query(networkCode,address,from_coin)
+                
+        with allure.step("查询from账户holder信息"):
+            holder = Http.HttpUtils.holders(networkCode=networkCode,symbol=from_coin,address=address)
+            assert holder.status_code ==200
+            quantity = Decimal(holder.json()["list"][0]["quantity"])
+
+        logger.debug("浏览器查询账户balance为:" + str(balance))
+        logger.debug("查询账户holder为:" + str(quantity))
+
+        with allure.step("账户余额相等验证 浏览器查询==holder"):
+            assert balance == quantity
+
 
 if __name__ == '__main__':
     path = os.path.abspath(__file__) + ""

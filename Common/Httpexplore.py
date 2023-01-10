@@ -541,7 +541,9 @@ class Balances_explore:
                 assert response.status_code == 200
                 balance = Decimal(str(response.json()["result"]))/Decimal(10**18)
             else:
-                response = GOERLI.balance_erc20(address,"0x1eC2CE6108240118Ff2c66eC8AFAC28618D7e066")
+                if symbol == "USDCC":
+                    tokenaddress = "0x1eC2CE6108240118Ff2c66eC8AFAC28618D7e066"
+                response = GOERLI.balance_erc20(address,tokenaddress)
                 assert response.status_code == 200
                 balance = Decimal(str(response.json()["result"]))/Decimal(10**18)
         elif networkCode == "BSC":
@@ -559,7 +561,11 @@ class Balances_explore:
                 assert response.status_code == 200
                 balance = Decimal(response.json()["result"])/Decimal(10**18)
             else:
-                response = MATIC.balance_erc20(address,"0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174")
+                if symbol == "USDT":
+                    tokenaddress = "0xc2132D05D31c914a87C6611C10748AEb04B58e8F"
+                elif symbol == "USDC":
+                    tokenaddress = "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
+                response = MATIC.balance_erc20(address,tokenaddress)
                 assert response.status_code == 200
                 balance = Decimal(response.json()["result"])/Decimal(10**6)
         elif networkCode == "ATOM":

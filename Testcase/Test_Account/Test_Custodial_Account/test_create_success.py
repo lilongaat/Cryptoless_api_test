@@ -28,7 +28,7 @@ class Test_create_custodial_account:
             ("DOT 创建+查询+删除托管账户","托管账户DOT"+str(Conf.Config.now_timestamp()),"DOT")
         ]
 
-    if env_type == 1: #生产
+    elif env_type == 1: #生产
         test_data = [
             ("BTC 创建+查询+删除托管账户","托管账户BTC"+str(Conf.Config.now_timestamp()),"BTC"),
             ("DOGE 创建+查询+删除托管账户","托管账户DOGE"+str(Conf.Config.now_timestamp()),"DOGE"),
