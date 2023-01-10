@@ -11,8 +11,11 @@ class PropogateHandler(logging.Handler):
 today = str(Conf.Config.now_time_day())
 nowtime =  Conf.Config.now_time()
 
+path = os.path.abspath(__file__) + ""
+print(path.split("/Common/Loguru.py")[0])
+
 # 写入日志文件
-logger.add("/Users/lilong/Documents/Test_Api/Report/log/" + "log-" + today + ".log",
+logger.add(path + "/Report/log/" + "log-" + today + ".log",
                   rotation="00:00",#每天00:00创建新的日志文件
                   encoding="utf-8",#避免中文乱码
                   level="ERROR",#控制写入日志等级
