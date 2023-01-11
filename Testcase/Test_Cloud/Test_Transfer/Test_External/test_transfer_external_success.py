@@ -70,7 +70,7 @@ class Test_transfers_success:
             # ("CLV extarnal账户转账","CLV","CLV","47b81eca9356ddc7e9bcd80eb9927357510b696e72413198754b613648c3fe58","5CAG6GuiuzFFbXR2fHhkqvuMRL7yVaj75tJpgKChA4EJELvH","5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc","0.1"),
         ]
 
-    @allure.story("Custodial Transfers Success!")
+    @allure.story("External Transfers Success!")
     @allure.title('{test_title}')
     @pytest.mark.parametrize('test_title,networkCode,symbol,privatekey,from_add,to_add,amount', test_data)
     def test_custodial(self,test_title,networkCode,symbol,privatekey,from_add,to_add,amount):

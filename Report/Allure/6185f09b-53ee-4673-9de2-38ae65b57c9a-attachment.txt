@@ -1,0 +1,46 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:90 2023-01-11 15:29:18.218277 | 
+<-----balance----->
+Url:https://dogechain.info/chain/Dogecoin/q/addressbalance/D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:92 2023-01-11 15:29:18.218277 | 
+<-----balance response----->
+
+Body:2.6919502
+[32mINFO    [0m Common.Http:Http.py:421 2023-01-11 15:29:18.218277 | 
+<-----Query Holders----->
+Url:https://api.cryptoless.net/vault/proxy/assets/holders/?networkCode=DOGE&address=D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6&symbol=DOGE
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczOTQzOTEyLCJpYXQiOjE2NzMzMzkxMTIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.as76Z2zPKhedohNNZrSt0PuPP729a4MyLX219QWSoGc"}
+
+
+[32mINFO    [0m Common.Http:Http.py:424 2023-01-11 15:29:18.218277 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","createdTime":"2023-01-03T06:24:00.000Z","id":"1610160027052675073","networkCode":"DOGE","quantity":"2.6919502","symbol":"DOGE","updatedTime":"2023-01-11T07:29:05.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_transfer_custodial_success:test_transfer_custodial_success.py:82 2023-01-11 15:29:18.218277 | 浏览器查询账户balance为:2.6919502
+[35mDEBUG   [0m test_transfer_custodial_success:test_transfer_custodial_success.py:83 2023-01-11 15:29:18.218277 | 查询账户holder为:2.6919502
+[32mINFO    [0m Common.Http:Http.py:261 2023-01-11 15:29:18.218277 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczOTQzOTEyLCJpYXQiOjE2NzMzMzkxMTIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.as76Z2zPKhedohNNZrSt0PuPP729a4MyLX219QWSoGc"}
+Body:{"networkCode": "DOGE", "type": "transfer", "body": {"from": "D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6", "to": "D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j", "symbol": "DOGE", "amount": "0.0001"}, "transactionParams": {"memo": "kICYAFhQWT"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:264 2023-01-11 15:29:18.218277 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-01-11T07:29:21.000Z","description":"Send DOGE","estimatedFee":"261660","fee":"-1","hash":"c53ffc0c7fb7e33ec4afdbb1ca9b764bb50965a5ce0b720341562cf2788cefc3","id":"1613075573605982210","networkCode":"DOGE","serialized":"0100000001a4f197bdcf2ee1a30f99e574454413a5c331b28fe11371af270fce7962dc4d4f010000006a47304402205f2fe81dd18f7a5661a7a3456507e2b9f3432226629a0d95164ad2964266cc9c02207829b7d31f5b490709cd0d2eba828ba5df566310b1f85d69e6044345bac4f331012103515fc3ca5b4429ead74c0c47a19534194dde9a1a2a1b7a6e96a52c465cc40ebbffffffff0210270000000000001976a9142d7f61cf518210cd20aefe35d69464f040cb814188ace0710710000000001976a914347ac4d31ccb7ac8b58931594cd70bd691aad49a88ac00000000","status":2,"statusDesc":"SIGNED","updatedTime":"2023-01-11T07:29:22.000Z"}]},"body":{"symbol":"DOGE","amount":"0.0001","from":"D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","to":"D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j"},"createdTime":"2023-01-11T07:29:21.000Z","id":"1613075575075962881","networkCode":"DOGE","status":-2,"transactionParams":{"memo":"kICYAFhQWT"},"type":"TRANSFER","updatedTime":"2023-01-11T07:29:21.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:360 2023-01-11 15:29:18.218277 | 
+<-----Send----->
+Url:https://api.cryptoless.net/vault/transactions/send/1613075573605982210
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczOTQzOTEyLCJpYXQiOjE2NzMzMzkxMTIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.as76Z2zPKhedohNNZrSt0PuPP729a4MyLX219QWSoGc"}
+
+
+[32mINFO    [0m Common.Http:Http.py:367 2023-01-11 15:29:18.218277 | 
+<-----Send Response Error----->
+400
+{"code":2300000,"message":"64: dust"}

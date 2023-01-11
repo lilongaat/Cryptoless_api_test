@@ -15,7 +15,7 @@ from Config.readconfig import ReadConfig
 env_type = int(ReadConfig().get_env('type'))
 
 # custodial
-@allure.feature("Transfers Success!")
+@allure.feature("Transfers Fail!")
 class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
@@ -32,7 +32,7 @@ class Test_transfers_success:
     elif env_type == 1: #生产
         test_data = []
 
-    @allure.story("Custodial Transfers Success!")
+    @allure.story("Custodial Transfers Cancel!")
     @allure.title('{test_title}')
     @pytest.mark.parametrize('test_title,networkCode,symbol,from_add,to_add,amount', test_data)
     def test_custodial(self,test_title,networkCode,symbol,from_add,to_add,amount):

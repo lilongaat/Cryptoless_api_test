@@ -33,7 +33,7 @@ class Test_transfers_success:
             # MATIC
         ]
 
-    @allure.story("Custodial Transfers Success!")
+    @allure.story("Safe Transfers Success!")
     @allure.title('{test_title}')
     @pytest.mark.parametrize('test_title,networkCode,symbol,privatekey,publickey,from_add,to_add,amount', test_data)
     def test_custodial(self,test_title,networkCode,symbol,privatekey,publickey,from_add,to_add,amount):

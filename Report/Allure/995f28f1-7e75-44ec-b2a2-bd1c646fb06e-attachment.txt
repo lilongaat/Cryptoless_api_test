@@ -1,0 +1,20 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:90 2023-01-11 15:27:50.663542 | 
+<-----balance----->
+Url:https://dogechain.info/chain/Dogecoin/q/addressbalance/D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:92 2023-01-11 15:27:50.663542 | 
+<-----balance response----->
+
+Body:2.6919502
+[32mINFO    [0m Common.Http:Http.py:421 2023-01-11 15:27:50.663542 | 
+<-----Query Holders----->
+Url:https://api.cryptoless.net/vault/proxy/assets/holders/?networkCode=DOGE&address=D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6&symbol=DOGE
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczOTQzOTEyLCJpYXQiOjE2NzMzMzkxMTIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.as76Z2zPKhedohNNZrSt0PuPP729a4MyLX219QWSoGc"}
+
+
+[32mINFO    [0m Common.Http:Http.py:424 2023-01-11 15:27:50.663542 | 
+<-----Query Holders Response----->
+{"current":1,"list":[],"size":10,"total":0}

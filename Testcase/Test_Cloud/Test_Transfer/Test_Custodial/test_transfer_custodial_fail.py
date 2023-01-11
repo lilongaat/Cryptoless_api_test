@@ -15,7 +15,7 @@ from Config.readconfig import ReadConfig
 env_type = int(ReadConfig().get_env('type'))
 
 # custodial
-@allure.feature("Transfers Success!")
+@allure.feature("Transfers Fail!")
 class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
@@ -33,6 +33,8 @@ class Test_transfers_success:
             ("BTC Custodial账户转账 amount超出余额","BTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000002",400,2102001),
             ("BTC Custodial账户转账 amount超出精度","BTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000002",400,2102001),
             
+            # DOGE 没有验证
+            # ("DOGE Custodial账户转账 dust","DOGE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.00000002",400,2102001),
 
             # GOERLI
             ("GOERLI Custodial账户转账 nativecoin 超出精度","GOERLI","GoerliETH","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.000000000000000002",400,2102001),
@@ -69,7 +71,7 @@ class Test_transfers_success:
 
         ]
 
-    @allure.story("Custodial Transfers Success!")
+    @allure.story("Custodial Transfers Fail!")
     @allure.title('{test_title}')
     @pytest.mark.parametrize('test_title,networkCode,symbol,from_add,to_add,amount,status_code,code', test_data)
     def test_custodial(self,test_title,networkCode,symbol,from_add,to_add,amount,status_code,code):
