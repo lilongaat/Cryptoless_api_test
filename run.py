@@ -15,33 +15,34 @@ report_file = 'Allure_Testfile_' + str(datetime.date.today())
 def job_test_account():
     pytest.main(["-vs", path + "/Testcase/Test_Account", '--alluredir=Report/' + report_file])
 
-# Test_transfers_BTC
-def job_transfer_btc():
-    pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Transfers_BTC", '--alluredir=Report/' + report_file])
+# Testcase Test_Transfer
+def job_transfer_transfer():
+    pytest.main(["-vs", path + "/Testcase/Test_Cloud/Test_Transfer", '--alluredir=Report/' + report_file])
 
-# Test_transfers_ETH
-def job_transfer_eth():
-    pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Transfers_ETH", '--alluredir=Report/' + report_file])
+# Testcase Test_Stake
+def job_transfer_Stake():
+    pytest.main(["-vs", path + "/Testcase/Test_Cloud/Test_Stake", '--alluredir=Report/' + report_file])
 
-# Test_transfers_IRIS
-def job_transfer_iris():
-    pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_transfers_IRIS", '--alluredir=Report/' + report_file])
+# Testcase Test_Swap
+def job_transfer_Swap():
+    pytest.main(["-vs", path + "/Testcase/Test_Cloud/Test_Swap", '--alluredir=Report/' + report_file])
 
-# Test_transfers_CLV
-def job_transfer_clv():
-    pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Transfers_clv", '--alluredir=Report/' + report_file])
+# # Assets_Recovery
+# def job_recovery():
+#     pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Transfers/test_recovery.py", '--alluredir=Report/' + report_file])
 
-# Assets_Recovery
-def job_recovery():
-    pytest.main(["-vs", "/Users/lilong/Documents/Test_Api/Testcase/Test_Transfers/test_recovery.py", '--alluredir=Report/' + report_file])
-
-# Reports
-def job_report(report_file):
-    os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/' + report_file)
+# # Reports
+# def job_report(report_file):
+#     os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/' + report_file)
 
 
 # 任务调度器
 scheduler = BackgroundScheduler()
+# Account
+scheduler.add_job(job_test_account,trigger='cron',second=0,minute=20,hour=12)
+scheduler.start()
+
+
 # # Stake
 # scheduler.add_job(job_stake_iris,trigger='cron',second=9,minute=52,hour=21)
 # scheduler.add_job(job_stake_clv,trigger='cron',second=0,minute=0,hour=6)
