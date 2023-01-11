@@ -20,7 +20,7 @@ class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
             # MATIC 
-            ("MATIC SWAP:MATIC-USDC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","MATIC","USDC","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","BSC","USDT","1","0.000012"),
+            # ("MATIC SWAP:MATIC-USDC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","MATIC","USDC","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","BSC","USDT","1","0.000012"),
         ]
     elif env_type == 1: #生产
         test_data = []

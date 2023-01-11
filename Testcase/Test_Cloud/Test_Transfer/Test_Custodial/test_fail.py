@@ -20,22 +20,22 @@ class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
             # BTC
-            # ("BTC Custodial账户转账 networkCode空","","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000001",400,2100000),
-            # ("BTC Custodial账户转账 networkCode不存在","WBTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000001",404,2200000),
-            # ("BTC Custodial账户转账 symbol空","BTC","","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000001",400,2300000),
-            # ("BTC Custodial账户转账 symbol不存在","BTC","WBTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000001",400,2200000),
-            # ("BTC Custodial账户转账 from空","BTC","BTC","","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000001",400,2300000),
-            # ("BTC Custodial账户转账 from不属于该用户","BTC","BTC","bc1qgdjqv0av3q56jvd82tkdjpy7gdp9ut8tlqmgrpmv24sq90ecnvqqjwvw97","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000002",404,2200000),
-            # ("BTC Custodial账户转账 from地址不匹配网络","BTC","BTC","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000001",404,2200000),
-            # ("BTC Custodial账户转账 to空","BTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","","0.00000001",400,2300000),
-            # ("BTC Custodial账户转账 to地址不匹配网络","BTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","0.00000001",400,2400000),
-            # ("BTC Custodial账户转账 amount空","BTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","",400,2300000),
-            # ("BTC Custodial账户转账 amount超出余额","BTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000002",400,2102001),
-            # ("BTC Custodial账户转账 amount超出精度","BTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000002",400,2102001),
+            ("BTC Custodial账户转账 networkCode空","","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000001",400,2100000),
+            ("BTC Custodial账户转账 networkCode不存在","WBTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000001",404,2200000),
+            ("BTC Custodial账户转账 symbol空","BTC","","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000001",400,2300000),
+            ("BTC Custodial账户转账 symbol不存在","BTC","WBTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000001",400,2200000),
+            ("BTC Custodial账户转账 from空","BTC","BTC","","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000001",400,2300000),
+            ("BTC Custodial账户转账 from不属于该用户","BTC","BTC","bc1qgdjqv0av3q56jvd82tkdjpy7gdp9ut8tlqmgrpmv24sq90ecnvqqjwvw97","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000002",404,2200000),
+            ("BTC Custodial账户转账 from地址不匹配网络","BTC","BTC","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000001",404,2200000),
+            ("BTC Custodial账户转账 to空","BTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","","0.00000001",400,2300000),
+            ("BTC Custodial账户转账 to地址不匹配网络","BTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","0.00000001",400,2400000),
+            ("BTC Custodial账户转账 amount空","BTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","",400,2300000),
+            ("BTC Custodial账户转账 amount超出余额","BTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000002",400,2102001),
+            ("BTC Custodial账户转账 amount超出精度","BTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000002",400,2102001),
             
 
             # GOERLI
-            # ("GOERLI Custodial账户转账 nativecoin 超出精度","GOERLI","GoerliETH","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.000000000000000002",400,2102001),
+            ("GOERLI Custodial账户转账 nativecoin 超出精度","GOERLI","GoerliETH","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.000000000000000002",400,2102001),
             ("GOERLI Custodial账户转账 nativecoin 超出余额","GOERLI","GoerliETH","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.000002",400,2102001),
         ]
     elif env_type == 1: #生产

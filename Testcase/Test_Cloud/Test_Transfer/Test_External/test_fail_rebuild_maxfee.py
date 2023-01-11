@@ -21,8 +21,8 @@ class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
             # MATIC 
-            # ("MATIC extarnal账户转账 nativecoin","MATIC","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.000121"),
-            # ("MATIC extarnal账户转账 erc20coin","MATIC","USDC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","maximum"),
+            ("MATIC extarnal账户转账 nativecoin","MATIC","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.000121"),
+            ("MATIC extarnal账户转账 erc20coin","MATIC","USDC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","maximum"),
         ]
     elif env_type == 1: #生产
         test_data = [
