@@ -42,7 +42,7 @@ class Test_transfers_success:
             # BTC
 
             # DOGE
-            # ("DOGE Custodial账户转账","DOGE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.1001"),
+            ("DOGE Custodial账户转账","DOGE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.1001"),
 
             # ETH
 

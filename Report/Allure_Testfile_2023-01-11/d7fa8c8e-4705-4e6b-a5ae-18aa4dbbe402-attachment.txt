@@ -1,0 +1,20 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:240 2023-01-11 14:30:36.930790 | 
+<-----Balance ERC20----->
+Url:https://api.polygonscan.com/api?module=account&action=tokenbalance&contractaddress=0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174&address=0x9b532cf5f662e51ba643672797ad3ec1a60bb939&tag=latest&apikey=85W6B7V5TPH7TDZA3JQCFT8UN8RKAEMA4Y
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:242 2023-01-11 14:30:36.930790 | 
+<-----Balance ERC20 response----->
+
+Body:{"status": "1", "message": "OK", "result": "98901"}
+[32mINFO    [0m Common.Http:Http.py:421 2023-01-11 14:30:36.930790 | 
+<-----Query Holders----->
+Url:http://api.orbital3.xyz/vault/proxy/assets/holders/?networkCode=MATIC&address=0x9b532cf5f662e51ba643672797ad3ec1a60bb939&symbol=USDC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczOTQzOTEyLCJpYXQiOjE2NzMzMzkxMTIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.as76Z2zPKhedohNNZrSt0PuPP729a4MyLX219QWSoGc"}
+
+
+[32mINFO    [0m Common.Http:Http.py:424 2023-01-11 14:30:36.930790 | 
+<-----Query Holders Response----->
+{"current":1,"list":[],"size":10,"total":0}

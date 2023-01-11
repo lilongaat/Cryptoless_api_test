@@ -19,9 +19,9 @@ if __name__ == '__main__':
     # 测试报告文件路径
     report_file = 'Allure_Testfile_' + str(datetime.date.today())
 
-    pytest.main(["-vs", path_account, '--alluredir=Report/' + report_file])
+    # pytest.main(["-vs", path_account, '--alluredir=Report/' + report_file])
     pytest.main(["-vs", path_transfer, '--alluredir=Report/' + report_file])
-    pytest.main(["-vs", path_stake, '--alluredir=Report/' + report_file])
-    pytest.main(["-vs", path_swap, '--alluredir=Report/' + report_file])
+    # pytest.main(["-vs", path_stake, '--alluredir=Report/' + report_file])
+    # pytest.main(["-vs", path_swap, '--alluredir=Report/' + report_file])
     # pytest.main(["-vs", path_swap,'--clean-alluredir', '--alluredir=Report/' + report_file])
     # os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/' + report_file)
