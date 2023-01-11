@@ -21,14 +21,14 @@ class Test_stake_success:
     if env_type == 0: #测试
         test_data = [
             # IRIS
-            ("IRIS External账户质押","IRIS","IRIS","stake","","",str(Conf.Config.random_amount(4))),
-            ("IRIS External账户赎回","IRIS","IRIS","un_stake","","",str(Conf.Config.random_amount(5))),
-            ("IRIS External账户claim","IRIS","IRIS","claim","","",0),
+            ("IRIS External账户质押","IRIS","IRIS","stake","d10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b","iaa1ed68xf6453t7u4ttsmphdrwqflx2l90e6ymuaq",str(Conf.Config.random_amount(4))),
+            ("IRIS External账户赎回","IRIS","IRIS","un_stake","d10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b","iaa1ed68xf6453t7u4ttsmphdrwqflx2l90e6ymuaq",str(Conf.Config.random_amount(5))),
+            ("IRIS External账户claim","IRIS","IRIS","claim","d10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b","iaa1ed68xf6453t7u4ttsmphdrwqflx2l90e6ymuaq",0),
 
             # CLV
-            ("CLV External账户质押","CLV","CLV","stake","","",str(Conf.Config.random_amount(4))),
-            ("CLV External账户赎回","CLV","CLV","un_stake","","",str(Conf.Config.random_amount(5))),
-            ("CLV External账户claim","CLV","CLV","claim","","",0),
+            ("CLV External账户质押","CLV","CLV","stake","7967c43bd3f3874ccfa6ff6ceda5faa8c699ad0fe2be33f44c8bb8abcb23a2fd","5Hdmv7BeAe1XFJXso8oGMidGp186cb4uNTNMywp6fBY7UEsr",str(Conf.Config.random_amount(4))),
+            ("CLV External账户赎回","CLV","CLV","un_stake","7967c43bd3f3874ccfa6ff6ceda5faa8c699ad0fe2be33f44c8bb8abcb23a2fd","5Hdmv7BeAe1XFJXso8oGMidGp186cb4uNTNMywp6fBY7UEsr",str(Conf.Config.random_amount(5))),
+            ("CLV External账户claim","CLV","CLV","claim","7967c43bd3f3874ccfa6ff6ceda5faa8c699ad0fe2be33f44c8bb8abcb23a2fd","5Hdmv7BeAe1XFJXso8oGMidGp186cb4uNTNMywp6fBY7UEsr",0),
         ]
     if env_type == 1: #生产
         test_data = [
