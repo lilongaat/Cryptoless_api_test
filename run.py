@@ -45,11 +45,11 @@ if __name__ == "__main__":
 
     scheduler.add_job(job_test_block,'interval',minute=10)
     
-    scheduler.add_job(job_test_user, 'cron', hour=12, minute=00)
-    scheduler.add_job(job_test_account, 'cron', hour=12, minute=10)
-    scheduler.add_job(job_transfer_transfer, 'cron', hour=12, minute=20)
-    scheduler.add_job(job_transfer_Swap, 'cron', hour=12, minute=50)
-    scheduler.add_job(job_transfer_Stake, 'cron', hour=13, minute=10)
+    scheduler.add_job(job_test_user, 'cron', hour=8, minute=00)
+    scheduler.add_job(job_test_account, 'cron', hour=8, minute=10)
+    scheduler.add_job(job_transfer_transfer, 'cron', hour=8, minute=20)
+    scheduler.add_job(job_transfer_Swap, 'cron', hour=9, minute=50)
+    scheduler.add_job(job_transfer_Stake, 'cron', hour=9, minute=10)
     scheduler.start()
 
 
