@@ -1,0 +1,20 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:398 2023-01-12 15:31:44.633290 | 
+<-----balance----->
+Url:https://clover.webapi.subscan.io/api/scan/account/tokens
+
+Headers:{"authority": "clover.webapi.subscan.io", "accept": "application/json, text/plain, */*", "accept-language": "zh-CN", "baggage": "", "content-type": "application/json", "origin": "https://clover.subscan.io", "referer": "https://clover.subscan.io/", "sec-ch-ua": "\"Chromium\";v=\"104\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"104\"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": "\"macOS\"", "sec-fetch-dest": "empty", "sec-fetch-mode": "cors", "sec-fetch-site": "same-site", "sentry-trace": "ea3a8691962949979b1cf67d39347ede-99c15b8b0f09a827-0", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.101 Safari/537.36"}
+
+payload:"{\"address\": \"5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc\"}"
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:400 2023-01-12 15:31:44.633290 | 
+<-----balance response----->
+
+Body:{"code": 0, "message": "Success", "generated_at": 1673508705, "data": {"native": [{"symbol": "CLV", "decimals": 18, "balance": "89191249999968646", "lock": "700000000000000", "reserved": "0", "bonded": "650000000000000", "unbonding": "50000000000000", "democracy_lock": "0", "election_lock": "0"}]}}
+[32mINFO    [0m Common.Http:Http.py:438 2023-01-12 15:31:44.633290 | 
+<-----Query Holders----->
+Url:https://api.cryptoless.net/vault/proxy/assets/holders/?networkCode=CLV&address=5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc&symbol=CLV
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczOTQzOTEyLCJpYXQiOjE2NzMzMzkxMTIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.as76Z2zPKhedohNNZrSt0PuPP729a4MyLX219QWSoGc"}
+
+
+[32mINFO    [0m Common.Http:Http.py:441 2023-01-12 15:31:44.633290 | 
+<-----Query Holders Response----->
+{"current":1,"list":[],"size":10,"total":0}

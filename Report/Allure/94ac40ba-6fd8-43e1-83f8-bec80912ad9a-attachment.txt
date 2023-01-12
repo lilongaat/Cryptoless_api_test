@@ -1,0 +1,22 @@
+[35mDEBUG   [0m test_blockheight_check:test_blockheight_check.py:76 2023-01-12 19:24:09.803353 | 16390402
+[32mINFO    [0m Common.Graphql:Graphql.py:114 2023-01-12 19:24:09.803353 | 
+<-----LatestBlock----->
+Url:http://18.166.208.93:14100/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getLatestBlock{blockHash blockNumber}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:117 2023-01-12 19:24:09.803353 | 
+<-----LatestBlock response----->
+
+Body:{"data": {"getLatestBlock": {"blockHash": "0x2467d28b149ac8cc0c04c9ef6b45b4fb2b64f8fd0cb35331661c63201f146668", "blockNumber": 16390402}}}
+[32mINFO    [0m Common.Http:Http.py:397 2023-01-12 19:24:09.803353 | 
+<-----NetWorks----->
+Url:https://api.cryptoless.net/vault/networks?networkCode=ETH
+Headers:
+{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczOTQzOTEyLCJpYXQiOjE2NzMzMzkxMTIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.as76Z2zPKhedohNNZrSt0PuPP729a4MyLX219QWSoGc"}
+
+
+[32mINFO    [0m Common.Http:Http.py:400 2023-01-12 19:24:09.803353 | 
+<-----Query Networks Response----->
+[{"accountTypes":["external","custodial","safe","shared"],"blocks":"16390401","code":"ETH","createdTime":"2021-07-07T15:36:37.000Z","derivationPath":"m/44'/60'/0'/0/","evmChainId":1,"feeCoin":{"decimals":18,"symbol":"ETH"},"iconURL":"https://img.cryptoless.net/cryptos/eth.png","id":"1412676916705415169","links":{"address":"https://etherscan.io/address/{0}","tx":"https://etherscan.io/tx/{0}"},"name":"Ethereum","platform":"ETHEREUM","status":"enable","updatedTime":"2022-11-22T09:55:49.000Z"}]

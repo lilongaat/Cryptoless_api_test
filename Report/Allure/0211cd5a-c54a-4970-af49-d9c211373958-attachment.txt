@@ -1,0 +1,31 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:249 2023-01-12 19:34:41.735399 | 
+<-----block----->
+Url:https://api.polygonscan.com/api?module=block&action=getblocknobytime&timestamp=1673523288&closest=before&apikey=85W6B7V5TPH7TDZA3JQCFT8UN8RKAEMA4Y
+
+
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:251 2023-01-12 19:34:41.735399 | 
+<-----block response----->
+
+Body:{"status": "1", "message": "OK", "result": "37982880"}
+[35mDEBUG   [0m test_blockheight_check:test_blockheight_check.py:79 2023-01-12 19:34:41.735399 | 37982880
+[32mINFO    [0m Common.Graphql:Graphql.py:114 2023-01-12 19:34:41.735399 | 
+<-----LatestBlock----->
+Url:http://18.166.208.93:14102/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getLatestBlock{blockHash blockNumber}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:117 2023-01-12 19:34:41.735399 | 
+<-----LatestBlock response----->
+
+Body:{"data": {"getLatestBlock": {"blockHash": "0x05fd00cde9a47e3ff603bdaf7b90223e64725aa6e31636857a569138790f414f", "blockNumber": 37982884}}}
+[32mINFO    [0m Common.Http:Http.py:397 2023-01-12 19:34:41.735399 | 
+<-----NetWorks----->
+Url:https://api.dhandho.xyz/vault/networks?networkCode=MATIC
+Headers:
+{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:400 2023-01-12 19:34:41.735399 | 
+<-----Query Networks Response----->
+[{"accountTypes":["external","custodial","safe","shared"],"blocks":"37982858","code":"MATIC","createdTime":"2022-06-29T06:38:05.000Z","derivationPath":"m/44'/60'/0'/0/","evmChainId":137,"feeCoin":{"decimals":18,"symbol":"MATIC"},"iconURL":"https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@bea1a9722a8c63169dcc06e86182bf2c55a76bbc/128/color/matic.png","id":"1542034654471057409","links":{"address":"https://polygonscan.com/address/{0}","tx":"https://polygonscan.com/tx/{0}"},"name":"Polygon","platform":"ETHEREUM","status":"enable","updatedTime":"2023-01-11T03:07:01.000Z"}]

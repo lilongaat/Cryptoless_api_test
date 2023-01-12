@@ -1,0 +1,1 @@
+[35mDEBUG   [0m test_blockheight_check:test_blockheight_check.py:76 2023-01-12 18:42:39.299098 | 8298251

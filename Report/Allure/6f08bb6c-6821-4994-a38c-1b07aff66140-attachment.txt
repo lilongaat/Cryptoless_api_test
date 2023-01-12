@@ -1,0 +1,22 @@
+[35mDEBUG   [0m test_blockheight_check:test_blockheight_check.py:79 2023-01-12 19:31:22.989254 | 9498839
+[32mINFO    [0m Common.Graphql:Graphql.py:114 2023-01-12 19:31:22.989254 | 
+<-----LatestBlock----->
+Url:http://13.212.89.244:4003/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getLatestBlock{blockHash blockNumber}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:117 2023-01-12 19:31:22.989254 | 
+<-----LatestBlock response----->
+
+Body:{"data": {"getLatestBlock": {"blockHash": "0xb2224472a2b92620907fb87d51b31a3310b7fd87db9851625d334e983c91cc17", "blockNumber": 9574392}}}
+[32mINFO    [0m Common.Http:Http.py:397 2023-01-12 19:31:22.989254 | 
+<-----NetWorks----->
+Url:https://api.dhandho.xyz/vault/networks?networkCode=CLV
+Headers:
+{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:400 2023-01-12 19:31:22.989254 | 
+<-----Query Networks Response----->
+[{"accountTypes":["external","custodial"],"blocks":"9574387","code":"CLV","createdTime":"2021-07-07T15:36:39.000Z","derivationPath":"m/44'/354'/0'/0/","feeCoin":{"decimals":18,"symbol":"CLV"},"iconURL":"https://cc-icons.s3.ap-southeast-1.amazonaws.com/clv.png","id":"1412676923223363585","links":{"address":"https://clover-testnet.subscan.io/account/{0}","tx":"https://clover-testnet.subscan.io/extrinsic/{0}"},"name":"CLV M-Chain","platform":"POLKADOT","status":"enable","updatedTime":"2023-01-10T09:55:26.000Z"}]

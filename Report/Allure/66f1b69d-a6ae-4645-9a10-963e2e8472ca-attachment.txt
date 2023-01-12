@@ -1,0 +1,22 @@
+[35mDEBUG   [0m test_blockheight_check:test_blockheight_check.py:76 2023-01-12 18:55:28.347831 | 13768430
+[32mINFO    [0m Common.Graphql:Graphql.py:114 2023-01-12 18:55:28.347831 | 
+<-----LatestBlock----->
+Url:http://18.162.150.113:14300/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getLatestBlock{blockHash blockNumber}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:117 2023-01-12 18:55:28.347831 | 
+<-----LatestBlock response----->
+
+Body:{"data": {"getLatestBlock": {"blockHash": "0xd8ec96e0d23b6623f2cbe42188da3230ca1b8a97aba2bd0c97d60a68fce48939", "blockNumber": 13747165}}}
+[32mINFO    [0m Common.Http:Http.py:397 2023-01-12 18:55:28.347831 | 
+<-----NetWorks----->
+Url:https://api.cryptoless.net/vault/networks?networkCode=DOT
+Headers:
+{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczOTQzOTEyLCJpYXQiOjE2NzMzMzkxMTIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.as76Z2zPKhedohNNZrSt0PuPP729a4MyLX219QWSoGc"}
+
+
+[32mINFO    [0m Common.Http:Http.py:400 2023-01-12 18:55:28.347831 | 
+<-----Query Networks Response----->
+[{"accountTypes":["external","custodial"],"blocks":"13747100","code":"DOT","createdTime":"2021-07-07T15:36:38.000Z","derivationPath":"m/44'/354'/0'/0/","feeCoin":{"decimals":10,"symbol":"DOT"},"iconURL":"https://img.cryptoless.net/cryptos/dot.png","id":"1412676921075879937","links":{"address":"https://polkadot.subscan.io/account/{0}","tx":"https://polkadot.subscan.io/extrinsic/{0}"},"name":"Polkadot","platform":"POLKADOT","status":"enable","updatedTime":"2023-01-05T10:23:20.000Z"}]

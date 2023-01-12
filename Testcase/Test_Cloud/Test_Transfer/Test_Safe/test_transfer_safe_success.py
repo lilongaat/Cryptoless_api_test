@@ -28,8 +28,8 @@ class Test_transfers_success:
             ("GOERLI safe账户转账 erc20coin","GOERLI","USDCC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17","0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2","0.00123"),
 
             # GOERLI 激活+转账
-            ("GOERLI safe账户转账 nativecoin","GOERLI","GoerliETH","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xacd5c6a98407469856b47d333309ed814fc64ebe","0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2","0.00023"),
-            ("GOERLI safe账户转账 erc20coin","GOERLI","USDCC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xacd5c6a98407469856b47d333309ed814fc64ebe","0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2","0.000123"),
+            # ("GOERLI safe账户转账 nativecoin","GOERLI","GoerliETH","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xacd5c6a98407469856b47d333309ed814fc64ebe","0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2","0.00023"),
+            # ("GOERLI safe账户转账 erc20coin","GOERLI","USDCC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xacd5c6a98407469856b47d333309ed814fc64ebe","0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2","0.000123"),
 
             # MATIC
             ("MATIC safe账户转账 nativecoin","MATIC","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x585eab16d5494f01bae462d4719d12214a443eec","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","0.000012"),

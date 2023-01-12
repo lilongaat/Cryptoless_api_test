@@ -1,0 +1,31 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:215 2023-01-12 18:46:54.56410 | 
+<-----block----->
+Url:https://api.bscscan.com/api?module=block&action=getblocknobytime&timestamp=1673520418&closest=before&apikey=1N55SHXT8U6N3YX8TZK3U8QV7862XDEG2J
+
+
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:217 2023-01-12 18:46:54.56410 | 
+<-----block response----->
+
+Body:{"status": "1", "message": "OK", "result": "24719957"}
+[35mDEBUG   [0m test_blockheight_check:test_blockheight_check.py:76 2023-01-12 18:46:54.56410 | 24719957
+[32mINFO    [0m Common.Graphql:Graphql.py:114 2023-01-12 18:46:54.56410 | 
+<-----LatestBlock----->
+Url:http://18.166.208.93:14101/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getLatestBlock{blockHash blockNumber}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:117 2023-01-12 18:46:54.56410 | 
+<-----LatestBlock response----->
+
+Body:{"data": {"getLatestBlock": {"blockHash": "0x3ce04163c67e994aab4f5b69a667d0260f9ea7616150ef0f9f9d88596e624fc3", "blockNumber": 24719958}}}
+[32mINFO    [0m Common.Http:Http.py:397 2023-01-12 18:46:54.56410 | 
+<-----NetWorks----->
+Url:https://api.dhandho.xyz/vault/networks?networkCode=BSC
+Headers:
+{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:400 2023-01-12 18:46:54.56410 | 
+<-----Query Networks Response----->
+[{"accountTypes":["external","custodial","safe","shared"],"blocks":"24719940","code":"BSC","createdTime":"2021-07-07T15:36:38.000Z","derivationPath":"m/44'/60'/0'/0/","evmChainId":56,"feeCoin":{"decimals":18,"symbol":"BNB"},"iconURL":"https://img.cryptoless.net/cryptos/bnb.png","id":"1412676918924201987","links":{"address":"https://www.bscscan.com/address/{0}","tx":"https://www.bscscan.com/tx/{0}"},"name":"BSC","platform":"ETHEREUM","status":"enable","updatedTime":"2022-12-28T10:52:45.000Z"}]

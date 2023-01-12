@@ -28,25 +28,12 @@ class BTC:
         return response
 
     @staticmethod
-    # https://blockchain.coinmarketcap.com/chain/bitcoin 
+    # https://blockchair.com/
     # 查询 块信息、价格信息
     def block():
-        url = "https://blockchain.coinmarketcap.com/api/blocks?symbol=BTC&start=1&limit=1&quote=true"
+        url = "https://api.blockchair.com/bitcoin/blocks?s=id%28desc%29&limit=10&offset=0"
         payload={}
-        headers = {
-        'authority': 'blockchain.coinmarketcap.com',
-        'accept': '*/*',
-        'accept-language': 'zh-CN,zh;q=0.9',
-        'cookie': 'sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22182e87f785ea7e-037c0825a51e454-56510c16-2073600-182e87f785fc62%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E8%87%AA%E7%84%B6%E6%90%9C%E7%B4%A2%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC%22%2C%22%24latest_referrer%22%3A%22https%3A%2F%2Fwww.google.com.hk%2F%22%7D%2C%22identities%22%3A%22eyIkaWRlbnRpdHlfY29va2llX2lkIjoiMTgyZTg3Zjc4NWVhN2UtMDM3YzA4MjVhNTFlNDU0LTU2NTEwYzE2LTIwNzM2MDAtMTgyZTg3Zjc4NWZjNjIifQ%3D%3D%22%2C%22history_login_id%22%3A%7B%22name%22%3A%22%22%2C%22value%22%3A%22%22%7D%2C%22%24device_id%22%3A%22182e87f785ea7e-037c0825a51e454-56510c16-2073600-182e87f785fc62%22%7D; _ga=GA1.2.1664231870.1661758046; _gid=GA1.2.1193544221.1662016585; _fbp=fb.1.1662016589906.1009730436; _tt_enable_cookie=1; _ttp=6a64d327-d346-4dc6-a7de-3503846df3b9; next-i18next=en; _gat_UA-40475998-1=1; _hjSessionUser_1295813=eyJpZCI6ImZjMzk2OGY1LTVlNzYtNWE4OC04ZGYwLWU5ZTk4Nzk0MWNhMSIsImNyZWF0ZWQiOjE2NjIwMTY2MzkyMjIsImV4aXN0aW5nIjpmYWxzZX0=; _hjFirstSeen=1; _hjIncludedInSessionSample=0; _hjSession_1295813=eyJpZCI6IjM0Nzk1YjMzLTM5OTEtNDYyMC1hYTJhLWE0YWFiZmJhNmUyNiIsImNyZWF0ZWQiOjE2NjIwMTY2Mzk4NTUsImluU2FtcGxlIjpmYWxzZX0=; _hjIncludedInPageviewSample=1; _hjAbsoluteSessionInProgress=0; intercom-id-h7krdida=edc0dcd2-5893-4b8e-9864-ecec886c9735; intercom-session-h7krdida=; next-i18next=en',
-        'referer': 'https://blockchain.coinmarketcap.com/chain/bitcoin',
-        'sec-ch-ua': '"Chromium";v="104", " Not A;Brand";v="99", "Google Chrome";v="104"',
-        'sec-ch-ua-mobile': '?0',
-        'sec-ch-ua-platform': '"macOS"',
-        'sec-fetch-dest': 'empty',
-        'sec-fetch-mode': 'cors',
-        'sec-fetch-site': 'same-origin',
-        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.101 Safari/537.36'
-        }
+        headers = {}
 
         response = requests.request("GET", url, headers=headers, data=payload)
         return response
@@ -75,6 +62,17 @@ class BTC_Test:
         logger.info('\n'+"<-----balance----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'payload:'+json.dumps(payload))
         response = requests.request("GET", url, headers=headers, data=payload)
         logger.info('\n'+"<-----balance response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
+        return response
+
+    @staticmethod
+    def block():
+        url = "https://api.blockchair.com/bitcoin/testnet/blocks?s=id%28desc%29&limit=10&offset=0"
+        payload={}
+        headers = {}
+
+        logger.info('\n'+"<-----Block----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'payload:'+json.dumps(payload))
+        response = requests.request("GET", url, headers=headers, data=payload)
+        logger.info('\n'+"<-----Block response----->"+'\n\n'+'Body:'+json.dumps(response.json()))
         return response
 
 class DOGE:
@@ -595,8 +593,35 @@ class Balances_explore:
 
 class Block_explore:
     @staticmethod
-    def block_height():
-        pass
+    def block_height(networkCode:str):
+        if networkCode == "BTC":
+            if env_type == 0:
+                block_height = BTC_Test.block()
+            elif env_type == 1:
+                block_height = BTC.block()
+        elif networkCode == "DOGE":
+            block_height = DOGE.block()
+        elif networkCode == "ETH":
+            block_height = ETH.block_etherscanapi()
+        elif networkCode == "GOERLI":
+            block_height = GOERLI.block()
+        elif networkCode == "BSC":
+            block_height = BSC.block()
+        elif networkCode == "MATIC":
+            block_height = MATIC.block()
+        elif networkCode == "ATOM":
+            block_height = ATOM.block()
+        elif networkCode == "IRIS":
+            block_height = IRIS.block()
+        elif networkCode == "DOT":
+            block_height = DOT.block()
+        elif networkCode == "CLV":
+            if env_type == 0:
+                block_height = CLV_Test.block()
+            elif env_type == 1:
+                block_height = CLV.block()
+        return block_height
+
     
 
 if __name__ == '__main__':
@@ -625,4 +650,7 @@ if __name__ == '__main__':
     # print((Balances_explore.query("CLV","5EwMcCvUPD7RKUTs86NoLPame9oCg8edtdKCdbcsxTFL3aTQ")))
 
     # print(IRIS.block().json()["block"]["last_commit"]["height"])
-    print(int(GOERLI.block().json()["result"],16))
+    # print(int(GOERLI.block().json()["result"],16))
+    # print(Block_explore.block_height("BTC").json())
+    # BTC_Test.block()
+    print(CLV_Test.block().json())

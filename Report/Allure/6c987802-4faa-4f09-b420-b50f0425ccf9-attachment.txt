@@ -1,0 +1,10 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:249 2023-01-12 17:59:25.91260 | 
+<-----block----->
+Url:https://api.polygonscan.com/api?module=block&action=getblocknobytime&timestamp=1673517570&closest=before&apikey=85W6B7V5TPH7TDZA3JQCFT8UN8RKAEMA4Y
+
+
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:251 2023-01-12 17:59:25.91260 | 
+<-----block response----->
+
+Body:{"status": "1", "message": "OK", "result": "37980100"}
+[35mDEBUG   [0m test_blockheight_check:test_blockheight_check.py:66 2023-01-12 17:59:25.91260 | 37980100

@@ -1,0 +1,34 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:215 2023-01-12 18:33:54.352869 | 
+<-----block----->
+Url:https://api.bscscan.com/api?module=block&action=getblocknobytime&timestamp=1673519639&closest=before&apikey=1N55SHXT8U6N3YX8TZK3U8QV7862XDEG2J
+
+
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:217 2023-01-12 18:33:54.352869 | 
+<-----block response----->
+
+Body:{"status": "1", "message": "OK", "result": "24719731"}
+[35mDEBUG   [0m test_blockheight_check:test_blockheight_check.py:76 2023-01-12 18:33:54.352869 | 24719731
+[32mINFO    [0m Common.Graphql:Graphql.py:114 2023-01-12 18:33:54.352869 | 
+<-----LatestBlock----->
+Url:http://18.166.208.93:14101/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getLatestBlock{blockHash blockNumber}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:117 2023-01-12 18:33:54.352869 | 
+<-----LatestBlock response----->
+
+Body:{"data": {"getLatestBlock": {"blockHash": "0x6883bebe8d675b065afcd0c040d8e8791cb00c3f0a66fcd8537e1b7397b28bf3", "blockNumber": 24719731}}}
+[32mINFO    [0m Common.Http:Http.py:397 2023-01-12 18:33:54.352869 | 
+<-----NetWorks----->
+Url:https://api.cryptoless.net/vault/networks?networkCode=BSC
+Headers:
+{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczOTQzOTEyLCJpYXQiOjE2NzMzMzkxMTIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.as76Z2zPKhedohNNZrSt0PuPP729a4MyLX219QWSoGc"}
+
+
+[32mINFO    [0m Common.Http:Http.py:400 2023-01-12 18:33:54.352869 | 
+<-----Query Networks Response----->
+[{"accountTypes":["external","custodial","safe","shared"],"blocks":"24719731","code":"BSC","createdTime":"2021-07-07T15:36:38.000Z","derivationPath":"m/44'/60'/0'/0/","evmChainId":56,"feeCoin":{"decimals":18,"symbol":"BNB"},"iconURL":"https://img.cryptoless.net/cryptos/bnb.png","id":"1412676918924201987","links":{"address":"https://www.bscscan.com/address/{0}","tx":"https://www.bscscan.com/tx/{0}"},"name":"BSC","platform":"ETHEREUM","status":"enable","updatedTime":"2022-11-22T09:56:55.000Z"}]
+
+
+[35mDEBUG   [0m test_blockheight_check:test_blockheight_check.py:98 2023-01-12 18:33:54.352869 | Block_Height Gaps:0

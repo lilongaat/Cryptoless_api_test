@@ -1,0 +1,22 @@
+[35mDEBUG   [0m test_blockheight_check:test_blockheight_check.py:66 2023-01-12 18:13:25.584620 | 13768009
+[32mINFO    [0m Common.Graphql:Graphql.py:114 2023-01-12 18:13:25.584620 | 
+<-----LatestBlock----->
+Url:http://18.162.150.113:14300/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getLatestBlock{blockHash blockNumber}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:117 2023-01-12 18:13:25.584620 | 
+<-----LatestBlock response----->
+
+Body:{"data": {"getLatestBlock": {"blockHash": "0x3dc5bc454d9f312c6c56193c72b08c6119896dd9a98b125ffa22a867ed3202b8", "blockNumber": 13743587}}}
+[32mINFO    [0m Common.Http:Http.py:397 2023-01-12 18:13:25.584620 | 
+<-----NetWorks----->
+Url:https://api.dhandho.xyz/vault/networks?networkCode=DOT
+Headers:
+{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:400 2023-01-12 18:13:25.584620 | 
+<-----Query Networks Response----->
+[{"accountTypes":["external","custodial"],"code":"DOT","createdTime":"2021-07-07T15:36:38.000Z","derivationPath":"m/44'/354'/0'/0/","feeCoin":{"decimals":10,"symbol":"DOT"},"iconURL":"https://cc-icons.s3.ap-southeast-1.amazonaws.com/dot.png","id":"1412676921075879937","links":{"address":"https://polkadot.subscan.io/account/{0}","tx":"https://polkadot.subscan.io/extrinsic/{0}"},"name":"Polkadot","platform":"POLKADOT","status":"enable","updatedTime":"2022-09-06T08:11:17.000Z"}]

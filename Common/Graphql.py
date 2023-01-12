@@ -5,6 +5,9 @@ import sys
 sys.path.append(os.path.dirname((os.path.abspath(__file__))))
 from loguru import logger
 from Httpfs import HttpFs
+from Config.readconfig import ReadConfig
+
+env_type = int(ReadConfig().get_env('type'))
 
 
 class Graphql:
@@ -65,8 +68,12 @@ class Graphql:
             url_ = "http://18.166.208.93"
             prot = "14100"
         elif netWorkcode == "BTC":
-            url_ = "http://18.162.150.113"
-            prot = "14000"
+            if env_type == 0:
+                url_ = "http://13.212.89.244"
+                prot = "4001"
+            elif env_type == 1:
+                url_ = "http://18.162.150.113"
+                prot = "14000"
         elif netWorkcode == "BSC":
             url_ = "http://18.166.208.93"
             prot = "14101"
@@ -74,8 +81,12 @@ class Graphql:
             url_ = "http://18.162.150.113"
             prot = "14300"
         elif netWorkcode == "CLV":
-            url_ = "http://18.162.150.113"
-            prot = "14301"
+            if env_type == 0:
+                url_ = "http://13.212.89.244"
+                prot = "4003"
+            elif env_type == 1:
+                url_ = "http://18.162.150.113"
+                prot = "14301"
         elif netWorkcode == "ATOM":
             url_ = "http://18.162.150.113"
             prot = "14200"

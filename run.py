@@ -13,6 +13,12 @@ print(path.split("/run.py")[0])
 report_file = 'Allure_Testfile_' + str(datetime.date.today())
 
 
+
+# Testcase Block_check
+def job_test_block():
+    pytest.main(["-vs", path + "/Testcase/Test_NetworkCode/Test_block/test_blockheight_check.py"])
+
+
 # Testcase Test_User
 def job_test_user():
     pytest.main(["-vs", path + "/Testcase/Test_User", '--alluredir=Report/' + report_file])
@@ -36,6 +42,8 @@ def job_transfer_Swap():
 
 if __name__ == "__main__":
     scheduler = BlockingScheduler(timezone="Asia/Shanghai")
+
+    scheduler.add_job(job_test_block,'interval',minute=10)
     
     scheduler.add_job(job_test_user, 'cron', hour=12, minute=00)
     scheduler.add_job(job_test_account, 'cron', hour=12, minute=10)

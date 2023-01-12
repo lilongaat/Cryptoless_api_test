@@ -1,0 +1,25 @@
+[35mDEBUG   [0m test_blockheight_check:test_blockheight_check.py:76 2023-01-12 18:35:49.997256 | 13638468
+[32mINFO    [0m Common.Graphql:Graphql.py:114 2023-01-12 18:35:49.997256 | 
+<-----LatestBlock----->
+Url:http://18.162.150.113:14200/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getLatestBlock{blockHash blockNumber}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:117 2023-01-12 18:35:49.997256 | 
+<-----LatestBlock response----->
+
+Body:{"data": {"getLatestBlock": {"blockHash": "98CEF87BCE8C09ACAE369DEC252BE496C6C39571B5F3D11E220C9AE827ECA668", "blockNumber": 13638469}}}
+[32mINFO    [0m Common.Http:Http.py:397 2023-01-12 18:35:49.997256 | 
+<-----NetWorks----->
+Url:https://api.cryptoless.net/vault/networks?networkCode=ATOM
+Headers:
+{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczOTQzOTEyLCJpYXQiOjE2NzMzMzkxMTIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.as76Z2zPKhedohNNZrSt0PuPP729a4MyLX219QWSoGc"}
+
+
+[32mINFO    [0m Common.Http:Http.py:400 2023-01-12 18:35:49.997256 | 
+<-----Query Networks Response----->
+[{"accountTypes":["external","custodial","safe","shared"],"blocks":"13638468","code":"ATOM","createdTime":"2021-10-19T14:42:01.000Z","derivationPath":"m/44'/118'/0'/0/","feeCoin":{"decimals":6,"symbol":"ATOM"},"iconURL":"https://img.cryptoless.net/cryptos/atom.png","id":"1450351508676603906","links":{"address":"https://www.mintscan.io/cosmos/account/{0}","tx":"https://www.mintscan.io/cosmos/txs/{0}"},"name":"Cosmos","platform":"COSMOS","status":"enable","updatedTime":"2023-01-05T10:23:40.000Z"}]
+
+
+[35mDEBUG   [0m test_blockheight_check:test_blockheight_check.py:98 2023-01-12 18:35:49.997256 | Block_Height Gaps:0

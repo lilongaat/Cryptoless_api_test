@@ -1,0 +1,25 @@
+[35mDEBUG   [0m test_blockheight_check:test_blockheight_check.py:76 2023-01-12 18:35:49.997256 | 771578
+[32mINFO    [0m Common.Graphql:Graphql.py:114 2023-01-12 18:35:49.997256 | 
+<-----LatestBlock----->
+Url:http://18.162.150.113:14000/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getLatestBlock{blockHash blockNumber}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:117 2023-01-12 18:35:49.997256 | 
+<-----LatestBlock response----->
+
+Body:{"data": {"getLatestBlock": {"blockHash": "0000000000000000000408fd393d27b79682d991c72f77853aa160a0b9583169", "blockNumber": 771578}}}
+[32mINFO    [0m Common.Http:Http.py:397 2023-01-12 18:35:49.997256 | 
+<-----NetWorks----->
+Url:https://api.cryptoless.net/vault/networks?networkCode=BTC
+Headers:
+{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczOTQzOTEyLCJpYXQiOjE2NzMzMzkxMTIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.as76Z2zPKhedohNNZrSt0PuPP729a4MyLX219QWSoGc"}
+
+
+[32mINFO    [0m Common.Http:Http.py:400 2023-01-12 18:35:49.997256 | 
+<-----Query Networks Response----->
+[{"accountTypes":["external","custodial","safe","shared"],"blocks":"771578","code":"BTC","createdTime":"2021-07-07T15:36:37.000Z","derivationPath":"m/44'/0'/0'/0/","feeCoin":{"decimals":8,"symbol":"BTC"},"iconURL":"https://img.cryptoless.net/cryptos/btc.png","id":"1412676914532765697","links":{"address":"https://www.blockchain.com/btc/address/{0}","tx":"https://www.blockchain.com/btc/tx/{0}"},"name":"Bitcoin","platform":"BITCOIN","status":"enable","updatedTime":"2022-09-06T08:14:13.000Z"}]
+
+
+[35mDEBUG   [0m test_blockheight_check:test_blockheight_check.py:98 2023-01-12 18:35:49.997256 | Block_Height Gaps:0

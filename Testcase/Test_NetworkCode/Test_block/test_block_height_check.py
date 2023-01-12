@@ -12,10 +12,10 @@ from Common.Loguru import logger
 class Test_block_height_check:
     
     def test_block_height_btc():
-        btc = Httpexplore.BTC.block()
+        btc = Httpexplore.Block_explore.block_height("BTC")
         time = Conf.Config.now_time()
         if btc.status_code == 200:
-            block_height = btc.json()["data"][0]["height"]
+            block_height = btc.json()["data"][0]["id"]
         else:
             block_height = "Serve Error " + str(btc.status_code)
 
@@ -28,13 +28,11 @@ class Test_block_height_check:
 
         logger.info("BTC Block_Height Gaps:" + str(abs(block_height - block_height_network)))
 
-        # Httpfs.HttpFs.send_msg('BTC Height!\n' + "https://blockchain.coinmarketcap.com/chain/bitcoin查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network))
-
         if abs(block_height - block_height_network) > 1:
             Httpfs.HttpFs.send_msg('BTC Block_Height异常!\n' + "https://blockchain.coinmarketcap.com/chain/bitcoin查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network))
 
     def test_block_height_doge():
-        doge = Httpexplore.DOGE.block()
+        doge = Httpexplore.Block_explore.block_height("DOGE")
         time = Conf.Config.now_time()
         assert doge.status_code == 200
         block_height = doge.json()
@@ -53,28 +51,28 @@ class Test_block_height_check:
         if abs(block_height - block_height_network) > 1:
             Httpfs.HttpFs.send_msg(('DOGE Block_Height异常!\n' + "https://dogechain.info/api/simple查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network)))
 
-    def test_block_height_eth():
-        eth = Httpexplore.ETH.block_etherscanapi()
-        time = Conf.Config.now_time()
-        assert eth.status_code == 200
-        block_height = int(eth.json()["result"],16)
+    # def test_block_height_eth():
+    #     eth = Graphql.Graphql.getLatestBlock("ETH")
+    #     time = Conf.Config.now_time()
+    #     assert eth.status_code == 200
+    #     block_height = int(eth.json()["result"],16)
 
-        eth_graphql = Graphql.Graphql.getLatestBlock("ETH")
-        time_ = Conf.Config.now_time()
-        block_height_graphql = eth_graphql.json()["data"]["getLatestBlock"]["blockNumber"]
+    #     eth_graphql = Graphql.Graphql.getLatestBlock("ETH")
+    #     time_ = Conf.Config.now_time()
+    #     block_height_graphql = eth_graphql.json()["data"]["getLatestBlock"]["blockNumber"]
 
-        networks = Http.HttpUtils.networks("ETH")
-        block_height_network = int([n.get("blocks") for n in networks.json() if n.get("code") == "ETH"][0])
+    #     networks = Http.HttpUtils.networks("ETH")
+    #     block_height_network = int([n.get("blocks") for n in networks.json() if n.get("code") == "ETH"][0])
 
-        logger.info("ETH Block_Height Gaps:" + str(abs(block_height - block_height_network)))
+    #     logger.info("ETH Block_Height Gaps:" + str(abs(block_height - block_height_network)))
 
-        # Httpfs.HttpFs.send_msg(('ETH Height!\n' + "Etherscan Api查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network)))
+    #     # Httpfs.HttpFs.send_msg(('ETH Height!\n' + "Etherscan Api查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network)))
 
-        if abs(block_height - block_height_network) > 3:
-            Httpfs.HttpFs.send_msg(('ETH Block_Height异常!\n' + "Etherscan Api查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network)))
+    #     if abs(block_height - block_height_network) > 3:
+    #         Httpfs.HttpFs.send_msg(('ETH Block_Height异常!\n' + "Etherscan Api查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network)))
 
     def test_block_height_bsc():
-        bsc = Httpexplore.BSC.block()
+        bsc = Httpexplore.Block_explore.block_height("BSC")
         time = Conf.Config.now_time()
         assert bsc.status_code == 200
         block_height = int(bsc.json()["result"])
@@ -94,7 +92,7 @@ class Test_block_height_check:
             Httpfs.HttpFs.send_msg(('BSC Block_Height异常!\n' + "https://blockchain.coinmarketcap.com/chain/binance-coin查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network)))
     
     def test_block_height_matic():
-        matic = Httpexplore.MATIC.block()
+        matic = Httpexplore.Block_explore.block_height("MATIC")
         time = Conf.Config.now_time()
         assert matic.status_code == 200
         block_height = int(matic.json()["result"])
@@ -114,7 +112,7 @@ class Test_block_height_check:
             Httpfs.HttpFs.send_msg(('MATIC Block_Height异常!\n' + "polygonscan api查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network)))
 
     def test_block_height_atom():
-        atom = Httpexplore.ATOM.block()
+        atom = Httpexplore.Block_explore.block_height("ATOM")
         time = Conf.Config.now_time()
         assert atom.status_code == 200
         block_height = int(atom.json()["block"]["last_commit"]["height"])
@@ -134,7 +132,7 @@ class Test_block_height_check:
             Httpfs.HttpFs.send_msg(('ATOM Block_Height异常!\n' + "Mintscan查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network)))
 
     def test_block_height_iris():
-        iris = Httpexplore.IRIS.block()
+        iris = Httpexplore.Block_explore.block_height("IRIS")
         time = Conf.Config.now_time()
         assert iris.status_code == 200
         block_height = int(iris.json()["block"]["last_commit"]["height"])
@@ -154,7 +152,7 @@ class Test_block_height_check:
             Httpfs.HttpFs.send_msg(('IRIS Block_Height异常!\n' + "Mintscan查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network)))
 
     def test_block_height_clv():
-        clv = Httpexplore.CLV.block()
+        clv = Httpexplore.Block_explore.block_height("CLV")
         time = Conf.Config.now_time()
         assert clv.status_code == 200
         block_height = clv.json()["data"]["count"]
@@ -171,10 +169,10 @@ class Test_block_height_check:
         # Httpfs.HttpFs.send_msg(('CLV Height!\n' + "https://clover.subscan.io/block查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network)))
 
         if abs(block_height - block_height_network) > 5:
-            Httpfs.HttpFs.send_msg(('CLV Block_Height异常!\n' + "https://clover.subscan.io/block查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network)))
+            Httpfs.HttpFs.send_msg(('CLV Block_Height异常!\n' + "Subscan查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network)))
 
     def test_block_height_dot():
-        dot = Httpexplore.DOT.block()
+        dot = Httpexplore.Block_explore.block_height("DOT")
         time = Conf.Config.now_time()
         assert dot.status_code == 200
         block_height = dot.json()["data"]["blocks"][0]["block_num"]
@@ -186,18 +184,18 @@ class Test_block_height_check:
         networks = Http.HttpUtils.networks("DOT")
         block_height_network_list = ([n.get("blocks") for n in networks.json() if n.get("code") == "DOT"])
         if block_height_network_list == [None]:
-            Httpfs.HttpFs.send_msg(('DOT Height!\n' + "https://polkadot.subscan.io/查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network_list[0])))
+            Httpfs.HttpFs.send_msg(('DOT Height!\n' + "Subscan查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network_list[0])))
         else:
             block_height_network = int(block_height_network_list[0])
 
             # logger.info("DOT Block_Height Gaps:" + str(abs(block_height - block_height_network)))
             if abs(block_height - block_height_network) > 10:
-                Httpfs.HttpFs.send_msg(('DOT Height!\n' + "https://polkadot.subscan.io/查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network)))
+                Httpfs.HttpFs.send_msg(('DOT Height!\n' + "Subscan查询最新高度(" + time + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_ + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_ + "): " + str(block_height_network)))
 
 if __name__ == '__main__':
     Test_block_height_check.test_block_height_btc()
     Test_block_height_check.test_block_height_doge()
-    Test_block_height_check.test_block_height_eth()
+    # Test_block_height_check.test_block_height_eth()
     Test_block_height_check.test_block_height_bsc()
     Test_block_height_check.test_block_height_matic()
     Test_block_height_check.test_block_height_atom()
