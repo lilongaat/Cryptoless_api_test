@@ -6,8 +6,9 @@ import datetime
 
 from apscheduler.schedulers.background import BlockingScheduler
 
-path = os.path.abspath(__file__) + ""
-print(path.split("/run.py")[0])
+path_ = os.path.abspath(__file__) + ""
+path = path_.split("/run.py")[0]
+print(path)
 
 # 测试报告文件路径
 report_file = 'Allure_Testfile_' + str(datetime.date.today())
@@ -43,7 +44,7 @@ def job_transfer_Swap():
 if __name__ == "__main__":
     scheduler = BlockingScheduler(timezone="Asia/Shanghai")
 
-    scheduler.add_job(job_test_block,'interval',minute=10)
+    scheduler.add_job(job_test_block,'interval',seconds=600)
     
     scheduler.add_job(job_test_user, 'cron', hour=8, minute=00)
     scheduler.add_job(job_test_account, 'cron', hour=8, minute=10)
