@@ -11,7 +11,7 @@ from Common.Loguru import logger
 from Config.readconfig import ReadConfig
 env_type = int(ReadConfig().get_env('type'))
 
-@allure.feature("Create Custodial Account!")
+@allure.feature("Account!")
 class Test_create_custodial_account:
 
     if env_type == 0: #测试

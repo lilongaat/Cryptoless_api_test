@@ -1,0 +1,21 @@
+[32mINFO    [0m Common.Http:Http.py:50 2023-01-11 18:37:32.565285 | 
+<-----Connect Req----->
+Url:https://api.dhandho.xyz/vault/users/connect-request
+Headers:{"Content-Type": "application/json"}
+Body:{"email": "15873664025@163.com"}
+
+
+[32mINFO    [0m Common.Http:Http.py:53 2023-01-11 18:37:32.565285 | 
+<-----Connect Req Success----->
+
+
+[32mINFO    [0m Common.Http:Http.py:50 2023-01-11 18:37:32.565285 | 
+<-----Connect Req----->
+Url:https://api.dhandho.xyz/vault/users/connect-request
+Headers:{"Content-Type": "application/json"}
+Body:{"email": "15873664025@163.com"}
+
+
+[32mINFO    [0m Common.Http:Http.py:56 2023-01-11 18:37:32.565285 | 
+<-----Connect Req Error----->
+{"code":2300000,"message":"repeatedly acquire verification code within 60 seconds"}

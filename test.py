@@ -7,18 +7,18 @@
 
 
 # import datetime
-from apscheduler.schedulers.background import BackgroundScheduler
+# from apscheduler.schedulers.background import BackgroundScheduler
 
 
-def job1():
-	print('job000')
+# def job1():
+# 	print('job000')
 
 
-# 任务调度器
-scheduler = BackgroundScheduler()
-# Account
-scheduler.add_job(job1,trigger='cron',second=0,minute=20,hour=12)
-scheduler.start()
+# # 任务调度器
+# scheduler = BackgroundScheduler()
+# # Account
+# scheduler.add_job(job1,trigger='cron',second=0,minute=20,hour=12)
+# scheduler.start()
 
 
 # 每天 2 点 30 分 5 秒运行
@@ -46,3 +46,21 @@ scheduler.start()
 # am_c =(decimal.Decimal(str(am)))
 # assert bd_c - af_c == am_c
 
+
+
+
+import datetime
+import time
+from apscheduler.schedulers.background import BlockingScheduler
+from apscheduler.triggers.cron import CronTrigger
+
+
+def job():
+    print("job--000")
+
+
+if __name__ == "__main__":
+    scheduler = BlockingScheduler(timezone="Asia/Shanghai")
+    
+    scheduler.add_job(job, 'cron', hour=10, minute=54)
+    scheduler.start()

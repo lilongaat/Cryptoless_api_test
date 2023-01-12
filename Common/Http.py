@@ -21,6 +21,23 @@ elif env_type == 1: # Release
 class HttpUtils:
 
     @staticmethod
+    # 匿名登陆
+    def anonymous():
+        url = url_ + '/vault/users/anonymous'
+        headers = {
+            "Content-Type": "application/json"
+        }
+        body = {}
+        logger.info('\n'+"<-----Connect anonymous----->"+"\n"+"Url:"+url+'\n'+'Headers:'+json.dumps(headers)+'\n'+'Body:'+json.dumps(body)+'\n\n')
+        res = requests.post(url=url, headers=headers,json=body, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Connect anonymous Success----->"+"\n"+(res.text)+"\n\n")
+            return res
+        else:
+            logger.info('\n'+"<-----Connect anonymous Error----->"+"\n"+(res.text)+"\n\n")
+            return res
+
+    @staticmethod
     # 请求连接
     def connect_req(email:str):
         url = url_ + '/vault/users/connect-request'
@@ -498,10 +515,10 @@ class HttpUtils:
         logger.info('\n'+"<-----Query Staking----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers))
         res = requests.get(url=url, headers=headers, timeout=timeout_)
         if res.status_code == 200:
-            logger.info('\n'+"<-----Query Staking Response----->"+"\n"+(res.text))
+            logger.info('\n'+"<-----Query Staking Response----->"+"\n"+(res.text)+"\n\n")
             return res
         else:
-            logger.error('\n'+'<-----Query Staking Response Error----->'+(res.text))
+            logger.error('\n'+'<-----Query Staking Response Error----->'+"\n"+(res.text)+"\n\n")
             raise Exception("请求异常")
 
     # @staticmethod
@@ -575,8 +592,9 @@ if __name__ == '__main__':
     # HttpUtils.connect_req("lilongaat@gmail.com")
     # HttpUtils.connect_confirm("r@qq.com")
     # HttpUtils.accounts()
-    HttpUtils.networks("CLV")
+    # HttpUtils.networks("CLV")
     # HttpUtils.holders(address="iaa1laewhl28xx9fujqawfnmt4wls2dgyvs6qz7vle")
     # HttpUtils.assets()
     # HttpUtils.holders(address="0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17")
     # HttpUtils.transactions_byid("1610518001510273025")
+    HttpUtils.anonymous()

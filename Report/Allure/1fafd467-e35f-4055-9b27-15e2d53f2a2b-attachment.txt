@@ -1,0 +1,20 @@
+[32mINFO    [0m Common.Http:Http.py:50 2023-01-11 18:17:24.960798 | 
+<-----Connect Req----->
+Url:https://api.dhandho.xyz/vault/users/connect-request
+Headers:{"Content-Type": "application/json"}
+Body:{"email": "15873664023@163.com"}
+
+
+[32mINFO    [0m Common.Http:Http.py:53 2023-01-11 18:17:24.960798 | 
+<-----Connect Req Success----->
+
+
+[32mINFO    [0m Common.Http:Http.py:70 2023-01-11 18:17:24.960798 | 
+<-----Connect Confirm----->
+Url:https://api.dhandho.xyz/vault/users/connect-confirm
+Headers:{"Content-Type": "application/json"}
+Body:{"email": "15873664023@163.com", "oneTimePassword": "000000"}
+
+
+[32mINFO    [0m Common.Http:Http.py:73 2023-01-11 18:17:24.960798 | 
+<-----Connect Confirm Success----->

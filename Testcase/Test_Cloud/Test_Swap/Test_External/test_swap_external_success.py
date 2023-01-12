@@ -34,7 +34,7 @@ class Test_transfers_success:
             # ("MATIC SWAP:USDC-USDT","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","USDC","USDT","1","0.00012"),
         ]
 
-    @allure.story("Custodial Swap Success!")
+    @allure.story("External Swap Success!")
     @allure.title('{test_title}')
     @pytest.mark.parametrize('test_title,networkCode,privatekey,address,from_coin,to_coin,slippage,fromamount', test_data)
     def test_custodial(self,test_title,networkCode,privatekey,address,from_coin,to_coin,slippage,fromamount):

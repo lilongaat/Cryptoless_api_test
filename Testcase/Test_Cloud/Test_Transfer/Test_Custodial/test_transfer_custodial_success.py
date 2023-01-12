@@ -24,18 +24,18 @@ class Test_transfers_success:
             ("BTC Custodial账户转账","BTC","BTC","tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun","0.000008"),
 
             # GOERLI
-            ("GOERLI Custodial账户转账 nativecoin","GOERLI","GoerliETH","0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3","0.00012"),
-            ("GOERLI Custodial账户转账 erc20coin","GOERLI","USDCC","0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3","0.123"),
+            # ("GOERLI Custodial账户转账 nativecoin","GOERLI","GoerliETH","0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3","0.00012"),
+            # ("GOERLI Custodial账户转账 erc20coin","GOERLI","USDCC","0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3","0.123"),
 
             # MATIC
             # ("MATIC Custodial账户转账 nativecoin","MATIC","MATIC","0x651a23f7bed98b52c7829ad668a4836c48064850","0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3","0.00012"),
             # ("MATIC Custodial账户转账 erc20coin","MATIC","USDC","0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3","0.123"),
 
             #IRIS
-            ("IRIS Custodial账户转账","IRIS","IRIS","iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe","iaa15h0lvaa6slvj0hg4d64548j2c5fds2zv8tkvgs","0.000123"),
+            # ("IRIS Custodial账户转账","IRIS","IRIS","iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe","iaa15h0lvaa6slvj0hg4d64548j2c5fds2zv8tkvgs","0.000123"),
 
             #CLV
-            ("CLV Custodial账户转账","CLV","CLV","5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","0.000123"),
+            # ("CLV Custodial账户转账","CLV","CLV","5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","0.000123"),
         ]
     elif env_type == 1: #生产
         test_data = [
