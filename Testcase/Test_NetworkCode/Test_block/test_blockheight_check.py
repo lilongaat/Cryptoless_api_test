@@ -28,15 +28,15 @@ class Test_block_height_check:
         ]
     elif env_type == 1: #生产
         test_data = [
-            ("","BTC",2),
-            ("","DOGE",2),
-            ("","ETH",2),
-            ("","BSC",2),
-            ("","MATIC",2),
-            ("","ATOM",2),
-            ("","IRIS",2),
-            ("","DOT",2),
-            ("","CLV",2),
+            ("","BTC",3),
+            ("","DOGE",3),
+            ("","ETH",3),
+            ("","BSC",3),
+            ("","MATIC",3),
+            ("","ATOM",5),
+            ("","IRIS",5),
+            ("","DOT",5),
+            ("","CLV",5),
         ]
 
     @allure.story("Block Height Check!")
@@ -92,7 +92,7 @@ class Test_block_height_check:
             if networks.status_code == 200:
                 block_height_network_list = ([n.get("blocks") for n in networks.json() if n.get("code") == networkCode])
                 if block_height_network_list == [None]:
-                    Httpfs.HttpFs.send_msg((networkCode + 'Height!\n' + "浏览器查询最新高度(" + time_explore + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_graphql + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_network + "): " + str(block_height_network_list[0])))
+                    Httpfs.HttpFs.send_msg((networkCode + ' Height!\n' + "浏览器查询最新高度(" + time_explore + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_graphql + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_network + "): " + str(block_height_network_list[0])))
                 else:
                     block_height_network = int(block_height_network_list[0])
             else:
@@ -100,10 +100,10 @@ class Test_block_height_check:
 
         with allure.step("对比浏览器查询块高&Network查询块高"):
             if block_explore.status_code != 200 or block_graphql.status_code != 200 or networks.status_code != 200:
-                Httpfs.HttpFs.send_msg(networkCode + 'Block_Height异常!\n' + "浏览器查询最新高度(" + time_explore + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_graphql + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_network + "): " + str(block_height_network))
+                Httpfs.HttpFs.send_msg(networkCode + ' Block_Height异常!\n' + "浏览器查询最新高度(" + time_explore + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_graphql + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_network + "): " + str(block_height_network))
             else:
                 if abs(block_height - block_height_network) > gaps:
-                    Httpfs.HttpFs.send_msg(networkCode + 'Block_Height异常!\n' + "浏览器查询最新高度(" + time_explore + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_graphql + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_network + "): " + str(block_height_network))
+                    Httpfs.HttpFs.send_msg(networkCode + ' Block_Height异常!\n' + "浏览器查询最新高度(" + time_explore + "): " + str(block_height) + "\n" + "Graphql查询最新高度(" + time_graphql + "): " + str(block_height_graphql) + "\n" + "NetWork查询最新高度(" + time_network + "): " + str(block_height_network))
     
 
 if __name__ == '__main__':

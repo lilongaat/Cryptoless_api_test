@@ -1,0 +1,22 @@
+[35mDEBUG   [0m test_blockheight_check:test_blockheight_check.py:79 2023-01-16 14:43:09.218497 | 8319900
+[32mINFO    [0m Common.Graphql:Graphql.py:99 2023-01-16 14:43:09.218497 | 
+<-----LatestBlock----->
+Url:http://13.212.89.244:4005/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getLatestBlock{blockHash blockNumber}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:102 2023-01-16 14:43:09.218497 | 
+<-----LatestBlock response----->
+
+Body:{"data": {"getLatestBlock": {"blockHash": "0xf7f10da5ee503c5e1f0ecb57e92a3cca6b7ee7b4ea11b3e1a5626f450f94b8e3", "blockNumber": 8319900}}}
+[32mINFO    [0m Common.Http:Http.py:397 2023-01-16 14:43:09.218497 | 
+<-----NetWorks----->
+Url:https://api.dhandho.xyz/vault/networks?networkCode=GOERLI
+Headers:
+{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:400 2023-01-16 14:43:09.218497 | 
+<-----Query Networks Response----->
+[{"accountTypes":["external","custodial","safe","shared"],"blocks":"8319900","code":"GOERLI","createdTime":"2022-09-27T03:37:34.000Z","derivationPath":"m/44'/60'/0'/0/","evmChainId":5,"feeCoin":{"decimals":18,"symbol":"GoerliETH"},"iconURL":"https://cc-icons.s3.ap-southeast-1.amazonaws.com/eth.png","id":"1574604131414781953","links":{"address":"https://goerli.etherscan.io/address/{0}","tx":"https://goerli.etherscan.io/tx/{0}"},"name":"Goerli","platform":"ETHEREUM","status":"enable","updatedTime":"2023-01-10T09:56:17.000Z"}]

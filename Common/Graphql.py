@@ -9,7 +9,8 @@ from Config.readconfig import ReadConfig
 
 env_type = int(ReadConfig().get_env('type'))
 
-# btc goerli clv "http://13.212.89.244"
+# btc goerli clv 
+# test_url = "http://13.212.89.244"
 test_url = "http://172.31.32.130"
 # BTC DOT CLV ATOM IRIS DOGE LTC 
 release_url = "http://18.162.150.113"
@@ -29,6 +30,9 @@ class Url:
             elif env_type == 1:
                 url_ = release_url
                 prot = "14000"
+        elif netWorkcode == "GOERLI":
+            url_ = test_url
+            prot = "4005"
         elif netWorkcode == "BSC":
             url_ = release_evm_url
             prot = "14101"
