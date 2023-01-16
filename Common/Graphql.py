@@ -9,46 +9,66 @@ from Config.readconfig import ReadConfig
 
 env_type = int(ReadConfig().get_env('type'))
 
+# btc goerli clv "http://13.212.89.244"
+test_url = "http://172.31.32.130"
+# BTC DOT CLV ATOM IRIS DOGE LTC 
+release_url = "http://18.162.150.113"
+# ETH BSC MATIC
+release_evm_url = "http://18.166.208.93"
 
-class Graphql:
+class Url:
+    @staticmethod
+    def url(netWorkcode):
+        if netWorkcode == "ETH":
+            url_ = release_evm_url
+            prot = "14100"
+        elif netWorkcode == "BTC":
+            if env_type == 0:
+                url_ = test_url
+                prot = "4001"
+            elif env_type == 1:
+                url_ = release_url
+                prot = "14000"
+        elif netWorkcode == "BSC":
+            url_ = release_evm_url
+            prot = "14101"
+        elif netWorkcode == "DOT":
+            url_ = release_url
+            prot = "14300"
+        elif netWorkcode == "CLV":
+            if env_type == 0:
+                url_ = test_url
+                prot = "4003"
+            elif env_type == 1:
+                url_ = release_url
+                prot = "14301"
+        elif netWorkcode == "ATOM":
+            url_ = release_url
+            prot = "14200"
+        elif netWorkcode == "IRIS":
+            url_ = release_url
+            prot = "14201"
+        elif netWorkcode == "DOGE":
+            url_ = release_url
+            prot = "14003"
+        elif netWorkcode == "LTC":
+            url_ = release_url
+            prot = "14002"
+        elif netWorkcode == "MATIC":
+            url_ = release_evm_url
+            prot = "14102"
+        return url_ + ":" + prot
+
+class C(Url):
+    @staticmethod
+    def call(netWorkcode):
+        return Url.url(netWorkcode)
+
+class Graphql(Url):
     @staticmethod
     def getAccountByAddress(netWorkcode:str,address:str,coinId:str):
 
-        if netWorkcode == "ETH":
-            url_ = "http://18.166.208.93"
-            prot = "14100"
-        elif netWorkcode == "BTC":
-            url_ = "http://18.162.150.113"
-            prot = "14000"
-        elif netWorkcode == "BSC":
-            url_ = "http://18.166.208.93"
-            prot = "14101"
-        elif netWorkcode == "DOT":
-            url_ = "http://18.162.150.113"
-            prot = "14300"
-        elif netWorkcode == "CLV":
-            url_ = "http://18.162.150.113"
-            prot = "14301"
-        elif netWorkcode == "ATOM":
-            url_ = "http://18.162.150.113"
-            prot = "14200"
-        elif netWorkcode == "IRIS":
-            url_ = "http://18.162.150.113"
-            prot = "14201"
-        elif netWorkcode == "DOGE":
-            url_ = "http://18.162.150.113"
-            prot = "14003"
-        elif netWorkcode == "LTC":
-            url_ = "http://18.162.150.113"
-            prot = "14002"
-        elif netWorkcode == "MATIC":
-            url_ = "http://18.166.208.93"
-            prot = "14102"
-        elif netWorkcode == "GOERLI":
-            url_ = "http://13.212.89.244"
-            prot = "4005"
-
-        url = url_ + ":" + prot+ "/graphql/"
+        url = Url.url(netWorkcode) + "/graphql/"
         payload = json.dumps({
             "query": "query{getAccountByAddress(address:\""+address+"\",coinId:\""+coinId+"\"){blockHash blockNumber address time amount coinId}}"
             })
@@ -64,46 +84,7 @@ class Graphql:
     @staticmethod
     def getLatestBlock(netWorkcode:str):
 
-        if netWorkcode == "ETH":
-            url_ = "http://18.166.208.93"
-            prot = "14100"
-        elif netWorkcode == "BTC":
-            if env_type == 0:
-                url_ = "http://13.212.89.244"
-                prot = "4001"
-            elif env_type == 1:
-                url_ = "http://18.162.150.113"
-                prot = "14000"
-        elif netWorkcode == "BSC":
-            url_ = "http://18.166.208.93"
-            prot = "14101"
-        elif netWorkcode == "DOT":
-            url_ = "http://18.162.150.113"
-            prot = "14300"
-        elif netWorkcode == "CLV":
-            if env_type == 0:
-                url_ = "http://13.212.89.244"
-                prot = "4003"
-            elif env_type == 1:
-                url_ = "http://18.162.150.113"
-                prot = "14301"
-        elif netWorkcode == "ATOM":
-            url_ = "http://18.162.150.113"
-            prot = "14200"
-        elif netWorkcode == "IRIS":
-            url_ = "http://18.162.150.113"
-            prot = "14201"
-        elif netWorkcode == "DOGE":
-            url_ = "http://18.162.150.113"
-            prot = "14003"
-        elif netWorkcode == "LTC":
-            url_ = "http://18.162.150.113"
-            prot = "14002"
-        elif netWorkcode == "MATIC":
-            url_ = "http://18.166.208.93"
-            prot = "14102"
-
-        url = url_ + ":" + prot+ "/graphql/"
+        url = Url.url(netWorkcode) + "/graphql/"
         payload = json.dumps({
             "query": "query{getLatestBlock{blockHash blockNumber}}"
             })

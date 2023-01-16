@@ -44,13 +44,13 @@ def job_transfer_Swap():
 if __name__ == "__main__":
     scheduler = BlockingScheduler(timezone="Asia/Shanghai")
 
-    scheduler.add_job(job_test_block,'interval',seconds=600)
+    scheduler.add_job(job_test_block,'interval',seconds=10)
     
-    scheduler.add_job(job_test_user, 'cron', hour=8, minute=00)
-    scheduler.add_job(job_test_account, 'cron', hour=8, minute=10)
-    scheduler.add_job(job_transfer_transfer, 'cron', hour=8, minute=20)
-    scheduler.add_job(job_transfer_Swap, 'cron', hour=9, minute=50)
-    scheduler.add_job(job_transfer_Stake, 'cron', hour=9, minute=10)
+    # scheduler.add_job(job_test_user, 'cron', hour=8, minute=00)
+    # scheduler.add_job(job_test_account, 'cron', hour=8, minute=10)
+    # scheduler.add_job(job_transfer_transfer, 'cron', hour=8, minute=20)
+    # scheduler.add_job(job_transfer_Swap, 'cron', hour=9, minute=50)
+    # scheduler.add_job(job_transfer_Stake, 'cron', hour=9, minute=10)
     scheduler.start()
 
 

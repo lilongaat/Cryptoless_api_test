@@ -42,7 +42,7 @@ class Test_block_height_check:
     @allure.story("Block Height Check!")
     @allure.title('{test_title}')
     @pytest.mark.parametrize('test_title,networkCode,gaps', test_data)
-    def test_custodial(self,test_title,networkCode,gaps):
+    def test_block_check(self,test_title,networkCode,gaps):
 
         with allure.step("浏览器查询块高"):
             block_explore = Httpexplore.Block_explore.block_height(networkCode)
