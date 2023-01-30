@@ -409,15 +409,15 @@ class HttpUtils:
 
     @staticmethod
     # 查询所有资产信息
-    def assets(symbol:str="", source:str="",isFavorite:str="",limit:str="", Authorization=token):
-        url = url_ + "/vault/proxy/core/api/assets?symbol="+symbol+"&source="+source+"&isFavorite="+isFavorite+"&limit="+limit
+    def assets(symbol:str="", source:str="",isFavorite:str="",size:str="10", Authorization=token):
+        url = url_ + "/vault/proxy/assets?symbol="+symbol+"&source="+source+"&isFavorite="+isFavorite+"&size="+size
         headers = {
             "Content-Type": "application/json",
             "Authorization": Authorization
         }
         
         logger.info('\n'+"<-----Query Assets----->"+"\n"+"Url:"+url+'\n'+'Headers:'+json.dumps(headers)+'\n\n')
-        res = requests.get(url=url, headers=headers, timeout=timeout_)
+        res = requests.get(url=url, headers=headers ,timeout=timeout_)
         if res.status_code == 200:
             logger.info('\n'+"<-----Query Assets Response----->"+"\n"+(res.text)+'\n\n')
             return res
@@ -597,4 +597,5 @@ if __name__ == '__main__':
     # HttpUtils.assets()
     # HttpUtils.holders(address="0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17")
     # HttpUtils.transactions_byid("1610518001510273025")
-    HttpUtils.anonymous()
+    # HttpUtils.anonymous()
+    print(type(HttpUtils.assets(symbol="BTC").json()['list']))

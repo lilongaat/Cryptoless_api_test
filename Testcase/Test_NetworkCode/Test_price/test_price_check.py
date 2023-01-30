@@ -1,6 +1,5 @@
-from time import sleep
 from decimal import Decimal
-import json
+from time import sleep
 import allure
 import pytest
 import sys
@@ -9,41 +8,111 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))))))
 from Common import Http, Httprpc, Httpfs, Conf, Graphql, Httpexplore
 from Common.Loguru import logger
+from Config.readconfig import ReadConfig
 
-web3token = "eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTU4MzAxOTk1NTUzMDg5NTM2MVxuSXNzdWVkIEF0OiBUaHUsIDIwIE9jdCAyMDIyIDA4OjU5OjAzIEdNVFxuRXhwaXJhdGlvbiBUaW1lOiBTdW4sIDE3IE9jdCAyMDMyIDA4OjU5OjAzIEdNVCIsInNpZ25hdHVyZSI6IjB4MDA4NTA0NmM1YmYwYWFkZjkwMjIyMWFhNGU0OTFjODllYTU5ZTAxZGQ2ODIwNTdkMDU0Y2U2MzcyNTdkYTE2ZTIyNTJlMzYxYWJmNjE4ZmEwOWJmODVmYjEwM2RjMmZhYzg4MzFkODNmMDcwNGZlMjdhZmUzYTdjYWY0NGE2YjYxYyJ9"
+env_type = int(ReadConfig().get_env('type'))
 
-class Test_price_check:
 
-    def test_price_check():
+@allure.feature("Prices Height!")
+class Test_price_height_check:
+    if env_type == 0: #测试
+        test_data = [
+            ('CRV'), 
+            ('SUSHI'), 
+            ('DOGE'), 
+            ('NEXO'), 
+            ('SAND'), 
+            ('THETA'), 
+            ('BAL'), 
+            ('BNT'),
+            ('ZRX'),
+            ('BAT'), 
+            ('YFI'), 
+            ('GRT'), 
+            ('COMP'), 
+            ('DAI'), 
+            ('MKR'), 
+            ('OMG'), 
+            ('LINK'), 
+            ('UNI'), 
+            ('MATIC'), 
+            ('IRIS'), 
+            ('ATOM'), 
+            ('DOT'), 
+            ('CLV'), 
+            ('BNB'), 
+            ('ETH'), 
+            ('BTC'),
+            ]
+    elif env_type == 1: #生产
+        test_data = [
+            ('CRV'), 
+            ('SUSHI'), 
+            ('DOGE'), 
+            ('NEXO'), 
+            ('SAND'), 
+            ('THETA'), 
+            ('BAL'), 
+            ('BNT'),
+            ('ZRX'),
+            ('BAT'), 
+            ('YFI'), 
+            ('GRT'), 
+            ('COMP'), 
+            ('DAI'), 
+            ('MKR'), 
+            ('OMG'), 
+            ('LINK'), 
+            ('UNI'), 
+            ('MATIC'), 
+            ('IRIS'), 
+            ('ATOM'), 
+            ('DOT'), 
+            ('CLV'), 
+            ('BNB'), 
+            ('ETH'), 
+            ('BTC'),
+        ]
 
-        # symbol_list = []
-        # cryptocurrencies = Http.HttpUtils.get_cryptocurrencies()
-        # for i in range(len(cryptocurrencies.json())):
-        #     symbol_list.append(cryptocurrencies.json()[i]["symbol"])
-        # print(symbol_list)
+    @allure.story("prices Height Check!")
+    # @allure.title('{test_title}')
+    @pytest.mark.parametrize('symbol,', test_data)
+    def test_price_check(self,symbol,):
 
-        symbol_list = ['CRV', 'SUSHI', 'DOGE', 'NEXO', 'SAND', 'THETA', 'BAL', 'BNT', 'ZRX', 'BAT', 'YFI', 'GRT', 'COMP', 'DAI', 'MKR', 'OMG', 'LINK', 'UNI', 'MATIC', 'IRIS', 'ATOM', 'DOT', 'CLV', 'BNB', 'ETH', 'BTC']
-        Dsymbol_list = ['LEO', 'HT', 'WBTC', 'BTT']
-
-        symbol_price_caps = {}
-        for i in range(len(symbol_list)):
-
-            symbol = symbol_list[i]
-            cryptocurrencies = Http.HttpUtils.get_cryptocurrencies(symbol)
-            symbol_price = cryptocurrencies.json()[0]["price"]
-
+        with allure.step("币安查询价格"):
             bn_price = Httpexplore.BN.BN_price(symbol)
-            assert bn_price.status_code == 200
-            symbol_bn_price = bn_price.json()["price"]
+            time_bn = Conf.Config.now_time()
+            if bn_price.status_code == 200:
+                symbol_bn_price = bn_price.json()["price"]
+            else:
+                symbol_bn_price = "None"
 
-            p =  (abs(1- (Decimal(symbol_price)/Decimal(symbol_bn_price))))*100 # 价格差距百分比
-            if  p > 3:
-                symbol_price_caps.update({symbol+"_price":symbol_price,symbol+"_BN_price":symbol_bn_price,symbol+"_percent_gap":str(Decimal(p).quantize(Decimal("0.00")))+"%"})
+        with allure.step("network查询价格"):
+            price = Http.HttpUtils.assets(symbol=symbol)
+            time_assert = Conf.Config.now_time()
+            if price.status_code == 200:
+                symbol_price_list = [p.get("price") for p in price.json()['list']]
+                # logger.debug(symbol_price_list)
+                if len(symbol_price_list) == 0:
+                    symbol_price = "None"
+                else:
+                    symbol_price = symbol_price_list[0]
+            else:
+                symbol_price = "Serve Error " +  str(price.status_code)
 
-        # Httpfs.HttpFs.send_msg('Price 异常!\n' + str(symbol_price_caps))
-        if len(symbol_price_caps) > 0:
-            Httpfs.HttpFs.send_msg('Price 差距大于3%!\n' + str(symbol_price_caps))
+        with allure.step("对比币安和assert价格差距"):
+            if symbol_bn_price == "None" or symbol_price == "None" or price.status_code != 200:
+                Httpfs.HttpFs.send_msg(symbol + ' Symbol_Price异常!\n' + "币安Api查询价格(" + time_bn + "): " + str(symbol_bn_price) + "\n" + "assert查询最新价格(" + time_assert + "): " + str(symbol_price))
+            elif (abs(1- (Decimal(symbol_price)/Decimal(symbol_bn_price))))*100 > 3:
+                Httpfs.HttpFs.send_msg(symbol + ' Symbol_Price异常!\n' + "币安Api查询价格(" + time_bn + "): " + str(symbol_bn_price) + "\n" + "assert查询最新价格(" + time_assert + "): " + str(symbol_price))
 
+
+
+
+            
 
 if __name__ == '__main__':
-    Test_price_check.test_price_check()
+    path = os.path.abspath(__file__) + ""
+    pytest.main(["-vs", path,'--alluredir=Report/Allure'])
+    # os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')
+    

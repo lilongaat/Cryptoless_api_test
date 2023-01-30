@@ -133,7 +133,7 @@ if __name__ == '__main__':
     privkey1 = '9cbca176aff8c48ebd9a27c31455e34ebc86e25a17e22b3d65a716fc851ada38'
     # privkey2 = '2f0b3e997953188f8dd6c1eca798be943f6fabb783e2b2cc82275e98a8126442'
     # privkey3 = 'dfdd81763f70078be8c85fe2454de11e7bcf98696c748d133dea50ec7c166a6f'
-    hash = '7905606d84873e5a291a1a9bc52a94143e8241cb376e72d029836f09516be47a'
+    hash = '2fce68f4b802f6c95dcafae81c72e339daed4c190b7f17f2cd65bf3d7b046946'
     print(Config.sign(privkey1, hash))
     # print(Config.sign(privkey2, hash))
     # print(Config.sign(privkey3, hash))

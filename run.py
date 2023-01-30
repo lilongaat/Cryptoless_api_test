@@ -11,7 +11,8 @@ path = path_.split("/run.py")[0]
 print(path)
 
 # 测试报告文件路径
-report_file = 'Allure_Testfile_' + str(datetime.date.today())
+# report_file = 'Allure_Testfile_' + str(datetime.date.today())
+report_file = 'Allure_normal'
 
 
 
@@ -19,10 +20,13 @@ report_file = 'Allure_Testfile_' + str(datetime.date.today())
 def job_test_block():
     pytest.main(["-vs", path + "/Testcase/Test_NetworkCode/Test_block/test_blockheight_check.py"])
 
+# Testcase Prices_check
+def job_test_prices():
+    pytest.main(["-vs", path + "/Testcase/Test_NetworkCode/Test_price/test_price_check.py"])
 
 # Testcase Test_User
 def job_test_user():
-    pytest.main(["-vs", path + "/Testcase/Test_User", '--alluredir=Report/' + report_file])
+    pytest.main(["-vs", path + "/Testcase/Test_User",'--clean-alluredir', '--alluredir=Report/' + report_file])
 
 # Testcase Test_Account
 def job_test_account():
@@ -45,6 +49,7 @@ if __name__ == "__main__":
     scheduler = BlockingScheduler(timezone="Asia/Shanghai")
 
     scheduler.add_job(job_test_block,'interval',seconds=600)
+    scheduler.add_job(job_test_prices,'interval',seconds=600)
     
     scheduler.add_job(job_test_user, 'cron', hour=8, minute=00)
     scheduler.add_job(job_test_account, 'cron', hour=8, minute=10)

@@ -1,0 +1,13 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:512 2023-01-16 15:45:13.540743 | 
+<-----BN balance response----->
+
+Body:{"mins": 5, "price": "21088.92759580"}
+[32mINFO    [0m Common.Http:Http.py:419 2023-01-16 15:45:13.540743 | 
+<-----Query Assets----->
+Url:https://api.dhandho.xyz/vault/proxy/assets?symbol=BTC&source=&isFavorite=&limit=
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:422 2023-01-16 15:45:13.540743 | 
+<-----Query Assets Response----->
+{"current":1,"list":[{"category":"","change":"0.014959","createdTime":"2021-12-09T11:52:48.000Z","iconURL":"https://img.cryptoless.net/cryptos/btc.png","id":"1468790709763866625","isFavorite":false,"marketCap":331121518200,"name":"Bitcoin","price":17195.2,"source":1,"symbol":"BTC","updatedTime":"2022-06-22T10:23:57.000Z"}],"size":10,"total":1}

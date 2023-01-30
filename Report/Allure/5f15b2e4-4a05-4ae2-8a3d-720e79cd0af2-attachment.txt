@@ -1,0 +1,13 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:512 2023-01-16 16:18:30.898178 | 
+<-----BN balance response----->
+
+Body:{"mins": 5, "price": "0.08360958"}
+[32mINFO    [0m Common.Http:Http.py:419 2023-01-16 16:18:30.898178 | 
+<-----Query Assets----->
+Url:https://api.dhandho.xyz/vault/proxy/assets?symbol=GRT&source=&isFavorite=&size=10
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:422 2023-01-16 16:18:30.898178 | 
+<-----Query Assets Response----->
+{"current":1,"list":[{"category":"","change":"0.092474","createdTime":"2022-05-09T08:10:30.000Z","iconURL":"https://img.cryptoless.net/cryptos/grt.png","id":"1523576127985438722","isFavorite":false,"marketCap":904403731.2799329,"name":"Graph Token","price":0.08565,"source":1,"symbol":"GRT","updatedTime":"2022-06-22T10:23:57.000Z"}],"size":10,"total":1}

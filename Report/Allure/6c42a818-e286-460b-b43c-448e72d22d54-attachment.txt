@@ -1,0 +1,13 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:512 2023-01-16 15:28:31.630062 | 
+<-----BN balance response----->
+
+Body:{"mins": 5, "price": "6.82825683"}
+[32mINFO    [0m Common.Http:Http.py:419 2023-01-16 15:28:31.630062 | 
+<-----Query Assets----->
+Url:https://api.dhandho.xyz/vault/proxy/assets?symbol=LINK&source=&isFavorite=&limit=
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:422 2023-01-16 15:28:31.630062 | 
+<-----Query Assets Response----->
+{"current":1,"list":[{"category":"","change":"0.048109","createdTime":"2022-06-30T05:57:08.000Z","iconURL":"","id":"1542386734297690113","isFavorite":false,"marketCap":6100000000,"name":"ChainLink Token","price":6.1,"source":1,"symbol":"LINK","updatedTime":"2022-06-30T05:57:08.000Z"}],"size":10,"total":1}

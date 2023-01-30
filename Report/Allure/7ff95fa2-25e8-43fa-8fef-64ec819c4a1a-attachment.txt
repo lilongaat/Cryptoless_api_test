@@ -1,0 +1,13 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:512 2023-01-16 15:55:22.210685 | 
+<-----BN balance response----->
+
+Body:{"mins": 5, "price": "21093.53192635"}
+[32mINFO    [0m Common.Http:Http.py:419 2023-01-16 15:55:22.210685 | 
+<-----Query Assets----->
+Url:https://api.dhandho.xyz/vault/proxy/assets?symbol=BTC&source=&isFavorite=&size=
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[1m[31mERROR   [0m Common.Http:Http.py:425 2023-01-16 15:55:22.210685 | 
+<-----Query Assets Response Error----->
+{"code":2300000,"message":"For input string: \"\""}

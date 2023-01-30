@@ -1,0 +1,13 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:512 2023-01-16 15:47:13.917403 | 
+<-----BN balance response----->
+
+Body:{"mins": 5, "price": "21084.80839020"}
+[32mINFO    [0m Common.Http:Http.py:419 2023-01-16 15:47:13.917403 | 
+<-----Query Assets----->
+Url:https://api.cryptoless.net/vault/proxy/assets?symbol=BTC&source=&isFavorite=&limit=
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjczOTQzOTEyLCJpYXQiOjE2NzMzMzkxMTIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.as76Z2zPKhedohNNZrSt0PuPP729a4MyLX219QWSoGc"}
+
+
+[32mINFO    [0m Common.Http:Http.py:422 2023-01-16 15:47:13.917403 | 
+<-----Query Assets Response----->
+{"current":1,"list":[{"category":"","change":"0.01777","createdTime":"2021-12-09T11:52:48.000Z","iconURL":"https://img.cryptoless.net/cryptos/btc.png","id":"1468790709763866625","isFavorite":false,"marketCap":406563304118.04,"name":"Bitcoin","price":21105.09,"source":1,"symbol":"BTC","updatedTime":"2022-06-24T10:41:11.000Z"}],"size":10,"total":1}
