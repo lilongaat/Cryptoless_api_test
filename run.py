@@ -44,6 +44,10 @@ def job_transfer_Stake():
 def job_transfer_Swap():
     pytest.main(["-vs", path + "/Testcase/Test_Cloud/Test_Swap", '--alluredir=Report/' + report_file])
 
+# Allure
+def job_allure():
+    os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure -p 42431')
+
 
 if __name__ == "__main__":
     scheduler = BlockingScheduler(timezone="Asia/Shanghai")
@@ -51,11 +55,11 @@ if __name__ == "__main__":
     scheduler.add_job(job_test_block,'interval',seconds=600)
     scheduler.add_job(job_test_prices,'interval',seconds=600)
     
-    scheduler.add_job(job_test_user, 'cron', hour=11, minute=30)
-    scheduler.add_job(job_test_account, 'cron', hour=11, minute=40)
-    scheduler.add_job(job_transfer_transfer, 'cron', hour=11, minute=50)
-    scheduler.add_job(job_transfer_Swap, 'cron', hour=12, minute=20)
-    scheduler.add_job(job_transfer_Stake, 'cron', hour=12, minute=40)
+    scheduler.add_job(job_test_user, 'cron', hour=8, minute=00)
+    scheduler.add_job(job_test_account, 'cron', hour=8, minute=10)
+    scheduler.add_job(job_transfer_transfer, 'cron', hour=8, minute=20)
+    scheduler.add_job(job_transfer_Swap, 'cron', hour=9, minute=00)
+    scheduler.add_job(job_transfer_Stake, 'cron', hour=9, minute=30)
     scheduler.start()
 
 
