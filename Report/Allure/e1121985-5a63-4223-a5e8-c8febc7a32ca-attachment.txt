@@ -1,9 +1,0 @@
-[32mINFO    [0m Common.Http:Http.py:31 2023-01-11 18:02:25.420195 | 
-<-----Connect anonymous----->
-Url:https://api.dhandho.xyz/vault/users/anonymous
-Headers:{"Content-Type": "application/json"}
-Body:{}
-
-
-[32mINFO    [0m Common.Http:Http.py:34 2023-01-11 18:02:25.420195 | 
-<-----Connect anonymous Success----->
