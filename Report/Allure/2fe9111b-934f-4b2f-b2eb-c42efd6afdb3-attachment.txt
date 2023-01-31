@@ -1,0 +1,22 @@
+[32mINFO    [0m Common.Http:Http.py:278 2023-01-31 16:34:46.275032 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "GOERLI", "type": "transfer", "body": {"from": "0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca", "to": "0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2", "symbol": "GoerliETH", "amount": "0.00012"}, "transactionParams": {"memo": "La29HwZrnA"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:281 2023-01-31 16:34:46.275032 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-01-31T08:35:00.000Z","description":"Send 0.00012 ETH","estimatedFee":"861000","fee":"-1","hash":"0xd908ac9524d3a798d47c266539fabbed751bba38f2147491fdf6fd576fc6dba2","id":"1620339843913764866","networkCode":"GOERLI","serialized":"02f868052a042982520894a7a9e710f9a3b4184d4f8b7d379cec262f2382c2866d23ad5f800080c001a0129e36f35954f6b2f7062376e6276bb7c7556eb84c68dadf2779ed3124184d06a049c9ff60da908cdf41c462c30df36615380f80a5f6aac0f3aca0a073d4763164","status":2,"statusDesc":"SIGNED","updatedTime":"2023-01-31T08:35:24.000Z"}]},"body":{"symbol":"GoerliETH","amount":"0.00012","from":"0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","to":"0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2"},"createdTime":"2023-01-31T08:35:16.000Z","id":"1620339922966929410","networkCode":"GOERLI","status":-2,"transactionParams":{"memo":"La29HwZrnA"},"type":"TRANSFER","updatedTime":"2023-01-31T08:35:16.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:337 2023-01-31 16:34:46.275032 | 
+<-----Cancel----->
+Url:https://api.dhandho.xyz/vault/transactions/cancel/1620339843913764866
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{}
+
+
+[32mINFO    [0m Common.Http:Http.py:340 2023-01-31 16:34:46.275032 | 
+<-----Cancel Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-01-31T08:35:00.000Z","description":"Send 0.00012 ETH","estimatedFee":"861000","fee":"-1","hash":"0xd908ac9524d3a798d47c266539fabbed751bba38f2147491fdf6fd576fc6dba2","id":"1620339843913764866","networkCode":"GOERLI","serialized":"02f868052a042982520894a7a9e710f9a3b4184d4f8b7d379cec262f2382c2866d23ad5f800080c001a0129e36f35954f6b2f7062376e6276bb7c7556eb84c68dadf2779ed3124184d06a049c9ff60da908cdf41c462c30df36615380f80a5f6aac0f3aca0a073d4763164","status":7,"statusDesc":"CANCELED","updatedTime":"2023-01-31T08:35:24.426Z"}

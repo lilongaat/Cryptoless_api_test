@@ -15,19 +15,22 @@ from Config.readconfig import ReadConfig
 env_type = int(ReadConfig().get_env('type'))
 
 # custodial
-@allure.feature("Transfers Fail!")
-class Test_transfers_success:
+@allure.feature("Transfers!")
+class Test_transfers_fail:
     if env_type == 0: #测试
         test_data = [
             # BTC
-            ("BTC Custodial账户转账","BTC","BTC","tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.000008"),
+            ("BTC Custodial账户转账cancel","BTC","BTC","tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.000008"),
 
             # GOERLI
-            ("GOERLI Custodial账户转账 nativecoin","GOERLI","GoerliETH","0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.00012"),
-            ("GOERLI Custodial账户转账 erc20coin","GOERLI","USDCC","0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.000123"),
+            ("GOERLI Custodial账户转账 nativecoin cancel","GOERLI","GoerliETH","0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.00012"),
+            ("GOERLI Custodial账户转账 erc20coin cancel","GOERLI","USDCC","0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.000123"),
 
             #IRIS
-            ("IRIS Custodial账户转账","IRIS","IRIS","iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe","","0.000123"),
+            ("IRIS Custodial账户转账cancel","IRIS","IRIS","iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe","iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe","0.000123"),
+
+            #CLV
+            ("CLV Custodial账户转账cancel","CLV","CLV","5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","0.0000014"),
         ]
     elif env_type == 1: #生产
         test_data = []
@@ -65,7 +68,8 @@ class Test_transfers_success:
         with allure.step("取消交易"):
             cancel = Http.HttpUtils.cancel(id)
             assert cancel.status_code == 200
-
+            assert cancel.json()['status'] == 7
+            assert cancel.json()['statusDesc'] == "CANCELED"
 
 if __name__ == '__main__':
     path = os.path.abspath(__file__) + ""

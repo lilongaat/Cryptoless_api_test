@@ -46,7 +46,8 @@ def job_transfer_Swap():
 
 # Allure
 def job_allure():
-    os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure -p 42431')
+    # os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure -p 42431')
+    os.system("gnome-terminal -e 'bash -c \"allure serve /Users/lilong/Documents/Test_Api/Report/Allure -p 42434; exec bash\"'")
 
 
 if __name__ == "__main__":
@@ -60,6 +61,7 @@ if __name__ == "__main__":
     scheduler.add_job(job_transfer_transfer, 'cron', hour=8, minute=20)
     scheduler.add_job(job_transfer_Swap, 'cron', hour=9, minute=00)
     scheduler.add_job(job_transfer_Stake, 'cron', hour=9, minute=30)
+    scheduler.add_job(job_allure, 'cron', hour=10, minute=00)
     scheduler.start()
 
 

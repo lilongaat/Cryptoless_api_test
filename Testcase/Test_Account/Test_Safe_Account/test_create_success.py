@@ -13,14 +13,14 @@ env_type = int(ReadConfig().get_env('type'))
 
 
 # 创建安全账户自动激活
-@allure.feature("Create Safe Account!")
+@allure.feature("Account!")
 class Test_create_safe_account:
     if env_type == 0: #测试
         test_data = [
             # BTC
             ("BTC创建2-2安全账户 全custodial","安全账户BTC2-2-"+str(Conf.Config.now_timestamp()),"BTC","",""),
             ("BTC创建2-2安全账户 custodial+owner","安全账户BTC2-2-"+str(Conf.Config.now_timestamp()),"BTC","02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6",""),
-            ("BTC创建2-2安全账户 custodial+owner","安全账户BTC2-2-"+str(Conf.Config.now_timestamp()),"BTC","02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6","0231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f70"),
+            ("BTC创建2-3安全账户","安全账户BTC2-3-"+str(Conf.Config.now_timestamp()),"BTC","02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6","0231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f70"),
 
             #GOERLI
             ("Goerli创建2-2安全账户 全custodial","安全账户GOERLI2-2-"+str(Conf.Config.now_timestamp()),"GOERLI","",""),
@@ -43,6 +43,8 @@ class Test_create_safe_account:
             ("ATOM创建2-3安全账户","安全账户ATOM2-3-"+str(Conf.Config.now_timestamp()),"ATOM","027243806b1abdb1737b45d4a0619112bf464e13407b7d37dd2da2821bc6fbcac4","03d36556045bc8bac44e1fb88bd1840d68077fded4371e8e8c45ffb9788b525329"),
             
         ]
+    elif env_type == 1: #生产
+        test_data = []
 
     @allure.story("Create Safe Account Success!")
     @allure.title('{test_title}')

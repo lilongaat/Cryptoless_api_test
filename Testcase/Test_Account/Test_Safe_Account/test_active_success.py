@@ -13,7 +13,7 @@ env_type = int(ReadConfig().get_env('type'))
 
 
 # payer激活安全账户
-@allure.feature("Create Safe Account!")
+@allure.feature("Account!")
 class Test_create_safe_account_payer:
 
     if env_type == 0: #测试
@@ -24,7 +24,7 @@ class Test_create_safe_account_payer:
             # ("payer_relay 指定payer激活账户","0xeb69947869312949ba6dcbbfead304662abba2ae","9cbca176aff8c48ebd9a27c31455e34ebc86e25a17e22b3d65a716fc851ada38","0326288a7bbff5dc672bfec0a0a02ccae3eeb3e93a0294c8e0f534c97438de0fce"),
         ]
 
-    @allure.story("Create Safe Account Success!")
+    @allure.story("Create&Active Safe Account Success!")
     @allure.title('{test_title}')
     @pytest.mark.parametrize('test_title,address,payer_prv,payer_pub', test_data)
     def test_create_account_safe(self, test_title,address,payer_prv,payer_pub):

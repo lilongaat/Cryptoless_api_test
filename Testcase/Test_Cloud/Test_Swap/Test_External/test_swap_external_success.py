@@ -16,7 +16,7 @@ from Config.readconfig import ReadConfig
 env_type = int(ReadConfig().get_env('type'))
 
 # extarnal
-@allure.feature("Swap Success!")
+@allure.feature("Swap!")
 class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [

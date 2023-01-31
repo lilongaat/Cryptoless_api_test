@@ -16,7 +16,7 @@ from Config.readconfig import ReadConfig
 env_type = int(ReadConfig().get_env('type'))
 
 # safe
-@allure.feature("Transfers Success!")
+@allure.feature("Transfers!")
 class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
@@ -33,7 +33,7 @@ class Test_transfers_success:
             # MATIC
         ]
 
-    @allure.story("Safe Transfers Success!")
+    @allure.story("Safe Transfers RelayNoce Success!")
     @allure.title('{test_title}')
     @pytest.mark.parametrize('test_title,networkCode,symbol,privatekey,from_adds,from_other,to_add,amount', test_data)
     def test_custodial(self,test_title,networkCode,symbol,privatekey,from_adds,from_other,to_add,amount):

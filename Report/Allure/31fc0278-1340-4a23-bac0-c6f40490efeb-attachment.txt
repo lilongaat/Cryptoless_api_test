@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:278 2023-01-31 16:34:46.275032 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "IRIS", "type": "transfer", "body": {"from": "iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe", "to": "", "symbol": "IRIS", "amount": "0.000123"}, "transactionParams": {"memo": "P68EtjwTo2"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:284 2023-01-31 16:34:46.275032 | 
+<-----Instructions Response Error----->
+400
+{"code":2300000,"message":"to not empty"}

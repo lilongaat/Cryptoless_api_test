@@ -332,6 +332,7 @@ class HttpUtils:
             "Content-Type": "application/json",
             "Authorization": Authorization
         }
+        body={}
 
         logger.info('\n'+"<-----Cancel----->"+"\n"+"Url:"+url+'\n'+'Headers:'+json.dumps(headers)+'\n'+'Body:'+json.dumps(body)+'\n\n')
         res = requests.post(url=url, json=body, headers=headers, timeout=timeout_)

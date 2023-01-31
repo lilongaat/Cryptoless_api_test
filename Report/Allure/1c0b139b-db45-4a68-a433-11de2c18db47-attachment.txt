@@ -1,0 +1,22 @@
+[32mINFO    [0m Common.Http:Http.py:278 2023-01-31 16:33:03.513892 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "BTC", "type": "transfer", "body": {"from": "tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x", "to": "tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq", "symbol": "BTC", "amount": "0.000008"}, "transactionParams": {"memo": "IlDwqyKUNa"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:281 2023-01-31 16:33:03.513892 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-01-31T08:33:06.000Z","description":"Send BTC","estimatedFee":"187","fee":"-1","hash":"f213f775aa6c72ecd084b7ae09b6608bfc2fa98d5a674ec12bf63864a74ace12","id":"1620339372247502849","networkCode":"BTC","serialized":"010000000001019bd9d7d8523363fff0c166814fb6bcddfc1fbb990734b87231a2b446bdbf17110100000000ffffffff022003000000000000160014ea2cc3344a103daead8378c573ccbfcba5bfed543a39170000000000160014f136ddf8a32711e62d6eac8693f82dc6e7af4e210247304402207356b988473b24fe370faa134814d79e6b531e9c1e5b83d3b3a471a11d818b3a02207b642fac692ebad52250f41493caa03b5c671f577e509376a1c52a43060b7f5c012103fc4bdc2e6a1337c9e0dfbb888b4e7178cd1746ee789477a42695d971afd8d67900000000","status":2,"statusDesc":"SIGNED","updatedTime":"2023-01-31T08:33:15.000Z"}]},"body":{"symbol":"BTC","amount":"0.000008","from":"tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x","to":"tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq"},"createdTime":"2023-01-31T08:33:12.000Z","id":"1620339401246978049","networkCode":"BTC","status":-1,"transactionParams":{"memo":"IlDwqyKUNa"},"type":"TRANSFER","updatedTime":"2023-01-31T08:33:14.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:337 2023-01-31 16:33:03.513892 | 
+<-----Cancel----->
+Url:https://api.dhandho.xyz/vault/transactions/cancel/1620339372247502849
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{}
+
+
+[32mINFO    [0m Common.Http:Http.py:340 2023-01-31 16:33:03.513892 | 
+<-----Cancel Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-01-31T08:33:06.000Z","description":"Send BTC","estimatedFee":"187","fee":"-1","hash":"f213f775aa6c72ecd084b7ae09b6608bfc2fa98d5a674ec12bf63864a74ace12","id":"1620339372247502849","networkCode":"BTC","serialized":"010000000001019bd9d7d8523363fff0c166814fb6bcddfc1fbb990734b87231a2b446bdbf17110100000000ffffffff022003000000000000160014ea2cc3344a103daead8378c573ccbfcba5bfed543a39170000000000160014f136ddf8a32711e62d6eac8693f82dc6e7af4e210247304402207356b988473b24fe370faa134814d79e6b531e9c1e5b83d3b3a471a11d818b3a02207b642fac692ebad52250f41493caa03b5c671f577e509376a1c52a43060b7f5c012103fc4bdc2e6a1337c9e0dfbb888b4e7178cd1746ee789477a42695d971afd8d67900000000","status":7,"statusDesc":"CANCELED","updatedTime":"2023-01-31T08:33:15.200Z"}
