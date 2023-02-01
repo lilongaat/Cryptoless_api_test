@@ -3,8 +3,10 @@ import os,sys
 import pytest
 import datetime
 
-
 from apscheduler.schedulers.background import BlockingScheduler
+
+from Config.readconfig import ReadConfig
+env_type = int(ReadConfig().get_env('type'))
 
 path_ = os.path.abspath(__file__) + ""
 path = path_.split("/run.py")[0]
@@ -46,7 +48,10 @@ def job_transfer_Swap():
 
 # Allure
 def job_allure():
-    os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure_normal -p 42431')
+    if env_type == 0:
+        os.system(f'allure serve /home/ec2-user/automation/api-test/Report/Allure_normal -p 42431')
+    elif env_type == 1:
+        os.system(f'allure serve /home/ec2-user/automation/api-test/Report/Allure_normal -p 42432')
 
 
 if __name__ == "__main__":
@@ -61,7 +66,7 @@ if __name__ == "__main__":
     scheduler.add_job(job_transfer_transfer, 'cron', hour=8, minute=20)
     scheduler.add_job(job_transfer_Swap, 'cron', hour=8, minute=50)
     scheduler.add_job(job_transfer_Stake, 'cron', hour=9, minute=00)
-    scheduler.add_job(job_allure, 'cron', hour=14, minute=30)
+    scheduler.add_job(job_allure, 'cron', hour=14, minute=50)
     scheduler.start()
 
 
