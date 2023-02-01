@@ -47,7 +47,7 @@ def job_transfer_Swap():
 # Allure
 def job_allure():
     # os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure -p 42431')
-    os.system("gnome-terminal -e 'bash -c \"allure serve /Users/lilong/Documents/Test_Api/Report/Allure -p 42434; exec bash\"'")
+    os.system(f'gnome-terminal -t "allureserve" – bash -c "allure serve /Users/lilong/Documents/Test_Api/Report/Allure -p 42431.sh;exec bash;"')
 
 
 if __name__ == "__main__":
