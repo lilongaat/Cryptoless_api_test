@@ -62,7 +62,7 @@ if __name__ == "__main__":
     scheduler.add_job(job_transfer_transfer, 'cron', hour=8, minute=20)
     scheduler.add_job(job_transfer_Swap, 'cron', hour=8, minute=50)
     scheduler.add_job(job_transfer_Stake, 'cron', hour=9, minute=00)
-    scheduler.add_job(job_allure, 'cron', hour=12, minute=3)
+    scheduler.add_job(job_allure, 'cron', hour=12, minute=8)
     scheduler.start()
 
 
