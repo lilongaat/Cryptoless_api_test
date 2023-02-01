@@ -1,0 +1,35 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:227 2023-02-01 14:53:06.183841 | 
+<-----balance----->
+Url:https://api.polygonscan.com/api?module=account&action=balance&address=0x651a23f7bed98b52c7829ad668a4836c48064850&apikey=85W6B7V5TPH7TDZA3JQCFT8UN8RKAEMA4Y
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:229 2023-02-01 14:53:06.183841 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "15227210975312104"}
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-01 14:53:06.183841 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=MATIC&address=0x651a23f7bed98b52c7829ad668a4836c48064850&symbol=MATIC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-01 14:53:06.183841 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0x651a23f7bed98b52c7829ad668a4836c48064850","createdTime":"2022-12-13T12:45:43.000Z","id":"1602645941650939906","networkCode":"MATIC","quantity":"0.015227210975312104","symbol":"MATIC","updatedTime":"2023-02-01T02:46:00.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_swap_custodail_success:test_swap_custodail_success.py:45 2023-02-01 14:53:06.183841 | 浏览器查询账户balance为:0.015227210975312104
+[35mDEBUG   [0m test_swap_custodail_success:test_swap_custodail_success.py:46 2023-02-01 14:53:06.183841 | 查询账户holder为:0.015227210975312104
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-01 14:53:06.183841 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "MATIC", "type": "swap", "body": {"address": "0x651a23f7bed98b52c7829ad668a4836c48064850", "from": "MATIC", "to": "USDC", "fromAmount": "0.00012", "slippage": "1"}, "transactionParams": {"memo": "Nv9opHOJjW"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:284 2023-02-01 14:53:06.183841 | 
+<-----Instructions Response Error----->
+400
+{"code":2400000,"message":"cannot estimate. Don't forget about miner fee. Try to leave the buffer of MATIC for gas"}
