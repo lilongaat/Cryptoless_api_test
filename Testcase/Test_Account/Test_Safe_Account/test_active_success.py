@@ -23,6 +23,8 @@ class Test_create_safe_account_payer:
             # ("payer_relay 自付激活账户","0xbb80978baa828a7296a5ae45f7d77a02ff5bcd72","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da",""),
             # ("payer_relay 指定payer激活账户","0xeb69947869312949ba6dcbbfead304662abba2ae","9cbca176aff8c48ebd9a27c31455e34ebc86e25a17e22b3d65a716fc851ada38","0326288a7bbff5dc672bfec0a0a02ccae3eeb3e93a0294c8e0f534c97438de0fce"),
         ]
+    elif env_type == 0: #生产
+        test_data = []
 
     @allure.story("Create&Active Safe Account Success!")
     @allure.title('{test_title}')

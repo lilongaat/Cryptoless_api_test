@@ -33,7 +33,23 @@ class Test_transfers_fail:
             ("CLV Custodial账户转账cancel","CLV","CLV","5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","0.0000014"),
         ]
     elif env_type == 1: #生产
-        test_data = []
+        test_data = [
+            # DOGE
+            ("DOGE Custodial账户转账cancel","DOGE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.1001"),
+
+            # MATIC
+            ("MATIC Custodial账户转账cancel erc20coin","MATIC","USDC","0xe458fd3e2515d42cbcd52a89b52fb662bf052143","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","0.000123"),
+            ("MATIC Custodial账户转账cancel nativecoin","MATIC","MATIC","0xe458fd3e2515d42cbcd52a89b52fb662bf052143","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","0.00012"),
+
+            # ATOM
+            ("ATOM Custodial账户转账cancel","ATOM","ATOM","cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc","cosmos1tzk5mhnala4ncj6w8dlw9lwpqmrhee92lyjx06","0.000001"),
+
+            #IRIS
+            ("IRIS Custodial账户转账cancel","IRIS","IRIS","iaa1j9vswglv54xlmrza98ww44jgnm0j0hncw2t7v9","iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe","0.000123"),
+
+            #CLV
+            ("CLV Custodial账户转账cancel","CLV","CLV","5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","0.0000014"),
+        ]
 
     @allure.story("Custodial Transfers Cancel!")
     @allure.title('{test_title}')

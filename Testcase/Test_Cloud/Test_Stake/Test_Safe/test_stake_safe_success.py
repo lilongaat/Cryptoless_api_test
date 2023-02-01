@@ -30,14 +30,14 @@ class Test_stake_success:
     if env_type == 1: #生产
         test_data = [
             # ATOM
-            # ("ATOM External账户质押","ATOM","ATOM","stake","4b49226b1669a687fb4f8479fa9048f1cbb79af74529a47bae7a0c07ce97f8c6","cosmos1gkcgpprzv4wkjteteynjr6l7hpq2xkxuuz0ulm",str(Conf.Config.random_amount(4))),
-            # ("ATOM External账户赎回","ATOM","ATOM","un_stake","4b49226b1669a687fb4f8479fa9048f1cbb79af74529a47bae7a0c07ce97f8c6","cosmos1gkcgpprzv4wkjteteynjr6l7hpq2xkxuuz0ulm",str(Conf.Config.random_amount(5))),
-            # ("ATOM External账户claim","ATOM","ATOM","claim","4b49226b1669a687fb4f8479fa9048f1cbb79af74529a47bae7a0c07ce97f8c6","cosmos1gkcgpprzv4wkjteteynjr6l7hpq2xkxuuz0ulm",0),
+            ("ATOM External账户质押","ATOM","ATOM","stake","4b49226b1669a687fb4f8479fa9048f1cbb79af74529a47bae7a0c07ce97f8c6","cosmos1gkcgpprzv4wkjteteynjr6l7hpq2xkxuuz0ulm",str(Conf.Config.random_amount(4))),
+            ("ATOM External账户赎回","ATOM","ATOM","un_stake","4b49226b1669a687fb4f8479fa9048f1cbb79af74529a47bae7a0c07ce97f8c6","cosmos1gkcgpprzv4wkjteteynjr6l7hpq2xkxuuz0ulm",str(Conf.Config.random_amount(5))),
+            ("ATOM External账户claim","ATOM","ATOM","claim","4b49226b1669a687fb4f8479fa9048f1cbb79af74529a47bae7a0c07ce97f8c6","cosmos1gkcgpprzv4wkjteteynjr6l7hpq2xkxuuz0ulm",0),
 
             # IRIS
-            # ("IRIS External账户质押","IRIS","IRIS","stake","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j",str(Conf.Config.random_amount(4))),
-            # ("IRIS External账户赎回","IRIS","IRIS","un_stake","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j",str(Conf.Config.random_amount(5))),
-            # ("IRIS External账户claim","IRIS","IRIS","claim","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j",0),
+            ("IRIS External账户质押","IRIS","IRIS","stake","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j",str(Conf.Config.random_amount(4))),
+            ("IRIS External账户赎回","IRIS","IRIS","un_stake","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j",str(Conf.Config.random_amount(5))),
+            ("IRIS External账户claim","IRIS","IRIS","claim","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j",0),
 
             # DOT
 

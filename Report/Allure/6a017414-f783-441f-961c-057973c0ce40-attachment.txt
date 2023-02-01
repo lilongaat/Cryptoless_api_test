@@ -1,0 +1,70 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:227 2023-02-01 15:30:37.757467 | 
+<-----balance----->
+Url:https://api.polygonscan.com/api?module=account&action=balance&address=0xe525E7cd17f6Dc950492755A089E452fd5d9d44f&apikey=85W6B7V5TPH7TDZA3JQCFT8UN8RKAEMA4Y
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:229 2023-02-01 15:30:37.757467 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "895160812683392782"}
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-01 15:30:37.757467 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=MATIC&address=0xe525E7cd17f6Dc950492755A089E452fd5d9d44f&symbol=MATIC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-01 15:30:37.757467 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0xe525e7cd17f6dc950492755a089e452fd5d9d44f","createdTime":"2022-12-26T08:12:06.000Z","id":"1607288124925603841","networkCode":"MATIC","quantity":"0.895160812683392782","symbol":"MATIC","updatedTime":"2023-02-01T02:55:07.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_fail_rebuild_maxfee:test_fail_rebuild_maxfee.py:89 2023-02-01 15:30:37.757467 | 浏览器查询账户balance为:0.895160812683392782
+[35mDEBUG   [0m test_fail_rebuild_maxfee:test_fail_rebuild_maxfee.py:90 2023-02-01 15:30:37.757467 | 查询账户holder为:0.895160812683392782
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-01 15:30:37.757467 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "MATIC", "type": "transfer", "body": {"from": "0xe525E7cd17f6Dc950492755A089E452fd5d9d44f", "to": "0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591", "symbol": "MATIC", "amount": "0.000121"}, "transactionParams": {"memo": "ny9pWaT2Di"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:281 2023-02-01 15:30:37.757467 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-01T07:30:49.000Z","description":"Send 0.000121 MATIC","estimatedFee":"1561707148743000","fee":"-1","hash":"","id":"1620686080318836737","networkCode":"MATIC","requiredSignings":[{"hash":"597bce93f054cb9269d425a4221108233bbac18a239a195b2be1dd499a2de13d","publicKeys":["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],"threshold":1}],"serialized":"02f38189678506fc23ac008511509e796b825208943d7f18ad2cea9b59e54dfaf09b327c1ccd899591866e0c8204900080c0808080","status":0,"statusDesc":"BUILDING","updatedTime":"2023-02-01T07:30:49.000Z"}]},"body":{"symbol":"MATIC","amount":"0.000121","from":"0xe525e7cd17f6dc950492755a089e452fd5d9d44f","to":"0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591"},"createdTime":"2023-02-01T07:30:56.000Z","id":"1620686117807579137","networkCode":"MATIC","status":-2,"transactionParams":{"memo":"ny9pWaT2Di"},"type":"TRANSFER","updatedTime":"2023-02-01T07:30:56.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:318 2023-02-01 15:30:37.757467 | 
+<-----Rebuild----->
+Url:https://api.dhandho.xyz/vault/transactions/params
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"id": "1620686080318836737", "params": {"maxFeePerGas": "0x19fc4dda1b2c", "maxPriorityFeePerGas": "0x19fc4dd9cd0c"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:321 2023-02-01 15:30:37.757467 | 
+<-----Rebuild Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-01T07:30:49.000Z","description":"Send 0.000121 MATIC","estimatedFee":"600000000440988000","fee":"-1","hash":"","id":"1620686080318836737","networkCode":"MATIC","requiredSignings":[{"hash":"abe2ef2988aae60c484d3bb62936f120aed891e8bbdddfdc9e3959f9b16633bf","publicKeys":["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],"threshold":1}],"serialized":"02f58189678619fc4dd9cd0c8619fc4dda1b2c825208943d7f18ad2cea9b59e54dfaf09b327c1ccd899591866e0c8204900080c0808080","status":0,"statusDesc":"BUILDING","updatedTime":"2023-02-01T07:30:57.225Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:358 2023-02-01 15:30:37.757467 | 
+<-----Sign----->
+Url:https://api.dhandho.xyz/vault/transactions/signatures
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"id": "1620686080318836737", "signatures": [{"hash": "abe2ef2988aae60c484d3bb62936f120aed891e8bbdddfdc9e3959f9b16633bf", "publicKey": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "signature": "13fa11d33ca22190e0b68014c81867a9b2b7b691c19cd34b033077e743ad428374b2ec9715e79fdb14207ba8ed628dd2c54ecfe35d39fac3a9dd3819c03a655601"}]}
+
+
+[32mINFO    [0m Common.Http:Http.py:362 2023-02-01 15:30:37.757467 | 
+<-----Sign Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-01T07:30:49.000Z","description":"Send 0.000121 MATIC","estimatedFee":"600000000440988000","fee":"-1","hash":"0x1ce0eabaf2f58929fdceee33073e04e94abd37d6fa7f11bff994c7872d602390","id":"1620686080318836737","networkCode":"MATIC","serialized":"02f8758189678619fc4dd9cd0c8619fc4dda1b2c825208943d7f18ad2cea9b59e54dfaf09b327c1ccd899591866e0c8204900080c001a013fa11d33ca22190e0b68014c81867a9b2b7b691c19cd34b033077e743ad4283a074b2ec9715e79fdb14207ba8ed628dd2c54ecfe35d39fac3a9dd3819c03a6556","status":2,"statusDesc":"SIGNED","updatedTime":"2023-02-01T07:30:57.673Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:378 2023-02-01 15:30:37.757467 | 
+<-----Send----->
+Url:https://api.dhandho.xyz/vault/transactions/send/1620686080318836737
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:385 2023-02-01 15:30:37.757467 | 
+<-----Send Response Error----->
+400
+{"code":2101000,"message":"the estimatedfee 600000000440988000 cannot be greater than the maxfee 500000000000000000"}

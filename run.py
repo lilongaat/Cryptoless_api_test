@@ -14,7 +14,12 @@ print(path)
 
 # 测试报告文件路径
 # report_file = 'Allure_Testfile_' + str(datetime.date.today())
-report_file = 'Allure_normal'
+if env_type == 0:
+    report_file = 'Allure_normal'
+    port = '42431'
+elif env_type == 1:
+    report_file = 'Allure'
+    port = '42432'
 
 
 
@@ -48,10 +53,7 @@ def job_transfer_Swap():
 
 # Allure
 def job_allure():
-    if env_type == 0:
-        os.system(f'allure serve /home/ec2-user/automation/api-test/Report/Allure_normal -p 42431')
-    elif env_type == 1:
-        os.system(f'allure serve /home/ec2-user/automation/api-test/Report/Allure_normal -p 42432')
+    os.system(f'allure serve ' + path + '/Report/' + report_file + ' -p ' + port)
 
 
 if __name__ == "__main__":
@@ -66,7 +68,7 @@ if __name__ == "__main__":
     scheduler.add_job(job_transfer_transfer, 'cron', hour=15, minute=40)
     scheduler.add_job(job_transfer_Swap, 'cron', hour=16, minute=20)
     scheduler.add_job(job_transfer_Stake, 'cron', hour=16, minute=40)
-    scheduler.add_job(job_allure, 'cron', hour=16, minute=50)
+    scheduler.add_job(job_allure, 'cron', hour=15, minute=14)
     scheduler.start()
 
 

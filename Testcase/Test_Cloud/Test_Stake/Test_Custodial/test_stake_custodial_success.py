@@ -34,20 +34,20 @@ class Test_stake_success:
         test_data = [
             # ATOM
             ("ATOM Custodial账户质押","ATOM","ATOM","stake","cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc",str(Conf.Config.random_amount(4))),
-            # ("ATOM Custodial账户赎回","ATOM","ATOM","un_stake","cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc",str(Conf.Config.random_amount(5))),
-            # ("ATOM Custodial账户claim","ATOM","ATOM","claim","cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc",0),
+            ("ATOM Custodial账户赎回","ATOM","ATOM","un_stake","cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc",str(Conf.Config.random_amount(5))),
+            ("ATOM Custodial账户claim","ATOM","ATOM","claim","cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc",0),
 
             # IRIS
-            # ("IRIS Custodial账户质押","IRIS","IRIS","stake","iaa1j9vswglv54xlmrza98ww44jgnm0j0hncw2t7v9",str(Conf.Config.random_amount(4))),
-            # ("IRIS Custodial账户赎回","IRIS","IRIS","un_stake","iaa1j9vswglv54xlmrza98ww44jgnm0j0hncw2t7v9",str(Conf.Config.random_amount(5))),
-            # ("IRIS Custodial账户claim","IRIS","IRIS","claim","iaa1j9vswglv54xlmrza98ww44jgnm0j0hncw2t7v9",0),
+            ("IRIS Custodial账户质押","IRIS","IRIS","stake","iaa1j9vswglv54xlmrza98ww44jgnm0j0hncw2t7v9",str(Conf.Config.random_amount(4))),
+            ("IRIS Custodial账户赎回","IRIS","IRIS","un_stake","iaa1j9vswglv54xlmrza98ww44jgnm0j0hncw2t7v9",str(Conf.Config.random_amount(5))),
+            ("IRIS Custodial账户claim","IRIS","IRIS","claim","iaa1j9vswglv54xlmrza98ww44jgnm0j0hncw2t7v9",0),
 
             # DOT
 
             # CLV
-            # ("CLV Custodial账户质押","CLV","CLV","stake","5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc",str(Conf.Config.random_amount(4))),
-            # ("CLV Custodial账户赎回","CLV","CLV","un_stake","5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc",str(Conf.Config.random_amount(5))),
-            # ("CLV Custodial账户claim","CLV","CLV","claim","5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc",0),
+            ("CLV Custodial账户质押","CLV","CLV","stake","5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc",str(Conf.Config.random_amount(4))),
+            ("CLV Custodial账户赎回","CLV","CLV","un_stake","5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc",str(Conf.Config.random_amount(5))),
+            ("CLV Custodial账户claim","CLV","CLV","claim","5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc",0),
         ]
 
     @allure.story("Custodial_Stake_Success!")

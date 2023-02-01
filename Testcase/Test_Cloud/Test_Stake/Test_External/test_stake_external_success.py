@@ -33,21 +33,21 @@ class Test_stake_success:
     if env_type == 1: #生产
         test_data = [
             # ATOM
-            # ("ATOM External账户质押","ATOM","ATOM","stake","4b49226b1669a687fb4f8479fa9048f1cbb79af74529a47bae7a0c07ce97f8c6","cosmos1uxezv8wcd44hp340acnmrqhcnzau4wzhlshcag",str(Conf.Config.random_amount(4))),
-            # ("ATOM External账户赎回","ATOM","ATOM","un_stake","4b49226b1669a687fb4f8479fa9048f1cbb79af74529a47bae7a0c07ce97f8c6","cosmos1uxezv8wcd44hp340acnmrqhcnzau4wzhlshcag",str(Conf.Config.random_amount(5))),
-            # ("ATOM External账户claim","ATOM","ATOM","claim","4b49226b1669a687fb4f8479fa9048f1cbb79af74529a47bae7a0c07ce97f8c6","cosmos1uxezv8wcd44hp340acnmrqhcnzau4wzhlshcag",0),
+            ("ATOM External账户质押","ATOM","ATOM","stake","4b49226b1669a687fb4f8479fa9048f1cbb79af74529a47bae7a0c07ce97f8c6","cosmos1uxezv8wcd44hp340acnmrqhcnzau4wzhlshcag",str(Conf.Config.random_amount(4))),
+            ("ATOM External账户赎回","ATOM","ATOM","un_stake","4b49226b1669a687fb4f8479fa9048f1cbb79af74529a47bae7a0c07ce97f8c6","cosmos1uxezv8wcd44hp340acnmrqhcnzau4wzhlshcag",str(Conf.Config.random_amount(5))),
+            ("ATOM External账户claim","ATOM","ATOM","claim","4b49226b1669a687fb4f8479fa9048f1cbb79af74529a47bae7a0c07ce97f8c6","cosmos1uxezv8wcd44hp340acnmrqhcnzau4wzhlshcag",0),
 
             # IRIS
-            # ("IRIS External账户质押","IRIS","IRIS","stake","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa18j8rds5hqwp88s4qsrytq5w4eafu288cfza9th",str(Conf.Config.random_amount(4))),
-            # ("IRIS External账户赎回","IRIS","IRIS","un_stake","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa18j8rds5hqwp88s4qsrytq5w4eafu288cfza9th",str(Conf.Config.random_amount(5))),
-            # ("IRIS External账户claim","IRIS","IRIS","claim","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa18j8rds5hqwp88s4qsrytq5w4eafu288cfza9th",0),
+            ("IRIS External账户质押","IRIS","IRIS","stake","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa18j8rds5hqwp88s4qsrytq5w4eafu288cfza9th",str(Conf.Config.random_amount(4))),
+            ("IRIS External账户赎回","IRIS","IRIS","un_stake","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa18j8rds5hqwp88s4qsrytq5w4eafu288cfza9th",str(Conf.Config.random_amount(5))),
+            ("IRIS External账户claim","IRIS","IRIS","claim","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa18j8rds5hqwp88s4qsrytq5w4eafu288cfza9th",0),
 
             # DOT
 
             # CLV
-            # ("CLV External账户质押","CLV","CLV","stake","426a6690c29c5ee0052712c1fda0cc38691f3faf2a571f4b04c9705bbf3f921b","5GF2XqzK1ERH6AGkyHz1jmMLMCVGBUEyRBxJb5TFWxhiS6EY",str(Conf.Config.random_amount(4))),
-            # ("CLV External账户赎回","CLV","CLV","un_stake","426a6690c29c5ee0052712c1fda0cc38691f3faf2a571f4b04c9705bbf3f921b","5GF2XqzK1ERH6AGkyHz1jmMLMCVGBUEyRBxJb5TFWxhiS6EY",str(Conf.Config.random_amount(5))),
-            # ("CLV External账户claim","CLV","CLV","claim","426a6690c29c5ee0052712c1fda0cc38691f3faf2a571f4b04c9705bbf3f921b","5GF2XqzK1ERH6AGkyHz1jmMLMCVGBUEyRBxJb5TFWxhiS6EY",0),
+            ("CLV External账户质押","CLV","CLV","stake","426a6690c29c5ee0052712c1fda0cc38691f3faf2a571f4b04c9705bbf3f921b","5GF2XqzK1ERH6AGkyHz1jmMLMCVGBUEyRBxJb5TFWxhiS6EY",str(Conf.Config.random_amount(4))),
+            ("CLV External账户赎回","CLV","CLV","un_stake","426a6690c29c5ee0052712c1fda0cc38691f3faf2a571f4b04c9705bbf3f921b","5GF2XqzK1ERH6AGkyHz1jmMLMCVGBUEyRBxJb5TFWxhiS6EY",str(Conf.Config.random_amount(5))),
+            ("CLV External账户claim","CLV","CLV","claim","426a6690c29c5ee0052712c1fda0cc38691f3faf2a571f4b04c9705bbf3f921b","5GF2XqzK1ERH6AGkyHz1jmMLMCVGBUEyRBxJb5TFWxhiS6EY",0),
         ]
 
     @allure.story("External_Stake_Success!")

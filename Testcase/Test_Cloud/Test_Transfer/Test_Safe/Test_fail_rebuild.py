@@ -37,8 +37,8 @@ class Test_transfers_success:
             # ("BSC safe账户转账erc20coin","BSC","USDC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x49624761fca25f4782f88dc67aac8e8a48f54411","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.00000141",400,2300000),
 
             # MATIC
-            # ("MATIC safe账户转账nativecoin","MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.0000015",400,2300000),
-            # ("MATIC safe账户转账erc20coin","MATIC","USDC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.000151",400,2300000),
+            ("MATIC safe账户转账nativecoin","MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.0000015",400,2300000),
+            ("MATIC safe账户转账erc20coin","MATIC","USDC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.000151",400,2300000),
         ]
 
     @allure.story("safe Transfers Fail!")

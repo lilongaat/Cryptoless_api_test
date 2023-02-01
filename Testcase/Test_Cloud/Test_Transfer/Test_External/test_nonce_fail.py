@@ -37,8 +37,8 @@ class Test_transfers_success:
             # ("BSC extarnal账户转账erc20coin","BSC","USDC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.00000141"),
 
             # MATIC
-            # ("MATIC extarnal账户转账nativecoin","MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.0000015"),
-            # ("MATIC extarnal账户转账erc20coin","MATIC","USDC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.00000151"),
+            ("MATIC extarnal账户转账nativecoin","MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.0000015"),
+            ("MATIC extarnal账户转账erc20coin","MATIC","USDC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.00000151"),
         ]
 
     @allure.story("External Transfers Nonce!")

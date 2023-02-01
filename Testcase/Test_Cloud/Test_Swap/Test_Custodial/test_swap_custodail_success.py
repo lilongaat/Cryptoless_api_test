@@ -27,7 +27,13 @@ class Test_transfers_success:
             ("MATIC custodail账户 SWAP:USDT-USDC","MATIC","0x651a23f7bed98b52c7829ad668a4836c48064850","USDT","USDC","1","0.00012"),
         ]
     elif env_type == 1: #生产
-        test_data = []
+        test_data = [
+            # MATIC 
+            ("MATIC custodail账户 SWAP:MATIC-USDC","MATIC","0xe458fd3e2515d42cbcd52a89b52fb662bf052143","MATIC","USDC","1","0.000012"),
+            ("MATIC custodail账户 SWAP:USDC-MATIC","MATIC","0xe458fd3e2515d42cbcd52a89b52fb662bf052143","USDC","MATIC","1","0.000012"),
+            ("MATIC custodail账户 SWAP:USDC-USDT","MATIC","0xe458fd3e2515d42cbcd52a89b52fb662bf052143","USDC","USDT","1","0.000012"),
+            ("MATIC custodail账户 SWAP:USDT-USDC","MATIC","0xe458fd3e2515d42cbcd52a89b52fb662bf052143","USDT","USDC","1","0.000012"),
+        ]
 
     @allure.story("Custodial Swap Success!")
     @allure.title('{test_title}')

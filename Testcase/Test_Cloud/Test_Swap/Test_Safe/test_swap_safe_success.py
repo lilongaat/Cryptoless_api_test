@@ -27,8 +27,8 @@ class Test_transfers_success:
     elif env_type == 1: #生产
         test_data = [
              # MATIC
-            # ("MATIC SWAP:MATIC->USDC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","MATIC","USDC","1","0.00012"),
-            # ("MATIC SWAP:USDC->MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","USDC","MATIC","1","0.000011"),
+            ("MATIC SWAP:MATIC->USDC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","MATIC","USDC","1","0.00012"),
+            ("MATIC SWAP:USDC->MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","USDC","MATIC","1","0.000011"),
         ]
 
     @allure.story("Safe Swap Success!")

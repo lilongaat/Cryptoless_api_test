@@ -29,9 +29,9 @@ class Test_transfers_success:
     elif env_type == 1: #生产
         test_data = [
             # MATIC 
-            # ("MATIC SWAP:MATIC-USDC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","MATIC","USDC","1","0.00012"),
-            # ("MATIC SWAP:USDC-MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","USDC","MATIC","1","0.00012"),
-            # ("MATIC SWAP:USDC-USDT","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","USDC","USDT","1","0.00012"),
+            ("MATIC SWAP:MATIC-USDC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","MATIC","USDC","1","0.00012"),
+            ("MATIC SWAP:USDC-MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","USDC","MATIC","1","0.00012"),
+            ("MATIC SWAP:USDC-USDT","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","USDC","USDT","1","0.00012"),
         ]
 
     @allure.story("External Swap Success!")

@@ -42,7 +42,7 @@ class Test_transfers_success:
             # BTC
 
             # DOGE
-            # ("DOGE Custodial账户转账","DOGE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.1001"),
+            ("DOGE Custodial账户转账","DOGE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.1001"),
 
             # ETH
 
@@ -55,15 +55,15 @@ class Test_transfers_success:
             # ("MATIC Custodial账户转账 nativecoin","MATIC","MATIC","0xe458fd3e2515d42cbcd52a89b52fb662bf052143","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","0.00012"),
 
             # ATOM
-            # ("ATOM extarnal账户转账","ATOM","ATOM","cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc","cosmos1tzk5mhnala4ncj6w8dlw9lwpqmrhee92lyjx06","0.000001"),
+            ("ATOM extarnal账户转账","ATOM","ATOM","cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc","cosmos1tzk5mhnala4ncj6w8dlw9lwpqmrhee92lyjx06","0.000001"),
 
             # IRIS
-            # ("IRIS extarnal账户转账","IRIS","IRIS","iaa1j9vswglv54xlmrza98ww44jgnm0j0hncw2t7v9","iaa15h0lvaa6slvj0hg4d64548j2c5fds2zv8tkvgs","0.000001"),
+            ("IRIS extarnal账户转账","IRIS","IRIS","iaa1j9vswglv54xlmrza98ww44jgnm0j0hncw2t7v9","iaa15h0lvaa6slvj0hg4d64548j2c5fds2zv8tkvgs","0.000001"),
 
             # DOT
 
             # CLV
-            # ("CLV Custodial账户转账","CLV","CLV","5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc","5CAG6GuiuzFFbXR2fHhkqvuMRL7yVaj75tJpgKChA4EJELvH","0.00012"),
+            ("CLV Custodial账户转账","CLV","CLV","5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc","5CAG6GuiuzFFbXR2fHhkqvuMRL7yVaj75tJpgKChA4EJELvH","0.00012"),
         ]
 
     @allure.story("Custodial Transfers Success!")
