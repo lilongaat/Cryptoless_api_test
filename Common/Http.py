@@ -96,8 +96,8 @@ class HttpUtils:
 
     @staticmethod
     # 查询账户信息
-    def accounts(networkCode:str="", address:str="", type:str="", Authorization=token):
-        url = url_ + '/vault/accounts?networkCode=' + networkCode + '&address=' + address + '&type=' + type
+    def accounts(networkCode:str="", address:str="", type:str="",size:str = "20", Authorization=token):
+        url = url_ + '/vault/accounts?networkCode=' + networkCode + '&address=' + address + '&type=' + type + '&size=' + size
         headers = {
             "Content-Type": "application/json",
             "Authorization": Authorization

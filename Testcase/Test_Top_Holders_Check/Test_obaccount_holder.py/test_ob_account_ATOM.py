@@ -33,7 +33,7 @@ class Test_accounts_balances():
     @pytest.mark.parametrize('address', accounts)
     def test_account_balance(self, address):
 
-        with allure.step("mintscan.io查询地址余额"):
+        with allure.step("浏览器查询地址余额"):
             response = Httpexplore.ATOM.balance(address)
             assert response.status_code == 200
             balance_ = [b.get("amount") for b in response.json()["balances"] if b.get("denom") == "uatom"]
@@ -50,10 +50,10 @@ class Test_accounts_balances():
         with allure.step("系统查询地址余额"):
             holder = Http.HttpUtils.holders("ATOM","ATOM",address,ob_token)
             assert holder.status_code == 200
-            if len(holder.json()) == 0:
+            if len(holder.json()["list"]) == 0:
                 quantity = 0
             else:
-                quantity = (Decimal(holder.json()[0]['quantity']))
+                quantity = (Decimal(holder.json()["list"][0]['quantity']))
 
         with allure.step("验证地址余额:explore==Graphql"):
             assert balance == amount,"explore!=Graphql"

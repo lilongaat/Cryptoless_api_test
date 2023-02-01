@@ -25,15 +25,15 @@ elif env_type == 1: # Release
 NetWorkcode = ""
 address = ""
 type = ""
-limit = "1000"
+size = "1000"
 
-accounts = Http.HttpUtils.get_account_list(NetWorkcode,address,type,limit,ob_token)
+accounts = Http.HttpUtils.accounts(NetWorkcode,address,type,size,ob_token)
 
 # 删除账户
-for i in range(len(accounts.json())):
-    id = accounts.json()[i]["id"]
+for i in range(len(accounts.json()["list"])):
+    id = accounts.json()["list"][i]["id"]
     del_account = Http.HttpUtils.del_account_byid(id,ob_token)
     assert accounts.status_code == 200
 
-accounts_ = Http.HttpUtils.get_account_list(NetWorkcode,address,type,limit,ob_token)
+accounts_ = Http.HttpUtils.accounts(NetWorkcode,address,type,size,ob_token)
 assert len(accounts_.json()) == 0
