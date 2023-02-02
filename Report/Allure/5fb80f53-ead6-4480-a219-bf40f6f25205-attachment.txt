@@ -1,0 +1,35 @@
+[32mINFO    [0m Common.Http:Http.py:176 2023-02-02 17:53:21.141035 | 
+<-----Create Safe Account------>
+Url:https://api.cryptoless.net/vault/accounts/safe
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{"name": "\u5b89\u5168\u8d26\u6237IRIS2-2-1675331601", "networkCode": "IRIS", "owner": "", "recovery": ""}
+
+
+[32mINFO    [0m Common.Http:Http.py:179 2023-02-02 17:53:21.141035 | 
+<-----Create account Response----->
+{"address":"iaa14mqydp3h4suuaxt5a3r79hvy0hg2fr3llw4lr0","createdTime":"2023-02-02T09:53:44.634Z","finalized":false,"id":"1621084444991700993","name":"安全账户IRIS2-2-1675331601","networkCode":"IRIS","publicKeys":[{"source":"custodial","type":"secp256k1","value":"02814c312694b30e9f2c4c8a1f3af7fa73daa7d9d6ba5c241af3448f3d91fe1643"},{"source":"custodial","type":"secp256k1","value":"03040bd4997e531aa9b243721b63c98d8ad3659f391a0323c18cb29f4ab64d13b9"}],"status":"enable","threshold":2,"type":"safe","updatedTime":"2023-02-02T09:53:44.634Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:218 2023-02-02 17:53:21.141035 | 
+<-----Query Account Byid------>
+Url:https://api.cryptoless.net/vault/accounts/1621084444991700993
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+
+
+[32mINFO    [0m Common.Http:Http.py:221 2023-02-02 17:53:21.141035 | 
+<-----Query Account Byid Response----->
+{"address":"iaa14mqydp3h4suuaxt5a3r79hvy0hg2fr3llw4lr0","createdTime":"2023-02-02T09:53:44.634Z","finalized":false,"id":"1621084444991700993","name":"安全账户IRIS2-2-1675331601","networkCode":"IRIS","publicKeys":[{"source":"custodial","type":"secp256k1","value":"02814c312694b30e9f2c4c8a1f3af7fa73daa7d9d6ba5c241af3448f3d91fe1643"},{"source":"custodial","type":"secp256k1","value":"03040bd4997e531aa9b243721b63c98d8ad3659f391a0323c18cb29f4ab64d13b9"}],"status":"enable","threshold":2,"type":"safe","updatedTime":"2023-02-02T09:53:44.634Z"}
+
+
+[35mDEBUG   [0m test_create_success:test_create_success.py:94 2023-02-02 17:53:21.141035 | 
+
+IRIS创建2-2安全账户 全custodial
+iaa14mqydp3h4suuaxt5a3r79hvy0hg2fr3llw4lr0
+[32mINFO    [0m Common.Http:Http.py:259 2023-02-02 17:53:21.141035 | 
+<-----Delete Account Byid------>
+Url:https://api.cryptoless.net/vault/accounts/1621084444991700993
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+
+
+[32mINFO    [0m Common.Http:Http.py:262 2023-02-02 17:53:21.141035 | 
+<-----Delete Account Byid Response----->

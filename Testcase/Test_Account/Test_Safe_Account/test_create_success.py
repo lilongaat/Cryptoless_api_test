@@ -50,11 +50,6 @@ class Test_create_safe_account:
             ("BTC创建2-2安全账户 custodial+owner","安全账户BTC2-2-"+str(Conf.Config.now_timestamp()),"BTC","02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6",""),
             ("BTC创建2-3安全账户","安全账户BTC2-3-"+str(Conf.Config.now_timestamp()),"BTC","02e8852463021b47fe5214c599e87e431f2eb1219044946bbff397afd0518b85a6","0231e263a7e95bf5107b88b85b49918841b937305cce5dae7dd7ba9b86fc460f70"),
 
-            #GOERLI
-            ("Goerli创建2-2安全账户 全custodial","安全账户GOERLI2-2-"+str(Conf.Config.now_timestamp()),"GOERLI","",""),
-            ("Goerli创建2-2安全账户 custodial+owner","安全账户GOERLI2-2-"+str(Conf.Config.now_timestamp()),"GOERLI","0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113",""),
-            ("Goerli创建2-3安全账户","安全账户GOERLI2-3-"+str(Conf.Config.now_timestamp()),"GOERLI","0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113","03c420167aaf4fc7106646b2fe485519e5569ceb1584ae31d62537e349a4e4b5a9"),
-
             #MATIC
             ("MATIC创建2-2安全账户 全custodial","安全账户MATIC2-2-"+str(Conf.Config.now_timestamp()),"MATIC","",""),
             ("MATIC创建2-2安全账户 custodial+owner","安全账户MATIC2-2-"+str(Conf.Config.now_timestamp()),"MATIC","0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113",""),
@@ -79,7 +74,7 @@ class Test_create_safe_account:
         with allure.step("创建安全账户"):
             safe_account = Http.HttpUtils.create_safe_account(name,networkCode,owner,recovery)
             assert safe_account.status_code == 200
-            if networkCode == "GOERLI":
+            if networkCode == "GOERLI" or networkCode == "MATIC":
                 assert safe_account.json()["status"] == "inactive"
             else:
                 assert safe_account.json()["status"] == "enable"
@@ -91,7 +86,7 @@ class Test_create_safe_account:
             account_detail = Http.HttpUtils.account_byid(id)
             assert account_detail.status_code == 200
             assert account_detail.json()["address"] == address
-            if networkCode == "GOERLI":
+            if networkCode == "GOERLI" or networkCode == "MATIC":
                 assert safe_account.json()["status"] == "inactive"
             else:
                 assert safe_account.json()["status"] == "enable"

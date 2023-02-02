@@ -1,0 +1,35 @@
+[32mINFO    [0m Common.Http:Http.py:176 2023-02-02 17:47:05.275887 | 
+<-----Create Safe Account------>
+Url:https://api.cryptoless.net/vault/accounts/safe
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{"name": "\u5b89\u5168\u8d26\u6237ATOM2-3-1675331225", "networkCode": "ATOM", "owner": "027243806b1abdb1737b45d4a0619112bf464e13407b7d37dd2da2821bc6fbcac4", "recovery": "03d36556045bc8bac44e1fb88bd1840d68077fded4371e8e8c45ffb9788b525329"}
+
+
+[32mINFO    [0m Common.Http:Http.py:179 2023-02-02 17:47:05.275887 | 
+<-----Create account Response----->
+{"address":"cosmos1g8dlknhgxga0mgklv02vxzx3gy6870pnsvwlmc","createdTime":"2023-02-02T09:47:49.950Z","finalized":false,"id":"1621082957334986753","name":"安全账户ATOM2-3-1675331225","networkCode":"ATOM","publicKeys":[{"source":"custodial","type":"secp256k1","value":"024175a79de6f8bb5a93453ef7ed8eed608f5a15f0e6f27e7f9e5a0a1bacedf1b1"},{"source":"owner","type":"secp256k1","value":"027243806b1abdb1737b45d4a0619112bf464e13407b7d37dd2da2821bc6fbcac4"},{"source":"recovery","type":"secp256k1","value":"03d36556045bc8bac44e1fb88bd1840d68077fded4371e8e8c45ffb9788b525329"}],"status":"enable","threshold":2,"type":"safe","updatedTime":"2023-02-02T09:47:49.950Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:218 2023-02-02 17:47:05.275887 | 
+<-----Query Account Byid------>
+Url:https://api.cryptoless.net/vault/accounts/1621082957334986753
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+
+
+[32mINFO    [0m Common.Http:Http.py:221 2023-02-02 17:47:05.275887 | 
+<-----Query Account Byid Response----->
+{"address":"cosmos1g8dlknhgxga0mgklv02vxzx3gy6870pnsvwlmc","createdTime":"2023-02-02T09:47:49.950Z","finalized":false,"id":"1621082957334986753","name":"安全账户ATOM2-3-1675331225","networkCode":"ATOM","publicKeys":[{"source":"custodial","type":"secp256k1","value":"024175a79de6f8bb5a93453ef7ed8eed608f5a15f0e6f27e7f9e5a0a1bacedf1b1"},{"source":"owner","type":"secp256k1","value":"027243806b1abdb1737b45d4a0619112bf464e13407b7d37dd2da2821bc6fbcac4"},{"source":"recovery","type":"secp256k1","value":"03d36556045bc8bac44e1fb88bd1840d68077fded4371e8e8c45ffb9788b525329"}],"status":"enable","threshold":2,"type":"safe","updatedTime":"2023-02-02T09:47:49.950Z"}
+
+
+[35mDEBUG   [0m test_create_success:test_create_success.py:99 2023-02-02 17:47:05.275887 | 
+
+ATOM创建2-3安全账户
+cosmos1g8dlknhgxga0mgklv02vxzx3gy6870pnsvwlmc
+[32mINFO    [0m Common.Http:Http.py:259 2023-02-02 17:47:05.275887 | 
+<-----Delete Account Byid------>
+Url:https://api.cryptoless.net/vault/accounts/1621082957334986753
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+
+
+[32mINFO    [0m Common.Http:Http.py:262 2023-02-02 17:47:05.275887 | 
+<-----Delete Account Byid Response----->

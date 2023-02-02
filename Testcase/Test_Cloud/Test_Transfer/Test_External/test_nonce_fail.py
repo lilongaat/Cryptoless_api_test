@@ -21,30 +21,30 @@ class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
             # GOERLI 
-            ("GOERLI extarnal账户转账 nativecoin","GOERLI","GoerliETH","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.000121"),
-            # ("GOERLI extarnal账户转账 erc20coin","GOERLI","USDCC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.000123"),
+            ("GOERLI extarnal账户转账 nativecoin","GOERLI","GoerliETH","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.000121",400,2300000),
+            # ("GOERLI extarnal账户转账 erc20coin","GOERLI","USDCC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.000123",400,2300000),
 
             # MATIC 
-            # ("MATIC extarnal账户转账 nativecoin","MATIC","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.000121"),
-            # ("MATIC extarnal账户转账 erc20coin","MATIC","USDC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","maximum"),
+            # ("MATIC extarnal账户转账 nativecoin","MATIC","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.000121",400,2300000),
+            # ("MATIC extarnal账户转账 erc20coin","MATIC","USDC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","maximum",400,2300000),
         ]
     elif env_type == 1: #生产
         test_data = [
             # ETH
 
             # BSC
-            # ("BSC extarnal账户转账nativecoin","BSC","BNB","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.0000014"),
-            # ("BSC extarnal账户转账erc20coin","BSC","USDC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.00000141"),
+            # ("BSC extarnal账户转账nativecoin","BSC","BNB","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.0000014",400,2300000),
+            # ("BSC extarnal账户转账erc20coin","BSC","USDC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.00000141",400,2300000),
 
             # MATIC
-            ("MATIC extarnal账户转账nativecoin","MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.0000015"),
-            ("MATIC extarnal账户转账erc20coin","MATIC","USDC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.00000151"),
+            ("MATIC extarnal账户转账nativecoin","MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.0000015",400,2300000),
+            ("MATIC extarnal账户转账erc20coin","MATIC","USDC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.00000151",400,2300000),
         ]
 
-    @allure.story("External Transfers Nonce!")
+    @allure.story("External Transfers Nonce Low!")
     @allure.title('{test_title}')
-    @pytest.mark.parametrize('test_title,networkCode,symbol,privatekey,from_add,to_add,amount', test_data)
-    def test_custodial(self,test_title,networkCode,symbol,privatekey,from_add,to_add,amount):
+    @pytest.mark.parametrize('test_title,networkCode,symbol,privatekey,from_add,to_add,amount,status_code,code', test_data)
+    def test_custodial(self,test_title,networkCode,symbol,privatekey,from_add,to_add,amount,status_code,code):
 
         with allure.step("浏览器查询from账户balance信息"):
             balance = Httpexplore.Balances_explore.query(networkCode,from_add,symbol)
@@ -79,7 +79,15 @@ class Test_transfers_success:
             assert transfer.json()["_embedded"]["transactions"][0]["statusDesc"] == "BUILDING"
 
             id = transfer.json()["_embedded"]["transactions"][0]["id"]
-            requiredSignings = transfer.json()["_embedded"]["transactions"][0]["requiredSignings"]
+
+        with allure.step("rebuild交易"):
+            params = {
+                "nonce":"1"
+            }
+            rebuildtx = Http.HttpUtils.rebuild(id,params)
+            assert rebuildtx.status_code == 200
+
+            requiredSignings = rebuildtx.json()["requiredSignings"]
             signatures = []
             for i in range(len(requiredSignings)):
                 hash = requiredSignings[i]["hash"]
@@ -98,34 +106,9 @@ class Test_transfers_success:
 
         with allure.step("广播交易"):
             send = Http.HttpUtils.send(id)
-            assert send.status_code == 200
-            assert send.json()["statusDesc"] == "PENDING"
+            assert send.status_code == 400
+            assert send.json()["code"] == 2300000
 
-        with allure.step("通过id查询交易记录"):
-            sleep(30)
-            for n in range(10):
-                transaction = Http.HttpUtils.transactions_byid(id)
-                assert transaction.status_code == 200
-                statusDesc = transaction.json()["statusDesc"]
-                if statusDesc == "SETTLED" and len(transaction.json()["balanceChanges"]) > 0:
-                    break
-                else:
-                    sleep(30)
-            sleep(5)
-
-        with allure.step("浏览器查询from账户balance信息"):
-            balance = Httpexplore.Balances_explore.query(networkCode,from_add,symbol)
-                
-        with allure.step("查询from账户holder信息"):
-            holder = Http.HttpUtils.holders(networkCode=networkCode,symbol=symbol,address=from_add)
-            assert holder.status_code ==200
-            quantity = Decimal(holder.json()["list"][0]["quantity"])
-
-        logger.debug("浏览器查询账户balance为:" + str(balance))
-        logger.debug("查询账户holder为:" + str(quantity))
-
-        with allure.step("账户余额相等验证 浏览器查询==holder"):
-            assert balance == quantity
 
 
 if __name__ == '__main__':

@@ -1,0 +1,22 @@
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-02 18:14:54.657014 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{"networkCode": "DOGE", "type": "transfer", "body": {"from": "D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6", "to": "D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j", "symbol": "DOGE", "amount": "0.1001"}, "transactionParams": {"memo": "17Dd0RIAUC"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:281 2023-02-02 18:14:54.657014 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-02T10:14:59.000Z","description":"Send DOGE","estimatedFee":"261660","fee":"-1","hash":"f0460787ed9a9636b0b0e1e0ca1774fc2f28a8eb1e805dc600acc0f2273a0de1","id":"1621089789141037057","networkCode":"DOGE","serialized":"0100000001738e20d4d93c4e8c7500baf607ecba57f6d251b2960291641fba71348e8ec9d7010000006a47304402202bed633954724b69fd4f6f16967b670bd3db639700df5c7c91644bcfd79482a002203d88579b21392e48c86eb3776f1eedc00c63ee0b29e8734437257b1e56213cc3012103515fc3ca5b4429ead74c0c47a19534194dde9a1a2a1b7a6e96a52c465cc40ebbffffffff0290bd9800000000001976a9142d7f61cf518210cd20aefe35d69464f040cb814188acb41fd20e000000001976a914347ac4d31ccb7ac8b58931594cd70bd691aad49a88ac00000000","status":2,"statusDesc":"SIGNED","updatedTime":"2023-02-02T10:15:00.000Z"}]},"body":{"symbol":"DOGE","amount":"0.1001","from":"D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","to":"D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j"},"createdTime":"2023-02-02T10:14:59.000Z","id":"1621089790999101441","networkCode":"DOGE","status":-2,"transactionParams":{"memo":"17Dd0RIAUC"},"type":"TRANSFER","updatedTime":"2023-02-02T10:14:59.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:337 2023-02-02 18:14:54.657014 | 
+<-----Cancel----->
+Url:https://api.cryptoless.net/vault/transactions/cancel/1621089789141037057
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{}
+
+
+[32mINFO    [0m Common.Http:Http.py:340 2023-02-02 18:14:54.657014 | 
+<-----Cancel Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-02T10:14:59.000Z","description":"Send DOGE","estimatedFee":"261660","fee":"-1","hash":"f0460787ed9a9636b0b0e1e0ca1774fc2f28a8eb1e805dc600acc0f2273a0de1","id":"1621089789141037057","networkCode":"DOGE","serialized":"0100000001738e20d4d93c4e8c7500baf607ecba57f6d251b2960291641fba71348e8ec9d7010000006a47304402202bed633954724b69fd4f6f16967b670bd3db639700df5c7c91644bcfd79482a002203d88579b21392e48c86eb3776f1eedc00c63ee0b29e8734437257b1e56213cc3012103515fc3ca5b4429ead74c0c47a19534194dde9a1a2a1b7a6e96a52c465cc40ebbffffffff0290bd9800000000001976a9142d7f61cf518210cd20aefe35d69464f040cb814188acb41fd20e000000001976a914347ac4d31ccb7ac8b58931594cd70bd691aad49a88ac00000000","status":7,"statusDesc":"CANCELED","updatedTime":"2023-02-02T10:15:00.371Z"}

@@ -1,0 +1,22 @@
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-02 18:14:54.657014 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{"networkCode": "MATIC", "type": "transfer", "body": {"from": "0xe458fd3e2515d42cbcd52a89b52fb662bf052143", "to": "0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591", "symbol": "USDC", "amount": "0.000123"}, "transactionParams": {"memo": "Tz6VWqaFSB"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:281 2023-02-02 18:14:54.657014 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-02T10:15:04.000Z","description":"Send 0.000123 USDC","estimatedFee":"24675050165341088","fee":"-1","hash":"0xd8e0e59be1c5e32111c4a515389bee63919aea852be6e4a8047009839ead9a48","id":"1621089797460516865","networkCode":"MATIC","serialized":"02f8b281890b8506fc23ac00856adca375d082d202942791bca1f2de4661ed88a30c99a7a9449aa8417480b844a9059cbb0000000000000000000000003d7f18ad2cea9b59e54dfaf09b327c1ccd899591000000000000000000000000000000000000000000000000000000000000007bc001a08a70aebf81f620947d26ddc7c9dc44163e3857cde37ccd8fa6e09ee99be49093a00e6fe778b0c16d0c08b51745d9776a3e26dd113c7c471bc2277e872785691e89","status":2,"statusDesc":"SIGNED","updatedTime":"2023-02-02T10:15:04.000Z"}]},"body":{"symbol":"USDC","amount":"0.000123","from":"0xe458fd3e2515d42cbcd52a89b52fb662bf052143","to":"0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591"},"createdTime":"2023-02-02T10:15:03.000Z","id":"1621089810066407426","networkCode":"MATIC","status":-2,"transactionParams":{"memo":"Tz6VWqaFSB"},"type":"TRANSFER","updatedTime":"2023-02-02T10:15:03.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:337 2023-02-02 18:14:54.657014 | 
+<-----Cancel----->
+Url:https://api.cryptoless.net/vault/transactions/cancel/1621089797460516865
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{}
+
+
+[32mINFO    [0m Common.Http:Http.py:340 2023-02-02 18:14:54.657014 | 
+<-----Cancel Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-02T10:15:04.000Z","description":"Send 0.000123 USDC","estimatedFee":"24675050165341088","fee":"-1","hash":"0xd8e0e59be1c5e32111c4a515389bee63919aea852be6e4a8047009839ead9a48","id":"1621089797460516865","networkCode":"MATIC","serialized":"02f8b281890b8506fc23ac00856adca375d082d202942791bca1f2de4661ed88a30c99a7a9449aa8417480b844a9059cbb0000000000000000000000003d7f18ad2cea9b59e54dfaf09b327c1ccd899591000000000000000000000000000000000000000000000000000000000000007bc001a08a70aebf81f620947d26ddc7c9dc44163e3857cde37ccd8fa6e09ee99be49093a00e6fe778b0c16d0c08b51745d9776a3e26dd113c7c471bc2277e872785691e89","status":7,"statusDesc":"CANCELED","updatedTime":"2023-02-02T10:15:04.690Z"}

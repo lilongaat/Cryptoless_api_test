@@ -1,0 +1,10 @@
+[32mINFO    [0m Common.Http:Http.py:176 2023-02-02 17:47:05.275887 | 
+<-----Create Safe Account------>
+Url:https://api.cryptoless.net/vault/accounts/safe
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{"name": "\u5b89\u5168\u8d26\u6237GOERLI2-2-1675331225", "networkCode": "GOERLI", "owner": "", "recovery": ""}
+
+
+[1m[31mERROR   [0m Common.Http:Http.py:182 2023-02-02 17:47:05.275887 | 
+<-----Create account Response Error----->
+{"code":2200000,"message":"network not found"}

@@ -1,0 +1,10 @@
+[32mINFO    [0m Common.Http:Http.py:176 2023-02-02 17:51:12.351613 | 
+<-----Create Safe Account------>
+Url:https://api.cryptoless.net/vault/accounts/safe
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{"name": "\u5b89\u5168\u8d26\u6237MATIC2-3-1675331472", "networkCode": "MATIC", "owner": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "recovery": "03c420167aaf4fc7106646b2fe485519e5569ceb1584ae31d62537e349a4e4b5a9"}
+
+
+[32mINFO    [0m Common.Http:Http.py:179 2023-02-02 17:51:12.351613 | 
+<-----Create account Response----->
+{"address":"0x5a196ebc8600ab0e69235a416e9de0b737aea6f7","createdTime":"2023-02-02T09:51:33.045Z","finalized":false,"id":"1621083893063237634","name":"安全账户MATIC2-3-1675331472","networkCode":"MATIC","publicKeys":[{"source":"owner","type":"secp256k1","value":"0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"},{"source":"custodial","type":"secp256k1","value":"036265f8343202ca1974f49c5510a2b13a80e14907a6a8ac0239b634c5b121516b"},{"source":"recovery","type":"secp256k1","value":"03c420167aaf4fc7106646b2fe485519e5569ceb1584ae31d62537e349a4e4b5a9"}],"status":"inactive","threshold":2,"type":"safe","updatedTime":"2023-02-02T09:51:33.045Z"}
