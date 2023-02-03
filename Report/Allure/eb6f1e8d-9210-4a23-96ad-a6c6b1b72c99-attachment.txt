@@ -1,0 +1,44 @@
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-03 17:10:26.362085 | 
+<-----Query Holders----->
+Url:https://api.cryptoless.net/vault/proxy/assets/holders/?networkCode=BSC&address=0x9b532cf5F662e51ba643672797Ad3eC1A60bb939&symbol=USDC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-03 17:10:26.362085 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0x9b532cf5f662e51ba643672797ad3ec1a60bb939","createdTime":"2023-01-04T03:37:26.000Z","id":"1610480494617841666","networkCode":"BSC","quantity":"19.400030192640425759","symbol":"USDC","updatedTime":"2023-02-03T09:08:54.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-03 17:10:26.362085 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{"networkCode": "BSC", "type": "CROSS_CHAIN", "body": {"from": "0x9b532cf5F662e51ba643672797Ad3eC1A60bb939", "to": "0x9b532cf5F662e51ba643672797Ad3eC1A60bb939", "symbol": "USDC", "amount": "13", "toNetworkCode": "MATIC"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:281 2023-02-03 17:10:26.362085 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-03T09:10:33.000Z","description":"anySwapOutUnderlying","estimatedFee":"483245000000000","fee":"-1","hash":"","id":"1621435958100824065","networkCode":"BSC","requiredSignings":[{"hash":"20276dcc9aaeb9a16557207b1b8978b73150dd689b049597b31fbc43f55fbd2f","publicKeys":["02e1cf1f9502c433efd31a1e7c8948b5e9a6d1929a8cbd3d97dcc11d4b358c6dec"],"threshold":1}],"serialized":"f8aa1685012a05f2008301798994d1c5966f9f5ee6881ff6b261bbeda45972b1b5f380b884edbdf5e20000000000000000000000008965349fb649a33a30cbfda057d8ec2c48abe2a20000000000000000000000009b532cf5f662e51ba643672797ad3ec1a60bb939000000000000000000000000000000000000000000000000b469471f801400000000000000000000000000000000000000000000000000000000000000000089808080","status":0,"statusDesc":"BUILDING","updatedTime":"2023-02-03T09:10:33.000Z"}]},"body":{"symbol":"USDC","amount":"13","from":"0x9b532cf5f662e51ba643672797ad3ec1a60bb939","to":"0x9b532cf5f662e51ba643672797ad3ec1a60bb939","toNetworkCode":"MATIC"},"createdTime":"2023-02-03T09:10:32.000Z","id":"1621435961688948737","networkCode":"BSC","status":-2,"type":"CROSS_CHAIN","updatedTime":"2023-02-03T09:10:32.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:358 2023-02-03 17:10:26.362085 | 
+<-----Sign----->
+Url:https://api.cryptoless.net/vault/transactions/signatures
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{"id": "1621435958100824065", "signatures": [{"hash": "20276dcc9aaeb9a16557207b1b8978b73150dd689b049597b31fbc43f55fbd2f", "publicKey": "02e1cf1f9502c433efd31a1e7c8948b5e9a6d1929a8cbd3d97dcc11d4b358c6dec", "signature": "db5eda6dda91e36d030bb3dbb8c4137acc957b35d9d9da89064a0f06787da1840ce6687ddf90a03f9c487606df1d2a951ccf4eecbdfea544f6c48717911805d300"}]}
+
+
+[32mINFO    [0m Common.Http:Http.py:362 2023-02-03 17:10:26.362085 | 
+<-----Sign Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-03T09:10:33.000Z","description":"anySwapOutUnderlying","estimatedFee":"483245000000000","fee":"-1","hash":"0xfbdf7356b965cf75bd95f9168f0df6a7e24067dab90228be909a7281d273827e","id":"1621435958100824065","networkCode":"BSC","serialized":"f8eb1685012a05f2008301798994d1c5966f9f5ee6881ff6b261bbeda45972b1b5f380b884edbdf5e20000000000000000000000008965349fb649a33a30cbfda057d8ec2c48abe2a20000000000000000000000009b532cf5f662e51ba643672797ad3ec1a60bb939000000000000000000000000000000000000000000000000b469471f8014000000000000000000000000000000000000000000000000000000000000000000898193a0db5eda6dda91e36d030bb3dbb8c4137acc957b35d9d9da89064a0f06787da184a00ce6687ddf90a03f9c487606df1d2a951ccf4eecbdfea544f6c48717911805d3","status":2,"statusDesc":"SIGNED","updatedTime":"2023-02-03T09:10:33.119Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:378 2023-02-03 17:10:26.362085 | 
+<-----Send----->
+Url:https://api.cryptoless.net/vault/transactions/send/1621435958100824065
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+
+
+[32mINFO    [0m Common.Http:Http.py:382 2023-02-03 17:10:26.362085 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"2023-02-03T09:10:34.840Z","createdTime":"2023-02-03T09:10:33.000Z","description":"anySwapOutUnderlying","estimatedFee":"483245000000000","fee":"-1","hash":"0xfbdf7356b965cf75bd95f9168f0df6a7e24067dab90228be909a7281d273827e","id":"1621435958100824065","networkCode":"BSC","serialized":"f8eb1685012a05f2008301798994d1c5966f9f5ee6881ff6b261bbeda45972b1b5f380b884edbdf5e20000000000000000000000008965349fb649a33a30cbfda057d8ec2c48abe2a20000000000000000000000009b532cf5f662e51ba643672797ad3ec1a60bb939000000000000000000000000000000000000000000000000b469471f8014000000000000000000000000000000000000000000000000000000000000000000898193a0db5eda6dda91e36d030bb3dbb8c4137acc957b35d9d9da89064a0f06787da184a00ce6687ddf90a03f9c487606df1d2a951ccf4eecbdfea544f6c48717911805d3","status":3,"statusDesc":"PENDING","updatedTime":"2023-02-03T09:10:34.840Z"}

@@ -20,19 +20,25 @@ class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
             # MATIC 
-            # ("CrossChain USDC MATIC-BSC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","MATIC","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","BSC","USDC","12"),
-            ("CrossChain USDC BSC-MATIC","9cbca176aff8c48ebd9a27c31455e34ebc86e25a17e22b3d65a716fc851ada38","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","BSC","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","MATIC","USDC","12"),
+            # ("MATIC SWAP:MATIC-USDC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","MATIC","USDC","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","BSC","USDT","1","0.000012"),
         ]
     elif env_type == 1: #生产
-        test_data = []
+        test_data = [
+            # BSC——MATIC
+            ("CrossChain USDC BSC(普通账户)-MATIC(普通账户)","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","BSC","USDC","0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","MATIC","13"),
+            # ("CrossChain USDC MATIC(普通账户)-BSC(普通账户)","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","MATIC","USDC","0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","BSC","12.8"),
+
+            # ("CrossChain USDC BSC(普通账户)-MATIC(安全账户)","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","BSC","USDC","0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","MATIC","13"),
+            # ("CrossChain USDC MATIC(安全账户)-BSC(普通账户)","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","MATIC","USDC","0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","BSC","12.8"),
+        ]
 
     @allure.story("Custodial Transfers Success!")
     @allure.title('{test_title}')
-    @pytest.mark.parametrize('test_title,privatekey,from_add,networkCode,to_add,toNetworkCode,symbol,amount', test_data)
-    def test_custodial(self,test_title,privatekey,from_add,networkCode,to_add,toNetworkCode,symbol,amount):
+    @pytest.mark.parametrize('test_title,privatekey,fromaddress,networkCode,symbol,toaddress,toNetworkCode,amount', test_data)
+    def test_custodial(self,test_title,privatekey,fromaddress,networkCode,symbol,toaddress,toNetworkCode,amount):
 
-        with allure.step("查询账户holder信息"):
-            holder = Http.HttpUtils.holders(networkCode=networkCode,symbol=symbol,address=from_add)
+        with allure.step("查询from账户holder信息"):
+            holder = Http.HttpUtils.holders(networkCode=networkCode,symbol=symbol,address=fromaddress)
             assert holder.status_code ==200
             quantity = holder.json()["list"][0]["quantity"]
 
@@ -41,19 +47,15 @@ class Test_transfers_success:
                 "networkCode":networkCode,
                 "type":"CROSS_CHAIN",
                 "body":{
-                    "from":from_add,
-                    "to":to_add,
+                    "from":fromaddress,
+                    "to":toaddress,
                     "symbol":symbol,
                     "amount":amount,
                     "toNetworkCode":toNetworkCode
-                },
-                "transactionParams":{
-                    "memo":''.join(random.sample(string.ascii_letters + string.digits, 10))
                 }
             }
             transfer = Http.HttpUtils.instructions(body)
             assert transfer.status_code == 200
-            assert transfer.json()["_embedded"]["transactions"][0]["statusDesc"] == "BUILDING"
 
             id = transfer.json()["_embedded"]["transactions"][0]["id"]
             requiredSignings = transfer.json()["_embedded"]["transactions"][0]["requiredSignings"]

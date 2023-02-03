@@ -135,6 +135,7 @@ class Test_transfers_success:
 
         with allure.step("账户余额相等验证 浏览器查询==holder"):
             assert balance == quantity
+            del balance,quantity
 
 
 if __name__ == '__main__':

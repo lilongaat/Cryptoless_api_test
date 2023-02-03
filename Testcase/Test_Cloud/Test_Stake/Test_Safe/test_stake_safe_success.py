@@ -147,7 +147,7 @@ class Test_stake_success:
 
         with allure.step("账户余额相等验证 浏览器查询==holder"):
             assert balance == quantity
-
+            del balance,quantity
 
         with allure.step("查询账户staking信息"):
             staking = Http.HttpUtils.staking(networkCode,address)
