@@ -1,0 +1,24 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:62 2023-02-08 15:37:55.888496 | 
+<-----balance----->
+Url:https://mempool.emzy.de/testnet/api/address/tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0
+
+Headers:{"authority": "mempool.emzy.de", "accept": "application/json, text/plain, */*", "accept-language": "zh-CN,zh;q=0.9", "referer": "https://mempool.emzy.de/testnet/address/tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq", "sec-ch-ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": "\"macOS\"", "sec-fetch-dest": "empty", "sec-fetch-mode": "cors", "sec-fetch-site": "same-origin", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:64 2023-02-08 15:37:55.888496 | 
+<-----balance response----->
+
+Body:{"address": "tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0", "chain_stats": {"funded_txo_count": 56, "funded_txo_sum": 28163995, "spent_txo_count": 55, "spent_txo_sum": 27392997, "tx_count": 45}, "mempool_stats": {"funded_txo_count": 0, "funded_txo_sum": 0, "spent_txo_count": 0, "spent_txo_sum": 0, "tx_count": 0}}
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-08 15:37:55.888496 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=BTC&address=tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0&symbol=BTC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-08 15:37:55.888496 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"tb1qhcuul2fcyv5rvr5mc5cy5saz0q5p3kx0gsy3c0","createdTime":"2022-12-12T10:01:45.000Z","id":"1602242291732570114","networkCode":"BTC","quantity":"0.00771985","symbol":"BTC","updatedTime":"2023-01-31T10:41:41.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_transfer_fail_sign:test_transfer_fail_sign.py:76 2023-02-08 15:37:55.888496 | 浏览器查询账户balance为:0.00770998
+[35mDEBUG   [0m test_transfer_fail_sign:test_transfer_fail_sign.py:77 2023-02-08 15:37:55.888496 | 查询账户holder为:0.00771985

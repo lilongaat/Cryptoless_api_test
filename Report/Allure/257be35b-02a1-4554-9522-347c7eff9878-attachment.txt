@@ -1,0 +1,47 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:159 2023-02-08 15:37:55.888496 | 
+<-----balance----->
+Url:https://api-goerli.etherscan.io/api?module=account&action=balance&address=0xe525E7cd17f6Dc950492755A089E452fd5d9d44f&tag=latest&apikey=UDIG7EZI6J2VBUZIT6AAKXAKTVRQ64J2CF
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:161 2023-02-08 15:37:55.888496 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "8953295738566543"}
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-08 15:37:55.888496 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=GOERLI&address=0xe525E7cd17f6Dc950492755A089E452fd5d9d44f&symbol=GoerliETH
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-08 15:37:55.888496 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0xe525e7cd17f6dc950492755a089e452fd5d9d44f","createdTime":"2022-11-25T11:05:16.000Z","id":"1596097681096425474","networkCode":"GOERLI","quantity":"0.008953295738566543","symbol":"GoerliETH","updatedTime":"2023-02-06T00:47:09.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_transfer_fail_sign:test_transfer_fail_sign.py:76 2023-02-08 15:37:55.888496 | 浏览器查询账户balance为:0.008953295738566543
+[35mDEBUG   [0m test_transfer_fail_sign:test_transfer_fail_sign.py:77 2023-02-08 15:37:55.888496 | 查询账户holder为:0.008953295738566543
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-08 15:37:55.888496 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "GOERLI", "type": "transfer", "body": {"from": "0xe525E7cd17f6Dc950492755A089E452fd5d9d44f", "to": "0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2", "symbol": "GoerliETH", "amount": "0.000121"}, "transactionParams": {"memo": "DANbd34v1G"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:281 2023-02-08 15:37:55.888496 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-08T07:38:02.000Z","description":"Send 0.000121 ETH","estimatedFee":"634095000","fee":"-1","hash":"","id":"1623224610007105538","networkCode":"GOERLI","requiredSignings":[{"hash":"23361976af1f7b1fe1e2f78f7e802bbb5ef7962470bec03d092e588e0b1b91e9","publicKeys":["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],"threshold":1}],"serialized":"02ec05518232768275f382520894a7a9e710f9a3b4184d4f8b7d379cec262f2382c2866e0c8204900080c0808080","status":0,"statusDesc":"BUILDING","updatedTime":"2023-02-08T07:38:02.000Z"}]},"body":{"symbol":"GoerliETH","amount":"0.000121","from":"0xe525e7cd17f6dc950492755a089e452fd5d9d44f","to":"0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2"},"createdTime":"2023-02-08T07:38:02.000Z","id":"1623224620361670657","networkCode":"GOERLI","status":-2,"transactionParams":{"memo":"DANbd34v1G"},"type":"TRANSFER","updatedTime":"2023-02-08T07:38:02.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:358 2023-02-08 15:37:55.888496 | 
+<-----Sign----->
+Url:https://api.dhandho.xyz/vault/transactions/signatures
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"id": "1623224610007105538", "signatures": [{"hash": "23361976af1f7b1fe1e2f78f7e802bbb5ef7962470bec03d092e588e0b1b91e9", "publicKey": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "signature": "68559787e9dcee23e99316751eb23309a0994fe04fa0da17372236865b9c1c903ee5e635ffbd32e8b9755e08a19d98d9068db0ea9dddcc7de80b91c7c622a9ce00"}]}
+
+
+[32mINFO    [0m Common.Http:Http.py:365 2023-02-08 15:37:55.888496 | 
+<-----Sign Response Error----->
+400
+{"code":2100000,"message":"invalid signature 68559787e9dcee23e99316751eb23309a0994fe04fa0da17372236865b9c1c903ee5e635ffbd32e8b9755e08a19d98d9068db0ea9dddcc7de80b91c7c622a9ce00"}

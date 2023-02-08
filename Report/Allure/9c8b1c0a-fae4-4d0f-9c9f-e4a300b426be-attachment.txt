@@ -1,0 +1,24 @@
+[32mINFO    [0m Common.Http:Http.py:50 2023-02-07 16:44:53.984986 | 
+<-----Connect Req----->
+Url:https://api.cryptoless.net/vault/users/connect-request
+Headers:{"Content-Type": "application/json"}
+Body:{"email": "alilongaat@gmail.com"}
+
+
+[32mINFO    [0m Common.Http:Http.py:53 2023-02-07 16:44:53.984986 | 
+<-----Connect Req Success----->
+
+
+[35mDEBUG   [0m test_update_ authorization:test_update_ authorization.py:37 2023-02-07 16:44:53.984986 | <class 'str'>
+[35mDEBUG   [0m test_update_ authorization:test_update_ authorization.py:38 2023-02-07 16:44:53.984986 | "613584"
+[35mDEBUG   [0m test_update_ authorization:test_update_ authorization.py:39 2023-02-07 16:44:53.984986 | <class 'str'>
+[32mINFO    [0m Common.Http:Http.py:70 2023-02-07 16:44:53.984986 | 
+<-----Connect Confirm----->
+Url:https://api.cryptoless.net/vault/users/connect-confirm
+Headers:{"Content-Type": "application/json"}
+Body:{"email": "alilongaat@gmail.com", "oneTimePassword": "888888"}
+
+
+[32mINFO    [0m Common.Http:Http.py:76 2023-02-07 16:44:53.984986 | 
+<-----Connect Confirm Error----->
+{"code":2100000,"message":"incorrect verification code"}

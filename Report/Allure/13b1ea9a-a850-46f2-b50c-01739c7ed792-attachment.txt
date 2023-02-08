@@ -1,0 +1,70 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:238 2023-02-08 16:58:34.918841 | 
+<-----Balance ERC20----->
+Url:https://api.polygonscan.com/api?module=account&action=tokenbalance&contractaddress=0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174&address=0xe525E7cd17f6Dc950492755A089E452fd5d9d44f&tag=latest&apikey=85W6B7V5TPH7TDZA3JQCFT8UN8RKAEMA4Y
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:240 2023-02-08 16:58:34.918841 | 
+<-----Balance ERC20 response----->
+
+Body:{"status": "1", "message": "OK", "result": "145"}
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-08 16:58:34.918841 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=MATIC&address=0xe525E7cd17f6Dc950492755A089E452fd5d9d44f&symbol=USDC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-08 16:58:34.918841 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0xe525e7cd17f6dc950492755a089e452fd5d9d44f","createdTime":"2022-12-26T08:32:01.000Z","id":"1607293140213125122","networkCode":"MATIC","quantity":"0.000145","symbol":"USDC","updatedTime":"2023-02-06T01:22:57.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_fail_rebuild_maxfee:test_fail_rebuild_maxfee.py:89 2023-02-08 16:58:34.918841 | 浏览器查询账户balance为:0.000145
+[35mDEBUG   [0m test_fail_rebuild_maxfee:test_fail_rebuild_maxfee.py:90 2023-02-08 16:58:34.918841 | 查询账户holder为:0.000145
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-08 16:58:34.918841 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "MATIC", "type": "transfer", "body": {"from": "0xe525E7cd17f6Dc950492755A089E452fd5d9d44f", "to": "0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591", "symbol": "USDC", "amount": "maximum"}, "transactionParams": {"memo": "JoEQKZA8kj"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:281 2023-02-08 16:58:34.918841 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-08T08:58:43.000Z","description":"Send 0.000145 USDC","estimatedFee":"8317292300000990","fee":"-1","hash":"","id":"1623244902380036098","networkCode":"MATIC","requiredSignings":[{"hash":"f3287199d5404ac3ae3f896bc5bfd4e0fa91a7d8755650cbd9834fb9d6fa65b0","publicKeys":["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],"threshold":1}],"serialized":"02f8728189758506fc23ac008524052ee86f82d202942791bca1f2de4661ed88a30c99a7a9449aa8417480b844a9059cbb0000000000000000000000003d7f18ad2cea9b59e54dfaf09b327c1ccd8995910000000000000000000000000000000000000000000000000000000000000091c0808080","status":0,"statusDesc":"BUILDING","updatedTime":"2023-02-08T08:58:43.000Z"}]},"body":{"symbol":"USDC","amount":"0.000145","from":"0xe525e7cd17f6dc950492755a089e452fd5d9d44f","to":"0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591"},"createdTime":"2023-02-08T08:58:43.000Z","id":"1623244923687133186","networkCode":"MATIC","status":-2,"transactionParams":{"memo":"JoEQKZA8kj"},"type":"TRANSFER","updatedTime":"2023-02-08T08:58:43.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:318 2023-02-08 16:58:34.918841 | 
+<-----Rebuild----->
+Url:https://api.dhandho.xyz/vault/transactions/params
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"id": "1623244902380036098", "params": {"maxFeePerGas": "0x19fc4dda1b2c", "maxPriorityFeePerGas": "0x19fc4dd9cd0c"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:321 2023-02-08 16:58:34.918841 | 
+<-----Rebuild Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-08T08:58:43.000Z","description":"Send 0.000145 USDC","estimatedFee":"1536057143986114136","fee":"-1","hash":"","id":"1623244902380036098","networkCode":"MATIC","requiredSignings":[{"hash":"a3f42405c61417bc7c6563bf25160b9c52a01bbe9afdc4d2be8069fabbdbb085","publicKeys":["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],"threshold":1}],"serialized":"02f8748189758619fc4dd9cd0c8619fc4dda1b2c82d202942791bca1f2de4661ed88a30c99a7a9449aa8417480b844a9059cbb0000000000000000000000003d7f18ad2cea9b59e54dfaf09b327c1ccd8995910000000000000000000000000000000000000000000000000000000000000091c0808080","status":0,"statusDesc":"BUILDING","updatedTime":"2023-02-08T08:58:51.935Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:358 2023-02-08 16:58:34.918841 | 
+<-----Sign----->
+Url:https://api.dhandho.xyz/vault/transactions/signatures
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"id": "1623244902380036098", "signatures": [{"hash": "a3f42405c61417bc7c6563bf25160b9c52a01bbe9afdc4d2be8069fabbdbb085", "publicKey": "0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113", "signature": "009bac640e85609c4ff80b2729b7a4104b978f51b92d0cfb26b91297c5c1b7986b81166696be055fe176b7dab642a25839deabb132660d0b76811ee2c8bb36da01"}]}
+
+
+[32mINFO    [0m Common.Http:Http.py:362 2023-02-08 16:58:34.918841 | 
+<-----Sign Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-08T08:58:43.000Z","description":"Send 0.000145 USDC","estimatedFee":"1536057143986114136","fee":"-1","hash":"0x2b6943f030b1e539839b75e69e9c5f1e9568d6cb647ba5c6f68d3e1404535419","id":"1623244902380036098","networkCode":"MATIC","serialized":"02f8b38189758619fc4dd9cd0c8619fc4dda1b2c82d202942791bca1f2de4661ed88a30c99a7a9449aa8417480b844a9059cbb0000000000000000000000003d7f18ad2cea9b59e54dfaf09b327c1ccd8995910000000000000000000000000000000000000000000000000000000000000091c0019f9bac640e85609c4ff80b2729b7a4104b978f51b92d0cfb26b91297c5c1b798a06b81166696be055fe176b7dab642a25839deabb132660d0b76811ee2c8bb36da","status":2,"statusDesc":"SIGNED","updatedTime":"2023-02-08T08:58:52.439Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:378 2023-02-08 16:58:34.918841 | 
+<-----Send----->
+Url:https://api.dhandho.xyz/vault/transactions/send/1623244902380036098
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:385 2023-02-08 16:58:34.918841 | 
+<-----Send Response Error----->
+400
+{"code":2101000,"message":"the estimatedfee 1536057143986114136 cannot be greater than the maxfee 500000000000000000"}

@@ -18,7 +18,19 @@ class ReadConfig():
     def get_release(self, name):
         value = config.get('Release', name)
         return value
- 
+
+env_type = int(ReadConfig().get_env('type'))
+
+class WriteConfig():
+    def update_config(name, vaule_):
+        if env_type == 0:
+            env_value = 'Debug'
+        elif env_type == 1:
+            env_value = 'Release'
+        config[env_value][name] = vaule_
+        with open(config_path, 'w') as configfile: config.write(configfile)
+        value = config.get(env_value, name)
+        return value
  
 if __name__ == '__main__':
     print(ReadConfig().get_env('type'))

@@ -1,0 +1,22 @@
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-06 14:29:26.346185 | 
+<-----Query Holders----->
+Url:https://api.cryptoless.net/vault/proxy/assets/holders/?networkCode=BSC&address=0x9b532cf5F662e51ba643672797Ad3eC1A60bb939&symbol=USDC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-06 14:29:26.346185 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0x9b532cf5f662e51ba643672797ad3ec1a60bb939","createdTime":"2023-01-04T03:37:26.000Z","id":"1610480494617841666","networkCode":"BSC","quantity":"6.400030192640425759","symbol":"USDC","updatedTime":"2023-02-03T09:10:42.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-06 14:29:26.346185 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{"networkCode": "BSC", "type": "CROSS_CHAIN", "body": {"from": "0x9b532cf5F662e51ba643672797Ad3eC1A60bb939", "to": "0x66c1d34c273cc09df9072f49aeba4b09e017bc5c", "symbol": "USDC", "amount": "13", "toNetworkCode": "MATIC"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:284 2023-02-06 14:29:26.346185 | 
+<-----Instructions Response Error----->
+400
+{"code":2400000,"message":"INTERNAL: Returned error: execution reverted: TransferHelper: TRANSFER_FROM_FAILED"}

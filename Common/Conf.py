@@ -1,11 +1,13 @@
 import csv
 import datetime
+import socket
 from decimal import Decimal
 from bitcoin import *
 from secp256k1 import PrivateKey
 import time
 import random
 import os
+import re
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from loguru import logger
@@ -103,6 +105,27 @@ class Config():
         gasfee = Decimal(gas_int)*Decimal(gasPrice_int)/Decimal(10**18)
         return gasfee
 
+    @staticmethod
+    # 端口占用
+    def kill_process(port:int):
+        ret = os.popen("netstat -nao|findstr " + str(port))
+        #注意解码方式和cmd要相同，即为"gbk"，否则输出乱码
+        # str_list = ret.read().decode('gbk')
+        str_list = ret.read()
+        ret_list = re.split('',str_list)
+        try:
+            process_pid = list(ret_list[0].split())[-1]
+            os.popen('taskkill /pid ' + str(process_pid) + ' /F')
+            logger.info("端口已被释放")
+        except:
+            logger.info("端口未被使用")
+ 
+# output1 = os.popen('ipconfig')
+# print output1.read().decode('gbk')
+
+
+
+
 if __name__ == '__main__':
     # print(Config.now_timestamp())
     # print(Config.now_time_day())
@@ -110,6 +133,8 @@ if __name__ == '__main__':
     # print(Config.now_time())
     # print(type(Config.random_amount(18)),Config.random_amount(18))
     # print(Config.reader_csv("/Users/lilong/Documents/Test_Api/Address/Top/BTC.csv",10))
+    # Config.kill_process(42432)
+
     
 
     # privkey1 = 'dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da'
@@ -130,10 +155,10 @@ if __name__ == '__main__':
     # print(Config.fee_evm("0x5208","0x1dcd65000"))
 
 
-    privkey1 = '100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33'
+    privkey1 = 'd10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b'
     # privkey2 = '2f0b3e997953188f8dd6c1eca798be943f6fabb783e2b2cc82275e98a8126442'
     # privkey3 = 'dfdd81763f70078be8c85fe2454de11e7bcf98696c748d133dea50ec7c166a6f'
-    hash = '12b9710427c91130a103740bf0ade7d3cb3302ddfc266168a8517dfb44c570ff'
+    hash = '4391716ded7139bfe57dca72150b45b27adb94b3461ba372139c36ac634fc41e'
     print(Config.sign(privkey1, hash))
     # print(Config.sign(privkey2, hash))
     # print(Config.sign(privkey3, hash))

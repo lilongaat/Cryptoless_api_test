@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Feb 06 14:34:51 CST 2023","Mon Feb 06 14:34:58 CST 2023","7455","Testcase.Test_Cloud.Test_Cross_Chain.Test_External_safe","test_cross_chain_success","Test_transfers_success","","","CrossChain USDC MATIC(安全账户)-BSC(普通账户)",""
+"failed","Mon Feb 06 14:30:39 CST 2023","Mon Feb 06 14:30:45 CST 2023","5925","Testcase.Test_Cloud.Test_Transfer.Test_Custodial","test_transfer_custodial_success","Test_transfers_success","","","MATIC Custodial账户转账 erc20coin",""
+"failed","Mon Feb 06 19:15:21 CST 2023","Mon Feb 06 19:15:22 CST 2023","1553","Testcase","test_update_ authorization","Test_create_custodial_account","","","用户登陆成功",""
+"failed","Mon Feb 06 14:29:26 CST 2023","Mon Feb 06 14:29:29 CST 2023","2542","Testcase.Test_Cloud.Test_Cross_Chain.Test_External_safe","test_cross_chain_success","Test_transfers_success","","","CrossChain USDC BSC(普通账户)-MATIC(普通账户)",""

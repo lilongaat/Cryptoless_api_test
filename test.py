@@ -47,17 +47,15 @@
 # assert bd_c - af_c == am_c
 
 
+# from apscheduler.schedulers.background import BlockingScheduler
 
 
-from apscheduler.schedulers.background import BlockingScheduler
+# def job():
+#     print("job--000")
 
 
-def job():
-    print("job--000")
-
-
-if __name__ == "__main__":
-    scheduler = BlockingScheduler(timezone="Asia/Shanghai")
+# if __name__ == "__main__":
+#     scheduler = BlockingScheduler(timezone="Asia/Shanghai")
     
-    scheduler.add_job(job, 'cron', hour=10, minute=54)
-    scheduler.start()
+#     scheduler.add_job(job, 'cron', hour=10, minute=54)
+#     scheduler.start()

@@ -1,0 +1,20 @@
+[32mINFO    [0m Common.Http:Http.py:50 2023-02-08 15:55:03.426665 | 
+<-----Connect Req----->
+Url:https://api.cryptoless.net/vault/users/connect-request
+Headers:{"Content-Type": "application/json"}
+Body:{"email": "lilongaat@gmail.com"}
+
+
+[32mINFO    [0m Common.Http:Http.py:53 2023-02-08 15:55:03.426665 | 
+<-----Connect Req Success----->
+
+
+[32mINFO    [0m Common.Http:Http.py:70 2023-02-08 15:55:03.426665 | 
+<-----Connect Confirm----->
+Url:https://api.cryptoless.net/vault/users/connect-confirm
+Headers:{"Content-Type": "application/json"}
+Body:{"email": "lilongaat@gmail.com", "oneTimePassword": "555461"}
+
+
+[32mINFO    [0m Common.Http:Http.py:73 2023-02-08 15:55:03.426665 | 
+<-----Connect Confirm Success----->

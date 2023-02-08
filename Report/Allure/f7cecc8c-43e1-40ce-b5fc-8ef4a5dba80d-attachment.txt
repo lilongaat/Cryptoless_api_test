@@ -1,0 +1,33 @@
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-08 11:59:09.640347 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=BTC&address=tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x&symbol=BTC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-08 11:59:09.640347 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x","createdTime":"2022-12-12T07:27:00.000Z","id":"1602203347439538177","networkCode":"BTC","quantity":"0.01519218","symbol":"BTC","updatedTime":"2023-02-08T02:35:47.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-08 11:59:09.640347 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "BTC", "type": "transfer", "body": {"from": "tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x", "to": "tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq", "symbol": "BTC", "amount": "0.000008"}, "transactionParams": {"memo": "xERgG7Fp4H"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:281 2023-02-08 11:59:09.640347 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-08T03:59:15.000Z","description":"Send BTC","estimatedFee":"187","fee":"-1","hash":"a6c7458e79e0575940f41dc2d553c88caf7c01d32f249b6c6fd83cd5803a0170","id":"1623169558936633345","networkCode":"BTC","serialized":"01000000000101d06cb6159ade86e02b78cb6b1baaa16092a4fff5840fc72ee84fcf63d10af9210100000000ffffffff022003000000000000160014ea2cc3344a103daead8378c573ccbfcba5bfed54972a170000000000160014f136ddf8a32711e62d6eac8693f82dc6e7af4e2102483045022100f68647fe8495fcd5228e51666efb647cdabd165c6ff93ec7c58aaa05847f6700022011b1e11b04f21ba2802c012bac391dbe313ab4fc6172364fadaa51363dc2caf9012103fc4bdc2e6a1337c9e0dfbb888b4e7178cd1746ee789477a42695d971afd8d67900000000","status":2,"statusDesc":"SIGNED","updatedTime":"2023-02-08T03:59:18.000Z"}]},"body":{"symbol":"BTC","amount":"0.000008","from":"tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x","to":"tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq"},"createdTime":"2023-02-08T03:59:15.000Z","id":"1623169560265056258","networkCode":"BTC","status":-1,"transactionParams":{"memo":"xERgG7Fp4H"},"type":"TRANSFER","updatedTime":"2023-02-08T03:59:18.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:337 2023-02-08 11:59:09.640347 | 
+<-----Cancel----->
+Url:https://api.dhandho.xyz/vault/transactions/cancel/1623169558936633345
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{}
+
+
+[32mINFO    [0m Common.Http:Http.py:340 2023-02-08 11:59:09.640347 | 
+<-----Cancel Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-08T03:59:15.000Z","description":"Send BTC","estimatedFee":"187","fee":"-1","hash":"a6c7458e79e0575940f41dc2d553c88caf7c01d32f249b6c6fd83cd5803a0170","id":"1623169558936633345","networkCode":"BTC","serialized":"01000000000101d06cb6159ade86e02b78cb6b1baaa16092a4fff5840fc72ee84fcf63d10af9210100000000ffffffff022003000000000000160014ea2cc3344a103daead8378c573ccbfcba5bfed54972a170000000000160014f136ddf8a32711e62d6eac8693f82dc6e7af4e2102483045022100f68647fe8495fcd5228e51666efb647cdabd165c6ff93ec7c58aaa05847f6700022011b1e11b04f21ba2802c012bac391dbe313ab4fc6172364fadaa51363dc2caf9012103fc4bdc2e6a1337c9e0dfbb888b4e7178cd1746ee789477a42695d971afd8d67900000000","status":7,"statusDesc":"CANCELED","updatedTime":"2023-02-08T03:59:21.795Z"}

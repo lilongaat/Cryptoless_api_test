@@ -1,0 +1,33 @@
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-08 15:20:54.55027 | 
+<-----Query Holders----->
+Url:https://api.cryptoless.net/vault/proxy/assets/holders/?networkCode=MATIC&address=0xe458fd3e2515d42cbcd52a89b52fb662bf052143&symbol=MATIC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-08 15:20:54.55027 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0xe458fd3e2515d42cbcd52a89b52fb662bf052143","createdTime":"2023-01-03T06:42:00.000Z","id":"1610164556590616577","networkCode":"MATIC","quantity":"0.095741352592070979","symbol":"MATIC","updatedTime":"2023-02-08T06:41:36.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-08 15:20:54.55027 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{"networkCode": "MATIC", "type": "transfer", "body": {"from": "0xe458fd3e2515d42cbcd52a89b52fb662bf052143", "to": "0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591", "symbol": "MATIC", "amount": "0.00012"}, "transactionParams": {"memo": "wtJdZSsmpR"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:281 2023-02-08 15:20:54.55027 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-08T07:21:03.000Z","description":"Send 0.00012 MATIC","estimatedFee":"10255616370846000","fee":"-1","hash":"0x7d01a5cf6964a6244302af84a2304d70d0553dbf83460853e26cf444ed371d96","id":"1623220341300301825","networkCode":"MATIC","serialized":"02f87381891b8507029fd4008571b4af2fa6825208943d7f18ad2cea9b59e54dfaf09b327c1ccd899591866d23ad5f800080c001a0fca83abe6766c1a6e116b0f949bd9bf023f791721a46ef27762142d2d6d27f5da015577326dc7ff2b90276d078d8aa1ff750347730bce4a15afecde295669ebc89","status":2,"statusDesc":"SIGNED","updatedTime":"2023-02-08T07:21:04.000Z"}]},"body":{"symbol":"MATIC","amount":"0.00012","from":"0xe458fd3e2515d42cbcd52a89b52fb662bf052143","to":"0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591"},"createdTime":"2023-02-08T07:21:03.000Z","id":"1623220347379904514","networkCode":"MATIC","status":-2,"transactionParams":{"memo":"wtJdZSsmpR"},"type":"TRANSFER","updatedTime":"2023-02-08T07:21:03.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:337 2023-02-08 15:20:54.55027 | 
+<-----Cancel----->
+Url:https://api.cryptoless.net/vault/transactions/cancel/1623220341300301825
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{}
+
+
+[32mINFO    [0m Common.Http:Http.py:340 2023-02-08 15:20:54.55027 | 
+<-----Cancel Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-08T07:21:03.000Z","description":"Send 0.00012 MATIC","estimatedFee":"10255616370846000","fee":"-1","hash":"0x7d01a5cf6964a6244302af84a2304d70d0553dbf83460853e26cf444ed371d96","id":"1623220341300301825","networkCode":"MATIC","serialized":"02f87381891b8507029fd4008571b4af2fa6825208943d7f18ad2cea9b59e54dfaf09b327c1ccd899591866d23ad5f800080c001a0fca83abe6766c1a6e116b0f949bd9bf023f791721a46ef27762142d2d6d27f5da015577326dc7ff2b90276d078d8aa1ff750347730bce4a15afecde295669ebc89","status":7,"statusDesc":"CANCELED","updatedTime":"2023-02-08T07:21:04.534Z"}

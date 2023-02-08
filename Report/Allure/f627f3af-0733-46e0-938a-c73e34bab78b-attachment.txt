@@ -1,0 +1,35 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:159 2023-02-08 10:27:44.168035 | 
+<-----balance----->
+Url:https://api-goerli.etherscan.io/api?module=account&action=balance&address=0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca&tag=latest&apikey=UDIG7EZI6J2VBUZIT6AAKXAKTVRQ64J2CF
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:161 2023-02-08 10:27:44.168035 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "1135390841001280"}
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-08 10:27:44.168035 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=GOERLI&address=0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca&symbol=GoerliETH
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-08 10:27:44.168035 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","createdTime":"2022-12-12T07:06:33.000Z","id":"1602198201359880194","networkCode":"GOERLI","quantity":"0.00113539084100128","symbol":"GoerliETH","updatedTime":"2023-02-07T11:35:20.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_transfer_custodial_success:test_transfer_custodial_success.py:82 2023-02-08 10:27:44.168035 | 浏览器查询账户balance为:0.00113539084100128
+[35mDEBUG   [0m test_transfer_custodial_success:test_transfer_custodial_success.py:83 2023-02-08 10:27:44.168035 | 查询账户holder为:0.00113539084100128
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-08 10:27:44.168035 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "GOERLI", "type": "transfer", "body": {"from": "0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca", "to": "0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3", "symbol": "GoerliETH", "amount": "0.000000000000000001"}, "transactionParams": {"memo": "Seg7J4oHps"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:284 2023-02-08 10:27:44.168035 | 
+<-----Instructions Response Error----->
+400
+{"code":2300000,"message":"For input string: \"184808841000\""}

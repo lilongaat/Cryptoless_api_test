@@ -1,0 +1,45 @@
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-08 15:16:45.481498 | 
+<-----Query Holders----->
+Url:https://api.cryptoless.net/vault/proxy/assets/holders/?networkCode=MATIC&address=0xe458fd3e2515d42cbcd52a89b52fb662bf052143&symbol=USDC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-08 15:16:45.481498 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0xe458fd3e2515d42cbcd52a89b52fb662bf052143","createdTime":"2023-01-03T06:56:01.000Z","id":"1610168080661614593","networkCode":"MATIC","quantity":"0.098774","symbol":"USDC","updatedTime":"2023-02-08T06:41:36.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-08 15:16:45.481498 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{"networkCode": "MATIC", "type": "transfer", "body": {"from": "0xe458fd3e2515d42cbcd52a89b52fb662bf052143", "to": "0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591", "symbol": "USDC", "amount": "0.000123"}, "transactionParams": {"memo": "VpD7uCohQE"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:281 2023-02-08 15:16:45.481498 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-08T07:16:48.000Z","description":"Send 0.000123 USDC","estimatedFee":"20777867817412146","fee":"-1","hash":"0xf44dd361344c09de23f87619b1d55fb8f583e55ef4b21c0a7305c1bd93e9e5af","id":"1623219269303308289","networkCode":"MATIC","serialized":"02f8b281891b85071e6bf2b38559fbecf21982d202942791bca1f2de4661ed88a30c99a7a9449aa8417480b844a9059cbb0000000000000000000000003d7f18ad2cea9b59e54dfaf09b327c1ccd899591000000000000000000000000000000000000000000000000000000000000007bc001a035231ccfae6e749c4d9dd216702aebae8b36860ebfd9ea623a8f9a1967071b7fa059dbf09110afc11d61bd9158cf28ad31d312f88711fef72df6f083cecd8ed66c","status":2,"statusDesc":"SIGNED","updatedTime":"2023-02-08T07:16:49.000Z"}]},"body":{"symbol":"USDC","amount":"0.000123","from":"0xe458fd3e2515d42cbcd52a89b52fb662bf052143","to":"0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591"},"createdTime":"2023-02-08T07:16:48.000Z","id":"1623219278125985794","networkCode":"MATIC","status":-2,"transactionParams":{"memo":"VpD7uCohQE"},"type":"TRANSFER","updatedTime":"2023-02-08T07:16:48.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:318 2023-02-08 15:16:45.481498 | 
+<-----Rebuild----->
+Url:https://api.cryptoless.net/vault/transactions/params
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{"id": "1623219269303308289", "params": {"maxFeePerGas": "0x19fc4dda1b2c", "maxPriorityFeePerGas": "0x19fc4dd9cd0c"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:321 2023-02-08 15:16:45.481498 | 
+<-----Rebuild Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-08T07:16:48.000Z","description":"Send 0.000123 USDC","estimatedFee":"1536057143986114136","fee":"-1","hash":"0xd1a95ec0b1855bc4216800255237d3630199e49240c62cef25de475222d57ba5","id":"1623219269303308289","networkCode":"MATIC","serialized":"02f8b481891b8619fc4dd9cd0c8619fc4dda1b2c82d202942791bca1f2de4661ed88a30c99a7a9449aa8417480b844a9059cbb0000000000000000000000003d7f18ad2cea9b59e54dfaf09b327c1ccd899591000000000000000000000000000000000000000000000000000000000000007bc080a047f602c7aefaad789c661058151797c77d4f951a4dade549f8f5af269307e151a00e590b29db4bbf035cad17d854dcd6713beee752f6ffdaf7a52a83056bc1c1f3","status":2,"statusDesc":"SIGNED","updatedTime":"2023-02-08T07:16:51.457Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:378 2023-02-08 15:16:45.481498 | 
+<-----Send----->
+Url:https://api.cryptoless.net/vault/transactions/send/1623219269303308289
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+
+
+[32mINFO    [0m Common.Http:Http.py:385 2023-02-08 15:16:45.481498 | 
+<-----Send Response Error----->
+400
+{"code":2101000,"message":"the estimatedfee 1536057143986114136 cannot be greater than the maxfee 200000000000000000"}

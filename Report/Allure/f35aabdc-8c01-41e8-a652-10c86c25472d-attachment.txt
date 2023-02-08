@@ -1,0 +1,47 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:88 2023-02-08 15:34:18.848899 | 
+<-----balance----->
+Url:https://dogechain.info/chain/Dogecoin/q/addressbalance/DK2mfHibfaudY7EviQ1KESpLjyiQXHLbAA
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:90 2023-02-08 15:34:18.848899 | 
+<-----balance response----->
+
+Body:0.1071454
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-08 15:34:18.848899 | 
+<-----Query Holders----->
+Url:https://api.cryptoless.net/vault/proxy/assets/holders/?networkCode=DOGE&address=DK2mfHibfaudY7EviQ1KESpLjyiQXHLbAA&symbol=DOGE
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-08 15:34:18.848899 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"DK2mfHibfaudY7EviQ1KESpLjyiQXHLbAA","createdTime":"2023-01-03T11:08:22.000Z","id":"1610231588963094529","networkCode":"DOGE","quantity":"0.1071454","symbol":"DOGE","updatedTime":"2023-02-07T00:51:12.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_transfer_fail_sign:test_transfer_fail_sign.py:76 2023-02-08 15:34:18.848899 | 浏览器查询账户balance为:0.1071454
+[35mDEBUG   [0m test_transfer_fail_sign:test_transfer_fail_sign.py:77 2023-02-08 15:34:18.848899 | 查询账户holder为:0.1071454
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-08 15:34:18.848899 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{"networkCode": "DOGE", "type": "transfer", "body": {"from": "DK2mfHibfaudY7EviQ1KESpLjyiQXHLbAA", "to": "D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j", "symbol": "DOGE", "amount": "0.1001"}, "transactionParams": {"memo": "CtaWqmKQAu"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:281 2023-02-08 15:34:18.848899 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-08T07:34:22.000Z","description":"Send DOGE","estimatedFee":"261660","fee":"-1","hash":"","id":"1623223694908350465","networkCode":"DOGE","requiredSignings":[{"hash":"6269027f017599a6fadda878d41af3e2d31a2f77ffd04605dd16d86e4440adab","publicKeys":["030880a72c683a2507eb41e304419eb548f2d32bf6ad6f323b4d7c86c51052fcda"],"threshold":1}],"serialized":"0100000001abd35fd9b3129f239ad32ac04e22590a37c15b49ac53980dcc5f5793789579c30100000000ffffffff0190bd9800000000001976a9142d7f61cf518210cd20aefe35d69464f040cb814188ac00000000","status":0,"statusDesc":"BUILDING","updatedTime":"2023-02-08T07:34:22.000Z"}]},"body":{"symbol":"DOGE","amount":"0.1001","from":"DK2mfHibfaudY7EviQ1KESpLjyiQXHLbAA","to":"D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j"},"createdTime":"2023-02-08T07:34:21.000Z","id":"1623223696651243522","networkCode":"DOGE","status":-2,"transactionParams":{"memo":"CtaWqmKQAu"},"type":"TRANSFER","updatedTime":"2023-02-08T07:34:21.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:358 2023-02-08 15:34:18.848899 | 
+<-----Sign----->
+Url:https://api.cryptoless.net/vault/transactions/signatures
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{"id": "1623223694908350465", "signatures": [{"hash": "6269027f017599a6fadda878d41af3e2d31a2f77ffd04605dd16d86e4440adab", "publicKey": "030880a72c683a2507eb41e304419eb548f2d32bf6ad6f323b4d7c86c51052fcda", "signature": "d9b50994a3e14c745cc7e3c4cdbd4165e944c82a43efc7ae040a9ea6180dbb174d51c62c14291e6a863fea5078ac4c82eed948af36088f75690b691b954f123400"}]}
+
+
+[32mINFO    [0m Common.Http:Http.py:365 2023-02-08 15:34:18.848899 | 
+<-----Sign Response Error----->
+400
+{"code":2100000,"message":"invalid signature d9b50994a3e14c745cc7e3c4cdbd4165e944c82a43efc7ae040a9ea6180dbb174d51c62c14291e6a863fea5078ac4c82eed948af36088f75690b691b954f123400"}

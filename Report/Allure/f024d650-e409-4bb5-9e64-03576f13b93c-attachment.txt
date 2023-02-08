@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-08 11:40:07.370065 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "CLV", "type": "transfer", "body": {"from": "5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te", "to": "5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT", "symbol": "CLV", "amount": "100"}, "transactionParams": {"memo": "Nhi4wko0pC"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:284 2023-02-08 11:40:07.370065 | 
+<-----Instructions Response Error----->
+400
+{"code":2102001,"message":"insufficient CLV balance"}

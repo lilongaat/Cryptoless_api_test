@@ -1,0 +1,22 @@
+[32mINFO    [0m Common.Http:Http.py:50 2023-02-07 16:42:22.136915 | 
+<-----Connect Req----->
+Url:https://api.cryptoless.net/vault/users/connect-request
+Headers:{"Content-Type": "application/json"}
+Body:{"email": "qaarelilongaat@gmail.com"}
+
+
+[32mINFO    [0m Common.Http:Http.py:53 2023-02-07 16:42:22.136915 | 
+<-----Connect Req Success----->
+
+
+[35mDEBUG   [0m test_update_ authorization:test_update_ authorization.py:37 2023-02-07 16:42:22.136915 | "163643"
+[32mINFO    [0m Common.Http:Http.py:70 2023-02-07 16:42:22.136915 | 
+<-----Connect Confirm----->
+Url:https://api.cryptoless.net/vault/users/connect-confirm
+Headers:{"Content-Type": "application/json"}
+Body:{"email": "qaarelilongaat@gmail.com", "oneTimePassword": "\"163643\""}
+
+
+[32mINFO    [0m Common.Http:Http.py:76 2023-02-07 16:42:22.136915 | 
+<-----Connect Confirm Error----->
+{"code":2100000,"message":"oneTimePassword must be 6 digits"}

@@ -25,11 +25,11 @@ class Test_transfers_success:
     elif env_type == 1: #生产
         test_data = [
             # BSC——MATIC
-            ("CrossChain USDC BSC(普通账户)-MATIC(普通账户)","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","BSC","USDC","0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","MATIC","13"),
+            # ("CrossChain USDC BSC(普通账户)-MATIC(普通账户)","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","BSC","USDC","0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","MATIC","13"),
             # ("CrossChain USDC MATIC(普通账户)-BSC(普通账户)","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","MATIC","USDC","0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","BSC","12.8"),
 
             # ("CrossChain USDC BSC(普通账户)-MATIC(安全账户)","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","BSC","USDC","0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","MATIC","13"),
-            # ("CrossChain USDC MATIC(安全账户)-BSC(普通账户)","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","MATIC","USDC","0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","BSC","12.8"),
+            ("CrossChain USDC MATIC(安全账户)-BSC(普通账户)","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","MATIC","USDC","0x9b532cf5F662e51ba643672797Ad3eC1A60bb939","BSC","12.8"),
         ]
 
     @allure.story("Custodial Transfers Success!")

@@ -21,15 +21,15 @@ class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
             # BTC
-            ("BTC Custodial账户转账","BTC","BTC","tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun","0.000008"),
+            ("BTC Custodial账户转账","BTC","BTC","tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x","tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun","0.00000001"),
 
             # GOERLI
-            ("GOERLI Custodial账户转账 nativecoin","GOERLI","GoerliETH","0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3","0.00012"),
+            ("GOERLI Custodial账户转账 nativecoin","GOERLI","GoerliETH","0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3","0.000000000000000001"),
             ("GOERLI Custodial账户转账 erc20coin","GOERLI","USDCC","0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3","0.123"),
 
-            # MATIC
-            ("MATIC Custodial账户转账 nativecoin","MATIC","MATIC","0x651a23f7bed98b52c7829ad668a4836c48064850","0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3","0.00012"),
-            ("MATIC Custodial账户转账 erc20coin","MATIC","USDC","0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3","0.123"),
+            # MATIC 不开
+            # ("MATIC Custodial账户转账 nativecoin","MATIC","MATIC","0x651a23f7bed98b52c7829ad668a4836c48064850","0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3","0.00012"),
+            # ("MATIC Custodial账户转账 erc20coin","MATIC","USDC","0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3","0.123"),
 
             #IRIS
             ("IRIS Custodial账户转账","IRIS","IRIS","iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe","iaa15h0lvaa6slvj0hg4d64548j2c5fds2zv8tkvgs","0.000123"),
@@ -46,24 +46,24 @@ class Test_transfers_success:
 
             # ETH
 
-            # BSC
+            # BSC 不开
             # ("BSC Custodial账户转账 erc20coin","BSC","USDC","0x5f0a7433a68626c018ecae3cb69889184e8db970","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","0.000123"),
             # ("BSC Custodial账户转账 nativecoin","BSC","BNB","0x5f0a7433a68626c018ecae3cb69889184e8db970","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","0.00012"),
 
             # MATIC
+            ("MATIC Custodial账户转账 nativecoin","MATIC","MATIC","0xe458fd3e2515d42cbcd52a89b52fb662bf052143","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","0.0000012"),
             ("MATIC Custodial账户转账 erc20coin","MATIC","USDC","0xe458fd3e2515d42cbcd52a89b52fb662bf052143","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","0.000123"),
-            ("MATIC Custodial账户转账 nativecoin","MATIC","MATIC","0xe458fd3e2515d42cbcd52a89b52fb662bf052143","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","0.00012"),
 
             # ATOM
-            ("ATOM extarnal账户转账","ATOM","ATOM","cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc","cosmos1tzk5mhnala4ncj6w8dlw9lwpqmrhee92lyjx06","0.000001"),
+            ("ATOM Custodial账户转账","ATOM","ATOM","cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc","cosmos1tzk5mhnala4ncj6w8dlw9lwpqmrhee92lyjx06","0.000001"),
 
             # IRIS
-            ("IRIS extarnal账户转账","IRIS","IRIS","iaa1j9vswglv54xlmrza98ww44jgnm0j0hncw2t7v9","iaa15h0lvaa6slvj0hg4d64548j2c5fds2zv8tkvgs","0.000001"),
+            ("IRIS Custodial账户转账","IRIS","IRIS","iaa1j9vswglv54xlmrza98ww44jgnm0j0hncw2t7v9","iaa15h0lvaa6slvj0hg4d64548j2c5fds2zv8tkvgs","0.000001"),
 
             # DOT
 
             # CLV
-            ("CLV Custodial账户转账","CLV","CLV","5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc","5CAG6GuiuzFFbXR2fHhkqvuMRL7yVaj75tJpgKChA4EJELvH","0.00012"),
+            ("CLV Custodial账户转账","CLV","CLV","5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc","5CAG6GuiuzFFbXR2fHhkqvuMRL7yVaj75tJpgKChA4EJELvH","0.000012"),
         ]
 
     @allure.story("Custodial Transfers Success!")

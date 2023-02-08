@@ -9,8 +9,23 @@
 # print(w)
 
 
-balances = "1000"
-balances = 10000000
-balances.clear()
-print(balances)
+import os
 
+def get_pid(port):
+	#其中\"为转义"
+    pid = os.popen("netstat -nlp | grep :%s | awk '{print $7}' | awk -F\" / \" '{ print $1 }'" % (port)).read().split('/')[0]
+    return int(pid)
+
+get_pid("50720")
+
+# pid=os.system('netstat -aon|findstr "50720"')#25端口号
+# print(pid)#输出进程
+
+# port = "50720"
+# command="kill -9 $(netstat -nlp | grep :"+str(port)+" | awk '{print $7}' | awk -F'/' '{{ print $1 }}')"
+# os.system(command)
+
+# out=os.system('tasklist|findstr "3316"')#3316进是程
+# print(out)#输出程序名字
+# out=os.system('taskkill /f /t /im MESMTPC.exe')#MESMTPC.exe程序名字
+# print(out)#

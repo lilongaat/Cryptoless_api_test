@@ -1,0 +1,33 @@
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-08 15:20:54.55027 | 
+<-----Query Holders----->
+Url:https://api.cryptoless.net/vault/proxy/assets/holders/?networkCode=CLV&address=5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc&symbol=CLV
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-08 15:20:54.55027 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc","createdTime":"2023-01-05T03:42:00.000Z","id":"1610844034002194433","networkCode":"CLV","quantity":"0.060775499999907501","symbol":"CLV","updatedTime":"2023-02-08T07:07:01.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-08 15:20:54.55027 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{"networkCode": "CLV", "type": "transfer", "body": {"from": "5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc", "to": "5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT", "symbol": "CLV", "amount": "0.0000014"}, "transactionParams": {"memo": "a2iE1dhT5o"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:281 2023-02-08 15:20:54.55027 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-08T07:21:10.000Z","description":"","estimatedFee":"1471250000002256","fee":"-1","hash":"0xc8cdcbb367ff128d42255f114f89f6c3b90d9f1cec31ae9442a60ba9dbc4fff5","id":"1623220374124924929","networkCode":"CLV","serialized":"45028400398ba08ddb897871b705d1194070bd2c9bffed9f475f0346e21e72fed141b2d1025b7ae44a1719bb1a9e36ae27881bf120ac9794fdf0a2c47df1628dd52c93b59438e1fcac380246151f35273f6f2f3fac88889beb95de2b2dd054e81c172a131800006800070000f121b8e5460a7997fbc41b5f26ea3b3280fefebfbecab0bae9b4e70f09795ddb0b00b080f64501","status":2,"statusDesc":"SIGNED","updatedTime":"2023-02-08T07:21:11.000Z"}]},"body":{"symbol":"CLV","amount":"0.0000014","from":"5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc","to":"5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT"},"createdTime":"2023-02-08T07:21:10.000Z","id":"1623220376498917378","networkCode":"CLV","status":-2,"transactionParams":{"memo":"a2iE1dhT5o"},"type":"TRANSFER","updatedTime":"2023-02-08T07:21:10.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:337 2023-02-08 15:20:54.55027 | 
+<-----Cancel----->
+Url:https://api.cryptoless.net/vault/transactions/cancel/1623220374124924929
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{}
+
+
+[32mINFO    [0m Common.Http:Http.py:340 2023-02-08 15:20:54.55027 | 
+<-----Cancel Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-08T07:21:10.000Z","description":"","estimatedFee":"1471250000002256","fee":"-1","hash":"0xc8cdcbb367ff128d42255f114f89f6c3b90d9f1cec31ae9442a60ba9dbc4fff5","id":"1623220374124924929","networkCode":"CLV","serialized":"45028400398ba08ddb897871b705d1194070bd2c9bffed9f475f0346e21e72fed141b2d1025b7ae44a1719bb1a9e36ae27881bf120ac9794fdf0a2c47df1628dd52c93b59438e1fcac380246151f35273f6f2f3fac88889beb95de2b2dd054e81c172a131800006800070000f121b8e5460a7997fbc41b5f26ea3b3280fefebfbecab0bae9b4e70f09795ddb0b00b080f64501","status":7,"statusDesc":"CANCELED","updatedTime":"2023-02-08T07:21:11.305Z"}

@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-08 15:18:18.532062 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{"networkCode": "DOGE", "type": "transfer", "body": {"from": "0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab", "to": "D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j", "symbol": "DOGE", "amount": "0.000001"}, "transactionParams": {"memo": "Ou7eVk25Ux"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:284 2023-02-08 15:18:18.532062 | 
+<-----Instructions Response Error----->
+404
+{"code":2200000,"message":"account not found"}

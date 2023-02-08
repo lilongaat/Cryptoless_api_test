@@ -1,0 +1,47 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:440 2023-02-08 15:37:55.888496 | 
+<-----balance----->
+Url:https://clover-testnet.webapi.subscan.io/api/scan/account/tokens
+
+Headers:{"authority": "clover.webapi.subscan.io", "accept": "application/json, text/plain, */*", "accept-language": "zh-CN", "baggage": "", "content-type": "application/json", "origin": "https://clover.subscan.io", "referer": "https://clover.subscan.io/", "sec-ch-ua": "\"Chromium\";v=\"104\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"104\"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": "\"macOS\"", "sec-fetch-dest": "empty", "sec-fetch-mode": "cors", "sec-fetch-site": "same-site", "sentry-trace": "ea3a8691962949979b1cf67d39347ede-99c15b8b0f09a827-0", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.101 Safari/537.36"}
+
+payload:"{\"address\": \"5Hdmv7BeAe1XFJXso8oGMidGp186cb4uNTNMywp6fBY7UEsr\"}"
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:442 2023-02-08 15:37:55.888496 | 
+<-----balance response----->
+
+Body:{"code": 0, "message": "Success", "generated_at": 1675841892, "data": {"native": [{"symbol": "CLV", "decimals": 18, "balance": "47125328846607627460", "lock": "105886221617968139", "reserved": "46350000000000000000", "bonded": "104376221617968139", "unbonding": "1510000000000000", "democracy_lock": "0", "election_lock": "0"}]}}
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-08 15:37:55.888496 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=CLV&address=5Hdmv7BeAe1XFJXso8oGMidGp186cb4uNTNMywp6fBY7UEsr&symbol=CLV
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-08 15:37:55.888496 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"5Hdmv7BeAe1XFJXso8oGMidGp186cb4uNTNMywp6fBY7UEsr","createdTime":"2022-11-24T02:52:58.000Z","id":"1595611403632488450","networkCode":"CLV","quantity":"0.669442624989659321","symbol":"CLV","updatedTime":"2023-02-06T01:46:00.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_transfer_fail_sign:test_transfer_fail_sign.py:76 2023-02-08 15:37:55.888496 | 浏览器查询账户balance为:0.669442624989659321
+[35mDEBUG   [0m test_transfer_fail_sign:test_transfer_fail_sign.py:77 2023-02-08 15:37:55.888496 | 查询账户holder为:0.669442624989659321
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-08 15:37:55.888496 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "CLV", "type": "transfer", "body": {"from": "5Hdmv7BeAe1XFJXso8oGMidGp186cb4uNTNMywp6fBY7UEsr", "to": "5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT", "symbol": "CLV", "amount": "0.0004"}, "transactionParams": {"memo": "BKvdTUjLge"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:281 2023-02-08 15:37:55.888496 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-08T07:38:21.000Z","description":"","estimatedFee":"1491250000002256","fee":"-1","hash":"","id":"1623224669897572353","networkCode":"CLV","requiredSignings":[{"hash":"694fffca0ff009a9aeefdd56cdff0a94fa7d7ee2af230d51f848d4adbed384d6","publicKeys":["0211580d646f8b3d460ab558da9b7dde4117f5f071ef39b38be258af269df32aab"],"threshold":1}],"serialized":"4d028400f665ee2df4b1559cc0470b8a3a94e4a81ca4c34941247f8308b46f659b27441802000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100090100070000f121b8e5460a7997fbc41b5f26ea3b3280fefebfbecab0bae9b4e70f09795ddb0f0000e941cc6b01","status":0,"statusDesc":"BUILDING","updatedTime":"2023-02-08T07:38:21.000Z"}]},"body":{"symbol":"CLV","amount":"0.0004","from":"5Hdmv7BeAe1XFJXso8oGMidGp186cb4uNTNMywp6fBY7UEsr","to":"5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT"},"createdTime":"2023-02-08T07:38:21.000Z","id":"1623224700880920578","networkCode":"CLV","status":-2,"transactionParams":{"memo":"BKvdTUjLge"},"type":"TRANSFER","updatedTime":"2023-02-08T07:38:21.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:358 2023-02-08 15:37:55.888496 | 
+<-----Sign----->
+Url:https://api.dhandho.xyz/vault/transactions/signatures
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"id": "1623224669897572353", "signatures": [{"hash": "694fffca0ff009a9aeefdd56cdff0a94fa7d7ee2af230d51f848d4adbed384d6", "publicKey": "0211580d646f8b3d460ab558da9b7dde4117f5f071ef39b38be258af269df32aab", "signature": "9aab8e61b5a900e9ccb08a7035e08dcffd85a981c9f0e8edb429274f919a13c230f2cfba0bd7b3e4589445f1cc736dd136641fd17fcdecd1adc51f36083e1fb000"}]}
+
+
+[32mINFO    [0m Common.Http:Http.py:365 2023-02-08 15:37:55.888496 | 
+<-----Sign Response Error----->
+400
+{"code":2100000,"message":"invalid signature 9aab8e61b5a900e9ccb08a7035e08dcffd85a981c9f0e8edb429274f919a13c230f2cfba0bd7b3e4589445f1cc736dd136641fd17fcdecd1adc51f36083e1fb000"}

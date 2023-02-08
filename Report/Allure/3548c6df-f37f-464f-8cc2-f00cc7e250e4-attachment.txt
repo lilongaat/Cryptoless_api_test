@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-08 10:36:57.456969 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "DOGE", "type": "transfer", "body": {"from": "D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6", "to": "D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j", "symbol": "DOGE", "amount": "0.00000002"}, "transactionParams": {"memo": "pgSevm28Xs"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:284 2023-02-08 10:36:57.456969 | 
+<-----Instructions Response Error----->
+404
+{"code":2200000,"message":"account not found"}

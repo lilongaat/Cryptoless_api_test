@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-08 11:25:55.162098 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "DOGE", "type": "transfer", "body": {"from": "DS2cpSDvZXHzhZEyBEbTNuQTgonoHkFM4n", "to": "D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j", "symbol": "DOGE", "amount": "0.09999999"}, "transactionParams": {"memo": "X6jhqS9fTO"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:284 2023-02-08 11:25:55.162098 | 
+<-----Instructions Response Error----->
+400
+{"code":2300000,"message":"Connect to 172.31.19.149:8081 [/172.31.19.149] failed: Connection refused \u0028Connection refused\u0029 executing POST http://simple-center/simple/api/instructions"}

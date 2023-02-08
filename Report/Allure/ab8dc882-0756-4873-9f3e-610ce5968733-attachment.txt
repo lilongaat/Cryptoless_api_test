@@ -1,0 +1,15 @@
+[32mINFO    [0m Common.Http:Http.py:50 2023-02-07 17:07:13.428302 | 
+<-----Connect Req----->
+Url:https://api.cryptoless.net/vault/users/connect-request
+Headers:{"Content-Type": "application/json"}
+Body:{"email": "a090l9ilongpaat@gmail.com"}
+
+
+[32mINFO    [0m Common.Http:Http.py:53 2023-02-07 17:07:13.428302 | 
+<-----Connect Req Success----->
+
+
+[35mDEBUG   [0m test_update_ authorization:test_update_ authorization.py:37 2023-02-07 17:07:13.428302 | <class 'str'>
+[35mDEBUG   [0m test_update_ authorization:test_update_ authorization.py:38 2023-02-07 17:07:13.428302 | 643385
+[35mDEBUG   [0m test_update_ authorization:test_update_ authorization.py:39 2023-02-07 17:07:13.428302 | <class 'str'>
+[35mDEBUG   [0m test_update_ authorization:test_update_ authorization.py:40 2023-02-07 17:07:13.428302 | 999999

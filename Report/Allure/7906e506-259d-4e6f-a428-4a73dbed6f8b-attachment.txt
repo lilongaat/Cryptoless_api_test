@@ -1,0 +1,11 @@
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-08 15:17:17.121793 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc1ODQyNTg2LCJpYXQiOjE2NzUyMzc3ODYsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.nEKOMmi__b086UxQZPkSekPt4TbgqIRoNffnwQLeLTk"}
+Body:{"networkCode": "BTC", "type": "transfer", "body": {"from": "bc1qhw7kvldh52n3glud3mf94uundm2pwkznyuqyv3", "to": "bc1qhw7kvldh52n3glud3mf94uundm2pwkznyuqyv3", "symbol": "BTC", "amount": "0.0000001"}, "transactionParams": {"memo": "HxKFIyAZL4"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:284 2023-02-08 15:17:17.121793 | 
+<-----Instructions Response Error----->
+400
+{"code":2102001,"message":"insufficient BTC balance"}

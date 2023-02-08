@@ -30,15 +30,25 @@ class Test_transfers_success:
             ("BTC Custodial账户转账 to空","BTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","","0.00000001",400,2300000),
             ("BTC Custodial账户转账 to地址不匹配网络","BTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","0.00000001",400,2400000),
             ("BTC Custodial账户转账 amount空","BTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","",400,2300000),
+            ("BTC Custodial账户转账 amount超出精度","BTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.000000001",400,2100000),
             ("BTC Custodial账户转账 amount超出余额","BTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000002",400,2102001),
-            ("BTC Custodial账户转账 amount超出精度","BTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000002",400,2102001),
             
-            # DOGE 没有验证
-            # ("DOGE Custodial账户转账 dust","DOGE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.00000002",400,2102001),
+            # DOGE
+            ("DOGE Custodial账户转账 dust","DOGE","DOGE","DS2cpSDvZXHzhZEyBEbTNuQTgonoHkFM4n","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.09999999",400,2100000),
 
             # GOERLI
-            ("GOERLI Custodial账户转账 nativecoin 超出精度","GOERLI","GoerliETH","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.000000000000000002",400,2102001),
-            ("GOERLI Custodial账户转账 nativecoin 超出余额","GOERLI","GoerliETH","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.000002",400,2102001),
+            ("GOERLI Custodial账户转账 nativecoin 超出精度","GOERLI","GoerliETH","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.0000000000000000009",400,2100000),
+            ("GOERLI Custodial账户转账 nativecoin 超出余额","GOERLI","GoerliETH","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.000000000000000002",400,2102001),
+            ("GOERLI Custodial账户转账 erc20 超出精度","GOERLI","USDCC","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.0000000000000000009",400,2100000),
+            ("GOERLI Custodial账户转账 erc20 超出余额","GOERLI","USDCC","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.000001000000000001",400,2102001),
+
+            # IRIS
+            ("IRIS Custodial账户转账 amount超出精度","IRIS","IRIS","iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe","iaa15h0lvaa6slvj0hg4d64548j2c5fds2zv8tkvgs","0.00000001",400,2100000),
+            ("IRIS Custodial账户转账 amount超出余额","IRIS","IRIS","iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe","iaa15h0lvaa6slvj0hg4d64548j2c5fds2zv8tkvgs","100",400,2102001),
+
+            # CLV
+            ("CLV Custodial账户转账 amount超出精度","CLV","CLV","5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","0.0000000000000000009",400,2100000),
+            ("CLV Custodial账户转账 amount超出余额","CLV","CLV","5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","100",400,2102001),
         ]
     elif env_type == 1: #生产
         test_data = [
@@ -59,6 +69,7 @@ class Test_transfers_success:
             ("DOGE Custodial账户转账 amount空","DOGE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","",400,2300000),
             ("DOGE Custodial账户转账 amount超出余额","DOGE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","100",400,2102001),
             ("DOGE Custodial账户转账 amount超出精度","DOGE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.000000001",400,2100000),
+            ("DOGE Custodial账户转账 dust","DOGE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.09999999",400,2100000),
 
             # ETH
             ("ETH Custodial账户转账 账户没钱","ETH","ETH","0x6d1f7e8503d9c88e998fb1236ccd1f6a2dde2a4e","0x6d1f7e8503d9c88e998fb1236ccd1f6a2dde2a4e","0.0000000001",400,2102001),

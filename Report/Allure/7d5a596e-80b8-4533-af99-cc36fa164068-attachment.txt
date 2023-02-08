@@ -1,0 +1,95 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:159 2023-02-08 13:59:11.539572 | 
+<-----balance----->
+Url:https://api-goerli.etherscan.io/api?module=account&action=balance&address=0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca&tag=latest&apikey=UDIG7EZI6J2VBUZIT6AAKXAKTVRQ64J2CF
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:161 2023-02-08 13:59:11.539572 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "1135390841001280"}
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-08 13:59:11.539572 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=GOERLI&address=0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca&symbol=GoerliETH
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-08 13:59:11.539572 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","createdTime":"2022-12-12T07:06:33.000Z","id":"1602198201359880194","networkCode":"GOERLI","quantity":"0.00113539084100128","symbol":"GoerliETH","updatedTime":"2023-02-07T11:35:20.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_transfer_custodial_success:test_transfer_custodial_success.py:82 2023-02-08 13:59:11.539572 | 浏览器查询账户balance为:0.00113539084100128
+[35mDEBUG   [0m test_transfer_custodial_success:test_transfer_custodial_success.py:83 2023-02-08 13:59:11.539572 | 查询账户holder为:0.00113539084100128
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-08 13:59:11.539572 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "GOERLI", "type": "transfer", "body": {"from": "0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca", "to": "0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3", "symbol": "GoerliETH", "amount": "0.000000000000000001"}, "transactionParams": {"memo": "WBzXP0aI6V"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:281 2023-02-08 13:59:11.539572 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-08T05:59:16.000Z","description":"Send 0.000000000000000001 ETH","estimatedFee":"370251000","fee":"-1","hash":"0x0d7cdf400097d3d8cdb36c3420c1b8c704a8570f422efd475dbdea0d498824e6","id":"1623199757396951042","networkCode":"GOERLI","serialized":"02f866053c8244b18244df82520894bdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe30180c001a0d4bc63ada31b4a79c824b487363e8a2e367e0b3f627cc448a72f8a994359c973a04e2747c3c79c530da504597a04fc6a3e33b007879455079687dc08dcd20a262e","status":2,"statusDesc":"SIGNED","updatedTime":"2023-02-08T05:59:19.000Z"}]},"body":{"symbol":"GoerliETH","amount":"0.000000000000000001","from":"0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","to":"0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3"},"createdTime":"2023-02-08T05:59:16.000Z","id":"1623199764632150017","networkCode":"GOERLI","status":-2,"transactionParams":{"memo":"WBzXP0aI6V"},"type":"TRANSFER","updatedTime":"2023-02-08T05:59:16.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:378 2023-02-08 13:59:11.539572 | 
+<-----Send----->
+Url:https://api.dhandho.xyz/vault/transactions/send/1623199757396951042
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:382 2023-02-08 13:59:11.539572 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"2023-02-08T05:59:21.242Z","createdTime":"2023-02-08T05:59:16.000Z","description":"Send 0.000000000000000001 ETH","estimatedFee":"370251000","fee":"-1","hash":"0x0d7cdf400097d3d8cdb36c3420c1b8c704a8570f422efd475dbdea0d498824e6","id":"1623199757396951042","networkCode":"GOERLI","serialized":"02f866053c8244b18244df82520894bdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe30180c001a0d4bc63ada31b4a79c824b487363e8a2e367e0b3f627cc448a72f8a994359c973a04e2747c3c79c530da504597a04fc6a3e33b007879455079687dc08dcd20a262e","status":3,"statusDesc":"PENDING","updatedTime":"2023-02-08T05:59:21.242Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:498 2023-02-08 13:59:11.539572 | 
+<-----Query Transactions byid----->
+Url:https://api.dhandho.xyz/vault/transactions/1623199757396951042
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+[32mINFO    [0m Common.Http:Http.py:501 2023-02-08 13:59:11.539572 | 
+<-----Query Transactions Response----->
+{"balanceChanges":[{"address":"0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3","amount":"0.000000000000000001","asset":{"category":"","createdTime":"2022-09-27T03:45:36.000Z","iconURL":"https://cc-icons.s3.ap-southeast-1.amazonaws.com/eth.png","id":"1574606153409015810","name":"GoerliETH","source":1,"symbol":"GoerliETH","updatedTime":"2022-09-27T03:45:36.000Z"},"direction":"IN"},{"address":"0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","amount":"0.000000000370251001","asset":{"category":"","createdTime":"2022-09-27T03:45:36.000Z","iconURL":"https://cc-icons.s3.ap-southeast-1.amazonaws.com/eth.png","id":"1574606153409015810","name":"GoerliETH","source":1,"symbol":"GoerliETH","updatedTime":"2022-09-27T03:45:36.000Z"},"direction":"OUT"}],"blockHash":"0x8d6b60e730e00bf9ab4c021dc1b40b29b25bc162d8742f4dde7276a9f6df313f","blockHeight":"8454611","blockTime":"2023-02-08T05:59:24.000Z","createdTime":"2023-02-08T05:59:16.000Z","description":"Send 0.000000000000000001 ETH","estimatedFee":"370251000","fee":"370251000","hash":"0x0d7cdf400097d3d8cdb36c3420c1b8c704a8570f422efd475dbdea0d498824e6","id":"1623199757396951042","networkCode":"GOERLI","serialized":"02f866053c8244b18244df82520894bdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe30180c001a0d4bc63ada31b4a79c824b487363e8a2e367e0b3f627cc448a72f8a994359c973a04e2747c3c79c530da504597a04fc6a3e33b007879455079687dc08dcd20a262e","status":4,"statusDesc":"SENT","updatedTime":"2023-02-08T05:59:43.000Z"}
+[32mINFO    [0m Common.Http:Http.py:498 2023-02-08 13:59:11.539572 | 
+<-----Query Transactions byid----->
+Url:https://api.dhandho.xyz/vault/transactions/1623199757396951042
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+[32mINFO    [0m Common.Http:Http.py:501 2023-02-08 13:59:11.539572 | 
+<-----Query Transactions Response----->
+{"balanceChanges":[{"address":"0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3","amount":"0.000000000000000001","asset":{"category":"","createdTime":"2022-09-27T03:45:36.000Z","iconURL":"https://cc-icons.s3.ap-southeast-1.amazonaws.com/eth.png","id":"1574606153409015810","name":"GoerliETH","source":1,"symbol":"GoerliETH","updatedTime":"2022-09-27T03:45:36.000Z"},"direction":"IN"},{"address":"0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","amount":"0.000000000370251001","asset":{"category":"","createdTime":"2022-09-27T03:45:36.000Z","iconURL":"https://cc-icons.s3.ap-southeast-1.amazonaws.com/eth.png","id":"1574606153409015810","name":"GoerliETH","source":1,"symbol":"GoerliETH","updatedTime":"2022-09-27T03:45:36.000Z"},"direction":"OUT"}],"blockHash":"0x8d6b60e730e00bf9ab4c021dc1b40b29b25bc162d8742f4dde7276a9f6df313f","blockHeight":"8454611","blockTime":"2023-02-08T05:59:24.000Z","createdTime":"2023-02-08T05:59:16.000Z","description":"Send 0.000000000000000001 ETH","estimatedFee":"370251000","fee":"370251000","hash":"0x0d7cdf400097d3d8cdb36c3420c1b8c704a8570f422efd475dbdea0d498824e6","id":"1623199757396951042","networkCode":"GOERLI","serialized":"02f866053c8244b18244df82520894bdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe30180c001a0d4bc63ada31b4a79c824b487363e8a2e367e0b3f627cc448a72f8a994359c973a04e2747c3c79c530da504597a04fc6a3e33b007879455079687dc08dcd20a262e","status":4,"statusDesc":"SENT","updatedTime":"2023-02-08T05:59:43.000Z"}
+[32mINFO    [0m Common.Http:Http.py:498 2023-02-08 13:59:11.539572 | 
+<-----Query Transactions byid----->
+Url:https://api.dhandho.xyz/vault/transactions/1623199757396951042
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+[32mINFO    [0m Common.Http:Http.py:501 2023-02-08 13:59:11.539572 | 
+<-----Query Transactions Response----->
+{"balanceChanges":[{"address":"0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3","amount":"0.000000000000000001","asset":{"category":"","createdTime":"2022-09-27T03:45:36.000Z","iconURL":"https://cc-icons.s3.ap-southeast-1.amazonaws.com/eth.png","id":"1574606153409015810","name":"GoerliETH","source":1,"symbol":"GoerliETH","updatedTime":"2022-09-27T03:45:36.000Z"},"direction":"IN"},{"address":"0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","amount":"0.000000000370251001","asset":{"category":"","createdTime":"2022-09-27T03:45:36.000Z","iconURL":"https://cc-icons.s3.ap-southeast-1.amazonaws.com/eth.png","id":"1574606153409015810","name":"GoerliETH","source":1,"symbol":"GoerliETH","updatedTime":"2022-09-27T03:45:36.000Z"},"direction":"OUT"}],"blockHash":"0x8d6b60e730e00bf9ab4c021dc1b40b29b25bc162d8742f4dde7276a9f6df313f","blockHeight":"8454611","blockTime":"2023-02-08T05:59:24.000Z","createdTime":"2023-02-08T05:59:16.000Z","description":"Send 0.000000000000000001 ETH","estimatedFee":"370251000","fee":"370251000","hash":"0x0d7cdf400097d3d8cdb36c3420c1b8c704a8570f422efd475dbdea0d498824e6","id":"1623199757396951042","networkCode":"GOERLI","serialized":"02f866053c8244b18244df82520894bdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe30180c001a0d4bc63ada31b4a79c824b487363e8a2e367e0b3f627cc448a72f8a994359c973a04e2747c3c79c530da504597a04fc6a3e33b007879455079687dc08dcd20a262e","status":8,"statusDesc":"SETTLED","updatedTime":"2023-02-08T06:00:23.000Z"}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:159 2023-02-08 13:59:11.539572 | 
+<-----balance----->
+Url:https://api-goerli.etherscan.io/api?module=account&action=balance&address=0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca&tag=latest&apikey=UDIG7EZI6J2VBUZIT6AAKXAKTVRQ64J2CF
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:161 2023-02-08 13:59:11.539572 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "1135390470750279"}
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-08 13:59:11.539572 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=GOERLI&address=0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca&symbol=GoerliETH
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-08 13:59:11.539572 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","createdTime":"2022-12-12T07:06:33.000Z","id":"1602198201359880194","networkCode":"GOERLI","quantity":"0.001135390470750279","symbol":"GoerliETH","updatedTime":"2023-02-08T05:59:41.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_transfer_custodial_success:test_transfer_custodial_success.py:133 2023-02-08 13:59:11.539572 | 浏览器查询账户balance为:0.001135390470750279
+[35mDEBUG   [0m test_transfer_custodial_success:test_transfer_custodial_success.py:134 2023-02-08 13:59:11.539572 | 查询账户holder为:0.001135390470750279

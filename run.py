@@ -5,6 +5,7 @@ import datetime
 
 from apscheduler.schedulers.background import BlockingScheduler
 
+from Common.Conf import Config
 from Config.readconfig import ReadConfig
 env_type = int(ReadConfig().get_env('type'))
 
@@ -22,6 +23,9 @@ elif env_type == 1:
     port = '42432'
 
 
+# Update token
+def job_update_token():
+    pytest.main(["-vs", path + "/Testcase/test_update_ authorization.py"])
 
 # Testcase Block_check
 def job_test_block():
@@ -51,6 +55,11 @@ def job_transfer_Stake():
 def job_transfer_Swap():
     pytest.main(["-vs", path + "/Testcase/Test_Cloud/Test_Swap", '--alluredir=Report/' + report_file])
 
+# port
+def job_kill_port():
+    os.exit()
+    # Config.kill_process(port)
+
 # Allure
 def job_allure():
     os.system(f'allure serve ' + path + '/Report/' + report_file + ' -p ' + port)
@@ -63,12 +72,14 @@ if __name__ == "__main__":
     scheduler.add_job(job_test_block,'interval',seconds=600)
     scheduler.add_job(job_test_prices,'interval',seconds=600)
     # 固定时间运行
-    scheduler.add_job(job_test_user, 'cron', hour=8, minute=00)
+    scheduler.add_job(job_update_token, 'cron', hour=8, minute=00)
+    scheduler.add_job(job_test_user, 'cron', hour=8, minute=1)
     scheduler.add_job(job_test_account, 'cron', hour=8, minute=20)
     scheduler.add_job(job_transfer_transfer, 'cron', hour=8, minute=40)
     scheduler.add_job(job_transfer_Swap, 'cron', hour=9, minute=20)
     scheduler.add_job(job_transfer_Stake, 'cron', hour=9, minute=40)
-    scheduler.add_job(job_allure, 'cron', hour=10, minute=00)
+    scheduler.add_job(job_kill_port,'cron', hour=10, minute=00)
+    scheduler.add_job(job_allure, 'cron', hour=10, minute=1)
     scheduler.start()
 
 

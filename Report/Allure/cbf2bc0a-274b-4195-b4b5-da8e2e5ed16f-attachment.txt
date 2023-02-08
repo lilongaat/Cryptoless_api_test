@@ -1,0 +1,33 @@
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-08 11:59:32.520962 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=GOERLI&address=0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca&symbol=USDCC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-08 11:59:32.520962 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","createdTime":"2022-12-12T09:40:57.000Z","id":"1602237056616202241","networkCode":"GOERLI","quantity":"8.523385","symbol":"USDCC","updatedTime":"2023-02-07T11:35:20.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-08 11:59:32.520962 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "GOERLI", "type": "transfer", "body": {"from": "0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca", "to": "0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2", "symbol": "USDCC", "amount": "0.000123"}, "transactionParams": {"memo": "nUeZd0h2xb"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:281 2023-02-08 11:59:32.520962 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-08T03:59:50.000Z","description":"Send 0.000123 USDCC","estimatedFee":"428445818710","fee":"-1","hash":"0x96e4264dc6736ddf5d8798243e0f9e0a977c45a76dedd45bfd3af84c4aed3d8c","id":"1623169692712787970","networkCode":"GOERLI","serialized":"02f8ad053c838648638386486e82be2d941ec2ce6108240118ff2c66ec8afac28618d7e06680b844a9059cbb000000000000000000000000a7a9e710f9a3b4184d4f8b7d379cec262f2382c200000000000000000000000000000000000000000000000000006fde2b4eb000c001a04238ef7ceb4d76f7fce073677456c9f7abfcf0dffe4f9427162f707d7f719fc8a02860d0eab148a2c246464e6e4474d6bf59963f1c7820edf2798af7884a5379e5","status":2,"statusDesc":"SIGNED","updatedTime":"2023-02-08T03:59:52.000Z"}]},"body":{"symbol":"USDCC","amount":"0.000123","from":"0xcc7a54ec1d39d1cf7b35f2b3b92031ad5fc7b6ca","to":"0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2"},"createdTime":"2023-02-08T03:59:49.000Z","id":"1623169707208302593","networkCode":"GOERLI","status":-1,"transactionParams":{"memo":"nUeZd0h2xb"},"type":"TRANSFER","updatedTime":"2023-02-08T03:59:52.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:337 2023-02-08 11:59:32.520962 | 
+<-----Cancel----->
+Url:https://api.dhandho.xyz/vault/transactions/cancel/1623169692712787970
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{}
+
+
+[32mINFO    [0m Common.Http:Http.py:340 2023-02-08 11:59:32.520962 | 
+<-----Cancel Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-08T03:59:50.000Z","description":"Send 0.000123 USDCC","estimatedFee":"428445818710","fee":"-1","hash":"0x96e4264dc6736ddf5d8798243e0f9e0a977c45a76dedd45bfd3af84c4aed3d8c","id":"1623169692712787970","networkCode":"GOERLI","serialized":"02f8ad053c838648638386486e82be2d941ec2ce6108240118ff2c66ec8afac28618d7e06680b844a9059cbb000000000000000000000000a7a9e710f9a3b4184d4f8b7d379cec262f2382c200000000000000000000000000000000000000000000000000006fde2b4eb000c001a04238ef7ceb4d76f7fce073677456c9f7abfcf0dffe4f9427162f707d7f719fc8a02860d0eab148a2c246464e6e4474d6bf59963f1c7820edf2798af7884a5379e5","status":7,"statusDesc":"CANCELED","updatedTime":"2023-02-08T03:59:52.752Z"}
