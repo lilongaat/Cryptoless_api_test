@@ -17,6 +17,7 @@ class Test_block_height_check:
     if env_type == 0: #测试
         test_data = [
             ("","BTC",3),
+            ("","ETH",3),
             ("","DOGE",3),
             ("","GOERLI",3),
             ("","BSC",5),

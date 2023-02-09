@@ -1,0 +1,22 @@
+[35mDEBUG   [0m test_blockheight_check:test_blockheight_check.py:80 2023-02-09 18:23:13.686621 | 16590582
+[32mINFO    [0m Common.Graphql:Graphql.py:99 2023-02-09 18:23:13.686621 | 
+<-----LatestBlock----->
+Url:http://18.166.208.93:14100/graphql/
+
+Headers:{"Content-Type": "application/json"}
+
+payload:"{\"query\": \"query{getLatestBlock{blockHash blockNumber}}\"}"
+[32mINFO    [0m Common.Graphql:Graphql.py:102 2023-02-09 18:23:13.686621 | 
+<-----LatestBlock response----->
+
+Body:{"data": {"getLatestBlock": {"blockHash": "0x8ce7b752a2404c7763f7f6a3ad263587bbf362c77faa4deceb5285bbbd8b0f82", "blockNumber": 16590582}}}
+[32mINFO    [0m Common.Http:Http.py:398 2023-02-09 18:23:13.686621 | 
+<-----NetWorks----->
+Url:https://api.dhandho.xyz/vault/networks?networkCode=ETH
+Headers:
+{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:401 2023-02-09 18:23:13.686621 | 
+<-----Query Networks Response----->
+[{"accountTypes":["external","custodial","safe","shared"],"blocks":"16590582","code":"ETH","createdTime":"2021-07-07T15:36:37.000Z","derivationPath":"m/44'/60'/0'/0/","evmChainId":1,"feeCoin":{"decimals":18,"symbol":"ETH"},"iconURL":"https://cc-icons.s3.ap-southeast-1.amazonaws.com/eth.png","id":"1412676916705415169","links":{"address":"https://etherscan.io/address/{0}","tx":"https://etherscan.io/tx/{0}"},"name":"Ethereum","platform":"ETHEREUM","status":"enable","updatedTime":"2023-02-06T02:25:46.000Z"}]
