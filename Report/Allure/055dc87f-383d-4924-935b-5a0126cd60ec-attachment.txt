@@ -1,0 +1,32 @@
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-09 15:52:22.480284 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=IRIS&address=iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe&symbol=IRIS
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-09 15:52:22.480284 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe","createdTime":"2022-12-23T03:55:32.000Z","id":"1606136394473074690","networkCode":"IRIS","quantity":"0.491856","symbol":"IRIS","updatedTime":"2023-02-08T06:03:41.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:516 2023-02-09 15:52:22.480284 | 
+<-----Query Staking----->
+Url:https://api.dhandho.xyz/vault/proxy/stakes/delegators?address=iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe&networkCode=IRIS
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+[32mINFO    [0m Common.Http:Http.py:519 2023-02-09 15:52:22.480284 | 
+<-----Query Staking Response----->
+[{"address":"iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe","coinSymbol":"IRIS","createdTime":"2022-12-14T09:20:37.000Z","id":"1602956714717655042","networkCode":"IRIS","pendings":"0","rewards":"0.00001949257404519388201","staked":"0.00319","updatedTime":"2022-12-14T09:20:37.000Z"}]
+
+
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-09 15:52:22.480284 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "IRIS", "type": "stake", "body": {"delegator": "iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe", "coinSymbol": "IRIS", "amount": "10000"}, "transactionParams": {"memo": "lGU3XgBH5q"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:284 2023-02-09 15:52:22.480284 | 
+<-----Instructions Response Error----->
+400
+{"code":2102001,"message":"insufficient IRIS balance"}

@@ -1,0 +1,109 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:299 2023-02-09 17:03:38.13015 | 
+<-----balance----->
+Url:https://lcd-cosmos.cosmostation.io/cosmos/bank/v1beta1/balances/cosmos1xqf7n4sev34f2vfus036s2h6mealaxln90leph?pagination.limit=1000
+
+Headers:{"Accept": "application/json, text/plain, */*", "Accept-Language": "zh-CN,zh;q=0.9", "Connection": "keep-alive", "Origin": "https://www.mintscan.io", "Referer": "https://www.mintscan.io/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "cross-site", "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.101 Safari/537.36", "sec-ch-ua": "\"Chromium\";v=\"104\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"104\"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": "\"macOS\""}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:301 2023-02-09 17:03:38.13015 | 
+<-----balance response----->
+
+Body:{"balances": [{"denom": "uatom", "amount": "50000"}], "pagination": {"next_key": null, "total": "0"}}
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-09 17:03:38.13015 | 
+<-----Query Holders----->
+Url:https://api.cryptoless.net/vault/proxy/assets/holders/?networkCode=ATOM&address=cosmos1xqf7n4sev34f2vfus036s2h6mealaxln90leph&symbol=ATOM
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-09 17:03:38.13015 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"cosmos1xqf7n4sev34f2vfus036s2h6mealaxln90leph","createdTime":"2023-02-09T08:58:50.000Z","id":"1623607342570704898","networkCode":"ATOM","quantity":"0.05","symbol":"ATOM","updatedTime":"2023-02-09T08:58:50.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_stake_safe_success:test_stake_safe_success.py:69 2023-02-09 17:03:38.13015 | 浏览器查询账户balance为:0.05
+[35mDEBUG   [0m test_stake_safe_success:test_stake_safe_success.py:70 2023-02-09 17:03:38.13015 | 查询账户holder为:0.05
+[32mINFO    [0m Common.Http:Http.py:516 2023-02-09 17:03:38.13015 | 
+<-----Query Staking----->
+Url:https://api.cryptoless.net/vault/proxy/stakes/delegators?address=cosmos1xqf7n4sev34f2vfus036s2h6mealaxln90leph&networkCode=ATOM
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+[32mINFO    [0m Common.Http:Http.py:519 2023-02-09 17:03:38.13015 | 
+<-----Query Staking Response----->
+[{"address":"cosmos1xqf7n4sev34f2vfus036s2h6mealaxln90leph","coinSymbol":"ATOM","createdTime":"2023-02-09T08:58:09.145Z","id":"1623607169740214273","networkCode":"ATOM","pendings":"0","rewards":"0","staked":"0","updatedTime":"2023-02-09T08:58:09.840Z"}]
+
+
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-09 17:03:38.13015 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+Body:{"networkCode": "ATOM", "type": "stake", "body": {"delegator": "cosmos1xqf7n4sev34f2vfus036s2h6mealaxln90leph", "coinSymbol": "ATOM", "amount": "0.0003"}, "transactionParams": {"memo": "LOrpCIl0E6"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:281 2023-02-09 17:03:38.13015 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-09T09:03:47.000Z","description":"","estimatedFee":"675","fee":"-1","hash":"","id":"1623608584006950913","networkCode":"ATOM","requiredSignings":[{"hash":"ad20f3de8949df3263621adbb95b3a655d6774235f4d0a26ce3d7221202631d3","publicKeys":["03d086fb11af768d2bcf3d3d9f295235c43523285a3728bd54a65ee7d7c50c7a7e","03ef8e52ed4a18268b6db640a9cd08e6c69859e1d259f64b8174aafeb2ecd5be1d"],"threshold":1}],"serialized":"0aa9010a9a010a232f636f736d6f732e7374616b696e672e763162657461312e4d736744656c656761746512730a2d636f736d6f7331787166376e347365763334663276667573303336733268366d65616c61786c6e39306c6570681234636f736d6f7376616c6f70657231736a6c6c736e72616d74673365777871777772776a78666763346e3465663975326c636e6a301a0c0a057561746f6d1203333030120a4c4f727043496c3045361284020a4e0a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102aecaa95eca3ee947ad4ff41a4d42798563ce2706b643d31a08bdf24a2e7aedba12040a02087f0a4e0a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2103d086fb11af768d2bcf3d3d9f295235c43523285a3728bd54a65ee7d7c50c7a7e12040a02087f0a4e0a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2103ef8e52ed4a18268b6db640a9cd08e6c69859e1d259f64b8174aafeb2ecd5be1d12040a02087f12120a0c0a057561746f6d120336373510b0bd10","signeds":[{"hash":"ad20f3de8949df3263621adbb95b3a655d6774235f4d0a26ce3d7221202631d3","publicKey":"02aecaa95eca3ee947ad4ff41a4d42798563ce2706b643d31a08bdf24a2e7aedba","signature":"6958634fa9a80e484c72d730839367c98d0ec293333f588cbd54985ccb9bb97a028bbd35d7b229069e614c8456b7172c3d77665a134fb7600f47a97f900e9efe00"}],"status":1,"statusDesc":"SIGNING","updatedTime":"2023-02-09T09:03:47.000Z"}]},"body":{"amount":"0.0003","coinSymbol":"ATOM","delegator":"cosmos1xqf7n4sev34f2vfus036s2h6mealaxln90leph"},"createdTime":"2023-02-09T09:03:46.000Z","id":"1623608585064017922","networkCode":"ATOM","status":-2,"transactionParams":{"memo":"LOrpCIl0E6"},"type":"STAKE","updatedTime":"2023-02-09T09:03:46.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:358 2023-02-09 17:03:38.13015 | 
+<-----Sign----->
+Url:https://api.cryptoless.net/vault/transactions/signatures
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+Body:{"id": "1623608584006950913", "signatures": [{"hash": "ad20f3de8949df3263621adbb95b3a655d6774235f4d0a26ce3d7221202631d3", "publicKey": "03d086fb11af768d2bcf3d3d9f295235c43523285a3728bd54a65ee7d7c50c7a7e", "signature": "094d44ae601db90697a88e0cd42c25b3fc1ecf6b35366e2c830bdf6efce49db261d524917ba0312196d307c013383f8c436c1336781f7684a096dc540a13cd0f00"}]}
+
+
+[32mINFO    [0m Common.Http:Http.py:362 2023-02-09 17:03:38.13015 | 
+<-----Sign Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-09T09:03:47.000Z","description":"","estimatedFee":"675","fee":"-1","hash":"0260F9BFA01AE26568384566E4DEB092B12194B73522F596317392C7687C4F72","id":"1623608584006950913","networkCode":"ATOM","serialized":"0aa9010a9a010a232f636f736d6f732e7374616b696e672e763162657461312e4d736744656c656761746512730a2d636f736d6f7331787166376e347365763334663276667573303336733268366d65616c61786c6e39306c6570681234636f736d6f7376616c6f70657231736a6c6c736e72616d74673365777871777772776a78666763346e3465663975326c636e6a301a0c0a057561746f6d1203333030120a4c4f727043496c30453612b9020aa2020a88020a292f636f736d6f732e63727970746f2e6d756c74697369672e4c6567616379416d696e6f5075624b657912da01080212460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102aecaa95eca3ee947ad4ff41a4d42798563ce2706b643d31a08bdf24a2e7aedba12460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2103d086fb11af768d2bcf3d3d9f295235c43523285a3728bd54a65ee7d7c50c7a7e12460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2103ef8e52ed4a18268b6db640a9cd08e6c69859e1d259f64b8174aafeb2ecd5be1d121512130a0508031201c012040a02087f12040a02087f12120a0c0a057561746f6d120336373510b0bd101a84010a40df8b01464eb31aacec16f9709bdc0d879bb3bd76069c747a575ac49cf5e916b7696fca03832be410396e2d072db6349620d941d70e598de6c931f2ab088734020a40094d44ae601db90697a88e0cd42c25b3fc1ecf6b35366e2c830bdf6efce49db261d524917ba0312196d307c013383f8c436c1336781f7684a096dc540a13cd0f","status":2,"statusDesc":"SIGNED","updatedTime":"2023-02-09T09:03:48.009Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:378 2023-02-09 17:03:38.13015 | 
+<-----Send----->
+Url:https://api.cryptoless.net/vault/transactions/send/1623608584006950913
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:382 2023-02-09 17:03:38.13015 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"2023-02-09T09:03:58.668Z","createdTime":"2023-02-09T09:03:47.000Z","description":"","estimatedFee":"675","fee":"-1","hash":"0260F9BFA01AE26568384566E4DEB092B12194B73522F596317392C7687C4F72","id":"1623608584006950913","networkCode":"ATOM","serialized":"0aa9010a9a010a232f636f736d6f732e7374616b696e672e763162657461312e4d736744656c656761746512730a2d636f736d6f7331787166376e347365763334663276667573303336733268366d65616c61786c6e39306c6570681234636f736d6f7376616c6f70657231736a6c6c736e72616d74673365777871777772776a78666763346e3465663975326c636e6a301a0c0a057561746f6d1203333030120a4c4f727043496c30453612b9020aa2020a88020a292f636f736d6f732e63727970746f2e6d756c74697369672e4c6567616379416d696e6f5075624b657912da01080212460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102aecaa95eca3ee947ad4ff41a4d42798563ce2706b643d31a08bdf24a2e7aedba12460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2103d086fb11af768d2bcf3d3d9f295235c43523285a3728bd54a65ee7d7c50c7a7e12460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2103ef8e52ed4a18268b6db640a9cd08e6c69859e1d259f64b8174aafeb2ecd5be1d121512130a0508031201c012040a02087f12040a02087f12120a0c0a057561746f6d120336373510b0bd101a84010a40df8b01464eb31aacec16f9709bdc0d879bb3bd76069c747a575ac49cf5e916b7696fca03832be410396e2d072db6349620d941d70e598de6c931f2ab088734020a40094d44ae601db90697a88e0cd42c25b3fc1ecf6b35366e2c830bdf6efce49db261d524917ba0312196d307c013383f8c436c1336781f7684a096dc540a13cd0f","status":3,"statusDesc":"PENDING","updatedTime":"2023-02-09T09:03:58.668Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:498 2023-02-09 17:03:38.13015 | 
+<-----Query Transactions byid----->
+Url:https://api.cryptoless.net/vault/transactions/1623608584006950913
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+[32mINFO    [0m Common.Http:Http.py:501 2023-02-09 17:03:38.13015 | 
+<-----Query Transactions Response----->
+{"balanceChanges":[{"address":"cosmos1xqf7n4sev34f2vfus036s2h6mealaxln90leph","amount":"0.000975","asset":{"category":"","createdTime":"2022-02-10T09:10:48.000Z","iconURL":"https://img.cryptoless.net/cryptos/atom.png","id":"1481508696499367939","name":"Cosmos","source":1,"symbol":"ATOM","updatedTime":"2022-06-24T10:41:11.000Z"},"direction":"OUT"},{"address":"cosmos1fl48vsnmsdzcv85q5d2q4z5ajdha8yu34mf0eh","amount":"0.0003","asset":{"category":"","createdTime":"2022-02-10T09:10:48.000Z","iconURL":"https://img.cryptoless.net/cryptos/atom.png","id":"1481508696499367939","name":"Cosmos","source":1,"symbol":"ATOM","updatedTime":"2022-06-24T10:41:11.000Z"},"direction":"IN"}],"blockHash":"2902BBED66748070FF433239665B580E3808CEFAA02867AFE4041154C26409F1","blockHeight":"14009267","blockTime":"2023-02-09T09:03:47.000Z","createdTime":"2023-02-09T09:03:47.000Z","description":"","estimatedFee":"675","fee":"675","hash":"0260F9BFA01AE26568384566E4DEB092B12194B73522F596317392C7687C4F72","id":"1623608584006950913","networkCode":"ATOM","serialized":"0aa9010a9a010a232f636f736d6f732e7374616b696e672e763162657461312e4d736744656c656761746512730a2d636f736d6f7331787166376e347365763334663276667573303336733268366d65616c61786c6e39306c6570681234636f736d6f7376616c6f70657231736a6c6c736e72616d74673365777871777772776a78666763346e3465663975326c636e6a301a0c0a057561746f6d1203333030120a4c4f727043496c30453612b9020aa2020a88020a292f636f736d6f732e63727970746f2e6d756c74697369672e4c6567616379416d696e6f5075624b657912da01080212460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102aecaa95eca3ee947ad4ff41a4d42798563ce2706b643d31a08bdf24a2e7aedba12460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2103d086fb11af768d2bcf3d3d9f295235c43523285a3728bd54a65ee7d7c50c7a7e12460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2103ef8e52ed4a18268b6db640a9cd08e6c69859e1d259f64b8174aafeb2ecd5be1d121512130a0508031201c012040a02087f12040a02087f12120a0c0a057561746f6d120336373510b0bd101a84010a40df8b01464eb31aacec16f9709bdc0d879bb3bd76069c747a575ac49cf5e916b7696fca03832be410396e2d072db6349620d941d70e598de6c931f2ab088734020a40094d44ae601db90697a88e0cd42c25b3fc1ecf6b35366e2c830bdf6efce49db261d524917ba0312196d307c013383f8c436c1336781f7684a096dc540a13cd0f","status":8,"statusDesc":"SETTLED","updatedTime":"2023-02-09T09:04:20.000Z"}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:299 2023-02-09 17:03:38.13015 | 
+<-----balance----->
+Url:https://lcd-cosmos.cosmostation.io/cosmos/bank/v1beta1/balances/cosmos1xqf7n4sev34f2vfus036s2h6mealaxln90leph?pagination.limit=1000
+
+Headers:{"Accept": "application/json, text/plain, */*", "Accept-Language": "zh-CN,zh;q=0.9", "Connection": "keep-alive", "Origin": "https://www.mintscan.io", "Referer": "https://www.mintscan.io/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "cross-site", "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.101 Safari/537.36", "sec-ch-ua": "\"Chromium\";v=\"104\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"104\"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": "\"macOS\""}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:301 2023-02-09 17:03:38.13015 | 
+<-----balance response----->
+
+Body:{"balances": [{"denom": "uatom", "amount": "49025"}], "pagination": {"next_key": null, "total": "0"}}
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-09 17:03:38.13015 | 
+<-----Query Holders----->
+Url:https://api.cryptoless.net/vault/proxy/assets/holders/?networkCode=ATOM&address=cosmos1xqf7n4sev34f2vfus036s2h6mealaxln90leph&symbol=ATOM
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-09 17:03:38.13015 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"cosmos1xqf7n4sev34f2vfus036s2h6mealaxln90leph","createdTime":"2023-02-09T08:58:50.000Z","id":"1623607342570704898","networkCode":"ATOM","quantity":"0.049025","symbol":"ATOM","updatedTime":"2023-02-09T09:03:59.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_stake_safe_success:test_stake_safe_success.py:154 2023-02-09 17:03:38.13015 | 浏览器查询账户balance为:0.049025
+[35mDEBUG   [0m test_stake_safe_success:test_stake_safe_success.py:155 2023-02-09 17:03:38.13015 | 查询账户holder为:0.049025
+[32mINFO    [0m Common.Http:Http.py:516 2023-02-09 17:03:38.13015 | 
+<-----Query Staking----->
+Url:https://api.cryptoless.net/vault/proxy/stakes/delegators?address=cosmos1xqf7n4sev34f2vfus036s2h6mealaxln90leph&networkCode=ATOM
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+[32mINFO    [0m Common.Http:Http.py:519 2023-02-09 17:03:38.13015 | 
+<-----Query Staking Response----->
+[{"address":"cosmos1xqf7n4sev34f2vfus036s2h6mealaxln90leph","coinSymbol":"ATOM","createdTime":"2023-02-09T08:58:09.145Z","id":"1623607169740214273","networkCode":"ATOM","pendings":"0","rewards":"0.0000000000934096165488","staked":"0.0003","updatedTime":"2023-02-09T08:58:09.840Z"}]

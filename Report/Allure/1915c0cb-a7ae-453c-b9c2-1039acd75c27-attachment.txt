@@ -1,0 +1,35 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:227 2023-02-09 17:10:48.598605 | 
+<-----balance----->
+Url:https://api.polygonscan.com/api?module=account&action=balance&address=0xe458fd3e2515d42cbcd52a89b52fb662bf052143&apikey=85W6B7V5TPH7TDZA3JQCFT8UN8RKAEMA4Y
+
+Headers:{}
+
+payload:{}
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:229 2023-02-09 17:10:48.598605 | 
+<-----balance response----->
+
+Body:{"status": "1", "message": "OK", "result": "95741352592070979"}
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-09 17:10:48.598605 | 
+<-----Query Holders----->
+Url:https://api.cryptoless.net/vault/proxy/assets/holders/?networkCode=MATIC&address=0xe458fd3e2515d42cbcd52a89b52fb662bf052143&symbol=MATIC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-09 17:10:48.598605 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0xe458fd3e2515d42cbcd52a89b52fb662bf052143","createdTime":"2023-01-03T06:42:00.000Z","id":"1610164556590616577","networkCode":"MATIC","quantity":"0.095741352592070979","symbol":"MATIC","updatedTime":"2023-02-08T06:41:36.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_swap_custodial_fail:test_swap_custodial_fail.py:47 2023-02-09 17:10:48.598605 | 浏览器查询账户balance为:0.095741352592070979
+[35mDEBUG   [0m test_swap_custodial_fail:test_swap_custodial_fail.py:48 2023-02-09 17:10:48.598605 | 查询账户holder为:0.095741352592070979
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-09 17:10:48.598605 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+Body:{"networkCode": "MATIC", "type": "swap", "body": {"address": "0xe458fd3e2515d42cbcd52a89b52fb662bf052143", "from": "MATIC", "to": "USDC", "fromAmount": "100000", "slippage": "1"}, "transactionParams": {"memo": "dTibUqGwJx"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:284 2023-02-09 17:10:48.598605 | 
+<-----Instructions Response Error----->
+400
+{"code":2102001,"message":"insufficient MATIC balance"}

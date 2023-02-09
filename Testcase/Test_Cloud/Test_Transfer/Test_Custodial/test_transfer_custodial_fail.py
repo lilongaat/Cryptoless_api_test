@@ -45,6 +45,7 @@ class Test_transfers_success:
             # IRIS
             ("IRIS Custodial账户转账 amount超出精度","IRIS","IRIS","iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe","iaa15h0lvaa6slvj0hg4d64548j2c5fds2zv8tkvgs","0.00000001",400,2100000),
             ("IRIS Custodial账户转账 amount超出余额","IRIS","IRIS","iaa1q2eql0hjd345tfxnzat6s7jfpwg3jansv8krwe","iaa15h0lvaa6slvj0hg4d64548j2c5fds2zv8tkvgs","100",400,2102001),
+            ("IRIS Custodial账户转账 手续费不足","IRIS","IRIS","iaa1fryssfhcmp8jnzsqg750w8vgg426gcfdr9gezr","iaa15h0lvaa6slvj0hg4d64548j2c5fds2zv8tkvgs","100",400,2100000),
 
             # CLV
             ("CLV Custodial账户转账 amount超出精度","CLV","CLV","5G8W1b7pWa7zzcYAWomTaX2zmP1SHE7JDEGvQTdGh45d83te","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","0.0000000000000000009",400,2100000),

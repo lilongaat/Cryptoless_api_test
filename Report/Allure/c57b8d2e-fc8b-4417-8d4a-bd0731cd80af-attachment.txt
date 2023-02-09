@@ -1,0 +1,22 @@
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-09 17:20:02.999600 | 
+<-----Query Holders----->
+Url:https://api.cryptoless.net/vault/proxy/assets/holders/?networkCode=MATIC&address=0xe458fd3e2515d42cbcd52a89b52fb662bf052143&symbol=USDC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-09 17:20:02.999600 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0xe458fd3e2515d42cbcd52a89b52fb662bf052143","createdTime":"2023-01-03T06:56:01.000Z","id":"1610168080661614593","networkCode":"MATIC","quantity":"0.098774","symbol":"USDC","updatedTime":"2023-02-08T06:41:36.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-09 17:20:02.999600 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+Body:{"networkCode": "MATIC", "type": "swap", "body": {"address": "0xe458fd3e2515d42cbcd52a89b52fb662bf052143", "from": "USDC", "to": "MATIC", "fromAmount": "0.00001", "slippage": "51"}, "transactionParams": {"memo": "HejKuXhDpW"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:284 2023-02-09 17:20:02.999600 | 
+<-----Instructions Response Error----->
+400
+{"code":2300000,"message":"slippage max 50"}

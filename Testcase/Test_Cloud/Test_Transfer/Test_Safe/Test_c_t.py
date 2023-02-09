@@ -20,7 +20,7 @@ class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
             # GOERLI
-            # ("GOERLI Safe创建+转入coin",["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],[""],"GOERLI","0x1eC2CE6108240118Ff2c66eC8AFAC28618D7e066"),
+            ("GOERLI Safe创建+转入coin",["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],[""],"GOERLI","0x1eC2CE6108240118Ff2c66eC8AFAC28618D7e066"),
             # ("GOERLI Safe创建+转入coin",[""],[""],"GOERLI","0x1eC2CE6108240118Ff2c66eC8AFAC28618D7e066"),
 
             # MATIC

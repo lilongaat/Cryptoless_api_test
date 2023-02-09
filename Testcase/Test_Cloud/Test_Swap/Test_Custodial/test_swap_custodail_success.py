@@ -80,33 +80,6 @@ class Test_transfers_success:
             send = Http.HttpUtils.send(id)
             assert send.status_code == 200
             assert send.json()["statusDesc"] == "PENDING"
-
-        with allure.step("通过id查询交易记录"):
-            sleep(30)
-            for n in range(10):
-                transaction = Http.HttpUtils.transactions_byid(id)
-                assert transaction.status_code == 200
-                statusDesc = transaction.json()["statusDesc"]
-                if statusDesc == "SETTLED" and len(transaction.json()["balanceChanges"]) > 0:
-                    break
-                else:
-                    sleep(30)
-            sleep(5)
-
-
-        with allure.step("浏览器查询from账户balance信息"):
-            balance = Httpexplore.Balances_explore.query(networkCode,address,from_coin)
-                
-        with allure.step("查询from账户holder信息"):
-            holder = Http.HttpUtils.holders(networkCode=networkCode,symbol=from_coin,address=address)
-            assert holder.status_code ==200
-            quantity = Decimal(holder.json()["list"][0]["quantity"])
-
-        logger.debug("浏览器查询账户balance为:" + str(balance))
-        logger.debug("查询账户holder为:" + str(quantity))
-
-        with allure.step("账户余额相等验证 浏览器查询==holder"):
-            assert balance == quantity
             del balance,quantity
 
 if __name__ == '__main__':

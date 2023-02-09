@@ -1,0 +1,32 @@
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-09 16:48:37.288571 | 
+<-----Query Holders----->
+Url:https://api.cryptoless.net/vault/proxy/assets/holders/?networkCode=CLV&address=5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc&symbol=CLV
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-09 16:48:37.288571 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc","createdTime":"2023-01-05T03:42:00.000Z","id":"1610844034002194433","networkCode":"CLV","quantity":"0.060775499999907501","symbol":"CLV","updatedTime":"2023-02-08T07:07:01.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:516 2023-02-09 16:48:37.288571 | 
+<-----Query Staking----->
+Url:https://api.cryptoless.net/vault/proxy/stakes/delegators?address=5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc&networkCode=CLV
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+[32mINFO    [0m Common.Http:Http.py:519 2023-02-09 16:48:37.288571 | 
+<-----Query Staking Response----->
+[{"address":"5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc","coinSymbol":"CLV","createdTime":"2023-01-03T06:38:59.000Z","id":"1610163797629358082","networkCode":"CLV","pendings":"0.00025","staked":"0.00205","updatedTime":"2023-01-03T06:39:00.000Z"}]
+
+
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-09 16:48:37.288571 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+Body:{"networkCode": "CLV", "type": "un_stake", "body": {"delegator": "5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc", "coinSymbol": "CLV", "amount": "0.0000000000000000009"}, "transactionParams": {"memo": "Sse6QgJpEB"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:284 2023-02-09 16:48:37.288571 | 
+<-----Instructions Response Error----->
+400
+{"code":2100000,"message":"amount decimals long too"}

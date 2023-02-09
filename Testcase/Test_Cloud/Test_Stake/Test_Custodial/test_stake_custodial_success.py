@@ -50,7 +50,7 @@ class Test_stake_success:
             ("CLV Custodial账户claim","CLV","CLV","claim","5DNA4hJL6YLKFwajJpPsvYW3ne9SRYcCminoYVMhKiThmBmc",0),
         ]
 
-    @allure.story("Custodial_Stake_Success!")
+    @allure.story("Custodial Stake Success!")
     @allure.title('{test_title}')
     @pytest.mark.parametrize('test_title,networkCode,symbol,type,address,amount', test_data)
     def test_custodial(self,test_title,networkCode,symbol,type,address,amount):

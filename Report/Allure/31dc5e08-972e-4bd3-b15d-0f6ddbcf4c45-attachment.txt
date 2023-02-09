@@ -1,0 +1,32 @@
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-09 16:42:02.625997 | 
+<-----Query Holders----->
+Url:https://api.cryptoless.net/vault/proxy/assets/holders/?networkCode=ATOM&address=cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc&symbol=ATOM
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-09 16:42:02.625997 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc","createdTime":"2023-01-05T06:09:00.000Z","id":"1610881027155300353","networkCode":"ATOM","quantity":"0.080342","symbol":"ATOM","updatedTime":"2023-02-08T06:42:59.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:516 2023-02-09 16:42:02.625997 | 
+<-----Query Staking----->
+Url:https://api.cryptoless.net/vault/proxy/stakes/delegators?address=cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc&networkCode=ATOM
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+[32mINFO    [0m Common.Http:Http.py:519 2023-02-09 16:42:02.625997 | 
+<-----Query Staking Response----->
+[{"address":"cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc","coinSymbol":"ATOM","createdTime":"2023-01-05T03:19:58.000Z","id":"1610838488377331713","networkCode":"ATOM","pendings":"0.00012","rewards":"0.00000444566037589134916","staked":"0.00533","updatedTime":"2023-01-05T03:19:59.000Z"}]
+
+
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-09 16:42:02.625997 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+Body:{"networkCode": "ATOM", "type": "stake", "body": {"delegator": "cosmos1wde9r4gu5qtx3qelnfr2y5w7q7esj7pefx3urc", "coinSymbol": "ATOM", "amount": "10000"}, "transactionParams": {"memo": "Tl6CjMkrNn"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:284 2023-02-09 16:42:02.625997 | 
+<-----Instructions Response Error----->
+400
+{"code":2102001,"message":"insufficient ATOM balance"}

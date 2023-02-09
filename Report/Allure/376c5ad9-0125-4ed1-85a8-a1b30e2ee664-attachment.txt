@@ -1,0 +1,87 @@
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-09 17:04:44.323559 | 
+<-----Query Holders----->
+Url:https://api.cryptoless.net/vault/proxy/assets/holders/?networkCode=IRIS&address=iaa1c2q0j82mf9nqupz9re0cymrusls3xykhmyrs69&symbol=IRIS
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-09 17:04:44.323559 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"iaa1c2q0j82mf9nqupz9re0cymrusls3xykhmyrs69","createdTime":"2023-02-09T02:53:44.000Z","id":"1623515461222293506","networkCode":"IRIS","quantity":"0.349893","symbol":"IRIS","updatedTime":"2023-02-09T03:10:10.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_stake_safe_success:test_stake_safe_success.py:69 2023-02-09 17:04:44.323559 | 浏览器查询账户balance为:0.349893
+[35mDEBUG   [0m test_stake_safe_success:test_stake_safe_success.py:70 2023-02-09 17:04:44.323559 | 查询账户holder为:0.349893
+[32mINFO    [0m Common.Http:Http.py:516 2023-02-09 17:04:44.323559 | 
+<-----Query Staking----->
+Url:https://api.cryptoless.net/vault/proxy/stakes/delegators?address=iaa1c2q0j82mf9nqupz9re0cymrusls3xykhmyrs69&networkCode=IRIS
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+[32mINFO    [0m Common.Http:Http.py:519 2023-02-09 17:04:44.323559 | 
+<-----Query Staking Response----->
+[{"address":"iaa1c2q0j82mf9nqupz9re0cymrusls3xykhmyrs69","coinSymbol":"IRIS","createdTime":"2023-02-09T02:53:05.138Z","id":"1623515297780895746","networkCode":"IRIS","pendings":"0","rewards":"0","staked":"0","updatedTime":"2023-02-09T02:53:05.453Z"}]
+
+
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-09 17:04:44.323559 | 
+<-----Instructions----->
+Url:https://api.cryptoless.net/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+Body:{"networkCode": "IRIS", "type": "stake", "body": {"delegator": "iaa1c2q0j82mf9nqupz9re0cymrusls3xykhmyrs69", "coinSymbol": "IRIS", "amount": "0.0004"}, "transactionParams": {"memo": "is7CvPrYo1"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:281 2023-02-09 17:04:44.323559 | 
+<-----Instructions Response----->
+{"_embedded":{"transactions":[{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-09T09:04:48.000Z","description":"","estimatedFee":"54000","fee":"-1","hash":"","id":"1623608843192012801","networkCode":"IRIS","requiredSignings":[{"hash":"c7a3b7158ab518817ea5e1d9154fc472d25199a6855f794b0c11d6235ccf2a7d","publicKeys":["021055ec656e80c61346f406b092a02df24e0dcba1582fc9c73f4fa0b310116be6","0253addfcf953fe312f25fd5b59668552cacfd4dacd3aebb56726a6ac0489994a8"],"threshold":1}],"serialized":"0a9c010a8d010a232f636f736d6f732e7374616b696e672e763162657461312e4d736744656c656761746512660a2a69616131633271306a38326d66396e7175707a3972653063796d7275736c733378796b686d7972733639122a697661313534336e6a347a3037766a717a747675333335386672327a326863703071746d6365616e6b351a0c0a0575697269731203343030120a69733743765072596f31128c020a500a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a21021055ec656e80c61346f406b092a02df24e0dcba1582fc9c73f4fa0b310116be612040a02087f18020a500a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102220f5112069d00f6be3da00feb317d3cb6a253ab571c656b7f9fd883340b1ffb12040a02087f18020a500a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a210253addfcf953fe312f25fd5b59668552cacfd4dacd3aebb56726a6ac0489994a812040a02087f180212140a0e0a0575697269731205353430303010b0bd10","signeds":[{"hash":"c7a3b7158ab518817ea5e1d9154fc472d25199a6855f794b0c11d6235ccf2a7d","publicKey":"02220f5112069d00f6be3da00feb317d3cb6a253ab571c656b7f9fd883340b1ffb","signature":"a0342517e7c07a7edf6d8e93aca66759ae46146b3f4635f11744ae21b9e5b94f2fb1ded0e6bb3fc70e73cbfb259630a22e4d6356bc877de6b12943e65f4e365e01"}],"status":1,"statusDesc":"SIGNING","updatedTime":"2023-02-09T09:04:49.000Z"}]},"body":{"amount":"0.0004","coinSymbol":"IRIS","delegator":"iaa1c2q0j82mf9nqupz9re0cymrusls3xykhmyrs69"},"createdTime":"2023-02-09T09:04:48.000Z","id":"1623608844492263425","networkCode":"IRIS","status":-2,"transactionParams":{"memo":"is7CvPrYo1"},"type":"STAKE","updatedTime":"2023-02-09T09:04:48.000Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:358 2023-02-09 17:04:44.323559 | 
+<-----Sign----->
+Url:https://api.cryptoless.net/vault/transactions/signatures
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+Body:{"id": "1623608843192012801", "signatures": [{"hash": "c7a3b7158ab518817ea5e1d9154fc472d25199a6855f794b0c11d6235ccf2a7d", "publicKey": "021055ec656e80c61346f406b092a02df24e0dcba1582fc9c73f4fa0b310116be6", "signature": "4d4a09388322ffeb910d50e5526cbf67f02417d7b10410c1c73da450cadada906963452e358dd59288b31348a0e86f7188442fc976b0453f4956830bae5f207901"}]}
+
+
+[32mINFO    [0m Common.Http:Http.py:362 2023-02-09 17:04:44.323559 | 
+<-----Sign Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"1970-01-01T00:00:00.000Z","createdTime":"2023-02-09T09:04:48.000Z","description":"","estimatedFee":"54000","fee":"-1","hash":"9F0C904FBBC4A04E48B6C05761A714B1BF5CFF30C4F4CE44A8B947C016A89E33","id":"1623608843192012801","networkCode":"IRIS","serialized":"0a9c010a8d010a232f636f736d6f732e7374616b696e672e763162657461312e4d736744656c656761746512660a2a69616131633271306a38326d66396e7175707a3972653063796d7275736c733378796b686d7972733639122a697661313534336e6a347a3037766a717a747675333335386672327a326863703071746d6365616e6b351a0c0a0575697269731203343030120a69733743765072596f3112bd020aa4020a88020a292f636f736d6f732e63727970746f2e6d756c74697369672e4c6567616379416d696e6f5075624b657912da01080212460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a21021055ec656e80c61346f406b092a02df24e0dcba1582fc9c73f4fa0b310116be612460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102220f5112069d00f6be3da00feb317d3cb6a253ab571c656b7f9fd883340b1ffb12460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a210253addfcf953fe312f25fd5b59668552cacfd4dacd3aebb56726a6ac0489994a8121512130a0508031201c012040a02087f12040a02087f180212140a0e0a0575697269731205353430303010b0bd101a84010a404d4a09388322ffeb910d50e5526cbf67f02417d7b10410c1c73da450cadada906963452e358dd59288b31348a0e86f7188442fc976b0453f4956830bae5f20790a40e52ec7ac160bad2fe6aec71ac3bd4fa6d500f7a3c882406b1a1af6d7a31b2d462d6929ca6a74722c12fda5fa04d174ba5a6d9859c1a74707085fd76af88e3e9a","status":2,"statusDesc":"SIGNED","updatedTime":"2023-02-09T09:04:49.899Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:378 2023-02-09 17:04:44.323559 | 
+<-----Send----->
+Url:https://api.cryptoless.net/vault/transactions/send/1623608843192012801
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:382 2023-02-09 17:04:44.323559 | 
+<-----Send Response----->
+{"balanceChanges":[],"blockHash":"","blockHeight":"-1","blockTime":"2023-02-09T09:04:53.623Z","createdTime":"2023-02-09T09:04:48.000Z","description":"","estimatedFee":"54000","fee":"-1","hash":"9F0C904FBBC4A04E48B6C05761A714B1BF5CFF30C4F4CE44A8B947C016A89E33","id":"1623608843192012801","networkCode":"IRIS","serialized":"0a9c010a8d010a232f636f736d6f732e7374616b696e672e763162657461312e4d736744656c656761746512660a2a69616131633271306a38326d66396e7175707a3972653063796d7275736c733378796b686d7972733639122a697661313534336e6a347a3037766a717a747675333335386672327a326863703071746d6365616e6b351a0c0a0575697269731203343030120a69733743765072596f3112bd020aa4020a88020a292f636f736d6f732e63727970746f2e6d756c74697369672e4c6567616379416d696e6f5075624b657912da01080212460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a21021055ec656e80c61346f406b092a02df24e0dcba1582fc9c73f4fa0b310116be612460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102220f5112069d00f6be3da00feb317d3cb6a253ab571c656b7f9fd883340b1ffb12460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a210253addfcf953fe312f25fd5b59668552cacfd4dacd3aebb56726a6ac0489994a8121512130a0508031201c012040a02087f12040a02087f180212140a0e0a0575697269731205353430303010b0bd101a84010a404d4a09388322ffeb910d50e5526cbf67f02417d7b10410c1c73da450cadada906963452e358dd59288b31348a0e86f7188442fc976b0453f4956830bae5f20790a40e52ec7ac160bad2fe6aec71ac3bd4fa6d500f7a3c882406b1a1af6d7a31b2d462d6929ca6a74722c12fda5fa04d174ba5a6d9859c1a74707085fd76af88e3e9a","status":3,"statusDesc":"PENDING","updatedTime":"2023-02-09T09:04:53.623Z"}
+
+
+[32mINFO    [0m Common.Http:Http.py:498 2023-02-09 17:04:44.323559 | 
+<-----Query Transactions byid----->
+Url:https://api.cryptoless.net/vault/transactions/1623608843192012801
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+[32mINFO    [0m Common.Http:Http.py:501 2023-02-09 17:04:44.323559 | 
+<-----Query Transactions Response----->
+{"balanceChanges":[{"address":"iaa1fl48vsnmsdzcv85q5d2q4z5ajdha8yu3qef7mx","amount":"0.0004","asset":{"category":"","createdTime":"2022-02-10T09:11:59.000Z","iconURL":"https://img.cryptoless.net/cryptos/iris.png","id":"1481508696499367940","name":"IRISnet","source":1,"symbol":"IRIS","updatedTime":"2022-06-24T10:41:11.000Z"},"direction":"IN"},{"address":"iaa1c2q0j82mf9nqupz9re0cymrusls3xykhmyrs69","amount":"0.0544","asset":{"category":"","createdTime":"2022-02-10T09:11:59.000Z","iconURL":"https://img.cryptoless.net/cryptos/iris.png","id":"1481508696499367940","name":"IRISnet","source":1,"symbol":"IRIS","updatedTime":"2022-06-24T10:41:11.000Z"},"direction":"OUT"}],"blockHash":"6DCF6C340A06242FB1BE10C60BEDE6A04795613ECDE97F301ABD1C105AC7F2BE","blockHeight":"18586660","blockTime":"2023-02-09T09:04:45.000Z","createdTime":"2023-02-09T09:04:48.000Z","description":"","estimatedFee":"54000","fee":"54000","hash":"9F0C904FBBC4A04E48B6C05761A714B1BF5CFF30C4F4CE44A8B947C016A89E33","id":"1623608843192012801","networkCode":"IRIS","serialized":"0a9c010a8d010a232f636f736d6f732e7374616b696e672e763162657461312e4d736744656c656761746512660a2a69616131633271306a38326d66396e7175707a3972653063796d7275736c733378796b686d7972733639122a697661313534336e6a347a3037766a717a747675333335386672327a326863703071746d6365616e6b351a0c0a0575697269731203343030120a69733743765072596f3112bd020aa4020a88020a292f636f736d6f732e63727970746f2e6d756c74697369672e4c6567616379416d696e6f5075624b657912da01080212460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a21021055ec656e80c61346f406b092a02df24e0dcba1582fc9c73f4fa0b310116be612460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102220f5112069d00f6be3da00feb317d3cb6a253ab571c656b7f9fd883340b1ffb12460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a210253addfcf953fe312f25fd5b59668552cacfd4dacd3aebb56726a6ac0489994a8121512130a0508031201c012040a02087f12040a02087f180212140a0e0a0575697269731205353430303010b0bd101a84010a404d4a09388322ffeb910d50e5526cbf67f02417d7b10410c1c73da450cadada906963452e358dd59288b31348a0e86f7188442fc976b0453f4956830bae5f20790a40e52ec7ac160bad2fe6aec71ac3bd4fa6d500f7a3c882406b1a1af6d7a31b2d462d6929ca6a74722c12fda5fa04d174ba5a6d9859c1a74707085fd76af88e3e9a","status":8,"statusDesc":"SETTLED","updatedTime":"2023-02-09T09:05:10.000Z"}
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-09 17:04:44.323559 | 
+<-----Query Holders----->
+Url:https://api.cryptoless.net/vault/proxy/assets/holders/?networkCode=IRIS&address=iaa1c2q0j82mf9nqupz9re0cymrusls3xykhmyrs69&symbol=IRIS
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-09 17:04:44.323559 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"iaa1c2q0j82mf9nqupz9re0cymrusls3xykhmyrs69","createdTime":"2023-02-09T02:53:44.000Z","id":"1623515461222293506","networkCode":"IRIS","quantity":"0.295493","symbol":"IRIS","updatedTime":"2023-02-09T09:04:54.000Z"}],"size":10,"total":1}
+
+
+[35mDEBUG   [0m test_stake_safe_success:test_stake_safe_success.py:154 2023-02-09 17:04:44.323559 | 浏览器查询账户balance为:0.295493
+[35mDEBUG   [0m test_stake_safe_success:test_stake_safe_success.py:155 2023-02-09 17:04:44.323559 | 查询账户holder为:0.295493
+[32mINFO    [0m Common.Http:Http.py:516 2023-02-09 17:04:44.323559 | 
+<-----Query Staking----->
+Url:https://api.cryptoless.net/vault/proxy/stakes/delegators?address=iaa1c2q0j82mf9nqupz9re0cymrusls3xykhmyrs69&networkCode=IRIS
+
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjEwMTE0NTQxMDA4NjY2NjI1IiwiZXhwIjoxNjc2NDQ3ODQyLCJpYXQiOjE2NzU4NDMwNDIsInVzZXJJZCI6MTYxMDExNDU0MTAwODY2NjYyNX0.E3AfgfEQKU4xi-FC__ZaFeuonu-HhUnjK71jl-7jtfY"}
+[32mINFO    [0m Common.Http:Http.py:519 2023-02-09 17:04:44.323559 | 
+<-----Query Staking Response----->
+[{"address":"iaa1c2q0j82mf9nqupz9re0cymrusls3xykhmyrs69","coinSymbol":"IRIS","createdTime":"2023-02-09T02:53:05.138Z","id":"1623515297780895746","networkCode":"IRIS","pendings":"0","rewards":"0.000000000034211467332799","staked":"0.000399","updatedTime":"2023-02-09T02:53:05.453Z"}]

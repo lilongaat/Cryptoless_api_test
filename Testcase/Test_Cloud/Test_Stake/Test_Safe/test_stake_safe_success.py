@@ -22,12 +22,11 @@ class Test_stake_success:
         test_data = [
             # IRIS
             ("IRIS safe2-2账户质押","IRIS","IRIS","stake","d10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b","iaa1laewhl28xx9fujqawfnmt4wls2dgyvs6qz7vle",str(Conf.Config.random_amount(4))),
-            # ("IRIS safe2-2账户赎回","IRIS","IRIS","un_stake","d10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b","iaa1laewhl28xx9fujqawfnmt4wls2dgyvs6qz7vle",str(Conf.Config.random_amount(5))),
-            # ("IRIS safe2-2账户claim","IRIS","IRIS","claim","d10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b","iaa1laewhl28xx9fujqawfnmt4wls2dgyvs6qz7vle",0),
-
-            # ("IRIS safe2-3账户质押","IRIS","IRIS","stake","d10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b","iaa10n27w23n42p58alv960cwfdzgxdg5y3d6f8j2u",str(Conf.Config.random_amount(4))),
-            # ("IRIS safe2-3账户赎回","IRIS","IRIS","un_stake","d10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b","iaa10n27w23n42p58alv960cwfdzgxdg5y3d6f8j2u",str(Conf.Config.random_amount(5))),
-            # ("IRIS safe2-3账户claim","IRIS","IRIS","claim","d10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b","iaa10n27w23n42p58alv960cwfdzgxdg5y3d6f8j2u",0),
+            ("IRIS safe2-2账户赎回","IRIS","IRIS","un_stake","d10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b","iaa1laewhl28xx9fujqawfnmt4wls2dgyvs6qz7vle",str(Conf.Config.random_amount(5))),
+            ("IRIS safe2-2账户claim","IRIS","IRIS","claim","d10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b","iaa1laewhl28xx9fujqawfnmt4wls2dgyvs6qz7vle",0),
+            ("IRIS safe2-3账户质押","IRIS","IRIS","stake","d10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b","iaa10n27w23n42p58alv960cwfdzgxdg5y3d6f8j2u",str(Conf.Config.random_amount(4))),
+            ("IRIS safe2-3账户赎回","IRIS","IRIS","un_stake","d10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b","iaa10n27w23n42p58alv960cwfdzgxdg5y3d6f8j2u",str(Conf.Config.random_amount(5))),
+            ("IRIS safe2-3账户claim","IRIS","IRIS","claim","d10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b","iaa10n27w23n42p58alv960cwfdzgxdg5y3d6f8j2u",0),
 
             # CLV
         ]
@@ -37,11 +36,17 @@ class Test_stake_success:
             ("ATOM safe2-2账户质押","ATOM","ATOM","stake","4b49226b1669a687fb4f8479fa9048f1cbb79af74529a47bae7a0c07ce97f8c6","cosmos1gkcgpprzv4wkjteteynjr6l7hpq2xkxuuz0ulm",str(Conf.Config.random_amount(4))),
             ("ATOM safe2-2账户赎回","ATOM","ATOM","un_stake","4b49226b1669a687fb4f8479fa9048f1cbb79af74529a47bae7a0c07ce97f8c6","cosmos1gkcgpprzv4wkjteteynjr6l7hpq2xkxuuz0ulm",str(Conf.Config.random_amount(5))),
             ("ATOM safe2-2户claim","ATOM","ATOM","claim","4b49226b1669a687fb4f8479fa9048f1cbb79af74529a47bae7a0c07ce97f8c6","cosmos1gkcgpprzv4wkjteteynjr6l7hpq2xkxuuz0ulm",0),
+            ("ATOM safe2-3账户质押","ATOM","ATOM","stake","4b49226b1669a687fb4f8479fa9048f1cbb79af74529a47bae7a0c07ce97f8c6","cosmos1xqf7n4sev34f2vfus036s2h6mealaxln90leph",str(Conf.Config.random_amount(4))),
+            ("ATOM safe2-3账户赎回","ATOM","ATOM","un_stake","4b49226b1669a687fb4f8479fa9048f1cbb79af74529a47bae7a0c07ce97f8c6","cosmos1xqf7n4sev34f2vfus036s2h6mealaxln90leph",str(Conf.Config.random_amount(5))),
+            ("ATOM safe2-3户claim","ATOM","ATOM","claim","4b49226b1669a687fb4f8479fa9048f1cbb79af74529a47bae7a0c07ce97f8c6","cosmos1xqf7n4sev34f2vfus036s2h6mealaxln90leph",0),
 
             # IRIS
-            ("IRIS safe账户质押","IRIS","IRIS","stake","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j",str(Conf.Config.random_amount(4))),
-            ("IRIS safe账户赎回","IRIS","IRIS","un_stake","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j",str(Conf.Config.random_amount(5))),
-            ("IRIS safe账户claim","IRIS","IRIS","claim","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j",0),
+            ("IRIS safe2-2账户质押","IRIS","IRIS","stake","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j",str(Conf.Config.random_amount(4))),
+            ("IRIS safe2-2账户赎回","IRIS","IRIS","un_stake","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j",str(Conf.Config.random_amount(5))),
+            ("IRIS safe2-2账户claim","IRIS","IRIS","claim","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa1mzan97ku09tyv3wcu5lktfwzrqfskal4eezv4j",0),
+            ("IRIS safe2-3账户质押","IRIS","IRIS","stake","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa1c2q0j82mf9nqupz9re0cymrusls3xykhmyrs69",str(Conf.Config.random_amount(4))),
+            ("IRIS safe2-3账户赎回","IRIS","IRIS","un_stake","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa1c2q0j82mf9nqupz9re0cymrusls3xykhmyrs69",str(Conf.Config.random_amount(5))),
+            ("IRIS safe2-3账户claim","IRIS","IRIS","claim","a8cb5ffed23dda8a84d2612b5b7f17a7739b208640a3cc04b1b28cd4239fcd0c","iaa1c2q0j82mf9nqupz9re0cymrusls3xykhmyrs69",0),
 
             # DOT
 
