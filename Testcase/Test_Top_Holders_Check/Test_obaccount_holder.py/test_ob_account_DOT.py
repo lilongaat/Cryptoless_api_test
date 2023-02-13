@@ -47,18 +47,19 @@ class Test_accounts_balances():
         with allure.step("系统查询地址余额"):
             holder = Http.HttpUtils.holders("DOT","DOT",address,ob_token)
             assert holder.status_code == 200
-            if len(holder.json()) == 0:
+            if len(holder.json()["list"]) == 0:
                 quantity = 0
             else:
-                quantity = (Decimal(holder.json()[0]['quantity']))
+                quantity = (Decimal(holder.json()["list"][0]['quantity']))
 
         with allure.step("验证地址余额:explore==Graphql"):
             assert balance == amount,"explore!=Graphql"
         
         with allure.step("验证地址余额:explore==holder"):
             assert balance == quantity,"explore!=holder"
+            del balance,amount,quantity
 
 if __name__ == '__main__':
     path = os.path.abspath(__file__) + ""
-    # pytest.main(["-vs", path,'--alluredir=Report/Allure'])
+    pytest.main(["-vs", path,'--alluredir=Report/Allure'])
     os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

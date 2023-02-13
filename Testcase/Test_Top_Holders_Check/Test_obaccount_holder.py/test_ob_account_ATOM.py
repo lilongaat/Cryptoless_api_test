@@ -17,10 +17,8 @@ from Config.readconfig import ReadConfig
 env_type = int(ReadConfig().get_env('type'))
 if env_type == 0: # Debug
     ob_token = ReadConfig().get_debug('ob_token')
-
 elif env_type == 1: # Release
     ob_token = ReadConfig().get_release('ob_token')
-
 
 
 
@@ -60,8 +58,9 @@ class Test_accounts_balances():
         
         with allure.step("验证地址余额:explore==holder"):
             assert balance == quantity,"explore!=holder"
+            del balance,amount,quantity
 
 if __name__ == '__main__':
     path = os.path.abspath(__file__) + ""
     pytest.main(["-vs", path,'--alluredir=Report/Allure'])
-    os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')
+    # os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

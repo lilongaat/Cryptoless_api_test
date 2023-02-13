@@ -17,26 +17,26 @@ from Config.readconfig import ReadConfig
 env_type = int(ReadConfig().get_env('type'))
 if env_type == 0: # Debug
     ob_token = ReadConfig().get_debug('ob_token')
-
+    accounts_list = []
 elif env_type == 1: # Release
     ob_token = ReadConfig().get_release('ob_token')
-
+    accounts_list = Conf.Config.reader_csv("/Users/lilong/Documents/Test_Api/Address/Top/BTC.csv",100)
 
 
 
 @allure.feature("Accounts Balances!")
 class Test_accounts_balances():
-    accounts = Conf.Config.reader_csv("/Users/lilong/Documents/Test_Api/Address/Top/BTC.csv",100)
+    accounts = accounts_list
 
     @allure.story("BTC Rich_address(Top-100) Balances Check!")
     @allure.title('查询账户余额-{address}')
     @pytest.mark.parametrize('address', accounts)
     def test_account_balance(self, address):
 
-        with allure.step("blockchain.coinmarketcap.com查询地址信息"):
-            response = Httpexplore.BTC.balance(address)
+        with allure.step("浏览器查询地址信息"):
+            response = Httpexplore.Balances_explore.query("BTC",address,"BTC")
             assert response.status_code == 200
-            balance = Decimal(response.json()["balance"])/Decimal(10**8)
+            balance = Decimal(response.json()["data"]["balance"])/Decimal(10**8)
 
         with allure.step("Graphql查询地址余额"):
             graphql = Graphql.Graphql.getAccountByAddress("BTC",address,"BTC")
@@ -46,16 +46,17 @@ class Test_accounts_balances():
         with allure.step("系统查询地址余额"):
             holder = Http.HttpUtils.holders("BTC","BTC",address,ob_token)
             assert holder.status_code == 200
-            if len(holder.json()) == 0:
+            if len(holder.json()["list"]) == 0:
                 quantity = 0
             else:
-                quantity = (Decimal(holder.json()[0]['quantity']))
+                quantity = (Decimal(holder.json()["list"][0]['quantity']))
 
         with allure.step("验证地址余额:explore==Graphql"):
             assert balance == amount,"explore!=Graphql"
         
         with allure.step("验证地址余额:explore==holder"):
             assert balance == quantity,"explore!=holder"
+            del balance,amount,quantity
 
 if __name__ == '__main__':
     path = os.path.abspath(__file__) + ""

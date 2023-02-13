@@ -10,8 +10,8 @@ from Config.readconfig import ReadConfig
 env_type = int(ReadConfig().get_env('type'))
 
 # btc goerli clv 
-# test_url = "http://13.212.89.244"
-test_url = "http://172.31.32.130"
+test_url = "http://13.212.89.244"
+# test_url = "http://172.31.32.130"
 # BTC DOT CLV ATOM IRIS DOGE LTC 
 release_url = "http://18.162.150.113"
 # ETH BSC MATIC
@@ -107,4 +107,4 @@ class Graphql(Url):
 
 if __name__ == '__main__':
     # print(Graphql.getAccountByAddress("GOERLI","0xc53ce86d5b3fcf72963df2faa0856a3d9bc7a1ae","goerliETH"))
-    print(Graphql.getLatestBlock("ATOM"))
+    Graphql.getLatestBlock("CLV")

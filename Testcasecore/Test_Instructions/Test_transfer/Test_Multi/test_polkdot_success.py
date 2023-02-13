@@ -20,8 +20,8 @@ class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
             #CLV
-            ("CLV 多签账户转账","CLV","CLV",["7967c43bd3f3874ccfa6ff6ceda5faa8c699ad0fe2be33f44c8bb8abcb23a2fd","7cc57c9ab4d60f6991dd32827927266c90a7c165db6c71ea344c86a05e582b68"],"5EwMcCvUPD7RKUTs86NoLPame9oCg8edtdKCdbcsxTFL3aTQ","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","0.0001"),
-            # ("CLV 多签账户转账","CLV","CLV",["7967c43bd3f3874ccfa6ff6ceda5faa8c699ad0fe2be33f44c8bb8abcb23a2fd","57ec78628177bdde7228287f9ad98f798aad63ec7471908b63b136c7a93195de"],"5G76kUQ4Tq9tttR4stMAS8LrdAPic9sFk2uDVP3QXpg7rfEJ","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","0.000103"),
+            # ("CLV 2-2多签账户转账","CLV","CLV",["7967c43bd3f3874ccfa6ff6ceda5faa8c699ad0fe2be33f44c8bb8abcb23a2fd","7cc57c9ab4d60f6991dd32827927266c90a7c165db6c71ea344c86a05e582b68"],"5EwMcCvUPD7RKUTs86NoLPame9oCg8edtdKCdbcsxTFL3aTQ","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","0.000123456"),
+            ("CLV 2-3多签账户转账","CLV","CLV",["7967c43bd3f3874ccfa6ff6ceda5faa8c699ad0fe2be33f44c8bb8abcb23a2fd","7cc57c9ab4d60f6991dd32827927266c90a7c165db6c71ea344c86a05e582b68"],"5HnsmbUfRH37XVXhz1JpDcyGHRmDZJNwnd2SP2M2urS6v71U","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","0.00023456"),
         ]
     elif env_type == 1: #生产
         test_data = []
@@ -77,11 +77,7 @@ class Test_transfers_success:
             send = Httpcore.HttpCoreUtils.core_send(id)
             assert send.status_code == 200
             assert send.json()["statusDesc"] == "PENDING"
-
             hash = send.json()["hash"]
-
-        
-        # logger.error("\n\n"+networkCode+"--"+symbol+"--"+test_title+"\n"+from_add+"--"+quantity+"\n"+hash+"\n\n")
 
 if __name__ == '__main__':
     path = os.path.abspath(__file__) + ""

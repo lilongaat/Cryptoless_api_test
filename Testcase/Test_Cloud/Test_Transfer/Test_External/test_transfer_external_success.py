@@ -36,6 +36,7 @@ class Test_transfers_success:
 
             #CLV
             ("CLV extarnal账户转账","CLV","CLV","7967c43bd3f3874ccfa6ff6ceda5faa8c699ad0fe2be33f44c8bb8abcb23a2fd","5Hdmv7BeAe1XFJXso8oGMidGp186cb4uNTNMywp6fBY7UEsr","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","0.0004"),
+            ("CLV extarnal账户转账","CLV","CLV","7cc57c9ab4d60f6991dd32827927266c90a7c165db6c71ea344c86a05e582b68","5DzGiGqFXM2TSa7vmYn4jEjdrDYobjGBBsEmHNPCEPEDsALX","5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT","maximum"),
         ]
     elif env_type == 1: #生产
         test_data = [

@@ -43,6 +43,10 @@ def job_test_user():
 def job_test_account():
     pytest.main(["-vs", path + "/Testcase/Test_Account", '--alluredir=Report/' + report_file])
 
+# Testcase rich_holder_check
+def job_test_rich():
+    pytest.main(["-vs", path + "/Testcase/Test_Top_Holders_Check", '--alluredir=Report/' + report_file])
+
 # Testcase Test_Transfer
 def job_transfer_transfer():
     pytest.main(["-vs", path + "/Testcase/Test_Cloud/Test_Transfer", '--alluredir=Report/' + report_file])
@@ -69,12 +73,13 @@ if __name__ == "__main__":
     scheduler = BlockingScheduler(timezone="Asia/Shanghai")
 
     # 间隔时间运行
-    scheduler.add_job(job_test_block,'interval',seconds=600)
+    scheduler.add_job(job_test_rich,'interval',seconds=600)
     scheduler.add_job(job_test_prices,'interval',seconds=600)
     # 固定时间运行
     scheduler.add_job(job_update_token, 'cron', hour=8, minute=00)
     scheduler.add_job(job_test_user, 'cron', hour=8, minute=1)
     scheduler.add_job(job_test_account, 'cron', hour=8, minute=20)
+    scheduler.add_job(job_test_rich, 'cron', hour=8, minute=25)
     scheduler.add_job(job_transfer_transfer, 'cron', hour=8, minute=40)
     scheduler.add_job(job_transfer_Swap, 'cron', hour=9, minute=20)
     scheduler.add_job(job_transfer_Stake, 'cron', hour=9, minute=40)

@@ -15,12 +15,10 @@ env_type = int(ReadConfig().get_env('type'))
 class BTC:
     @staticmethod
     def balance(address:str):
-        url = "https://blockchain.coinmarketcap.com/api/address?address="+address+"&symbol=BTC&start=1&limit=10"
+        url = "https://chain.api.btc.com/v3/address/" + address
 
         payload={}
-        headers = {
-        'Cookie': 'next-i18next=en'
-        }
+        headers = {}
 
         logger.info('\n'+"<-----balance----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'payload:'+json.dumps(payload))
         response = requests.request("GET", url, headers=headers, data=payload)
@@ -45,19 +43,7 @@ class BTC_Test:
         url = "https://mempool.emzy.de/testnet/api/address/" + address
 
         payload={}
-        headers = {
-        'authority': 'mempool.emzy.de',
-        'accept': 'application/json, text/plain, */*',
-        'accept-language': 'zh-CN,zh;q=0.9',
-        'referer': 'https://mempool.emzy.de/testnet/address/tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq',
-        'sec-ch-ua': '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"',
-        'sec-ch-ua-mobile': '?0',
-        'sec-ch-ua-platform': '"macOS"',
-        'sec-fetch-dest': 'empty',
-        'sec-fetch-mode': 'cors',
-        'sec-fetch-site': 'same-origin',
-        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
-        }
+        headers = {}
 
         logger.info('\n'+"<-----balance----->"+"\n"+"Url:"+url+'\n\n'+'Headers:'+json.dumps(headers)+'\n\n'+'payload:'+json.dumps(payload))
         response = requests.request("GET", url, headers=headers, data=payload)
@@ -526,7 +512,9 @@ class Balances_explore:
             elif env_type == 1:
                 response = BTC.balance(address)
                 if response.status_code == 200:
-                    balance = (Decimal(response.json()["chain_stats"]["funded_txo_sum"]) - Decimal(response.json()["chain_stats"]["spent_txo_sum"]))/Decimal(10**8)
+                    balance = (Decimal(response.json()["data"]["balance"]))/Decimal(10**8)
+                else:
+                    balance = None
         elif networkCode == "DOGE":
             response = DOGE.balance(address)
             assert response.status_code == 200
@@ -625,6 +613,9 @@ class Block_explore:
     
 
 if __name__ == '__main__':
+    # BTC.balance("34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo")
+    # print(BTC.block().json())
+    BTC_Test.balance("tb1q7ymdm79ryug7vttw4jrf87pdcmn67n3p9rgc5x")
     # decimal = [a.get("decimal") for a in ATOM.assets().json()["assets"] if a.get("denom") == "uatom"][0]
     # print(decimal)
     # balance = [b.get("amount") for b in ATOM.balance("cosmos1ku5klzmup3an5mxva6u9pr8jmhzrapa7lrtukh").json()["balances"] if b.get("denom") == "uatom"][0]
@@ -653,4 +644,4 @@ if __name__ == '__main__':
     # print(int(GOERLI.block().json()["result"],16))
     # print(Block_explore.block_height("BTC").json())
     # BTC_Test.block()
-    print(CLV_Test.block().json())
+    # print(CLV_Test.block().json())

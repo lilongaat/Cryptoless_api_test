@@ -16,12 +16,12 @@ class Test_create_custodial_account:
 
     if env_type == 0: #测试
         test_data = [
-            ("用户60s内请求登陆多次","15873664025@163.com",400,2300000),
+            ("用户60s内请求登陆多次","15873664020@163.com",400,2300000),
         ]
 
     elif env_type == 1: #生产
         test_data = [
-            ("用户60s内请求登陆多次","15873664025@163.com",400,2300000),
+            ("用户60s内请求登陆多次","15873664021@163.com",400,2300000),
         ]
 
     @allure.story("User Connect Fail!")
