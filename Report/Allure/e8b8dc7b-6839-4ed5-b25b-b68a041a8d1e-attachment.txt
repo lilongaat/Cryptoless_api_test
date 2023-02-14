@@ -1,0 +1,13 @@
+[32mINFO    [0m Common.Httpexplore:Httpexplore.py:498 2023-02-14 19:01:35.685120 | 
+<-----BN balance response----->
+
+Body:{"mins": 5, "price": "1509.01048891"}
+[32mINFO    [0m Common.Http:Http.py:420 2023-02-14 19:01:35.685120 | 
+<-----Query Assets----->
+Url:https://api.dhandho.xyz/vault/proxy/assets?symbol=ETH&source=&isFavorite=&size=10
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:423 2023-02-14 19:01:35.685120 | 
+<-----Query Assets Response----->
+{"current":1,"list":[{"category":"","change":"0.015668","createdTime":"2021-12-09T11:52:48.000Z","iconURL":"https://img.cryptoless.net/cryptos/eth.png","id":"1468790710745333761","isFavorite":false,"marketCap":184826145103.39206,"name":"Ethereum","price":1510.34,"source":1,"symbol":"ETH","updatedTime":"2022-06-22T10:23:57.000Z"}],"size":10,"total":1}
