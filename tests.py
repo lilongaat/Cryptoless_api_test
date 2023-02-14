@@ -11,12 +11,19 @@
 
 import os
 
-def get_pid(port):
-	#其中\"为转义"
-    pid = os.popen("netstat -nlp | grep :%s | awk '{print $7}' | awk -F\" / \" '{ print $1 }'" % (port)).read().split('/')[0]
-    return int(pid)
+def killport(port):
+    '''root authority is required'''
+    command='''kill -9 $(netstat -nlp | grep :'''+str(port)+''' | awk '{print $7}' | awk -F"/" '{ print $1 }')'''
+    os.system(command)
+    
+killport(62626)
 
-get_pid("50720")
+# def get_pid(port):
+# 	#其中\"为转义"
+#     pid = os.popen("netstat -nlp | grep :%s | awk '{print $7}' | awk -F\" / \" '{ print $1 }'" % (port)).read().split('/')[0]
+#     return int(pid)
+
+# get_pid("50720")
 
 # pid=os.system('netstat -aon|findstr "50720"')#25端口号
 # print(pid)#输出进程
