@@ -1,0 +1,22 @@
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-14 18:25:17.950192 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=BTC&address=tb1q5qe4xx0uc300fdqq5xe5mj6ku7x3m0y7epehkn&symbol=BTC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-14 18:25:17.950192 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"tb1q5qe4xx0uc300fdqq5xe5mj6ku7x3m0y7epehkn","createdTime":"2023-02-14T09:39:00.000Z","id":"1625429387271958530","networkCode":"BTC","quantity":"0.0001","symbol":"BTC","updatedTime":"2023-02-14T09:39:00.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-14 18:25:17.950192 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "BTC", "type": "transfer", "body": {"from": "tb1q5qe4xx0uc300fdqq5xe5mj6ku7x3m0y7epehkn", "to": "tb1qqrw8uz4j305w6fjr4mwng040sv7kz8hcczjfun", "symbol": "BTC", "amount": "0.00009801"}, "transactionParams": {"memo": "Xl3aRUoMNS"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:284 2023-02-14 18:25:17.950192 | 
+<-----Instructions Response Error----->
+400
+{"code":2102004,"message":"the fee 199 cannot be greater than the minfee 200"}

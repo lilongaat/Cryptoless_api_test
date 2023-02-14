@@ -1,0 +1,22 @@
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-14 18:56:32.424089 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=CLV&address=5DUeheqqCmPHcFXLm54QEecJWYbWbVj5oKKkUZ3poyk5Vxv2&symbol=CLV
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-14 18:56:32.424089 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"5DUeheqqCmPHcFXLm54QEecJWYbWbVj5oKKkUZ3poyk5Vxv2","createdTime":"2023-02-14T10:56:31.000Z","id":"1625448897711513601","networkCode":"CLV","quantity":"0.1","symbol":"CLV","updatedTime":"2023-02-14T10:56:31.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-14 18:56:32.424089 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "CLV", "type": "transfer", "body": {"from": "5DUeheqqCmPHcFXLm54QEecJWYbWbVj5oKKkUZ3poyk5Vxv2", "to": "5HWsR2E9YLKqfz6ybMufU5t1qyjUMzmBwFjppsaEwZHegViT", "symbol": "CLV", "amount": "0.09999"}, "transactionParams": {"memo": "NWZHYOoS9D"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:284 2023-02-14 18:56:32.424089 | 
+<-----Instructions Response Error----->
+400
+{"code":2100000,"message":"insufficient handling fee"}

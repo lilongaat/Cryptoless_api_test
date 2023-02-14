@@ -26,7 +26,7 @@ elif env_type == 1: # Release
 
 @allure.feature("Accounts Balances!")
 class Test_accounts_balances():
-    accounts = Conf.Config.reader_csv("/Users/lilong/Documents/Test_Api/Address/Top/DOT.csv",100)
+    accounts = Conf.Config.reader_csv("/Users/lilong/Documents/Test_Api/Address/Top/DOT.csv",20)
 
     @allure.story("DOT Rich_address(Top-100) Balances Check!")
     @allure.title('查询账户余额-{address}')

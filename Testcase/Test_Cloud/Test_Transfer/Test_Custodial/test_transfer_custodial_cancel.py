@@ -59,7 +59,6 @@ class Test_transfers_fail:
         with allure.step("查询账户holder信息"):
             holder = Http.HttpUtils.holders(networkCode=networkCode,symbol=symbol,address=from_add)
             assert holder.status_code ==200
-            quantity = holder.json()["list"][0]["quantity"]
 
         with allure.step("构建交易——instructions"):
             body = {

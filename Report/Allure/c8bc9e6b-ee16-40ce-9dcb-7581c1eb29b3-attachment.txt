@@ -1,0 +1,22 @@
+[32mINFO    [0m Common.Http:Http.py:439 2023-02-14 18:37:13.875817 | 
+<-----Query Holders----->
+Url:https://api.dhandho.xyz/vault/proxy/assets/holders/?networkCode=GOERLI&address=0x0b4f0984f8341bf707e520080dd393e6c53e0262&symbol=USDCC
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+
+
+[32mINFO    [0m Common.Http:Http.py:442 2023-02-14 18:37:13.875817 | 
+<-----Query Holders Response----->
+{"current":1,"list":[{"address":"0x0b4f0984f8341bf707e520080dd393e6c53e0262","createdTime":"2023-02-14T09:36:31.000Z","id":"1625428765056454658","networkCode":"GOERLI","quantity":"10","symbol":"USDCC","updatedTime":"2023-02-14T09:36:31.000Z"}],"size":10,"total":1}
+
+
+[32mINFO    [0m Common.Http:Http.py:278 2023-02-14 18:37:13.875817 | 
+<-----Instructions----->
+Url:https://api.dhandho.xyz/vault/instructions
+Headers:{"Content-Type": "application/json", "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjAxMDQzOTMwMjg3NDExMjAyIiwiZXhwIjoxNzAyMDg5NjAwLCJpYXQiOjE2NzA1NTM2MDAsInVzZXJJZCI6MTYwMTA0MzkzMDI4NzQxMTIwMn0.fZVc267JNsgy5tB_Wn89l2Zgd3ZgXJfaMg_T9lc3j-o"}
+Body:{"networkCode": "GOERLI", "type": "transfer", "body": {"from": "0x0b4f0984f8341bf707e520080dd393e6c53e0262", "to": "0xbdb3bd7b3f3daeadc58d00ef5f15ed9a476b8fe3", "symbol": "USDCC", "amount": "0.123"}, "transactionParams": {"memo": "mWeZV6CT70"}}
+
+
+[32mINFO    [0m Common.Http:Http.py:284 2023-02-14 18:37:13.875817 | 
+<-----Instructions Response Error----->
+400
+{"code":2100000,"message":"insufficient handling fee"}
