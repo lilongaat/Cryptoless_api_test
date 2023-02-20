@@ -15,35 +15,33 @@ from Common.Loguru import logger
 from Config.readconfig import ReadConfig
 env_type = int(ReadConfig().get_env('type'))
 
-# extarnal
-@allure.feature("Swap!")
+accounts = Conf.Config.reader_csv("/Users/lilong/Documents/Test_Api/Address/Top/GOERLI.csv",10)
+
+# safe
+@allure.feature("Transfers!")
 class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
-            # MATIC 
-            ("MATIC extarnal账户 SWAP:MATIC-USDC","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","MATIC","USDC","1","0.00012"),
-            ("MATIC extarnal账户 SWAP:USDC-MATIC","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","USDC","MATIC","1","0.00012"),
-            ("MATIC extarnal账户 SWAP:USDC-USDT","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","USDC","USDT","1","0.00012"),
-            ("MATIC extarnal账户 SWAP:USDT-USDC","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f","USDT","USDC","1","0.00012"),
+            # GOERLI
+            ("GOERLI safe2-2账户转账 nativecoin","GOERLI","USDCC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x2ec1ea96bbabda40b26d2c9b0781e7f6021afa0b",accounts,"0.00000000000001"),
+            # ("GOERLI safe2-2账户转账 nativecoin","GOERLI","GoerliETH","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17",accounts,"0.00000000000001"),
+            # ("GOERLI safe2-2账户转账 erc20coin","GOERLI","USDCC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17",accounts,"0.000000000000012"),
+            # ("GOERLI safe2-3账户转账 nativecoin","GOERLI","GoerliETH","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x240642bf8eb6e2c291f8a9bd21eb50cfe7dd5bdf",accounts,"0.00000000000002"),
+            # ("GOERLI safe2-3账户转账 erc20coin","GOERLI","USDCC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x240642bf8eb6e2c291f8a9bd21eb50cfe7dd5bdf",accounts,"0.000000000000022"),
         ]
     elif env_type == 1: #生产
-        test_data = [
-            # MATIC 
-            ("MATIC SWAP:MATIC-USDC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","MATIC","USDC","1","0.00012"),
-            ("MATIC SWAP:USDC-MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","USDC","MATIC","1","0.00012"),
-            ("MATIC SWAP:USDC-USDT","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939","USDC","USDT","1","0.00012"),
-        ]
+        test_data = []
 
-    @allure.story("External Swap Success!")
+    @allure.story("Safe Transfers Batch Success!")
     @allure.title('{test_title}')
-    @pytest.mark.parametrize('test_title,networkCode,privatekey,address,from_coin,to_coin,slippage,fromamount', test_data)
-    def test_custodial(self,test_title,networkCode,privatekey,address,from_coin,to_coin,slippage,fromamount):
+    @pytest.mark.parametrize('test_title,networkCode,symbol,privatekey,from_add,to_add,amount', test_data)
+    def test_custodial(self,test_title,networkCode,symbol,privatekey,from_add,to_add,amount):
 
         with allure.step("浏览器查询from账户balance信息"):
-            balance = Httpexplore.Balances_explore.query(networkCode,address,from_coin)
+            balance = Httpexplore.Balances_explore.query(networkCode,from_add,symbol)
                 
         with allure.step("查询from账户holder信息"):
-            holder = Http.HttpUtils.holders(networkCode=networkCode,symbol=from_coin,address=address)
+            holder = Http.HttpUtils.holders(networkCode=networkCode,symbol=symbol,address=from_add)
             assert holder.status_code ==200
             quantity = Decimal(holder.json()["list"][0]["quantity"])
 
@@ -55,15 +53,21 @@ class Test_transfers_success:
             del balance,quantity
 
         with allure.step("构建交易——instructions"):
+            recipients = []
+            for i in range(len(accounts)):
+                recipients.append(
+                    {
+                        "to":accounts[i],
+                        "amount":amount
+                    }
+                )
             body = {
                 "networkCode":networkCode,
-                "type":"swap",
+                "type":"MULTI_TRANSFER",
                 "body":{
-                    "address":address,
-                    "from":from_coin,
-                    "to":to_coin,
-                    "fromAmount":fromamount,
-                    "slippage":slippage
+                    "from":from_add,
+                    "symbol":symbol,
+                    "recipients":recipients
                 },
                 "transactionParams":{
                     "memo":''.join(random.sample(string.ascii_letters + string.digits, 10))
@@ -71,7 +75,7 @@ class Test_transfers_success:
             }
             transfer = Http.HttpUtils.instructions(body)
             assert transfer.status_code == 200
-            assert transfer.json()["_embedded"]["transactions"][0]["statusDesc"] == "BUILDING"
+            # assert transfer.json()["_embedded"]["transactions"][0]["statusDesc"] == "SIGNING"
 
             id = transfer.json()["_embedded"]["transactions"][0]["id"]
             requiredSignings = transfer.json()["_embedded"]["transactions"][0]["requiredSignings"]
@@ -96,6 +100,11 @@ class Test_transfers_success:
             assert send.status_code == 200
             assert send.json()["statusDesc"] == "PENDING"
 
+            hash = send.json()["hash"]
+
+        
+        # logger.error("\n\n"+networkCode+"--"+symbol+"--"+test_title+"\n"+from_add+"--"+quantity+"\n"+hash+"\n\n")
+
         with allure.step("通过id查询交易记录"):
             sleep(30)
             for n in range(10):
@@ -108,12 +117,11 @@ class Test_transfers_success:
                     sleep(30)
             sleep(5)
 
-
         with allure.step("浏览器查询from账户balance信息"):
-            balance = Httpexplore.Balances_explore.query(networkCode,address,from_coin)
+            balance = Httpexplore.Balances_explore.query(networkCode,from_add,symbol)
                 
         with allure.step("查询from账户holder信息"):
-            holder = Http.HttpUtils.holders(networkCode=networkCode,symbol=from_coin,address=address)
+            holder = Http.HttpUtils.holders(networkCode=networkCode,symbol=symbol,address=from_add)
             assert holder.status_code ==200
             quantity = Decimal(holder.json()["list"][0]["quantity"])
 

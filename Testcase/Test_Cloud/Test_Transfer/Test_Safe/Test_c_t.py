@@ -20,11 +20,11 @@ class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
             # GOERLI
-            ("GOERLI Safe创建+转入coin",["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],[""],"GOERLI","0x1eC2CE6108240118Ff2c66eC8AFAC28618D7e066"),
-            # ("GOERLI Safe创建+转入coin",[""],[""],"GOERLI","0x1eC2CE6108240118Ff2c66eC8AFAC28618D7e066"),
+            ("GOERLI Safe创建+转入coin",["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],[None],"GOERLI","0x1eC2CE6108240118Ff2c66eC8AFAC28618D7e066"),
+            # ("GOERLI Safe创建+转入coin",[None],[None],"GOERLI","0x1eC2CE6108240118Ff2c66eC8AFAC28618D7e066"),
 
             # MATIC
-            # ("MATIC Safe创建+转入coin",["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],[],"MATIC","0x2791bca1f2de4661ed88a30c99a7a9449aa84174"),
+            # ("MATIC Safe创建+转入coin",["0244fb46bba2e912f26a73126b89742ed7f521f593ee084953ae008172553a0113"],[None],"MATIC","0x2791bca1f2de4661ed88a30c99a7a9449aa84174"),
         ]
     elif env_type == 1: #生产
         test_data = []
@@ -41,7 +41,7 @@ class Test_transfers_success:
             from_add = acc.json()["address"]
 
         with allure.step("母账户转账nativecoin到多签账户"):
-            Httpcore.HttpCoreUtils.core_parent_account_transfer_nativecoin(networkCode,from_add,"4000000000000000")
+            Httpcore.HttpCoreUtils.core_parent_account_transfer_nativecoin(networkCode,from_add,"100000000000000")
 
         with allure.step("母账户转账erc20coin:USDC到多签账户"):
             Httpcore.HttpCoreUtils.core_parent_account_transfer_erc20coin(networkCode,tokenaddress,from_add,"1000000000000000000")

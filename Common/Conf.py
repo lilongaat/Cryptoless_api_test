@@ -158,7 +158,7 @@ if __name__ == '__main__':
     privkey1 = 'dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da'
     # privkey2 = '2f0b3e997953188f8dd6c1eca798be943f6fabb783e2b2cc82275e98a8126442'
     # privkey3 = 'dfdd81763f70078be8c85fe2454de11e7bcf98696c748d133dea50ec7c166a6f'
-    hash = 'bb0e3e7296d8d979d8c2d7080773eee229c2fbc37c2c815b10c0ec4d5fe3e1de'
+    hash = '9fa2592f9ce5c9c33daf2abf5dcd1035a8d1c3c64128ff9f954df2c8f154a84d'
     print(Config.sign(privkey1, hash))
     # print(Config.sign(privkey2, hash))
     # print(Config.sign(privkey3, hash))

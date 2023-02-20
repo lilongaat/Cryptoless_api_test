@@ -81,7 +81,7 @@ if __name__ == "__main__":
     scheduler.add_job(job_update_token, 'cron', hour=8, minute=00)
     scheduler.add_job(job_test_user, 'cron', hour=8, minute=1)
     scheduler.add_job(job_test_account, 'cron', hour=8, minute=20)
-    scheduler.add_job(job_test_rich, 'cron', hour=8, minute=25)
+    scheduler.add_job(job_test_rich, 'cron', hour=19, minute=14)
     scheduler.add_job(job_transfer_transfer, 'cron', hour=8, minute=40)
     scheduler.add_job(job_transfer_Swap, 'cron', hour=9, minute=20)
     scheduler.add_job(job_transfer_Stake, 'cron', hour=9, minute=40)

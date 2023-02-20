@@ -9,36 +9,33 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__)))))))
-from Common import Http, Httpexplore, Conf
+from Common import Http, Conf, Httpexplore
 from Common.Loguru import logger
 
 from Config.readconfig import ReadConfig
 env_type = int(ReadConfig().get_env('type'))
 
-# custodail
+
 @allure.feature("Swap!")
 class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
-            # MATIC 
-            ("MATIC custodail账户 SWAP:MATIC-USDC","MATIC","0x651a23f7bed98b52c7829ad668a4836c48064850","MATIC","USDC","1","0.00012"),
-            ("MATIC custodail账户 SWAP:USDC-MATIC","MATIC","0x651a23f7bed98b52c7829ad668a4836c48064850","USDC","MATIC","1","0.00012"),
-            ("MATIC custodail账户 SWAP:USDC-USDT","MATIC","0x651a23f7bed98b52c7829ad668a4836c48064850","USDC","USDT","1","0.00012"),
-            ("MATIC custodail账户 SWAP:USDT-USDC","MATIC","0x651a23f7bed98b52c7829ad668a4836c48064850","USDT","USDC","1","0.00012"),
+            # MATIC
+            ("MATIC safe2-2 SWAP:MATIC->USDC 余额不足","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xb6655b550d7f53e2d9731df849ad484d369d3932","MATIC","USDC","1","0.0000002",400,2102001),
+            ("MATIC safe2-2 SWAP:USDC->MATIC 余额不足","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xb6655b550d7f53e2d9731df849ad484d369d3932","USDC","MATIC","1","0.20000",400,2102001),
+            ("MATIC safe2-2 SWAP:MATIC->USDC 手续费不足","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xb6655b550d7f53e2d9731df849ad484d369d3932","MATIC","USDC","1","0.00000009999",400,210000),
+            ("MATIC safe2-2 SWAP:USDC->MATIC 手续费不足","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xb6655b550d7f53e2d9731df849ad484d369d3932","USDC","MATIC","1","0.01",400,210000),
+
+            ("MATIC safe2-3 SWAP:MATIC->USDC 余额不足","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xc29e1815e7cf466b55ed5fcced090656a3f36300","MATIC","USDC","1","0.00002",400,2102001),
+            ("MATIC safe2-3 SWAP:USDC->MATIC 余额不足","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xc29e1815e7cf466b55ed5fcced090656a3f36300","USDC","MATIC","1","0.21",400,2102001),
         ]
     elif env_type == 1: #生产
-        test_data = [
-            # MATIC 
-            ("MATIC custodail账户 SWAP:MATIC-USDC","MATIC","0xe458fd3e2515d42cbcd52a89b52fb662bf052143","MATIC","USDC","1","0.000012"),
-            ("MATIC custodail账户 SWAP:USDC-MATIC","MATIC","0xe458fd3e2515d42cbcd52a89b52fb662bf052143","USDC","MATIC","1","0.000012"),
-            ("MATIC custodail账户 SWAP:USDC-USDT","MATIC","0xe458fd3e2515d42cbcd52a89b52fb662bf052143","USDC","USDT","1","0.000012"),
-            ("MATIC custodail账户 SWAP:USDT-USDC","MATIC","0xe458fd3e2515d42cbcd52a89b52fb662bf052143","USDT","USDC","1","0.000012"),
-        ]
+        test_data = []
 
-    @allure.story("Custodial Swap Success!")
+    @allure.story("Safe Swap Success!")
     @allure.title('{test_title}')
-    @pytest.mark.parametrize('test_title,networkCode,address,from_coin,to_coin,slippage,fromamount', test_data)
-    def test_custodial(self,test_title,networkCode,address,from_coin,to_coin,slippage,fromamount):
+    @pytest.mark.parametrize('test_title,networkCode,privatekey,address,from_coin,to_coin,slippage,fromamount,status_code,code', test_data)
+    def test_custodial(self,test_title,networkCode,privatekey,address,from_coin,to_coin,slippage,fromamount,status_code,code):
 
         with allure.step("浏览器查询from账户balance信息"):
             balance = Httpexplore.Balances_explore.query(networkCode,address,from_coin)
@@ -55,7 +52,7 @@ class Test_transfers_success:
             assert balance == quantity
             del balance,quantity
 
-        with allure.step("构建交易——instructions"):
+        with allure.step("core构建交易——instructions"):
             body = {
                 "networkCode":networkCode,
                 "type":"swap",
@@ -71,16 +68,11 @@ class Test_transfers_success:
                 }
             }
             transfer = Http.HttpUtils.instructions(body)
-            assert transfer.status_code == 200
-            assert transfer.json()["_embedded"]["transactions"][0]["statusDesc"] == "SIGNED"
+            assert transfer.status_code == status_code
+            assert transfer.json()["code"] == code
 
-            id = transfer.json()["_embedded"]["transactions"][0]["id"]
+            
 
-        with allure.step("广播交易"):
-            send = Http.HttpUtils.send(id)
-            assert send.status_code == 200
-            assert send.json()["statusDesc"] == "PENDING"
-            del balance,quantity
 
 if __name__ == '__main__':
     path = os.path.abspath(__file__) + ""

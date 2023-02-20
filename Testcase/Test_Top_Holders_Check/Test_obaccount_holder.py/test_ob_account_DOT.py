@@ -62,4 +62,4 @@ class Test_accounts_balances():
 if __name__ == '__main__':
     path = os.path.abspath(__file__) + ""
     pytest.main(["-vs", path,'--alluredir=Report/Allure'])
-    os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')
+    # os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

@@ -95,6 +95,46 @@ class HttpUtils:
             return res
 
     @staticmethod
+    # 查询联系人
+    def contacts_query(Authorization:str=token):
+        url = url_ + '/vault/contacts'
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        body = {}
+        logger.info('\n'+"<-----Contacts Query----->"+"\n"+"Url:"+url+'\n'+'Headers:'+json.dumps(headers)+'\n'+'Body:'+json.dumps(body)+'\n\n')
+        res = requests.get(url=url, headers=headers,json=body, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Contacts Query Response----->"+"\n"+(res.text)+"\n\n")
+            return res
+        else:
+            logger.info('\n'+"<-----Contacts Query Response Error----->"+"\n"+(res.text)+"\n\n")
+            return res
+
+    @staticmethod
+    # 创建联系人
+    def contacts_add(name:str, networkCode:str, address:str, Authorization:str=token):
+        url = url_ + '/vault/contacts'
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+        body = {
+            "name": name,
+            "networkCode": networkCode,
+            "address": address
+        }
+        logger.info('\n'+"<-----Contacts Query----->"+"\n"+"Url:"+url+'\n'+'Headers:'+json.dumps(headers)+'\n'+'Body:'+json.dumps(body)+'\n\n')
+        res = requests.post(url=url, headers=headers,json=body, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Contacts Query Response----->"+"\n"+(res.text)+"\n\n")
+            return res
+        else:
+            logger.info('\n'+"<-----Contacts Query Response Error----->"+"\n"+(res.text)+"\n\n")
+            return res
+
+    @staticmethod
     # 查询账户信息
     def accounts(networkCode:str="", address:str="", type:str="",size:str = "20", Authorization=token):
         url = url_ + '/vault/accounts?networkCode=' + networkCode + '&address=' + address + '&type=' + type + '&size=' + size
@@ -160,7 +200,7 @@ class HttpUtils:
 
     @staticmethod
     # 创建安全账户
-    def create_safe_account(name: str, networkCode: str, owner: str, recovery:str="" , Authorization=token):
+    def create_safe_account(name: str, networkCode: str, owner: str, recovery:str=None , Authorization=token):
         url = url_ + '/vault/accounts/safe'
         headers = {
             "Content-Type": "application/json",
@@ -599,4 +639,5 @@ if __name__ == '__main__':
     # HttpUtils.holders(address="0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17")
     # HttpUtils.transactions_byid("1610518001510273025")
     # HttpUtils.anonymous()
-    print(type(HttpUtils.assets(symbol="BTC").json()['list']))
+    # print(type(HttpUtils.assets(symbol="BTC").json()['list']))
+    HttpUtils.contacts_query()

@@ -9,14 +9,14 @@
 # print(w)
 
 
-import os
+# import os
 
-def killport(port):
-    '''root authority is required'''
-    command='''kill -9 $(netstat -nlp | grep :'''+str(port)+''' | awk '{print $7}' | awk -F"/" '{ print $1 }')'''
-    os.system(command)
+# def killport(port):
+#     '''root authority is required'''
+#     command='''kill -9 $(netstat -nlp | grep :'''+str(port)+''' | awk '{print $7}' | awk -F"/" '{ print $1 }')'''
+#     os.system(command)
     
-killport(62626)
+# killport(62626)
 
 # def get_pid(port):
 # 	#其中\"为转义"

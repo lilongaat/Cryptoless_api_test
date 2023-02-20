@@ -31,8 +31,8 @@ class Test_transfers_success:
             ("GOERLI safe2-3账户转账 erc20coin","GOERLI","USDCC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x240642bf8eb6e2c291f8a9bd21eb50cfe7dd5bdf","0xa7a9e710f9a3b4184d4f8b7d379cec262f2382c2","0.00123"),
 
             # MATIC 不开
-            ("MATIC safe2-2账户转账 nativecoin","MATIC","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x585eab16d5494f01bae462d4719d12214a443eec","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","0.000012"),
-            ("MATIC safe2-2账户转账 erc20coin","MATIC","USDC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x585eab16d5494f01bae462d4719d12214a443eec","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","0.00123"),
+            # ("MATIC safe2-2账户转账 nativecoin","MATIC","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x585eab16d5494f01bae462d4719d12214a443eec","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","0.000012"),
+            # ("MATIC safe2-2账户转账 erc20coin","MATIC","USDC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x585eab16d5494f01bae462d4719d12214a443eec","0x3d7f18ad2cea9b59e54dfaf09b327c1ccd899591","0.00123"),
 
             #IRIS
             ("IRIS safe2-2账户转账","IRIS","IRIS","d10003ebe2876bd53bf2bb2200eb873a089520a3395b63a4f04330c00e9a885b","iaa1laewhl28xx9fujqawfnmt4wls2dgyvs6qz7vle","iaa15h0lvaa6slvj0hg4d64548j2c5fds2zv8tkvgs","0.000101"),
@@ -89,6 +89,7 @@ class Test_transfers_success:
 
         with allure.step("账户余额相等验证 浏览器查询==holder"):
             assert balance == quantity
+            del balance,quantity
 
         with allure.step("构建交易——instructions"):
             body = {

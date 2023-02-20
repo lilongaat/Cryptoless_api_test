@@ -32,9 +32,7 @@ class Test_transfers_success:
         test_data = [
             # ETH
 
-            # BSC 太贵了暂时不开
-            # ("BSC safe账户转账nativecoin","BSC","BNB","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x49624761fca25f4782f88dc67aac8e8a48f54411","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.0000014",400,2300000),
-            # ("BSC safe账户转账erc20coin","BSC","USDC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x49624761fca25f4782f88dc67aac8e8a48f54411","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.00000141",400,2300000),
+            # BSC 
 
             # MATIC
             ("MATIC safe账户转账nativecoin","MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x66c1d34c273cc09df9072f49aeba4b09e017bc5c","0x3d7f18Ad2cEa9B59E54dFAf09b327C1CCd899591","0.0000015",400,2300000),
@@ -44,7 +42,7 @@ class Test_transfers_success:
     @allure.story("safe Transfers Fail!")
     @allure.title('{test_title}')
     @pytest.mark.parametrize('test_title,networkCode,symbol,privatekey,from_add,to_add,amount,status_code_check,code_check', test_data)
-    def test_custodial(self,test_title,networkCode,symbol,privatekey,from_add,to_add,amount,status_code_check,code_check):
+    def test_safe(self,test_title,networkCode,symbol,privatekey,from_add,to_add,amount,status_code_check,code_check):
 
         with allure.step("浏览器查询from账户balance信息"):
             balance = Httpexplore.Balances_explore.query(networkCode,from_add,symbol)
@@ -59,6 +57,7 @@ class Test_transfers_success:
 
         with allure.step("账户余额相等验证 浏览器查询==holder"):
             assert balance == quantity
+            del balance,quantity
 
         with allure.step("构建交易——instructions"):
             body = {

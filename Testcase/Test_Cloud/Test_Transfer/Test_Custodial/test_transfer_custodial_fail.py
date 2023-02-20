@@ -14,7 +14,7 @@ from Common.Loguru import logger
 from Config.readconfig import ReadConfig
 env_type = int(ReadConfig().get_env('type'))
 
-# custodial
+# custodial 异常转账
 @allure.feature("Transfers!")
 class Test_transfers_success:
     if env_type == 0: #测试
