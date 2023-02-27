@@ -37,7 +37,7 @@ def job_test_prices():
 
 # Testcase Test_User
 def job_test_user():
-    pytest.main(["-vs", path + "/Testcase/Test_User",'--clean-alluredir', '--alluredir=Report/' + report_file])
+    pytest.main(["-vs", path + "/Testcase/Test_User", '--alluredir=Report/' + report_file])
 
 # Testcase Test_Account
 def job_test_account():
@@ -45,18 +45,18 @@ def job_test_account():
 
 # Testcase rich_holder_check
 def job_test_rich():
-    pytest.main(["-vs", path + "/Testcase/Test_Top_Holders_Check", '--alluredir=Report/' + report_file])
+    pytest.main(["-vs", path + "/Testcase/Test_Top_Holders_Check/Test_obaccount_holder", '--alluredir=Report/' + report_file])
 
 # Testcase Test_Transfer
-def job_transfer_transfer():
+def job_transfer():
     pytest.main(["-vs", path + "/Testcase/Test_Cloud/Test_Transfer", '--alluredir=Report/' + report_file])
 
 # Testcase Test_Stake
-def job_transfer_Stake():
+def job_Stake():
     pytest.main(["-vs", path + "/Testcase/Test_Cloud/Test_Stake", '--alluredir=Report/' + report_file])
 
 # Testcase Test_Swap
-def job_transfer_Swap():
+def job_Swap():
     pytest.main(["-vs", path + "/Testcase/Test_Cloud/Test_Swap", '--alluredir=Report/' + report_file])
 
 # port
@@ -82,9 +82,9 @@ if __name__ == "__main__":
     scheduler.add_job(job_test_user, 'cron', hour=8, minute=1)
     scheduler.add_job(job_test_account, 'cron', hour=8, minute=20)
     scheduler.add_job(job_test_rich, 'cron', hour=19, minute=14)
-    scheduler.add_job(job_transfer_transfer, 'cron', hour=8, minute=40)
-    scheduler.add_job(job_transfer_Swap, 'cron', hour=9, minute=20)
-    scheduler.add_job(job_transfer_Stake, 'cron', hour=9, minute=40)
+    scheduler.add_job(job_transfer, 'cron', hour=8, minute=40)
+    scheduler.add_job(job_Swap, 'cron', hour=9, minute=20)
+    scheduler.add_job(job_Stake, 'cron', hour=9, minute=40)
     scheduler.add_job(job_kill_port,'cron', hour=10, minute=00)
     scheduler.add_job(job_allure, 'cron', hour=10, minute=1)
     scheduler.start()

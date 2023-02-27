@@ -29,7 +29,13 @@ class Test_transfers_success:
             ("GOERLI safe2-2账户批量转账 erc20coin 手续费不足","GOERLI","USDCC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xBA900f26FDe478A75E4752813df547DbB2dE1414",accounts,"0.001",400,2100000),
         ]
     elif env_type == 1: #生产
-        test_data = []
+        test_data = [
+            # MATIC
+            ("MATIC safe2-2账户批量转账 nativecoin 余额不足","MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x3b9570c5a0a689d2b05c229fea25527f744ef2fe",accounts,"0.000042",400,2102001),
+            ("MATIC safe2-2账户批量转账 nativecoin 手续费不足","MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x3b9570c5a0a689d2b05c229fea25527f744ef2fe",accounts,"0.000041",400,2100000),
+            ("MATIC safe2-2账户批量转账 erc20coin 余额不足","MATIC","USDC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x3b9570c5a0a689d2b05c229fea25527f744ef2fe",accounts,"0.011",400,2102001),
+            ("MATIC safe2-2账户批量转账 erc20coin 手续费不足","MATIC","USDC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x3b9570c5a0a689d2b05c229fea25527f744ef2fe",accounts,"0.000001",400,2100000),
+        ]
 
     @allure.story("Safe Transfers Batch Fail!")
     @allure.title('{test_title}')
@@ -49,7 +55,6 @@ class Test_transfers_success:
 
         with allure.step("账户余额相等验证 浏览器查询==holder"):
             assert balance == quantity
-            del balance,quantity
             del balance,quantity
 
         with allure.step("构建交易——instructions"):

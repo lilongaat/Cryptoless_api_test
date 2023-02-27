@@ -141,5 +141,5 @@ class Test_transfers_success:
 
 if __name__ == '__main__':
     path = os.path.abspath(__file__) + ""
-    pytest.main(["-vs", path,'--alluredir=Report/Allure'])
-    # os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')
+    pytest.main(["-vs", path,'--clean-alluredir','--alluredir=Report/Allure'])
+    os.system(f'allure serve /Users/lilong/Documents/Test_Api/Report/Allure')

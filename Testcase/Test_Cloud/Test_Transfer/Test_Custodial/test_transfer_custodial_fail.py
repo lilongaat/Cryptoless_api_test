@@ -34,7 +34,7 @@ class Test_transfers_success:
             ("BTC Custodial账户转账 amount超出余额","BTC","BTC","tb1q78qch48dw8fqc4xc8f374y88f93ys4xldqvunt","tb1qagkvxdz2zq76atvr0rzh8n9lewjmlm25umq0xq","0.00000002",400,2102001),
             
             # DOGE
-            ("DOGE Custodial账户转账 dust","DOGE","DOGE","DS2cpSDvZXHzhZEyBEbTNuQTgonoHkFM4n","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.09999999",400,2100000),
+            ("DOGE Custodial账户转账 dust","DOGE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.1",400,2100000),
 
             # GOERLI
             ("GOERLI Custodial账户转账 nativecoin 超出精度","GOERLI","GoerliETH","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","0xa7A9E710f9A3B4184D4F8B7d379CEC262f2382c2","0.0000000000000000009",400,2100000),
@@ -57,16 +57,16 @@ class Test_transfers_success:
             ("BTC Custodial账户转账 账户没钱","BTC","BTC","bc1qhw7kvldh52n3glud3mf94uundm2pwkznyuqyv3","bc1qhw7kvldh52n3glud3mf94uundm2pwkznyuqyv3","0.0000001",400,2102001),
 
             # # DOGE
-            ("DOGE Custodial账户转账 networkCode空","","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.00001",400,2100000),
-            ("DOGE Custodial账户转账 networkCode不存在","DOGEE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.00001",404,2200000),
-            ("DOGE Custodial账户转账 symbol空","DOGE","","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.00001",400,2300000),
-            ("DOGE Custodial账户转账 symbol不存在","DOGE","DOGEE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.00001",400,2200000),
-            ("DOGE Custodial账户转账 symbol不在网络下","DOGE","BTC","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.00001",400,2200000),
-            ("DOGE Custodial账户转账 from空","DOGE","DOGE","","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.00001",400,2300000),
-            ("DOGE Custodial账户转账 from不属于该用户","DOGE","DOGE","DDogepartyxxxxxxxxxxxxxxxxxxw1dfzr","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.000002",404,2200000),
-            ("DOGE Custodial账户转账 from地址不匹配网络","DOGE","DOGE","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.000001",404,2200000),
-            ("DOGE Custodial账户转账 to空","DOGE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","","0.00001",400,2300000),
-            ("DOGE Custodial账户转账 to地址不匹配网络","DOGE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","0.00001",400,2400000),
+            ("DOGE Custodial账户转账 networkCode空","","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.11",400,2100000),
+            ("DOGE Custodial账户转账 networkCode不存在","DOGEE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.11",404,2200000),
+            ("DOGE Custodial账户转账 symbol空","DOGE","","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.11",400,2300000),
+            ("DOGE Custodial账户转账 symbol不存在","DOGE","DOGEE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.11",400,2200000),
+            ("DOGE Custodial账户转账 symbol不在网络下","DOGE","BTC","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.11",400,2200000),
+            ("DOGE Custodial账户转账 from空","DOGE","DOGE","","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.11",400,2300000),
+            ("DOGE Custodial账户转账 from不属于该用户","DOGE","DOGE","DDogepartyxxxxxxxxxxxxxxxxxxw1dfzr","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.11",404,2200000),
+            ("DOGE Custodial账户转账 from地址不匹配网络","DOGE","DOGE","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.11",404,2200000),
+            ("DOGE Custodial账户转账 to空","DOGE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","","0.11",400,2300000),
+            ("DOGE Custodial账户转账 to地址不匹配网络","DOGE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","0x18b50a6c8c4c158572a2c9d70ed5e7b76d425aab","0.11",400,2400000),
             ("DOGE Custodial账户转账 amount空","DOGE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","",400,2300000),
             ("DOGE Custodial账户转账 amount超出余额","DOGE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","100",400,2102001),
             ("DOGE Custodial账户转账 amount超出精度","DOGE","DOGE","D9vakMz4cLhRXjjQyhSxMX7Wg3xmoFMeQ6","D9HfYYym4Ca49VE9FTTvmucCcyHTPspA3j","0.000000001",400,2100000),

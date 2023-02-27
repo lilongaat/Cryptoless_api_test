@@ -28,7 +28,11 @@ class Test_transfers_success:
             ("GOERLI External账户批量转账 erc20coin","GOERLI","USDCC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xe525E7cd17f6Dc950492755A089E452fd5d9d44f",accounts,"0.000000000000000002"),
         ]
     elif env_type == 1: #生产
-        test_data = []
+        test_data = [
+            # MATIC
+            ("MATIC External账户批量转账 nativecoin","MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939",accounts,"0.000000000000000001"),
+            ("MATIC External账户批量转账 erc20coin","MATIC","USDC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x9b532cf5f662e51ba643672797ad3ec1a60bb939",accounts,"0.000001"),
+        ]
 
     @allure.story("External Transfers Batch Success!")
     @allure.title('{test_title}')

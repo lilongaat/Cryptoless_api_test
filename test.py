@@ -59,3 +59,25 @@
     
 #     scheduler.add_job(job, 'cron', hour=10, minute=54)
 #     scheduler.start()
+
+from web3 import Web3,eth
+import json
+
+providerUrl = "https://eth-goerli.g.alchemy.com/v2/hXtA8rl2Az9u296OQKYgkdOgWj-AmLzm"
+
+w3 = Web3(Web3.HTTPProvider(providerUrl, request_kwargs={'timeout': 60}))
+# print(w3.isConnected())
+
+address = "0xC29E1815E7cf466b55ed5fCceD090656A3F36300"
+
+blocknumber = eth.Eth(w3).blockNumber
+balances = eth.Eth(w3).getBalance(address,"latest")
+nonce = eth.Eth(w3).getTransactionCount(address,"pending")
+tx = eth.Eth(w3).getTransaction("0x48818854c901b5a885a4074e0386d2d6a3637e8e9f73a5c72601fbd466800d3c")
+
+print("节点块高:" + str(blocknumber))
+# print("账户余额:" + str(balances))
+# print("账户Nonce:" + str(nonce))
+# print((tx))
+
+

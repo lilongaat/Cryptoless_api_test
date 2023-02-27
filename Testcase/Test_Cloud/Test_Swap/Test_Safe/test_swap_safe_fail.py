@@ -21,16 +21,27 @@ class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
             # MATIC
-            ("MATIC safe2-2 SWAP:MATIC->USDC 余额不足","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xb6655b550d7f53e2d9731df849ad484d369d3932","MATIC","USDC","1","0.0000002",400,2102001),
-            ("MATIC safe2-2 SWAP:USDC->MATIC 余额不足","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xb6655b550d7f53e2d9731df849ad484d369d3932","USDC","MATIC","1","0.20000",400,2102001),
-            ("MATIC safe2-2 SWAP:MATIC->USDC 手续费不足","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xb6655b550d7f53e2d9731df849ad484d369d3932","MATIC","USDC","1","0.00000009999",400,210000),
-            ("MATIC safe2-2 SWAP:USDC->MATIC 手续费不足","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xb6655b550d7f53e2d9731df849ad484d369d3932","USDC","MATIC","1","0.01",400,210000),
+            ("MATIC safe2-2 激活+SWAP:MATIC->USDC 未支持","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xb6655b550d7f53e2d9731df849ad484d369d3932","MATIC","USDC","1","0.0000002",400,2102001),
+            ("MATIC safe2-2 激活+SWAP:USDC->MATIC 未支持","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xb6655b550d7f53e2d9731df849ad484d369d3932","USDC","MATIC","1","0.20000",400,2102005),
+            ("MATIC safe2-2 激活+SWAP:MATIC->USDC 未支持","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xb6655b550d7f53e2d9731df849ad484d369d3932","MATIC","USDC","1","0.00000009999",400,2102005),
+            ("MATIC safe2-2 激活+SWAP:USDC->MATIC 未支持","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xb6655b550d7f53e2d9731df849ad484d369d3932","USDC","MATIC","1","0.01",400,2102005),
 
-            ("MATIC safe2-3 SWAP:MATIC->USDC 余额不足","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xc29e1815e7cf466b55ed5fcced090656a3f36300","MATIC","USDC","1","0.00002",400,2102001),
-            ("MATIC safe2-3 SWAP:USDC->MATIC 余额不足","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xc29e1815e7cf466b55ed5fcced090656a3f36300","USDC","MATIC","1","0.21",400,2102001),
+            # ("MATIC safe2-3 激活+SWAP:MATIC->USDC 余额不足","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xc29e1815e7cf466b55ed5fcced090656a3f36300","MATIC","USDC","1","0.00002",400,2102001),
+            # ("MATIC safe2-3 激活+SWAP:USDC->MATIC 余额不足","MATIC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0xc29e1815e7cf466b55ed5fcced090656a3f36300","USDC","MATIC","1","0.21",400,2102001),
         ]
     elif env_type == 1: #生产
-        test_data = []
+        test_data = [
+            # MATIC
+            ("MATIC safe2-2 激活+SWAP:MATIC->USDC 未支持","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0xe4b6def3fe8008830f08707eb63eb362e9aa3b61","MATIC","USDC","1","0.00041378165394182",400,2102001),
+            ("MATIC safe2-2 激活+SWAP:USDC->MATIC 未支持","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0xe4b6def3fe8008830f08707eb63eb362e9aa3b61","USDC","MATIC","1","0.20000",400,2102005),
+            ("MATIC safe2-2 激活+SWAP:MATIC->USDC 未支持","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0xe4b6def3fe8008830f08707eb63eb362e9aa3b61","MATIC","USDC","1","0.00041378",400,2102005),
+            ("MATIC safe2-2 激活+SWAP:USDC->MATIC 未支持","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0xe4b6def3fe8008830f08707eb63eb362e9aa3b61","USDC","MATIC","1","0.05",400,2102005),
+
+            # ("MATIC safe2-3 SWAP:MATIC->USDC 余额不足","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x3b9570c5a0a689d2b05c229fea25527f744ef2fe","MATIC","USDC","1","0.00041378165394182",400,2102001),
+            # ("MATIC safe2-3 SWAP:USDC->MATIC 余额不足","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x3b9570c5a0a689d2b05c229fea25527f744ef2fe","USDC","MATIC","1","0.20000",400,2102001),
+            # ("MATIC safe2-3 SWAP:MATIC->USDC 手续费不足","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x3b9570c5a0a689d2b05c229fea25527f744ef2fe","MATIC","USDC","1","0.00041378",400,2100000),
+            # ("MATIC safe2-3 SWAP:USDC->MATIC 手续费不足","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x3b9570c5a0a689d2b05c229fea25527f744ef2fe","USDC","MATIC","1","0.05",400,2100000),
+        ]
 
     @allure.story("Safe Swap Success!")
     @allure.title('{test_title}')

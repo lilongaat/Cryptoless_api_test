@@ -316,6 +316,6 @@ def rich_address_clv(page_num:int): # 25Xpage_num
 # rich_address_bsc(100)
 # rich_address_atom(1000)
 # rich_address_matic(100)
-# rich_address_eth(100)
+rich_address_eth(100)
 # rich_address_dot(100)
-rich_address_clv(100)
+# rich_address_clv(100)

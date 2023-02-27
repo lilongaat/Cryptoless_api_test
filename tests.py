@@ -36,3 +36,48 @@
 # print(out)#输出程序名字
 # out=os.system('taskkill /f /t /im MESMTPC.exe')#MESMTPC.exe程序名字
 # print(out)#
+
+# import websocket
+
+# def on_message(wsapp, message):
+#     print(message)
+
+# host = "ws://54.169.157.249:8888/context/webhook"
+# wsapp = websocket.WebSocketApp(host,
+# subprotocols=["eyJib2R5IjoiV2ViMyBUb2tlbiBWZXJzaW9uOiAyXG5Ob25jZTogMTYwMTA0MzkzMDI4NzQxMTIwMlxuSXNzdWVkIEF0OiBGcmksIDkgRGVjIDIwMjIgMDI6Mzk6NTMgR01UXG5FeHBpcmF0aW9uIFRpbWU6IE1vbiwgNiBEZWMgMjAzMiAwMjozOTo1MyBHTVQiLCJzaWduYXR1cmUiOiIweGU1OWE1Nzk4OGNhZWU4NmFmYzA3NzlhOTE4MDA5MDRmNjc3NmUxZGMxYTc5NGE2MjllY2Y5YmI0ZjAyZDllYjcwZDBiMGZiNDAxNjQ4NTc5ZTFiZDkzMmU2NmU0NjdjMzFkMDlmOGNjM2EwOGVjN2U1NGY2ZTJhNTM5ZWVjNTA5MWMifQ=="], on_message=on_message)
+# wsapp.run_forever()  
+
+
+
+
+
+
+# from ecdsa import SigningKey, SECP256k1
+
+# sk = SigningKey.generate(curve=SECP256k1)
+# vk = sk.verifying_key
+
+# msg = b"Some arbitrary message"
+# signature = sk.sign(msg)
+
+# print("Signing (Private) key: ", sk.to_string().hex())
+# print("Verifying (Public) key: ", vk.to_string().hex())
+# print("Signature: ", signature.hex())
+# print(vk.verify(signature, msg))
+
+
+
+from eth_keys import keys
+
+pk = keys.PrivateKey(b'\x0c' * 32)
+vk = pk.public_key
+add = vk.to_checksum_address()
+signature = pk.sign_msg(b'a message')
+
+print('pk:',pk)
+print('vk:',vk)
+print('add:',add)
+print('signature:',signature)
+
+vk2 = signature.recover_public_key_from_msg(b'a message')
+print('vk2:',vk2)

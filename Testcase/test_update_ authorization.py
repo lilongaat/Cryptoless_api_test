@@ -15,11 +15,13 @@ env_type = int(ReadConfig().get_env('type'))
 class Test_create_custodial_account:
 
     if env_type == 0: #测试
-        test_data = []
+        test_data = [
+            ("用户登陆成功刷新token","test@qq.com")
+        ]
 
     elif env_type == 1: #生产
         test_data = [
-            ("用户登陆成功","lilongaat@gmail.com")
+            ("用户登陆成功刷新token","lilongaat@gmail.com")
         ]
 
     @allure.story("User Update Authorization!")
@@ -38,6 +40,7 @@ class Test_create_custodial_account:
             confirm = Http.HttpUtils.connect_confirm(email,oneTimePassword=verifycode)
             assert confirm.status_code == 200
             token_vaule = confirm.json()['token']
+            logger.debug(token_vaule)
 
         with allure.step("修改confing.ini文件"):
             WriteConfig.update_config('token',token_vaule)

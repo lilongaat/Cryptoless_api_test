@@ -40,7 +40,7 @@ class Test_transfers_success:
             ("MATIC custodail账户 SWAP:MATIC-USDC 超出精度","MATIC","0xe458fd3e2515d42cbcd52a89b52fb662bf052143","MATIC","USDC","1","0.0000000000000000001",400,2100000),
             ("MATIC custodail账户 SWAP:USDC-MATIC 超出余额","MATIC","0xe458fd3e2515d42cbcd52a89b52fb662bf052143","USDC","MATIC","1","10000",400,2102001),
             ("MATIC custodail账户 SWAP:USDC-MATIC 超出精度","MATIC","0xe458fd3e2515d42cbcd52a89b52fb662bf052143","USDC","MATIC","1","0.0000001",400,2100000),
-            ("MATIC custodail账户 SWAP:MATIC-USDC 手续费不足","MATIC","0xd1f031ee103fb6bc93c2f68160422136fabdb5b0","MATIC","USDC","1","0.00001",400,2100000),
+            ("MATIC custodail账户 SWAP:MATIC-USDC 手续费不足","MATIC","0xd1f031ee103fb6bc93c2f68160422136fabdb5b0","MATIC","USDC","1","0.001",400,2100000),
             ("MATIC custodail账户 SWAP:USDC-MATIC 手续费不足","MATIC","0xd1f031ee103fb6bc93c2f68160422136fabdb5b0","USDC","MATIC","1","0.001",400,2100000),
             ("MATIC custodail账户 SWAP:USDC-MATIC 滑点值格式错误","MATIC","0xe458fd3e2515d42cbcd52a89b52fb662bf052143","USDC","MATIC","0.9","0.00001",400,2300000),
             ("MATIC custodail账户 SWAP:USDC-MATIC 滑点值没有","MATIC","0xe458fd3e2515d42cbcd52a89b52fb662bf052143","USDC","MATIC","","0.00001",400,2300000),

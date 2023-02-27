@@ -23,14 +23,19 @@ class Test_transfers_success:
     if env_type == 0: #测试
         test_data = [
             # GOERLI
-            ("GOERLI safe2-2账户转账 nativecoin","GOERLI","USDCC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x2ec1ea96bbabda40b26d2c9b0781e7f6021afa0b",accounts,"0.00000000000001"),
-            # ("GOERLI safe2-2账户转账 nativecoin","GOERLI","GoerliETH","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17",accounts,"0.00000000000001"),
-            # ("GOERLI safe2-2账户转账 erc20coin","GOERLI","USDCC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17",accounts,"0.000000000000012"),
-            # ("GOERLI safe2-3账户转账 nativecoin","GOERLI","GoerliETH","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x240642bf8eb6e2c291f8a9bd21eb50cfe7dd5bdf",accounts,"0.00000000000002"),
-            # ("GOERLI safe2-3账户转账 erc20coin","GOERLI","USDCC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x240642bf8eb6e2c291f8a9bd21eb50cfe7dd5bdf",accounts,"0.000000000000022"),
+            ("GOERLI safe2-2账户批量转账 nativecoin","GOERLI","GoerliETH","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17",accounts,"0.00000000000001"),
+            ("GOERLI safe2-2账户批量转账 erc20coin","GOERLI","USDCC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x9D055026eB8D83eF561D5D8084F2DD02e7AD2C17",accounts,"0.000000000000012"),
+            ("GOERLI safe2-3账户批量转账 nativecoin","GOERLI","GoerliETH","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x240642bf8eb6e2c291f8a9bd21eb50cfe7dd5bdf",accounts,"0.00000000000002"),
+            ("GOERLI safe2-3账户批量转账 erc20coin","GOERLI","USDCC","dca5feaaf2296dca296a015b0ce26d82f89ab8d0f77ec98901a77e96f6e2e2da","0x240642bf8eb6e2c291f8a9bd21eb50cfe7dd5bdf",accounts,"0.000000000000022"),
         ]
     elif env_type == 1: #生产
-        test_data = []
+        test_data = [
+            ("MATIC safe2-2账户批量转账 nativecoin","MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x66C1D34C273cC09dF9072f49aebA4b09E017bC5C",accounts,"0.00000000000001"),
+            ("MATIC safe2-2账户批量转账 erc20coin","MATIC","USDC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0x66C1D34C273cC09dF9072f49aebA4b09E017bC5C",accounts,"0.000001"),
+            # 太贵别开
+            # ("MATIC safe2-3账户批量转账 nativecoin","MATIC","MATIC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0xa2109b6a714bb32854f4b9db01859b3b7f092088",accounts,"0.00000000000001"),
+            # ("MATIC safe2-3账户批量转账 erc20coin","MATIC","USDC","100e876b446ee8a356cf2fa8082e12d8b5ff6792aa8fac7a01b534163cbefc33","0xa2109b6a714bb32854f4b9db01859b3b7f092088",accounts,"0.000001"),
+        ]
 
     @allure.story("Safe Transfers Batch Success!")
     @allure.title('{test_title}')

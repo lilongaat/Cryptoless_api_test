@@ -96,15 +96,14 @@ class HttpUtils:
 
     @staticmethod
     # 查询联系人
-    def contacts_query(Authorization:str=token):
-        url = url_ + '/vault/contacts'
+    def contacts_query(name:str, networkCode:str, address:str, Authorization:str=token):
+        url = url_ + '/vault/contacts?name=' + name +'&networkCode=' + networkCode + '&address=' + address
         headers = {
             "Content-Type": "application/json",
             "Authorization": Authorization
         }
-        body = {}
-        logger.info('\n'+"<-----Contacts Query----->"+"\n"+"Url:"+url+'\n'+'Headers:'+json.dumps(headers)+'\n'+'Body:'+json.dumps(body)+'\n\n')
-        res = requests.get(url=url, headers=headers,json=body, timeout=timeout_)
+        logger.info('\n'+"<-----Contacts Query----->"+"\n"+"Url:"+url+'\n'+'Headers:'+json.dumps(headers)+'\n\n')
+        res = requests.get(url=url, headers=headers, timeout=timeout_)
         if res.status_code == 200:
             logger.info('\n'+"<-----Contacts Query Response----->"+"\n"+(res.text)+"\n\n")
             return res
@@ -114,24 +113,56 @@ class HttpUtils:
 
     @staticmethod
     # 创建联系人
-    def contacts_add(name:str, networkCode:str, address:str, Authorization:str=token):
+    def contacts_add(body:dict, Authorization:str=token):
         url = url_ + '/vault/contacts'
         headers = {
             "Content-Type": "application/json",
             "Authorization": Authorization
         }
-        body = {
-            "name": name,
-            "networkCode": networkCode,
-            "address": address
-        }
-        logger.info('\n'+"<-----Contacts Query----->"+"\n"+"Url:"+url+'\n'+'Headers:'+json.dumps(headers)+'\n'+'Body:'+json.dumps(body)+'\n\n')
+
+        logger.info('\n'+"<-----Contacts Create----->"+"\n"+"Url:"+url+'\n'+'Headers:'+json.dumps(headers)+'\n'+'Body:'+json.dumps(body)+'\n\n')
         res = requests.post(url=url, headers=headers,json=body, timeout=timeout_)
         if res.status_code == 200:
-            logger.info('\n'+"<-----Contacts Query Response----->"+"\n"+(res.text)+"\n\n")
+            logger.info('\n'+"<-----Contacts Create Response----->"+"\n"+(res.text)+"\n\n")
             return res
         else:
-            logger.info('\n'+"<-----Contacts Query Response Error----->"+"\n"+(res.text)+"\n\n")
+            logger.info('\n'+"<-----Contacts Create Response Error----->"+"\n"+(res.text)+"\n\n")
+            return res
+        
+    @staticmethod
+    # 创建联系人
+    def contacts_add_batch(body:tuple, Authorization:str=token):
+        url = url_ + '/vault/contacts/batch'
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+
+        logger.info('\n'+"<-----Contacts Create Batch----->"+"\n"+"Url:"+url+'\n'+'Headers:'+json.dumps(headers)+'\n'+'Body:'+json.dumps(body)+'\n\n')
+        res = requests.post(url=url, headers=headers,json=body, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Contacts Create Batch Response----->"+"\n"+(res.text)+"\n\n")
+            return res
+        else:
+            logger.info('\n'+"<-----Contacts Create Batch Response Error----->"+"\n"+(res.text)+"\n\n")
+            return res
+
+    @staticmethod
+    # 删除联系人
+    def contacts_del(id:str, Authorization:str=token):
+        url = url_ + '/vault/contacts/' + id
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": Authorization
+        }
+
+        logger.info('\n'+"<-----Contacts Delete----->"+"\n"+"Url:"+url+'\n'+'Headers:'+json.dumps(headers)+'\n\n')
+        res = requests.delete(url=url, headers=headers, timeout=timeout_)
+        if res.status_code == 200:
+            logger.info('\n'+"<-----Contacts Delete Response----->"+"\n"+(res.text)+"\n\n")
+            return res
+        else:
+            logger.info('\n'+"<-----Contacts Delete Response Error----->"+"\n"+(res.text)+"\n\n")
             return res
 
     @staticmethod
